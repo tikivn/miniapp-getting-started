@@ -30,3 +30,5 @@ yarn-error.log*
 
 # private
 .npmrc
+
+dist.tar.gz
