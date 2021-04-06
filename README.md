@@ -1,7 +1,7 @@
 # MiniApp Getting Started
 The following is a list of the example MiniApp in the [MiniApp Document](https://miniapp.tiki.vn/docs/developer/getting-started)
 
-- [Shopping]()
+- [Shopping](https://github.com/tikivn/miniapp-getting-started/tree/main/shopping)
 
 ## What is Tiki MiniApp ?
 
