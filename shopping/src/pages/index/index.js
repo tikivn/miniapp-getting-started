@@ -61,11 +61,17 @@ Page({
   },
   onPageAddCart(product) {
     app.onAppAddCart(product);
+
     my.showToast({
       type: 'success',
       content: 'Sản phẩm đã được thêm vào giỏ hàng',
       buttonText: 'OK',
       duration: 3000,
+    });
+
+    my.setTabBarBadge({
+      index: 1,
+      text: app.cart.count,
     });
   },
 });
