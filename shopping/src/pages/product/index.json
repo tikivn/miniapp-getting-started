@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Chi tiết sản phẩm",
+  "usingComponents": {
+    "price": "components/price/index"
+  }
+}

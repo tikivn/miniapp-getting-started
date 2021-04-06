@@ -1,0 +1,4 @@
+.price {
+  font-weight: bold;
+  font-size: 12px;
+}

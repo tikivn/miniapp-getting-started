@@ -1,0 +1,23 @@
+<view class="loading" tiki:if="{{!product}}">
+  <image
+    class="loading-image" 
+    src="../../images/spinner.gif" />
+</view>
+
+<view tiki:else="{{product}}">
+  <image
+    resize-mode="contain"
+    style="width: {{imageWidth}}px" 
+    src="{{product.image}}" />
+  <view>
+    <text>{{product.title}}</text>
+  </view>
+  <view class="price-container">
+    <price price="{{product.price}}" />
+    <button 
+      class="add" 
+      type="secondary">
+      <icon color="#1A94FF" type="plus" />
+    </button>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+.loading {
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.loading-image {
+  width: 64px;
+  height: 64px;
+}
+

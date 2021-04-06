@@ -1,0 +1,3 @@
+//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
+@hoangviet:registry=https://npm.pkg.github.com
+@tikivn:registry=https://npm.pkg.github.com

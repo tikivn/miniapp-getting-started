@@ -1,0 +1,15 @@
+.product {
+  width: 50%;
+  padding: 12px;
+}
+
+.add {
+  width: 32px;
+  height: 32px;
+}
+
+.price-container {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "product-item": "components/product-item/index"
+  }
+}

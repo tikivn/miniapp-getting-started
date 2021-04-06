@@ -1,0 +1,18 @@
+<view class="product">
+  <image
+    resize-mode="contain"
+    style="width: {{imageWidth}}px" 
+    src="{{product.image}}" />
+  <view onTap="onGoToProductPage">
+    <text number-of-lines="{{3}}">{{product.title}}</text>
+  </view>
+  <view class="price-container">
+    <price price="{{product.price}}" />
+    <button 
+      onTap="onAddCart"
+      class="add" 
+      type="secondary">
+      <icon color="#1A94FF" type="plus" />
+    </button>
+  </view>
+</view>
