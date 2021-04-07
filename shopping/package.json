@@ -1,10 +1,10 @@
 {
   "name": "shopping",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "tiki": {
     "appName": "shopping",
     "appIdentifier": "com.gettingstarted.shopping",
-    "buildNumber": 1
+    "buildNumber": 3
   },
   "dependencies": {
     "@tikivn/mini-ui": "next",

@@ -1,7 +1,7 @@
 <view class="loading" tiki:if="{{!product}}">
   <image
     class="loading-image" 
-    src="../../images/spinner.gif" />
+    src="https://shopping-miniapp.s3.ap-south-1.amazonaws.com/spinner.gif" />
 </view>
 
 <view class="container" tiki:else>
