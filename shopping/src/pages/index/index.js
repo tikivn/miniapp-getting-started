@@ -16,8 +16,12 @@ Page({
       url: 'https://fakestoreapi.com/products',
       method: 'GET',
       success: (response) => {
+        console.log('Product Reponse: ', response)
         this.setData({ banners: response, loading: false });
       },
+      fail: (fail) => {
+        console.log('Fail', fail);
+      }
     });
 
     // Get categories
@@ -25,7 +29,10 @@ Page({
       url: 'https://fakestoreapi.com/products/categories',
       method: 'GET',
       success: (response) => {
-        const categories = response.map(item => ({ title: item, loading: true, products: [] }));
+        console.log('Categories Reponse: ', response)
+        const categories = response.map(
+          item => ({ title: item, loading: true, products: [] })
+        );
         this.setData({ categories }, () => this.getProductByCategory(0));
       },
     });
@@ -33,6 +40,7 @@ Page({
     // Get size
     my.getSystemInfo({
       success: (info) => {
+        console.log('System info: ', info);
         this.setData({ 
           bannerWidth: info.windowWidth - this.data.cellSpacing * 2,
           windowWidth: info.windowWidth,
@@ -41,12 +49,19 @@ Page({
       }
     });
   },
-  getProductByCategory(index) {
+  getProductByCategory(catIndex) {
+    const catTitle = this.data.categories[catIndex].title;
+
     my.request({
-      url: `https://fakestoreapi.com/products/category/${this.data.categories[index].title}`,
+      url: `https://fakestoreapi.com/products/category/${catTitle}`,
       method: 'GET',
       success: (response) => {
-        const categories = this.data.categories.map((item, catIdx) => catIdx === index ? {...item, products: response, loading: false} : item );
+        console.log(`Product of category ${catTitle}`, response);
+        const categories = this.data.categories.map(
+          (item, catIdx) => catIdx === catIndex 
+            ? {...item, products: response, loading: false} 
+            : item 
+        );
         this.setData({ categories });
       }
     });
@@ -62,6 +77,7 @@ Page({
   onPageAddCart(product) {
     app.onAppAddCart(product);
 
+    // Show toast
     my.showToast({
       type: 'success',
       content: 'Sản phẩm đã được thêm vào giỏ hàng',
@@ -69,6 +85,7 @@ Page({
       duration: 3000,
     });
 
+    // Set TabBar Badge
     my.setTabBarBadge({
       index: 1,
       text: app.cart.count,

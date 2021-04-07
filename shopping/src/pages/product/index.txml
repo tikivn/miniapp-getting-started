@@ -4,7 +4,7 @@
     src="../../images/spinner.gif" />
 </view>
 
-<view tiki:else="{{product}}">
+<view class="container" tiki:else>
   <image
     resize-mode="contain"
     style="width: {{imageWidth}}px" 

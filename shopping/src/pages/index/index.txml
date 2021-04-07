@@ -4,7 +4,7 @@
     src="../../images/spinner.gif" />
 </view>
 
-<view class="container" tiki:else="{{!loading}}">
+<view class="container" tiki:else>
   <carousel 
     indicator-dots="{{false}}" 
     cell-spacing="{{cellSpacing}}" 
