@@ -1,10 +1,10 @@
 <view class="loading" tiki:if="{{loading}}">
   <image
     class="loading-image" 
-    src="../../images/spinner.gif" />
+    src="https://shopping-miniapp.s3.ap-south-1.amazonaws.com/spinner.gif" />
 </view>
 
-<view class="container" tiki:else="{{!loading}}">
+<view class="container" tiki:else>
   <carousel 
     indicator-dots="{{false}}" 
     cell-spacing="{{cellSpacing}}" 
@@ -25,7 +25,9 @@
   <tabs tabs="{{categories}}" onChange="onTabChange">
     <block tiki:for="{{categories}}">
       <view class="loading" tiki:if="{{item.loading}}">
-        <image style="width: 32px; height: 32px"  src="../../images/spinner.gif" />
+        <image 
+          style="width: 32px; height: 32px"  
+          src="https://shopping-miniapp.s3.ap-south-1.amazonaws.com/spinner.gif" />
       </view>
 
       <view tiki:if="{{!item.loading}}" class="products">

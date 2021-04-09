@@ -1,6 +1,7 @@
 App({
   cart: {
     totalPrice: 0,
+    count: 0,
     products: []
   },
   onAppAddCart(product) {
@@ -11,14 +12,6 @@ App({
       this.cart.products.push({ ...product, total: 1 });
     }
     this.cart.totalPrice += product.price;
+    this.cart.count += 1;
   },
-  onLaunch(options) {
-    console.log('App onLaunch');
-  },
-  onShow(options) {
-    console.log('App onShow')
-  },
-  onLoad() {
-    console.log('App onLoad')
-  }
 });
