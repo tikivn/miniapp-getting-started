@@ -1,0 +1,64 @@
+{
+    "pages": [
+        "pages/component/index",
+        "pages/api/index",
+        "pages/api/animation/index",
+        "pages/api/alert/index",
+        "pages/api/confirm/index",
+        "pages/api/loading/index",
+        "pages/api/action-sheet/index",
+        "pages/api/toast/index",
+        "pages/api/prompt/index",
+        "pages/api/pull-refresh/index",
+        "pages/api/storage/index",
+        "pages/api/request/index",
+        "pages/api/get-user-info/index",
+        "pages/api/get-auth-code/index",
+        "pages/api/navigation-bar/set-navigation-bar/index",
+        "pages/api/navigation-bar/get-title-color/index",
+        "pages/api/navigation-bar/loading/index",
+        "pages/api/navigator/index",
+        "pages/api/keyboard/index",
+        "pages/component/basic/button/index",
+        "pages/component/basic/text/index",
+        "pages/component/basic/icon/index",
+        "pages/component/basic/progress/index",
+        "pages/component/basic/input/index",
+        "pages/component/basic/list/index",
+        "pages/component/basic/radio/index",
+        "pages/component/basic/switch/index",
+        "pages/component/basic/image/index",
+        "pages/component/basic/checkbox/index",
+        "pages/component/basic/scroll-view/index",
+        "pages/component/basic/carousel/index",
+        "pages/component/basic/tabs/index",
+        "pages/component/advance/list/index",
+        "pages/component/advance/stepper/index",
+        "pages/component/advance/avatar/index",
+        "pages/component/advance/popup/index",
+        "pages/component/advance/badge/index",
+        "pages/component/advance/modal/index"
+    ],
+    "window": {
+        "defaultTitle": "Tiki MiniApp Demo",
+        "titleBarColor": "#1A94FF",
+        "titleColor": "#fff",
+        "transparentTitle": "none"
+    },
+    "tabBar": {
+        "items": [
+            {
+                "name": "Components",
+                "pagePath": "pages/component/index",
+                "icon": "images/icon_component.png",
+                "activeIcon": "images/icon_component_HL.png"
+            },
+            {
+                "name": "APIs",
+                "pagePath": "pages/api/index",
+                "icon": "images/icon_API.png",
+                "activeIcon": "images/icon_API_HL.png"
+            }
+        ]
+    }
+}

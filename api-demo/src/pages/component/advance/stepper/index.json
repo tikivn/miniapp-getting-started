@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Steps",
+  "usingComponents": {
+    "stepper": "@tikivn/tiny-ui/es/stepper/index",
+    "list": "@tikivn/tiny-ui/es/list/index",
+    "list-item": "@tikivn/tiny-ui/es/list/list-item/index",
+    "block-header": "components/block-header/index"
+  }
+}

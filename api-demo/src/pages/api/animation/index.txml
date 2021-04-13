@@ -1,0 +1,38 @@
+<view>
+  <block-header 
+      title="Usage" 
+      description="Animate your txml view" />
+
+  <view class="block-content">
+    <text class="title mb-8">Variant</text>
+    <view class="component-item">
+      <view class="animation-element" animation="{{animation}}" />
+
+      <button onTap="onRotate">
+        rotate
+      </button>
+      <button onTap="onScale">
+        scale
+      </button>
+      <button onTap="onTranslate">
+        translate
+      </button>
+      <button onTap="onRotateAndScale">
+        rotate and scale 
+      </button>
+      <button onTap="onRotateThenScale">
+        rotate then scale
+      </button>
+      <button onTap="onAll">
+        all 
+      </button>
+      <button onTap="onAllInQueue">
+        all in queue
+      </button>
+      <button onTap="onReset">
+        reset
+      </button>
+    </view>
+  </view>
+
+</view>

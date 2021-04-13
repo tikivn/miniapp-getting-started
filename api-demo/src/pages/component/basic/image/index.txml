@@ -1,0 +1,18 @@
+<view>
+  <view class="block-content">
+    <view class="component-item">
+      <image 
+        onLoad="onLoad" 
+        onTap="onTap" 
+        src="{{source}}" 
+        class="image-item" />
+    </view>
+    <view class="component-item">
+      <image src="../../../../images/app_logo.png" />
+    </view>
+    <view class="component-item">
+      <image src="https://via.placeholder.com/300.png" />
+    </view>
+  </view>
+</view>
+

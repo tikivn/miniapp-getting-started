@@ -1,0 +1,4 @@
+<view class="block-content">
+  <text class="title">{{title}}</text>
+  <text>{{description}}</text>
+</view>

@@ -1,0 +1,8 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Show the prompt to user" />
+  <view class="block-content">
+    <button class="button-full" onTap="onPrompt">Show Prompt</button>
+  </view>
+</view>

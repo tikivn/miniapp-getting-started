@@ -1,0 +1,15 @@
+<list>
+ <view slot="header">
+   List header
+ </view>
+ <list-item thumb="http://thumb.link.png"
+   arrow="{{true}}"
+   onClick="onItemClick" >
+   List body
+   <view slot="extra">
+      List extra
+   </view>
+ </list-item>
+ <view slot="footer">
+    List footer
+ </view></list>

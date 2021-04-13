@@ -1,0 +1,4 @@
+.component-item {
+  flex-direction: row;
+  align-items: center;
+}

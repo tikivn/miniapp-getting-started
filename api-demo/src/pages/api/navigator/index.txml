@@ -1,0 +1,27 @@
+<view>
+  <block-header 
+      title="Usage" 
+      description="Navigate to new pages / new tabs / new Mini App" />
+
+  <view class="block-content">
+    <text class="title mb-8">Variant</text>
+    <view class="component-item">
+      <button style="width: 100%;" onTap="navigateTo">
+        my.navigateTo
+      </button>
+      <button style="width: 100%;" onTap="navigateBack">
+        my.navigateBack
+      </button>
+      <button style="width: 100%;" onTap="navigateToMiniApp">
+        my.navigateToMiniApp
+      </button>
+      <button style="width: 100%;" onTap="navigateBackMiniApp">
+        my.navigateBackMiniApp
+      </button>
+      <button style="width: 100%;" onTap="relaunch">
+        my.relaunch
+      </button>
+    </view>
+  </view>
+
+</view>

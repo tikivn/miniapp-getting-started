@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "list": "@tikivn/tiny-ui/es/list/index",
+    "list-item": "@tikivn/tiny-ui/es/list/list-item/index"
+  }
+}

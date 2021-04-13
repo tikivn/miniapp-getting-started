@@ -1,0 +1,12 @@
+{
+  "defaultTitle": "Avatar",
+  "titleBarColor": "#1B6BFF",
+  "titleColor": "#fff",
+  "transparentTitle": "none",
+  "usingComponents": {
+    "avatar": "@tikivn/tiny-ui/es/avatar/index",
+    "list-item": "@tikivn/tiny-ui/es/list/list-item/index",
+    "list": "@tikivn/tiny-ui/es/list/index",
+    "block-header": "components/block-header/index"
+  }
+}

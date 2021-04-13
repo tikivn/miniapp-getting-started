@@ -7,7 +7,7 @@
     "buildNumber": 3
   },
   "dependencies": {
-    "@tikivn/mini-ui": "next",
+    "@tikivn/tiny-ui": "next",
     "query-string": "^7.0.0"
   }
 }

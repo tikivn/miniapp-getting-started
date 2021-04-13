@@ -1,0 +1,39 @@
+<view class="page-container">
+  <view class="banner" >
+    <image class="component-logo" src="../../images/app_logo.png" />
+    <view class="search">
+      <input placeholder="Tìm kiếm thành phần/API" />
+    </view>
+  </view>
+  <tabs 
+    tabs="{{tabs}}" 
+    tab-height="{{48}}"
+    active-text-color="#FFF"
+    inactive-text-color="#FFF"
+    tab-bar-active-underline-color="#FFF"
+    tab-bar-underline-color="#1A94FF"
+    tab-bar-background-color="#1A94FF"
+    tab-bar-active-background-color="#1A94FF"
+  >
+    <view class="content">
+      <block tiki:for="{{basicComponents}}" tiki:key="component-{{index}}">
+        <block tiki:if="{{item.components.length > 0}}">
+          <list
+            key="list"
+            header="{{item.name}}" 
+            items="{{item.components}}" />
+        </block>
+      </block>
+    </view>
+    <view class="content">
+      <block tiki:for="{{advancedComponents}}" tiki:key="component-{{index}}">
+        <block tiki:if="{{item.components.length > 0}}">
+          <list
+            key="list"
+            header="{{item.name}}" 
+            items="{{item.components}}" />
+        </block>
+      </block>
+    </view>
+  </tabs>
+</view>

@@ -1,0 +1,9 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Show or hide loading of navigation bar" />
+  <view class="block-content">
+    <button class="button-full" onTap="showLoading">Show navigation bar loading</button>
+    <button class="button-full" onTap="hideLoading">Hide navigation bar loading</button>
+  </view>
+</view>

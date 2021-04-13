@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="block">
+    <radio-group class="radio-group" onChange="onChange">
+      <view class="radio" tiki:for="{{items}}" key="radio-{{index}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" />
+        <text class="text">{{item.value}}</text>
+      </view>
+    </radio-group>
+  </view>
+</view>
+

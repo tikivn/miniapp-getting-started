@@ -1,0 +1,16 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Set style for navigation bar" />
+  <view class="block-content">
+    Input the value to update the navigation bar
+    <input class="form-value" placeholder="Title" name="title" onInput="titleChange"></input>
+    <input class="form-value" placeholder="Background color" name="titleBarColor" onInput="titleBarColorChange"></input>
+    <input class="form-value" placeholder="Border Bottom Color" name="borderBottomColor" onInput="borderBottomColorChange"></input>
+    <input class="form-value" placeholder="Image" name="image" onInput="imageChange"></input>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="setNavigationBar">Set navigation bar</button>
+    <button class="button-full" onTap="reset">Reset</button>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+.item {
+  background-color: var(--gray20);
+}

@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "",
+  "titleBarColor": "#1A94FF",
+  "titleColor": "#fff",
+  "transparentTitle": "none",
+  "usingComponents": {
+    "list": "components/list/index"
+  }
+}

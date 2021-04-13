@@ -1,0 +1,9 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="
+Snack bars to provide information, an event, an action, an error or a warning for users to take an action related to a recent update." />
+  <view class="block-content">
+    <button class="button-full" onTap="onToast">Show toast</button>
+  </view>
+</view>

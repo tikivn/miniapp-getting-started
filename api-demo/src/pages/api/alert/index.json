@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Alert",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

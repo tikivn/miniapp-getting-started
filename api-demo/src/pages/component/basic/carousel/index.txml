@@ -1,0 +1,9 @@
+<view>
+  <block-header title="Usage" description="Carousel are used to display gallery of images." />
+
+  <carousel cell-spacing="{{8}}" slide-width="{{300}}" >
+    <view class="item" style="height: {{height}}px"></view>
+    <view class="item" style="height: {{height}}px"></view>
+    <view class="item" style="height: {{height}}px"></view>
+  </carousel>
+</view>

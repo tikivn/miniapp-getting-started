@@ -1,0 +1,3 @@
+.component-item {
+  border-top-width: 1px;
+}

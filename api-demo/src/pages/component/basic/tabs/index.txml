@@ -1,0 +1,25 @@
+<view>
+  <block-header 
+    title="Usage" 
+    description="Tab bar is used as a graphical interface element that allows multiple panels to be contained within a single window, using tabs as a navigational element." />
+
+  <view class="block-content">
+    <text class="title mb-8">Variants</text>
+    
+    <text class="subtitle mb-8">Text only</text>
+    <tabs tab-height="{{48}}" tabs="{{tabs1}}">
+      <view class="tab-item" />
+      <view class="tab-item" />
+      <view class="tab-item" />
+      <view class="tab-item" />
+    </tabs>
+
+    <text class="subtitle mb-8 mt-16">Text with icon</text>
+    <tabs tabs="{{tabs2}}">
+      <view class="tab-item" />
+      <view class="tab-item" />
+      <view class="tab-item" />
+      <view class="tab-item" />
+    </tabs>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+
+{
+  "defaultTitle": "switch",
+  "titleBarColor": "#1B6BFF",
+  "titleColor": "#fff",
+  "transparentTitle": "none",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

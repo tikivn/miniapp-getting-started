@@ -1,0 +1,8 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Show the confirm popup to user" />
+  <view class="block-content">
+    <button class="button-full" onTap="onConfirm">Show Confirm</button>
+  </view>
+</view>

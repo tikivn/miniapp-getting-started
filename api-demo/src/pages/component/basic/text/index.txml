@@ -1,0 +1,10 @@
+<view class="container">
+  <view class="block">
+    <text>{{text}}</text>
+    <button onTap="add">Add line</button>
+    <button type="secondary" onTap="remove">Remove line</button>
+  </view>
+  <view class="block">
+    <text number-of-lines="{{2}}">{{longText}}</text>
+  </view>
+</view>

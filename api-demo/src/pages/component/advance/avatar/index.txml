@@ -1,0 +1,109 @@
+<view>
+  <block-header
+      title="Usage"
+      description="Use to display user avatar from a resource url"
+    />
+
+  <view class="block-content">
+    <text class="title mb-8">Variants</text>
+    <text class="title mb-8">Shape</text>
+    <text class="component-state">standard & circle</text>
+    <view class="component-item">
+      <view style="flex-direction:row;align-items:flex-end">
+          <avatar size="md" shape="standard" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar size="md" style="margin:8px" src="{{defaultUrl}}"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="block-content">
+    <text class="title mb-8">Size</text>
+    <text class="component-state">lg(72px)-md(56px)-sm(48px)-xs(40px)</text>
+    <view class="component-item">
+      <view style="flex-direction:row;align-items:flex-end">
+          <avatar size="lg" shape="standard" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar size="md" shape="standard" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar size="sm" shape="standard" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar size="xs" shape="standard" style="margin:8px" src="{{defaultUrl}}"/>
+      </view>
+      <view style="flex-direction:row;align-items:flex-end">
+          <avatar size="lg" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar size="md" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar size="sm" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar size="xs" style="margin:8px" src="{{defaultUrl}}"/>
+      </view>
+    </view>
+  </view>
+
+  <view class="block-content">
+    <text class="title mb-8">With username,description</text>
+    <view class="component-item">
+      <view style="flex-direction:column;align-items:center">
+          <avatar name="Kamille Wolf" size="lg" shape="circle" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar name="Kamille Wolf" size="md" shape="circle" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar name="Kamille Wolf" size="sm" shape="circle" style="margin:8px" src="{{defaultUrl}}"/>
+          <avatar name="Kamille Wolf" size="xs" shape="circle" style="margin:8px" src="{{defaultUrl}}"/>
+      </view>
+    </view>
+    <text class="component-state">with description:</text>
+    <view class="component-item">
+      <view style="flex-direction:column;align-items:center">
+          <avatar
+              name="Antonio Leannon II"
+              desc="Lorem ipsum dolor sit Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet amet..."
+              size="lg"
+              shape="standard"
+              style="margin:8px"
+              src="{{defaultUrl}}"
+              />
+          <avatar
+              name="Antonio Leannon II"
+              desc="Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet sit amet..."
+              size="md"
+              shape="standard"
+              style="margin:8px"
+              src="{{defaultUrl}}"
+              />
+          <avatar
+              name="Antonio Leannon II"
+              desc="Lorem ipsum dolor sit Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet amet..."
+              size="sm"
+              shape="standard"
+              style="margin:8px"
+              src="{{defaultUrl}}"
+              />
+          <avatar
+              name="Antonio Leannon II"
+              desc="Lorem ipsum dolor sit Lorem ipsum dolor sit amet  Lorem ipsum dolor sit ametamet..."
+              size="xs"
+              shape="standard"
+              style="margin:8px"
+              src="{{defaultUrl}}"
+              />
+      </view>
+    </view>
+  </view>
+  <view class="block-content">
+    <text class="title mb-8">Intergate with List component</text>
+    <view class="component-item">
+      <view>
+          <list tiki:for="{{users}}">
+              <list-item
+                  upperSubtitle="{{item.about_me}}"
+                >
+              <view slot="supporting">
+                  <avatar
+                      size="md"
+                      style="margin:8px"
+                      shape="circle"
+                      src="{{item.url}}"
+                    />
+              </view>
+                  {{item.name}}
+              </list-item>
+      </list>
+      </view>
+    </view>
+  </view>
+</view>
+

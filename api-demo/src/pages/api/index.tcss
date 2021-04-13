@@ -1,0 +1,43 @@
+.page-container {
+  background-color: var(--gray10);
+}
+
+.banner {
+  width: 100%;
+  background-color: #1A94FF;
+  height: 192px;
+  align-items: center;
+  padding: 0 16px;
+  padding-top: 16px;
+}
+
+.component-logo {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--white);
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.search {
+  height: 48px;
+  width: 100%;
+  margin: 0 16px;
+}
+
+.content {
+  margin-top: 16px;
+}
+
+.block {
+  background-color: var(--white);
+  border-radius: 4px;
+  padding: 16px;
+  margin: 16px;
+}

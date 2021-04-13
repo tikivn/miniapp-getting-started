@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="block">
+    <text class="header">Type</text>
+    <view class="list">
+      <block tiki:for="{{iconType}}">
+        <view class="item">
+          <icon type="{{item}}" />
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="block">
+    <text class="header">Size</text>
+    <view class="list">
+      <block tiki:for="{{iconSize}}">
+        <view class="item">
+          <icon type="success_glyph" size="{{item}}" />
+          <text>{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class="block">
+    <text class="header">Color</text>
+    <view class="list">
+      <block tiki:for="{{iconColor}}">
+        <view class="item">
+          <icon type="success_glyph" size="45" color="{{item}}"/>
+          <text style="color:{{item}}">{{item}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
