@@ -1,5 +1,5 @@
 const BASE_URL = "https://api.tala.xyz/miniapp/api/graphql/query";
-export default async function makeGraphqlRequest(
+export default async function makeGraphQLRequest(
   { query, variables },
   token = ""
 ) {
