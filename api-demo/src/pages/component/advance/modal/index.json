@@ -4,7 +4,7 @@
     "titleColor": "#fff",
     "transparentTitle": "none",
     "usingComponents": {
-        "modal": "@tikivn/tiny-ui/es/modal/index",
+        "modal": "@tiki-miniapp/tiny-ui/es/modal/index",
         "block-header": "components/block-header/index"
     }
 }
