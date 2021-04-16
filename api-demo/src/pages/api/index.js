@@ -67,6 +67,17 @@ const navigationBarAPIList = [
     name: "Show/Hide navigation bar loading",
     path: "/pages/api/navigation-bar/loading/index",
   },
+  {
+    name: "Hide Back Home",
+    path: "/pages/api/navigation-bar/hide-back-home/index",
+  },
+].filter(filterNotImplementedPages);
+
+const imagePickerAPIList = [
+  {
+    name: "Choose Image",
+    path: "/pages/api/image-picker/index",
+  }
 ].filter(filterNotImplementedPages);
 
 const pullRefreshAPIList = [
@@ -125,6 +136,10 @@ const APIList = [
   {
     type: "Navigation Bar API",
     list: navigationBarAPIList,
+  },
+  {
+    type: "Image Picker",
+    list: imagePickerAPIList,
   },
 ];
 
