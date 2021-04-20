@@ -8,9 +8,9 @@
   <image
     resize-mode="contain"
     style="width: {{imageWidth}}px" 
-    src="{{product.image}}" />
+    src="{{product.image_url}}" />
   <view>
-    <text>{{product.title}}</text>
+    <text>{{product.name}}</text>
   </view>
   <view class="price-container">
     <price price="{{product.price}}" />

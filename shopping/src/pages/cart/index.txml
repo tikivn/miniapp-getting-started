@@ -24,6 +24,6 @@
 
   <view class="bottom">
     <text>Tổng cộng: ${{cart.totalPrice}}</text>
-    <button class="submit">Thanh toán</button>
+    <button class="submit" onTap="doPayment">Thanh toán</button>
   </view>
 </view>
