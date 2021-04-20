@@ -1,0 +1,16 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Store key/value to storage" />
+  <view class="block-content">
+    <input type="text" placeholder="key" name="key" value="{{key}}" onInput="keyChange"></input>
+    <input type="text" placeholder="data" name="data" value="{{data}}" onInput="dataChange"></input>
+  </view>
+  <view class="page-section-btns">
+      <button onTap="setStorage">Set</button>
+      <button onTap="getStorage">Get</button>
+      <button onTap="removeStorage">Remove</button>
+      <button onTap="clearStorage">Clear</button>
+      <button onTap="getStorageInfo">Get Info</button>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="block">
+    <progress />
+    <progress percent="20" font-size="20" show-info="{{showInfo}}" />
+    <progress percent="40" stroke-width="20" border-radius="10" />
+    <progress percent="60" active-color="red" />
+    <progress percent="80" background-color="green" />
+    <progress percent="90" active="true" show-info="true" />
+    <progress percent="100" />
+  </view>
+</view>

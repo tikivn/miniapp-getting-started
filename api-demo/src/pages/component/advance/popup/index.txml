@@ -1,0 +1,24 @@
+<view>
+  <block-header title="Usage" description="Pop-up menu" />
+  <view class="block-content">
+      <text class="title mb-8">Plaground</text>
+      <button data-popup="{{position:'top',mask:true,show:true}}" onTap="onTap">OpenTop</button>
+      <button data-popup="{{position:'bottom',mask:true,show:true}}" onTap="onTap">OpenBottom</button>
+      <button data-popup="{{position:'right',mask:true,show:true}}" onTap="onTap">OpenRight</button>
+      <button data-popup="{{position:'left',mask:true,show:true}}" onTap="onTap">OpenLeft</button>
+  </view>
+  <popup
+      position="{{popup.position}}"
+      show="{{popup.show}}"
+      mask="{{true}}"
+      onMaskClick="onMaskClick"
+    >
+  <view
+      class="popup-content"
+      style="{{popup.position==='bottom'||popup.position==='top'?'height:150px':'width:200px;flex:1'}}"
+  >
+      <text>this is popoup content</text>
+      <button onTap="onMaskClick">Close</button>
+  </view>
+  </popup>
+</view>

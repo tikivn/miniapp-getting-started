@@ -1,0 +1,26 @@
+<view>
+  <block-header title="Usage" description="Switches give user control over a feature or option that can be turned on or off." />
+
+  <view class="block-content">
+    <text class="title mb-8">Variants</text>
+    <text class="subtitle mb-8">State</text>
+    <text class="component-state">Default, Selected, Hover, Disable and Disable - Selected</text>
+
+    <view class="component-item">
+      <text>Default</text>
+      <switch onChange="onChange" />
+    </view>
+    <view class="component-item">
+      <text>Selected</text>
+      <switch checked />
+    </view>
+    <view class="component-item">
+      <text>Disable</text>
+      <switch disabled />
+    </view>
+    <view class="component-item last">
+      <text>Disable - Selected</text>
+      <switch checked disabled />
+    </view>
+  </view>
+</view>

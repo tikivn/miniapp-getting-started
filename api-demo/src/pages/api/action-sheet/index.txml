@@ -1,0 +1,8 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Show the action sheet to user" />
+  <view class="block-content">
+    <button class="button-full" onTap="onActionSheet">Show action sheet</button>
+  </view>
+</view>

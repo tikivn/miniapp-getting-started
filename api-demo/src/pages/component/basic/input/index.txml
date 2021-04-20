@@ -1,0 +1,38 @@
+<view class="container">
+
+  <view class="block">
+    <text class="header">Events</text>
+    <view class="item">
+      <text>Events</text>
+      <input onInput="onInput" onFocus="onFocus" onConfirm="onConfirm" onBlur="onBlur"/>
+    </view>
+  </view>
+
+  <view class="block">
+    <text class="header">Input type</text>
+      <block tiki:for="{{inputTypes}}">
+        <view class="item">
+          <text>{{item}}</text>
+          <input placeholder="{{item}}" type="{{item}}" />
+        </view>
+      </block>
+  </view>
+
+  <view class="block">
+    <text class="header">Confirm type</text>
+    <block tiki:for="{{confirmTypes}}">
+      <view class="item">
+        <text>{{item}}</text>
+        <input placeholder="{{item}}" confirm-type="{{item}}" />
+      </view>
+    </block>
+  </view>
+
+  <view class="block">
+    <text class="header">Disabled</text>
+    <view class="item">
+      <text>Disabled</text>
+      <input placeholder="disabled" disabled="true" />
+    </view>
+  </view>
+</view>

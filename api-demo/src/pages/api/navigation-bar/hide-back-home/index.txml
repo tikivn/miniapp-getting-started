@@ -1,0 +1,10 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Hide the back button in title bar" />
+  <view class="block-content">
+    <button class="button-full" onTap="hideBackHome">Hide Back Home</button>
+    <button class="button-full" onTap="showBackHome">Show Back Home</button>
+  </view>
+  <image src="{{img}}" />
+</view>

@@ -1,0 +1,15 @@
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mb-16 {
+  margin: 16px;
+}
+
+.pb-8 {
+  padding: 8px;
+}
+
+.pb-16 {
+  padding: 16px;
+}

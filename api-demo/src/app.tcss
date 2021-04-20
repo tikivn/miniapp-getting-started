@@ -1,0 +1,49 @@
+@import "./styles/utilities.tcss";
+
+page {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    background-color: var(--gray10);
+}
+
+.block-content {
+    background-color: var(--white);
+    padding: 16px;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.component-state {
+    color: var(--gray60);
+    margin-bottom: 16px;
+}
+
+.component-item {
+    border: solid 0px;
+    border-color: var(--gray20);
+    border-top-width: 1px;
+    padding: 8px 0;
+}
+
+.component-item.last {
+    border-bottom-width: 1px;
+}
+
+.button-full {
+    margin-top: 4px;
+    margin-bottom: 4px;
+    width: 100%;
+}

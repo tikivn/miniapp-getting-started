@@ -1,0 +1,10 @@
+{
+    "defaultTitle": "Modal",
+    "titleBarColor": "#1B6BFF",
+    "titleColor": "#fff",
+    "transparentTitle": "none",
+    "usingComponents": {
+        "modal": "@tiki-miniapp/tiny-ui/es/modal/index",
+        "block-header": "components/block-header/index"
+    }
+}

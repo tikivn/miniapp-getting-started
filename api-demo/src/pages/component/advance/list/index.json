@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "List",
+  "usingComponents": {
+    "list": "@tiki-miniapp/tiny-ui/es/list/index",
+    "list-item": "@tiki-miniapp/tiny-ui/es/list/list-item/index"
+  }
+}

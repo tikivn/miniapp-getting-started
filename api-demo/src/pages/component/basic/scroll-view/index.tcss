@@ -1,0 +1,37 @@
+.page-section-title {
+  padding: 16rpx 32rpx;
+}
+
+.tap {
+  flex: 1;
+  height: 84rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #49a9ee;
+}
+
+.bc_blue {
+  background-color: #49A9EE;
+}
+
+.bc_red {
+  background-color: #F04134;
+}
+
+.bc_yellow {
+  background-color: #FFBF00;
+}
+
+.bc_green {
+  background-color: #00A854;
+}
+
+.scroll-view-item {
+  height: 200px;
+}
+
+.taps {
+  display: flex;
+  flex-direction: row;
+}

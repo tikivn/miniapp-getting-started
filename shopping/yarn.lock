@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@tiki-miniapp/tiny-ui@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@tiki-miniapp/tiny-ui/-/tiny-ui-0.0.1.tgz#10e7297d64635c2d1f38ce1b37752bc9e36a7abc"
+  integrity sha512-xSzsjP49/DMhIrqq0XS2qJ/rGUMNBLNtP1tx83pmZ4ZwksVaiUUB1t7HbKD9y5f9AmnvMx8NbOphJ0QzH5mlHg==
+
 decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"

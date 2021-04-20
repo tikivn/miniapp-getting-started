@@ -1,0 +1,5 @@
+Page({
+  data: {
+    showInfo: true,
+  },
+});

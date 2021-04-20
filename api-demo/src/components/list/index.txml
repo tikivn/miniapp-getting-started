@@ -1,0 +1,14 @@
+<view class="list-container">
+  <text class="header">{{header}}</text>
+  <block tiki:for="{{items}}">
+    <view
+      key="item-{{index}}"
+      onTap="onOpenPage" 
+      data-url="{{item.path}}" 
+      class="list-item {{index === items.length - 1 ? 'list-item-last' : ''}}"
+    >
+      <text class="list-item-text">{{item.name}}</text>
+      <icon tiki:if="{{item.path}}" size="24" color="#81818A" type="arrow_right" />
+    </view>
+  </block>
+</view>

@@ -1,0 +1,36 @@
+.button-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.button-wrapper button {
+    color: green;
+}
+.body-wrapper {
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+}
+.footer-wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-container {
+    width: 100%;
+}
+.footer-custom-button--horizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-custom-button--vertical {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}

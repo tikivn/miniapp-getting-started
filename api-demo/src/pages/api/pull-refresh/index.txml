@@ -1,0 +1,9 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Trigger pull to refresh manually" />
+  <view class="block-content">
+    <button class="button-full" onTap="onStartPullToRefresh">Start refreshing</button>
+    <button class="button-full" onTap="onStopPullToRefresh">Stop refreshing</button>
+  </view>
+</view>

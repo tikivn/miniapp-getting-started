@@ -1,0 +1,11 @@
+.button-wrapper {
+    width: 120px;
+}
+.popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block-content button {
+    margin-top: 16px;
+}

@@ -1,0 +1,8 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Show the loading to user" />
+  <view class="block-content">
+    <button class="button-full" onTap="onLoading">Show loading</button>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Get the background color of navigation bar" />
+  <view class="block-content">
+    <text>Current title color: {{titleColor.color}}</text>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="getTitleColor">Get navigation bar color</button>
+  </view>
+</view>

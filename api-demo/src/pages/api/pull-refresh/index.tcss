@@ -1,0 +1,10 @@
+button {
+  align-self: stretch;
+  margin: 8px 16px 0px 16px;
+}
+view {
+    display: flex;
+   align-items: center;
+   align-content: center;
+   justify-content: center;
+}

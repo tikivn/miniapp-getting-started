@@ -1,0 +1,13 @@
+{
+  "name": "api-demo",
+  "version": "0.1.9",
+  "tiki": {
+    "appName": "Tiki Miniapp Demo",
+    "appIdentifier": "tiki-miniapp-demo",
+    "buildNumber": 40
+  },
+  "dependencies": {
+    "@tiki-miniapp/tiny-ui": "^0.0.1",
+    "lodash": "^4.17.20"
+  }
+}

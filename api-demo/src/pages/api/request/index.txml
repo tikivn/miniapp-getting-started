@@ -1,0 +1,32 @@
+<view>
+  <block-header 
+      title="Usage" 
+      description="Request are use to make request to any URL" />
+
+  <view class="block-content">
+    <text class="title mb-8">Variants</text>
+    <text class="title mb-8">1. Get request</text>
+    <text class="component-state">Get ip from https://api.ipify.org </text>
+    <view class="component-item">
+      <block tiki:if="{{get.ip !== undefined}}">
+        <text>ip address: {{get.ip}}</text>
+      </block> 
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onGetRequest">
+        Get request
+      </button>
+    </view>
+  </view>
+
+  <view class="block-content">
+    <text class="title mb-8">2. Post request</text>
+    <text class="component-state">Create a new post in https://</text>
+    <view class="component-item">
+      <block tiki:if="{{post.data !== undefined}}">
+        <text>{{post.data}}</text>
+      </block> 
+      <button loading="{{post.isLoading}}" style="width: 100%;" onTap="onPostRequest">
+        Post request
+      </button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+.list-container {
+  display: flex;
+  
+  margin: 0px 16px 16px 16px;
+  padding: 16px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-color: #EBEBF0;
+  background-color: white;
+}
+
+.header {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.list-item {
+  padding: 8px 0px;
+  border: 0px #EBEBF0 solid; 
+  border-bottom-width: 1px;
+  flex-direction: row;
+}
+
+.list-item-last {
+  border-bottom-width: 0px;
+}
+
+.list-item-text {
+  flex: 1;
+  font-weight: 400;
+}
+

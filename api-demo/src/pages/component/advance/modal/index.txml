@@ -1,0 +1,132 @@
+<view style="
+    width:100%;
+    height:100%;
+  ">
+  <block-header title="Usage" description="When the application needs to be more obvious to warn or remind the user's current operation behavior, you can use the dialog box. The user needs to perform operations on the dialog box before ending." />
+  <view class="block-content">
+    <text class="title mb-8">Basic</text>
+    <text class="heading">Basic modal</text>
+    <button
+        onTap="onTap"
+        data-modal="{{
+            type:'basic',
+        }}"
+    >Basic Modal</button>
+    </view>
+    <view class="block-content">
+        <text class="title mb-8">Top Image</text>
+        <text class="heading">Use modal with top images</text>
+        <button 
+            onTap="onTap"
+            data-modal="{{
+                type:'image',
+                showClose:true,
+            }}"
+        >ShowModal</button>
+    </view>
+    <view class="block-content">
+        <text class="title mb-8">Custom Footer</text>
+        <text class="heading">Render custom buttons at bottom</text>
+        <button
+            onTap="onTap"
+            data-modal="{{
+                type:'footer',
+                showClose:true,
+            }}"
+        >ShowModal</button>
+    </view>
+    <modal
+        show="{{modal.type==='basic'}}"
+        showClose="{{modal.showClose}}"
+        advice="{{modal.advice||false}}"
+        onModalClose="resetModal"
+        onMaskClick="onMaskClick"
+        onButtonClick="onButtonClick">
+    <view slot="header" tiki:if="{{modal.header}}">
+        <text style="text-align:center">this is header</text>
+        </view>
+        <view class="body-wrapper">
+            <text>Change image size</text>
+            <view style="
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                color:#1a94ff;
+                font-size:14px">
+                <button 
+                    data-size="sm" onTap="onTap"
+                    data-modal="{{
+                    showClose: true,
+                    advice:false
+                    }}"
+                    type="tertiary">showClose</button>
+                <button
+                    data-modal="{{
+                        header: true
+                    }}"
+                    onTap="onTap" type="tertiary">Show header</button>
+                <button
+                    data-modal="{{
+                        footer: true
+                    }}"
+                     onTap="onTap" type="tertiary">Show footer</button>
+                <button
+                    data-modal="{{
+                        footer: true,
+                        advice: true
+                    }}"
+                     onTap="onTap" type="tertiary">Advice close icon</button>
+            </view>
+        </view>
+        <view slot="footer" tiki:if="{{modal.footer}}">
+            <view style="display:flex;align-items:center;justify-content:center">
+                <button data-size="lg" onTap="resetModal" type="tertiary">close</button>
+            </view>
+            </view>
+    </modal>
+    <modal
+        show="{{modal.type==='image'}}"
+        advice="true"
+        onModalClose="resetModal"
+        onMaskClick="onMaskClick"
+        topImage='http://placeimg.com/640/480'
+        topImageSize="{{modal.topImageSize}}"
+        animationType="slide"
+        onButtonClick="onButtonClick">
+        <view slot="header" style="text-align:center">
+            <text style="text-align:center">this is header</text>
+        </view>
+        <view style="
+            display:flex;
+            flex-direction:row;
+            justify-content:space-around;
+            color:#1a94ff;
+            font-size:14px">
+            <button data-size="sm" onTap="changeImageSize" type="tertiary">sm</button>
+            <button data-size="md" onTap="changeImageSize" type="tertiary">md</button>
+            <button data-size="lg" onTap="changeImageSize" type="tertiary">lg</button>
+        </view>
+    </modal>
+    <modal
+        show="{{modal.type==='footer'}}"
+        onModalClose="resetModal"
+        showClose="true"
+        onMaskClick="onMaskClick"
+        buttons="{{[{text:'Cancel'},{text:'Ok'}]}}"
+        buttonsLayout="{{modal.buttonsLayout}}"
+        onButtonClick="onButtonClick">
+        <view slot="header">
+            <text style="text-align:center">this is header</text>
+        </view>
+            <view style="
+                display:flex;
+                flex-direction:row;
+                justify-content:space-around;
+                color:#1a94ff;
+                font-size:14px">
+            <button data-modal="{{buttonsLayout:'vertical'}}" onTap="onTap" type="tertiary">vertical layout</button>
+            <button data-modal="{{buttonsLayout:'horizontal'}}" onTap="onTap" type="tertiary">horizontal layout</button>
+            </view>
+    </modal>
+</view>

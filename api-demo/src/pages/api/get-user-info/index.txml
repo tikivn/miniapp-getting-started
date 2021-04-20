@@ -1,0 +1,18 @@
+<view>
+  <block-header 
+      title="Usage" 
+      description="Get basic information from Tiki User. This API will ask users to grant the permission" />
+
+  <view class="block-content">
+    <text class="title mb-8">Get User Info</text>
+    <view class="component-item">
+      <block tiki:if="{{data !== undefined}}">
+        <text>{{data}}</text>
+      </block> 
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onGetRequest">
+        Get Info
+      </button>
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,29 @@
+
+<view class="container">
+  <view class="block">
+    <text>type: primary</text>
+    <button type="primary" onTap="onTap">Primary</button>
+    <button type="primary" disabled >Primary(disabled)</button>
+    <button type="primary" size="medium">Primary(medium)</button>
+    <button type="primary" size="small">Primary(small)</button>
+    <button type="primary" loading>Primary(loading)</button>
+  </view>
+
+  <view class="block">
+    <text>type: secondary</text>
+    <button type="secondary">Secondary</button>
+    <button type="secondary" disabled >Secondary(disabled)</button>
+    <button type="secondary" size="medium">Secondary(medium)</button>
+    <button type="secondary" size="small">Secondary(small)</button>
+    <button type="secondary" loading>Secondary(loading)</button>
+  </view>
+
+  <view class="block">
+    <text>type: tertiary</text>
+    <button type="tertiary">Teritiary</button>
+    <button type="tertiary" disabled >Teritiary(disabled)</button>
+    <button type="tertiary" size="medium">Teritiary(medium)</button>
+    <button type="tertiary" size="small">Teritiary(small)</button>
+    <button type="tertiary" loading>Teritiary(loading)</button>
+  </view>
+</view>

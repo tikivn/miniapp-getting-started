@@ -1,0 +1,16 @@
+<view>
+  <block-header 
+    title="Usage" 
+    description="The API for hiding the keyboard."
+  />
+
+  <view class="block-content">
+    <text class="title mb-8">Example</text>
+    <view class="component-item">
+      <input
+        onInput="bindHideKeyboard"
+        placeholder="Enter 123 to automatically close the keyboard"
+      />
+    </view>
+  </view>
+</view>
