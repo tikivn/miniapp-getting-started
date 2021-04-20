@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@tikivn/mini-ui@next":
-  version "0.1.8-build.4"
-  resolved "https://npm.pkg.github.com/download/@tikivn/mini-ui/0.1.8-build.4/4c3313d402cc5f9688508869f27ed99f3e12ce0a879c114d61e897166615bcd5#db2860e037ed2f6562071ee75ce389855ff28491"
-  integrity sha512-VOnMWbfZ17UK62OIbijRxOU9Y+IFQNoSZhFlddGcyensijJxmCV4DghHiXl4vz1deCy1+QX1rYd64B6J8cEL1Q==
+"@tiki-miniapp/tiny-ui@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@tiki-miniapp/tiny-ui/-/tiny-ui-0.0.1.tgz#10e7297d64635c2d1f38ce1b37752bc9e36a7abc"
+  integrity sha512-xSzsjP49/DMhIrqq0XS2qJ/rGUMNBLNtP1tx83pmZ4ZwksVaiUUB1t7HbKD9y5f9AmnvMx8NbOphJ0QzH5mlHg==
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
