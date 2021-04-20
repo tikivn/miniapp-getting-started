@@ -16,6 +16,7 @@ Follow below topics to go futher:
 - [Code Structure](#code_structure)
 - [Branching Strategy](#branching)
 - [Commit Message Format](#commit)
+- [Publish App](#publish)
 
 ## <a name="code_structure"></a> Code Structure
 Each folder is a MiniApp Project, you can edit or create new project
@@ -88,3 +89,7 @@ Must be one of the following:
 The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages).
 
 The following is the list of supported scopes are projects name (E.g `shopping`)
+
+
+## <a name="publish"></a>Publish App
+You have to Login and Upload App with Tiki Studio. For more information, please follow [Upload App](https://miniapp.tiki.vn/docs/developer/introduce/release)
