@@ -5,7 +5,8 @@
     "pages/cart/index"
   ],
   "window": {
-    "defaultTitle": "Shopping"
+    "defaultTitle": "",
+    "backgroundColor": "#FCF4DD"
   },
   "tabBar": {
     "items": [

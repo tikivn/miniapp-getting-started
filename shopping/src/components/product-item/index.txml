@@ -2,9 +2,9 @@
   <image
     resize-mode="contain"
     style="width: {{imageWidth}}px" 
-    src="{{product.image}}" />
+    src="{{product.thumbnail_url}}" />
   <view onTap="onGoToProductPage">
-    <text number-of-lines="{{3}}">{{product.title}}</text>
+    <text number-of-lines="{{3}}">{{product.name}}</text>
   </view>
   <view class="price-container">
     <price price="{{product.price}}" />

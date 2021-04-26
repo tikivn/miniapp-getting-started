@@ -1,4 +1,8 @@
 {
+  "defaultTitle": "",
+  "titleBarColor": "#C7E9F9",
+  "titleColor": "#fff",
+  "transparentTitle": "none",
   "usingComponents": {
     "product-item": "components/product-item/index"
   }

@@ -1,3 +1,6 @@
+<image src="../../images/banner.png" class="w-100" />
+<image src="../../images/sale.png" resize-mode="contain" class="w-100" />
+
 <view class="loading" tiki:if="{{loading}}">
   <image
     class="loading-image" 
@@ -5,7 +8,8 @@
 </view>
 
 <view class="container" tiki:else>
-  <carousel 
+  <carousel
+    class="carousel"
     indicator-dots="{{false}}" 
     cell-spacing="{{cellSpacing}}" 
     width="{{windowWidth}}"
@@ -14,7 +18,7 @@
       <image 
         resize-mode="contain"
         style="width: {{bannerWidth}}px; height: 96px" 
-        src="{{item.image}}" />
+        src="{{item.mobile_url}}" />
     </block>
   </carousel>
 
@@ -22,7 +26,7 @@
 
   <text class="title">Danh sách sản phẩm</text>
 
-  <tabs tabs="{{categories}}" onChange="onTabChange">
+  <tabs tabs="{{categories}}" tab-size="{{2}}" onChange="onTabChange">
     <block tiki:for="{{categories}}">
       <view class="loading" tiki:if="{{item.loading}}">
         <image 

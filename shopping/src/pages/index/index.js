@@ -13,11 +13,14 @@ Page({
   onLoad() {
     // Get banners
     my.request({
-      url: 'https://fakestoreapi.com/products',
+      url: 'https://tiki.vn/api/v2/home/banners/v2',
       method: 'GET',
+      headers: {
+        'User-Agent': 'TikiNative'
+      },
       success: (response) => {
         console.log('Product Reponse: ', response)
-        this.setData({ banners: response, loading: false });
+        this.setData({ banners: response.data, loading: false });
       },
       fail: (fail) => {
         console.log('Fail', fail);
@@ -26,13 +29,17 @@ Page({
 
     // Get categories
     my.request({
-      url: 'https://fakestoreapi.com/products/categories',
+      url: 'https://tiki.vn/api/v2/categories?parent_id=2&include_in_menu=true',
       method: 'GET',
+      headers: {
+        'User-Agent': 'TikiNative'
+      },
       success: (response) => {
         console.log('Categories Reponse: ', response)
-        const categories = response.map(
-          item => ({ title: item, loading: true, products: [] })
+        const categories = response.data.map(
+          item => ({ title: item.name, ...item, loading: true, products: [] })
         );
+        console.log('categories :>> ', categories);
         this.setData({ categories }, () => this.getProductByCategory(0));
       },
     });
@@ -50,16 +57,19 @@ Page({
     });
   },
   getProductByCategory(catIndex) {
-    const catTitle = this.data.categories[catIndex].title;
+    const {title, id} = this.data.categories[catIndex];
 
     my.request({
-      url: `https://fakestoreapi.com/products/category/${catTitle}`,
+      url: `https://tiki.vn/api/v2/products?limit=12&is_mweb=1&aggregations=1&categoryId=${id}&category=${id}&page=1`,
       method: 'GET',
+      headers: {
+        'User-Agent': 'TikiNative'
+      },
       success: (response) => {
-        console.log(`Product of category ${catTitle}`, response);
+        console.log(`Product of category ${title}`, response.data);
         const categories = this.data.categories.map(
           (item, catIdx) => catIdx === catIndex 
-            ? {...item, products: response, loading: false} 
+            ? {...item, products: response.data, loading: false} 
             : item 
         );
         this.setData({ categories });
