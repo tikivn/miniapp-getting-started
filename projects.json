@@ -4,20 +4,20 @@
     "categories": [],
     "owner": "Tiki",
     "image": "https://salt.tikicdn.com/ts/social/ec/68/28/dd5ecb58d2e344fb98ceb9598c376ce8.png",
-    "path": "/blank"
+    "path": "blank"
   },
   {
     "name": "API Demo",
     "categories": [],
     "owner": "Tiki",
     "image": "https://salt.tikicdn.com/ts/social/ec/68/28/dd5ecb58d2e344fb98ceb9598c376ce8.png",
-    "path": "/api-demo"
+    "path": "api-demo"
   },
   {
     "name": "Shopping",
     "categories": [],
     "owner": "Tiki",
     "image": "https://salt.tikicdn.com/ts/social/ec/68/28/dd5ecb58d2e344fb98ceb9598c376ce8.png",
-    "path": "/shopping"
+    "path": "shopping"
   }
 ]
