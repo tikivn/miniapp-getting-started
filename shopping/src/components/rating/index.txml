@@ -1,0 +1,12 @@
+<view class="rating">
+  <block tiki:for="{{[1, 2, 3, 4, 5]}}">
+    <image 
+      class="rating-image" 
+      src="../../images/star.png" 
+      tiki:if="{{rating >= item}}" />
+    <image 
+      class="rating-image" 
+      src="../../images/star-empty.png" 
+      tiki:else />
+  </block>
+</view>

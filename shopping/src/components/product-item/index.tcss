@@ -1,6 +1,12 @@
 .product {
   width: 50%;
-  padding: 12px;
+  background: #fff;
+}
+
+.product-content {
+  border-radius: 4px;
+  /* background: red; */
+  padding: 4px;
 }
 
 .add {
@@ -11,5 +17,20 @@
 .price-container {
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+}
+
+.name {
+  font-size: 12px;
+  margin-top: 8px;
+  line-height: 16px;
+}
+
+.badge {
+  background: #EF4F15;
+  padding: 4px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 4px;
+  margin-left: 8px;
 }

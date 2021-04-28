@@ -1,18 +1,30 @@
-<view class="product">
-  <image
-    resize-mode="contain"
-    style="width: {{imageWidth}}px" 
-    src="{{product.thumbnail_url}}" />
-  <view onTap="onGoToProductPage">
-    <text number-of-lines="{{3}}">{{product.name}}</text>
-  </view>
-  <view class="price-container">
-    <price price="{{product.price}}" />
-    <button 
-      onTap="onAddCart"
-      class="add" 
-      type="secondary">
-      <icon color="#1A94FF" type="plus" />
-    </button>
+<view 
+  class="product" 
+  onTap="onGoToProductPage">
+  <view class="product-content">
+    <image
+      resize-mode="contain"
+      style="width: {{imageWidth}}px" 
+      src="{{product.thumbnail_url}}" />
+
+    <view style="padding: 8px;">
+      <image 
+        src="https://salt.tikicdn.com/ts/upload/9f/32/dd/8a8d39d4453399569dfb3e80fe01de75.png"
+        style="width: 56px; height: 16px" />
+      <text class="name" number-of-lines="{{3}}">{{product.name}}</text>
+      <rating rating="{{product.rating_average}}" />
+      <view class="price-container">
+        <price price="{{product.price}}" />
+        <view tiki:if="product.discount_rate > 0" class="badge">
+          -{{product.discount_rate}}%
+        </view>
+        <!-- <button --> 
+        <!--   onTap="onAddCart" -->
+        <!--   class="add" --> 
+        <!--   type="secondary"> -->
+        <!--   <icon color="#1A94FF" type="plus" /> -->
+        <!-- </button> -->
+      </view>
+    </view>
   </view>
 </view>

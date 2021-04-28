@@ -1,5 +1,6 @@
-.w-100 {
+.banner {
   width: 750rpx;
+  margin-bottom: 8px;
 }
 
 .divider {
