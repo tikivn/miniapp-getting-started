@@ -1,7 +1,10 @@
 # MiniApp Getting Started
+
 The following is a list of the example MiniApp in the [MiniApp Document](https://miniapp.tiki.vn/docs/developer/getting-started)
 
+- [Blank](https://github.com/tikivn/miniapp-getting-started/tree/main/blank)
 - [Shopping](https://github.com/tikivn/miniapp-getting-started/tree/main/shopping)
+- [API Demo](https://github.com/tikivn/miniapp-getting-started/tree/main/api-demo)
 
 ## What is Tiki MiniApp ?
 
@@ -11,9 +14,9 @@ Tiki's MiniApp program comes with a simple, efficient framework system with a va
 
 Resources:
 
-* [Getting Started with Tiki MiniApp](https://miniapp.tiki.vn/docs/developer/getting-started)
-* [Introducing about Framework](https://miniapp.tiki.vn/docs/framework/overview)
+- [Getting Started with Tiki MiniApp](https://miniapp.tiki.vn/docs/developer/getting-started)
+- [Introducing about Framework](https://miniapp.tiki.vn/docs/framework/overview)
 
 ## Contributing
 
-Please check out the [Contributing to MiniApp Getting Started guide](https://github.com/tikivn/miniapp-demo/blob/master/CONTRIBUTING.md) for guidelines about how to proceed.
+Please check out the [Contributing to MiniApp Getting Started guide](https://github.com/tikivn/miniapp-getting-started/blob/main/CONTRIBUTING.md) for guidelines about how to proceed.
