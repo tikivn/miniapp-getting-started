@@ -1,0 +1,23 @@
+[ 
+  {
+    "name": "Blank",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/miniapp/2f/f3/f5/77fa1739863d0c6881071dcd8c2e0b8a.png",
+    "path": "blank"
+  },
+  {
+    "name": "API Demo",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/miniapp/7d/19/89/3020372bf846b6b5310b715a531a5014.png",
+    "path": "api-demo"
+  },
+  {
+    "name": "Shopping",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/miniapp/57/e7/86/c12963a119ecf7eb8cc0decc6c02d8a1.png",
+    "path": "shopping"
+  }
+]
