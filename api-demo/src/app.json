@@ -21,6 +21,7 @@
     "pages/api/navigator/index",
     "pages/api/keyboard/index",
     "pages/api/image-picker/index",
+    "pages/api/deep-link/index",
     "pages/component/basic/button/index",
     "pages/component/basic/text/index",
     "pages/component/basic/icon/index",

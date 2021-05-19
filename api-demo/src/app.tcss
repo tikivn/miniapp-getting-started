@@ -1,12 +1,5 @@
 @import "./styles/utilities.tcss";
 
-page {
-    flex: 1;
-    height: 100%;
-    width: 100%;
-    flex-direction: row;
-    background-color: var(--gray10);
-}
 
 .block-content {
     background-color: var(--white);
