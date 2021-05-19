@@ -77,7 +77,14 @@ const imagePickerAPIList = [
   {
     name: "Choose Image",
     path: "/pages/api/image-picker/index",
-  }
+  },
+].filter(filterNotImplementedPages);
+
+const deeplinkAPIList = [
+  {
+    name: "Open Deeplink",
+    path: "/pages/api/deep-link/index",
+  },
 ].filter(filterNotImplementedPages);
 
 const pullRefreshAPIList = [
@@ -140,6 +147,10 @@ const APIList = [
   {
     type: "Image Picker",
     list: imagePickerAPIList,
+  },
+  {
+    type: "Deeplink",
+    list: deeplinkAPIList,
   },
 ];
 

@@ -1,0 +1,10 @@
+<view>
+  <block-header title="Usage" description="Open a deeplink" />
+  <view class="block-content">
+    Input the url to navigate
+    <input class="form-value" placeholder="URL" name="url" onInput="urlChange"></input>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onOpenDeeplink">Open Deeplink</button>
+  </view>
+</view>

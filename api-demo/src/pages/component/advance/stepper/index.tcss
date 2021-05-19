@@ -1,4 +1,4 @@
-.1 {
+.stepper {
   display: flex;
   align-items: center;
   color: var(--brand-primary);
