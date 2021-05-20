@@ -1,23 +1,20 @@
 {
-  "pages": [
-    "pages/index/index",
-    "pages/product/index",
-    "pages/cart/index"
-  ],
+  "pages": ["pages/index/index", "pages/product/index", "pages/cart/index"],
   "window": {
     "defaultTitle": "",
     "backgroundColor": "#FCF4DD"
   },
   "tabBar": {
+    "selectedColor": "#EF4F15",
     "items": [
-      { 
-        "name": "Sản phẩm", 
+      {
+        "name": "Sản phẩm",
         "pagePath": "pages/index/index",
         "icon": "images/home.png",
         "activeIcon": "images/home_active.png"
       },
-      { 
-        "name": "Giỏ hàng", 
+      {
+        "name": "Giỏ hàng",
         "pagePath": "pages/cart/index",
         "icon": "images/cart.png",
         "activeIcon": "images/cart_active.png"

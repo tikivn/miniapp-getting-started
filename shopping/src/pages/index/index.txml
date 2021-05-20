@@ -1,8 +1,5 @@
 <image src="../../images/banner.png" class="banner" />
-<image 
-  src="../../images/sale.png" 
-  resize-mode="contain" 
-  style="width: {{saleImage.width}}px; height: {{saleImage.height}}px" />
+<image src="../../images/sale.png" class="sale" />
 
 <view class="products">
   <product-item 

@@ -1,6 +1,13 @@
 .banner {
   width: 750rpx;
   margin-bottom: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.sale {
+  width: 100%;
+  height: auto;
 }
 
 .divider {
@@ -10,10 +17,6 @@
   margin: 16px 0;
 }
 
-.container {
-  flex: 1;
-}
-
 .title {
   font-size: 16px;
   font-weight: bold;
@@ -21,10 +24,11 @@
 }
 
 .products {
+  margin: 0 16px;
   margin-top: 12px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
 }
 
 .carousel {

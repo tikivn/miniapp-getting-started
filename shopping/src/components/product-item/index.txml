@@ -3,8 +3,7 @@
   onTap="onGoToProductPage">
   <view class="product-content">
     <image
-      resize-mode="contain"
-      style="width: {{imageWidth}}px" 
+      class="cover"
       src="{{product.thumbnail_url}}" />
 
     <view style="padding: 8px;">
