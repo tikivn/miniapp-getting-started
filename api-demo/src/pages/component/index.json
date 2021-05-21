@@ -2,7 +2,7 @@
   "defaultTitle": "",
   "titleBarColor": "#1A94FF",
   "titleColor": "#fff",
-  "transparentTitle": "none",
+  "transparentTitle": "auto",
   "usingComponents": {
     "list": "components/list/index"
   }

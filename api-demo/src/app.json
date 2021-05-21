@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/component/basic/movable-view/index",
     "pages/component/index",
     "pages/api/index",
     "pages/api/animation/index",
@@ -52,7 +53,7 @@
     "items": [
       {
         "name": "Components",
-        "pagePath": "pages/component/index",
+        "pagePath": "pages/component/basic/movable-view/index",
         "icon": "images/icon_component.png",
         "activeIcon": "images/icon_component_HL.png"
       },
