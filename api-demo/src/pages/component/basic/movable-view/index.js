@@ -11,4 +11,7 @@ Page({
   onTouchCancel(e) {
     console.log('---------', e);
   },
+  onTap(e) {
+    console.log('---------', e);
+  }
 })

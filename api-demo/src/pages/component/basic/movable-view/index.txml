@@ -1,7 +1,7 @@
 <view>
   <block-header title="Usage" description="A movable view container. It can be dragged to move on a page. " />
   <view class="block-content">
-    <text>movable-view is smaller than movable-area</text>
+    <view onTap="onTap">movable-view is smaller than movable-area</view>
     <movable-area>
       <movable-view direction="all">text</movable-view>
     </movable-area>
