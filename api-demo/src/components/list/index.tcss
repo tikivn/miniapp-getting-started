@@ -1,6 +1,6 @@
 .list-container {
   display: flex;
-  
+  flex-direction: column;
   margin: 0px 16px 16px 16px;
   padding: 16px;
   border-radius: 8px;
@@ -17,9 +17,11 @@
 }
 
 .list-item {
+  display: flex;
+	align-items: center;
   padding: 8px 0px;
   border: 0px #EBEBF0 solid; 
-  border-bottom-width: 1px;
+  border-bottom-width: 0.5px;
   flex-direction: row;
 }
 

@@ -1,13 +1,18 @@
 .page-container {
-  background-color: var(--gray10);
+  display: flex;
   flex: 1;
+  flex-direction: column;
+  background-color: var(--gray10);
 }
 
 .banner {
-  width: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #1A94FF;
   height: 172px;
-  align-items: center;
   padding: 0 16px;
   padding-top: 16px;
 }
@@ -28,8 +33,11 @@
 
 .search {
   height: 48px;
-  width: 100%;
-  margin: 0 16px;
+  width: 90vw;
+}
+
+.search input {
+  display: block;
 }
 
 .content {
