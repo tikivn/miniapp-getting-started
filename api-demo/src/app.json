@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/component/basic/movable-view/index",
     "pages/component/index",
     "pages/api/index",
     "pages/api/animation/index",

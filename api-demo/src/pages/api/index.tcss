@@ -1,14 +1,31 @@
 .page-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   background-color: var(--gray10);
 }
 
 .banner {
   width: 100%;
   background-color: #1A94FF;
-  height: 192px;
-  align-items: center;
-  padding: 0 16px;
-  padding-top: 16px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.search {
+  height: 22px;
+  width: 100%;
+}
+
+.search input {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 80vw;
+  height: 20px;
 }
 
 .component-logo {
@@ -25,14 +42,10 @@
   margin-bottom: 8px;
 }
 
-.search {
-  height: 48px;
-  width: 100%;
-  margin: 0 16px;
-}
+
 
 .content {
-  margin-top: 16px;
+  margin-top: 32px;
 }
 
 .block {

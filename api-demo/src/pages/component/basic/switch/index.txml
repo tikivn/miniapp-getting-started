@@ -2,9 +2,9 @@
   <block-header title="Usage" description="Switches give user control over a feature or option that can be turned on or off." />
 
   <view class="block-content">
-    <text class="title mb-8">Variants</text>
-    <text class="subtitle mb-8">State</text>
-    <text class="component-state">Default, Selected, Hover, Disable and Disable - Selected</text>
+    <view class="title mb-8">Variants</view>
+    <view class="subtitle mb-8">State</view>
+    <view class="component-state">Default, Selected, Hover, Disable and Disable - Selected</view>
 
     <view class="component-item">
       <text>Default</text>

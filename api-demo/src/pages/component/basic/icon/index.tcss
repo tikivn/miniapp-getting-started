@@ -23,6 +23,7 @@
 }
 
 .item {
+  display: flex;
   margin: 8px;
   justify-content: center;
   align-items: center;

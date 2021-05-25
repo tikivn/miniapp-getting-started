@@ -28,6 +28,10 @@ const basicComponents = [
         path: '',
       },
       {
+        name: 'Movable View',
+        path: 'pages/component/basic/movable-view/index',
+      },
+      {
         name: 'Carousel',
         path: '/pages/component/basic/carousel/index',
       },
