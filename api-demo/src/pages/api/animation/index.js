@@ -10,7 +10,9 @@ Page({
     this.setData({ animation: this.animation.export() });
   },
   onScale() {
-    this.animation.scale(Math.random() * 2).step();
+    const scale = Math.random() * 2;
+    console.log('Scale:', scale);
+    this.animation.scale(scale).step();
     this.setData({ animation: this.animation.export() });
   },
   onTranslate() {
@@ -39,6 +41,7 @@ Page({
       .rotate(Math.random() * 720 - 360)
       .scale(Math.random() * 2)
       .translate(Math.random() * 100 - 50, Math.random() * 100 - 50)
+      .skew(Math.random() * 90, Math.random() * 90)
       .step();
     this.setData({ animation: this.animation.export() });
   },
@@ -49,6 +52,8 @@ Page({
       .scale(Math.random() * 2)
       .step()
       .translate(Math.random() * 100 - 50, Math.random() * 100 - 50)
+      .step()
+      .skew(Math.random() * 90, Math.random() * 90)
       .step();
     this.setData({ animation: this.animation.export() });
   },
@@ -60,7 +65,23 @@ Page({
       .rotateZ(0)
       .scale(1)
       .translate(0, 0)
+      .skew(0, 0)
       .step({ duration: 0 });
     this.setData({ animation: this.animation.export() });
   },
+  onTransitionEnd(e) {
+    console.log('onTransitionEnd', e);
+  },
+  onAnimationStart(e) {
+    console.log('onAnimationStart', e);
+  },
+  onAnimationIteration(e) {
+    console.log('onAnimationIteration', e); 
+  },
+  onAnimationEnd(e) {
+    console.log('onAnimationEnd', e); 
+  },
+  tapName(e) {
+    console.log('------------', e);
+  }
 });
