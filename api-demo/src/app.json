@@ -37,6 +37,8 @@
     "pages/component/basic/scroll-view/index",
     "pages/component/basic/carousel/index",
     "pages/component/basic/tabs/index",
+    "pages/component/basic/movable-view/index",
+    "pages/component/basic/audio/index",
     "pages/component/advance/list/index",
     "pages/component/advance/stepper/index",
     "pages/component/advance/avatar/index",

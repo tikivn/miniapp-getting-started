@@ -1,9 +1,15 @@
 <view>
   <block-header title="Usage" description="Carousel are used to display gallery of images." />
 
-  <carousel cell-spacing="{{8}}" slide-width="{{300}}" >
-    <view class="item" style="height: {{height}}px"></view>
-    <view class="item" style="height: {{height}}px"></view>
-    <view class="item" style="height: {{height}}px"></view>
+  <carousel>
+    <carousel-item>
+      <view class="carousel-item" style="background: red"></view>
+    </carousel-item>
+    <carousel-item>
+      <view class="carousel-item" style="background: blue"></view>
+    </carousel-item>
+    <carousel-item>
+      <view class="carousel-item" style="background: green"></view>
+    </carousel-item>
   </carousel>
 </view>

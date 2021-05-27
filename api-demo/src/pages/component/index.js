@@ -28,6 +28,10 @@ const basicComponents = [
         path: '',
       },
       {
+        name: 'Movable View',
+        path: 'pages/component/basic/movable-view/index',
+      },
+      {
         name: 'Carousel',
         path: '/pages/component/basic/carousel/index',
       },
@@ -89,6 +93,10 @@ const basicComponents = [
       {
         name: 'Image',
         path: "/pages/component/basic/image/index",
+      },
+      {
+        name: 'Audio',
+        path: "/pages/component/basic/audio/index",
       }
     ]
   }

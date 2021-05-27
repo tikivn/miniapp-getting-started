@@ -1,0 +1,51 @@
+<view>
+  <block-header title="Usage" description="A movable view container. It can be dragged to move on a page. " />
+  <view class="block-content">
+    <view onTap="onTap">movable-view is smaller than movable-area</view>
+    <movable-area>
+      <movable-view direction="all">text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="block-content">
+    <text>movable-view is larger than movable-area</text>
+    <movable-area>
+      <movable-view class="max" direction="all">text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="block-content">
+    <text>movable-view can move horizontally</text>
+    <movable-area>
+      <movable-view direction="horizontal">text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="block-content">
+    <text>movable-view can move vertically</text>
+    <movable-area>
+      <movable-view direction="vertical">text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="block-content">
+    <text>movable-view can move after the view container is out of the movable area</text>
+    <movable-area>
+      <movable-view direction="all" out-of-bounds>text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="block-content">
+    <text>movable-view has inertia</text>
+    <movable-area>
+      <movable-view direction="all" inertia>text</movable-view>
+    </movable-area>
+  </view>
+
+  <view class="block-content">
+    <text>two-finger scaling</text>
+    <movable-area scale-area>
+      <movable-view direction="all" scale scale-min="0.5" scale-max="4">text</movable-view>
+    </movable-area>
+  </view>
+</view>
