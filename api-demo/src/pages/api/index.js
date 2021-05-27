@@ -113,6 +113,14 @@ const networkAPIList = [
     name: "HTTP Request",
     path: "/pages/api/request/index",
   },
+  {
+    name: "Download File",
+    path: "/pages/api/download-file/index",
+  },
+  {
+    name: "Upload File",
+    path: "/pages/api/upload-file/index",
+  },
 ];
 
 const APIList = [
