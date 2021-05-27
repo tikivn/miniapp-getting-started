@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "my.downloadFile",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

@@ -1,0 +1,11 @@
+<view>
+  <block-header title="Usage" description="Download a file" />
+  <view class="block-content">
+    Input the url to download
+    <input class="form-value" placeholder="URL" name="url" onInput="urlChange" value="https://kenh14cdn.com/thumb_w/660/203336854389633024/2021/5/26/vy-oanh-11-9692-1616992685-1622019097701899336781.jpg"></input>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onDownloadFile">Download Image</button>
+  </view>
+  <image src="{{image}}" />
+</view>
