@@ -15,8 +15,8 @@
   </view>
   <view class="block-content" style="display: flex; flex-direction: column">
     <view class="operation-item">{{title}}</view>
-    <view class="operation-item" onTap="play">play</view>
-    <view class="operation-item" onTap="pause">pause</view>
-    <view class="operation-item" onTap="seek">seek</view>
+    <button type="solid" onTap="play">play</button>
+    <button type="solid" onTap="pause">pause</button>
+    <button type="solid" onTap="seek">seek</button>
   </view>
 </view>
