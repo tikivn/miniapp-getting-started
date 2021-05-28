@@ -97,6 +97,10 @@ const basicComponents = [
       {
         name: 'Audio',
         path: "/pages/component/basic/audio/index",
+      },
+      {
+        name: 'Video',
+        path: "/pages/component/basic/video/index",
       }
     ]
   }

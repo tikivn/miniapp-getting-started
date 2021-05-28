@@ -39,6 +39,7 @@
     "pages/component/basic/tabs/index",
     "pages/component/basic/movable-view/index",
     "pages/component/basic/audio/index",
+    "pages/component/basic/video/index",
     "pages/component/advance/list/index",
     "pages/component/advance/stepper/index",
     "pages/component/advance/avatar/index",
