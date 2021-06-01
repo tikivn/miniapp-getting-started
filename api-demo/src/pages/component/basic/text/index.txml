@@ -1,4 +1,4 @@
-<block-header title="Usage" description="to display plain text or paragraph"/>
+<block-header title="Usage" description="to display plain text or paragraph" />
 <view class="container">
   <view class="block-content br-4">
     <text>{{text}}\n</text>

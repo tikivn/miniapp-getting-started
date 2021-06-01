@@ -1,11 +1,8 @@
+<block-header title="Usage" description="Display image from a source url" />
 <view>
   <view class="block-content">
     <view class="component-item">
-      <image 
-        onLoad="onLoad" 
-        onTap="onTap" 
-        src="{{source}}" 
-        class="image-item" />
+      <image onLoad="onLoad" onTap="onTap" src="{{source}}" class="image-item" />
     </view>
     <view class="component-item">
       <image src="../../../../images/app_logo.png" />
@@ -15,4 +12,3 @@
     </view>
   </view>
 </view>
-
