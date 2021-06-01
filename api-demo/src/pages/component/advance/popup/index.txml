@@ -13,10 +13,10 @@
       mask="{{true}}"
       onMaskClick="onMaskClick"
     >
-  <view
+    <view
       class="popup-content"
       style="{{popup.position==='bottom'||popup.position==='top'?'height:150px':'width:200px;flex:1'}}"
-  >
+    >
       <text>this is popoup content</text>
       <button onTap="onMaskClick">Close</button>
   </view>

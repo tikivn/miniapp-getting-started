@@ -5,6 +5,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    background: #fff;
+    height: 100%;
 }
 .block-content button {
     margin-top: 16px;
