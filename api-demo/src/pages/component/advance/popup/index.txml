@@ -1,7 +1,7 @@
 <view>
   <block-header title="Usage" description="Pop-up menu" />
   <view class="block-content">
-      <text class="title mb-8">Plaground</text>
+      <text class="title mb-8">Playground</text>
       <button data-popup="{{position:'top',mask:true,show:true}}" onTap="onTap">OpenTop</button>
       <button data-popup="{{position:'bottom',mask:true,show:true}}" onTap="onTap">OpenBottom</button>
       <button data-popup="{{position:'right',mask:true,show:true}}" onTap="onTap">OpenRight</button>

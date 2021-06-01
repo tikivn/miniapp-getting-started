@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@tiki-miniapp/tiny-ui@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@tiki-miniapp/tiny-ui/-/tiny-ui-0.0.1.tgz#10e7297d64635c2d1f38ce1b37752bc9e36a7abc"
-  integrity sha512-xSzsjP49/DMhIrqq0XS2qJ/rGUMNBLNtP1tx83pmZ4ZwksVaiUUB1t7HbKD9y5f9AmnvMx8NbOphJ0QzH5mlHg==
+"@tiki-miniapp/tiny-ui@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/@tiki-miniapp/tiny-ui/-/tiny-ui-0.0.5.tgz#129467d32af322d1e75be9cd2caa1cde3ca6b261"
+  integrity sha512-uBE216P2jjSm7+aels589cPYwyfwvV+w1Gy+NtHW0Nl28+4rgCk2ZmwBDW+usBSrU5IzWKTQjcFpIw9dDbCuKg==
 
 lodash@^4.17.20:
   version "4.17.21"
