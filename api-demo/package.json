@@ -1,9 +1,9 @@
 {
   "name": "api-demo",
-  "version": "0.3.5",
+  "version": "0.3.7",
   "tiki": {
     "appIdentifier": "tiki-miniapp-demo",
-    "buildNumber": 1
+    "buildNumber": 2
   },
   "dependencies": {
     "@tiki-miniapp/tiny-ui": "^0.0.5",
