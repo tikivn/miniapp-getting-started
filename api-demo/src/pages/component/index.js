@@ -66,6 +66,10 @@ const basicComponents = [
     name: 'Form component',
     components: [
       {
+        name: 'Form',
+        path: "/pages/component/basic/form/index",
+      },
+      {
         name: 'Button',
         path: "/pages/component/basic/button/index",
       },

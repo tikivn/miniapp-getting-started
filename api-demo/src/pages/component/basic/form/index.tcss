@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+button {
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 4px;
+}
+
+.flex text {
+  margin-left: 8px;
+}
+
+.container {
+  min-height: 100%;
+  background-color: var(--gray20);
+  padding: 16px;
+}
+
+.block {
+  background-color: white;
+  margin: 8px 0;
+  padding: 16px;
+  border-radius: var(--border-radius-rounded-4px);
+}
+
+.item {
+  margin: 8px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.item input {
+  margin-left: 16px;
+}

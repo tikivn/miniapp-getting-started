@@ -24,6 +24,7 @@
     "pages/api/deep-link/index",
     "pages/api/download-file/index",
     "pages/api/upload-file/index",
+    "pages/component/basic/form/index",
     "pages/component/basic/button/index",
     "pages/component/basic/text/index",
     "pages/component/basic/icon/index",
