@@ -1,3 +1,4 @@
+<block-header title="Usage" description="Use to wrap and keep values of input, switch, checkbox, radio component."/>
 <view class="container">
   <form onSubmit="onSubmit" onReset="onReset">
     <view class="block">

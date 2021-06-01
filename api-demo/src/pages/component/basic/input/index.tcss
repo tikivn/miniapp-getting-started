@@ -13,7 +13,7 @@
 
 .item {
   margin: 8px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   display: flex;
   flex-direction: row;

@@ -3,10 +3,6 @@
   background-color: #FFF;
 }
 
-.block-content {
-  background-color: var(--gray10);
-}
-
 .mb-8 {
   margin-bottom: 8px;
 }
