@@ -1,10 +1,11 @@
+<block-header title="Usage" description="to display plain text or paragraph" />
 <view class="container">
-  <view class="block-content">
+  <view class="block-content br-4">
     <text>{{text}}\n</text>
-    <button onTap="add">Add line</button>
-    <button type="secondary" onTap="remove">Remove line</button>
+    <button onTap="add" class="br-4">Add line</button>
+    <button type="secondary" onTap="remove" class="br-4">Remove line</button>
   </view>
-  <view class="block-content">
+  <view class="block-content br-4">
     <text number-of-lines="{{2}}">{{longText}}</text>
   </view>
 </view>

@@ -2,5 +2,8 @@
   "defaultTitle": "button",
   "titleBarColor": "#1B6BFF",
   "titleColor": "#fff",
-  "transparentTitle": "none"
+  "transparentTitle": "none",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
 }

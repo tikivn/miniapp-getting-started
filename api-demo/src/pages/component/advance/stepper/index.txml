@@ -1,13 +1,18 @@
+<movable-area scale-area="{{true}}">
+  <movable-view scale="" />
+</movable-area>
 <view>
-  <block-header title="Usage" description="To let users specify a numeric value using plus and minus buttons which must be no less than a given value, and no more than another given value." />
+  <block-header title="Usage"
+    description="To let users specify a numeric value using plus and minus buttons which must be no less than a given value, and no more than another given value." />
   <view class="block-content">
     <text class="title mb-8">Variants</text>
     <text class="title mb-8">Horizontal</text>
     <list>
       <list-item disabled="{{true}}">
-        Default asdjgajsagkdagdkjasgdkahgfdkjh qjkdajkshaksdgf aksjdhasjkdah
+        Default
         <view slot="extra">
-          <stepper onChange="callBackFn" step="{{1}}" showNumber readOnly="{{false}}" value="{{value}}" inputWidth="40px" min="{{2}}" />
+          <stepper onChange="callBackFn" step="{{1}}" showNumber readOnly="{{false}}" value="{{value}}"
+            inputWidth="40px" min="{{2}}" />
         </view>
       </list-item>
       <list-item disabled="{{true}}">
@@ -24,7 +29,8 @@
       <list-item disabled="{{true}}">
         Default
         <view slot="extra">
-          <stepper onChange="callBackFn" step="{{1}}" showNumber readOnly="{{false}}" value="{{value}}" inputWidth="40px" min="{{2}}" direction="column" />
+          <stepper onChange="callBackFn" step="{{1}}" showNumber readOnly="{{false}}" value="{{value}}"
+            inputWidth="40px" min="{{2}}" direction="column" />
         </view>
       </list-item>
       <list-item disabled="{{true}}">
