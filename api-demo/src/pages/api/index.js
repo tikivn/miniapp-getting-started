@@ -87,6 +87,13 @@ const deeplinkAPIList = [
   },
 ].filter(filterNotImplementedPages);
 
+const fileAPIList = [
+  {
+    name: "File System",
+    path: "/pages/api/file/index",
+  },
+].filter(filterNotImplementedPages);
+
 const pullRefreshAPIList = [
   {
     name: "Pull down to refresh",
@@ -159,6 +166,10 @@ const APIList = [
   {
     type: "Deeplink",
     list: deeplinkAPIList,
+  },
+  {
+    type: "File",
+    list: fileAPIList,
   },
 ];
 

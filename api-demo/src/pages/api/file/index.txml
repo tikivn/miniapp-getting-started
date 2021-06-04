@@ -1,0 +1,14 @@
+<view>
+  <block-header title="Usage" description="File system" />
+  <view class="block-content">
+    <image src="{{tempFilePath}}" />
+    <button class="button-full" onTap="onChooseImage">Choose Image</button>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onSaveFile">Save Image</button>
+    <button class="button-full" onTap="onGetFileInfo">Get File Info</button>
+    <button class="button-full" onTap="onGetSavedFileInfo">Get Saved File Info</button>
+    <button class="button-full" onTap="onGetSavedFileList">Get Saved File List</button>
+    <button class="button-full" onTap="onRemoveSavedFile">Remove Save File</button>
+  </view>
+</view>
