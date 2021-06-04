@@ -18,8 +18,9 @@
 }
 
 .component-logo {
-  width: 92px;
-  height: 92px;
+  width: 73.22px;
+  height: 48px;
+  margin-top: 32px;
   margin-bottom: 16px;
 }
 
