@@ -1,5 +1,3 @@
-const { isThisSecond } = require("date-fns");
-
 Page({
   data: {
     tempFilePath: undefined,
