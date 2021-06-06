@@ -42,7 +42,8 @@
 }
 
 .content {
-  margin-top: 16px;
+  padding: 16px 0;
+  background-color: var(--gray10);
 }
 
 .block {
