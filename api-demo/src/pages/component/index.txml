@@ -12,7 +12,6 @@
     onTabClick="onTabClick"
     onChange="onTabChange"
     activeTab="{{activeTab}}" 
-    duration="{{200}}"
     tabBarBackgroundColor="#1A94FF"
     tabBarActiveTextColor="#FFF"
     tabBarUnderlineColor="#FFF"
