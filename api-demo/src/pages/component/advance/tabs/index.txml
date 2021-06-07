@@ -1,0 +1,35 @@
+<view>
+  <block-header 
+    title="Usage" 
+    description="Tab bar is used as a graphical interface element that allows multiple panels to be contained within a single window, using tabs as a navigational element." />
+
+  <view class="block-content gray10">
+    <text class="title mb-8">Variants</text>
+    
+    <text class="subtitle mb-8">Text only</text>
+    <tabs tabs="{{tabs1}}" 
+      tabsName="activeTab1" 
+      activeTab="{{activeTab1}}" 
+      onTabClick="onTabClick"
+      swipeable="{{false}}">
+      <block tiki:for="{{tabs1}}">
+        <tab-content tabId="{{index}}">
+          <view class="tab-item" />
+        </tab-content>
+      </block>
+    </tabs>
+
+    <text class="subtitle mb-8 mt-16">Text with icon</text>
+    <tabs tabs="{{tabs2}}"
+        tabsName="activeTab2" 
+        onTabClick="onTabClick"
+        onChange="onChange"
+        activeTab="{{activeTab2}}">
+      <block tiki:for="{{tabs2}}">
+        <tab-content tabId="{{index}}">
+          <view class="tab-item" />
+        </tab-content>
+      </block>
+    </tabs>
+  </view>
+</view>

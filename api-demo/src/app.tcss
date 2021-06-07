@@ -21,6 +21,7 @@
     font-size: 16px;
     font-weight: bold;
     line-height: 24px;
+    display: block;
 }
 
 .component-state {

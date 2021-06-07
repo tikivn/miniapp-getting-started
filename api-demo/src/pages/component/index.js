@@ -39,10 +39,6 @@ const basicComponents = [
         name: "Scroll View",
         path: "/pages/component/basic/scroll-view/index",
       },
-      {
-        name: "Tabs",
-        path: "/pages/component/basic/tabs/index",
-      },
     ],
   },
   {
@@ -237,6 +233,10 @@ const advancedComponents = [
       {
         name: "Stepper",
         path: "/pages/component/advance/stepper/index",
+      },
+      {
+        name: "Tabs",
+        path: "/pages/component/advance/tabs/index",
       },
     ],
   },
