@@ -13,6 +13,9 @@
     onChange="onTabChange"
     activeTab="{{activeTab}}" 
     duration="{{200}}"
+    tabBarBackgroundColor="#1A94FF"
+    tabBarActiveTextColor="#FFF"
+    tabBarInactiveTextColor="#FFF"
   >
     <tab-content key="0" tabId="{{0}}" activeTab="{{activeTab}}">
       <view class="content">
