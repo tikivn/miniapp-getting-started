@@ -10,6 +10,10 @@ const openAPIList = [
     path: "pages/api/get-auth-code/index",
   },
   {
+    name: "Is User Logged In",
+    path: "pages/api/is-user-logged/index",
+  },
+  {
     name: "Request Payment",
     // path: 'pages/api/request-payment/index',
   },

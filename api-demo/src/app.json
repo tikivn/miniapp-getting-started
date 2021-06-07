@@ -25,6 +25,7 @@
     "pages/api/download-file/index",
     "pages/api/upload-file/index",
     "pages/api/file/index",
+    "pages/api/is-user-logged/index",
     "pages/component/basic/form/index",
     "pages/component/basic/button/index",
     "pages/component/basic/text/index",

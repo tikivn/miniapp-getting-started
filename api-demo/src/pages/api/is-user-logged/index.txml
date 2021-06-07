@@ -1,0 +1,11 @@
+<view>
+  <block-header title="Usage" description="Check user is logged in" />
+
+  <view class="block-content">
+    <text class="title mb-8">Is user logged in?</text>
+    <text class="title mb-8">{{isLogged}}</text>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onCheckUserLoggedIn">Check</button>
+  </view>
+</view>
