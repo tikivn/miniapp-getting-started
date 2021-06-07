@@ -1,6 +1,6 @@
 {
   "usingComponents": {
-    "list": "@tiki-miniapp/tiny-ui/es/list/index",
-    "list-item": "@tiki-miniapp/tiny-ui/es/list/list-item/index"
+    "list": "@tiki.vn/tini-ui/es/list/index",
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index"
   }
 }
