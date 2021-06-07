@@ -1,0 +1,93 @@
+<view>
+  <block-header 
+    title="Usage" 
+    description="Sidebar lets users navigate the entire content of a product or a section. These can be used for a single level or a multi-level navigation." />
+
+  <view class="block-content gray10">
+    <text class="title mb-8">Variants</text>
+    
+    <text class="subtitle mb-8">1. Type</text>
+    <text class="description">Text only, Icon only, Top icon, Leading icon</text>
+    <view class="line" />
+
+    <view class="sidebar-container container-1">
+      <sidebar
+        width="80px"
+        items="{{items1}}"
+        activeItem="{{active1}}" 
+        onItemClick="onItem1Click">
+        <block tiki:for="{{items1}}">
+          <sidebar-content anchor="{{item.anchor}}">
+            <view class="sidebar-content" />
+          </sidebar-content>
+        </block>
+      </sidebar>
+    </view>
+
+    <view class="sidebar-container container-2">
+      <sidebar
+        items="{{items2}}"
+        activeItem="{{active2}}" 
+        onItemClick="onItem2Click">
+        <block tiki:for="{{items2}}">
+          <sidebar-content anchor="{{item.anchor}}">
+            <view class="sidebar-content" />
+          </sidebar-content>
+        </block>
+      </sidebar>
+    </view>
+
+    <view class="sidebar-container container-3">
+      <sidebar
+        width="56px"
+        items="{{items3}}"
+        activeItem="{{active3}}" 
+        onItemClick="onItem3Click">
+        <block tiki:for="{{items3}}">
+          <sidebar-content anchor="{{item.anchor}}">
+            <view class="sidebar-content" />
+          </sidebar-content>
+        </block>
+      </sidebar>
+    </view>
+
+    <view class="sidebar-container container-4">
+      <sidebar
+        direction="vertical"
+        items="{{items2}}"
+        width="80px"
+        activeItem="{{active4}}" 
+        onItemClick="onItem4Click">
+        <block tiki:for="{{items2}}">
+          <sidebar-content anchor="{{item.anchor}}">
+            <view class="sidebar-content" />
+          </sidebar-content>
+        </block>
+      </sidebar>
+    </view>
+
+    <text class="subtitle mb-8">2. Content</text>
+    <text class="description">Expand, Badge</text>
+    <view class="line" />
+
+    <view class="sidebar-container container-5">
+      <sidebar
+        items="{{items5}}"
+        activeItem="{{active5}}" 
+        activeChild="{{activeChild5}}"
+        onChildClick="onChild5Click"
+        onItemClick="onItem5Click">
+        <block tiki:for="{{items5}}">
+          <sidebar-content tiki:if="{{!item.children || !item.children.length}}" anchor="{{item.anchor}}">
+            <view class="sidebar-content" />
+          </sidebar-content>
+          <block tiki:else tiki:for="{{item.children}}" tiki:for-item="child">
+            <sidebar-content anchor="{{child.anchor}}">
+              <view class="sidebar-content" />
+            </sidebar-content>
+          </block>
+        </block>
+      </sidebar>
+    </view>
+  </view>
+</view>

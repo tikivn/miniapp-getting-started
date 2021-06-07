@@ -47,6 +47,7 @@
     "pages/component/advance/popup/index",
     "pages/component/advance/badge/index",
     "pages/component/advance/tabs/index",
+    "pages/component/advance/sidebar/index",
     "pages/component/advance/modal/index"
   ],
   "window": {

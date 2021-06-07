@@ -15,6 +15,7 @@
     duration="{{200}}"
     tabBarBackgroundColor="#1A94FF"
     tabBarActiveTextColor="#FFF"
+    tabBarUnderlineColor="#FFF"
     tabBarInactiveTextColor="#FFF"
   >
     <tab-content key="0" tabId="{{0}}" activeTab="{{activeTab}}">

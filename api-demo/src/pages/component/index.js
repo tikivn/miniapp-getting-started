@@ -238,6 +238,10 @@ const advancedComponents = [
         name: "Tabs",
         path: "/pages/component/advance/tabs/index",
       },
+      {
+        name: "Sidebar",
+        path: "/pages/component/advance/sidebar/index",
+      },
     ],
   },
 ];
