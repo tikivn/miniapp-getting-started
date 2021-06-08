@@ -10,3 +10,7 @@
 .mt-16 {
   margin-top: 16px;
 }
+
+.gray10 {
+  background-color: var(--gray10);
+}

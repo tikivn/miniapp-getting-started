@@ -1,113 +1,109 @@
 const basicComponents = [
   {
-    name: 'Theme',
+    name: "Theme",
     components: [
       {
-        name: 'Typography',
-        path: ''
+        name: "Typography",
+        path: "",
       },
       {
-        name: 'Iconography',
-        path: ''
+        name: "Iconography",
+        path: "",
       },
       {
-        name: 'Border radius',
-        path: ''
+        name: "Border radius",
+        path: "",
       },
       {
-        name: 'Evelation',
-        path: ''
+        name: "Evelation",
+        path: "",
       },
-    ]
+    ],
   },
   {
-    name: 'View container',
+    name: "View container",
     components: [
       {
-        name: 'View',
-        path: '',
+        name: "View",
+        path: "",
       },
       {
-        name: 'Movable View',
-        path: 'pages/component/basic/movable-view/index',
+        name: "Movable View",
+        path: "pages/component/basic/movable-view/index",
       },
       {
-        name: 'Carousel',
-        path: '/pages/component/basic/carousel/index',
+        name: "Carousel",
+        path: "/pages/component/basic/carousel/index",
       },
       {
-        name: 'Scroll View',
-        path: '/pages/component/basic/scroll-view/index',
+        name: "Scroll View",
+        path: "/pages/component/basic/scroll-view/index",
       },
-      {
-        name: 'Tabs',
-        path: '/pages/component/basic/tabs/index',
-      },
-    ]
+    ],
   },
   {
-    name: 'Basic content',
+    name: "Basic content",
     components: [
       {
-        name: 'Text',
+        name: "Text",
         path: "/pages/component/basic/text/index",
       },
       {
-        name: 'Icon',
+        name: "Icon",
         path: "/pages/component/basic/icon/index",
       },
       {
-        name: 'Progress',
+        name: "Progress",
         path: "/pages/component/basic/progress/index",
       },
-    ]
+    ],
   },
   {
-    name: 'Form component',
+    name: "Form component",
     components: [
       {
-        name: 'Form',
+        name: "Form",
         path: "/pages/component/basic/form/index",
       },
       {
-        name: 'Button',
+        name: "Button",
         path: "/pages/component/basic/button/index",
       },
       {
-        name: 'Input',
+        name: "Input",
         path: "/pages/component/basic/input/index",
       },
       {
-        name: 'Radio button',
+        name: "Radio button",
         path: "/pages/component/basic/radio/index",
       },
       {
-        name: 'Checkbox',
+        name: "Checkbox",
         path: "/pages/component/basic/checkbox/index",
       },
       {
-        name: 'Switch',
+        name: "Switch",
         path: "/pages/component/basic/switch/index",
       },
-    ]
+    ],
   },
   {
-    name: 'Medias',
+    name: "Medias",
     components: [
       {
-        name: 'Image',
+        name: "Image",
         path: "/pages/component/basic/image/index",
       },
       {
-        name: 'Audio',
+        name: "Audio",
         path: "/pages/component/basic/audio/index",
       },
       {
-        name: 'Video',
+        name: "Video",
         path: "/pages/component/basic/video/index",
-      }
-    ]
-  }
+      },
+    ],
+  },
   // {
   //   name: 'General',
   //   components: [
@@ -208,11 +204,11 @@ const basicComponents = [
   //     },
   //   ]
   // }
-]
+];
 
 const advancedComponents = [
   {
-    name: 'Advanced components',
+    name: "Advanced components",
     components: [
       {
         name: "Avatar",
@@ -238,14 +234,33 @@ const advancedComponents = [
         name: "Stepper",
         path: "/pages/component/advance/stepper/index",
       },
-    ]
-  }
-]
+      {
+        name: "Tabs",
+        path: "/pages/component/advance/tabs/index",
+      },
+      {
+        name: "Sidebar",
+        path: "/pages/component/advance/sidebar/index",
+      },
+    ],
+  },
+];
 
 Page({
   data: {
-    tabs: [{title: 'Basic components'}, {title: 'Advanced components'}],
+    tabs: [{ title: "Basic components" }, { title: "Advanced components" }],
+    activeTab: 0,
     basicComponents,
     advancedComponents,
+  },
+  onTabClick({ index, tabsName }) {
+    this.setData({
+      [tabsName]: index,
+    });
+  },
+  onTabChange({ index, tabsName }) {
+    this.setData({
+      [tabsName]: index,
+    });
   },
 });

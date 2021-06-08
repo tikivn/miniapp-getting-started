@@ -39,7 +39,6 @@
     "pages/component/basic/checkbox/index",
     "pages/component/basic/scroll-view/index",
     "pages/component/basic/carousel/index",
-    "pages/component/basic/tabs/index",
     "pages/component/basic/movable-view/index",
     "pages/component/basic/audio/index",
     "pages/component/basic/video/index",
@@ -48,6 +47,8 @@
     "pages/component/advance/avatar/index",
     "pages/component/advance/popup/index",
     "pages/component/advance/badge/index",
+    "pages/component/advance/tabs/index",
+    "pages/component/advance/sidebar/index",
     "pages/component/advance/modal/index"
   ],
   "window": {
