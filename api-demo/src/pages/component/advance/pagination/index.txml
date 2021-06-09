@@ -1,0 +1,22 @@
+<block-header title="Usage"
+  description="Examples for showing pagination to indicate a series of related content exists across multiple pages" />
+
+<view class="container">
+  <view class="panel">
+    <view class="product-center" style="height: 200px;">
+      <view tiki:if="{{loading}}" style="height: 100px;">loading...</view>
+      <view tiki:else tiki:for="{{products}}"
+        class="product-item product-center">
+        <text>{{item}}</text>
+      </view>
+    </view>
+    <view style="padding: 20px 20px 0;margin-top:24px">
+      <pagination currentPage="{{currentPage}}" max="{{30}}" type="page"
+        onChange="onPageChange" />
+    </view>
+    <view style="padding: 20px 20px 0;margin-top:24px">
+      <pagination currentPage="{{currentPage}}" max="{{30}}" type="number"
+        onChange="onPageChange" />
+    </view>
+  </view>
+</view>

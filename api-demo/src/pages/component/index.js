@@ -215,6 +215,10 @@ const advancedComponents = [
         path: "/pages/component/advance/avatar/index",
       },
       {
+        name: "Pagination",
+        path: "/pages/component/advance/pagination/index",
+      },
+      {
         name: "Badge",
         path: "/pages/component/advance/badge/index",
       },
