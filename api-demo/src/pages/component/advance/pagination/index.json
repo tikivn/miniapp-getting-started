@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "pagination",
+  "titleBarColor": "#1A94FF",
+  "titleColor": "#fff",
+  "transparentTitle": "none",
+  "usingComponents": {
+    "pagination": "@tiki.vn/tini-ui/es/pagination/index",
+    "block-header": "components/block-header/index"
+  }
+}
