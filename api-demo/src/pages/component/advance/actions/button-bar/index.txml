@@ -1,0 +1,3 @@
+<view class="page page-advance-actions-button">
+  <block-header title="Usage" description="Use to display user avatar from a resource url" />
+</view>

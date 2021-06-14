@@ -37,6 +37,7 @@
   padding-bottom: var(--space-stack-large);
   border-radius: var(--radius-rounded-8px, 8px);
   margin-bottom: var(--space-stack-medium);
+  border: 1px solid var(--gray20);
 }
 
 .page-list-content-block-title {

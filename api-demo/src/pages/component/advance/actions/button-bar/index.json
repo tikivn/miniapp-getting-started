@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "Button",
+  "titleBarColor": "#1B6BFF",
+  "titleColor": "#fff",
+  "transparentTitle": "none",
+  "usingComponents": {
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "block-header": "components/block-header/index"
+  }
+}
