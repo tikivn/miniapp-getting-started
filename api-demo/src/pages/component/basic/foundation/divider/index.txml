@@ -1,0 +1,14 @@
+<view class="page">
+  <block-header title="Usage" description="Dividers are used to represent thematic breaks between paragraph-level elements.
+When you need to divide sections of content from each other." />
+  <block-variant header="Variants" title="Thickness" description="Thin and Thick.">
+    <view class="divider-item">
+      <view class="divider-item-name">Thin</view>
+      <view class="divider-item-thin" />
+    </view>
+    <view class="divider-item">
+      <view class="divider-item-name">Thick</view>
+      <view class="divider-item-thick" />
+    </view>
+  </block-variant>
+</view>

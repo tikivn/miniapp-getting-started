@@ -87,6 +87,31 @@ const basicComponents = [
 
 const advancedComponents = [
   {
+    name: "Foundation",
+    components: [
+      {
+        name: "Typography",
+        path: "/pages/component/basic/foundation/typography/index",
+      },
+      {
+        name: "Icons",
+        path: "/pages/component/basic/foundation/icons/index",
+      },
+      {
+        name: "Border radius",
+        path: "/pages/component/basic/foundation/border-radius/index",
+      },
+      {
+        name: "Effects",
+        path: "/pages/component/basic/foundation/effects/index",
+      },
+      {
+        name: "Divider",
+        path: "/pages/component/basic/foundation/divider/index",
+      },
+    ],
+  },
+  {
     name: "Actions",
     components: [
       {
@@ -145,7 +170,7 @@ const advancedComponents = [
 Page({
   data: {
     tabs: [{ title: "Basic components" }, { title: "Advanced components" }],
-    activeTab: 0,
+    activeTab: 1,
     basicComponents,
     advancedComponents,
   },
