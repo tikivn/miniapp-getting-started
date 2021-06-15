@@ -1,6 +1,5 @@
 {
   "defaultTitle": "Button",
-  "titleBarColor": "#1B6BFF",
   "titleColor": "#fff",
   "transparentTitle": "none",
   "usingComponents": {

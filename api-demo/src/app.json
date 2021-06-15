@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/component/advance/actions/button/index",
+    "pages/component/basic/icon/index",
     "pages/component/index",
     "pages/api/index",
     "pages/api/animation/index",
