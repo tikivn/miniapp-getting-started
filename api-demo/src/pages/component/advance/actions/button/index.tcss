@@ -9,10 +9,10 @@
   justify-content: center;
 }
 
-.page-variant-content-line button {
+.block-variant-content-line > button {
   margin-right: var(--space-inline-2x-small);
 }
 
-.page-variant-content-line button:last-child {
+.block-variant-content-line > button:last-child {
   margin-right: 0px;
 }
