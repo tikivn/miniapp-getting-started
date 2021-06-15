@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: var(--space-stack-4x-small);
 }
 
 .icon-variant-item-icon {

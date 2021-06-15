@@ -2,6 +2,10 @@ Page({
   data: {
     blocks: [
       {
+        name: "Default",
+        line: ["loading", "placeholder"],
+      },
+      {
         name: "Action",
         line: [
           "calendar",
@@ -19,12 +23,23 @@ Page({
           "setting",
           "share",
           "sort",
+          "support",
         ],
-        glyph: ["edit_glyph", "info_glyph", "location_glyph", "share_glyph"],
+        glyph: [
+          "app_home_add_glyph",
+          "app_home_remove_glyph",
+          "bookmark_add_glyph",
+          "bookmark_remove_glyph",
+          "edit_glyph",
+          "info_glyph",
+          "location_glyph",
+          "phone_home_glyph",
+          "share_glyph",
+        ],
       },
       {
         name: "Content",
-        line: ["minus", "plus", "qr"],
+        line: ["adjustment", "components", "geometry", "minus", "plus", "qr"],
       },
       {
         name: "Media",
@@ -49,6 +64,10 @@ Page({
           "more",
         ],
         glyph: ["close_glyph"],
+      },
+      {
+        name: "Brand",
+        line: ["tiki_social", "facebook", "messenger", "instagram"],
       },
       {
         name: "Status",
