@@ -1,146 +1,120 @@
 <template name="variant-style">
-  <view class="page-block">
-    <view class="page-block-title">Variants</view>
-    <list-item upperSubtitle="Solid, Outlined and Ghost.">
-      <view>1. Style</view>
-    </list-item>
-    <view class="page-variant-content">
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Solid</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Outline</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Ghost</tm-button>
-      </view>
+  <block-variant header="Variant" title="1. Style" description="Solid, Outlined and Ghost.">
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Solid</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Outline</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Ghost</tm-button>
     </view>
-  </view>
+  </block-variant>
 </template>
 
 <template name="variant-content">
-  <view class="page-block">
-    <list-item upperSubtitle="Text, Icon only.">
-      <view>2. Content</view>
-    </list-item>
-    <view class="page-variant-content">
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Text</tm-button>
-        <tm-button shape="rounded" type="solid" size="large" iconName="arrow_right" />
-      </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Text</tm-button>
-        <tm-button shape="rounded" type="outline" size="large" iconName="arrow_right" />
-      </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Text</tm-button>
-        <tm-button shape="rounded" type="ghost" size="large" iconName="arrow_right" />
-      </view>
+  <block-variant title="2. Content" description="Text, Icon only.">
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Text</tm-button>
+      <tm-button shape="rounded" type="solid" size="large" iconName="arrow_right" />
     </view>
-  </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Text</tm-button>
+      <tm-button shape="rounded" type="outline" size="large" iconName="arrow_right" />
+    </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Text</tm-button>
+      <tm-button shape="rounded" type="ghost" size="large" iconName="arrow_right" />
+    </view>
+  </block-variant>
 </template>
 
 <template name="variant-shape">
-  <view class="page-block">
-    <list-item upperSubtitle="Rounded, Pill, Circle and Borderless.">
-      <view>3. Shape</view>
-    </list-item>
-    <view class="page-variant-content">
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Rounded</tm-button>
-      </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="pill" type="solid" size="large">Pill</tm-button>
-      </view>
-      <view class="page-variant-content-line">
-        <tm-button style="width: 40px;" shape="pill" type="solid" size="large" iconName="arrow_right" />
-      </view>
+  <block-variant title="3. Shape" description="Rounded, Pill, Circle and Borderless.">
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Rounded</tm-button>
     </view>
-  </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="pill" type="solid" size="large">Pill</tm-button>
+    </view>
+    <view class="block-variant-content-line">
+      <tm-button style="width: 40px;" shape="pill" type="solid" size="large" iconName="arrow_right" />
+    </view>
+  </block-variant>
 </template>
 
 <template name="variant-size">
-  <view class="page-block">
-    <list-item upperSubtitle="Small, Medium and Large.">
-      <view>4. Size</view>
-    </list-item>
-    <view class="page-variant-content">
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="solid" size="small">Small</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="solid" size="medium">Medium</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Large</tm-button>
+  <block-variant title="4. Size" description="Small, Medium and Large.">
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="solid" size="small">Small</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="solid" size="medium">Medium</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Large</tm-button>
+    </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="outline" size="small">Small</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="outline" size="medium">Medium</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Large</tm-button>
+    </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="ghost" size="small">Small</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="ghost" size="medium">Medium</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Large</tm-button>
+    </view>
+    <view class="block-variant-content-line">
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="solid" size="small" iconName="arrow_right" />
       </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="outline" size="small">Small</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="outline" size="medium">Medium</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Large</tm-button>
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="solid" size="medium" iconName="arrow_right" />
       </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="ghost" size="small">Small</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="ghost" size="medium">Medium</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Large</tm-button>
-      </view>
-      <view class="page-variant-content-line">
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="solid" size="small" iconName="arrow_right" />
-        </view>
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="solid" size="medium" iconName="arrow_right" />
-        </view>
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="solid" size="large" iconName="arrow_right" />
-        </view>
-      </view>
-      <view class="page-variant-content-line">
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="outline" size="small" iconName="arrow_right" />
-        </view>
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="outline" size="medium" iconName="arrow_right" />
-        </view>
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="outline" size="large" iconName="arrow_right" />
-        </view>
-      </view>
-      <view class="page-variant-content-line">
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="ghost" size="small" iconName="arrow_right" />
-        </view>
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="ghost" size="medium" iconName="arrow_right" />
-        </view>
-        <view class="flex-grow flex-line-center">
-          <tm-button shape="rounded" type="ghost" size="large" iconName="arrow_right" />
-        </view>
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="solid" size="large" iconName="arrow_right" />
       </view>
     </view>
-  </view>
+    <view class="block-variant-content-line">
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="outline" size="small" iconName="arrow_right" />
+      </view>
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="outline" size="medium" iconName="arrow_right" />
+      </view>
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="outline" size="large" iconName="arrow_right" />
+      </view>
+    </view>
+    <view class="block-variant-content-line">
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="ghost" size="small" iconName="arrow_right" />
+      </view>
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="ghost" size="medium" iconName="arrow_right" />
+      </view>
+      <view class="flex-grow flex-line-center">
+        <tm-button shape="rounded" type="ghost" size="large" iconName="arrow_right" />
+      </view>
+    </view>
+  </block-variant>
 </template>
 
 <template name="variant-state">
-  <view class="page-block">
-    <list-item upperSubtitle="Default, Disable, Loading, Skeleton loading.">
-      <view>5. State</view>
-    </list-item>
-    <view class="page-variant-content">
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Default</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Default</tm-button>
-        <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Default</tm-button>
-      </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" disabled shape="rounded" type="solid" size="large">Default</tm-button>
-        <tm-button class="flex-grow" disabled shape="rounded" type="outline" size="large">Default</tm-button>
-        <tm-button class="flex-grow" disabled shape="rounded" type="ghost" size="large">Default</tm-button>
-      </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" loading shape="rounded" type="solid" size="large">Load</tm-button>
-        <tm-button class="flex-grow" loading shape="rounded" type="outline" size="large">Load</tm-button>
-        <tm-button class="flex-grow" loading shape="rounded" type="ghost" size="large">Load</tm-button>
-      </view>
-      <view class="page-variant-content-line">
-        <tm-button class="flex-grow" skeleton shape="rounded" type="solid" size="large">Load</tm-button>
-        <tm-button class="flex-grow" skeleton shape="rounded" type="outline" size="large">Load</tm-button>
-        <tm-button class="flex-grow" skeleton shape="rounded" type="ghost" size="large">Load</tm-button>
-      </view>
+  <block-variant title="5. State" description="Default, Disable, Loading, Skeleton loading.">
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" shape="rounded" type="solid" size="large">Default</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="outline" size="large">Default</tm-button>
+      <tm-button class="flex-grow" shape="rounded" type="ghost" size="large">Default</tm-button>
     </view>
-  </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" disabled shape="rounded" type="solid" size="large">Default</tm-button>
+      <tm-button class="flex-grow" disabled shape="rounded" type="outline" size="large">Default</tm-button>
+      <tm-button class="flex-grow" disabled shape="rounded" type="ghost" size="large">Default</tm-button>
+    </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" loading shape="rounded" type="solid" size="large">Load</tm-button>
+      <tm-button class="flex-grow" loading shape="rounded" type="outline" size="large">Load</tm-button>
+      <tm-button class="flex-grow" loading shape="rounded" type="ghost" size="large">Load</tm-button>
+    </view>
+    <view class="block-variant-content-line">
+      <tm-button class="flex-grow" skeleton shape="rounded" type="solid" size="large">Load</tm-button>
+      <tm-button class="flex-grow" skeleton shape="rounded" type="outline" size="large">Load</tm-button>
+      <tm-button class="flex-grow" skeleton shape="rounded" type="ghost" size="large">Load</tm-button>
+    </view>
+  </block-variant>
 </template>
 
 <view class="page">

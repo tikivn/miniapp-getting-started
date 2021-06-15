@@ -146,7 +146,7 @@ Page({
   data: {
     tabs: [{ title: "Basic components" }, { title: "Advanced components" }],
     activeTab: 0,
-    basicComponents: advancedComponents,
+    basicComponents,
     advancedComponents,
   },
   onTabClick({ index, tabsName }) {

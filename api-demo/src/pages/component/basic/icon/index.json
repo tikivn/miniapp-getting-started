@@ -1,6 +1,8 @@
 {
-  "defaultTitle": "icon",
+  "defaultTitle": "Icongraphy",
   "usingComponents": {
-    "block-header": "components/block-header/index"
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
   }
 }

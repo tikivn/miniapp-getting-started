@@ -1,3 +1,21 @@
-.title {
-  margin-bottom: 8px;
+.block-content {
+  padding: var(--space-inset-medium);
+  background-color: var(--white);
+}
+
+.block-content-title {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-large);
+  line-height: var(--font-height-large);
+  color: var(--gray100);
+  margin-bottom: var(--space-stack-2x-small);
+}
+
+.block-content-description {
+  font-style: var(--font-style-regular);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  color: var(--text-content-secondary);
 }
