@@ -79,7 +79,7 @@
     "items": [
       {
         "name": "Components",
-        "pagePath": "pages/component/advance/form/checkbox/index",
+        "pagePath": "pages/component/advance/form/switch/index",
         "icon": "images/icon_component.png",
         "activeIcon": "images/icon_component_HL.png"
       },

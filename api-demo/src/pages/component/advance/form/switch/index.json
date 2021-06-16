@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Button",
+  "defaultTitle": "Switch",
   "usingComponents": {
     "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
     "tm-button": "@tiki.vn/tini-ui/es/button/index",

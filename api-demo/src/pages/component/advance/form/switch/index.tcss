@@ -1,18 +1,19 @@
-.flex-grow {
-  flex-grow: 1;
+.first-item {
+  margin-top: var(--space-stack-medium);
 }
 
-.flex-line-center {
+.label-line {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
 }
 
-.block-variant-content-line > button {
-  margin-right: var(--space-inline-2x-small);
+.label-line-content {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  color: var(--text-list-primary);
 }
 
-.block-variant-content-line > button:last-child {
-  margin-right: 0px;
+.label-line-switch {
 }
