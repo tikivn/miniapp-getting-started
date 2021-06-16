@@ -10,7 +10,7 @@
       </picker>
     </view>
     <view class="component-item">
-      <picker range="{{objecttArray}}" range-key="name" value="{{objecttArrayIndex}}" onChange="onObjectArrayChange">
+      <picker title="Array Object" range="{{objecttArray}}" range-key="name" value="{{objecttArrayIndex}}" onChange="onObjectArrayChange">
         <view class="picker">
           Array Object: {{objecttArrayIndex}}
         </view>
