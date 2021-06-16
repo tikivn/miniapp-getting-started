@@ -1,0 +1,14 @@
+<view class="page">
+  <block-header title="Colors" description="We provides list of color tokens" />
+  <block tiki:for="{{blocks}}" tiki:for-item="block">
+    <block-variant header="{{block.name}}">
+      <view class="token-block-description">{{block.description}}</view>
+      <block tiki:for="{{block.tokens}}">
+        <list-item>
+          <view class="token-color-value" style="background-color: var(--{{item}})" />
+          <view slot="suffix" class="token-line-name">{{item}}</view>
+        </list-item>
+      </block>
+    </block-variant>
+  </block>
+</view>

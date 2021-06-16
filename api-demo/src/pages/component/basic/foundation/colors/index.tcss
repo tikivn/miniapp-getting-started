@@ -1,0 +1,22 @@
+.token-block-description {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  margin-bottom: var(--space-stack-2x-small);
+  color: var(--text-content-secondary);
+}
+
+.token-color-value {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--gray20);
+}
+
+.token-line-name {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  color: var(--text-list-primary);
+}

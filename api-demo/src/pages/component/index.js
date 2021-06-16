@@ -90,6 +90,14 @@ const advancedComponents = [
     name: "Foundation",
     components: [
       {
+        name: "Colors",
+        path: "/pages/component/basic/foundation/colors/index",
+      },
+      {
+        name: "Space",
+        path: "/pages/component/basic/foundation/space/index",
+      },
+      {
         name: "Typography",
         path: "/pages/component/basic/foundation/typography/index",
       },
