@@ -148,8 +148,8 @@ const advancedComponents = [
         path: "/pages/component/advance/form/text-area/index",
       },
       {
-        name: "Input stepper",
-        path: "/pages/component/advance/form/input-stepper/index",
+        name: "Stepper",
+        path: "/pages/component/advance/form/stepper/index",
       },
       {
         name: "Radio button",
@@ -199,10 +199,6 @@ const advancedComponents = [
       {
         name: "List",
         path: "/pages/component/advance/list/index",
-      },
-      {
-        name: "Stepper",
-        path: "/pages/component/advance/stepper/index",
       },
       {
         name: "Tabs",

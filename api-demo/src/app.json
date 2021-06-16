@@ -53,14 +53,13 @@
     "/pages/component/advance/form/input/index",
     "/pages/component/advance/form/text-field/index",
     "/pages/component/advance/form/text-area/index",
-    "/pages/component/advance/form/input-stepper/index",
+    "/pages/component/advance/form/stepper/index",
     "/pages/component/advance/form/radio-button/index",
     "/pages/component/advance/form/checkbox/index",
     "/pages/component/advance/form/switch/index",
     "/pages/component/advance/form/date-picker/index",
     "/pages/component/advance/form/slider/index",
     "pages/component/advance/list/index",
-    "pages/component/advance/stepper/index",
     "pages/component/advance/avatar/index",
     "pages/component/advance/popup/index",
     "pages/component/advance/badge/index",
@@ -79,7 +78,7 @@
     "items": [
       {
         "name": "Components",
-        "pagePath": "pages/component/advance/form/switch/index",
+        "pagePath": "pages/component/index",
         "icon": "images/icon_component.png",
         "activeIcon": "images/icon_component_HL.png"
       },
