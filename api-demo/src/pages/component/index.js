@@ -133,6 +133,47 @@ const advancedComponents = [
     ],
   },
   {
+    name: "Forms",
+    components: [
+      {
+        name: "Input",
+        path: "/pages/component/advance/form/input/index",
+      },
+      {
+        name: "Text field",
+        path: "/pages/component/advance/form/text-field/index",
+      },
+      {
+        name: "Text area",
+        path: "/pages/component/advance/form/text-area/index",
+      },
+      {
+        name: "Input stepper",
+        path: "/pages/component/advance/form/input-stepper/index",
+      },
+      {
+        name: "Radio button",
+        path: "/pages/component/advance/form/radio-button/index",
+      },
+      {
+        name: "Checkbox",
+        path: "/pages/component/advance/form/checkbox/index",
+      },
+      {
+        name: "Switch",
+        path: "/pages/component/advance/form/switch/index",
+      },
+      {
+        name: "Date picker",
+        path: "/pages/component/advance/form/date-picker/index",
+      },
+      {
+        name: "Slider",
+        path: "/pages/component/advance/form/slider/index",
+      },
+    ],
+  },
+  {
     name: "Advanced components",
     components: [
       {
