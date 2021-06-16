@@ -64,6 +64,10 @@ const basicComponents = [
         name: "Switch",
         path: "/pages/component/basic/switch/index",
       },
+      {
+        name: "Picker",
+        path: "/pages/component/basic/picker/index",
+      },
     ],
   },
   {

@@ -46,6 +46,7 @@
     "pages/component/basic/movable-view/index",
     "pages/component/basic/audio/index",
     "pages/component/basic/video/index",
+    "pages/component/basic/picker/index",
     "pages/component/advance/actions/button/index",
     "pages/component/advance/actions/button-bar/index",
     "pages/component/advance/list/index",
