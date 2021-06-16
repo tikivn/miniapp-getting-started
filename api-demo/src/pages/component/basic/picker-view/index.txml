@@ -17,6 +17,7 @@
         <view>Tháng 9</view>
         <view>Tháng 10</view>
         <view>Tháng 11</view>
+        <view>Tháng 12</view>
       </picker-view-column>
       <picker-view-column>
         <view>Năm 2021</view>
