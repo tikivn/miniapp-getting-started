@@ -1,0 +1,24 @@
+.token-block-description {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  margin-bottom: var(--space-stack-2x-small);
+  color: var(--text-content-secondary);
+}
+
+.token-line-value {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  color: var(--text-list-primary);
+}
+
+.token-line-name {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  color: var(--text-list-primary);
+}

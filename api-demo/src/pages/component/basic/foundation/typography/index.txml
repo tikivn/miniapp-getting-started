@@ -1,0 +1,14 @@
+<view class="page">
+  <block-header title="Font family" description="We use Inter typeface for all platform" />
+  <block tiki:for="{{blocks}}" tiki:for-item="block">
+    <block-variant header="{{block.name}}">
+      <view class="token-block-description">{{block.description}}</view>
+      <block tiki:for="{{block.tokens}}">
+        <list-item>
+          <view class="token-line-value">{{item.value}}</view>
+          <view slot="suffix" class="token-line-name">{{item.name}}</view>
+        </list-item>
+      </block>
+    </block-variant>
+  </block>
+</view>

@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Switch",
+  "usingComponents": {
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "tm-button": "@tiki.vn/tini-ui/es/button/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}

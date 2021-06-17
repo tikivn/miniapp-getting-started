@@ -1,0 +1,30 @@
+.effect-item {
+  display: flex;
+  flex-direction: row;
+  margin-top: var(--space-stack-medium);
+}
+
+.effect-item-name {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  margin-right: var(--space-inline-2x-small);
+  color: var(--gray100);
+}
+
+.effect-item1 {
+  width: 80px;
+  height: 80px;
+  margin-right: var(--space-inline-small);
+  background: var(--white);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.effect-item2 {
+  width: 80px;
+  height: 80px;
+  margin-right: var(--space-inline-small);
+  background: var(--white);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}

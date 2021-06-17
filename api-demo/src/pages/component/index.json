@@ -1,8 +1,5 @@
 {
   "defaultTitle": "",
-  "titleBarColor": "#1A94FF",
-  "titleColor": "#fff",
-  "transparentTitle": "auto",
   "usingComponents": {
     "list": "components/list/index",
     "tabs": "@tiki.vn/tini-ui/es/tabs/index",

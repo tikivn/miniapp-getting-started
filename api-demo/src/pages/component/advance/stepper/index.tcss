@@ -1,8 +1,0 @@
-.stepper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--brand-primary);
-  padding-left: 12px;
-  padding-right: 12px;
-}

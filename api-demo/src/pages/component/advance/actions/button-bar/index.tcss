@@ -1,0 +1,26 @@
+.container {
+  background: var(--white);
+  padding: 0px;
+  padding-bottom: var(--space-stack-3x-large);
+}
+
+.button-bar {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  margin-top: var(--space-stack-medium);
+  padding: var(--space-stack-2x-small) var(--space-stack-medium);
+  border-top: 1px solid var(--gray20);
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.button-left {
+  margin-right: var(--space-stack-4x-small);
+}
+
+.button-right {
+  margin-left: var(--space-stack-4x-small);
+}

@@ -1,0 +1,74 @@
+<template name="icon-variant">
+  <block tiki:for="{{blocks}}" tiki:for-item="block">
+    <block-variant header="{{block.name}}">
+      <block tiki:if="{{block.glyph}}">
+        <list-item>
+          <view class="icon-variant-section-title">Line</view>
+        </list-item>
+      </block>
+      <view class="icon-variant-list">
+        <block tiki:for="{{block.line}}">
+          <view class="icon-variant-item">
+            <view class="icon-variant-item-icon">
+              <icon type="{{item}}" size="24" />
+            </view>
+            <view class="icon-variant-item-desc">{{item}}</view>
+          </view>
+        </block>
+      </view>
+      <block tiki:if="{{block.glyph}}">
+        <list-item>
+          <view class="icon-variant-section-title">Glyph</view>
+        </list-item>
+        <view class="icon-variant-list">
+          <block tiki:for="{{block.glyph}}">
+            <view class="icon-variant-item">
+              <view class="icon-variant-item-icon">
+                <icon type="{{item}}" size="24" />
+              </view>
+              <view class="icon-variant-item-desc">{{item}}</view>
+            </view>
+          </block>
+        </view>
+      </block>
+    </block-variant>
+  </block>
+</template>
+
+<template name="variant-size">
+  <block-variant header="Size">
+    <view class="icon-variant-list">
+      <block tiki:for="{{[16, 20, 24, 32]}}">
+        <view class="icon-variant-item">
+          <view class="icon-variant-item-icon">
+            <icon type="success_glyph" size="{{item}}" />
+          </view>
+          <view class="icon-variant-item-desc">{{item}}</view>
+        </view>
+      </block>
+    </view>
+  </block-variant>
+</template>
+
+<template name="variant-color">
+  <block-variant header="Color">
+    <view class="icon-variant-list">
+      <block tiki:for="{{['red', 'orange', 'yellow', 'green', 'blue']}}">
+        <view class="icon-variant-item">
+          <view class="icon-variant-item-icon">
+            <icon type="location_glyph" size="24" color="{{item}}" />
+          </view>
+          <view class="icon-variant-item-desc">{{item}}</view>
+        </view>
+      </block>
+    </view>
+  </block-variant>
+</template>
+
+<view class="page">
+  <block-header title="Icon library"
+    description="We use the Nucleo icon library for our system icon library. They follow our attributes of focused, familiar, and inclusive in metaphor and design. Our icons act as visual support to help people move through the experience more effectively." />
+  <template is="icon-variant" data="{{ blocks }}" />
+  <template is="variant-size" />
+  <template is="variant-color" />
+</view>

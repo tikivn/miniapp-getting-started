@@ -1,8 +1,5 @@
 {
   "defaultTitle": "Badge",
-  "titleBarColor": "#1B6BFF",
-  "titleColor": "#fff",
-  "transparentTitle": "none",
   "usingComponents": {
     "avatar": "@tiki.vn/tini-ui/es/avatar/index",
     "badge": "@tiki.vn/tini-ui/es/badge/index",

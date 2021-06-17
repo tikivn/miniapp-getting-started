@@ -1,0 +1,33 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Checkboxes are used to let a user choose one or more options from a limited number of options." />
+  <block-variant header="Variants" title="State" description="Default, Selected, Disabled and Disabled - Selected.">
+    <view class="first-item" />
+    <checkbox-group>
+      <list-item>
+        <label class="label-line">
+          <checkbox class="label-line-checkbox" value="default" />
+          <view class="label-line-content">Default</view>
+        </label>
+      </list-item>
+      <list-item>
+        <label class="label-line">
+          <checkbox class="label-line-checkbox" checked value="selected" />
+          <view class="label-line-content">Selected</view>
+        </label>
+      </list-item>
+      <list-item>
+        <label class="label-line">
+          <checkbox class="label-line-checkbox" disabled />
+          <view class="label-line-content">Disabled</view>
+        </label>
+      </list-item>
+    </checkbox-group>
+    <list-item>
+      <label class="label-line">
+        <checkbox class="label-line-checkbox" disabled checked />
+        <view class="label-line-content">Selected Disabled</view>
+      </label>
+    </list-item>
+  </block-variant>
+</view>

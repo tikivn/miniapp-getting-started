@@ -1,4 +1,4 @@
 <view class="block-content">
-  <view class="title">{{title}}</view>
-  <view>{{description}}</view>
+  <view class="block-content-title">{{title}}</view>
+  <view class="block-content-description">{{description}}</view>
 </view>

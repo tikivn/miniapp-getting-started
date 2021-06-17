@@ -1,0 +1,9 @@
+<view class="block-variant">
+  <view tiki:if="{{header}}" class="block-variant-header">{{header}}</view>
+  <block tiki:if="{{description || title}}">
+    <list-item upperSubtitle="{{description}}">
+      <view>{{title}}</view>
+    </list-item>
+  </block>
+  <slot />
+</view>

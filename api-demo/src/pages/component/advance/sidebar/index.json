@@ -1,8 +1,5 @@
 {
   "defaultTitle": "sidebar",
-  "titleBarColor": "#1A94FF",
-  "titleColor": "#fff",
-  "transparentTitle": "none",
   "usingComponents": {
     "block-header": "components/block-header/index",
     "sidebar": "@tiki.vn/tini-ui/es/sidebar/index",

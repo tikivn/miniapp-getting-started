@@ -208,6 +208,93 @@ const basicComponents = [
 
 const advancedComponents = [
   {
+    name: "Foundation",
+    components: [
+      {
+        name: "Colors",
+        path: "/pages/component/basic/foundation/colors/index",
+      },
+      {
+        name: "Space",
+        path: "/pages/component/basic/foundation/space/index",
+      },
+      {
+        name: "Typography",
+        path: "/pages/component/basic/foundation/typography/index",
+      },
+      {
+        name: "Icons",
+        path: "/pages/component/basic/foundation/icons/index",
+      },
+      {
+        name: "Border radius",
+        path: "/pages/component/basic/foundation/border-radius/index",
+      },
+      {
+        name: "Effects",
+        path: "/pages/component/basic/foundation/effects/index",
+      },
+      {
+        name: "Divider",
+        path: "/pages/component/basic/foundation/divider/index",
+      },
+    ],
+  },
+  {
+    name: "Actions",
+    components: [
+      {
+        name: "Button",
+        path: "/pages/component/advance/actions/button/index",
+      },
+      {
+        name: "Button Bar",
+        path: "/pages/component/advance/actions/button-bar/index",
+      },
+    ],
+  },
+  {
+    name: "Forms",
+    components: [
+      {
+        name: "Input",
+        path: "/pages/component/advance/form/input/index",
+      },
+      {
+        name: "Text field",
+        path: "/pages/component/advance/form/text-field/index",
+      },
+      {
+        name: "Text area",
+        path: "/pages/component/advance/form/text-area/index",
+      },
+      {
+        name: "Stepper",
+        path: "/pages/component/advance/form/stepper/index",
+      },
+      {
+        name: "Radio button",
+        path: "/pages/component/advance/form/radio-button/index",
+      },
+      {
+        name: "Checkbox",
+        path: "/pages/component/advance/form/checkbox/index",
+      },
+      {
+        name: "Switch",
+        path: "/pages/component/advance/form/switch/index",
+      },
+      {
+        name: "Date picker",
+        path: "/pages/component/advance/form/date-picker/index",
+      },
+      {
+        name: "Slider",
+        path: "/pages/component/advance/form/slider/index",
+      },
+    ],
+  },
+  {
     name: "Advanced components",
     components: [
       {
@@ -233,10 +320,6 @@ const advancedComponents = [
       {
         name: "List",
         path: "/pages/component/advance/list/index",
-      },
-      {
-        name: "Stepper",
-        path: "/pages/component/advance/stepper/index",
       },
       {
         name: "Tabs",

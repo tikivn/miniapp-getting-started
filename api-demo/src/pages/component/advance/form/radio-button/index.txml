@@ -1,0 +1,33 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Radio buttons are graphical interface elements that allow user to choose only one of a predefined set of mutually exclusive options." />
+  <block-variant header="Variants" title="State" description="Default, Selected, Disabled and Disabled - Selected.">
+    <view class="first-item" />
+    <radio-group>
+      <list-item>
+        <label class="label-line">
+          <radio class="label-line-radio" value="default" />
+          <view class="label-line-content">Default</view>
+        </label>
+      </list-item>
+      <list-item>
+        <label class="label-line">
+          <radio class="label-line-radio" checked value="selected" />
+          <view class="label-line-content">Selected</view>
+        </label>
+      </list-item>
+      <list-item>
+        <label class="label-line">
+          <radio class="label-line-radio" disabled />
+          <view class="label-line-content">Disabled</view>
+        </label>
+      </list-item>
+    </radio-group>
+    <list-item>
+      <label class="label-line">
+        <radio class="label-line-radio" disabled checked />
+        <view class="label-line-content">Selected Disabled</view>
+      </label>
+    </list-item>
+  </block-variant>
+</view>
