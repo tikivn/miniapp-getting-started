@@ -77,10 +77,22 @@ const navigationBarAPIList = [
   },
 ].filter(filterNotImplementedPages);
 
-const imagePickerAPIList = [
+const mediaImageAPIList = [
   {
     name: "Choose Image",
     path: "/pages/api/image-picker/index",
+  },
+  {
+    name: "Compress Image",
+    path: "/pages/api/compress-image/index",
+  },
+  {
+    name: "Save Image",
+    path: "/pages/api/save-image/index",
+  },
+  {
+    name: "Get Image Info",
+    path: "/pages/api/get-image-info/index",
   },
 ].filter(filterNotImplementedPages);
 
@@ -164,8 +176,8 @@ const APIList = [
     list: navigationBarAPIList,
   },
   {
-    type: "Image Picker",
-    list: imagePickerAPIList,
+    type: "Media Image",
+    list: mediaImageAPIList,
   },
   {
     type: "Deeplink",
