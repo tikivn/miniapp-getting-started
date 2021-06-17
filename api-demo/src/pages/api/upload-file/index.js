@@ -9,7 +9,7 @@ Page({
         const path = res.filePaths[0];
         console.log(path);
         my.uploadFile({
-          url: "http://httpbin.org/post",
+          url: "https://httpbin.org/post",
           fileType: "image/jpeg",
           fileName: "file",
           filePath: path,
@@ -19,7 +19,7 @@ Page({
           },
           fail: function (res) {
             console.log(res);
-            my.alert({ title: "Upload fail" });
+            my.alert({ title: "Upload fail", content: JSON.stringify(res) });
           },
         });
       },

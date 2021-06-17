@@ -1,11 +1,10 @@
 <view>
-  <block-header title="Usage" description="Download a file" />
+  <block-header title="Usage" description="Save an image to gallery" />
   <view class="block-content">
     Input the url to download
     <input class="form-value" placeholder="URL" name="url" onInput="urlChange"></input>
   </view>
   <view class="block-content">
-    <button class="button-full" onTap="onDownloadFile">Download Image</button>
+    <button class="button-full" onTap="onSaveImage">Save Image</button>
   </view>
-  <image class="image-cover" src="{{image}}" />
 </view>

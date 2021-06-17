@@ -25,6 +25,9 @@
     "pages/api/download-file/index",
     "pages/api/upload-file/index",
     "pages/api/file/index",
+    "pages/api/compress-image/index",
+    "pages/api/save-image/index",
+    "pages/api/get-image-info/index",
     "pages/api/is-user-logged/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
@@ -68,6 +71,22 @@
     "pages/component/advance/modal/index",
     "pages/component/advance/pagination/index"
   ],
+  "tabBar": {
+    "items": [
+      {
+        "name": "Components",
+        "pagePath": "pages/component/index",
+        "icon": "images/icon_component.png",
+        "activeIcon": "images/icon_component_HL.png"
+      },
+      {
+        "name": "APIs",
+        "pagePath": "pages/api/index",
+        "icon": "images/icon_API.png",
+        "activeIcon": "images/icon_API_HL.png"
+      }
+    ]
+  },
   "window": {
     "defaultTitle": "Tiki MiniApp Demo",
     "titleBarColor": "#1A94FF",
