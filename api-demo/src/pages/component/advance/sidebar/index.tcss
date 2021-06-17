@@ -1,6 +1,6 @@
 .tab-item {
   height: 104px;
-  background-color: #FFF;
+  background-color: #fff;
 }
 
 .description {
@@ -35,26 +35,36 @@
   width: 100%;
 }
 
-.tm-sidebar {
+.tu-sidebar {
   width: 100%;
 }
 
-.container-1, .container-1 .tm-sidebar, .container-1 .sidebar-content {
+.container-1,
+.container-1 .tu-sidebar,
+.container-1 .sidebar-content {
   height: 110px;
 }
 
-.container-2, .container-2 .tm-sidebar, .container-2 .sidebar-content {
+.container-2,
+.container-2 .tu-sidebar,
+.container-2 .sidebar-content {
   height: 122px;
 }
 
-.container-3, .container-3 .tm-sidebar, .container-3 .sidebar-content{
+.container-3,
+.container-3 .tu-sidebar,
+.container-3 .sidebar-content {
   height: 122px;
 }
 
-.container-4, .container-4 .tm-sidebar, .container-4 .sidebar-content{
+.container-4,
+.container-4 .tu-sidebar,
+.container-4 .sidebar-content {
   height: 156px;
 }
 
-.container-5, .container-5 .tm-sidebar, .container-5 .sidebar-content{
+.container-5,
+.container-5 .tu-sidebar,
+.container-5 .sidebar-content {
   height: 218px;
 }

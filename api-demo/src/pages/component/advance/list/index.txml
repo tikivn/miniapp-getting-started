@@ -131,6 +131,21 @@
   </view>
 </template>
 
+<template name="list-content-structure">
+  <view class="page-list-content-block">
+    <view class="page-list-content-block-title">List Item structure</view>
+    <list-item arrow upperSubtitle="upper" lowerSubtitle="lower"
+      thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px">
+      <view style="background-color: red;">title</view>
+      <view slot="afterTitle" style="display: flex; flex-grow: 1;background-color: green;">after title</view>
+      <view slot="afterUpperSubtitle" style="display: flex; flex-grow: 1; background-color: orange;">after upper</view>
+      <view slot="afterLowerSubtitle" style="display: flex; flex-grow: 1; background-color: pink;">after lower</view>
+      <view slot="suffix" style="background-color: blue;">suffix</view>
+      <view slot="prefix" style="background-color: purple;">prefix</view>
+    </list-item>
+  </view>
+</template>
+
 <view class="page page-list">
   <template is="header" />
   <view class="page-list-content">
@@ -139,5 +154,6 @@
     <template is="list-content-with-suffix" />
     <template is="list-content-with-prefix" />
     <template is="list-content-with-suffix-and-prefix" />
+    <template is="list-content-structure" />
   </view>
 </view>

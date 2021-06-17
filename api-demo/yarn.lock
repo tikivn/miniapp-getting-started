@@ -2,12 +2,7 @@
 # yarn lockfile v1
 
 
-"@tiki.vn/tini-ui@0.0.9":
-  version "0.0.9"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.0.9.tgz#1edd5964c263cfcee03d91d8f4d5bd015c8e0977"
-  integrity sha512-hITh2BcX02evfqn8ZzSh6t5bkG8AnIx0T3ZpRyiHCj+IMwJS/BgBwWy51IhmKKezbu7adnRRXINmTrpOfSXRIg==
-
-lodash@^4.17.20:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+"@tiki.vn/tini-ui@0.0.12":
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.0.12.tgz#cee3338b7bc05b6e8eaef27f37f48f085f4b583e"
+  integrity sha512-FI38mxkmSV3SuAVjXLxUR2UNxmle74ZXKCU6k/aX2IrOyZEgdmOoHHSDO70ypBG0roIHCD+9KkGuYXyCBZMZrw==

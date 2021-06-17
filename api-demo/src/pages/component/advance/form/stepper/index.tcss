@@ -14,6 +14,6 @@
   line-height: var(--font-height-base);
 }
 
-.stepper-custom-class .tm-stepper-input {
+.stepper-custom-class .tu-stepper-input {
   margin: 0px var(--space-inline-2x-small);
 }

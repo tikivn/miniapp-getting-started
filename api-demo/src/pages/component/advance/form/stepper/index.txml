@@ -57,5 +57,14 @@
         <stepper vertical />
       </view>
     </view>
+    <view class="list-item">
+      <view class="list-item-title">
+        Handle input change:
+        <text>{{message}}</text>
+      </view>
+      <view class="list-item-stepper">
+        <stepper onChange="onChange" />
+      </view>
+    </view>
   </block-variant>
 </view>
