@@ -48,7 +48,7 @@
     <view class="list-item">
       <view class="list-item-title">Custom class to change space between input and operations</view>
       <view class="list-item-stepper">
-        <stepper className="stepper-custom-class" />
+        <stepper class="stepper-custom-class" />
       </view>
     </view>
     <view class="list-item">

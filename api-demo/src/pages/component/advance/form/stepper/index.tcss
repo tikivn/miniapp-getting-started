@@ -12,6 +12,7 @@
   font-weight: var(--font-weight-regular);
   font-size: var(--font-size-base);
   line-height: var(--font-height-base);
+  margin-right: var(--space-inline-2x-small);
 }
 
 .stepper-custom-class .tu-stepper-input {
