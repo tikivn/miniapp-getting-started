@@ -74,6 +74,10 @@ const basicComponents = [
         path: "/pages/component/basic/input/index",
       },
       {
+        name: "Textarea",
+        path: "/pages/component/basic/textarea/index",
+      },
+      {
         name: "Radio button",
         path: "/pages/component/basic/radio/index",
       },
@@ -84,6 +88,14 @@ const basicComponents = [
       {
         name: "Switch",
         path: "/pages/component/basic/switch/index",
+      },
+      {
+        name: "Picker",
+        path: "/pages/component/basic/picker/index",
+      },
+      {
+        name: "Picker View",
+        path: "/pages/component/basic/picker-view/index",
       },
     ],
   },

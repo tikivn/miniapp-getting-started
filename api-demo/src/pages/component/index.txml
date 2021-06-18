@@ -29,7 +29,7 @@
         </block>
       </view>
     </tab-content>
-    <tab-content key="0" tabId="{{1}}" activeTab="{{activeTab}}">
+    <tab-content key="1" tabId="{{1}}" activeTab="{{activeTab}}">
       <view class="content">
         <block tiki:for="{{advancedComponents}}" tiki:key="component-1-{{index}}">
           <block tiki:if="{{item.components.length > 0}}">

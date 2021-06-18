@@ -1,0 +1,30 @@
+<block-header title="Usage" description="Picker" />
+
+<view>
+  <view class="block-content">
+    <picker-view 
+      value="{{value}}" 
+      onChange="onChange">
+      <picker-view-column>
+        <view>Tháng 1</view>
+        <view>Tháng 2</view>
+        <view>Tháng 3</view>
+        <view>Tháng 4</view>
+        <view>Tháng 5</view>
+        <view>Tháng 6</view>
+        <view>Tháng 7</view>
+        <view>Tháng 8</view>
+        <view>Tháng 9</view>
+        <view>Tháng 10</view>
+        <view>Tháng 11</view>
+        <view>Tháng 12</view>
+      </picker-view-column>
+      <picker-view-column>
+        <view>Năm 2021</view>
+        <view>Năm 2022</view>
+        <view>Năm 2023</view>
+        <view>Năm 2024</view>
+      </picker-view-column>
+    </picker-view>
+  </view>
+</view>
