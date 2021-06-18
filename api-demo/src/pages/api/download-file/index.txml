@@ -7,5 +7,5 @@
   <view class="block-content">
     <button class="button-full" onTap="onDownloadFile">Download Image</button>
   </view>
-  <image src="{{image}}" />
+  <image class="image-cover" src="{{image}}" />
 </view>

@@ -1,0 +1,39 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Switches give user control over a feature or option that can be turned on or off." />
+  <block-variant header="Variants" title="State" description="Default, Selected, Disabled and Disabled - Selected.">
+    <view class="first-item" />
+    <list-item>
+      <label class="label-line">
+        <view class="label-line-content">Default</view>
+      </label>
+      <view slot="suffix">
+        <switch class="label-line-switch" />
+      </view>
+    </list-item>
+    <list-item>
+      <label class="label-line">
+        <view class="label-line-content">Selected</view>
+      </label>
+      <view slot="suffix">
+        <switch class="label-line-switch" checked />
+      </view>
+    </list-item>
+    <list-item>
+      <label class="label-line">
+        <view class="label-line-content">Disabled</view>
+      </label>
+      <view slot="suffix">
+        <switch class="label-line-switch" disabled />
+      </view>
+    </list-item>
+    <list-item>
+      <label class="label-line">
+        <view class="label-line-content">Selected Disabled</view>
+      </label>
+      <view slot="suffix">
+        <switch class="label-line-switch" disabled checked />
+      </view>
+    </list-item>
+  </block-variant>
+</view>

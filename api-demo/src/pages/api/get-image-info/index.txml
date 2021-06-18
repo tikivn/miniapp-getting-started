@@ -1,0 +1,15 @@
+<view>
+  <block-header title="Usage" description="Get image info" />
+  <view class="block-content">
+    <view class="text">Remote Image: {{remoteUrl}}</view>
+    <view class="text">Local Resources: {{localResources}}</view>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onFromRemoteImage">From Remote Image
+    </button>
+    <button class="button-full" onTap="onFromLocalImage">From Local
+      Image</button>
+    <button class="button-full" onTap="onFromResources">From
+      resources</button>
+  </view>
+</view>

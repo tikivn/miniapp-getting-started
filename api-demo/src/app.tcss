@@ -52,3 +52,8 @@
   background: #EBEBF0;
   margin-bottom: 16px;
 }
+
+.image-cover {
+    object-fit: contain;
+    width: 100%;
+}

@@ -1,9 +1,0 @@
-{
-  "defaultTitle": "Steps",
-  "usingComponents": {
-    "stepper": "@tiki.vn/tini-ui/es/stepper/index",
-    "list": "@tiki.vn/tini-ui/es/list/index",
-    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
-    "block-header": "components/block-header/index"
-  }
-}

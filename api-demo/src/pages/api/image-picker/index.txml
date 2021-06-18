@@ -4,7 +4,7 @@
     <button class="button-full" onTap="onChooseImage">Choose Image</button>
   </view>
   <block tiki:for="{{imgs}}">
-    <image src="{{item}}" />
+    <image class="image-cover" src="{{item}}" />
   </block>
 
 </view>

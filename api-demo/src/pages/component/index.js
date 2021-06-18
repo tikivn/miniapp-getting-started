@@ -1,5 +1,26 @@
 const basicComponents = [
   {
+    name: "Theme",
+    components: [
+      {
+        name: "Typography",
+        path: "",
+      },
+      {
+        name: "Iconography",
+        path: "",
+      },
+      {
+        name: "Border radius",
+        path: "",
+      },
+      {
+        name: "Evelation",
+        path: "",
+      },
+    ],
+  },
+  {
     name: "View container",
     components: [
       {
@@ -91,12 +112,120 @@ const basicComponents = [
       },
     ],
   },
+  // {
+  //   name: 'General',
+  //   components: [
+  //     {
+  //       name: 'Button',
+  //       path: '/pages/component/basic/button/index',
+  //     },
+  //     {
+  //       name: 'Divider',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'List',
+  //       path: '/pages/component/basic/list/index',
+  //     },
+  //     {
+  //       name: 'Badge',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Tooltip',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Steps',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Pagination',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Slider',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Input steppers',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Date pickers',
+  //       path: ''
+  //     },
+  //   ]
+  // },
+  // {
+  //   name: 'Text input',
+  //   components: [
+  //     {
+  //       name: 'Text field',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Textarea',
+  //       path: ''
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: 'Selection',
+  //   components: [
+  //     {
+  //       name: 'Radio button',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Checkbox',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Switch',
+  //       path: ''
+  //     }
+  //   ]
+  // },
+  // {
+  //   name: 'Bar',
+  //   components: [
+  //     {
+  //       name: 'Alphabet bar',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Progress bar',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Navigation bar',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Button bar',
+  //       path: ''
+  //     },
+  //     {
+  //       name: 'Snack bar',
+  //       path: ''
+  //     },
+  //   ]
+  // }
 ];
 
 const advancedComponents = [
   {
     name: "Foundation",
     components: [
+      {
+        name: "Colors",
+        path: "/pages/component/basic/foundation/colors/index",
+      },
+      {
+        name: "Space",
+        path: "/pages/component/basic/foundation/space/index",
+      },
       {
         name: "Typography",
         path: "/pages/component/basic/foundation/typography/index",
@@ -133,6 +262,47 @@ const advancedComponents = [
     ],
   },
   {
+    name: "Forms",
+    components: [
+      {
+        name: "Input",
+        path: "/pages/component/advance/form/input/index",
+      },
+      {
+        name: "Text field",
+        path: "/pages/component/advance/form/text-field/index",
+      },
+      {
+        name: "Text area",
+        path: "/pages/component/advance/form/text-area/index",
+      },
+      {
+        name: "Stepper",
+        path: "/pages/component/advance/form/stepper/index",
+      },
+      {
+        name: "Radio button",
+        path: "/pages/component/advance/form/radio-button/index",
+      },
+      {
+        name: "Checkbox",
+        path: "/pages/component/advance/form/checkbox/index",
+      },
+      {
+        name: "Switch",
+        path: "/pages/component/advance/form/switch/index",
+      },
+      {
+        name: "Date picker",
+        path: "/pages/component/advance/form/date-picker/index",
+      },
+      {
+        name: "Slider",
+        path: "/pages/component/advance/form/slider/index",
+      },
+    ],
+  },
+  {
     name: "Advanced components",
     components: [
       {
@@ -160,10 +330,6 @@ const advancedComponents = [
         path: "/pages/component/advance/list/index",
       },
       {
-        name: "Stepper",
-        path: "/pages/component/advance/stepper/index",
-      },
-      {
         name: "Tabs",
         path: "/pages/component/advance/tabs/index",
       },
@@ -178,7 +344,7 @@ const advancedComponents = [
 Page({
   data: {
     tabs: [{ title: "Basic components" }, { title: "Advanced components" }],
-    activeTab: 1,
+    activeTab: 0,
     basicComponents,
     advancedComponents,
   },

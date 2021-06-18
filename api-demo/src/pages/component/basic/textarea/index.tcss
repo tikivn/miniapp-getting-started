@@ -1,0 +1,24 @@
+.container {
+  min-height: 100%;
+  background-color: var(--gray20);
+  padding: 16px;
+}
+
+.block {
+  background-color: white;
+  margin: 8px 0;
+  padding: 16px;
+  border-radius: var(--border-radius-rounded-4px);
+}
+
+.item {
+  margin: 8px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.item input {
+  margin-left: 16px;
+}

@@ -1,5 +1,3 @@
-const { create } = require("lodash");
-
 async function getIp() {
   return new Promise((resolve, reject) => {
     my.request({
