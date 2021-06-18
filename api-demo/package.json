@@ -3,10 +3,9 @@
   "version": "0.4.3",
   "tiki": {
     "appIdentifier": "tiki-miniapp-demo",
-    "buildNumber": 2
+    "buildNumber": 3
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "0.0.12",
-    "lodash": "^4.17.20"
+    "@tiki.vn/tini-ui": "0.0.12"
   }
 }
