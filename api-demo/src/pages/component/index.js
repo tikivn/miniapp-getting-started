@@ -74,6 +74,10 @@ const basicComponents = [
         path: "/pages/component/basic/input/index",
       },
       {
+        name: "Textarea",
+        path: "/pages/component/basic/textarea/index",
+      },
+      {
         name: "Radio button",
         path: "/pages/component/basic/radio/index",
       },

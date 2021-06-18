@@ -41,6 +41,7 @@
     "pages/component/basic/text/index",
     "pages/component/basic/progress/index",
     "pages/component/basic/input/index",
+    "pages/component/basic/textarea/index",
     "pages/component/basic/list/index",
     "pages/component/basic/radio/index",
     "pages/component/basic/switch/index",

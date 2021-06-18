@@ -2,33 +2,21 @@
 <view class="container">
   <view class="block">
     <text class="header">Events</text>
-    <view class="item">
-      <text>Events</text>
-      <textarea onInput="onInput" onFocus="onFocus" onConfirm="onConfirm" onBlur="onBlur" />
-    </view>
+    <textarea onInput="onInput" onFocus="onFocus" onConfirm="onConfirm" onBlur="onBlur" />
   </view>
 
   <view class="block">
     <text class="header">Hide count</text>
-    <view class="item">
-      <text>Hide count</text>
-      <textarea show-count="{{false}}" />
-    </view>
+    <textarea show-count="{{false}}" />
   </view>
 
   <view class="block">
     <text class="header">Auto height</text>
-    <view class="item">
-      <text>Auto height</text>
-      <textarea auto-height />
-    </view>
+    <textarea auto-height />
   </view>
 
   <view class="block">
     <text class="header">Disabled</text>
-    <view class="item">
-      <text>Disabled</text>
-      <textarea placeholder="disabled" disabled="true" />
-    </view>
+    <textarea placeholder="disabled" disabled="true" />
   </view>
 </view>
