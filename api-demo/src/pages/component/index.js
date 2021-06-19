@@ -116,106 +116,6 @@ const basicComponents = [
       },
     ],
   },
-  // {
-  //   name: 'General',
-  //   components: [
-  //     {
-  //       name: 'Button',
-  //       path: '/pages/component/basic/button/index',
-  //     },
-  //     {
-  //       name: 'Divider',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'List',
-  //       path: '/pages/component/basic/list/index',
-  //     },
-  //     {
-  //       name: 'Badge',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Tooltip',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Steps',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Pagination',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Slider',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Input steppers',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Date pickers',
-  //       path: ''
-  //     },
-  //   ]
-  // },
-  // {
-  //   name: 'Text input',
-  //   components: [
-  //     {
-  //       name: 'Text field',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Textarea',
-  //       path: ''
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Selection',
-  //   components: [
-  //     {
-  //       name: 'Radio button',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Checkbox',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Switch',
-  //       path: ''
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Bar',
-  //   components: [
-  //     {
-  //       name: 'Alphabet bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Progress bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Navigation bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Button bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Snack bar',
-  //       path: ''
-  //     },
-  //   ]
-  // }
 ];
 
 const advancedComponents = [
@@ -310,18 +210,6 @@ const advancedComponents = [
     name: "Advanced components",
     components: [
       {
-        name: "Avatar",
-        path: "/pages/component/advance/avatar/index",
-      },
-      {
-        name: "Pagination",
-        path: "/pages/component/advance/pagination/index",
-      },
-      {
-        name: "Badge",
-        path: "/pages/component/advance/badge/index",
-      },
-      {
         name: "Popup",
         path: "/pages/component/advance/popup/index",
       },
@@ -329,17 +217,48 @@ const advancedComponents = [
         name: "Modal",
         path: "/pages/component/advance/modal/index",
       },
+    ],
+  },
+  {
+    name: "Navigation",
+    components: [
       {
-        name: "List",
-        path: "/pages/component/advance/list/index",
+        name: "Avatar",
+        path: "/pages/component/advance/navigation/avatar/index",
       },
       {
-        name: "Tabs",
-        path: "/pages/component/advance/tabs/index",
+        name: "Badge",
+        path: "/pages/component/advance/navigation/badge/index",
       },
       {
         name: "Sidebar",
-        path: "/pages/component/advance/sidebar/index",
+        path: "/pages/component/advance/navigation/sidebar/index",
+      },
+      {
+        name: "Tabs",
+        path: "/pages/component/advance/navigation/tabs/index",
+      },
+      {
+        name: "Pagination",
+        path: "/pages/component/advance/navigation/pagination/index",
+      },
+    ],
+  },
+  {
+    name: "Data visualization",
+    components: [
+      {
+        name: "List",
+        path: "/pages/component/advance/data-visualization/list/index",
+      },
+    ],
+  },
+  {
+    name: "Feedback",
+    components: [
+      {
+        name: "Bottom sheet",
+        path: "/pages/component/advance/feedback/bottom-sheet/index",
       },
     ],
   },

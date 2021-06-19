@@ -5,6 +5,7 @@
 .label-line {
   display: flex;
   flex-direction: row;
+  flex-grow: 1;
 }
 
 .label-line-checkbox {
