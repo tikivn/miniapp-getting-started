@@ -2,30 +2,22 @@ Page({
   data: {
     show: false,
   },
-  onShowBottomSheet(template) {
+  onShowBottomSheet(e) {
     this.setData({
       show: true,
-      template,
+      template: e.target.dataset.template,
     });
-  },
-  onShowBottomSheetList() {
-    this.onShowBottomSheet("list");
-  },
-  onShowBottomSheetText() {
-    this.onShowBottomSheet("text");
-  },
-  onShowBottomSheetPicker() {
-    this.onShowBottomSheet("picker");
   },
   onClose() {
     this.setData({
       show: false,
     });
   },
-  onClick() {
+  onClick(e) {
+    const template = e.target.dataset.template;
     my.alert({
       title: "click",
-      content: "Receive click from bottom sheet",
+      content: `Receive click from bottom sheet with ${template}`,
     });
   },
 });

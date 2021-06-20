@@ -51,12 +51,13 @@
     description="Bottom sheets are used to display content that temporarily blocks interactions with the main view of an application. Bottom sheets should be used sparingly only to provide complex actions when we  want users stay on the current screen." />
   <block-variant header="Variants">
     <view class="list-button">
-      <tu-button onTap="onShowBottomSheetList">Bottom sheet with list</tu-button>
-      <tu-button onTap="onShowBottomSheetText">Bottom sheet with text</tu-button>
-      <tu-button onTap="onShowBottomSheetPicker">Bottom sheet with picker</tu-button>
+      <tu-button data-template="list" onTap="onShowBottomSheet">Bottom sheet with list</tu-button>
+      <tu-button data-template="text" onTap="onShowBottomSheet">Bottom sheet with text</tu-button>
+      <tu-button data-template="picker" onTap="onShowBottomSheet">Bottom sheet with picker</tu-button>
     </view>
     <block tiki:if="{{show}}">
-      <bottom-sheet title="List" buttonTitle="OK" distanceFromTop="{{100}}" onClose="onClose" onClick="onClick">
+      <bottom-sheet data-template="{{template}}" title="Bottom Sheet with {{template}}" buttonTitle="OK"
+        distanceFromTop="{{100}}" onClose="onClose" onClick="onClick">
         <template is="bottom-sheet-{{template}}" />
       </bottom-sheet>
     </block>
