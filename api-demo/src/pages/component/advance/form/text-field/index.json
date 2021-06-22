@@ -1,8 +1,8 @@
 {
-  "defaultTitle": "Button",
+  "defaultTitle": "Text field",
   "usingComponents": {
     "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
-    "tu-button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index",
     "block-header": "components/block-header/index",
     "block-variant": "components/block-variant/index"
   }
