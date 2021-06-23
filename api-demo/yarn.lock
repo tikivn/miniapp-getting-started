@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@tiki.vn/tini-style@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.0.2.tgz#77e8a29dc1ea9967d433af2c2888ff9b5595a324"
+  integrity sha512-wkkbF9Fh5okN/nKRCEBELtgzLe5v2N6eLt+PO2+f40KXpVxyWBRnZiWbyiybRxuE09ymWEneKkpaL1rg3ibpzQ==
+
 "@tiki.vn/tini-ui@0.0.18":
   version "0.0.18"
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.0.18.tgz#cf866d796dd744ce4ae11f07c400637d069b1e36"
