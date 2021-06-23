@@ -146,6 +146,13 @@ const networkAPIList = [
   },
 ];
 
+const locationAPIList = [
+  {
+    name: "Get Location",
+    path: "pages/api/get-location/index",
+  },
+];
+
 const APIList = [
   {
     type: "Open API",
@@ -186,6 +193,10 @@ const APIList = [
   {
     type: "File",
     list: fileAPIList,
+  },
+  {
+    type: "Location",
+    list: locationAPIList,
   },
 ];
 

@@ -1,0 +1,18 @@
+<view>
+  <block-header title="Usage" description="Get current location" />
+
+
+  <view class="block-content">
+    <button class="button-full" onTap="onGetLocation">Get User Location</button>
+  </view>
+  <view class="block-content" hidden={{!location}}>
+    <view class="title mb-8">Current location:</view>
+    <text class="text-full">Latitude:{{location.latitude}}</text>
+    <text class="text-full">Longitude:{{location.longitude}}</text>
+    <text class="text-full">Altitude:{{location.altitude}}</text>
+    <text class="text-full">Accuracy:{{location.accuracy}}</text>
+    <text class="text-full">Altitude Accuracy:{{location.altitudeAccuracy}}</text>
+    <text class="text-full">Heading:{{location.heading}}</text>
+    <text class="text-full">Speed:{{location.speed}}</text>
+  </view>
+</view>

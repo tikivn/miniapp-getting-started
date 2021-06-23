@@ -29,6 +29,7 @@
     "pages/api/save-image/index",
     "pages/api/get-image-info/index",
     "pages/api/is-user-logged/index",
+    "pages/api/get-location/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",
