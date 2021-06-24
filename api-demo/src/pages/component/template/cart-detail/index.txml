@@ -1,0 +1,46 @@
+<view class="p-medium flex flex-col spacey-2x-small">
+  <view class="font-normal font-bold text-medium text-gray-100">Hình thức giao hàng</view>
+  <view class="bg-white radius-8px py-2x-small">
+    <list-item padding arrow titlePosition="middle"
+      lowerSubtitle="Tòa nhà Viettel Complex, 285 Cách Mạng Tháng 8, Phường 12, Quận 10, Hồ Chí Minh">
+      <view>Tú Bùi - 0769696969</view>
+      <view slot="afterUpperSubtitle" class="font-normal font-regular text-base text-black">Địa chỉ nhận hàng
+      </view>
+    </list-item>
+    <list-item thumb="https://salt.tikicdn.com/ts/miniapp/e8/c5/59/fb0e34f54c6f1373c42a4fe044108860.png" thumbSize="40"
+      padding arrow titlePosition="middle" lowerSubtitle="Giao ngay 2h - 3h">
+      <view>Tiki Now</view>
+      <view slot="afterUpperSubtitle" class="font-normal font-regular text-base color-black">Đơn vị vận chuyển
+      </view>
+    </list-item>
+  </view>
+  <view class="font-normal font-bold text-medium color-gray-100">Chi tiết đơn hàng</view>
+  <view class="bg-white radius-8px py-2x-small">
+    <list-item thumb="https://salt.tikicdn.com/ts/miniapp/e8/c5/59/fb0e34f54c6f1373c42a4fe044108860.png" thumbSize="40"
+      padding>
+      <view class="font-normal font-regular text-base">Product name</view>
+      <view slot="afterTitle" class="flex flex-grow flex-col items-end">
+        <icon type="close_glyph" color="var(--gray20)" />
+      </view>
+      <view slot="additionContent" class="flex flex-col spacey-4x-small">
+        <view class="font-normal font-bold text-base text-blue">50.000đ</view>
+        <view class="py-2x-small">
+          <stepper showNumber value="{{1}}" />
+        </view>
+      </view>
+    </list-item>
+    <list-item thumb="https://salt.tikicdn.com/ts/miniapp/e8/c5/59/fb0e34f54c6f1373c42a4fe044108860.png" thumbSize="40"
+      padding>
+      <view class="font-normal font-regular text-base">Product name</view>
+      <view slot="afterTitle" class="flex flex-grow flex-col items-end">
+        <icon type="close_glyph" color="var(--gray20)" />
+      </view>
+      <view slot="additionContent" class="flex flex-col spacey-4x-small">
+        <view class="font-normal font-bold text-base text-blue">50.000đ</view>
+        <view class="py-2x-small">
+          <stepper showNumber value="{{1}}" />
+        </view>
+      </view>
+    </list-item>
+  </view>
+</view>
