@@ -34,7 +34,7 @@
       <tu-button class="flex-grow" shape="pill" type="solid" size="large">Pill</tu-button>
     </view>
     <view class="block-variant-content-line">
-      <tu-button style="width: 40px;" shape="pill" type="solid" size="large" iconName="arrow_right" />
+      <tu-button shape="circle" type="solid" size="large" iconName="arrow_right" />
     </view>
   </block-variant>
 </template>
