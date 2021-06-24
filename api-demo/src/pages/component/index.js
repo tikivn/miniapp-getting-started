@@ -262,6 +262,15 @@ const advancedComponents = [
       },
     ],
   },
+  {
+    name: "Page template",
+    components: [
+      {
+        name: "Cart detail",
+        path: "/pages/component/template/cart-detail/index",
+      },
+    ],
+  },
 ];
 
 Page({

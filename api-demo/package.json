@@ -6,6 +6,7 @@
     "buildNumber": 1
   },
   "dependencies": {
+    "@tiki.vn/tini-style": "^0.0.4",
     "@tiki.vn/tini-ui": "0.0.18"
   }
 }

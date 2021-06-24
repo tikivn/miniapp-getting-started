@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Cart detail",
+  "usingComponents": {
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "stepper": "@tiki.vn/tini-ui/es/stepper/index"
+  }
+}
