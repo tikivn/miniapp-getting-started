@@ -3,7 +3,7 @@
   "version": "0.4.6",
   "tiki": {
     "appIdentifier": "tiki-miniapp-demo",
-    "buildNumber": 1
+    "buildNumber": 2
   },
   "dependencies": {
     "@tiki.vn/tini-ui": "0.1.2-rc.13"
