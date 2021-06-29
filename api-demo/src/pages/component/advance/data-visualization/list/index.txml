@@ -1,0 +1,159 @@
+<template name="header">
+  <view class="page-list-header">
+    <view class="page-list-header-title">Usage</view>
+    <view class="page-list-header-content">Lists are used to display name/value pairs, action and information.</view>
+  </view>
+</template>
+
+<template name="list-content-only">
+  <view class="page-list-content-block">
+    <view class="page-list-content-block-title">Content only</view>
+    <list-item>
+      <view style="font-weight: var(--font-weight-regular);">Label</view>
+    </list-item>
+    <list-item>
+      <view>Data</view>
+    </list-item>
+    <list-item upperSubtitle="Description">
+      <view style="font-weight: var(--font-weight-regular);">Label</view>
+    </list-item>
+    <list-item titlePosition="middle">
+      <view slot="afterUpperSubtitle" class="text-title text-regular">Label</view>
+      <view>Data</view>
+    </list-item>
+    <list-item thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px"
+      titlePosition="middle">
+      <view slot="afterUpperSubtitle" class="text-title text-regular">Label</view>
+      <view>Data</view>
+    </list-item>
+    <list-item thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px"
+      titlePosition="middle">
+      <view style="font-weight: var(--font-weight-regular);">Label</view>
+      <view slot="additionContent">
+        <button size="small" class="page-list-item-button">Button</button>
+      </view>
+    </list-item>
+  </view>
+</template>
+
+<template name="list-content-with-suffix">
+  <view class="page-list-content-block">
+    <view class="page-list-content-block-title">Content with Suffix</view>
+    <list-item>
+      <view>Content</view>
+      <view slot="suffix">
+        <button size="small" class="page-list-item-button">Button</button>
+      </view>
+    </list-item>
+    <list-item>
+      <view style="font-weight: var(--font-weight-regular);">Content</view>
+      <view slot="suffix">
+        <view class="text-title">Data</view>
+      </view>
+    </list-item>
+    <list-item arrow="true">
+      <view>Content</view>
+    </list-item>
+    <list-item arrow>
+      <view>Content</view>
+      <view slot="suffix">
+        <view class="text-title text-regular">CTA message</view>
+      </view>
+    </list-item>
+    <list-item>
+      <view>Content</view>
+      <view slot="suffix">
+        <radio />
+      </view>
+    </list-item>
+    <list-item>
+      <view>Content</view>
+      <view slot="suffix">
+        <checkbox />
+      </view>
+    </list-item>
+  </view>
+</template>
+
+<template name="list-content-with-prefix">
+  <view class="page-list-content-block">
+    <view class="page-list-content-block-title">Content with Prefix</view>
+    <list-item>
+      <view>Content</view>
+      <view slot="prefix">
+        <icon type="location" size="24" color="#808089" />
+      </view>
+    </list-item>
+    <list-item>
+      <view>Content</view>
+      <view slot="prefix">
+        <radio />
+      </view>
+    </list-item>
+    <list-item>
+      <view>Content</view>
+      <view slot="prefix">
+        <checkbox />
+      </view>
+    </list-item>
+  </view>
+</template>
+
+<template name="list-content-with-suffix-and-prefix">
+  <view class="page-list-content-block">
+    <view class="page-list-content-block-title">Content with Prefix & Suffix</view>
+    <list-item arrow upperSubtitle="Description"
+      thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px">
+      <view>Label</view>
+      <view slot="suffix">
+        <view class="text-title text-regular">CTA message</view>
+      </view>
+      <view slot="prefix">
+        <icon type="location" size="24" color="#808089" />
+      </view>
+    </list-item>
+    <list-item upperSubtitle="Description"
+      thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px">
+      <view>Label</view>
+      <view slot="suffix">
+        <button size="small" class="page-list-item-button">Button</button>
+      </view>
+      <view slot="prefix">
+        <icon type="location" size="24" color="#808089" />
+      </view>
+    </list-item>
+    <list-item arrow upperSubtitle="Description">
+      <view>Label</view>
+      <view slot="prefix">
+        <icon type="location" size="24" color="#808089" />
+      </view>
+    </list-item>
+  </view>
+</template>
+
+<template name="list-content-structure">
+  <view class="page-list-content-block">
+    <view class="page-list-content-block-title">List Item structure</view>
+    <list-item arrow upperSubtitle="upper" lowerSubtitle="lower"
+      thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px">
+      <view style="background-color: red;">title</view>
+      <view slot="afterTitle" style="display: flex; flex-grow: 1;background-color: green;">after title</view>
+      <view slot="afterUpperSubtitle" style="display: flex; flex-grow: 1; background-color: orange;">after upper</view>
+      <view slot="afterLowerSubtitle" style="display: flex; flex-grow: 1; background-color: pink;">after lower</view>
+      <view slot="suffix" style="background-color: blue;">suffix</view>
+      <view slot="prefix" style="background-color: purple;">prefix</view>
+    </list-item>
+  </view>
+</template>
+
+<view class="page page-list">
+  <template is="header" />
+  <view class="page-list-content">
+    <view class="page-list-content-title">Variants</view>
+    <template is="list-content-only" />
+    <template is="list-content-with-suffix" />
+    <template is="list-content-with-prefix" />
+    <template is="list-content-with-suffix-and-prefix" />
+    <template is="list-content-structure" />
+  </view>
+</view>

@@ -1,29 +1,29 @@
-
+<block-header title="Usage" description="Button" />
 <view class="container">
   <view class="block">
-    <text>type: primary</text>
-    <button type="primary" onTap="onTap">Primary</button>
-    <button type="primary" disabled >Primary(disabled)</button>
-    <button type="primary" size="medium">Primary(medium)</button>
-    <button type="primary" size="small">Primary(small)</button>
-    <button type="primary" loading>Primary(loading)</button>
+    <text>type: solid</text>
+    <button type="solid" onTap="onTap">Solid</button>
+    <button type="solid" disabled>Solid(disabled)</button>
+    <button type="solid" size="medium">Solid(medium)</button>
+    <button type="solid" size="small">Solid(small)</button>
+    <button type="solid" loading>Solid(loading)</button>
   </view>
 
   <view class="block">
-    <text>type: secondary</text>
-    <button type="secondary">Secondary</button>
-    <button type="secondary" disabled >Secondary(disabled)</button>
-    <button type="secondary" size="medium">Secondary(medium)</button>
-    <button type="secondary" size="small">Secondary(small)</button>
-    <button type="secondary" loading>Secondary(loading)</button>
+    <text>type: outline</text>
+    <button type="outline">Outline</button>
+    <button type="outline" disabled>Outline(disabled)</button>
+    <button type="outline" size="medium">Outline(medium)</button>
+    <button type="outline" size="small">Outline(small)</button>
+    <button type="outline" loading>Outline(loading)</button>
   </view>
 
   <view class="block">
-    <text>type: tertiary</text>
-    <button type="tertiary">Teritiary</button>
-    <button type="tertiary" disabled >Teritiary(disabled)</button>
-    <button type="tertiary" size="medium">Teritiary(medium)</button>
-    <button type="tertiary" size="small">Teritiary(small)</button>
-    <button type="tertiary" loading>Teritiary(loading)</button>
+    <text>type: ghost</text>
+    <button type="ghost">Ghost</button>
+    <button type="ghost" disabled>Ghost(disabled)</button>
+    <button type="ghost" size="medium">Ghost(medium)</button>
+    <button type="ghost" size="small">Ghost(small)</button>
+    <button type="ghost" loading>Ghost(loading)</button>
   </view>
 </view>

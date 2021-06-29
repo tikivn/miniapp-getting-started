@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "my.saveImage",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

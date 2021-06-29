@@ -6,7 +6,20 @@
   <view class="block-content">
     <text class="title mb-8">Variant</text>
     <view class="component-item">
-      <view class="animation-element" animation="{{animation}}" />
+      <view 
+        class="slideAnimation"
+        onAnimationStart="onAnimationStart"
+        onAnimationIteration="onAnimationIteration"
+        onAnimationEnd="onAnimationEnd"
+      />
+      <view 
+        class="animation-element" 
+        animation="{{animation}}" 
+        onTransitionEnd="onTransitionEnd"
+       
+        onTap="tapName"
+        data-view-name="Test View"
+      />
 
       <button onTap="onRotate">
         rotate

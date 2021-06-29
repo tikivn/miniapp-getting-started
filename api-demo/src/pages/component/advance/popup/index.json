@@ -1,13 +1,10 @@
 {
-    "defaultTitle": "Popup",
-    "titleBarColor": "#1B6BFF",
-    "titleColor": "#fff",
-    "transparentTitle": "none",
-    "usingComponents": {
-        "avatar": "@tiki-miniapp/tiny-ui/es/avatar/index",
-        "list-item": "@tiki-miniapp/tiny-ui/es/list/list-item/index",
-        "list": "@tiki-miniapp/tiny-ui/es/list/index",
-        "popup": "@tiki-miniapp/tiny-ui/es/popup/index",
-        "block-header": "components/block-header/index"
-    }
+  "defaultTitle": "Popup",
+  "usingComponents": {
+    "avatar": "@tiki.vn/tini-ui/es/avatar/index",
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "list": "@tiki.vn/tini-ui/es/list/index",
+    "popup": "@tiki.vn/tini-ui/es/popup/index",
+    "block-header": "components/block-header/index"
+  }
 }

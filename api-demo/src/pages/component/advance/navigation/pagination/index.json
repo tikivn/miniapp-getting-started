@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "pagination",
+  "usingComponents": {
+    "pagination": "@tiki.vn/tini-ui/es/pagination/index",
+    "block-header": "components/block-header/index"
+  }
+}

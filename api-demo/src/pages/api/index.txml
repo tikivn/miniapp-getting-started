@@ -1,11 +1,9 @@
 <view class="page-container">
   <view class="banner" >
-    <image class="component-logo" src="../../images/app_logo.png" />
     <view class="search">
       <input placeholder="Tìm kiếm thành phần/API" />
     </view>
   </view>
-
   <view class="content">
     <block tiki:for="{{APIList}}">
       <block tiki:if="{{item.list.length > 0}}">
@@ -13,5 +11,4 @@
       </block>
     </block>
   </view>
-  
 </view>

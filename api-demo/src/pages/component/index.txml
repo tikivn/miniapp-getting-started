@@ -7,33 +7,39 @@
   </view>
   <tabs 
     tabs="{{tabs}}" 
-    tab-height="{{48}}"
-    active-text-color="#FFF"
-    inactive-text-color="#FFF"
-    tab-bar-active-underline-color="#FFF"
-    tab-bar-underline-color="#1A94FF"
-    tab-bar-background-color="#1A94FF"
-    tab-bar-active-background-color="#1A94FF"
+    tabsName="activeTab" 
+    stickyBar="{{true}}"
+    onTabClick="onTabClick"
+    onChange="onTabChange"
+    activeTab="{{activeTab}}" 
+    tabBarBackgroundColor="#1A94FF"
+    tabBarActiveTextColor="#FFF"
+    tabBarUnderlineColor="#FFF"
+    tabBarInactiveTextColor="#FFF"
   >
-    <view class="content">
-      <block tiki:for="{{basicComponents}}" tiki:key="component-{{index}}">
-        <block tiki:if="{{item.components.length > 0}}">
-          <list
-            key="list"
-            header="{{item.name}}" 
-            items="{{item.components}}" />
+    <tab-content key="0" tabId="{{0}}" activeTab="{{activeTab}}">
+      <view class="content">
+        <block tiki:for="{{basicComponents}}" tiki:key="component-0-{{index}}">
+          <block tiki:if="{{item.components.length > 0}}">
+            <list
+              key="list-{{index}}"
+              header="{{item.name}}" 
+              items="{{item.components}}" />
+          </block>
         </block>
-      </block>
-    </view>
-    <view class="content">
-      <block tiki:for="{{advancedComponents}}" tiki:key="component-{{index}}">
-        <block tiki:if="{{item.components.length > 0}}">
-          <list
-            key="list"
-            header="{{item.name}}" 
-            items="{{item.components}}" />
+      </view>
+    </tab-content>
+    <tab-content key="1" tabId="{{1}}" activeTab="{{activeTab}}">
+      <view class="content">
+        <block tiki:for="{{advancedComponents}}" tiki:key="component-1-{{index}}">
+          <block tiki:if="{{item.components.length > 0}}">
+            <list
+              key="list-{{index}}"
+              header="{{item.name}}" 
+              items="{{item.components}}" />
+          </block>
         </block>
-      </block>
-    </view>
+      </view>
+    </tab-content>
   </tabs>
 </view>

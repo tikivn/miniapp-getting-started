@@ -21,11 +21,28 @@
     "pages/api/navigator/index",
     "pages/api/keyboard/index",
     "pages/api/image-picker/index",
+    "pages/api/deep-link/index",
+    "pages/api/download-file/index",
+    "pages/api/upload-file/index",
+    "pages/api/file/index",
+    "pages/api/compress-image/index",
+    "pages/api/save-image/index",
+    "pages/api/get-image-info/index",
+    "pages/api/is-user-logged/index",
+    "pages/api/get-location/index",
+    "pages/component/basic/foundation/typography/index",
+    "pages/component/basic/foundation/icons/index",
+    "pages/component/basic/foundation/border-radius/index",
+    "pages/component/basic/foundation/effects/index",
+    "pages/component/basic/foundation/divider/index",
+    "pages/component/basic/foundation/colors/index",
+    "pages/component/basic/foundation/space/index",
+    "pages/component/basic/form/index",
     "pages/component/basic/button/index",
     "pages/component/basic/text/index",
-    "pages/component/basic/icon/index",
     "pages/component/basic/progress/index",
     "pages/component/basic/input/index",
+    "pages/component/basic/textarea/index",
     "pages/component/basic/list/index",
     "pages/component/basic/radio/index",
     "pages/component/basic/switch/index",
@@ -33,20 +50,34 @@
     "pages/component/basic/checkbox/index",
     "pages/component/basic/scroll-view/index",
     "pages/component/basic/carousel/index",
-    "pages/component/basic/tabs/index",
-    "pages/component/advance/list/index",
-    "pages/component/advance/stepper/index",
-    "pages/component/advance/avatar/index",
+    "pages/component/basic/movable-view/index",
+    "pages/component/basic/audio/index",
+    "pages/component/basic/video/index",
+    "pages/component/basic/picker/index",
+    "pages/component/basic/picker-view/index",
+    "pages/component/basic/slider/index",
+    "pages/component/advance/actions/button/index",
+    "pages/component/advance/actions/button-bar/index",
+    "pages/component/advance/form/input/index",
+    "pages/component/advance/form/text-field/index",
+    "pages/component/advance/form/text-area/index",
+    "pages/component/advance/form/stepper/index",
+    "pages/component/advance/form/radio-button/index",
+    "pages/component/advance/form/checkbox/index",
+    "pages/component/advance/form/switch/index",
+    "pages/component/advance/form/date-picker/index",
+    "pages/component/advance/form/slider/index",
+    "pages/component/advance/navigation/avatar/index",
+    "pages/component/advance/navigation/badge/index",
+    "pages/component/advance/navigation/sidebar/index",
+    "pages/component/advance/navigation/tabs/index",
+    "pages/component/advance/navigation/pagination/index",
+    "pages/component/advance/data-visualization/list/index",
+    "pages/component/advance/feedback/bottom-sheet/index",
     "pages/component/advance/popup/index",
-    "pages/component/advance/badge/index",
-    "pages/component/advance/modal/index"
+    "pages/component/advance/modal/index",
+    "pages/component/template/cart-detail/index"
   ],
-  "window": {
-    "defaultTitle": "Tiki MiniApp Demo",
-    "titleBarColor": "#1A94FF",
-    "titleColor": "#fff",
-    "transparentTitle": "none"
-  },
   "tabBar": {
     "items": [
       {
@@ -62,5 +93,11 @@
         "activeIcon": "images/icon_API_HL.png"
       }
     ]
+  },
+  "window": {
+    "defaultTitle": "Tiki MiniApp Demo",
+    "titleBarColor": "#1A94FF",
+    "titleColor": "#fff",
+    "transparentTitle": "none"
   }
 }

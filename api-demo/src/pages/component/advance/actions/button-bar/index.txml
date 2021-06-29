@@ -1,0 +1,18 @@
+<view class="page page-advance-actions-button">
+  <block-header title="Usage" description="Button bar is used to provide important actions on the screen." />
+  <view class="container">
+    <view class="block-variant">
+      <view class="block-variant-header">Variant</view>
+      <list-item upperSubtitle="1 button and 2 buttons.">
+        <view>Quantity</view>
+      </list-item>
+    </view>
+    <view class="button-bar">
+      <tu-button class="flex-grow" shape="rounded" type="solid" size="large">Button</tu-button>
+    </view>
+    <view class="button-bar">
+      <tu-button class="flex-grow button-left" shape="rounded" type="outline" size="large">Button</tu-button>
+      <tu-button class="flex-grow button-right" shape="rounded" type="solid" size="large">Button</tu-button>
+    </view>
+  </view>
+</view>

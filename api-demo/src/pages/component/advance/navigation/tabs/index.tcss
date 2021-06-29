@@ -1,0 +1,16 @@
+.tab-item {
+  height: 104px;
+  background-color: #FFF;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.gray10 {
+  background-color: var(--gray10);
+}

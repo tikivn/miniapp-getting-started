@@ -1,0 +1,14 @@
+<view>
+  <block-header title="Usage" description="Compress image" />
+  <view class="block-content">
+    <image class="image-cover" src="{{tempFilePath}}" />
+    <button class="button-full" onTap="onChooseImage">Choose Image</button>
+  </view>
+  <view class="block-content">
+    <button class="button-full" disabled="{{tempFilePath === undefined}}" onTap="onCompressImage">Compress
+      Image</button>
+    <button class="button-full" disabled="{{tempFilePath === undefined}}" onTap="onGetImageInfo">Get Image Info</button>
+    <button class="button-full" disabled="{{compressedFilePath === undefined}}" onTap="onGetCompressedImageInfo">Get
+      Compressed Image Info</button>
+  </view>
+</view>

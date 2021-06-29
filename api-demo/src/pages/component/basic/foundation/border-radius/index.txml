@@ -1,0 +1,37 @@
+<view class="page">
+  <block-header title="Usage" description="Border radius is used to give any element rounded corners. In our system, we
+      provides 5 type of radius to help
+      you create the UI elements fit with your brand." />
+  <block-variant header="Variants">
+    <list-item class="list-item">
+      <view slot="prefix">
+        <view class="border-radius-shape border-radius-shape-sharp" />
+      </view>
+      <view>border-radius-sharp</view>
+    </list-item>
+    <list-item class="list-item">
+      <view slot="prefix">
+        <view class="border-radius-shape border-radius-shape-rounded-4px" />
+      </view>
+      <view>border-radius-rounded-4px</view>
+    </list-item>
+    <list-item class="list-item">
+      <view slot="prefix">
+        <view class="border-radius-shape border-radius-shape-rounded-8px" />
+      </view>
+      <view>border-radius-rounded-8px</view>
+    </list-item>
+    <list-item class="list-item">
+      <view slot="prefix">
+        <view class="border-radius-shape border-radius-shape-pill" />
+      </view>
+      <view>border-radius-pill</view>
+    </list-item>
+    <list-item class="list-item">
+      <view slot="prefix">
+        <view class="border-radius-shape border-radius-shape-circle" />
+      </view>
+      <view>border-radius-circle</view>
+    </list-item>
+  </block-variant>
+</view>

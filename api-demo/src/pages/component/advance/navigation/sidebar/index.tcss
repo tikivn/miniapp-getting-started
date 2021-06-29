@@ -1,0 +1,70 @@
+.tab-item {
+  height: 104px;
+  background-color: #fff;
+}
+
+.description {
+  font-size: 12px;
+  line-height: 16px;
+  color: #808089;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.mb-8 {
+  margin-bottom: 8px;
+}
+
+.mt-16 {
+  margin-top: 16px;
+}
+
+.gray10 {
+  background-color: var(--gray10);
+}
+
+.sidebar-container {
+  border-radius: 8px;
+  border: 1px solid var(--gray20);
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.sidebar-content {
+  background: var(--white);
+  width: 100%;
+}
+
+.tu-sidebar {
+  width: 100%;
+}
+
+.container-1,
+.container-1 .tu-sidebar,
+.container-1 .sidebar-content {
+  height: 110px;
+}
+
+.container-2,
+.container-2 .tu-sidebar,
+.container-2 .sidebar-content {
+  height: 122px;
+}
+
+.container-3,
+.container-3 .tu-sidebar,
+.container-3 .sidebar-content {
+  height: 122px;
+}
+
+.container-4,
+.container-4 .tu-sidebar,
+.container-4 .sidebar-content {
+  height: 156px;
+}
+
+.container-5,
+.container-5 .tu-sidebar,
+.container-5 .sidebar-content {
+  height: 218px;
+}

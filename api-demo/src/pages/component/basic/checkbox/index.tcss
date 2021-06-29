@@ -1,4 +1,9 @@
 .component-item {
+  display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+text {
+  margin-left: 8px;
 }

@@ -1,0 +1,65 @@
+<template name="bottom-sheet-list">
+  <radio-group>
+    <label tiki:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]}}">
+      <list-item padding>
+        <view slot="prefix" class="list-item-prefix">
+          <radio value="{{item}}" />
+        </view>
+        <view class=" list-item-title">Label
+        </view>
+        <view slot="suffix" class="list-item-suffix">
+          <view>Data</view>
+        </view>
+      </list-item>
+    </label>
+  </radio-group>
+</template>
+
+<template name="bottom-sheet-text">
+  <list-item padding upperSubtitle="Description">
+    <view>Title</view>
+  </list-item>
+</template>
+
+<template name="bottom-sheet-picker">
+  <picker-view>
+    <picker-view-column>
+      <view>Tháng 1</view>
+      <view>Tháng 2</view>
+      <view>Tháng 3</view>
+      <view>Tháng 4</view>
+      <view>Tháng 5</view>
+      <view>Tháng 6</view>
+      <view>Tháng 7</view>
+      <view>Tháng 8</view>
+      <view>Tháng 9</view>
+      <view>Tháng 10</view>
+      <view>Tháng 11</view>
+      <view>Tháng 12</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view>Năm 2021</view>
+      <view>Năm 2022</view>
+      <view>Năm 2023</view>
+      <view>Năm 2024</view>
+    </picker-view-column>
+  </picker-view>
+</template>
+
+<view class="page-bottom-sheet">
+  <block-header title="Usage"
+    description="Bottom sheets are used to display content that temporarily blocks interactions with the main view of an application. Bottom sheets should be used sparingly only to provide complex actions when we  want users stay on the current screen." />
+  <block-variant header="Variants">
+    <view class="list-button">
+      <tu-button data-template="list" onTap="onShowBottomSheet">Bottom sheet with list</tu-button>
+      <tu-button data-template="text" onTap="onShowBottomSheet">Bottom sheet with text</tu-button>
+      <tu-button data-template="picker" onTap="onShowBottomSheet">Bottom sheet with picker</tu-button>
+    </view>
+    <block tiki:if="{{show}}">
+      <bottom-sheet data-template="{{template}}" title="Bottom Sheet with {{template}}" buttonTitle="OK"
+        distanceFromTop="{{100}}" onClose="onClose" onClick="onClick">
+        <template is="bottom-sheet-{{template}}" />
+      </bottom-sheet>
+    </block>
+  </block-variant>
+</view>

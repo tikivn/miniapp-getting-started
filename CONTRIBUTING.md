@@ -1,4 +1,4 @@
-# Contributing to MiniApp Demo
+# Contributing to MiniApp Getting Started
 
 First, ensure you have the [latest `npm`](https://docs.npmjs.com/).
 
@@ -10,7 +10,6 @@ $ git clone git@github.com:tikivn/miniapp-getting-started.git
 
 Download the latest Tiki Mini Studio [here](https://miniapp.tiki.vn/docs/ide/overview) and see your changes in Simulator.
 
-
 Follow below topics to go futher:
 
 - [Code Structure](#code_structure)
@@ -19,24 +18,24 @@ Follow below topics to go futher:
 - [Publish App](#publish)
 
 ## <a name="code_structure"></a> Code Structure
+
 Each folder is a MiniApp Project, you can edit or create new project
 
 ## <a name="branching"></a> Branching Strategy
 
 We follow a "typical" branching and lifecycle model:
 
-* feature branches gets started from `main:HEAD`
-* PRs get created onto `main`
+- feature branches gets started from `main:HEAD`
+- PRs get created onto `main`
 
 ## <a name="commit"></a> Commit Message Format
 
-*This specification is inspired by and supersedes the [AngularJS commit message format](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit).*
+_This specification is inspired by and supersedes the [AngularJS commit message format](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit)._
 
 We have very precise rules over how our Git commit messages must be formatted.
 This format leads to **easier to read commit history**.
 
 Each commit message consists of a **header**, a **body**, and a **footer**.
-
 
 ```
 <header>
@@ -55,7 +54,6 @@ The `footer` is optional. The [Commit Message Footer](#commit-footer) format des
 
 Any line of the commit message cannot be longer than 100 characters.
 
-
 #### <a name="commit-header"></a>Commit Message Header
 
 ```
@@ -70,26 +68,23 @@ Any line of the commit message cannot be longer than 100 characters.
 
 The `<type>` and `<summary>` fields are mandatory, the `(<scope>)` field is optional.
 
-
 ##### Type
 
 Must be one of the following:
 
-* **build**: Changes that affect the build system or external dependencies
-* **ci**: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
-* **docs**: Documentation only changes
-* **feat**: A new feature
-* **fix**: A bug fix
-* **perf**: A code change that improves performance
-* **refactor**: A code change that neither fixes a bug nor adds a feature
-* **test**: Adding missing tests or correcting existing tests
-
+- **build**: Changes that affect the build system or external dependencies
+- **ci**: Changes to our CI configuration files and scripts (example scopes: Circle, BrowserStack, SauceLabs)
+- **docs**: Documentation only changes
+- **feat**: A new feature
+- **fix**: A bug fix
+- **perf**: A code change that improves performance
+- **refactor**: A code change that neither fixes a bug nor adds a feature
+- **test**: Adding missing tests or correcting existing tests
 
 ##### Scope
-The scope should be the name of the npm package affected (as perceived by the person reading the changelog generated from commit messages).
 
-The following is the list of supported scopes are projects name (E.g `shopping`)
-
+The scope should be the name of the project (E.g `shopping`)
 
 ## <a name="publish"></a>Publish App
+
 You have to Login and Upload App with Tiki Studio. For more information, please follow [Upload App](https://miniapp.tiki.vn/docs/developer/introduce/release)

@@ -1,0 +1,70 @@
+<view class="page">
+  <block-header title="Usage"
+    description="To let users specify a numeric value using plus and minus buttons which must be no less than a given value, and no more than another given value." />
+  <block-variant header="Variants">
+    <view class="first-item" />
+    <view class="list-item">
+      <view class="list-item-title">Default</view>
+      <view class="list-item-stepper">
+        <stepper />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Do not show number</view>
+      <view class="list-item-stepper">
+        <stepper showNumber="{{false}}" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Step: 2</view>
+      <view class="list-item-stepper">
+        <stepper step="{{2}}" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Set min, max and value</view>
+      <view class="list-item-stepper">
+        <stepper min="2" max="10" value="5" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Disabled</view>
+      <view class="list-item-stepper">
+        <stepper disabled />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Readonly</view>
+      <view class="list-item-stepper">
+        <stepper readOnly />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Change input width 60px</view>
+      <view class="list-item-stepper">
+        <stepper inputWidth="60" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Custom class to change space between input and operations</view>
+      <view class="list-item-stepper">
+        <stepper class="stepper-custom-class" />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">Vertical</view>
+      <view class="list-item-stepper">
+        <stepper vertical />
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="list-item-title">
+        Handle input change:
+        <text>{{message}}</text>
+      </view>
+      <view class="list-item-stepper">
+        <stepper onChange="onChange" />
+      </view>
+    </view>
+  </block-variant>
+</view>

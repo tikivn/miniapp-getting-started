@@ -1,211 +1,218 @@
 const basicComponents = [
   {
-    name: 'Theme',
+    name: "Theme",
     components: [
       {
-        name: 'Typography',
-        path: ''
+        name: "Typography",
+        path: "",
       },
       {
-        name: 'Iconography',
-        path: ''
+        name: "Iconography",
+        path: "",
       },
       {
-        name: 'Border radius',
-        path: ''
+        name: "Border radius",
+        path: "",
       },
       {
-        name: 'Evelation',
-        path: ''
+        name: "Evelation",
+        path: "",
       },
-    ]
+    ],
   },
   {
-    name: 'View container',
+    name: "View container",
     components: [
       {
-        name: 'View',
-        path: '',
+        name: "View",
+        path: "",
       },
       {
-        name: 'Carousel',
-        path: '/pages/component/basic/carousel/index',
+        name: "Movable View",
+        path: "pages/component/basic/movable-view/index",
       },
       {
-        name: 'Scroll View',
-        path: '/pages/component/basic/scroll-view/index',
+        name: "Carousel",
+        path: "/pages/component/basic/carousel/index",
       },
       {
-        name: 'Tabs',
-        path: '/pages/component/basic/tabs/index',
+        name: "Scroll View",
+        path: "/pages/component/basic/scroll-view/index",
       },
-    ]
+    ],
   },
   {
-    name: 'Basic content',
+    name: "Basic content",
     components: [
       {
-        name: 'Text',
+        name: "Text",
         path: "/pages/component/basic/text/index",
       },
       {
-        name: 'Icon',
+        name: "Icon",
         path: "/pages/component/basic/icon/index",
       },
       {
-        name: 'Progress',
+        name: "Progress",
         path: "/pages/component/basic/progress/index",
       },
-    ]
+    ],
   },
   {
-    name: 'Form component',
+    name: "Form component",
     components: [
       {
-        name: 'Button',
+        name: "Form",
+        path: "/pages/component/basic/form/index",
+      },
+      {
+        name: "Button",
         path: "/pages/component/basic/button/index",
       },
       {
-        name: 'Input',
+        name: "Input",
         path: "/pages/component/basic/input/index",
       },
       {
-        name: 'Radio button',
+        name: "Textarea",
+        path: "/pages/component/basic/textarea/index",
+      },
+      {
+        name: "Radio button",
         path: "/pages/component/basic/radio/index",
       },
       {
-        name: 'Checkbox',
+        name: "Checkbox",
         path: "/pages/component/basic/checkbox/index",
       },
       {
-        name: 'Switch',
+        name: "Switch",
         path: "/pages/component/basic/switch/index",
       },
-    ]
+      {
+        name: "Picker",
+        path: "/pages/component/basic/picker/index",
+      },
+      {
+        name: "Picker View",
+        path: "/pages/component/basic/picker-view/index",
+      },
+      {
+        name: "Slider",
+        path: "/pages/component/basic/slider/index",
+      },
+    ],
   },
   {
-    name: 'Medias',
+    name: "Medias",
     components: [
       {
-        name: 'Image',
+        name: "Image",
         path: "/pages/component/basic/image/index",
-      }
-    ]
-  }
-  // {
-  //   name: 'General',
-  //   components: [
-  //     {
-  //       name: 'Button',
-  //       path: '/pages/component/basic/button/index',
-  //     },
-  //     {
-  //       name: 'Divider',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'List',
-  //       path: '/pages/component/basic/list/index',
-  //     },
-  //     {
-  //       name: 'Badge',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Tooltip',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Steps',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Pagination',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Slider',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Input steppers',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Date pickers',
-  //       path: ''
-  //     },
-  //   ]
-  // },
-  // {
-  //   name: 'Text input',
-  //   components: [
-  //     {
-  //       name: 'Text field',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Textarea',
-  //       path: ''
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Selection',
-  //   components: [
-  //     {
-  //       name: 'Radio button',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Checkbox',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Switch',
-  //       path: ''
-  //     }
-  //   ]
-  // },
-  // {
-  //   name: 'Bar',
-  //   components: [
-  //     {
-  //       name: 'Alphabet bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Progress bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Navigation bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Button bar',
-  //       path: ''
-  //     },
-  //     {
-  //       name: 'Snack bar',
-  //       path: ''
-  //     },
-  //   ]
-  // }
-]
+      },
+      {
+        name: "Audio",
+        path: "/pages/component/basic/audio/index",
+      },
+      {
+        name: "Video",
+        path: "/pages/component/basic/video/index",
+      },
+    ],
+  },
+];
 
 const advancedComponents = [
   {
-    name: 'Advanced components',
+    name: "Foundation",
     components: [
       {
-        name: "Avatar",
-        path: "/pages/component/advance/avatar/index",
+        name: "Colors",
+        path: "/pages/component/basic/foundation/colors/index",
       },
       {
-        name: "Badge",
-        path: "/pages/component/advance/badge/index",
+        name: "Space",
+        path: "/pages/component/basic/foundation/space/index",
       },
+      {
+        name: "Typography",
+        path: "/pages/component/basic/foundation/typography/index",
+      },
+      {
+        name: "Icons",
+        path: "/pages/component/basic/foundation/icons/index",
+      },
+      {
+        name: "Border radius",
+        path: "/pages/component/basic/foundation/border-radius/index",
+      },
+      {
+        name: "Effects",
+        path: "/pages/component/basic/foundation/effects/index",
+      },
+      {
+        name: "Divider",
+        path: "/pages/component/basic/foundation/divider/index",
+      },
+    ],
+  },
+  {
+    name: "Actions",
+    components: [
+      {
+        name: "Button",
+        path: "/pages/component/advance/actions/button/index",
+      },
+      {
+        name: "Button Bar",
+        path: "/pages/component/advance/actions/button-bar/index",
+      },
+    ],
+  },
+  {
+    name: "Forms",
+    components: [
+      {
+        name: "Input",
+        path: "/pages/component/advance/form/input/index",
+      },
+      {
+        name: "Text field",
+        path: "/pages/component/advance/form/text-field/index",
+      },
+      {
+        name: "Text area",
+        path: "/pages/component/advance/form/text-area/index",
+      },
+      {
+        name: "Stepper",
+        path: "/pages/component/advance/form/stepper/index",
+      },
+      {
+        name: "Radio button",
+        path: "/pages/component/advance/form/radio-button/index",
+      },
+      {
+        name: "Checkbox",
+        path: "/pages/component/advance/form/checkbox/index",
+      },
+      {
+        name: "Switch",
+        path: "/pages/component/advance/form/switch/index",
+      },
+      {
+        name: "Date picker",
+        path: "/pages/component/advance/form/date-picker/index",
+      },
+      {
+        name: "Slider",
+        path: "/pages/component/advance/form/slider/index",
+      },
+    ],
+  },
+  {
+    name: "Advanced components",
+    components: [
       {
         name: "Popup",
         path: "/pages/component/advance/popup/index",
@@ -214,22 +221,77 @@ const advancedComponents = [
         name: "Modal",
         path: "/pages/component/advance/modal/index",
       },
+    ],
+  },
+  {
+    name: "Navigation",
+    components: [
+      {
+        name: "Avatar",
+        path: "/pages/component/advance/navigation/avatar/index",
+      },
+      {
+        name: "Badge",
+        path: "/pages/component/advance/navigation/badge/index",
+      },
+      {
+        name: "Sidebar",
+        path: "/pages/component/advance/navigation/sidebar/index",
+      },
+      {
+        name: "Tabs",
+        path: "/pages/component/advance/navigation/tabs/index",
+      },
+      {
+        name: "Pagination",
+        path: "/pages/component/advance/navigation/pagination/index",
+      },
+    ],
+  },
+  {
+    name: "Data visualization",
+    components: [
       {
         name: "List",
-        path: "/pages/component/advance/list/index",
+        path: "/pages/component/advance/data-visualization/list/index",
       },
+    ],
+  },
+  {
+    name: "Feedback",
+    components: [
       {
-        name: "Stepper",
-        path: "/pages/component/advance/stepper/index",
+        name: "Bottom sheet",
+        path: "/pages/component/advance/feedback/bottom-sheet/index",
       },
-    ]
-  }
-]
+    ],
+  },
+  {
+    name: "Page template",
+    components: [
+      {
+        name: "Cart detail",
+        path: "/pages/component/template/cart-detail/index",
+      },
+    ],
+  },
+];
 
 Page({
   data: {
-    tabs: [{title: 'Basic components'}, {title: 'Advanced components'}],
+    tabs: [{ title: "Basic components" }, { title: "Advanced components" }],
+    activeTab: 0,
     basicComponents,
     advancedComponents,
+  },
+  onTabClick({ index, tabsName }) {
+    this.setData({
+      [tabsName]: index,
+    });
+  },
+  onTabChange({ index, tabsName }) {
+    this.setData({
+      [tabsName]: index,
+    });
   },
 });

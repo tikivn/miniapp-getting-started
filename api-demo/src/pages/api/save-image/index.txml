@@ -1,0 +1,10 @@
+<view>
+  <block-header title="Usage" description="Save an image to gallery" />
+  <view class="block-content">
+    Input the url to download
+    <input class="form-value" placeholder="URL" name="url" onInput="urlChange"></input>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onSaveImage">Save Image</button>
+  </view>
+</view>

@@ -1,0 +1,30 @@
+.list-button {
+  display: flex;
+  padding-top: var(--space-stack-medium);
+  flex-direction: column;
+}
+
+.list-button > * {
+  margin-bottom: var(--space-stack-medium);
+}
+
+.list-item-prefix {
+  display: flex;
+  align-items: center;
+}
+
+.list-item-title {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+}
+
+.list-item-suffix {
+  display: flex;
+  align-items: center;
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+}

@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "sidebar",
+  "usingComponents": {
+    "block-header": "components/block-header/index",
+    "sidebar": "@tiki.vn/tini-ui/es/sidebar/index",
+    "sidebar-content": "@tiki.vn/tini-ui/es/sidebar/sidebar-content/index"
+  }
+}

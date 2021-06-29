@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "Badge",
+  "usingComponents": {
+    "avatar": "@tiki.vn/tini-ui/es/avatar/index",
+    "badge": "@tiki.vn/tini-ui/es/badge/index",
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "list": "@tiki.vn/tini-ui/es/list/index",
+    "block-header": "components/block-header/index"
+  }
+}

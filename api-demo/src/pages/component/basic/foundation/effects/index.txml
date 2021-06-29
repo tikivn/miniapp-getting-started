@@ -1,0 +1,13 @@
+<view class="page">
+  <block-header title="Usage" description="Elevation are used to cast shadows from interface elements." />
+  <block-variant header="Variants">
+    <view class="effect-item">
+      <view class="effect-item1" />
+      <view class="effect-item-name">elevation-1</view>
+    </view>
+    <view class="effect-item">
+      <view class="effect-item2" />
+      <view class="effect-item-name">elevation-2</view>
+    </view>
+  </block-variant>
+</view>

@@ -1,0 +1,12 @@
+.list-item-label {
+  margin-bottom: 16px;
+}
+
+.sub-content {
+  color: var(--text-content-secondary);
+  font-size: 12px;
+}
+
+.line {
+  margin-bottom: 8px;
+}

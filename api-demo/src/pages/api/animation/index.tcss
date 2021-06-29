@@ -11,4 +11,37 @@ button {
   width: 100px;
   height: 100px;
   background: red;
+  transition: width 2s, height 2s, background-color 2s, transform 2s, color 2s;
+}
+
+.animation-element:hover {
+  background-color: #FFCCCC;
+  color: #000000;
+  width: 200px;
+  height: 200px;
+  transform: rotate(180deg);
+}
+
+.slideAnimation {
+  width: 50px;
+  height: 50px;
+  left: 0;
+  top: 0;
+  border: 1px solid #7788FF;
+  margin: 0;
+  position: relative;
+  background-color: #2233FF;
+  display: flex;
+  justify-content: center;
+  animation: 5s ease-in-out 0s 1 slideBox;
+}
+
+@keyframes slideBox {
+  from {
+    left:0;
+    top:0;
+  }
+  to {
+    left: 100px;
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "request",
+  "defaultTitle": "my.getUserInfo",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }

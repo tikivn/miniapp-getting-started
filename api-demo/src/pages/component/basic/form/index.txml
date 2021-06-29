@@ -1,0 +1,45 @@
+<block-header title="Usage" description="Use to wrap and keep values of input, switch, checkbox, radio component." />
+<view class="container">
+  <form onSubmit="onSubmit" onReset="onReset">
+    <view class="block">
+      <label>
+        <text class="header">Input</text>
+        <input name="input" placeholder="Input" />
+      </label>
+    </view>
+    <view class="block">
+      <text class="header">Radio</text>
+      <radio-group name="radio">
+        <label class="flex">
+          <radio value="radio1" checked />
+          <text>Radio 1</text>
+        </label>
+        <label class="flex">
+          <radio value="radio2" />
+          <text>Radio 2</text>
+        </label>
+      </radio-group>
+    </view>
+    <view class="block">
+      <text class="header">Checkbox</text>
+      <checkbox-group name="checkbox">
+        <label class="flex">
+          <checkbox value="checkbox1" />
+          <text>Checkbox 1</text>
+        </label>
+        <label class="flex">
+          <checkbox value="checkbox2" />
+          <text>Checkbox 2</text>
+        </label>
+      </checkbox-group>
+    </view>
+    <view class="block buttons">
+      <button form-type="submit" style="
+      border-bottom-left-radius: 4px;
+      border-top-left-radius: 4px;">Submit</button>
+      <button form-type="reset" type="outline" style="
+      border-bottom-right-radius: 4px;
+      border-top-right-radius: 4px;">Reset</button>
+    </view>
+  </form>
+</view>

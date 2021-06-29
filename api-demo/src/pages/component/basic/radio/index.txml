@@ -1,5 +1,6 @@
+<block-header title="Usage" description="Single-select item" />
 <view class="container">
-  <view class="block">
+  <view class="block-content">
     <radio-group class="radio-group" onChange="onChange">
       <view class="radio" tiki:for="{{items}}" key="radio-{{index}}">
         <radio value="{{item.name}}" checked="{{item.checked}}" />
@@ -8,4 +9,3 @@
     </radio-group>
   </view>
 </view>
-

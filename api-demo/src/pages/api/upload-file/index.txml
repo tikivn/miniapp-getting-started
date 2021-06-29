@@ -1,0 +1,10 @@
+<view>
+  <block-header title="Usage" description="Upload a file" />
+  <view class="block-content">
+    <button class="button-full" onTap="onUploadFile">Upload Image</button>
+  </view>
+  <block tiki:for="{{imgs}}">
+    <image src="{{item}}" />
+  </block>
+
+</view>

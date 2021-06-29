@@ -1,49 +1,27 @@
 Page({
   data: {
     inputTypes: [
-      'default',
-      'email-address',
-      'numeric',
-      'phone-pad',
-      'number-pad',
-      'decimal-pad',
-      'ascii-capable',
-      'numbers-and-punctuation',
-      'url',
-      'name-phone-pad',
-      'twitter',
-      'web-search',
-      'visible-password',
+      "none",
+      "text",
+      "tel",
+      "url",
+      "email",
+      "numeric",
+      "decimal",
+      "search",
     ],
-    confirmTypes: [
-      'done',
-      'go',
-      'next',
-      'search',
-      'send',
-      'none',
-      'previous',
-      'default',
-      'emergency-call',
-      'google',
-      'join',
-      'route',
-      'yahoo',
-    ],
-  },
-  onPageScroll() {
-    console.log('onPageScroll');
+    confirmTypes: ["enter", "done", "go", "next", "previous", "search", "send"],
   },
   onInput(e) {
-    console.log('onInput', e);
+    console.log("onInput", e);
   },
   onConfirm(e) {
-    console.log('onConfirm', e);
+    console.log("onConfirm", e);
   },
   onFocus(e) {
-    console.log('onFocus', e);
+    console.log("onFocus", e);
   },
   onBlur(e) {
-    console.log('onBlur', e);
+    console.log("onBlur", e);
   },
 });

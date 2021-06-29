@@ -1,0 +1,20 @@
+.first-item {
+  margin-top: var(--space-stack-medium);
+}
+
+.label-line {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.label-line-content {
+  font-style: var(--font-style-normal);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--font-size-base);
+  line-height: var(--font-height-base);
+  color: var(--text-list-primary);
+}
+
+.label-line-switch {
+}

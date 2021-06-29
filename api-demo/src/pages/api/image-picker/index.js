@@ -1,13 +1,18 @@
 Page({
   data: {
-    img: undefined,
+    imgs: undefined,
   },
   onChooseImage() {
     my.chooseImage({
+      count: 5,
       success: (res) => {
+        console.log(res);
         this.setData({
-          img: res.uri,
+          imgs: res.filePaths,
         });
+      },
+      fail: (e) => {
+        console.log(e);
       },
     });
   },

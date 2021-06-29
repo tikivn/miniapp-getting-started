@@ -1,0 +1,20 @@
+<block-header title="Usage" description="Picker" />
+
+<view>
+  <view class="block-content">
+    <view class="component-item">
+      <picker range="{{array}}" value="{{arrayIndex}}" onChange="onArrayChange">
+        <view class="picker">
+          Array: {{arrayIndex}}
+        </view>
+      </picker>
+    </view>
+    <view class="component-item">
+      <picker title="Array Object" range="{{objecttArray}}" range-key="name" value="{{objecttArrayIndex}}" onChange="onObjectArrayChange">
+        <view class="picker">
+          Array Object: {{objecttArrayIndex}}
+        </view>
+      </picker>
+    </view>
+  </view>
+</view>

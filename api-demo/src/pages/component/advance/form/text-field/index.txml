@@ -1,0 +1,79 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Text fields are used to allow users to provide text input when the expected input is short. Input component has a range of options and supports several text formats including numbers." />
+
+  <block-variant header="Variants">
+    <view class="list-item">
+      <view class="subtitle mb-8">1. Format</view>
+      <view class="sub-content mb-8">Label & Input only.</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <textfield 
+          placeholder="With label"
+          onInput="onInput" 
+          onFocus="onFocus" 
+          onBlur="onBlur" 
+          onConfirm="onConfirm" 
+          labelText="Label" />
+      </view>
+      <view class="list-item-label">
+        <textfield placeholder="Without label" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">2. Shape</view>
+      <view class="sub-content mb-8">Rounded & Pill</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <textfield placeholder="Click to type here" labelText="Rounded" shape="rounded" />
+      </view>
+      <view class="list-item-label">
+        <textfield placeholder="Click to type here" labelText="Pill" shape="pill" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">3. State</view>
+      <view class="sub-content mb-8">Filled, Disabled, Error, Skeleton loading.</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <textfield value="{{filled}}" labelText="Label" onInput="onChangeFilled" />
+      </view>
+      <view class="list-item-label">
+        <textfield disabled labelText="Disabled" placeholder="Disabled" />
+      </view>
+      <view class="list-item-label">
+        <textfield hasError errorMsg="Error message" placeholder="Error" labelText="Label" />
+      </view>
+      <view class="list-item-label">
+        <textfield loading placeholder="Loading" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">4. Content</view>
+      <view class="sub-content mb-8">Text only, Leading icon, Trailing icon.</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <textfield placeholder="Text only" />
+      </view>
+      <view class="list-item-label">
+        <textfield placeholder="Text with leading icon" iconLeft="placeholder" />
+      </view>
+      <view class="list-item-label">
+        <textfield placeholder="Text with trailing icon" iconRight="placeholder" />
+      </view>
+    </view>
+  </block-variant>
+</view>

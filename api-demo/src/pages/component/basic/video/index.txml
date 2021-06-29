@@ -1,0 +1,22 @@
+<view>
+  <block-header title="Usage" description="Allows play a video on app" />
+  <view class="block-content">
+    <video
+      id="video"
+      object-fit="cover"
+      style="width: 100%; height: 100%;"
+      onPlay="onPlay"
+      onPause="onPause"
+      onEnd="onEnd"
+      onTimeUpdate="onTimeUpdate"
+      plays-inline
+      src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
+    />
+  </view>
+  <view class="block-content" style="display: flex; flex-direction: column">
+    <view class="operation-item">{{title}}</view>
+    <button type="solid" onTap="play">play</button>
+    <button type="solid" onTap="pause">pause</button>
+    <button type="solid" onTap="seek">seek</button>
+  </view>
+</view>

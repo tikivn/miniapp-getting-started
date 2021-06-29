@@ -2,12 +2,14 @@
 # yarn lockfile v1
 
 
-"@tiki-miniapp/tiny-ui@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@tiki-miniapp/tiny-ui/-/tiny-ui-0.0.1.tgz#10e7297d64635c2d1f38ce1b37752bc9e36a7abc"
-  integrity sha512-xSzsjP49/DMhIrqq0XS2qJ/rGUMNBLNtP1tx83pmZ4ZwksVaiUUB1t7HbKD9y5f9AmnvMx8NbOphJ0QzH5mlHg==
+"@tiki.vn/tini-style@0.1.2-rc.13+26fb292":
+  version "0.1.2-rc.13"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.2-rc.13.tgz#fe648969f6d93eb45cbf9801288c4f151077f893"
+  integrity sha512-u701whgaAE57ulxcItgQO0WcN0vdcgu/n8UHAhL8Wg09SbV7TXF71hdcruIguFpN0Ac7z5gMCO3t6yDawfY5Sw==
 
-lodash@^4.17.20:
-  version "4.17.21"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
-  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+"@tiki.vn/tini-ui@0.1.2-rc.13":
+  version "0.1.2-rc.13"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.2-rc.13.tgz#1f5aa88c2fa8a396a82f1af14d909f2e896c67ff"
+  integrity sha512-0EctrDF8DlmOAPZnw1qRHV8hRJUeXbEn9+sSPdEXQPt46TJOTNF4D+u6N/2NDtHoHtInKmK28WtvbFxp2WWYsg==
+  dependencies:
+    "@tiki.vn/tini-style" "0.1.2-rc.13+26fb292"

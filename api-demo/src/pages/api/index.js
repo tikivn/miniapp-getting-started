@@ -10,6 +10,10 @@ const openAPIList = [
     path: "pages/api/get-auth-code/index",
   },
   {
+    name: "Is User Logged In",
+    path: "pages/api/is-user-logged/index",
+  },
+  {
     name: "Request Payment",
     // path: 'pages/api/request-payment/index',
   },
@@ -73,11 +77,37 @@ const navigationBarAPIList = [
   },
 ].filter(filterNotImplementedPages);
 
-const imagePickerAPIList = [
+const mediaImageAPIList = [
   {
     name: "Choose Image",
     path: "/pages/api/image-picker/index",
-  }
+  },
+  {
+    name: "Compress Image",
+    path: "/pages/api/compress-image/index",
+  },
+  {
+    name: "Save Image",
+    path: "/pages/api/save-image/index",
+  },
+  {
+    name: "Get Image Info",
+    path: "/pages/api/get-image-info/index",
+  },
+].filter(filterNotImplementedPages);
+
+const deeplinkAPIList = [
+  {
+    name: "Open Deeplink",
+    path: "/pages/api/deep-link/index",
+  },
+].filter(filterNotImplementedPages);
+
+const fileAPIList = [
+  {
+    name: "File System",
+    path: "/pages/api/file/index",
+  },
 ].filter(filterNotImplementedPages);
 
 const pullRefreshAPIList = [
@@ -105,6 +135,21 @@ const networkAPIList = [
   {
     name: "HTTP Request",
     path: "/pages/api/request/index",
+  },
+  {
+    name: "Download File",
+    path: "/pages/api/download-file/index",
+  },
+  {
+    name: "Upload File",
+    path: "/pages/api/upload-file/index",
+  },
+];
+
+const locationAPIList = [
+  {
+    name: "Get Location",
+    path: "pages/api/get-location/index",
   },
 ];
 
@@ -138,8 +183,20 @@ const APIList = [
     list: navigationBarAPIList,
   },
   {
-    type: "Image Picker",
-    list: imagePickerAPIList,
+    type: "Media Image",
+    list: mediaImageAPIList,
+  },
+  {
+    type: "Deeplink",
+    list: deeplinkAPIList,
+  },
+  {
+    type: "File",
+    list: fileAPIList,
+  },
+  {
+    type: "Location",
+    list: locationAPIList,
   },
 ];
 

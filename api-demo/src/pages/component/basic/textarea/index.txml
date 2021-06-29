@@ -1,0 +1,22 @@
+<block-header title="Usage" description="textarea" />
+<view class="container">
+  <view class="block">
+    <text class="header">Events</text>
+    <textarea onInput="onInput" onFocus="onFocus" onConfirm="onConfirm" onBlur="onBlur" />
+  </view>
+
+  <view class="block">
+    <text class="header">Hide count</text>
+    <textarea show-count="{{false}}" />
+  </view>
+
+  <view class="block">
+    <text class="header">Auto height</text>
+    <textarea auto-height />
+  </view>
+
+  <view class="block">
+    <text class="header">Disabled</text>
+    <textarea placeholder="disabled" disabled="true" />
+  </view>
+</view>
