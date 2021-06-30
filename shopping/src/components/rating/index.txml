@@ -2,11 +2,12 @@
   <block tiki:for="{{[1, 2, 3, 4, 5]}}">
     <image 
       class="rating-image" 
-      src="../../images/star.png" 
-      tiki:if="{{rating >= item}}" />
+      src="/images/star.svg" 
+      tiki:if="{{average >= item}}" />
     <image 
       class="rating-image" 
-      src="../../images/star-empty.png" 
+      src="/images/star-empty.svg" 
       tiki:else />
   </block>
+  <text class="count" tiki-if="{{count > 0}}">({{count}})</text>
 </view>

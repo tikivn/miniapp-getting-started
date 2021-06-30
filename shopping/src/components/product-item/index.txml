@@ -1,28 +1,24 @@
 <view 
   class="product" 
-  onTap="onGoToProductPage">
-  <view class="product-content">
-    <image
-      class="cover"
-      src="{{product.thumbnail_url}}" />
+  onTap="onGoToProductPage" 
+  style="{{direction === 'row' ? 'height: 176px;' : ''}}">
+  <view class="p-4x-small flex {{direction === 'column' ? 'flex-col' : 'flex-row'}}">
+    <view class="cover-wrapper{{direction === 'row' ? ' square' : ''}}">
+      <image class="cover" src="{{product.thumbnail_url}}" />
+    </view>
 
-    <view style="padding: 8px;">
-      <image 
-        src="https://salt.tikicdn.com/ts/upload/9f/32/dd/8a8d39d4453399569dfb3e80fe01de75.png"
-        style="width: 56px; height: 16px" />
-      <text class="name" number-of-lines="{{3}}">{{product.name}}</text>
-      <rating rating="{{product.rating_average}}" />
-      <view class="price-container">
+    <view class="product-content">
+      <image class="tiki-now" src="/images/tiki-now.svg" />
+      <text class="text-small" number-of-lines="{{3}}">{{product.name}}</text>
+
+      <rating average="{{product.rating_average}}" count="{{product.review_count}}" />
+
+      <view class="flex flex-row items-center">
         <price price="{{product.price}}" />
-        <view tiki:if="product.discount_rate > 0" class="badge">
-          -{{product.discount_rate}}%
-        </view>
-        <!-- <button --> 
-        <!--   onTap="onAddCart" -->
-        <!--   class="add" --> 
-        <!--   type="secondary"> -->
-        <!--   <icon color="#1A94FF" type="plus" /> -->
-        <!-- </button> -->
+        <badge 
+          tiki:if="{{product.discount_rate > 0}}" 
+          class="ml-2x-small" 
+          text="-{{product.discount_rate}}%" />
       </view>
     </view>
   </view>

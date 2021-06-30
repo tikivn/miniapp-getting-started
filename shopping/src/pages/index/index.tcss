@@ -10,27 +10,6 @@
   height: auto;
 }
 
-.divider {
-  height: 8px;
-  background-color: #efefef;
-  width: 100%;
-  margin: 16px 0;
-}
-
-.title {
-  font-size: 16px;
-  font-weight: bold;
-  margin-left: 12px;
-}
-
-.products {
-  margin: 0 16px;
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 8px;
-}
-
 .carousel {
   margin-top: 16px;
 }

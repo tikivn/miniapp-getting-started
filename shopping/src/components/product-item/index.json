@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
+    "badge": "@tiki.vn/tini-ui/es/badge/index",
     "price": "components/price/index",
     "rating": "components/rating/index"
   }

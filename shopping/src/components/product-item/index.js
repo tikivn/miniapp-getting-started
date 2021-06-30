@@ -1,4 +1,7 @@
 Component({
+  props: {
+    direction: "column",
+  },
   data: {
     width: 0,
   },
@@ -6,7 +9,7 @@ Component({
     my.getDeviceInfo({
       success: (info) => {
         this.setData({ width: (info.windowWidth - 32) / 2 - 8 });
-      }
+      },
     });
   },
   methods: {
@@ -17,5 +20,5 @@ Component({
     onAddCart() {
       this.props.onAddCart(this.props.product);
     },
-  }
-})
+  },
+});

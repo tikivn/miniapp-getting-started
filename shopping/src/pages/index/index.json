@@ -4,6 +4,7 @@
   "titleColor": "#fff",
   "transparentTitle": "none",
   "usingComponents": {
-    "product-item": "components/product-item/index"
+    "top-sales": "./top-sales/index",
+    "super-sales": "./super-sales/index"
   }
 }

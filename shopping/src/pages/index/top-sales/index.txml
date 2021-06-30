@@ -1,0 +1,4 @@
+<view class="products m-medium">
+  <product-item tiki:for="{{products}}" product="{{item}}" />
+</view>
+

@@ -1,0 +1,17 @@
+.super-sales {
+  background-color: #F7C65A;
+}
+
+.carousel-item {
+  height: 176px;
+}
+
+.t-carousel-slides {
+  margin-left: -8px;
+}
+.t-carousel-item {
+  flex: auto;
+  min-width: calc(100% - 40px); /* 8px * 5 */
+  padding-left: 8px;
+}
+
