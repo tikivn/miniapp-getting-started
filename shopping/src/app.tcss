@@ -1,13 +1,23 @@
 @import "@tiki.vn/tini-style/es/index.tcss";
 
-.loading {
-  align-items: center;
-  justify-content: center;
-  margin-top: 64px;
+.footer {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  padding: var(--space-inset-2x-small) var(--space-inset-medium);
+  margin-bottom: var(--safe-area-inset-bottom);
+  background: var(--white);
 }
 
-.loading-image {
-  width: 64px;
-  height: 64px;
+
+.app-button {
+  width: calc(var(--tf-device-width) - var(--space-inset-medium) * 2);
+  background: #EF4F15;
+  border-color: #EF4F15;
 }
 
+.app-button:hover {
+  background: #EF4F15;
+  opacity: 0.9;
+}

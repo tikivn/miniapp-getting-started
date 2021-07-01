@@ -1,6 +1,10 @@
 {
-  "defaultTitle": "Chi tiết sản phẩm",
+  "defaultTitle": "",
+  "transparentTitle": "none",
   "usingComponents": {
-    "price": "components/price/index"
+    "badge": "@tiki.vn/tini-ui/es/badge/index",
+    "tu-button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "price": "components/price/index",
+    "rating": "components/rating/index"
   }
 }

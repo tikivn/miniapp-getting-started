@@ -1,23 +1,23 @@
-<view class="loading" tiki:if="{{!product}}">
+<!-- <view class="loading" tiki:if="{{!product}}">
   <image
     class="loading-image" 
     src="https://shopping-miniapp.s3.ap-south-1.amazonaws.com/spinner.gif" />
-</view>
+</view> -->
 
-<view class="container" tiki:else>
-  <image
-    resize-mode="contain"
-    style="width: {{imageWidth}}px" 
-    src="{{product.image_url}}" />
-  <view>
-    <text>{{product.name}}</text>
-  </view>
-  <view class="price-container">
+<view class="container">
+  <view class="p-small">
+    <image src="{{product.thumbnail_url}}" />
+    <view>
+      <text>{{product.name}}</text>
+    </view>
+    <view class="flex flex-row items-center">
+      <rating average="{{product.rating_average}}" count="{{product.review_count}}" />
+    </view>
     <price price="{{product.price}}" />
-    <button 
-      class="add" 
-      type="secondary">
-      <icon color="#1A94FF" type="plus" />
-    </button>
+  </view>
+  <view class="footer">
+    <tu-button class="app-button" shape="pill" onTap="onAddCart">
+      Bỏ vào giỏ hàng
+    </tu-button>
   </view>
 </view>

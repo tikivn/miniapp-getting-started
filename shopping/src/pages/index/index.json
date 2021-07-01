@@ -3,6 +3,10 @@
   "titleBarColor": "#C7E9F9",
   "titleColor": "#fff",
   "transparentTitle": "none",
+  "backgroundColor": "#FCF4DD",
+  "window": {
+    "backgroundColor": "#FCF4DD"
+  },
   "usingComponents": {
     "top-sales": "./top-sales/index",
     "super-sales": "./super-sales/index"

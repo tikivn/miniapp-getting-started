@@ -1,10 +1,4 @@
-const app = getApp();
-
 Page({
-  data: {
-    categories: [],
-    banners: [],
-  },
   onLoad() {
     // Get categories
     my.request({
@@ -53,22 +47,5 @@ Page({
 
     // Get products
     this.getProductByCategory(e.detail.index);
-  },
-  onPageAddCart(product) {
-    app.onAppAddCart(product);
-
-    // Show toast
-    my.showToast({
-      type: "success",
-      content: "Sản phẩm đã được thêm vào giỏ hàng",
-      buttonText: "OK",
-      duration: 3000,
-    });
-
-    // Set TabBar Badge
-    my.setTabBarBadge({
-      index: 1,
-      text: app.cart.count,
-    });
-  },
+  }
 });

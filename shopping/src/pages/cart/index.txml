@@ -1,29 +1,41 @@
-<view tiki:if="{{!cart || !cart.products.length}}">
-  <text class="empty">Giỏ hàng của bạn đang trống</text>
+<view class="flex flex-col items-center my-medium" tiki:if="{{!cart || !cart.products.length}}">
+  <image class="empty" src="/images/cart_empty.png" />
+  <text>Giỏ hàng của bạn đang trống</text>
+  <tu-button class="app-button mt-medium" shape="pill" onTap="onGoToHome">
+    Tiếp tục mua sắm
+  </tu-button>
 </view>
 
-<view class="flex-1" tiki:if="{{!cart || cart.products.length}}" >
-  <scroll-view 
-    scroll-y="{{true}}"
-    shows-vertical-scroll-indicator="{{false}}"
-    class="flex-1">
-    <block 
-      tiki:for="{{cart.products}}">
-      <view class="item">
-        <image 
-          resize-mode="contain"
-          class="image" 
-          src="{{item.image}}" />
-        <view style="flex: 1">
-          <text>{{item.title}}</text>
-          <price price="{{item.price}}"/>
+<block tiki:if="{{!cart || cart.products.length}}">
+  <view class="container">
+    <view class="font-bold mb-small text-medium">Chi tiết đơn hàng</view>
+    <view class="products">
+      <view class="item" tiki:for="{{cart.products}}">
+        <view class="flex mb-small">
+          <view class="flex items-center">
+            <image class="image mr-small" src="{{item.thumbnail_url}}" />
+            <view>
+              <text number-of-lines="1">{{item.name}}</text>
+              <price price="{{item.price}}" />
+              <stepper class="mt-small" value="{{item.total}}" />
+            </view>
+          </view>
+          <view class="icon">
+            <icon size="12" type="close" />
+          </view>
         </view>
+        <view class="line" />
       </view>
-    </block>
-  </scroll-view>
-
-  <view class="bottom">
-    <text>Tổng cộng: ${{cart.totalPrice}}</text>
-    <button class="submit" onTap="doPayment">Thanh toán</button>
+    </view>
   </view>
-</view>
+
+  <view class="footer">
+    <view class="flex justify-between">Tổng cộng:
+      <text class="font-bold"><price price="{{cart.totalPrice}}" /></text>
+    </view>
+    <view class="line my-small" />
+    <tu-button class="app-button" shape="pill" onTap="onAddCart">
+      Thanh toán
+    </tu-button>
+  </view>
+</block>

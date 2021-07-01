@@ -1,8 +1,7 @@
 {
   "pages": ["pages/index/index", "pages/product/index", "pages/cart/index"],
   "window": {
-    "defaultTitle": "",
-    "backgroundColor": "#FCF4DD"
+    "defaultTitle": ""
   },
   "tabBar": {
     "selectedColor": "#EF4F15",
