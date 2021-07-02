@@ -1,0 +1,11 @@
+<block tiki:if="{{status === authStatus.LOADING}}">
+  Loading...
+</block>
+
+<block tiki:if="{{status === authStatus.FAIL}}">
+  Please login
+</block>
+
+<block tiki:if="{{status === authStatus.SUCCESS}}">
+  <slot />
+</block>

@@ -1,4 +1,8 @@
+import EventEmitter from "./utils/event";
+
 App({
+  authEvent: new EventEmitter(),
+  auth: null,
   cart: {
     totalPrice: 0,
     count: 0,

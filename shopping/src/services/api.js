@@ -1,6 +1,7 @@
 const request = async (url, { method, data, token } = {}) => {
-  console.log("token :>> ", token);
-  console.log("data :>> ", data);
+  console.log("API url :>> ", url);
+  console.log("API token :>> ", token);
+  console.log("API data :>> ", data);
   return new Promise((resolve, reject) => {
     my.request({
       url,
@@ -12,6 +13,7 @@ const request = async (url, { method, data, token } = {}) => {
         ...(token ? { "X-Access-Token": token } : {}),
       },
       success: (res) => {
+        console.log("API Success :>> ", res);
         resolve(res);
       },
       fail(e) {

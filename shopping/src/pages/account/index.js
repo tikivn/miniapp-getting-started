@@ -1,47 +1,32 @@
-import myx from "tiki-miniapp-tnx/src/myx";
-
-import { post, get } from "../../services/api";
+import { get } from "../../services/api";
 
 const app = getApp();
 
 const API_URL = "https://miniapp-demo.tala.xyz";
-// const API_URl = "https://2dc2b26fd45f.ngrok.io";
 
 Page({
-  data: {
-    cart: app.cart,
-    app: {},
-  },
-  async prepForPayment() {
-    const app = {};
-    const auth = await myx.getAuthCode();
-    app.authCode = auth.authCode;
-    const res = await post(`${API_URL}/token`, {
-      data: { auth_code: auth.authCode },
-    });
-
-    app.authToken = await res.data.access_token;
-    app.tikiAccessToken = await res.data.tiki_access_token;
-    app.user = await res.data.user;
-    this.setData({ app });
-  },
+  data: {},
+  hasAuthListener: null,
   async onLoad() {
-    await this.prepForPayment();
-    my.showLoading({ content: "Loading..." });
-
-    const res = await get(`https://miniapp-demo.tala.xyz/orders`, {
-      token: this.data.app.authToken,
+    if (app.auth) {
+      this.getOrders();
+    } else {
+      app.authEvent.on("auth/success", this.getOrders);
+      this.hasAuthListener = true;
+    }
+  },
+  onUnload() {
+    if (this.hasAuthListener) {
+      app.authEvent.removeListener("auth/success");
+    }
+  },
+  async getOrders() {
+    const res = await get(`${API_URL}/orders`, {
+      token: app.auth.authToken,
     });
-    console.log("res", res);
-    this.setData({
-      orders: res.data.orders,
-      toShow: res.data.orders,
-      // statusMap: orderStatusMap,
-    });
-    my.hideLoading();
+    console.log("res :>> ", res);
   },
   onViewDetail(e) {
-    const app = getApp();
     app.detailOrderID = e.target.dataset.id;
 
     my.navigateTo({
