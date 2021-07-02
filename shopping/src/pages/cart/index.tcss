@@ -1,37 +1,3 @@
 .container {
-  margin: var(--space-inline-2x-small) var(--space-inline-medium);
-}
-
-
-.products {
-  background: var(--white);
-  border-radius: var(--border-radius-rounded-4px);
-}
-
-.item {
-  padding: var(--space-inline-medium);
-  padding-bottom: 0;
-}
-
-.line {
-  height: 1px;
-  width: 100%;
-  background: var(--gray20);
-}
-
-.item image {
-  width: 40px;
-  height: 40px;
-}
-
-.icon {
-  min-width: 24px;
-  min-height: 24px;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100%;
-  background-color: var(--gray20);
+  padding-bottom: 120px;
 }

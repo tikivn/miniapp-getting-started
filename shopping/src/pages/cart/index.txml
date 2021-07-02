@@ -1,26 +1,10 @@
-<cart-empty tiki:if="{{!cart || !cart.products.length}}" />
+<!-- <cart-empty tiki:if="{{!cart || !cart.products.length}}" /> -->
+<cart-empty tiki:if="{{false}}" />
 
 <block tiki:else>
-  <view class="container">
-    <view class="font-bold mb-small text-medium">Chi tiết đơn hàng</view>
-    <view class="products">
-      <view class="item" tiki:for="{{cart.products}}">
-        <view class="flex mb-small">
-          <view class="flex items-center">
-            <image class="image mr-small" src="{{item.thumbnail_url}}" />
-            <view>
-              <text number-of-lines="1">{{item.name}}</text>
-              <price price="{{item.price}}" />
-              <stepper class="mt-small" value="{{item.total}}" />
-            </view>
-          </view>
-          <view class="icon">
-            <icon size="12" type="close" />
-          </view>
-        </view>
-        <view class="line" />
-      </view>
-    </view>
+  <view class="container p-small">
+    <shipping />
+    <products products="{{cart.products}}" />
   </view>
 
   <view class="footer">

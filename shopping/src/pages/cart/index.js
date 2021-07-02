@@ -5,7 +5,6 @@ import { post } from "../../services/api";
 const app = getApp();
 
 const API_URL = "https://miniapp-demo.tala.xyz";
-// const API_URl = "https://2dc2b26fd45f.ngrok.io";
 
 Page({
   data: {
@@ -15,7 +14,6 @@ Page({
   async prepForPayment() {
     const app = {};
     const auth = await myx.getAuthCode();
-    console.log("auth", auth);
     app.authCode = auth.authCode;
     const res = await post(`${API_URL}/token`, {
       data: { auth_code: auth.authCode },
@@ -25,7 +23,6 @@ Page({
     app.tikiAccessToken = await res.data.tiki_access_token;
     app.user = await res.data.user;
     this.setData({ app });
-    console.log(app);
   },
   async onLoad() {
     await this.prepForPayment();

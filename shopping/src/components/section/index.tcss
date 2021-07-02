@@ -1,0 +1,5 @@
+.section {
+  background: var(--white);
+  border-radius: var(--border-radius-rounded-4px);
+  padding: var(--space-inset-small);
+}

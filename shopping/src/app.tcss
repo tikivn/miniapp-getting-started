@@ -21,3 +21,21 @@
   background: #EF4F15;
   opacity: 0.9;
 }
+
+.center-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  background: var(--gray20);
+  margin: var(--space-stack-2x-small) 0;
+}
+
+.square-40 {
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,6 @@
+<view class="font-bold my-2x-small">{{title}}</view>
+
+<view class="section">
+  <slot />
+</view>
+

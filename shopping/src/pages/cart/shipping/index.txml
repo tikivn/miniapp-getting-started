@@ -1,0 +1,30 @@
+<section title="Hình thức giao hàng">
+  <!-- Address -->
+  <view class="center-between">
+    <view>
+      <text>Địa chỉ nhận hàng</text>
+      <view class="font-bold my-4x-small">
+        {{user.name}} - {{user.phone}}
+      </view>
+      <text class="text-gray60 text-small">{{address}}</text>
+    </view>
+    <icon type="arrow_right" color="#808089" />
+  </view>
+
+  <view class="divider" />
+
+  <!-- Quotes -->
+  <view class="center-between">
+    <view class="flex">
+      <image class="square-40 mr-2x-small" src="/images/home.png" />
+      <view>
+        <text>Đơn vị vận chuyển</text>
+        <view class="font-bold my-4x-small">
+          Tiki Now
+        </view>
+        <text class="text-gray60 text-small">Giao ngay 2h - 3h</text>
+      </view>
+    </view>
+    <icon type="arrow_right" color="#808089" />
+  </view>
+</section>
