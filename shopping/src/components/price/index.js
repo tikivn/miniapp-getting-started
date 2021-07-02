@@ -3,7 +3,7 @@ Component({
     number: 0,
   },
   format(value) {
-    const number = String(this.props.price).replace(/(.)(?=(\d{3})+$)/g,'$1.');
+    const number = String(`${value}`).replace(/(.)(?=(\d{3})+$)/g, "$1.");
     this.setData({ number });
   },
   didMount() {
@@ -13,5 +13,5 @@ Component({
     if (prevProps.price !== this.props.price) {
       this.format(this.props.price);
     }
-  }
-})
+  },
+});

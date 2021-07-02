@@ -56,8 +56,8 @@ Component({
         app.authEvent.emit("auth/success");
       } catch (error) {
         console.log("Auth Error :>> ", error);
-        app.authEvent.emit("auth/fail");
         this.setData({ status: AUTH_STATUS.FAIL });
+        app.authEvent.emit("auth/fail");
       }
     },
   },
