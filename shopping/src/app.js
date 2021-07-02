@@ -2,10 +2,10 @@ App({
   cart: {
     totalPrice: 0,
     count: 0,
-    products: []
+    products: [],
   },
   onAppAddCart(product) {
-    const index = this.cart.products.findIndex(p => p.id === product.id);
+    const index = this.cart.products.findIndex((p) => p.id === product.id);
     if (index > -1) {
       this.cart.products[index].total += 1;
     } else {

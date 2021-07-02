@@ -28,7 +28,7 @@
       <text class="font-bold"><price price="{{cart.totalPrice}}" /></text>
     </view>
     <view class="line my-small" />
-    <tu-button class="app-button" shape="pill" onTap="onAddCart">
+    <tu-button class="app-button" shape="pill" onTap="doPayment">
       Thanh toán
     </tu-button>
   </view>

@@ -1,4 +1,6 @@
 const request = async (url, { method, data, token } = {}) => {
+  console.log("token :>> ", token);
+  console.log("data :>> ", data);
   return new Promise((resolve, reject) => {
     my.request({
       url,
@@ -7,13 +9,13 @@ const request = async (url, { method, data, token } = {}) => {
       headers: {
         "Content-Type": "application/json",
         "X-App-Identifier": "com.gettingstarted.shopping",
-        "X-Access-Token": token,
+        ...(token ? { "X-Access-Token": token } : {}),
       },
       success: (res) => {
         resolve(res);
       },
       fail(e) {
-        console.log("Error", e);
+        console.log(`Error ${url}`, e);
         reject(e);
       },
     });

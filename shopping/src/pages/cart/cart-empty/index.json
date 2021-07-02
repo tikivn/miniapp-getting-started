@@ -1,3 +1,6 @@
 {
-  "component": true
+  "component": true,
+  "usingComponents": {
+    "tu-button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
 }

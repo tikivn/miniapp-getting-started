@@ -7,8 +7,8 @@ Page({
     product: null,
   },
   onLoad(e) {
-    // const params = query.parse(e);
-    const params = {id: 76404389}
+    const params = query.parse(e);
+    // const params = {id: 76404389}
     console.log("params", params);
 
     // Get product detail
