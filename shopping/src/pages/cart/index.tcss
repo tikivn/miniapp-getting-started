@@ -2,11 +2,6 @@
   margin: var(--space-inline-2x-small) var(--space-inline-medium);
 }
 
-.empty {
-  width: 190px;
-  height: auto;
-  margin-bottom: var(--space-stack-2x-small);
-}
 
 .products {
   background: var(--white);

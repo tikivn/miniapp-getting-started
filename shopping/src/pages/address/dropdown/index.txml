@@ -1,0 +1,39 @@
+<tu-label text="{{label}}"> 
+  <view onTap="showBottomSheet" className="t-input flex flex-row items-center justify-between {{className}} {{disabled ? 't-input-disabled' : ''}}">
+    <text class="{{selectedItem ? '' : 'text-gray60'}}">
+      {{ selectedItem ? selectedItem.name : placeholder }}
+    </text>
+    <icon color="#808089" type="arrow_down" />
+    <input class="hidden" controlled name="{{name}}" value="{{selectedItem.id}}" />
+  </view>
+</tu-label>
+
+<block tiki:if="{{showBottomSheet}}">
+  <bottom-sheet 
+    title="{{bottomSheetTitle}}" 
+    buttonTitle="OK" 
+    distanceFromTop="{{100}}" 
+    disableScroll
+    onClose="hideBottomSheet">
+    <view class="search-wrapper pt-x-small px-small flex flex-col">
+      <input 
+        class="w-full" 
+        onInput="onChangeSearchText"
+        value="{{searchText}}" 
+        placeholder="Tìm kiếm..." />
+      <scroll-view class="flex-1" scroll-y>
+        <view 
+          class="item  flex items-center justify-between" 
+          onTap="onSelect"
+          data-item="{{item}}"
+          tiki:for="{{searchItems}}">
+          <text class="font-bold">{{item.name}}</text>
+          <icon 
+            tiki:if="{{selectedItem && selectedItem.id === item.id}}" 
+            color="#2EC275"
+            type="success_glyph" />
+        </view>
+      </scroll-view>
+    </view>
+  </bottom-sheet>
+</block>

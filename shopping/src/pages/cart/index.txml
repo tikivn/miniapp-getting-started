@@ -1,12 +1,6 @@
-<view class="flex flex-col items-center my-medium" tiki:if="{{!cart || !cart.products.length}}">
-  <image class="empty" src="/images/cart_empty.png" />
-  <text>Giỏ hàng của bạn đang trống</text>
-  <tu-button class="app-button mt-medium" shape="pill" onTap="onGoToHome">
-    Tiếp tục mua sắm
-  </tu-button>
-</view>
+<cart-empty tiki:if="{{!cart || !cart.products.length}}" />
 
-<block tiki:if="{{!cart || cart.products.length}}">
+<block tiki:else>
   <view class="container">
     <view class="font-bold mb-small text-medium">Chi tiết đơn hàng</view>
     <view class="products">

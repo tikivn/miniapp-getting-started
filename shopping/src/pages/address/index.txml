@@ -1,0 +1,61 @@
+<form onSubmit="onSubmit" onReset="onReset">
+  <view class="container p-small">
+    <textfield 
+      name="name" 
+      className="mb-small" 
+      labelText="Tên người nhận" 
+      placeholder="Nhập tại đây" />
+
+    <textfield 
+      name="phone"
+      className="mb-small" 
+      labelText="Số điện thoại" 
+      type="tel" 
+      placeholder="Nhập tại đây" />
+
+    <textfield 
+      name="address"
+      className="mb-small" 
+      labelText="Địa chỉ nhận hàng" 
+      placeholder="Nhập tại đây" />
+
+    <dropdown 
+      placeholder="Chọn tại đây"
+      label="Tỉnh/ Thành phố"
+      className="mb-small" 
+      items="{{cities}}"
+      selectedItem="{{city}}"
+      onSelect="selectCity"
+      name="city" />
+
+    <dropdown 
+      placeholder="Chọn tại đây"
+      label="Quận/ Huyện"
+      className="mb-small" 
+      disabled="{{!city}}"
+      items="{{districts}}"
+      selectedItem="{{district}}"
+      onSelect="selectDistrict"
+      name="district" />
+
+    <dropdown 
+      placeholder="Chọn tại đây"
+      label="Phường/ Xã"
+      className="mb-small" 
+      disabled="{{!district}}"
+      items="{{wards}}"
+      selectedItem="{{ward}}"
+      onSelect="selectWard"
+      name="ward" />
+  </view>
+
+  <view class="footer">
+    <block tiki:if="{{!addressId}}">
+      <tu-button class="app-button" shape="pill">Xác nhận</tu-button>
+    </block>
+
+    <view tiki:else>
+      <tu-button shape="pill">Xác nhận</tu-button>
+    </view>
+  </view>
+</form>

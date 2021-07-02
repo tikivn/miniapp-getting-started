@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.1.tgz#6333d4b85e2a153443fadf25fd0127dc8c4d0ee4"
   integrity sha512-V0JVBhsYmQ7Ue/NZ770Do6SxnJ2uvchAu13Y2pGkSXgfNflLhAY7r/I8QOyfOxvFhlaMLLH4i1KF6amk+vw9NA==
 
+"@tiki.vn/tini-ui@^0.0.18":
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.0.18.tgz#cf866d796dd744ce4ae11f07c400637d069b1e36"
+  integrity sha512-2mwO8m4rDJ5nOBwuW45uyGcnG2Dpz5F2oFBCOCEXrA4DrvzSHL7M8WLr+71SFPBfgi3hV7fMtrr+YQ2sLD9WoQ==
+
 "@tiki.vn/tini-ui@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.1.tgz#0cb280095516c5413608c29f392ddb4897943e12"
@@ -43,3 +48,10 @@ strict-uri-encode@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
   integrity sha1-ucczDHBChi9rFC3CdLvMWGbONUY=
+
+tiki-miniapp-tnx@^0.1.1-rc.3:
+  version "0.1.1-rc.3"
+  resolved "https://registry.yarnpkg.com/tiki-miniapp-tnx/-/tiki-miniapp-tnx-0.1.1-rc.3.tgz#c19d311ea879781c5b862e78bdb48fd3101aa803"
+  integrity sha512-cnO9CtfngTZK4RelrVDSvzlmRVRa0KY4oa/OruM4bitKVYC3SBG4i3kmgZiiSy8GtYJUVv9AtcFm4fAk4MpBlA==
+  dependencies:
+    "@tiki.vn/tini-ui" "^0.0.18"

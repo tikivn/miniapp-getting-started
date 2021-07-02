@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tu-label": "@tiki.vn/tini-ui/es/tu-label/index",
+    "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
+    "popup": "@tiki.vn/tini-ui/es/popup/index"
+  }
+}
