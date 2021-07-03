@@ -13,14 +13,14 @@
     "selectedColor": "#EF4F15",
     "items": [
       {
-        "name": "Tài khoản",
-        "pagePath": "pages/account/index",
+        "name": "Giỏ hàng",
+        "pagePath": "pages/cart/index",
         "icon": "images/cart.png",
         "activeIcon": "images/cart_active.png"
       },
       {
-        "name": "Giỏ hàng",
-        "pagePath": "pages/cart/index",
+        "name": "Tài khoản",
+        "pagePath": "pages/account/index",
         "icon": "images/cart.png",
         "activeIcon": "images/cart_active.png"
       },

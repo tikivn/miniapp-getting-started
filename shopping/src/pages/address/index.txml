@@ -1,15 +1,25 @@
-<form onSubmit="onSubmit" onReset="onReset">
+<form onSubmit="onSubmit">
   <view class="container p-small">
     <textfield 
       name="name" 
       className="mb-small" 
+      data-name="name"
+      onInput="onInput"
       labelText="Tên người nhận" 
+      errorMsg="{{errors.name}}"
+      hasError="{{errors.name}}"
+      value="{{formValue.name}}"
       placeholder="Nhập tại đây" />
 
     <textfield 
       name="phone"
       className="mb-small" 
       labelText="Số điện thoại" 
+      data-name="phone"
+      onInput="onInput"
+      errorMsg="{{errors.phone}}"
+      hasError="{{errors.phone}}"
+      value="{{formValue.phone}}"
       type="tel" 
       placeholder="Nhập tại đây" />
 
@@ -17,6 +27,11 @@
       name="address"
       className="mb-small" 
       labelText="Địa chỉ nhận hàng" 
+      data-name="address"
+      onInput="onInput"
+      errorMsg="{{errors.address}}"
+      hasError="{{errors.address}}"
+      value="{{formValue.address}}"
       placeholder="Nhập tại đây" />
 
     <dropdown 
@@ -24,7 +39,7 @@
       label="Tỉnh/ Thành phố"
       className="mb-small" 
       items="{{cities}}"
-      selectedItem="{{city}}"
+      selectedItem="{{formValue.city}}"
       onSelect="selectCity"
       name="city" />
 
@@ -32,9 +47,9 @@
       placeholder="Chọn tại đây"
       label="Quận/ Huyện"
       className="mb-small" 
-      disabled="{{!city}}"
+      disabled="{{!formValue.city}}"
       items="{{districts}}"
-      selectedItem="{{district}}"
+      selectedItem="{{formValue.district}}"
       onSelect="selectDistrict"
       name="district" />
 
@@ -42,20 +57,22 @@
       placeholder="Chọn tại đây"
       label="Phường/ Xã"
       className="mb-small" 
-      disabled="{{!district}}"
+      disabled="{{!formValue.district}}"
       items="{{wards}}"
-      selectedItem="{{ward}}"
+      selectedItem="{{formValue.ward}}"
       onSelect="selectWard"
       name="ward" />
   </view>
 
   <view class="footer">
     <block tiki:if="{{!addressId}}">
-      <tu-button class="app-button" shape="pill">Xác nhận</tu-button>
+      <tu-button disabled="{{!formValid}}" form-type="submit" class="app-button" shape="pill">
+        Xác nhận
+      </tu-button>
     </block>
 
     <view tiki:else>
-      <tu-button shape="pill">Xác nhận</tu-button>
+      <tu-button shape="pill">Cập nhật</tu-button>
     </view>
   </view>
 </form>

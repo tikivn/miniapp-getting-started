@@ -1,7 +1,10 @@
 <section title="Hình thức giao hàng">
   <!-- Address -->
-  <view class="center-between">
-    <view>
+  <view class="center-between" onTap="onTapAddress">
+    <view tiki:if="{{!address}}">
+      Thêm địa chỉ mới
+    </view>
+    <view tiki:else>
       <text>Địa chỉ nhận hàng</text>
       <view class="font-bold my-4x-small">
         {{user.name}} - {{user.phone}}
@@ -15,7 +18,10 @@
 
   <!-- Quotes -->
   <view class="center-between">
-    <view class="flex">
+    <view tiki:if="{{!address}}">
+      Chọn đơn vị vận chuyển
+    </view>
+    <view class="flex" tiki:else>
       <image class="square-40 mr-2x-small" src="/images/home.png" />
       <view>
         <text>Đơn vị vận chuyển</text>

@@ -3,6 +3,8 @@ import EventEmitter from "./utils/event";
 App({
   authEvent: new EventEmitter(),
   auth: null,
+  address: null,
+  quotes: null,
   cart: {
     totalPrice: 0,
     count: 0,

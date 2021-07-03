@@ -4,7 +4,7 @@
       {{ selectedItem ? selectedItem.name : placeholder }}
     </text>
     <icon color="#808089" type="arrow_down" />
-    <input class="hidden" controlled name="{{name}}" value="{{selectedItem.id}}" />
+    <!-- <input class="hidden" controlled name="{{name}}" value="{{selectedItem.id}}" /> -->
   </view>
 </tu-label>
 

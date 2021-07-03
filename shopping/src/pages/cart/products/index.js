@@ -1,1 +1,3 @@
-Component({});
+Component({
+  props: { products: [] },
+});

@@ -27,6 +27,9 @@ Component({
   },
   methods: {
     showBottomSheet() {
+      if (this.props.disabled) {
+        return;
+      }
       this.setData({ showBottomSheet: true });
     },
     hideBottomSheet() {

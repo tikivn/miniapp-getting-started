@@ -1,5 +1,3 @@
-import myx from "tiki-miniapp-tnx/src/myx";
-
 import { post } from "../../services/api";
 
 const app = getApp();
@@ -11,22 +9,7 @@ Page({
     cart: app.cart,
     app: {},
   },
-  async prepForPayment() {
-    const app = {};
-    const auth = await myx.getAuthCode();
-    app.authCode = auth.authCode;
-    const res = await post(`${API_URL}/token`, {
-      data: { auth_code: auth.authCode },
-    });
-
-    app.authToken = await res.data.access_token;
-    app.tikiAccessToken = await res.data.tiki_access_token;
-    app.user = await res.data.user;
-    this.setData({ app });
-  },
-  async onLoad() {
-    await this.prepForPayment();
-  },
+  async onLoad() {},
   onShow() {
     this.setData({ cart: app.cart });
   },
