@@ -17,9 +17,9 @@ const validateFn = {
 };
 const initFormValue = () => ({
   id: +new Date(),
-  name: "Hung 1",
-  phone: "0987654321",
-  street: "Dia chi 1",
+  name: "",
+  phone: "",
+  street: "",
   city: "",
   district: "",
   ward: "",
@@ -41,15 +41,15 @@ Page({
   },
   async onLoad(e) {
     const params = query.parse(e);
-    const addresId = params && params.id;
+    const addressId = params && params.id;
     let formValue = null;
 
-    if (addresId) {
+    if (addressId) {
       const address = await getAddress();
-      formValue = address.find((i) => i.id === addresId);
+      formValue = address.find((i) => i.id === +addressId);
     }
     if (formValue) {
-      this.setData({ addressId, formValue });
+      this.setData({ addressId, formValue, formValid: true });
       my.setNavigationBar({
         title: "Thay đổi địa chỉ",
       });
@@ -80,10 +80,10 @@ Page({
     const { formValue, errors } = this.data;
     const hasValue = Object.values(formValue).every(validate.hasValue);
     const hasError = Object.values(errors).some(validate.hasValue);
-    console.log("formValue :>> ", formValue);
-    console.log("hasError :>> ", hasError);
-    console.log("hasValue :>> ", hasValue);
-    this.setData({ formValid: hasValue && !hasError });
+    const formValid = hasValue && !hasError;
+    if (formValid !== this.data.formValid) {
+      this.setData({ formValid });
+    }
   },
   onInput(event) {
     const fieldName = event.target.dataset.name;
@@ -116,7 +116,7 @@ Page({
       district: null,
       ward: null,
     };
-    this.setData({ formValue, wards: [] }, this.setFormValid);
+    this.setData({ formValue, wards: [] }, this.checkFormValid);
     this.getDistricts(city.id);
   },
   async selectDistrict(district) {

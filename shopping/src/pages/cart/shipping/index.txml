@@ -37,11 +37,9 @@
   </view>
 </section>
 
-<view>hellll</view>
-
-<!-- <block show="{{showAddress}}"> -->
-<!--   <select-address /> -->
-<!-- </block> -->
+<block tiki:if="{{showAddress}}">
+  <select-address onHide="hideAddress" />
+</block>
 
 <!-- <block show="{{showQuote}}"> -->
 <!--   <select-quote /> -->

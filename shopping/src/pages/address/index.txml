@@ -1,4 +1,4 @@
-<form onSubmit="onSubmit">
+<!-- <form onSubmit="onSubmit"> -->
   <view class="container p-small">
     <textfield 
       name="name" 
@@ -65,14 +65,8 @@
   </view>
 
   <view class="footer">
-    <block tiki:if="{{!addressId}}">
-      <tu-button disabled="{{!formValid}}" form-type="submit" class="app-button" shape="pill">
-        Xác nhận
-      </tu-button>
-    </block>
-
-    <view tiki:else>
-      <tu-button shape="pill">Cập nhật</tu-button>
-    </view>
+    <tu-button disabled="{{!formValid}}" onTap="onSubmit" form-type="submit" class="app-button" shape="pill">
+      {{!addressId ? 'Xác nhận' : 'Cập nhật' }}
+    </tu-button>
   </view>
-</form>
+<!-- </form> -->

@@ -1,20 +1,38 @@
-<block tiki:if="{{show}}">
-  <bottom-sheet 
-    title="Địa chỉ nhận hàng" 
-    buttonTitle="OK" 
-    distanceFromTop="{{100}}" 
-    disableScroll
-    onClose="hideBottomSheet">
-    <view class="pt-x-small px-small flex flex-col">
-      <scroll-view class="flex-1" scroll-y>
-        <view 
-          class="item flex items-center justify-between" 
-          onTap="onSelect"
-          data-item="{{item}}"
-          tiki:for="{{address}}">
-          <text class="font-bold">{{item.name}}</text>
-        </view>
-      </scroll-view>
-    </view>
-  </bottom-sheet>
-</block>
+<import-sjs from="../utils.sjs" name="{ formatAddress }"></import-sjs>
+
+<bottom-sheet 
+  title="Địa chỉ nhận hàng" 
+  buttonTitle="OK" 
+  distanceFromTop="{{100}}" 
+  disableScroll
+  onClose="hideBottomSheet">
+  <scroll-view class="flex-1" scroll-y>
+    <radio-group>
+      <view 
+        class="pt-x-small px-small flex flex-col {{item.id === selectedAddress.id ? 'active' : ''}}"
+        onTap="onSelect"
+        data-item="{{item}}"
+        tiki:for="{{address}}">
+        <label class="flex">
+          <view style="width: 32px">
+            <radio class="mr-small" checked="{{item.id === selectedAddress.id}}" value="{{item.id}}" />
+          </view>
+          <view>
+            <text number-of-lines="{{1}}">{{item.name}} - {{item.phone}}</text>
+            <view class="text-small text-gray60 mt-4x-small">
+              {{formatAddress(item)}}
+            </view>
+          </view>
+          <view catchTap="editAddress" data-item="{{item}}">
+            <icon type="edit" color="#808089" />
+          </view>
+          <icon />
+        </label>
+      </view>
+    </radio-group>
+  </scroll-view>
+  <view class="center-between px-small" onTap="addNewAddress">
+    <text>Thêm địa chỉ mới</text>
+    <icon type="arrow_right" color="#808089" />
+  </view>
+</bottom-sheet>

@@ -5,7 +5,7 @@ Component({
     onChangeAddress: () => {},
     onChangeQuote: () => {},
   },
-  data: { showAddress: false },
+  data: { showAddress: true },
   didMount() {
     // Get from storage to get address
   },
@@ -15,6 +15,9 @@ Component({
       // if (!this.props.address) {
       //   my.navigateTo({ url: "pages/address/index" });
       // }
+    },
+    hideAddress() {
+      this.setData({ showAddress: false });
     },
   },
 });

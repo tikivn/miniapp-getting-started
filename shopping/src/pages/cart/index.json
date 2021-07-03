@@ -6,6 +6,8 @@
     "price": "components/price/index",
     "cart-empty": "./cart-empty/index",
     "shipping": "./shipping/index",
-    "products": "./products/index"
+    "products": "./products/index",
+    "select-address": "./select-address/index",
+    "test": "./test/index"
   }
 }

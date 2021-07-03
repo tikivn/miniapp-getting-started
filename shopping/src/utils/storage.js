@@ -18,7 +18,7 @@ export const setAddress = async (data) => {
   let address = await getAddress();
   const existedIndex = address.findIndex((i) => i.id === data.id);
   if (existedIndex > -1) {
-    address[index] = data;
+    address[existedIndex] = data;
     return myx.setStorage({ key, data: address });
   }
   address.push(data);
