@@ -5,7 +5,7 @@ Component({
     onChangeAddress: () => {},
     onChangeQuote: () => {},
   },
-  data: { showAddress: true },
+  data: { showAddress: false },
   didMount() {
     // Get from storage to get address
   },

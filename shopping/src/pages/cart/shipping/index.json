@@ -3,7 +3,6 @@
   "usingComponents": {
     "section": "components/section/index",
     "select-address": "./select-address/index",
-    "select-quote": "./select-quote/index",
-    "select": "./select/index"
+    "select-quote": "./select-quote/index"
   }
 }

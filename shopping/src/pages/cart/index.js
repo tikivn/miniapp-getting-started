@@ -1,4 +1,5 @@
 import { post } from "../../services/api";
+import { getQuotes } from "../../services/shipping";
 import { getRecentAddress, setRecentAddress } from "../../utils/storage";
 
 const app = getApp();
@@ -14,12 +15,21 @@ Page({
     this.setData({ cart: app.cart });
 
     // Init address
-    this.initAddress();
+    await this.initAddress();
+    // Init quotes
+    this.getListQuotes();
   },
   async initAddress() {
     const recentAddress = await getRecentAddress();
     if (recentAddress) {
       this.setData({ address: recentAddress });
+    }
+  },
+  async getListQuotes() {
+    const { address, cart } = this.data;
+    if (address) {
+      const quotes = await getQuotes(address, cart.products);
+      console.log("quotes :>> ", quotes);
     }
   },
   onChangeAddress(address) {
