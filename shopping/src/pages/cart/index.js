@@ -1,10 +1,5 @@
 import { post } from "../../services/api";
-import {
-  setAddress,
-  getRecentAddress,
-  setRecentAddress,
-  getAddress,
-} from "../../utils/storage";
+import { getRecentAddress, setRecentAddress } from "../../utils/storage";
 
 const app = getApp();
 
@@ -23,13 +18,15 @@ Page({
   },
   async initAddress() {
     const recentAddress = await getRecentAddress();
-    const address = await getAddress();
-    console.log("address :>> ", address);
-    console.log("recentAddress :>> ", recentAddress);
     if (recentAddress) {
       this.setData({ address: recentAddress });
     }
   },
+  onChangeAddress(address) {
+    this.setData({ address });
+    setRecentAddress(address);
+  },
+  onChangeQuote() {},
   async doPayment() {
     const data = {
       order: {

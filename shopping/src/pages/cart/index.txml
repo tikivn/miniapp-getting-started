@@ -3,7 +3,10 @@
 
 <block tiki:else>
   <view class="container p-small">
-    <shipping address="{{address}}" />
+    <shipping 
+      address="{{address}}" 
+      onChangeAddress="onChangeAddress" 
+      onChangeQuote="onChangeQuote"  />
     <products products="{{cart.products}}" />
   </view>
 
@@ -17,8 +20,3 @@
     </tu-button>
   </view>
 </block>
-
-<!-- <block tiki:if="{{showAddress}}"> -->
-<!--   <test /> -->
-<!-- </block> -->
-<!-- <select-address /> -->

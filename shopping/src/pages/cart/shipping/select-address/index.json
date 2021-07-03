@@ -2,6 +2,7 @@
   "component": true,
   "usingComponents": {
     "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
+    "popup": "@tiki.vn/tini-ui/es/popup/index",
     "tu-button": "@tiki.vn/tini-ui/es/tu-button/index"
   }
 }

@@ -11,16 +11,12 @@ Component({
     didMount: false,
   },
   async didMount() {
-    try {
-      const [address, recentAddress] = await Promise.all([
-        getAddress(),
-        getRecentAddress(),
-      ]);
+    const [address, recentAddress] = await Promise.all([
+      getAddress(),
+      getRecentAddress(),
+    ]);
 
-      this.setData({ address, selectedAddress: recentAddress });
-    } catch (error) {
-      console.log("error :>> ", error);
-    }
+    this.setData({ address, selectedAddress: recentAddress });
   },
   methods: {
     hideBottomSheet() {
@@ -34,7 +30,6 @@ Component({
       my.navigateTo({ url: "pages/address/index" });
     },
     editAddress(event) {
-      console.log("edit event :>> ", "edit event :>> ");
       my.navigateTo({
         url: `pages/address/index?id=${event.target.dataset.item.id}`,
       });

@@ -3,11 +3,10 @@
   "usingComponents": {
     "stepper": "@tiki.vn/tini-ui/es/stepper/index",
     "tu-button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
     "price": "components/price/index",
     "cart-empty": "./cart-empty/index",
     "shipping": "./shipping/index",
-    "products": "./products/index",
-    "select-address": "./select-address/index",
-    "test": "./test/index"
+    "products": "./products/index"
   }
 }

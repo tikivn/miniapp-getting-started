@@ -40,8 +40,3 @@
 <block tiki:if="{{showAddress}}">
   <select-address onHide="hideAddress" />
 </block>
-
-<!-- <block show="{{showQuote}}"> -->
-<!--   <select-quote /> -->
-<!-- </block> -->
-<!-- <select /> -->
