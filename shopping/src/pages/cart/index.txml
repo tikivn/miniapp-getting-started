@@ -3,7 +3,7 @@
 
 <block tiki:else>
   <view class="container p-small">
-    <shipping />
+    <shipping address="{{address}}" />
     <products products="{{cart.products}}" />
   </view>
 

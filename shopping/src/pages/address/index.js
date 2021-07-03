@@ -13,13 +13,13 @@ const validateFn = {
   name: validate.validateName,
   email: validate.validateEmail,
   phone: validate.validatePhone,
-  address: validate.validateAddress,
+  street: validate.validateAddress,
 };
 const initFormValue = () => ({
   id: +new Date(),
   name: "Hung 1",
   phone: "0987654321",
-  address: "Dia chi 1",
+  street: "Dia chi 1",
   city: "",
   district: "",
   ward: "",
@@ -35,7 +35,7 @@ Page({
     errors: {
       name: null,
       phone: null,
-      addres: null,
+      street: null,
     },
     formValue: initFormValue(),
   },

@@ -24,14 +24,14 @@
       placeholder="Nhập tại đây" />
 
     <textfield 
-      name="address"
+      name="street"
       className="mb-small" 
       labelText="Địa chỉ nhận hàng" 
-      data-name="address"
+      data-name="street"
       onInput="onInput"
-      errorMsg="{{errors.address}}"
-      hasError="{{errors.address}}"
-      value="{{formValue.address}}"
+      errorMsg="{{errors.street}}"
+      hasError="{{errors.street}}"
+      value="{{formValue.street}}"
       placeholder="Nhập tại đây" />
 
     <dropdown 

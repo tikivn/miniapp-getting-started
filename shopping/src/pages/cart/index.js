@@ -1,4 +1,10 @@
 import { post } from "../../services/api";
+import {
+  setAddress,
+  getRecentAddress,
+  setRecentAddress,
+  getAddress,
+} from "../../utils/storage";
 
 const app = getApp();
 
@@ -7,11 +13,22 @@ const API_URL = "https://miniapp-demo.tala.xyz";
 Page({
   data: {
     cart: app.cart,
-    app: {},
+    address: null,
   },
-  async onLoad() {},
-  onShow() {
+  async onLoad() {
     this.setData({ cart: app.cart });
+
+    // Init address
+    this.initAddress();
+  },
+  async initAddress() {
+    const recentAddress = await getRecentAddress();
+    const address = await getAddress();
+    console.log("address :>> ", address);
+    console.log("recentAddress :>> ", recentAddress);
+    if (recentAddress) {
+      this.setData({ address: recentAddress });
+    }
   },
   async doPayment() {
     const data = {

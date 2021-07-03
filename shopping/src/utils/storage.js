@@ -8,15 +8,14 @@ const getKeyByUser = (keyName) => {
   return `${userId}_${keyName}`;
 };
 
-export const getAddress = async () =>
-  myx.getStorage({ key: getKeyByUser("address") });
+export const getAddress = async () => {
+  const data = await myx.getStorage({ key: getKeyByUser("address") });
+  return Promise.resolve((data && data.data) || []);
+};
 
 export const setAddress = async (data) => {
   const key = getKeyByUser("address");
   let address = await getAddress();
-  if (!Array.isArray(address)) {
-    address = [];
-  }
   const existedIndex = address.findIndex((i) => i.id === data.id);
   if (existedIndex > -1) {
     address[index] = data;
@@ -26,8 +25,12 @@ export const setAddress = async (data) => {
   return myx.setStorage({ key, data: address });
 };
 
-export const getRecentAddress = async () =>
-  myx.getStorage({ key: getKeyByUser("recent_address") });
+export const getRecentAddress = async () => {
+  const data = await myx.getStorage({
+    key: getKeyByUser("recent_address"),
+  });
+  return Promise.resolve((data && data.data) || null);
+};
 
 export const setRecentAddress = async (data) =>
   myx.setStorage({ key: getKeyByUser("recent_address"), data });

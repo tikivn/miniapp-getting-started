@@ -1,3 +1,5 @@
+<import-sjs from="./utils.sjs" name="{ formatAddress }"></import-sjs>
+
 <section title="Hình thức giao hàng">
   <!-- Address -->
   <view class="center-between" onTap="onTapAddress">
@@ -7,9 +9,9 @@
     <view tiki:else>
       <text>Địa chỉ nhận hàng</text>
       <view class="font-bold my-4x-small">
-        {{user.name}} - {{user.phone}}
+        {{address.name}} - {{address.phone}}
       </view>
-      <text class="text-gray60 text-small">{{address}}</text>
+      <text class="text-gray60 text-small">{{formatAddress(address)}}</text>
     </view>
     <icon type="arrow_right" color="#808089" />
   </view>
@@ -17,7 +19,7 @@
   <view class="divider" />
 
   <!-- Quotes -->
-  <view class="center-between">
+  <view class="center-between" tiki:if="{{address}}">
     <view tiki:if="{{!address}}">
       Chọn đơn vị vận chuyển
     </view>
@@ -34,3 +36,14 @@
     <icon type="arrow_right" color="#808089" />
   </view>
 </section>
+
+<view>hellll</view>
+
+<!-- <block show="{{showAddress}}"> -->
+<!--   <select-address /> -->
+<!-- </block> -->
+
+<!-- <block show="{{showQuote}}"> -->
+<!--   <select-quote /> -->
+<!-- </block> -->
+<!-- <select /> -->
