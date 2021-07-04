@@ -2,6 +2,9 @@
   background: var(--white);
   border-radius: var(--border-radius-rounded-4px);
 }
+.product.column {
+  max-width: calc(100vw / 2 - 20px);
+}
 
 .product-content {
   padding: var(--space-inset-2x-small);

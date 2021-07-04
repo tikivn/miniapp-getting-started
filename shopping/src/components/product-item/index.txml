@@ -1,5 +1,5 @@
 <view 
-  class="product" 
+  class="product {{direction === 'row' ? 'row' : 'column'}}" 
   onTap="onGoToProductPage" 
   style="{{direction === 'row' ? 'height: 176px;' : ''}}">
   <view class="p-4x-small flex {{direction === 'column' ? 'flex-col' : 'flex-row'}}">
