@@ -41,43 +41,49 @@ Page({
     this.setData({ address }, () => this.getListQuotes());
     setRecentAddress(address);
   },
-  onChangeQuote() {},
+  onChangeQuote(quote) {
+    this.setData({ quote });
+  },
   async doPayment() {
-    const data = {
+    const { address, cart, quote } = this.data;
+
+    const requestData = {
       order: {
-        items: app.cart.products.map((item) => ({
+        items: cart.products.map((item) => ({
           name: item.name,
           img_url: item.thumbnail_url,
           // description: item.description || "",
-          description: "",
+          description: item.name,
           quantity: item.total,
           price: item.price,
           weight: 1,
-          height: Math.floor(Math.random() * 100),
-          width: Math.floor(Math.random() * 100),
-          depth: Math.floor(Math.random() * 100),
+          height: Math.floor(Math.random() * 6) + 1,
+          width: Math.floor(Math.random() * 6) + 1,
+          depth: Math.floor(Math.random() * 6) + 1,
         })),
-        shipping: 14000,
+        shipping: quote.fee.amount,
         shipping_address: {
-          name: "Hung Nguyen",
-          phone: "0987654321",
-          street:
-            "Toa nhà Viettel Complex, 285 CMT8, Phường 12, Quận 10, Hồ Chí Minh",
+          name: address.name,
+          phone: address.phone,
+          street: [
+            address.street || "",
+            address.ward.name || "",
+            address.district.name || "",
+            address.city.name || "",
+          ].join(", "),
         },
         shipping_info: {
-          partner_code: "GRAB",
-          service_code: "INSTANT",
+          partner_code: quote.partner_code,
+          service_code: quote.service.quote,
         },
-        sub_total: 63800,
-        total: 77800,
+        sub_total: cart.total,
+        total: cart.total + quote.fee.amount,
       },
     };
-    console.log("data :>> ", data);
-    // const res = await post("https://miniapp-demo.tala.xyz/orders", {
-
+    console.log("requestData :>> ", requestData);
     const res = await post(`${API_URL}/orders`, {
-      token: this.data.app.authToken,
-      data,
+      token: app.auth.authToken,
+      data: requestData,
     });
     console.log("res", res);
 
@@ -85,16 +91,21 @@ Page({
       my.makePayment({
         orderId: res.data.order.tiki_ref_id,
         fail: (err) => {
+          my.alert({
+            title: "Thanh toán thất bại",
+            content: `Vui lòng thử lại`,
+            buttonText: `Thử lại`,
+          });
           console.log("make payment fail", err);
         },
+        success: () => {
+          console.log("success");
+          my.alert({
+            title: "Thanh toán thành công",
+            content: `Bạn đã thanh toán ${requestData.order.total} ₫`,
+          });
+        },
       });
-      // await my.alert({
-      //   title: "Thanh toán thành công",
-      //   content: `Bạn đã thanh toán ${this.data.order.total} ₫`,
-      // });
-      // my.navigateTo({
-      //   url: "pages/index/index",
-      // });
     } catch (error) {
       console.log("order error", error);
       my.alert({

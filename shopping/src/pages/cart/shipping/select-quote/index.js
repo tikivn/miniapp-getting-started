@@ -18,5 +18,10 @@ Component({
     onSelect(event) {
       this.setData({ selected: event.target.dataset.item });
     },
+    submit() {
+      if (this.props.quote.service.code !== this.data.selected.service.quote) {
+        this.props.onSelect(this.data.selected);
+      }
+    },
   },
 });

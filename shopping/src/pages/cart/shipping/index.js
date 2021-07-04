@@ -6,9 +6,6 @@ Component({
     onChangeQuote: () => {},
   },
   data: { showAddress: false, showQuote: false },
-  didMount() {
-    // Get from storage to get address
-  },
   methods: {
     onTapAddress() {
       this.setData({ showAddress: true });
@@ -24,6 +21,11 @@ Component({
     },
     selectAdddress(address) {
       this.props.onChangeAddress(address);
+      this.hideAddress();
+    },
+    selectQuote(quote) {
+      this.props.onChangeQuote(quote);
+      this.hideQuote();
     },
   },
 });

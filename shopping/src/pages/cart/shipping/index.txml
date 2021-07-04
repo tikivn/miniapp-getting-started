@@ -28,7 +28,7 @@
       <view>
         <text>Đơn vị vận chuyển</text>
         <view class="font-bold my-4x-small">
-          Tiki Now
+          {{quote.service.code}}
         </view>
         <text class="text-gray60 text-small">Giao ngay 2h - 3h</text>
       </view>
@@ -38,9 +38,13 @@
 </section>
 
 <block tiki:if="{{showAddress}}">
-  <select-address onHide="hideAddress" />
+  <select-address onHide="hideAddress" onSelect="selectAdddress" />
 </block>
 
 <block tiki:if="{{showQuote}}">
-  <select-quote quote="{{quote}}" quotes="{{quotes}}" onHide="hideQuote" />
+  <select-quote 
+    quote="{{quote}}" 
+    quotes="{{quotes}}" 
+    onSelect="selectQuote" 
+    onHide="hideQuote" />
 </block>

@@ -16,7 +16,7 @@ Component({
       getRecentAddress(),
     ]);
 
-    this.setData({ address, selectedAddress: recentAddress });
+    this.setData({ address, selectedAddress: recentAddress, recentAddress });
   },
   methods: {
     hideBottomSheet() {
@@ -24,7 +24,6 @@ Component({
     },
     onSelect(event) {
       this.setData({ selectedAddress: event.target.dataset.item });
-      console.log("event :>> ", event);
     },
     addNewAddress() {
       my.navigateTo({ url: "pages/address/index" });
@@ -33,6 +32,12 @@ Component({
       my.navigateTo({
         url: `pages/address/index?id=${event.target.dataset.item.id}`,
       });
+    },
+    submit() {
+      const { recentAddress, selectedAddress } = this.data;
+      if (recentAddress.id !== selectedAddress.id) {
+        this.props.onSelect(selectedAddress);
+      }
     },
   },
 });

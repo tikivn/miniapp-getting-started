@@ -5,6 +5,7 @@
   buttonTitle="OK" 
   distanceFromTop="{{100}}" 
   disableScroll
+  onClick="submit"
   onClose="hideBottomSheet">
   <scroll-view class="flex-1" scroll-y>
     <radio-group>
