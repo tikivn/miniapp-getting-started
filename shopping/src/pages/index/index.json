@@ -4,6 +4,8 @@
   "titleColor": "#fff",
   "transparentTitle": "auto",
   "backgroundColor": "#FCF4DD",
+  "allowsBounceVertical": "YES",
+  "pullRefresh": "YES",
   "usingComponents": {
     "top-sales": "./top-sales/index",
     "super-sales": "./super-sales/index",

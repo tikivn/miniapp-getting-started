@@ -1,33 +1,42 @@
 import { getProducts } from "../../../services/products";
 
+const initTabs = () => [
+  {
+    title: "10:00",
+    items: [],
+    loading: true,
+  },
+  {
+    title: "15:00",
+    items: [],
+    loading: true,
+  },
+  {
+    title: "18:00",
+    items: [],
+    loading: true,
+  },
+  {
+    title: "20:00",
+    items: [],
+    loading: true,
+  },
+];
+
 Component({
   data: {
-    tabs: [
-      {
-        title: "10:00",
-        items: [],
-        loading: true,
-      },
-      {
-        title: "15:00",
-        items: [],
-        loading: true,
-      },
-      {
-        title: "18:00",
-        items: [],
-        loading: true,
-      },
-      {
-        title: "20:00",
-        items: [],
-        loading: true,
-      },
-    ],
+    tabs: initTabs(),
     tabIndex: 0,
   },
   didMount() {
     this.getProductForTab(0);
+    getApp().refreshEvent.on("index/refresh", () => {
+      this.setData({ tabIndex: 0, tabs: initTabs() });
+      this.getProductForTab(0);
+    });
+  },
+  didUnmount() {
+    getApp().refreshEvent.removeListener("index/refresh");
   },
   methods: {
     async getProductForTab(tabIndex) {

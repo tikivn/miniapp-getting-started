@@ -13,4 +13,8 @@ Page({
       });
     }
   },
+  onPullDownRefresh() {
+    getApp().refreshEvent.emit("index/refresh");
+    my.stopPullDownRefresh();
+  },
 });

@@ -2,6 +2,7 @@ import EventEmitter from "./utils/event";
 
 App({
   authEvent: new EventEmitter(),
+  refreshEvent: new EventEmitter(),
   auth: null,
   address: null,
   quotes: null,
