@@ -29,8 +29,8 @@
       {
         "name": "Tài khoản",
         "pagePath": "pages/account/index",
-        "icon": "images/cart.png",
-        "activeIcon": "images/cart_active.png"
+        "icon": "images/account.png",
+        "activeIcon": "images/account_active.png"
       }
     ]
   }
