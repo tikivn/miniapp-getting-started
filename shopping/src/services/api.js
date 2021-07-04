@@ -1,7 +1,8 @@
-const request = async (url, { method, data, token } = {}) => {
-  console.log("API url :>> ", url);
-  console.log("API token :>> ", token);
-  console.log("API data :>> ", data);
+const app = getApp();
+
+const request = async (url, { method, data } = {}) => {
+  const token = app.auth && app.auth.authToken;
+
   return new Promise((resolve, reject) => {
     my.request({
       url,

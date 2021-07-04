@@ -79,7 +79,7 @@ Page({
   },
   onViewDetail(e) {
     my.navigateTo({
-      url: `pages/order-detail/index?order_id=${e.target.dataset.id}`,
+      url: `pages/order-detail/index?id=${e.target.dataset.id}`,
     });
   },
 });

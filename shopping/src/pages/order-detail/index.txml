@@ -1,0 +1,117 @@
+<auth>
+  <view class="p-small" tiki:if="{{order}}">
+    <section title="Thông tin chung">
+      <view class="flex justify-between">
+        <text>Mã đơn hàng</text>
+        <text class="font-bold">{{order.id}}</text>
+      </view>
+      <view class="divider" />
+      <view class="flex justify-between">
+        <text>Ngày tạo</text>
+        <text class="font-bold">{{order.createdAt}}</text>
+      </view>
+      <view class="divider" />
+      <view class="flex justify-between">
+        <text>Trạng thái</text>
+        <text class="font-bold">{{order.status}}</text>
+      </view>
+    </section>
+
+    <section title="Theo dõi đơn hàng">
+      <view class="center-between">
+        <text>Giao bởi {{order.partnerCode}}-{{order.serviceCode}}</text>
+        <view class="center-between" onTap="viewShipping">
+          <text class="text-small text-secondary">Chi tiết</text>
+          <icon type="arrow_right" color="#808089" size="20" />
+        </view>
+      </view>
+      <view class="divider" />
+      <milestone 
+        items="{{[{ text1: order.status, text2: order.updatedAt }]}}" 
+        current="{{0}}" />
+    </section>
+
+    <section>
+      <text>Địa chỉ nhận hàng</text>
+      <text class="block my-4x-small">
+        {{order.name}} - {{order.phone}}
+      </text>
+      <text class="text-small text-secondary">{{order.address}}</text>
+      <view class="divider" />
+      <view class="flex">
+        <image src="/images/tiki-now.png" class="square-40 mr-2x-small" />
+        <view>
+          <text>Hình thức giao hàng</text>
+          <text class="block font-bold my-4x-small">
+            TNSL - {{order.partnerCode}} {{order.serviceCode}}
+          </text>
+          <text class="text-small text-secondary">
+            {{order.delivery}}
+          </text>
+        </view>
+      </view>
+    </section>
+
+    <section class="Thông tin đơn hàng">
+      <block tiki:for="{{order.products}}" tiki:for-item="product">
+        <view class="flex">
+          <image class="square-40 mr-2x-small" src="{{product.image}}" />
+          <view>
+            <text number-of-lines="{{1}}" class="font-bold">{{product.name}}</text>
+            <text class="text-small text-secondary block mt-4-small">
+              {{product.price}} x {{product.quantity}} 
+            </text>
+          </view>
+        </view>
+        <view class="divider" />
+      </block>
+      <view class="flex">
+        <image class="square-40 mr-2x-small" src="/images/tiki-now.png" />
+        <view>
+          <text number-of-lines="{{1}}" class="font-bold">Chi phí vận chuyển</text>
+          <text class="text-small text-secondary block mt-4-small">
+            {{order.shipping}}
+          </text>
+        </view>
+      </view>
+    </section>
+
+    <section class="Thông tin thanh toán">
+      <!-- Mock Data -->
+      <view class="flex">
+        <image class="square-40 mr-2x-small" src="/images/cybersource.png" />
+        <view>
+          <text>Hình thức thanh toán</text>
+          <text class="font-bold block mt-4-small">
+            Thẻ quốc tế Visa, Mastercard, JCB
+          </text>
+        </view>
+      </view>
+    </section>
+
+    <section>
+      <view class="center-between">
+        <text>Tạm tính</text>
+        <text class="font-bold">{{order.subtotal}}</text>
+      </view>
+      <view class="divider" />
+      <view class="center-between">
+        <text>Giảm giá</text>
+        <text class="font-bold">-- ₫</text>
+      </view>
+      <view class="divider" />
+      <view class="center-between">
+        <text>Phí vận chuyển</text>
+        <text class="font-bold">{{order.shipping}}</text>
+      </view>
+      <view class="divider" />
+      <view class="center-between">
+        <view>
+          <text>Thành tiền</text>
+          <text class="block text-small text-secondary mt-4x-small">Đã bao gồm VAT nếu có</text>
+        </view>
+        <text class="font-bold">{{order.total}}</text>
+      </view>
+    </section>
+  </view>
+</auth>

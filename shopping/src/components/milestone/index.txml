@@ -1,0 +1,17 @@
+<view tiki:for="{{items}}" class="flex mb-4x-small">
+  <view class="flex flex-col items-center justify-center mr-medium">
+    <view class="m-dot mb-5x-small {{index <= current ? 'active' : ''}}" />
+    <view class="m-progress" />
+  </view>
+  <view>
+    <text number-of-lines="{{1}}" class="block font-bold mb-4x-small">
+      {{item.text1}}
+    </text>
+    <text number-of-lines="{{1}}" class="block mb-4x-small text-gray60">
+     {{item.text2}}
+    </text>
+    <text number-of-lines="{{1}}" class="block text-gray60">
+      {{item.text3}}
+    </text>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+.m-dot {
+  min-width: 16px;
+  min-height: 16px;
+  border-radius: 50%;
+  background: var(--background-progress-inactive);
+}
+
+.m-dot.active {
+  background: var(--brand);
+}
+
+.m-progress {
+  background: var(--background-progress-inactive);
+  width: 4px;
+  height: 100%;
+}
