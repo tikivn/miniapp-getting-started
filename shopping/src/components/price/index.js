@@ -1,6 +1,10 @@
 import { formatMoney } from "../../utils/number";
 
 Component({
+  props: {
+    className: "",
+    price: 0,
+  },
   data: {
     number: 0,
   },

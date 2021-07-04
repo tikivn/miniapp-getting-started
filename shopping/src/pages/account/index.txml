@@ -1,3 +1,38 @@
 <auth>
-  <text>Hello</text>
+  <tabs 
+    tabs="{{tabs}}"
+    tabsName="accountTab"
+    activeTab="{{tabIndex}}"
+    stickyBar
+    onTabClick="onTabClick">
+    <block tiki:for="{{tabs}}">
+      <tab-content tabId="{{index}}">
+        <view class="container p-small">
+          <view tiki:for="{{tabs[index].items}}" tiki:for-item="order">
+            <section>
+              <text>{{order.statusMap}}</text>
+              <view class="divider" />
+              <view class="flex">
+                <image class="square-40 mr-2x-small" src="{{order.img_url}}" />
+                <view>
+                  <text class="font-bold" number-of-lines="{{2}}">
+                    {{order.name}}
+                  </text>
+                  <view class="text-gray60 flex items-center">
+                    <text class="text-small">{{order.quantity}} sản phẩm</text>
+                    <view class="text-small px-4x-small">|</view>
+                    <text className="text-small">{{order.priceFormat}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class="divider" />
+              <view onTap="onViewDetail" data-id="{{order.id}}" class="flex justify-center text-brand">
+                Xem chi tiết
+              </view>
+            </section>
+          </view>
+        </view>
+      </tab-content>
+    </block>
+  </tabs>
 </auth>

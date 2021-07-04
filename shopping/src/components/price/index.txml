@@ -1,3 +1,1 @@
-<view style="align-items: flex-start">
-  <text class="price">{{number}}</text>
-</view>
+<text class="price {{className}}">{{number}}</text>

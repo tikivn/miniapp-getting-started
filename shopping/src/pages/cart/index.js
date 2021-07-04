@@ -33,7 +33,6 @@ Page({
       const rs = await getQuotes(address, cart.products);
       const quotes = (rs && rs.quotes) || [];
       const sorted = quotes.sort((a, b) => a.fee.amount - b.fee.amount);
-      console.log("sorted :>> ", sorted[0]);
       this.setData({ quotes, quote: sorted[0] });
     }
   },
