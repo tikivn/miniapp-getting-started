@@ -1,23 +1,57 @@
-<!-- <view class="loading" tiki:if="{{!product}}">
-  <image
-    class="loading-image" 
-    src="https://shopping-miniapp.s3.ap-south-1.amazonaws.com/spinner.gif" />
-</view> -->
+<view class="m-large flex justify-center" tiki:if="{{!product}}"> 
+  <view class="loading" />
+</view>
 
-<view class="container">
-  <view class="p-small">
-    <image src="{{product.thumbnail_url}}" />
+<block tiki:else>
+  <view class="mt-small flex">
+    <image class="product-image" src="{{product.thumbnail_url}}" />
+  </view>
+  <view class="p-medium">
     <view>
-      <text>{{product.name}}</text>
+      <image class="tiki-now mr-2x-small" src="/images/tiki-now.svg" />
+      | {{product.name}}
     </view>
     <view class="flex flex-row items-center">
       <rating average="{{product.rating_average}}" count="{{product.review_count}}" />
+      <view class="text-small text-secondary ml-4x-small"> | {{product.quantity_sold.text}}</view>
     </view>
-    <price price="{{product.price}}" />
+    <view class="flex">
+      <price className="font-bold name" price="{{product.price}}" />
+      <view tiki:if="{{product.list_price && product.discount_rate}}">
+        <price className="text-small line-through m-2x-small" price="{{product.list_price}}" />
+        <text class="text-small"> -{{product.discount_rate}}%</text>
+      </view>
+    </view>
   </view>
+  <!-- <view class="line" /> -->
+  <!-- <view class="ml-small text-brand"> -->
+  <!--   Goto Tiki Page -->
+  <!--   Xem chi tiết -->
+  <!-- </view> -->
+  <view class="line" />
+  <view>
+    <text class="font-bold ml-small">Sản phẩm tương tự</text>
+    <scroll-view scroll-x class="mt-small scroll" onScrollToLower="loadMoreSimilarProducts">
+      <block tiki:if="{{similarLoading}}">
+        <view class="item" tiki:for="{{[1, 2, 3]}}">
+          <skeleton />
+        </view>
+      </block>
+
+      <block tiki:else>
+        <view tiki:for="{{similarProducts}}" class="item">
+          <product-item showBadge="{{false}}" product="{{item}}" />
+        </view>
+        <view tiki:if="{{similarLoadmore}}">
+          <skeleton />
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
   <view class="footer">
     <tu-button class="app-button" shape="pill" onTap="onAddCart">
       Bỏ vào giỏ hàng
     </tu-button>
   </view>
-</view>
+</block>

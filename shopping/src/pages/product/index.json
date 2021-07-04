@@ -1,10 +1,13 @@
 {
-  "defaultTitle": "",
+  "defaultTitle": "Thông tin sản phẩm",
   "transparentTitle": "none",
+  "titleBarColor": "#EF4F15",
   "usingComponents": {
     "badge": "@tiki.vn/tini-ui/es/badge/index",
     "tu-button": "@tiki.vn/tini-ui/es/tu-button/index",
     "price": "components/price/index",
+    "skeleton": "components/skeleton/index",
+    "product-item": "components/product-item/index",
     "rating": "components/rating/index"
   }
 }

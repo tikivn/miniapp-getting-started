@@ -1,5 +1,6 @@
 {
   "defaultTitle": "Theo dõi đơn hàng",
+  "titleBarColor": "#EF4F15",
   "usingComponents": {
     "milestone": "components/milestone/index",
     "auth": "components/auth/index"

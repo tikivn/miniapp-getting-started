@@ -1,5 +1,6 @@
 {
   "defaultTitle": "Đơn hàng",
+  "titleBarColor": "#EF4F15",
   "window": {
     "backgroundColor": "#EBEBF0"
   },

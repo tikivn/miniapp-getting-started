@@ -12,6 +12,7 @@
   padding: var(--space-inset-2x-small) var(--space-inset-medium);
   margin-bottom: var(--safe-area-inset-bottom);
   background: var(--white);
+  z-index: 2;
 }
 
 

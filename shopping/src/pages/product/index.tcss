@@ -1,3 +1,49 @@
-.container {
-  margin: var(--space-inline-2x-small) var(--space-inline-medium);
+.tiki-now {
+  width: 60px;
+  height: 16px;
+}
+
+.product-image {
+  margin: 0 auto;
+}
+
+.name {
+  font-size: 24px;
+}
+
+.line {
+  height: 4px;
+  width: 100%;
+  background: var(--gray20);
+  margin: var(--space-stack-2x-small) 0;
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.scroll {
+  display: flex;
+  margin-bottom: 120px;
+}
+
+.item {
+  width: 240px;
+  padding: 0 4px;
+}
+
+.item .cover-wrapper {
+  height: 104px;
+}
+
+.item .cover:after {
+  content: ''
+}
+
+.product-item-name {
+  height: 36px;
+}
+
+.skeleton-wrap {
+  height: 100%;
 }

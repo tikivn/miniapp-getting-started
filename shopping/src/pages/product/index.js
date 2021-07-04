@@ -1,28 +1,41 @@
 import query from "query-string";
 
+import { getProducts, getProductDetail } from "../../services/products";
+
 const app = getApp();
 
 Page({
   data: {
     product: null,
+    similarProducts: [],
+    similarLoading: true,
+    similarLoadmore: false,
   },
-  onLoad(e) {
+  countLoadMore: 0,
+  async onLoad(e) {
     const params = query.parse(e);
-    // const params = {id: 76404389}
-    console.log("params", params);
-
-    // Get product detail
-    my.request({
-      url: `https://tiki.vn/api/v2/products/${params.id}`,
-      method: "GET",
-      headers: {
-        "User-Agent": "TikiNative",
-      },
-      success: (product) => {
-        console.log("product", product);
-        this.setData({ product });
-      },
-    });
+    this.getProduct(params.id);
+    this.getSimilarProducts();
+  },
+  async getProduct(id) {
+    const product = await getProductDetail(id);
+    this.setData({ product });
+  },
+  async getSimilarProducts() {
+    this.setData({ similarLoading: true });
+    const rs = await getProducts();
+    this.setData({ similarProducts: rs.data, similarLoading: false });
+  },
+  async loadMoreSimilarProducts() {
+    if (this.countLoadMore < 5) {
+      this.countLoadMore += 1;
+      this.setData({ similarLoadmore: true });
+      const rs = await getProducts();
+      this.setData({
+        similarProducts: this.data.similarProducts.concat(rs.data),
+        similarLoadmore: false,
+      });
+    }
   },
   onAddCart() {
     app.onAppAddCart(this.data.product);

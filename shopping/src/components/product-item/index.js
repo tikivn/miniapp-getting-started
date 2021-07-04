@@ -1,6 +1,7 @@
 Component({
   props: {
     direction: "column",
+    showBadge: true,
   },
   methods: {
     onGoToProductPage() {
