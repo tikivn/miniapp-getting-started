@@ -1,0 +1,14 @@
+<template name="product-column">
+  <view class="skeleton-wrap">
+    <view class="skeleton-thumbnail full-width" />
+    <view class="skeleton1" />
+    <view class="skeleton2" />
+    <view class="skeleton3" />
+  </view>
+</template>
+
+<template name="product-row">
+  <view class="skeleton-wrap-row" />
+</template>
+
+<template is="{{type}}" />

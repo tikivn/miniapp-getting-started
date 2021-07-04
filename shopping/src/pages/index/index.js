@@ -1,4 +1,7 @@
 Page({
+  data: {
+    loading: true,
+  },
   onPageScroll(event) {
     if (event.scrollTop > 120) {
       my.setNavigationBar({

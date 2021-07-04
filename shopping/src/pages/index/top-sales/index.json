@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "product-item": "components/product-item/index"
+    "product-item": "components/product-item/index",
+    "skeleton": "components/skeleton/index"
   }
 }

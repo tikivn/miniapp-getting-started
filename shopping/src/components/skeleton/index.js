@@ -1,5 +1,5 @@
 Component({
   props: {
-    type: "product",
+    type: "product-column",
   },
 });

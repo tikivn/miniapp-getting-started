@@ -1,4 +1,10 @@
 <view class="products m-medium">
-  <product-item tiki:for="{{products}}" product="{{item}}" />
+  <block tiki:if="{{loading}}">
+    <skeleton tiki:for="{{[1, 2, 3, 4]}}" />
+  </block>
+
+  <block tiki:else>
+    <product-item tiki:for="{{products}}" product="{{item}}" />
+  </block>
 </view>
 

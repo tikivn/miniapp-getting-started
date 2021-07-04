@@ -1,14 +1,21 @@
-<view class="super-sales py-medium">
-  <view class="mb-medium text-center">
-    <text class="font-bold text-white text-medium">Siêu sale mở bán ngày {{saleDate}}</text>
+<block tiki:if="{{loading}}">
+  <view class="p-medium">
+    <skeleton type="product-row" />
   </view>
-  <carousel 
-    indicator-dots 
-    indicator-active-color="#FC820A" 
-    indicator-color="rgba(0, 0, 0, 0.1)"	>
-    <carousel-item tiki:for="{{products}}">
-      <product-item direction="row" product="{{item}}" />
-    </carousel-item>
-  </carousel>
-</view>
+</block>
 
+<block tiki:else>
+  <view class="super-sales py-medium">
+    <view class="mb-medium text-center">
+      <text class="font-bold text-white text-medium">Siêu sale mở bán ngày {{saleDate}}</text>
+    </view>
+    <carousel 
+      indicator-dots 
+      indicator-active-color="#FC820A" 
+      indicator-color="rgba(0, 0, 0, 0.1)"	>
+      <carousel-item tiki:for="{{products}}">
+        <product-item direction="row" product="{{item}}" />
+      </carousel-item>
+    </carousel>
+  </view>
+</block>

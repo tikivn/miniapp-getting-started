@@ -6,18 +6,22 @@ Component({
       {
         title: "10:00",
         items: [],
+        loading: true,
       },
       {
         title: "15:00",
         items: [],
+        loading: true,
       },
       {
         title: "18:00",
         items: [],
+        loading: true,
       },
       {
         title: "20:00",
         items: [],
+        loading: true,
       },
     ],
     tabIndex: 0,
@@ -33,7 +37,7 @@ Component({
       const rs = await getProducts();
       this.setData({
         tabs: this.data.tabs.map((tab, index) =>
-          index === tabIndex ? { ...tab, items: rs.data } : tab
+          index === tabIndex ? { ...tab, items: rs.data, loading: false } : tab
         ),
       });
     },

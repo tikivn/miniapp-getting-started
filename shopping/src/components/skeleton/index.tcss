@@ -1,0 +1,53 @@
+:root {
+  --skeleton-color: #E5E5E5;
+}
+
+.skeleton-wrap {
+  background: var(--white);
+  border-radius: var(--border-radius-rounded-4px);
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  overflow: hidden;
+}
+
+.skeleton-thumbnail {
+  background: var(--skeleton-color);
+  height: 50%;
+}
+
+.skeleton1 {
+  background: var(--skeleton-color);
+  width: 60%;
+  height: 16px;
+  margin: 8px;
+}
+
+.skeleton2 {
+  background: var(--skeleton-color);
+  width: 40%;
+  height: 16px;
+  margin: 8px;
+}
+
+.skeleton3 {
+  background: var(--skeleton-color);
+  width: 20%;
+  height: 16px;
+  margin: 8px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  width: 100%;
+}
+
+.skeleton-wrap-row {
+  background: var(--skeleton-color);
+  width: 100%;
+  height: 176px;
+  border-radius: var(--border-radius-rounded-4px);
+}

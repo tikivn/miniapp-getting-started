@@ -10,7 +10,11 @@
   onTabClick="onTabClick">
   <tab-content tiki:for="{{tabs}}">
     <view class="products m-medium">
-      <block tiki:for="{{item.items}}" tiki:for-item="product">
+      <block tiki:if="{{item.loading}}">
+        <skeleton tiki:for="{{[1, 2, 3, 4]}}" />
+      </block>
+
+      <block tiki:else tiki:for="{{item.items}}" tiki:for-item="product">
         <product-item product="{{product}}" />
       </block>
     </view>

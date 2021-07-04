@@ -9,7 +9,7 @@
 
     <view class="product-content">
       <image class="tiki-now" src="/images/tiki-now.svg" />
-      <text class="text-small" number-of-lines="{{3}}">{{product.name}}</text>
+      <text class="text-small" number-of-lines="{{2}}">{{product.name}}</text>
 
       <rating average="{{product.rating_average}}" count="{{product.review_count}}" />
 
