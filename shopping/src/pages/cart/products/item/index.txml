@@ -1,0 +1,19 @@
+<view class="flex mb-small">
+  <view class="flex items-center">
+    <image class="image mr-small" src="{{item.thumbnail_url}}" />
+    <view>
+      <text number-of-lines="1">{{item.name}}</text>
+      <price price="{{item.price}}" />
+      <stepper 
+        min="{{1}}" 
+        data-item="{{item}}"
+        onChange="onChange" 
+        readOnly
+        class="mt-small" 
+        value="{{item.total}}" />
+    </view>
+  </view>
+  <view class="icon" onTap="onDelete">
+    <icon size="12" type="close" />
+  </view>
+</view>

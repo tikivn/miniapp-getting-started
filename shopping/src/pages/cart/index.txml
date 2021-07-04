@@ -9,12 +9,30 @@
         quote="{{quote}}"
         onChangeAddress="onChangeAddress" 
         onChangeQuote="onChangeQuote"  />
-      <products products="{{cart.products}}" />
+      <section title="Chi tiết đơn hàng">
+        <products 
+          products="{{cart.products}}"
+          onDeleteProduct="onDeleteProduct"
+          onChangeQuantity="onChangeQuantity" />
+
+        <view class="center-between mt-4x-small">
+          <text>Tạm tính</text>
+          <price class="font-bold" price="{{cart.totalPrice}}" />
+        </view>
+        <view class="center-between mt-2x-small">
+          <text>Phí vận chuyển</text>
+          <price class="font-bold" price="{{quote ? quote.amount.fee : 0}}" />
+        </view>
+        <view class="center-between mt-2x-small">
+          <text>Tổng cộng</text>
+          <price class="font-bold" price="{{total}}" />
+        </view>
+      </section>
     </view>
 
     <view class="footer">
       <view class="flex justify-between">Tổng cộng:
-        <text class="font-bold"><price price="{{cart.totalPrice}}" /></text>
+        <price price="{{total}}" />
       </view>
       <view class="line my-small" />
       <tu-button class="app-button" shape="pill" onTap="doPayment">

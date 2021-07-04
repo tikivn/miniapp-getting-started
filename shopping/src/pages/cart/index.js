@@ -12,8 +12,10 @@ Page({
     address: null,
     quotes: [],
     quote: null,
+    total: 0,
   },
-  async onLoad() {
+  async onShow() {
+    console.log("app.cart :>> ", app.cart);
     this.setData({ cart: app.cart });
 
     // Init address
@@ -42,6 +44,32 @@ Page({
   },
   onChangeQuote(quote) {
     this.setData({ quote });
+  },
+  onChangeCart(cart) {
+    const total =
+      cart.totalPrice + ((this.data.quote && this.data.quote.fee.amount) || 0);
+    this.setData({ cart, total });
+    app.cart = cart;
+  },
+  onChangeQuantity(product, value) {
+    const products = this.data.cart.products.map((i) =>
+      i.id === product.id ? { ...i, total: value } : i
+    );
+    const totalPrice = products.reduce(
+      (sum, product) => (sum += product.price * product.total),
+      0
+    );
+    const cart = { ...this.data.cart, totalPrice, products };
+    this.onChangeCart(cart);
+  },
+  onDeleteProduct(product) {
+    const products = this.data.cart.products.filter((i) => i.id !== product.id);
+    const totalPrice = products.reduce(
+      (sum, product) => (sum += product.price * product.total),
+      0
+    );
+    const cart = { ...this.data.cart, totalPrice, products };
+    this.onChangeCart(cart);
   },
   async doPayment() {
     const { address, cart, quote } = this.data;
@@ -79,12 +107,10 @@ Page({
         total: cart.total + quote.fee.amount,
       },
     };
-    console.log("requestData :>> ", requestData);
     const res = await post(`${API_URL}/orders`, {
       token: app.auth.authToken,
       data: requestData,
     });
-    console.log("res", res);
 
     try {
       my.makePayment({

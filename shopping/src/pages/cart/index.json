@@ -7,6 +7,7 @@
     "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
     "price": "components/price/index",
     "auth": "components/auth/index",
+    "section": "components/section/index",
     "cart-empty": "./cart-empty/index",
     "shipping": "./shipping/index",
     "products": "./products/index"

@@ -51,7 +51,7 @@ Page({
     // Set TabBar Badge
     my.setTabBarBadge({
       index: 1,
-      text: app.cart.count,
+      text: app.cart.products.length,
     });
   },
 });

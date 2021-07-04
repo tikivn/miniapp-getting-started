@@ -1,8 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "stepper": "@tiki.vn/tini-ui/es/stepper/index",
-    "section": "components/section/index",
-    "price": "components/price/index"
+    "item": "./item/index"
   }
 }
