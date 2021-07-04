@@ -10,6 +10,8 @@ Page({
   data: {
     cart: app.cart,
     address: null,
+    quotes: [],
+    quote: null,
   },
   async onLoad() {
     this.setData({ cart: app.cart });
@@ -27,13 +29,16 @@ Page({
   },
   async getListQuotes() {
     const { address, cart } = this.data;
-    if (address) {
-      const quotes = await getQuotes(address, cart.products);
-      console.log("quotes :>> ", quotes);
+    if (address && cart.products.length) {
+      const rs = await getQuotes(address, cart.products);
+      const quotes = (rs && rs.quotes) || [];
+      const sorted = quotes.sort((a, b) => a.fee.amount - b.fee.amount);
+      console.log("sorted :>> ", sorted[0]);
+      this.setData({ quotes, quote: sorted[0] });
     }
   },
   onChangeAddress(address) {
-    this.setData({ address });
+    this.setData({ address }, () => this.getListQuotes());
     setRecentAddress(address);
   },
   onChangeQuote() {},

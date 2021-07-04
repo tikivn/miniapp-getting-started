@@ -19,7 +19,7 @@
   <view class="divider" />
 
   <!-- Quotes -->
-  <view class="center-between" tiki:if="{{address}}">
+  <view class="center-between" tiki:if="{{address}}" onTap="onTapQuote">
     <view tiki:if="{{!address}}">
       Chọn đơn vị vận chuyển
     </view>
@@ -39,4 +39,8 @@
 
 <block tiki:if="{{showAddress}}">
   <select-address onHide="hideAddress" />
+</block>
+
+<block tiki:if="{{showQuote}}">
+  <select-quote quote="{{quote}}" quotes="{{quotes}}" onHide="hideQuote" />
 </block>

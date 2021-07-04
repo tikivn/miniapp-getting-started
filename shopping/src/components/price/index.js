@@ -1,10 +1,11 @@
+import { formatMoney } from "../../utils/number";
+
 Component({
   data: {
     number: 0,
   },
   format(value) {
-    const number = String(`${value}`).replace(/(.)(?=(\d{3})+$)/g, "$1.");
-    this.setData({ number });
+    this.setData({ number: formatMoney(value) });
   },
   didMount() {
     this.format(this.props.price);

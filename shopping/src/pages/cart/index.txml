@@ -5,6 +5,8 @@
   <view class="container p-small">
     <shipping 
       address="{{address}}" 
+      quotes="{{quotes}}"
+      quote="{{quote}}"
       onChangeAddress="onChangeAddress" 
       onChangeQuote="onChangeQuote"  />
     <products products="{{cart.products}}" />

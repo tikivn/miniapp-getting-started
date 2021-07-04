@@ -44,11 +44,11 @@ export const getQuotes = async (address, items) => {
         quantity: item.total,
         price: item.price,
         weight: 1,
-        // dimension: {
-        //   height: Math.floor(Math.random() * 100),
-        //   width: Math.floor(Math.random() * 100),
-        //   depth: Math.floor(Math.random() * 100),
-        // },
+        dimension: {
+          height: Math.floor(Math.random() * 6) + 1,
+          width: Math.floor(Math.random() * 6) + 1,
+          depth: Math.floor(Math.random() * 6) + 1,
+        },
       };
     }),
   };

@@ -1,20 +1,39 @@
-<block tiki:if="{{show}}">
-  <bottom-sheet 
-    title="Địa chỉ nhận hàng" 
-    buttonTitle="OK" 
-    distanceFromTop="{{100}}" 
-    disableScroll
-    onClose="hideBottomSheet">
-    <view class="pt-x-small px-small flex flex-col">
-      <scroll-view class="flex-1" scroll-y>
-        <view 
-          class="item flex items-center justify-between" 
-          onTap="onSelect"
-          data-item="{{item}}"
-          tiki:for="{{address}}">
-          <text class="font-bold">{{item.name}}</text>
-        </view>
-      </scroll-view>
-    </view>
-  </bottom-sheet>
-</block>
+<import-sjs from="./index.sjs" name="utils"></import-sjs>
+
+<bottom-sheet 
+  title="Đơn vị vận chuyển" 
+  buttonTitle="OK" 
+  distanceFromTop="{{100}}" 
+  disableScroll
+  onClose="hideBottomSheet">
+  <scroll-view class="flex-1" scroll-y>
+    <radio-group>
+      <view 
+        class="pt-x-small px-small flex flex-col {{item.service.code === selected.service.code ? 'active' : ''}}"
+        onTap="onSelect"
+        data-item="{{item}}"
+        tiki:for="{{listQuotes}}">
+        <label class="flex">
+          <view style="width: 32px" class="m-5x-small">
+            <radio 
+              class="mr-small" 
+              checked="{{item.service.code === selected.service.code}}"
+              value="{{item.service.code}}" />
+          </view>
+          <image class="mr-2x-small square-40" src="https://salt.tikicdn.com/ts/upload/ce/ee/fe/a8a350727b38a1e20ce1610c5162fcb7.png" />
+          <view>
+            <text number-of-lines="1" class="font-bold mb-4x-small">
+              {{item.service.name}}
+            </text>
+            <text number-of-lines="1" class="text-small text-gray60">
+              {{utils.deliveryTagMap[item.service.code] || 'Giao tiêu chuẩn'}}
+            </text>
+          </view>
+          <text style="margin-left: auto" class="ml-2x-small font-bold">
+            {{utils.formatPrice(item.fee.amount)}}
+          </text>
+        </label>
+      </view>
+    </radio-group>
+  </scroll-view>
+</bottom-sheet>

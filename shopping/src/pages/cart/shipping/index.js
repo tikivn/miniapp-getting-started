@@ -5,7 +5,7 @@ Component({
     onChangeAddress: () => {},
     onChangeQuote: () => {},
   },
-  data: { showAddress: false },
+  data: { showAddress: false, showQuote: false },
   didMount() {
     // Get from storage to get address
   },
@@ -13,8 +13,14 @@ Component({
     onTapAddress() {
       this.setData({ showAddress: true });
     },
+    onTapQuote() {
+      this.setData({ showQuote: true });
+    },
     hideAddress() {
       this.setData({ showAddress: false });
+    },
+    hideQuote() {
+      this.setData({ showQuote: false });
     },
     selectAdddress(address) {
       this.props.onChangeAddress(address);

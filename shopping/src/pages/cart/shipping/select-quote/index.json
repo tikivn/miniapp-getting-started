@@ -1,3 +1,7 @@
 {
-  "component": true
+  "component": true,
+  "usingComponents": {
+    "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
+    "tu-button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
 }
