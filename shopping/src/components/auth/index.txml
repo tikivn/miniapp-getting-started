@@ -1,9 +1,16 @@
 <block tiki:if="{{status === authStatus.LOADING}}">
-  Loading...
+  <view class="flex m-large  justify-center">
+    <view class="loading" />
+  </view>
 </block>
 
 <block tiki:if="{{status === authStatus.FAIL}}">
-  Please login
+  <view class="flex flex-col mt-medium items-center justify-center">
+    <image style="width: 160px; height: 160px" src="/images/error.png" />
+    <view class="mt-medium">
+      Đăng nhập không thành công
+    </view>
+  </view>
 </block>
 
 <block tiki:if="{{status === authStatus.SUCCESS}}">
