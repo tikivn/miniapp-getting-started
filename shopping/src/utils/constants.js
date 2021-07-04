@@ -15,3 +15,11 @@ export const deliveryTagMap = {
   SAME_DAY: "Giao trong 2h - 4h",
   BULK: "Giao trong ngày",
 };
+
+export const descMap = {
+  successful_delivery: "đã giao xong",
+  picking: "đang trên đường",
+  delivering: "đang giao",
+  canceled: "đã huỷ",
+  failed_shipment: "không hoàn thành",
+};

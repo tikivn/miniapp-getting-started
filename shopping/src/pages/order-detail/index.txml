@@ -17,10 +17,10 @@
       </view>
     </section>
 
-    <section title="Theo dõi đơn hàng">
+    <section title="Theo dõi đơn hàng" tiki:if="{{order.trackingId}}">
       <view class="center-between">
         <text>Giao bởi {{order.partnerCode}}-{{order.serviceCode}}</text>
-        <view class="center-between" onTap="viewShipping">
+        <view class="center-between" onTap="viewTrackings" >
           <text class="text-small text-secondary">Chi tiết</text>
           <icon type="arrow_right" color="#808089" size="20" />
         </view>
@@ -31,7 +31,7 @@
         current="{{0}}" />
     </section>
 
-    <section>
+    <section title="{{!order.trackingId ? 'Theo dõi đơn hàng' : ''}}">
       <text>Địa chỉ nhận hàng</text>
       <text class="block my-4x-small">
         {{order.name}} - {{order.phone}}

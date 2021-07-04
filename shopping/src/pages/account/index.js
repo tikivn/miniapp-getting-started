@@ -60,6 +60,9 @@ Page({
     const orders = (res && res.data && res.data.orders) || [];
     const tabs = initTabs();
     orders.forEach((item) => {
+      // if (item.tracking_id) {
+      //   console.log("item :>> ", item);
+      // }
       if (item.status) {
         const order = {
           ...item,

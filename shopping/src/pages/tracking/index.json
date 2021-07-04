@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Theo dõi đơn hàng",
+  "usingComponents": {
+    "milestone": "components/milestone/index",
+    "auth": "components/auth/index"
+  }
+}

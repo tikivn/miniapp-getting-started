@@ -1,0 +1,17 @@
+<view class="p-small">
+  <view class="center-between">
+    <text class="mr-small">Trạng thái</text>
+    <text number-of-lines="1" class="font-bold">{{trackings[0].status}}</text>
+  </view>
+
+  <view class="divider" />
+
+  <view class="center-between">
+    <text class="mr-small">Đơn vị vận chuyển</text>
+    <text number-of-lines="1" class="font-bold">TNSL (từ Hồ Chí Minh)</text>
+  </view>
+
+  <view class="divider" />
+
+  <milestone current="{{0}}" items="{{trackings}}" />
+</view>

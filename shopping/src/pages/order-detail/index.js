@@ -12,11 +12,13 @@ Page({
     orderId: null,
   },
   async onLoad(event) {
-    const id = 80;
-    // const id = query.parse(event).id;
+    const id = query.parse(event).id;
     this.setData({ orderId: id });
-    app.authEvent.on("auth/success", () => this.getOrder(id));
-    // this.getOrder(orderId);
+    if (app.auth) {
+      this.getOrder(id);
+    } else {
+      app.authEvent.on("auth/success", () => this.getOrder(id));
+    }
   },
   async getOrder(id) {
     const res = await getOrder(id);
@@ -40,14 +42,16 @@ Page({
       shipping: formatMoney(res.data.order.shipping),
       serviceCode: res.data.order.service_code,
       partnerCode: res.data.order.partner_code,
-      trackingID: res.data.order.tracking_id,
+      trackingId: res.data.order.tracking_id,
       subtotal: formatMoney(res.data.order.subtotal),
       shipping: formatMoney(res.data.order.shipping),
       total: formatMoney(res.data.order.total),
     };
     this.setData({ order });
   },
-  viewShipping() {
-    my.navigateTo({ url: "pages/shipping/index" });
+  viewTrackings() {
+    my.navigateTo({
+      url: `pages/tracking/index?id=${this.data.order.trackingId}`,
+    });
   },
 });

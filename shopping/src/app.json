@@ -5,6 +5,7 @@
     "pages/cart/index",
     "pages/address/index",
     "pages/order-detail/index",
+    "pages/tracking/index",
     "pages/account/index"
   ],
   "window": {
@@ -15,7 +16,7 @@
     "items": [
       {
         "name": "Tài khoản",
-        "pagePath": "pages/order-detail/index",
+        "pagePath": "pages/account/index",
         "icon": "images/cart.png",
         "activeIcon": "images/cart_active.png"
       },
