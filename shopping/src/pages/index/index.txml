@@ -2,3 +2,4 @@
 <image src="/images/sale.png" class="sale" />
 <top-sales />
 <super-sales />
+<flash-sales />

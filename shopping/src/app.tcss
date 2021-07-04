@@ -1,5 +1,9 @@
 @import "@tiki.vn/tini-style/es/index.tcss";
 
+:root {
+  --brand: #EF4F15;
+}
+
 .footer {
   bottom: 0;
   left: 0;
@@ -13,12 +17,10 @@
 
 .app-button {
   width: calc(var(--tf-device-width) - var(--space-inset-medium) * 2);
-  background: #EF4F15;
-  border-color: #EF4F15;
 }
 
 .app-button:hover {
-  background: #EF4F15;
+  background: var(--brand);
   opacity: 0.9;
 }
 

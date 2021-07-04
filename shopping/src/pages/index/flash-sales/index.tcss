@@ -1,0 +1,15 @@
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 8px;
+  background: #FCF4DD;
+}
+
+.tab-bar {
+  background: #FCF4DD;
+}
+
+.tu-tabs-content-wrap, .content-tab {
+  background: #FCF4DD !important;
+}
+

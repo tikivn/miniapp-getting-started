@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "tabs": "@tiki.vn/tini-ui/es/tabs/index",
+    "tab-content": "@tiki.vn/tini-ui/es/tabs/tab-content/index",
+    "product-item": "components/product-item/index"
+  }
+}

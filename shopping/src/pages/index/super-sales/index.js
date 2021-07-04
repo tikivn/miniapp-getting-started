@@ -1,23 +1,15 @@
+import { getProducts } from "../../../services/products";
+
+const now = new Date();
+
 Component({
   data: {
     loading: true,
     products: [],
+    saleDate: `${now.getDate()}/${now.getMonth() + 1}`,
   },
-  didMount() {
-    // Get sales
-    my.request({
-      url: "https://tiki.vn/api/v2/landingpage/products?urlKey=nhap-bkgiam30-giam-them-30-toi-da-100k-cho-dh-tu-299k&categoryId=52942&category=52942&limit=4&page=1",
-      method: "GET",
-      headers: {
-        "User-Agent": "TikiNative",
-      },
-      success: (response) => {
-        this.setData({ products: response.data, loading: false });
-      },
-      fail: (fail) => {
-        this.setData({ loading: false });
-        console.log("Fail", fail);
-      },
-    });
+  async didMount() {
+    const rs = await getProducts();
+    this.setData({ products: rs.data, loading: false });
   },
 });

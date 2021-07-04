@@ -1,6 +1,6 @@
 <view class="super-sales py-medium">
   <view class="mb-medium text-center">
-    <text class="font-bold text-white text-medium">Siêu sale mở bán ngày 23/04</text>
+    <text class="font-bold text-white text-medium">Siêu sale mở bán ngày {{saleDate}}</text>
   </view>
   <carousel 
     indicator-dots 

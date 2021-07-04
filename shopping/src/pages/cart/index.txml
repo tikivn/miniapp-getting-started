@@ -1,6 +1,5 @@
-<!-- <cart-empty tiki:if="{{!cart || !cart.products.length}}" /> -->
 <auth>
-  <cart-empty tiki:if="{{false}}" />
+  <cart-empty tiki:if="{{!cart || !cart.products.length}}" />
 
   <block tiki:else>
     <view class="container p-small">

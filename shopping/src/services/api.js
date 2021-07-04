@@ -11,6 +11,7 @@ const request = async (url, { method, data } = {}) => {
       headers: {
         "Content-Type": "application/json",
         "X-App-Identifier": "com.gettingstarted.shopping",
+        "User-Agent": "TikiNative",
         ...(token ? { "X-Access-Token": token } : {}),
       },
       success: (res) => {

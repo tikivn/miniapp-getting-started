@@ -1,0 +1,19 @@
+<image src="/images/flash-sales.png" class="sale mt-medium" />
+
+<tabs 
+  tabs="{{tabs}}"
+  tabBarCls="tab-bar"
+  tabContentCls="content-tab"
+  className="tab-bar"
+  tabsName="flashSale"
+  activeTab="{{tabIndex}}"
+  onTabClick="onTabClick">
+  <tab-content tiki:for="{{tabs}}">
+    <view class="products m-medium">
+      <block tiki:for="{{item.items}}" tiki:for-item="product">
+        <product-item product="{{product}}" />
+      </block>
+    </view>
+  </tab-content>
+</tabs>
+

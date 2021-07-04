@@ -9,6 +9,7 @@
   },
   "usingComponents": {
     "top-sales": "./top-sales/index",
-    "super-sales": "./super-sales/index"
+    "super-sales": "./super-sales/index",
+    "flash-sales": "./flash-sales/index"
   }
 }
