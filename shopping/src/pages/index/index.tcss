@@ -13,3 +13,9 @@
 .carousel {
   margin-top: 16px;
 }
+
+.top {
+  height: 40px;
+  width: 100%;
+  background: #C7E9F9;
+}

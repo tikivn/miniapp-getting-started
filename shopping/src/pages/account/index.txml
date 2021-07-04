@@ -4,6 +4,7 @@
     tabsName="accountTab"
     activeTab="{{tabIndex}}"
     stickyBar
+    swipeable="{{false}}"
     onTabClick="onTabClick">
     <block tiki:for="{{tabs}}">
       <tab-content tabId="{{index}}">

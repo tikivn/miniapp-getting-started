@@ -15,7 +15,7 @@
     "selectedColor": "#EF4F15",
     "items": [
       {
-        "name": "Sản phẩm",
+        "name": "Trang chủ",
         "pagePath": "pages/index/index",
         "icon": "images/home.png",
         "activeIcon": "images/home_active.png"

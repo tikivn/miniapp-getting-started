@@ -1,5 +1,6 @@
 {
   "defaultTitle": "Giỏ hàng",
+  "titleBarColor": "#EF4F15",
   "usingComponents": {
     "stepper": "@tiki.vn/tini-ui/es/stepper/index",
     "tu-button": "@tiki.vn/tini-ui/es/tu-button/index",

@@ -1,12 +1,9 @@
 {
   "defaultTitle": "",
-  "titleBarColor": "#C7E9F9",
+  "titleBarColor": "#EF4F15",
   "titleColor": "#fff",
-  "transparentTitle": "none",
+  "transparentTitle": "auto",
   "backgroundColor": "#FCF4DD",
-  "window": {
-    "backgroundColor": "#FCF4DD"
-  },
   "usingComponents": {
     "top-sales": "./top-sales/index",
     "super-sales": "./super-sales/index",
