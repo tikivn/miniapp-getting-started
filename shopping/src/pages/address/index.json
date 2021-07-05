@@ -1,5 +1,6 @@
 {
   "backgroundColor": "#FFFFFF",
+  "titleBarColor": "#EF4F15",
   "usingComponents": {
     "textfield": "@tiki.vn/tini-ui/es/textfield",
     "tu-button": "@tiki.vn/tini-ui/es/tu-button/index",
