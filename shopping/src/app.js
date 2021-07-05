@@ -1,5 +1,10 @@
 import EventEmitter from "./utils/event";
 
+const initCart = () => ({
+  totalPrice: 0,
+  count: 0,
+  products: [],
+});
 App({
   authEvent: new EventEmitter(),
   refreshEvent: new EventEmitter(),
@@ -7,11 +12,8 @@ App({
   auth: null,
   address: null,
   quotes: null,
-  cart: {
-    totalPrice: 0,
-    count: 0,
-    products: [],
-  },
+  initCart,
+  cart: initCart(),
   onAppAddCart(product) {
     const index = this.cart.products.findIndex((p) => p.id === product.id);
     if (index > -1) {

@@ -19,6 +19,7 @@ Page({
     quote: null,
     total: 0,
     showFooter: true,
+    loading: false,
   },
   hasAuthListener: null,
   async initAddressAndQuote() {
@@ -47,8 +48,6 @@ Page({
       getRecentAddress(),
       getAddress(),
     ]);
-    console.log("address :>> ", address);
-    console.log("listAddress :>> ", listAddress);
     this.setData({ address, listAddress });
   },
   async getListQuotes() {
@@ -85,6 +84,10 @@ Page({
       cart.totalPrice + ((this.data.quote && this.data.quote.fee.amount) || 0);
     this.setData({ cart, total });
     app.cart = cart;
+    my.setTabBarBadge({
+      index: 1,
+      text: `${cart.products.length}`,
+    });
   },
   onChangeQuantity(product, value) {
     const products = this.data.cart.products.map((i) =>
@@ -112,7 +115,16 @@ Page({
   onHideBottomSheet() {
     this.setData({ showFooter: true });
   },
+  clearCart() {
+    this.setData({ cart: app.initCart() });
+    app.cart = app.initCart();
+    my.setTabBarBadge({
+      index: 1,
+      text: "0",
+    });
+  },
   async doPayment() {
+    this.setData({ loading: true });
     const { address, cart, quote } = this.data;
 
     const requestData = {
@@ -163,17 +175,25 @@ Page({
             buttonText: `Thử lại`,
           });
           console.log("make payment fail", err);
+          this.setData({ loading: false });
         },
         success: () => {
           console.log("success");
           my.alert({
             title: "Thanh toán thành công",
-            content: `Bạn đã thanh toán ${requestData.order.total} ₫`,
+            content:
+              "Bạn có thể kiểm tra tình trạng đơn hàng trong tab Tài khoản",
+            complete: () => {
+              this.clearCart();
+            },
           });
+          this.setData({ loading: false });
         },
       });
     } catch (error) {
       console.log("order error", error);
+      this.setData({ loading: false });
+
       my.alert({
         title: "Thanh toán thất bại",
         content: `Vui lòng thử lại`,

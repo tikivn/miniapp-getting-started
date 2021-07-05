@@ -38,7 +38,11 @@
         <price price="{{total}}" />
       </view>
       <view class="line my-small" />
-      <tu-button class="app-button" shape="pill" onTap="doPayment">
+      <tu-button 
+        class="app-button" 
+        disabled="{{!quote || loading}}" 
+        shape="pill" 
+        onTap="doPayment">
         Thanh toán
       </tu-button>
     </view>
