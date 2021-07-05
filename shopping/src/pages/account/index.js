@@ -36,17 +36,24 @@ Page({
   },
   hasAuthListener: null,
   async onLoad() {
-    if (app.auth) {
-      this.getOrders();
-    } else {
+    if (!app.auth) {
       app.authEvent.on("auth/success", () => this.getOrders());
       this.hasAuthListener = true;
+    }
+  },
+  async onShow() {
+    if (app.auth) {
+      this.getOrders();
     }
   },
   onUnload() {
     if (this.hasAuthListener) {
       app.authEvent.removeListener("auth/success");
     }
+  },
+  async onPullDownRefresh() {
+    await this.getOrders();
+    my.stopPullDownRefresh();
   },
   onTabClick({ index }) {
     this.setData({
