@@ -11,5 +11,6 @@
 
 .tu-tabs-content-wrap, .content-tab {
   background: #FCF4DD !important;
+  padding-left: 8px;
 }
 

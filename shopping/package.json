@@ -1,6 +1,6 @@
 {
   "name": "shopping",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "tiki": {
     "appIdentifier": "com.gettingstarted.shopping",
     "buildNumber": 1

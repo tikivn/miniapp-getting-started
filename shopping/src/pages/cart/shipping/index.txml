@@ -24,6 +24,8 @@
       Chọn đơn vị vận chuyển
     </view>
     <view class="flex" tiki:else>
+      <image class="hidden" src="../../../images/ship.png" />
+      <image class="hidden" src="../../../images/tiki-now.png" />
       <image 
         src="{{quote.fee.amount > 0 ? '../../../images/ship.png' : '../../../images/tiki-now.png'}}"
         class="square-40 mr-2x-small" />
