@@ -118,14 +118,13 @@ Page({
   clearCart() {
     this.setData({ cart: app.initCart() });
     app.cart = app.initCart();
-    my.setTabBarBadge({
+    my.removeTabBarBadge({
       index: 1,
-      text: "0",
     });
   },
   async doPayment() {
     this.setData({ loading: true });
-    const { address, cart, quote } = this.data;
+    const { address, total, cart, quote } = this.data;
 
     const requestData = {
       order: {
@@ -156,8 +155,8 @@ Page({
           partner_code: quote.partner_code,
           service_code: quote.service.quote,
         },
-        sub_total: cart.total,
-        total: cart.total + quote.fee.amount,
+        sub_total: cart.totalPrice,
+        total,
       },
     };
     const res = await post(`${API_URL}/orders`, {

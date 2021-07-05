@@ -3,7 +3,7 @@
   "version": "0.1.6",
   "tiki": {
     "appIdentifier": "com.gettingstarted.shopping",
-    "buildNumber": 1
+    "buildNumber": 2
   },
   "dependencies": {
     "@tiki.vn/tini-ui": "^0.1.1",
