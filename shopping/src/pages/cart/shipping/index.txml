@@ -25,7 +25,7 @@
     </view>
     <view class="flex" tiki:else>
       <image 
-        src="{{quote.fee.amount > 0 ? '/images/ship.png' : '/images/tiki-now.png'}}"
+        src="{{quote.fee.amount > 0 ? '../../../images/ship.png' : '../../../images/tiki-now.png'}}"
         class="square-40 mr-2x-small" />
       <view>
         <text>Đơn vị vận chuyển</text>

@@ -18,3 +18,7 @@
   border-radius: 100%;
   background-color: var(--gray20);
 }
+
+input {
+  color: var(--brand) !important;
+}

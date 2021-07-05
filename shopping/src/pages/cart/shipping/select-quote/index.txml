@@ -22,7 +22,7 @@
               value="{{item.service.code}}" />
           </view>
           <image 
-            src="{{item.fee.amount > 0 ? '/images/ship.png' : '/images/tiki-now.png'}}"
+            src="{{item.fee.amount > 0 ? '../../../../images/ship.png' : '../../../../images/tiki-now.png'}}"
             class="square-40 mr-2x-small" />
           <view>
             <text number-of-lines="1" class="font-bold mb-4x-small">
