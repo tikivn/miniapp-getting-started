@@ -8,7 +8,7 @@
     </view>
 
     <view class="product-content">
-      <image class="tiki-now" src="/images/tiki-now.svg" />
+      <image class="tiki-now" src="../../images/tiki-now.svg" />
       <text class="text-small product-item-name" number-of-lines="{{2}}">
         {{product.name}}
       </text>

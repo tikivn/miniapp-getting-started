@@ -1,4 +1,4 @@
-<image src="/images/flash-sales.png" class="sale mt-medium" />
+<image src="../../../images/flash-sales.png" class="sale mt-medium" />
 
 <tabs 
   tabs="{{tabs}}"

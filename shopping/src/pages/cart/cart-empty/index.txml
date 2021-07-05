@@ -1,5 +1,5 @@
 <view class="flex flex-col items-center my-medium">
-  <image class="empty" src="/images/cart_empty.png" />
+  <image class="empty" src="../../../images/cart_empty.png" />
   <text>Giỏ hàng của bạn đang trống</text>
   <tu-button class="app-button mt-medium" shape="pill" onTap="onGoToHome">
     Tiếp tục mua sắm

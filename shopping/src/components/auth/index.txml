@@ -6,7 +6,7 @@
 
 <block tiki:if="{{status === authStatus.FAIL}}">
   <view class="flex flex-col mt-medium items-center justify-center">
-    <image style="width: 160px; height: 160px" src="/images/error.png" />
+    <image style="width: 160px; height: 160px" src="../../images/error.png" />
     <view class="mt-medium">
       Đăng nhập không thành công
     </view>

@@ -8,7 +8,7 @@
   </view>
   <view class="p-medium">
     <view>
-      <image class="tiki-now mr-2x-small" src="/images/tiki-now.svg" />
+      <image class="tiki-now mr-2x-small" src="../../images/tiki-now.svg" />
       | {{product.name}}
     </view>
     <view class="flex flex-row items-center">

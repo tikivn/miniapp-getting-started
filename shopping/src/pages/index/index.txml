@@ -1,6 +1,6 @@
 <view class="top" />
-<image src="/images/banner.png" class="banner" />
-<image src="/images/sale.png" class="sale" />
+<image src="../../images/banner.png" class="banner" />
+<image src="../../images/sale.png" class="sale" />
 <top-sales />
 <super-sales />
 <flash-sales />

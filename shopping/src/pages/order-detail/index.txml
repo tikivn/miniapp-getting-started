@@ -39,7 +39,7 @@
       <text class="text-small text-secondary">{{order.address}}</text>
       <view class="divider" />
       <view class="flex">
-        <image src="/images/tiki-now.png" class="square-40 mr-2x-small" />
+        <image src="../../images/tiki-now.png" class="square-40 mr-2x-small" />
         <view>
           <text>Hình thức giao hàng</text>
           <text class="block font-bold my-4x-small">
@@ -66,7 +66,7 @@
         <view class="divider" />
       </block>
       <view class="flex">
-        <image class="square-40 mr-2x-small" src="/images/tiki-now.png" />
+        <image class="square-40 mr-2x-small" src="../../images/tiki-now.png" />
         <view>
           <text number-of-lines="{{1}}" class="font-bold">Chi phí vận chuyển</text>
           <text class="text-small text-secondary block mt-4-small">
@@ -79,7 +79,7 @@
     <section class="Thông tin thanh toán">
       <!-- Mock Data -->
       <view class="flex">
-        <image class="square-40 mr-2x-small" src="/images/cybersource.png" />
+        <image class="square-40 mr-2x-small" src="../../images/cybersource.png" />
         <view>
           <text>Hình thức thanh toán</text>
           <text class="font-bold block mt-4-small">
