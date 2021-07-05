@@ -1,3 +1,8 @@
 .active {
   background-color: rgba(26, 148, 255, 0.1);
 }
+
+.quote-price {
+  margin-left: auto;
+  min-width: 60px;
+}

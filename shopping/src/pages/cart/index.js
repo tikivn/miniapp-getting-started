@@ -1,6 +1,10 @@
 import { post } from "../../services/api";
 import { getQuotes } from "../../services/shipping";
-import { getRecentAddress, setRecentAddress } from "../../utils/storage";
+import {
+  getAddress,
+  getRecentAddress,
+  setRecentAddress,
+} from "../../utils/storage";
 
 const app = getApp();
 
@@ -10,32 +14,61 @@ Page({
   data: {
     cart: app.cart,
     address: null,
+    listAddress: [],
     quotes: [],
     quote: null,
     total: 0,
+    showFooter: true,
   },
-  async onShow() {
-    console.log("app.cart :>> ", app.cart);
-    this.setData({ cart: app.cart });
-
-    // Init address
-    await this.initAddress();
-    // Init quotes
-    this.getListQuotes();
-  },
-  async initAddress() {
-    const recentAddress = await getRecentAddress();
-    if (recentAddress) {
-      this.setData({ address: recentAddress });
+  hasAuthListener: null,
+  async initAddressAndQuote() {
+    if (app.auth) {
+      await this.initAddress();
+      this.getListQuotes();
     }
   },
+  onLoad() {
+    app.addressEvent.on("address/update", () => this.initAddressAndQuote());
+    if (!app.auth) {
+      app.authEvent.on("auth/success", async () => this.initAddressAndQuote());
+      this.hasAuthListener = true;
+    }
+  },
+  onUnload() {
+    app.addressEvent.removeListener("address/update");
+    this.hasAuthListener && app.addressEvent.removeListener("auth/success");
+  },
+  async onShow() {
+    this.setData({ cart: app.cart });
+    this.initAddressAndQuote();
+  },
+  async initAddress() {
+    const [address, listAddress] = await Promise.all([
+      getRecentAddress(),
+      getAddress(),
+    ]);
+    console.log("address :>> ", address);
+    console.log("listAddress :>> ", listAddress);
+    this.setData({ address, listAddress });
+  },
   async getListQuotes() {
-    const { address, cart } = this.data;
+    const { address, quote, cart } = this.data;
     if (address && cart.products.length) {
       const rs = await getQuotes(address, cart.products);
       const quotes = (rs && rs.quotes) || [];
-      const sorted = quotes.sort((a, b) => a.fee.amount - b.fee.amount);
-      this.setData({ quotes, quote: sorted[0] });
+      if (
+        !quote ||
+        !quotes.some(
+          (q) =>
+            q.service.code === quote.service.code &&
+            q.partner_code == quote.partner_code
+        )
+      ) {
+        const sorted = quotes.sort((a, b) => a.fee.amount - b.fee.amount);
+        this.setData({ quotes, quote: sorted[0] });
+      } else {
+        this.setData({ quotes });
+      }
     }
   },
   onChangeAddress(address) {
@@ -43,7 +76,9 @@ Page({
     setRecentAddress(address);
   },
   onChangeQuote(quote) {
-    this.setData({ quote });
+    const { cart } = this.data;
+    const total = cart.totalPrice + ((quote && quote.fee.amount) || 0);
+    this.setData({ quote, total });
   },
   onChangeCart(cart) {
     const total =
@@ -70,6 +105,12 @@ Page({
     );
     const cart = { ...this.data.cart, totalPrice, products };
     this.onChangeCart(cart);
+  },
+  onShowBottomSheet() {
+    this.setData({ showFooter: false });
+  },
+  onHideBottomSheet() {
+    this.setData({ showFooter: true });
   },
   async doPayment() {
     const { address, cart, quote } = this.data;

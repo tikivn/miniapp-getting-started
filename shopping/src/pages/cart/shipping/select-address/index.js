@@ -27,11 +27,13 @@ Component({
     },
     addNewAddress() {
       my.navigateTo({ url: "pages/address/index" });
+      this.hideBottomSheet();
     },
     editAddress(event) {
       my.navigateTo({
         url: `pages/address/index?id=${event.target.dataset.item.id}`,
       });
+      this.hideBottomSheet();
     },
     submit() {
       const { recentAddress, selectedAddress } = this.data;

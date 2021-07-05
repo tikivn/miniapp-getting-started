@@ -5,6 +5,7 @@
   buttonTitle="OK" 
   distanceFromTop="{{100}}" 
   disableScroll
+  onClick="submit"
   onClose="hideBottomSheet">
   <scroll-view class="flex-1" scroll-y>
     <radio-group>
@@ -31,7 +32,8 @@
       </view>
     </radio-group>
   </scroll-view>
-  <view class="center-between px-small" onTap="addNewAddress">
+  <view class="divider" />
+  <view class="center-between px-small mb-2x-small" onTap="addNewAddress">
     <text>Thêm địa chỉ mới</text>
     <icon type="arrow_right" color="#808089" />
   </view>

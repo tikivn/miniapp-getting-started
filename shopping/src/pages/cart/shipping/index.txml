@@ -1,4 +1,4 @@
-<import-sjs from="./utils.sjs" name="{ formatAddress }"></import-sjs>
+<import-sjs from="./utils.sjs" name="{ formatAddress, deliveryTagMap }"></import-sjs>
 
 <section title="Hình thức giao hàng">
   <!-- Address -->
@@ -24,13 +24,17 @@
       Chọn đơn vị vận chuyển
     </view>
     <view class="flex" tiki:else>
-      <image class="square-40 mr-2x-small" src="/images/home.png" />
+      <image 
+        src="{{quote.fee.amount > 0 ? '/images/ship.png' : '/images/tiki-now.png'}}"
+        class="square-40 mr-2x-small" />
       <view>
         <text>Đơn vị vận chuyển</text>
         <view class="font-bold my-4x-small">
-          {{quote.service.code}}
+          {{quote.partner_code}} - {{quote.service.code}}
         </view>
-        <text class="text-gray60 text-small">Giao ngay 2h - 3h</text>
+        <text class="text-gray60 text-small">
+          {{deliveryTagMap[quote.service.code] || 'Giao tiêu chuẩn'}}
+         </text>
       </view>
     </view>
     <icon type="arrow_right" color="#808089" />

@@ -5,9 +5,12 @@
     <view class="container p-small">
       <shipping 
         address="{{address}}" 
+        listAddress="{{listAddress}}"
         quotes="{{quotes}}"
         quote="{{quote}}"
         onChangeAddress="onChangeAddress" 
+        onShowBottomSheet="onShowBottomSheet"
+        onHideBottomSheet="onHideBottomSheet"
         onChangeQuote="onChangeQuote"  />
       <section title="Chi tiết đơn hàng">
         <products 
@@ -21,7 +24,7 @@
         </view>
         <view class="center-between mt-2x-small">
           <text>Phí vận chuyển</text>
-          <price class="font-bold" price="{{quote ? quote.amount.fee : 0}}" />
+          <price class="font-bold" price="{{quote ? quote.fee.amount : 0}}" />
         </view>
         <view class="center-between mt-2x-small">
           <text>Tổng cộng</text>
@@ -30,7 +33,7 @@
       </section>
     </view>
 
-    <view class="footer">
+    <view class="footer" tiki:if="{{showFooter}}">
       <view class="flex justify-between">Tổng cộng:
         <price price="{{total}}" />
       </view>

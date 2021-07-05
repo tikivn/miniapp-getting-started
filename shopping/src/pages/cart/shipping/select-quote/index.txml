@@ -21,16 +21,18 @@
               checked="{{item.service.code === selected.service.code}}"
               value="{{item.service.code}}" />
           </view>
-          <image class="mr-2x-small square-40" src="https://salt.tikicdn.com/ts/upload/ce/ee/fe/a8a350727b38a1e20ce1610c5162fcb7.png" />
+          <image 
+            src="{{item.fee.amount > 0 ? '/images/ship.png' : '/images/tiki-now.png'}}"
+            class="square-40 mr-2x-small" />
           <view>
             <text number-of-lines="1" class="font-bold mb-4x-small">
-              {{item.service.name}}
+              {{item.partner_code}} - {{item.service.code}}
             </text>
             <text number-of-lines="1" class="text-small text-gray60">
               {{utils.deliveryTagMap[item.service.code] || 'Giao tiêu chuẩn'}}
             </text>
           </view>
-          <text style="margin-left: auto" class="ml-2x-small font-bold">
+          <text class="quote-price ml-2x-small font-bold">
             {{utils.formatPrice(item.fee.amount)}}
           </text>
         </label>

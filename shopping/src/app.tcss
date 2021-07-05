@@ -11,6 +11,7 @@
   position: fixed;
   padding: var(--space-inset-2x-small) var(--space-inset-medium);
   margin-bottom: var(--safe-area-inset-bottom);
+  border-top: solid 1px var(--gray20);
   background: var(--white);
   z-index: 2;
 }
@@ -21,6 +22,11 @@
 }
 
 .app-button:hover {
+  background: var(--brand);
+  opacity: 0.9;
+}
+
+button:hover {
   background: var(--brand);
   opacity: 0.9;
 }

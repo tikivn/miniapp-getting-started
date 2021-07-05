@@ -9,6 +9,7 @@ import {
   getAddress,
 } from "../../utils/storage";
 
+const app = getApp();
 const validateFn = {
   name: validate.validateName,
   email: validate.validateEmail,
@@ -68,13 +69,21 @@ Page({
     this.checkFormValid = this.checkFormValid.bind(this);
   },
   async onSubmit() {
-    const { formValue } = this.data;
+    const { formValue, addressId } = this.data;
     const recentAddress = await getRecentAddress();
-    if (!recentAddress || recentAddress.id === formValue.id) {
+    if (!recentAddress || !addressId || recentAddress.id === formValue.id) {
       await Promise.all([setAddress(formValue), setRecentAddress(formValue)]);
     } else {
       await setAddress(formValue);
     }
+
+    app.addressEvent.emit("address/update");
+    my.showToast({
+      type: "success",
+      content: "Lưu địa chỉ thành công",
+      duration: 3000,
+    });
+    my.navigateBack();
   },
   checkFormValid() {
     const { formValue, errors } = this.data;
