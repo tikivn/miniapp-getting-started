@@ -2,10 +2,17 @@
 # yarn lockfile v1
 
 
-"@tiki-miniapp/tiny-ui@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@tiki-miniapp/tiny-ui/-/tiny-ui-0.0.1.tgz#10e7297d64635c2d1f38ce1b37752bc9e36a7abc"
-  integrity sha512-xSzsjP49/DMhIrqq0XS2qJ/rGUMNBLNtP1tx83pmZ4ZwksVaiUUB1t7HbKD9y5f9AmnvMx8NbOphJ0QzH5mlHg==
+"@tiki.vn/tini-style@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.1.tgz#6333d4b85e2a153443fadf25fd0127dc8c4d0ee4"
+  integrity sha512-V0JVBhsYmQ7Ue/NZ770Do6SxnJ2uvchAu13Y2pGkSXgfNflLhAY7r/I8QOyfOxvFhlaMLLH4i1KF6amk+vw9NA==
+
+"@tiki.vn/tini-ui@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.1.tgz#0cb280095516c5413608c29f392ddb4897943e12"
+  integrity sha512-4H4z1Vrxo9UdA64o0y4lvbtb/y8z0ZyD9dZIDUrR0bIymx/3Dh0IpZCdZNolqwNQ9YlECisJjSn4Id+RIrSzdA==
+  dependencies:
+    "@tiki.vn/tini-style" "0.1.1"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
