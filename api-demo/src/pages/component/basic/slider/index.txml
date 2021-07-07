@@ -1,0 +1,13 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Slider allow users to select option(s) within a range." />
+
+  <block-variant header="Variants" title="State" description="Default, Hover, Focus, Active and Disabled.">
+    <view class="item">
+      <slider value="{{value}}" onChange="onChange" onChanging="onChanging" />
+    </view>
+    <view class="item">
+      <slider disabled value="{{20}}" />
+    </view>
+  </block-variant>
+</view>

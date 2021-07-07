@@ -97,6 +97,10 @@ const basicComponents = [
         name: "Picker View",
         path: "/pages/component/basic/picker-view/index",
       },
+      {
+        name: "Slider",
+        path: "/pages/component/basic/slider/index",
+      },
     ],
   },
   {
