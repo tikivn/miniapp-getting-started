@@ -2,6 +2,7 @@
   <block-header title="Usage" description="Allows play an audio on app" />
   <view class="block-content">
     <audio 
+      style="padding: 0"
       id="audio1" 
       poster="https://cdn5.vectorstock.com/i/1000x1000/00/99/poster-sound-microphone-vector-21990099.jpg"
       src="https://file-examples-com.github.io/uploads/2017/11/file_example_MP3_5MG.mp3" 
