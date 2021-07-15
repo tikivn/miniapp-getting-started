@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Check latest version" />
+  <view class="block-content">
+    <button class="button-full" onTap="onCheckLatestVersion">Check Latest Version</button>
+  </view>
+</view>
