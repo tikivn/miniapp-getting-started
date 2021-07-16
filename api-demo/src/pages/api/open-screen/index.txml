@@ -1,0 +1,17 @@
+<view>
+  <block-header title="Usage" description="Open a screen" />
+  <view class="block-content">
+    <input class="form-value" placeholder="Product ID" name="productId" onInput="productIdChange"></input>
+    <button class="button-full" onTap="onOpenProductDetail">Open Product detail</button>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onOpenFeed">Open Feed</button>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onOpenListing">Open Listing</button>
+  </view>
+  <view class="block-content">
+    <input class="form-value" placeholder="Tiki ID" name="tikiId" onInput="tikiIDChange"></input>
+    <button class="button-full" onTap="onOpenProfile">Open Profile</button>
+  </view>
+</view>

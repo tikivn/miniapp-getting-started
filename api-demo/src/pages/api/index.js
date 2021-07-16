@@ -98,8 +98,8 @@ const mediaImageAPIList = [
 
 const deeplinkAPIList = [
   {
-    name: "Open Deeplink",
-    path: "/pages/api/deep-link/index",
+    name: "Open Screen",
+    path: "/pages/api/open-screen/index",
   },
 ].filter(filterNotImplementedPages);
 
@@ -124,6 +124,12 @@ const storageAPIList = [
   },
 ];
 
+const updateClientAPIList = [
+  {
+    name: "Check Latest Version",
+    path: "pages/api/update-client/index",
+  },
+];
 const deviceAPIList = [
   {
     name: "SDK Version",
@@ -187,7 +193,7 @@ const APIList = [
     list: mediaImageAPIList,
   },
   {
-    type: "Deeplink",
+    type: "Open Screen",
     list: deeplinkAPIList,
   },
   {
@@ -197,6 +203,10 @@ const APIList = [
   {
     type: "Location",
     list: locationAPIList,
+  },
+  {
+    type: "Update Client",
+    list: updateClientAPIList,
   },
 ];
 
