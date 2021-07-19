@@ -1,4 +1,4 @@
-import source from "../../../../images/app_logo.png";
+import source from "../../../../images/component_bg.png";
 
 Page({
   data: {
