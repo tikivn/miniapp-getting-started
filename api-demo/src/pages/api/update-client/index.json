@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "my.openDeeplink",
+  "defaultTitle": "my.askDownloadNewClient",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }
