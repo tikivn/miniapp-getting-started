@@ -57,6 +57,7 @@
     "pages/component/basic/picker/index",
     "pages/component/basic/picker-view/index",
     "pages/component/basic/slider/index",
+    "pages/component/basic/map/index",
     "pages/component/advance/actions/button/index",
     "pages/component/advance/actions/button-bar/index",
     "pages/component/advance/form/input/index",

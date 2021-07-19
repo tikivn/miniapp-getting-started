@@ -120,6 +120,15 @@ const basicComponents = [
       },
     ],
   },
+  {
+    name: "Map",
+    components: [
+      {
+        name: "Map",
+        path: "/pages/component/basic/map/index",
+      },
+    ],
+  },
 ];
 
 const advancedComponents = [
