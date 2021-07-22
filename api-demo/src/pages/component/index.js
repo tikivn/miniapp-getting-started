@@ -50,7 +50,7 @@ const basicComponents = [
       },
       {
         name: "Icon",
-        path: "/pages/component/basic/icon/index",
+        path: "/pages/component/basic/foundation/icons/index",
       },
       {
         name: "Progress",
