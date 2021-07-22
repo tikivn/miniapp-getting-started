@@ -1,6 +1,6 @@
 <view class="page-container">
   <view class="banner" >
-    <image class="component-logo" src="../../images/app_logo.png" />
+    <image class="component-logo" src="/images/app_logo.png" />
     <view class="search">
       <input placeholder="Tìm kiếm thành phần/API" />
     </view>
