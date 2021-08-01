@@ -1,7 +1,7 @@
 <view class="page-container">
   <view class="banner" >
     <view class="search">
-      <input placeholder="Tìm kiếm thành phần/API" />
+      <input placeholder="Tìm kiếm thành phần/API" onFocus="goToSearch" />
     </view>
   </view>
   <view class="content">

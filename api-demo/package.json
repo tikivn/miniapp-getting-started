@@ -7,5 +7,8 @@
   },
   "dependencies": {
     "@tiki.vn/tini-ui": "0.1.2-rc.13"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
   }
 }

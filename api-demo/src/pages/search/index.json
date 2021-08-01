@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Search",
+  "backgroundColor": "#FFF",
+  "usingComponents": {
+    "list": "components/list/index",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index"
+  }
+}
