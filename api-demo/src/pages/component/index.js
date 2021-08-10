@@ -17,7 +17,4 @@ Page({
       [tabsName]: index,
     });
   },
-  goToSearch() {
-    my.navigateTo({ url: 'pages/search/index' });
-  },
 });

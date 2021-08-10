@@ -7,7 +7,4 @@ Page({
   onListPress(path) {
     my.navigateTo({ url: path });
   },
-  goToSearch() {
-    my.navigateTo({ url: 'pages/search/index' });
-  },
 });

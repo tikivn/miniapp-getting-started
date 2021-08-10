@@ -1,0 +1,14 @@
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  background: var(--white);
+  border-radius: 4px;
+  color: var(--gray60);
+  border: 1px solid var(--gray30);
+}
+
+.search-wrapper text {
+  margin-left: 8px;
+  line-height: 24px;
+}

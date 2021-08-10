@@ -3,6 +3,7 @@
   "titleColor": "#fff",
   "transparentTitle": "none",
   "usingComponents": {
-    "list": "components/list/index"
+    "list": "components/list/index",
+    "search": "components/search/index"
   }
 }

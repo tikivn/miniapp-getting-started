@@ -1,0 +1,4 @@
+<view class="search-wrapper" onTap="goToSearch">
+  <icon type="search" />
+  <text>Component name / API</text>
+</view>
