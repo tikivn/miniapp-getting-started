@@ -1,0 +1,15 @@
+<view>
+  <block-header title="Usage" description="Navigate Lvl 2" />
+
+  <view class="block-content">
+    <view class="component-item">
+      <button style="width: 100%;" onTap="back">
+        Back 
+      </button>
+      <button style="width: 100%;" onTap="backToHome">
+        Back to home
+      </button>
+    </view>
+  </view>
+
+</view>

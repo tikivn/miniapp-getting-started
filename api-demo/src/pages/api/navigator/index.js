@@ -1,7 +1,7 @@
 Page({
   navigateTo() {
     my.navigateTo({
-      url: "pages/api/alert/index",
+      url: "pages/api/navigator/navigator-lvl2/index",
     });
   },
 
