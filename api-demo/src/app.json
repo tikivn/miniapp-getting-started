@@ -2,6 +2,7 @@
   "pages": [
     "pages/component/index",
     "pages/api/index",
+    "pages/search/index",
     "pages/api/animation/index",
     "pages/api/alert/index",
     "pages/api/confirm/index",

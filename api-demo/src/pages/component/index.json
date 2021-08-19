@@ -2,6 +2,7 @@
   "defaultTitle": "",
   "usingComponents": {
     "list": "components/list/index",
+    "search": "components/search/index",
     "tabs": "@tiki.vn/tini-ui/es/tabs/index",
     "tab-content": "@tiki.vn/tini-ui/es/tabs/tab-content/index"
   }

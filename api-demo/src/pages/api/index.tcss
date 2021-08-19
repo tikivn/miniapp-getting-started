@@ -11,11 +11,12 @@
   background-size: 100%;
   background-repeat: no-repeat;
   position: relative;
+  padding-bottom: 16px;
 }
 
 .search {
   height: 22px;
-  width: 100%;
+  margin: 16px;
 }
 
 .search input {
@@ -41,10 +42,8 @@
   margin-bottom: 8px;
 }
 
-
-
 .content {
-  margin-top: 32px;
+  margin-top: 16px;
 }
 
 .block {

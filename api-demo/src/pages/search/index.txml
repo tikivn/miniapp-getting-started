@@ -1,0 +1,23 @@
+<view class="sticky p-medium">
+  <textfield 
+    focus 
+    placeholder="Tìm kiếm thành phần/API"
+    onInput="onInput" 
+    shape="pill" 
+    iconLeft="search" />
+  <view class="divider mb-small" />
+</view>
+
+<view class="list-container" tiki:if="{{components.length}}">
+  <list header="Components" items="{{components}}" />
+</view>
+
+<view class="list-container" tiki:if="{{apis.length}}">
+  <list header="APIs" items="{{apis}}" />
+</view>
+
+<view class="mt-medium flex flex-col items-center justify-center" tiki:if="{{notFound}}">
+  <image class="not-found" src="/images/app-not-found.png" />
+  <text class="mt-medium">Not found!</text>
+</view>
+

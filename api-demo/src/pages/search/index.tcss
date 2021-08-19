@@ -1,0 +1,27 @@
+.list-container {
+  margin: 0;
+  padding: 0 8px 8px;
+}
+
+.header {
+  margin-bottom: 0;
+}
+
+.sticky {
+  background: var(--white);
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.divider {
+  height: 4px;
+  width: calc(100% + 32px);
+  margin: 16px -16px 0;
+  background: var(--gray20);
+}
+
+.not-found {
+  width: 200px;
+  height: 200px;
+}
