@@ -14,7 +14,7 @@
       <button class="canvas-button" type="primary" onTap="toTempFilePath">toTempFilePath</button>
       <button class="canvas-button" type="primary" onTap="getImageData">getImageData</button>
       <button class="canvas-button" type="primary" onTap="putImageData">putImageData</button>
-      <button class="canvas-button" type="primary" onTap="preloadCanvasImage">preloadCanvasImage</button>
+      <!-- <button class="canvas-button" type="primary" onTap="preloadCanvasImage">preloadCanvasImage</button> -->
     </scroll-view>
   </view>
 </view>
