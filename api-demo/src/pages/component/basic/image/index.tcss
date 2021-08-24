@@ -2,3 +2,9 @@
   width: 100px;
   height: 100px;
 }
+
+.bg-image {
+  background-image: url("../../../../images/component_bg.png");
+  width: 100px;
+  height: 100px;
+}

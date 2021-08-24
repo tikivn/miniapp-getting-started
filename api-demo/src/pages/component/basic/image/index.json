@@ -1,6 +1,7 @@
 {
   "defaultTitle": "image",
   "usingComponents": {
-    "block-header": "components/block-header/index"
+    "block-header": "components/block-header/index",
+    "image-component": "components/image-component/index"
   }
 }

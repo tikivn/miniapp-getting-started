@@ -1,0 +1,5 @@
+<view>
+  <slot></slot>
+  Inside component (use page path)
+  <image src="./images/component_bg.png" /> 
+</view>

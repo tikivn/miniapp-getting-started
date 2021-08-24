@@ -2,12 +2,59 @@
 <view>
   <view class="block-content">
     <view class="component-item">
-      <image onLoad="onLoad" onTap="onTap" src="{{source}}" class="image-item" />
+      <view>
+        Custom Component
+      </view>
+      <image-component>
+        <view>
+          Outside component
+          <image src="./images/component_bg.png" />
+        </view>
+      </image-component>
     </view>
     <view class="component-item">
+      <view>
+        .bg-image {
+          background-image: url("/images/component_bg.png");
+        }
+      </view>
+      <view class="bg-image"></view>
+    </view>
+    <view class="component-item">
+      <view>
+        background-image: url('./images/component_bg.png'); width: 100px; height: 100px
+      </view>
+      <view style="background-image: url('../../../../images/tiki-now.jpeg'); background-position: center; width: 100px; height: 100px"></view>
+    </view>
+    <view class="component-item">
+      <view>
+        src = data.imagePath ({{imagePath}})
+      </view>
+      <image src="{{imagePath}}" />
+    </view>
+    <view class="component-item">
+      <view>
+        src = "./images/component_bg.png"
+      </view>
+      <image src="./images/component_bg.png" />
+    </view>
+    <view class="component-item">
+      <view>
+        src = "/images/component_bg.png"
+      </view>
+      <image src="/images/component_bg.png" />
+    </view>
+    <view class="component-item">
+      <view>
+        src = "../../../../images/component_bg.png"
+      </view>
       <image src="../../../../images/component_bg.png" />
     </view>
+    
     <view class="component-item">
+      <view>
+        src = "https://via.placeholder.com/300.png"
+      </view>
       <image src="https://via.placeholder.com/300.png" />
     </view>
   </view>
