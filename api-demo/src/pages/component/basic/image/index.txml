@@ -24,7 +24,7 @@
       <view>
         background-image: url('./images/component_bg.png'); width: 100px; height: 100px
       </view>
-      <view style="background-image: url('../../../../images/tiki-now.jpeg'); background-position: center; width: 100px; height: 100px"></view>
+      <view style="background: url('../../../../images/tiki-now.jpeg'); background-position: center; width: 100px; height: 100px"></view>
     </view>
     <view class="component-item">
       <view>
