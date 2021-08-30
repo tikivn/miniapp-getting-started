@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "contact",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

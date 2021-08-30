@@ -199,6 +199,10 @@ const advancedComponents = [
         path: '/pages/component/advance/form/text-field/index',
       },
       {
+        name: 'Dropdown',
+        path: '/pages/component/advance/form/dropdown/index',
+      },
+      {
         name: 'Text area',
         path: '/pages/component/advance/form/text-area/index',
       },

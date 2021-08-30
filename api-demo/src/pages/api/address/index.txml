@@ -1,0 +1,25 @@
+<view>
+  <block-header title="Usage" description="Address" />
+
+  <view class="block-content">
+    <address 
+      streetErrorMsg="{{streetErrorMsg}}"
+      cityErrorMsg="{{cityErrorMsg}}"
+      districtErrorMsg="{{districtErrorMsg}}"
+      wardErrorMsg="{{wardErrorMsg}}"
+      streetLabel="Địa chỉ nhận hàng"
+      streetPlaceholder="Nhập số nhà, tên đường..."
+      street="{{address.street}}"
+      city="{{address.city_id}}"
+      district="{{address.district_id}}"
+      ward="{{address.ward_id}}"
+      full_name="{{address.full_name}}"
+      phone_number="{{address.phone_number}}"
+      onChangeAddress="onChangeAddress" 
+      onFullAddress="onFullAddress" />
+
+    <button onTap="showAddress">Get Address</button>
+    <button onTap="create">Create Address</button>
+    <button onTap="update">Update Address</button>
+  </view>
+</view>

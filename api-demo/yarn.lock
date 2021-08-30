@@ -2,19 +2,32 @@
 # yarn lockfile v1
 
 
-"@tiki.vn/tini-style@0.1.2-rc.13+26fb292":
-  version "0.1.2-rc.13"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.2-rc.13.tgz#fe648969f6d93eb45cbf9801288c4f151077f893"
-  integrity sha512-u701whgaAE57ulxcItgQO0WcN0vdcgu/n8UHAhL8Wg09SbV7TXF71hdcruIguFpN0Ac7z5gMCO3t6yDawfY5Sw==
-
-"@tiki.vn/tini-ui@0.1.2-rc.13":
-  version "0.1.2-rc.13"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.2-rc.13.tgz#1f5aa88c2fa8a396a82f1af14d909f2e896c67ff"
-  integrity sha512-0EctrDF8DlmOAPZnw1qRHV8hRJUeXbEn9+sSPdEXQPt46TJOTNF4D+u6N/2NDtHoHtInKmK28WtvbFxp2WWYsg==
+"@babel/runtime@^7.15.3":
+  version "7.15.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.15.3.tgz#2e1c2880ca118e5b2f9988322bd8a7656a32502b"
+  integrity sha512-OvwMLqNXkCXSz1kSm58sEsNuhqOx/fKpnUnKnFB5v8uDda5bLNEHNgKPvhDN6IU0LDcnHQ90LlJ0Q6jnyBSIBA==
   dependencies:
-    "@tiki.vn/tini-style" "0.1.2-rc.13+26fb292"
+    regenerator-runtime "^0.13.4"
+
+"@tiki.vn/tini-style@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.1.tgz#6333d4b85e2a153443fadf25fd0127dc8c4d0ee4"
+  integrity sha512-V0JVBhsYmQ7Ue/NZ770Do6SxnJ2uvchAu13Y2pGkSXgfNflLhAY7r/I8QOyfOxvFhlaMLLH4i1KF6amk+vw9NA==
+
+"@tiki.vn/tini-ui@0.1.2-rc.24":
+  version "0.1.2-rc.24"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.2-rc.24.tgz#e91693b9826d08bcd0ee9b038472845bff7a749f"
+  integrity sha512-fZeT58ujcsgD1zydL1jjr4KpcvBLdulXHDc6PQG45J8RRrNsWC1e6XXQaesP6X1c7HJFsV1TTD8FFkNUWFZgMw==
+  dependencies:
+    "@babel/runtime" "^7.15.3"
+    "@tiki.vn/tini-style" "0.1.1"
 
 prettier@^2.3.2:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.3.2.tgz#ef280a05ec253712e486233db5c6f23441e7342d"
   integrity sha512-lnJzDfJ66zkMy58OL5/NY5zp70S7Nz6KqcKkXYzn2tMVrNxvbqaBpg7H3qHaLxCJ5lNMsGuM8+ohS7cZrthdLQ==
+
+regenerator-runtime@^0.13.4:
+  version "0.13.9"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.9.tgz#8925742a98ffd90814988d7566ad30ca3b263b52"
+  integrity sha512-p3VT+cOEgxFsRRA9X4lkI1E+k2/CtnKtU4gcxyaCUreilL/vqI6CdZ3wxVUx3UOUg+gnUOQQcRI7BmSI656MYA==

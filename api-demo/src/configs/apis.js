@@ -14,6 +14,10 @@ const openAPIList = [
     path: 'pages/api/is-user-logged/index',
   },
   {
+    name: 'Address',
+    path: 'pages/api/address/index',
+  },
+  {
     name: 'Request Payment',
     // path: 'pages/api/request-payment/index',
   },
@@ -59,6 +63,10 @@ const interfaceAPIList = [
   {
     name: 'Canvas',
     path: 'pages/api/canvas/index',
+  },
+  {
+    name: 'Contact',
+    path: 'pages/api/contact/index',
   },
 ].filter(filterNotImplementedPages);
 

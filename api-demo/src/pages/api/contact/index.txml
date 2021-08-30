@@ -1,0 +1,7 @@
+<view>
+  <block-header title="Usage" description="Contact" />
+
+  <view class="block-content">
+    <button onTap="choosePhoneContact">Choose phone contact</button>
+  </view>
+</view>

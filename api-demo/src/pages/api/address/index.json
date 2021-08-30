@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "address",
+  "usingComponents": {
+    "block-header": "components/block-header/index",
+    "address": "@tiki.vn/tini-ui/es/address/index"
+  }
+}
