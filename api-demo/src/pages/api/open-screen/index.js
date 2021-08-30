@@ -2,10 +2,16 @@ Page({
   data: {
     productId: undefined,
     tikiId: undefined,
+    slug,
   },
   productIdChange(e) {
     this.setData({
       productId: e.detail.value,
+    });
+  },
+  slugChange(e) {
+    this.setData({
+      slug: e.detail.value,
     });
   },
   tikiIDChange(e) {
@@ -51,6 +57,29 @@ Page({
     my.openScreen({
       screenCode: "TK_PROFILE",
       params: { tikiid: this.data.tikiId },
+      success: (res) => {
+        console.log(res);
+      },
+      fail: (e) => {
+        console.log(e);
+      },
+    });
+  },
+  onOpenSellerStore() {
+    my.openScreen({
+      screenCode: "TK_SELLER_STORE",
+      params: { slug: this.data.slug },
+      success: (res) => {
+        console.log(res);
+      },
+      fail: (e) => {
+        console.log(e);
+      },
+    });
+  },
+  onOpenCart() {
+    my.openScreen({
+      screenCode: "TK_CART",
       success: (res) => {
         console.log(res);
       },

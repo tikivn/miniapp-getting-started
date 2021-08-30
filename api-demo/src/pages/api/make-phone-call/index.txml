@@ -1,0 +1,11 @@
+<view>
+  <block-header title="Usage" description="Make phone call" />
+  <view class=" block-content">
+    Input the number to call
+
+  </view>
+  <input class="form-value" placeholder="Phone number" name="phone" onInput="phoneChange"></input>
+  <view class="block-content">
+    <button class="button-full" onTap="onPhoneCall">Call</button>
+  </view>
+</view>

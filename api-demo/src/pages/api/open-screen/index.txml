@@ -11,7 +11,14 @@
     <button class="button-full" onTap="onOpenListing">Open Listing</button>
   </view>
   <view class="block-content">
+    <button class="button-full" onTap="onOpenCart">Open Cart</button>
+  </view>
+  <view class="block-content">
     <input class="form-value" placeholder="Tiki ID" name="tikiId" onInput="tikiIDChange"></input>
     <button class="button-full" onTap="onOpenProfile">Open Profile</button>
+  </view>
+  <view class="block-content">
+    <input class="form-value" placeholder="Slug" name="slug" onInput="slugChange"></input>
+    <button class="button-full" onTap="onOpenSellerStore">Open Seller Store</button>
   </view>
 </view>
