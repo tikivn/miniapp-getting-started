@@ -130,7 +130,7 @@ const basicComponents = [
     ],
   },
   {
-    name: 'Canvas',
+    name: 'Canvas',
     components: [
       {
         name: 'Canvas',
