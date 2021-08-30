@@ -64,10 +64,6 @@ const interfaceAPIList = [
     name: 'Canvas',
     path: 'pages/api/canvas/index',
   },
-  {
-    name: 'Contact',
-    path: 'pages/api/contact/index',
-  },
 ].filter(filterNotImplementedPages);
 
 const navigationBarAPIList = [
@@ -146,6 +142,10 @@ const deviceAPIList = [
   {
     name: 'SDK Version',
     // path: '/pages/API/sdk-version/index',
+  },
+  {
+    name: 'Contact',
+    path: 'pages/api/contact/index',
   },
 ].filter(filterNotImplementedPages);
 
