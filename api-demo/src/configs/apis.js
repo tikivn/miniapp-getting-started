@@ -56,6 +56,10 @@ const interfaceAPIList = [
     name: 'Keyboard',
     path: 'pages/api/keyboard/index',
   },
+  {
+    name: 'Canvas',
+    path: 'pages/api/canvas/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const navigationBarAPIList = [

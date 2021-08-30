@@ -129,6 +129,15 @@ const basicComponents = [
       },
     ],
   },
+  {
+    name: 'Canvas',
+    components: [
+      {
+        name: 'Canvas',
+        path: '/pages/component/basic/canvas/index',
+      },
+    ],
+  },
 ];
 
 const advancedComponents = [

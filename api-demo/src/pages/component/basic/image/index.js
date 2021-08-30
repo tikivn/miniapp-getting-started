@@ -1,8 +1,6 @@
-import source from "../../../../images/component_bg.png";
-
 Page({
   data: {
-    source,
+    imagePath: './images/component_bg.png'
   },
   onLoad(e) {
     console.log("onLoad", e);
