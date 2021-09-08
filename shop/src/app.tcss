@@ -95,3 +95,14 @@ view {
 .padding-inset-bottom {
   padding-bottom: var(--safe-area-inset-bottom);
 }
+
+.square-24 {
+  width: 24px;
+  height: 24px;
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ebebf0;
+}

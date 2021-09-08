@@ -1,0 +1,40 @@
+<template name="shipping-details-info">
+  <view class="flex justify-between items-center py-2x-small">
+    <view class="flex">
+      <view class="mr-2x-small">
+        <image
+          class="square-24"
+          src="{{avatar}}"
+        />
+      </view>
+      <view>
+        <view class="mb-4x-small">
+          {{title}}
+        </view>
+        <view class="font-bold mb-4x-small">
+          {{label}}
+        </view>
+        <view class="text-gray60 text-small">
+          {{description}}
+        </view>
+      </view>
+    </view>
+    <icon
+      tiki:if="{{showButton}}"
+      type="arrow_right"
+      color="#808089"
+    />
+  </view>
+</template>
+
+<view>
+  <template
+    is="shipping-details-info"
+    data="{{title:'Shipping address', avatar: buyer.avatar, label: buyer.address, description: `${buyer.name} • ${buyer.phone}`, showButton: true}}"
+  />
+  <view class="divider"/>
+  <template
+    is="shipping-details-info"
+    data="{{title:'Shipping service', avatar: seller.avatar, label: seller.name, description: seller.description, showButton: false}}"
+  />
+</view>

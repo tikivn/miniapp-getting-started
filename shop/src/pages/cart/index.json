@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Cart",
+  "usingComponents": {
+    "shipping-details": "components/shipping-details/index",
+    "section": "pages/cart/section/index"
+  }
+}

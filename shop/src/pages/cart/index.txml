@@ -1,0 +1,12 @@
+<view>
+  <view class="p-medium">
+    <section title="Shipping details">
+      <shipping-details
+        buyer="{{buyer}}"
+        seller="{{seller}}"
+      />
+    </section>
+    <section title="Order details">
+    </section>
+  </view>
+</view>
