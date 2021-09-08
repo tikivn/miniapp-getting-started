@@ -1,4 +1,4 @@
-@import '@tiki.vn/tini-style/es/index.tcss';
+@import "@tiki.vn/tini-style/es/index.tcss";
 
 @keyframes skeleton-loading {
   0% {
@@ -94,4 +94,35 @@ view {
 
 .padding-inset-bottom {
   padding-bottom: var(--safe-area-inset-bottom);
+}
+
+.size-40 {
+  width: 40px;
+  height: 40px;
+}
+
+.size-120 {
+  width: 120px;
+  height: 120px;
+}
+
+.border-option {
+  border: 1px solid #ebebf0;
+  border-radius: 8px;
+}
+
+.border-bottom-gray {
+  border-bottom: 1px solid #ebebf0;
+}
+
+.text-medium-2x-small {
+  font-size: 18px;
+}
+
+.height-fit-content {
+  height: fit-content;
+}
+
+.line-through {
+  text-decoration-line: line-through;
 }

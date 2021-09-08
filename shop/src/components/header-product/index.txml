@@ -1,0 +1,16 @@
+<view>
+  <view class="text-medium">{{product.name}}</view>
+  <view class="flex items-center">
+    <view class="mr-2x-small text-medium-2x-small font-bold">
+      {{formattedPrice}}
+    </view>
+    <view
+      tiki:if="{{product.discountRate}}"
+      class="bg-red height-fit-content radius-8px py-5x-small px-4x-small text-white text-x-small">
+      {{`-${product.discountRate}%`}}
+    </view>
+  </view>
+  <view class="text-gray60 line-through mb-medium">
+    {{formattedListPrice}}
+  </view>
+</view>
