@@ -1,0 +1,9 @@
+{
+  "pullRefresh": true,
+  "defaultTitle": "Shop name",
+  "usingComponents": {
+    "product-section": "components/product-section/index",
+    "category-section": "components/category-section/index",
+    "header": "pages/home/header/index"
+  }
+}

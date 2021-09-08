@@ -1,0 +1,11 @@
+{
+  "name": "miniapp-tini-shop",
+  "version": "0.0.4",
+  "tiki": {
+    "appIdentifier": "vn.tiki.tinishop",
+    "buildNumber": 6
+  },
+  "dependencies": {
+    "@tiki.vn/tini-ui": "^0.1.2-rc.21"
+  }
+}
