@@ -1,0 +1,16 @@
+<view class="product-section {{className}}">
+  <block tiki:if="{{isLoading}}">
+    <product
+      isLoading
+      tiki:for="{{skeletonsArray}}"
+      tiki:key="*this"
+    />
+  </block>
+  <block
+    tiki:else
+    tiki:for="{{products}}"
+    tiki:key="id"
+  >
+    <product product="{{item}}"/>
+  </block>
+</view>

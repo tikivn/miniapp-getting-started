@@ -1,0 +1,14 @@
+.home-section {
+  padding: 16px;
+  margin-bottom: 8px;
+  background-color: var(--white);
+}
+
+.home-category-carousel {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.home-category-list {
+  transform: translateX(20px);
+}

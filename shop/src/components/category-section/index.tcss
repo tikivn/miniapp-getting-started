@@ -1,0 +1,5 @@
+.category-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 28px;
+}
