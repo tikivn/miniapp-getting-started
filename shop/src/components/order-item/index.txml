@@ -1,0 +1,31 @@
+<view class="flex justify-between items-center py-2x-small">
+  <view class="flex">
+    <view class="mr-2x-small">
+      <image
+        class="square-24 radius-8px"
+        src="{{thumbnail}}"
+      />
+    </view>
+    <view>
+      <view class="mb-4x-small">
+        {{name}}
+      </view>
+      <view class="font-bold mb-4x-small">
+        {{formattedPrice}}
+      </view>
+      <stepper
+        showNumber
+        className="s"
+        step="{{1}}"
+        min="{{0}}"
+        value="{{1}}"
+        inputWidth="40px"
+      />
+    </view>
+  </view>
+  <icon
+    tiki:if="{{showButton}}"
+    type="arrow_right"
+    color="#808089"
+  />
+</view>

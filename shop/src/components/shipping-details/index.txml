@@ -3,7 +3,7 @@
     <view class="flex">
       <view class="mr-2x-small">
         <image
-          class="square-24"
+          class="square-24 radius-8px"
           src="{{avatar}}"
         />
       </view>

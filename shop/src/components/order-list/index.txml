@@ -1,0 +1,3 @@
+<view class="flex justify-between items-center py-2x-small">
+  <order-item/>
+</view>

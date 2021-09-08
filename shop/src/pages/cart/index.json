@@ -2,6 +2,7 @@
   "defaultTitle": "Cart",
   "usingComponents": {
     "shipping-details": "components/shipping-details/index",
+    "order-list": "components/order-list/index",
     "section": "pages/cart/section/index"
   }
 }
