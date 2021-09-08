@@ -18,10 +18,9 @@ export const delay = (milliseconds) =>
 
 export const group = (arr, num) => {
   const result = arr.reduce((acc, _, idx) => {
-    if (idx > 0 && idx % num === 0) acc.push(arr.slice(idx - num, idx));
+    if (idx % num === 0) acc.push(arr.slice(idx, idx + num));
     return acc;
   }, []);
 
-  result.push(arr.slice(arr.length - (arr.length % num)));
   return result;
 };
