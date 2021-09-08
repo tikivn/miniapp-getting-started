@@ -1,6 +1,42 @@
 {
-  "pages": ["pages/home/index"],
   "window": {
     "defaultTitle": "Tini shop"
+  },
+  "pages": ["pages/home/index"],
+  "tabBar": {
+    "borderTopActiveColor": "#1A94FF",
+    "borderTopColor": "#EBEBF0",
+    "items": [
+      {
+        "name": "Home",
+        "pagePath": "pages/home/index",
+        "icon": "/assets/icons/tab-home.svg",
+        "activeIcon": "assets/icons/tab-home-active.svg"
+      },
+      {
+        "name": "Categories",
+        "pagePath": "pages/categories/index",
+        "icon": "/assets/icons/tab-categories.svg",
+        "activeIcon": "assets/icons/tab-categories-active.svg"
+      },
+      {
+        "name": "Search",
+        "pagePath": "pages/search/index",
+        "icon": "/assets/icons/tab-search.svg",
+        "activeIcon": "assets/icons/tab-search-active.svg"
+      },
+      {
+        "name": "Cart",
+        "pagePath": "pages/cart/index",
+        "icon": "/assets/icons/tab-cart.svg",
+        "activeIcon": "assets/icons/tab-cart-active.svg"
+      },
+      {
+        "name": "My Account",
+        "pagePath": "pages/account/index",
+        "icon": "/assets/icons/tab-account.svg",
+        "activeIcon": "assets/icons/tab-account-active.svg"
+      }
+    ]
   }
 }
