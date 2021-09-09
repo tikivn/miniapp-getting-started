@@ -1,3 +1,36 @@
-<view class="flex justify-between items-center py-2x-small">
-  <order-item/>
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<view class="flex flex-col justify-between items-center py-2x-small">
+  <block
+    tiki:for="{{_products}}"
+    tiki:key="id"
+  >
+    <order-item
+      className="mb-2x-small"
+      product="{{item}}"
+      onRemoveOrder="_onRemoveOrder"
+      onChangeQuantityOrder="_onChangeQuantityOrder"
+    />
+    <view class="divider"/>
+  </block>
+  <view class="w-full mt-2x-small">
+    <view class="flex justify-between items-center mb-medium">
+      <text>Price</text>
+      <text class="font-bold">{{moneyFormatter(price)}}</text>
+    </view>
+    <view class="flex justify-between items-center mb-medium">
+      <view class="flex items-center">
+        <text class="mr-4x-small">Shipping fee</text>
+        <image
+          class="order-list-info-icon"
+          src="/assets/icons/info.svg"
+        />
+      </view>
+      <text class="font-bold">{{price > 0 ? moneyFormatter(shippingFee) : moneyFormatter(0)}}</text>
+    </view>
+    <view class="flex justify-between items-center">
+      <text>Total</text>
+      <text class="font-bold">{{moneyFormatter(total)}}</text>
+    </view>
+  </view>
 </view>

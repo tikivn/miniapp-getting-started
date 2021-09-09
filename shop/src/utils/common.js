@@ -4,7 +4,7 @@ export const isHasValue = (value) =>
 export const isNotEmpty = (value) =>
   isHasValue(value) && (value + '').trim().length > 0;
 
-export const moneyFormatter = (number, currency = 'đ') => {
+export const moneyFormatter = (number, currency = ' ₫') => {
   if (!isNotEmpty(number)) return '';
   return parseInt(number).toLocaleString('vi-VN') + currency;
 };

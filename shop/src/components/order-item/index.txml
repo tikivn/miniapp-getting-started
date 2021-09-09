@@ -1,31 +1,39 @@
-<view class="flex justify-between items-center py-2x-small">
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<view class="w-full flex justify-between py-2x-small {{className}}">
   <view class="flex">
     <view class="mr-2x-small">
       <image
-        class="square-24 radius-8px"
-        src="{{thumbnail}}"
+        class="order-item-thumbnail radius-8px"
+        src="{{product.thumbnail}}"
       />
     </view>
     <view>
       <view class="mb-4x-small">
-        {{name}}
+        {{product.name}}
       </view>
-      <view class="font-bold mb-4x-small">
-        {{formattedPrice}}
+      <view class="font-bold mb-small">
+        {{moneyFormatter(product.price)}}
       </view>
       <stepper
         showNumber
-        className="s"
         step="{{1}}"
-        min="{{0}}"
-        value="{{1}}"
-        inputWidth="40px"
+        min="{{1}}"
+        max="{{99}}"
+        value="{{product.quantity}}"
+        inputWidth="{{40}}"
+        onChange="_onChangeQuantityOrder"
       />
     </view>
   </view>
-  <icon
-    tiki:if="{{showButton}}"
-    type="arrow_right"
-    color="#808089"
-  />
+  <view
+    class="order-item-close-btn"
+    onTap="_onRemoveOrder"
+  >
+    <icon
+      size="{{20}}"
+      type="close"
+      color="#808089"
+    />
+  </view>
 </view>
