@@ -1,4 +1,6 @@
 Component({
+  isCreated: false,
+
   data: {
     _products: [],
     price: 0,
@@ -7,6 +9,7 @@ Component({
 
   props: {
     shippingFee: 0,
+    promotion: 0,
     products: [],
     onChangeTotal: () => {},
   },
@@ -24,6 +27,7 @@ Component({
             ..._products.slice(position + 1),
           ],
         });
+
       this.calculatePrices();
       this.hideModal();
     },
@@ -41,15 +45,16 @@ Component({
     },
 
     calculatePrices() {
+      const { shippingFee, promotion, onChangeTotal } = this.props;
       const price = this.data._products.reduce((acc, curr) => {
         return acc + +curr.price * +curr.quantity;
       }, 0);
-      const total = price > 0 ? price + this.props.shippingFee : 0;
+      const total = price > 0 ? price + shippingFee - promotion : 0;
       this.setData({
         price,
         total,
       });
-      this.props.onChangeTotal(total);
+      onChangeTotal(total);
     },
 
     confirmRemoveOrder(product) {
@@ -75,10 +80,13 @@ Component({
   },
 
   // Life cycle
-  didMount() {
-    this.setData({
-      _products: this.props.products,
-    });
+  deriveDataFromProps(nextProps) {
+    if (!this.isCreated && nextProps.products.length) {
+      this.setData({
+        _products: nextProps.products,
+      });
+      this.isCreated = true;
+    }
     this.calculatePrices();
   },
 });

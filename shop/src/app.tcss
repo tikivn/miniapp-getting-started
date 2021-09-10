@@ -106,3 +106,9 @@ view {
   height: 1px;
   background-color: #ebebf0;
 }
+
+.vertical-divider {
+  width: 1px;
+  height: 100%;
+  background-color: #ebebf0;
+}

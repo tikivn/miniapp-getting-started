@@ -3,6 +3,7 @@
   "usingComponents": {
     "shipping-details": "components/shipping-details/index",
     "order-list": "components/order-list/index",
+    "coupon-selector": "components/coupon-selector/index",
     "section": "pages/cart/section/index",
     "button": "@tiki.vn/tini-ui/es/tu-button/index"
   }

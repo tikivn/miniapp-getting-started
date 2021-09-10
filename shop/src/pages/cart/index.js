@@ -1,33 +1,23 @@
+import {
+  getCouponsAPI,
+  getCartAPI,
+  getCouponFromCodeAPI,
+} from '../../services/index';
+
 Page({
   data: {
-    buyer: {
-      avatar: '/assets/icons/location.svg',
-      address: '288 Erie Street South Unit D, Leamington, Ontario',
-      name: 'Nick',
-      phone: '0969696969',
+    cart: {
+      buyer: {},
+      seller: {},
+      orderedProducts: [],
+      shippingFee: 0,
     },
-    seller: {
-      avatar: '/assets/images/tiki-now.png',
-      name: 'Tiki Now',
-      description: 'Same day 2h - 3h',
+    coupons: [],
+    selectedCoupon: {
+      name: '',
+      discount: 0,
+      isValid: false,
     },
-    orderedProducts: [
-      {
-        id: '1',
-        thumbnail: '/assets/images/product.png',
-        name: 'Sample product 1',
-        price: 15000,
-        quantity: 1,
-      },
-      {
-        id: '2',
-        thumbnail: '/assets/images/product.png',
-        name: 'Sample product 2',
-        price: 50000,
-        quantity: 1,
-      },
-    ],
-    shippingFee: 20000,
     total: 0,
     modal: {
       isShow: false,
@@ -36,11 +26,63 @@ Page({
       confirmButton: '',
       cancelButton: '',
     },
+    isShowCouponBottomSheet: false,
   },
 
   onChangeTotal(total) {
     this.setData({
       total,
     });
+  },
+
+  async loadData() {
+    try {
+      const [cart, coupons] = await Promise.all([
+        getCartAPI(),
+        getCouponsAPI(),
+      ]);
+      this.setData({
+        cart,
+        coupons,
+      });
+    } catch (error) {}
+  },
+
+  showCouponBottomSheet() {
+    this.setData({
+      isShowCouponBottomSheet: true,
+    });
+  },
+
+  hideCouponBottomSheet() {
+    this.setData({
+      isShowCouponBottomSheet: false,
+    });
+  },
+
+  async onSelectCoupon(code) {
+    this.hideCouponBottomSheet();
+
+    try {
+      const selectedCoupon = await getCouponFromCodeAPI(code);
+
+      this.setData({
+        selectedCoupon,
+      });
+    } catch (error) {}
+  },
+
+  onRemoveCoupon() {
+    this.setData({
+      selectedCoupon: {
+        name: '',
+        isValid: false,
+      },
+    });
+  },
+
+  // Life cycle
+  onShow() {
+    this.loadData();
   },
 });
