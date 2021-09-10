@@ -1,0 +1,14 @@
+<view>
+  <block-header title="Usage" description="Add to cart" />
+  <view class="block-content">
+    <input class="form-value" placeholder="Product Id" name="productId" onInput="productIdChange"></input>
+  </view>
+  <view class="block-content">
+    <view class="component-item">
+      <button style="width: 100%;" onTap="onAddToCart">
+        Add to Cart
+      </button>
+    </view>
+  </view>
+
+</view>

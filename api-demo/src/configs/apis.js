@@ -138,6 +138,21 @@ const updateClientAPIList = [
     path: 'pages/api/update-client/index',
   },
 ];
+
+const phoneAPIList = [
+  {
+    name: 'Make Phone Call',
+    path: 'pages/api/make-phone-call/index',
+  },
+];
+
+const tikiAPIList = [
+  {
+    name: 'API Service',
+    path: 'pages/api/add-to-cart/index',
+  },
+];
+
 const deviceAPIList = [
   {
     name: 'SDK Version',
@@ -219,6 +234,14 @@ const APIList = [
   {
     type: 'Update Client',
     list: updateClientAPIList,
+  },
+  {
+    type: 'Phone',
+    list: phoneAPIList,
+  },
+  {
+    type: 'Tiki Service',
+    list: tikiAPIList,
   },
 ];
 
