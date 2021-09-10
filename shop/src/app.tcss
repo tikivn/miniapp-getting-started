@@ -1,0 +1,19 @@
+@import '@tiki.vn/tini-style/es/index.tcss';
+@import './styles/skeleton.tcss';
+
+image,
+icon {
+  display: block;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+.page {
+  background-color: #f5f5fa;
+}
+
+.padding-inset-bottom {
+  padding-bottom: var(--safe-area-inset-bottom);
+}

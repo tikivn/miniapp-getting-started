@@ -1,0 +1,103 @@
+<import-sjs from="../../../utils/common.sjs" name="{nFormatter}"></import-sjs>
+
+<view>
+  <template name="home-header-completed">
+    <view class="home-header home-section">
+      <view class="flex items-center mb-medium">
+        <view class="home-header-item">
+          <image
+            class="w-full h-full"
+            src="/assets/images/logo.png"
+            mode="widthFix"
+          />
+        </view>
+        <view class="home-header-item">
+          <text class="font-bold text-medium">
+            {{nFormatter(shop.followers, 1, false)}}
+          </text>
+          <text class="text-small text-gray60">
+            Followers
+          </text>
+        </view>
+        <view class="home-header-item">
+          <text class="font-bold text-medium">
+            {{nFormatter(shop.products, 1, false)}}
+          </text>
+          <text class="text-small text-gray60">
+            Products
+          </text>
+        </view>
+        <view class="home-header-item">
+          <view class="flex items-center">
+            <text class="font-bold text-medium mr-4x-small">
+              {{shop.rating}}
+            </text>
+          <image
+            class="w-full h-full"
+            src="/assets/icons/star.svg"
+            mode="widthFix"
+          />
+          </view>
+          <text class="text-small text-gray60">
+            Rating
+          </text>
+        </view>
+      </view>
+  
+      <view class="mb-medium">
+        {{shop.description}}
+      </view>
+  
+      <view class="flex items-center">
+        <button
+          class="flex-grow mr-2x-small"
+          size="medium"
+          shape="pill"
+        >
+          Button
+        </button>
+        <button
+          size="medium"
+          type="outline"
+          shape="circle"
+          iconName="more"
+        />
+      </view>
+    </view>
+  </template>
+  
+  <template name="home-header-loading">
+    <view class="home-header home-section">
+      <view class="flex items-center mb-medium">
+        <view class="home-header-item">
+          <view class="home-skeleton-logo skeleton w-full"/>
+        </view>
+        <block
+          tiki:for="{{[1, 2, 3]}}"
+          tiki:key="*this"
+        >
+          <view class="home-header-item">
+            <view class="skeleton skeleton-font-large skeleton-70-width mb-5x-small"/>
+            <view class="skeleton skeleton-font-regular skeleton-50-width"/>
+          </view>
+        </block>
+      </view>
+  
+      <view class="mb-medium">
+        <view class="skeleton skeleton-font-regular skeleton-50-width mb-5x-small"/>
+        <view class="skeleton skeleton-font-regular skeleton-100-width mb-5x-small"/>
+        <view class="skeleton skeleton-font-regular skeleton-70-width"/>
+      </view>
+  
+      <view class="flex items-center">
+        <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-100-width flex-grow mr-2x-small"/>
+        <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-10-width"/>
+      </view>
+    </view>
+  </template>
+
+  <template
+    is="home-header-{{isLoading ? 'loading' : 'completed'}}"
+    data="{{shop}}"
+  />
+</view>

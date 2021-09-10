@@ -1,0 +1,11 @@
+<template name="home-section-title">
+  <view class="flex justify-between items-center mt-4x-small mb-medium">
+    <view class="font-bold text-medium">
+      {{title}}
+    </view>
+    <view class="flex items-center">
+      <text class="text-brand">View more</text>
+      <icon type="arrow_right" color="#1A94FF"/>
+    </view>
+  </view>
+</template>

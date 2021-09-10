@@ -1,0 +1,43 @@
+<view class="product {{className}}">
+  <view tiki:if="{{isLoading}}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"/>
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
+    <view class="skeleton skeleton-font-medium skeleton-100-width mb-5x-small"/>
+    <view class="skeleton skeleton-font-small skeleton-70-width"/>
+  </view>
+  <view
+    tiki:else
+    catchTap="_onTapProduct"
+  >
+    <image
+      class="radius-8px mb-2x-small radius-8px"
+      src="{{product.image}}"
+    />
+    <text
+      class="mb-4x-small"
+      number-of-lines="{{1}}"
+    >
+      {{product.name}}
+    </text>
+    <view class="flex items-center mb-5x-small">
+      <text
+        class="font-bold mr-2x-small"
+        number-of-lines="{{1}}"
+      >
+        {{formattedPrice}}
+      </text>
+      <view
+        tiki:if="{{product.discountRate}}"
+        class="text-white product-badge font-bold radius-8px px-4x-small py-5x-small"
+      >
+        {{`-${product.discountRate}%`}}
+      </view>
+    </view>
+    <text 
+      class="product-old-price text-gray60"
+      number-of-lines="{{1}}"
+    >
+      {{formattedListPrice}}
+    </text>
+  </view>
+</view>

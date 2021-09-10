@@ -1,0 +1,7 @@
+.product-section {
+  animation: appear-opacity 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 50%));
+  grid-column-gap: 16px;
+  grid-row-gap: 20px;
+}

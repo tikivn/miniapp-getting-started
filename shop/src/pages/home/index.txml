@@ -1,0 +1,57 @@
+<import src="./section-title.txml"/>
+
+<view class="padding-inset-bottom">
+  <header
+    isLoading="{{isLoading}}"
+    shop="{{shop}}"
+  />
+
+  <view class="home-section home-category">
+    <template
+      is="home-section-title"
+      data="{{title: 'Category'}}"
+    />
+    <carousel
+      indicator-dots
+      class="home-category-carousel"
+      active-class="home-category-carousel-active"
+    > 
+      <carousel-item
+        tiki:for="{{isLoading ? [1] : categories}}"
+        tiki:key="id"
+      >
+        <category-section
+          isLoading="{{isLoading}}"
+          className="home-category-list"
+          skeletons="{{8}}"
+          type="category-grid"
+          categories="{{item}}"
+        />
+      </carousel-item>  
+    </carousel>
+  </view>
+
+  <view class="home-section">
+    <template
+      is="home-section-title"
+      data="{{title: 'Featured'}}"
+    />
+    <product-section
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{featuredProducts}}"
+    />
+  </view>
+
+  <view class="home-section">
+    <template
+      is="home-section-title"
+      data="{{title: 'New'}}"
+    />
+    <product-section
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{newProducts}}"
+    />
+  </view>
+</view>
