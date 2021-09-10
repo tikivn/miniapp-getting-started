@@ -29,6 +29,13 @@ Page({
     ],
     shippingFee: 20000,
     total: 0,
+    modal: {
+      isShow: false,
+      headers: [],
+      descriptions: [],
+      confirmButton: '',
+      cancelButton: '',
+    },
   },
 
   onChangeTotal(total) {

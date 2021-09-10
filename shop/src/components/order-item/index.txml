@@ -28,7 +28,7 @@
   </view>
   <view
     class="order-item-close-btn"
-    onTap="_onRemoveOrder"
+    onTap="_onClickRemoveOrder"
   >
     <icon
       size="{{20}}"

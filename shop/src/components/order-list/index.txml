@@ -8,7 +8,7 @@
     <order-item
       className="mb-2x-small"
       product="{{item}}"
-      onRemoveOrder="_onRemoveOrder"
+      onClickRemoveOrder="confirmRemoveOrder"
       onChangeQuantityOrder="_onChangeQuantityOrder"
     />
     <view class="divider"/>
@@ -34,3 +34,13 @@
     </view>
   </view>
 </view>
+
+<modal
+  isShow="{{modal.isShow}}"
+  headers="{{modal.headers}}"
+  descriptions="{{modal.descriptions}}"
+  confirmButton="{{modal.confirmButton}}"
+  cancelButton="{{modal.cancelButton}}"
+  onConfirm="removeOrder"
+  onCancel="hideModal"
+/>

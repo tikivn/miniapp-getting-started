@@ -12,9 +12,11 @@ Component({
   },
 
   methods: {
-    _onRemoveOrder(product) {
+    removeOrder() {
       const { _products } = this.data;
-      const position = _products.findIndex((item) => item.id === product.id);
+      const position = _products.findIndex(
+        (item) => item.id === this.selectedProduct.id
+      );
       if (position !== -1)
         this.setData({
           _products: [
@@ -23,6 +25,7 @@ Component({
           ],
         });
       this.calculatePrices();
+      this.hideModal();
     },
 
     _onChangeQuantityOrder(product, quantity) {
@@ -47,6 +50,27 @@ Component({
         total,
       });
       this.props.onChangeTotal(total);
+    },
+
+    confirmRemoveOrder(product) {
+      this.selectedProduct = product;
+      this.setData({
+        modal: {
+          isShow: true,
+          headers: ['Confirmation'],
+          descriptions: ['Do you want to remove this product from your cart?'],
+          confirmButton: 'Yes',
+          cancelButton: 'No',
+        },
+      });
+    },
+
+    hideModal() {
+      this.setData({
+        modal: {
+          isShow: false,
+        },
+      });
     },
   },
 
