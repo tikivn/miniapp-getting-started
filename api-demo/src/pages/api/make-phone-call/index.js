@@ -1,7 +1,6 @@
 Page({
   data: {
     phone: undefined,
-    
   },
   phoneChange(e) {
     this.setData({

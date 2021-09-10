@@ -35,6 +35,7 @@
     "pages/api/update-client/index",
     "pages/api/canvas/index",
     "pages/api/make-phone-call/index",
+    "pages/api/add-to-cart/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",

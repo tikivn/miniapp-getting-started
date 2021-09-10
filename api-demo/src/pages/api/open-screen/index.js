@@ -2,7 +2,7 @@ Page({
   data: {
     productId: undefined,
     tikiId: undefined,
-    slug,
+    slug: undefined,
   },
   productIdChange(e) {
     this.setData({
