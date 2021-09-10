@@ -12,23 +12,38 @@
       <view style="font-weight: var(--font-weight-regular);">Label</view>
     </list-item>
     <list-item>
-      <view>Data</view>
+      <view>Label</view>
     </list-item>
     <list-item upperSubtitle="Description">
-      <view style="font-weight: var(--font-weight-regular);">Label</view>
+      <view>Label</view>
     </list-item>
     <list-item titlePosition="middle">
       <view slot="afterUpperSubtitle" class="text-title text-regular">Label</view>
       <view>Data</view>
     </list-item>
-    <list-item thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px"
+    <list-item titlePosition="middle" lowerSubtitle="Description">
+      <view slot="afterUpperSubtitle" class="text">Label</view>
+      <view>Data</view>
+    </list-item>
+    <list-item thumb="images/place_holder_list_icon.png" thumbSize="40px" titlePosition="middle">
+      <view style="display:flex; align-items:center;">Label</view>
+    </list-item>  
+    <list-item thumb="images/place_holder_list_icon.png" thumbSize="40px" titlePosition="middle" lowerSubtitle="Description">
+      <view slot="afterUpperSubtitle" class="text text-title">Label</view>
+    </list-item>
+    <list-item thumb="images/place_holder_list_icon.png" thumbSize="40px"
       titlePosition="middle">
       <view slot="afterUpperSubtitle" class="text-title text-regular">Label</view>
       <view>Data</view>
-    </list-item>
-    <list-item thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px"
+    </list-item>    
+    <list-item thumb="images/place_holder_list_icon.png" thumbSize="40px"
       titlePosition="middle">
-      <view style="font-weight: var(--font-weight-regular);">Label</view>
+      <view class="text text-title">Label</view>
+      <view slot="additionContent" class="input-stepper-placeholder"/>
+    </list-item>
+    <list-item thumb="images/place_holder_list_icon.png" thumbSize="40px"
+      titlePosition="middle">
+      <view class="text text-title">Label</view>
       <view slot="additionContent">
         <button size="small" class="page-list-item-button">Button</button>
       </view>
@@ -69,7 +84,7 @@
     <list-item>
       <view>Content</view>
       <view slot="suffix">
-        <checkbox />
+        <switch checked="{{false}}" />
       </view>
     </list-item>
   </view>
@@ -103,17 +118,17 @@
   <view class="page-list-content-block">
     <view class="page-list-content-block-title">Content with Prefix & Suffix</view>
     <list-item arrow upperSubtitle="Description"
-      thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px">
+      thumb="images/place_holder_list_icon.png" thumbSize="40px">
       <view>Label</view>
       <view slot="suffix">
-        <view class="text-title text-regular">CTA message</view>
+        <view class="text-title text-regular">CTA</view>
       </view>
       <view slot="prefix">
         <icon type="location" size="24" color="#808089" />
       </view>
     </list-item>
     <list-item upperSubtitle="Description"
-      thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px">
+      thumb="images/place_holder_list_icon.png" thumbSize="40px">
       <view>Label</view>
       <view slot="suffix">
         <button size="small" class="page-list-item-button">Button</button>
@@ -122,10 +137,13 @@
         <icon type="location" size="24" color="#808089" />
       </view>
     </list-item>
-    <list-item arrow upperSubtitle="Description">
+    <list-item  upperSubtitle="Description">
       <view>Label</view>
       <view slot="prefix">
         <icon type="location" size="24" color="#808089" />
+      </view>
+      <view slot="suffix">
+        <icon size="24" type="edit" color="#808089" />
       </view>
     </list-item>
   </view>
@@ -135,7 +153,7 @@
   <view class="page-list-content-block">
     <view class="page-list-content-block-title">List Item structure</view>
     <list-item arrow upperSubtitle="upper" lowerSubtitle="lower"
-      thumb="https://uat.tikicdn.com/ts/miniapp/8f/73/72/47a128fa0f759f1fca0b37bbc487d5f1.png" thumbSize="40px">
+      thumb="images/place_holder_list_icon.png" thumbSize="40px">
       <view style="background-color: red;">title</view>
       <view slot="afterTitle" style="display: flex; flex-grow: 1;background-color: green;">after title</view>
       <view slot="afterUpperSubtitle" style="display: flex; flex-grow: 1; background-color: orange;">after upper</view>
@@ -153,7 +171,6 @@
     <template is="list-content-only" />
     <template is="list-content-with-suffix" />
     <template is="list-content-with-prefix" />
-    <template is="list-content-with-suffix-and-prefix" />
-    <template is="list-content-structure" />
+    <template is="list-content-with-suffix-and-prefix" /> 
   </view>
 </view>
