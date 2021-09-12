@@ -1,0 +1,10 @@
+.status-order {
+  width: 33.33%;
+}
+.badge-orders{
+  position: absolute;
+  min-width: 20px;
+  padding: 2px 4px;
+  top: 0;
+  right: 0;
+}

@@ -96,6 +96,11 @@ view {
   padding-bottom: var(--safe-area-inset-bottom);
 }
 
+.size-32 {
+  width: 32px;
+  height: 32px;
+}
+
 .size-40 {
   width: 40px;
   height: 40px;
@@ -106,6 +111,10 @@ view {
   height: 120px;
 }
 
+.w-50 {
+  width: 50%;
+}
+
 .border-option {
   border: 1px solid #ebebf0;
   border-radius: 8px;
@@ -113,6 +122,10 @@ view {
 
 .border-bottom-gray {
   border-bottom: 1px solid #ebebf0;
+}
+
+.border-right-gray {
+  border-right: 1px solid #ebebf0;
 }
 
 .text-medium-2x-small {

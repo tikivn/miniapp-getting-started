@@ -1,0 +1,5 @@
+.divider {
+  height: 65px;
+  width: 1px;
+  background: #EBEBF0;
+}

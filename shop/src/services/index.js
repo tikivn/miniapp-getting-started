@@ -4,6 +4,8 @@ import shop from "./mock/shop.json";
 import categories from "./mock/categories.json";
 import products from "./mock/products.json";
 import product from "./mock/product-detail.json";
+import user from "./mock/user.json";
+import numOrders from "./mock/numOrders.json";
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -23,4 +25,12 @@ export const getNewProductsAPI = () => {
 
 export const getDetailProduct = () => {
   return request(product);
+};
+
+export const getUserInfo = () => {
+  return request(user);
+};
+
+export const getNumOrders = () => {
+  return request(numOrders);
 };

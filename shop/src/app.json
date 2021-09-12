@@ -1,6 +1,7 @@
 {
-  "pages": ["pages/detail/index"],
+  "pages": ["pages/account/index"],
   "window": {
-    "defaultTitle": "Tini shop"
+    "defaultTitle": "",
+    "backgroundColor": "#F5F5FA"
   }
 }
