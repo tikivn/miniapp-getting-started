@@ -1,0 +1,52 @@
+[
+  {
+    "status": "delievered",
+    "product": {
+      "image": "/assets/images/product.png",
+      "name": "Product name",
+      "total": 2,
+      "price": 20014998
+    },
+    "method": "COD"
+  },
+  {
+    "status": "shipping",
+    "product": {
+      "image": "/assets/images/product.png",
+      "name": "Product name",
+      "total": 2,
+      "price": 20014998
+    },
+    "method": "COD"
+  },
+  {
+    "status": "processing",
+    "product": {
+      "image": "/assets/images/product.png",
+      "name": "Product name",
+      "total": 2,
+      "price": 20014998
+    },
+    "method": "COD"
+  },
+  {
+    "status": "waiting",
+    "product": {
+      "image": "/assets/images/product.png",
+      "name": "Product name",
+      "total": 2,
+      "price": 20014998
+    },
+    "method": "Credit card"
+  },
+  {
+    "status": "canceled",
+    "product": {
+      "image": "/assets/images/product.png",
+      "name": "Product name",
+      "total": 2,
+      "price": 20014998
+    },
+    "method": "Zalopay"
+  }
+]

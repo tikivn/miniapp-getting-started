@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/account/index"],
+  "pages": ["pages/order-management/index"],
   "window": {
     "defaultTitle": "",
     "backgroundColor": "#F5F5FA"

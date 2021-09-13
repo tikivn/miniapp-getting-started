@@ -1,0 +1,25 @@
+.status-delievered {
+  background: #D7FAE0;
+  color: #007D3A;
+}
+
+.status-shipping {
+  background: #DBEEFF;
+  color: #0D5BB5;
+}
+
+.status-processing {
+  background: #FFF5C7;
+  color: #CC8100;
+}
+
+.status-waiting {
+  background: #FFDBDE;
+  color: #BF1D28;
+}
+
+.status-canceled {
+  background: #F5F5FA;
+  color: #A6A6B0;
+}
+

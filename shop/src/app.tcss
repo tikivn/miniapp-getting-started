@@ -115,6 +115,10 @@ view {
   width: 50%;
 }
 
+.radius-16px {
+  border-radius: 16px;
+}
+
 .border-option {
   border: 1px solid #ebebf0;
   border-radius: 8px;
