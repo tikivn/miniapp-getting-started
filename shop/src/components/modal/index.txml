@@ -1,0 +1,43 @@
+<modal
+  show="{{isShow}}"
+  mask="{{true}}"
+  zIndex="{{10}}"
+  onModalClose="_onCancel"
+>
+  <view slot="header">
+    <view
+      tiki:for="{{headers}}"
+      tiki:key="*this"
+      class="text-center text-large font-bold"
+    >
+      {{item}}
+    </view>
+  </view>
+  <view
+    tiki:for="{{descriptions}}"
+    tiki:key="*this"
+    class="text-center"
+  >
+    {{item}}
+    </view>
+  <view slot="footer">
+    <view class="modal-buttons flex w-full px-medium mt-2x-small">
+      <button
+        class="w-full"
+        size="large"
+        onTap="_onConfirm"
+        type="outline"
+      >
+        {{confirmButton}}
+      </button>
+      <button
+        tiki:if="{{cancelButton}}"
+        class="w-full"
+        size="large"
+        onTap="_onCancel"
+      >
+        {{cancelButton}}
+      </button>
+    </view>
+  </view>
+</modal>

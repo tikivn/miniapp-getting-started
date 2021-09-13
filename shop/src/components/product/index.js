@@ -1,5 +1,3 @@
-import { moneyFormatter } from '../../utils/common';
-
 Component({
   data: {
     formattedPrice: '',
@@ -24,16 +22,5 @@ Component({
     _onTapProduct() {
       this.props.onTapProduct(this.props.product);
     },
-  },
-
-  // Life cycle
-  didMount() {
-    const { price, listPrice } = this.props.product;
-
-    this.setData({
-      formattedPrice: moneyFormatter(price, ' ₫'),
-      formattedListPrice:
-        price < listPrice ? moneyFormatter(listPrice, ' ₫') : '',
-    });
   },
 });

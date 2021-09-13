@@ -1,0 +1,6 @@
+Component({
+  props: {
+    title: '',
+    className: '',
+  },
+});

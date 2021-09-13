@@ -14,10 +14,10 @@
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.1.tgz#6333d4b85e2a153443fadf25fd0127dc8c4d0ee4"
   integrity sha512-V0JVBhsYmQ7Ue/NZ770Do6SxnJ2uvchAu13Y2pGkSXgfNflLhAY7r/I8QOyfOxvFhlaMLLH4i1KF6amk+vw9NA==
 
-"@tiki.vn/tini-ui@^0.1.2-rc.21":
-  version "0.1.2-rc.24"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.2-rc.24.tgz#e91693b9826d08bcd0ee9b038472845bff7a749f"
-  integrity sha512-fZeT58ujcsgD1zydL1jjr4KpcvBLdulXHDc6PQG45J8RRrNsWC1e6XXQaesP6X1c7HJFsV1TTD8FFkNUWFZgMw==
+"@tiki.vn/tini-ui@^0.1.2-rc.25":
+  version "0.1.2-rc.25"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.2-rc.25.tgz#7688ee3fc969c8e0c746010b995d88a930bc6a07"
+  integrity sha512-HfyIWN2rd39l5sbDucPLenNd96cNZ3ZlxX4tiSdV024zGO2tb9TP1Eri2uagsUgp//7lWaBWx+oJ1kUEk1OyYw==
   dependencies:
     "@babel/runtime" "^7.15.3"
     "@tiki.vn/tini-style" "0.1.1"

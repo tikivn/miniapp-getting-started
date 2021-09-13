@@ -1,6 +1,24 @@
 {
-  "pages": ["pages/home/index"],
   "window": {
     "defaultTitle": "Tini shop"
+  },
+  "pages": ["pages/home/index", "pages/cart/index"],
+  "tabBar": {
+    "borderTopActiveColor": "#1A94FF",
+    "borderTopColor": "#EBEBF0",
+    "items": [
+      {
+        "name": "Home",
+        "pagePath": "pages/home/index",
+        "icon": "/assets/icons/tab-home.png",
+        "activeIcon": "assets/icons/tab-home-active.png"
+      },
+      {
+        "name": "Cart",
+        "pagePath": "pages/cart/index",
+        "icon": "/assets/icons/tab-cart.png",
+        "activeIcon": "assets/icons/tab-cart-active.png"
+      }
+    ]
   }
 }
