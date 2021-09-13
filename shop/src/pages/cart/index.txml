@@ -3,15 +3,18 @@
 <view class="pt-medium px-medium">
   <section title="Shipping details">
     <shipping-details
+      isLoading="{{isLoading}}"
       buyer="{{cart.buyer}}"
       seller="{{cart.seller}}"
     />
   </section>
   <section title="Order details">
     <order-list
+      isLoading="{{isLoading}}"
       products="{{cart.orderedProducts}}"
       shippingFee="{{cart.shippingFee}}"
       promotion="{{selectedCoupon.discount}}"
+      skeletons="{{2}}"
       onChangeTotal="onChangeTotal"
     />
   </section>

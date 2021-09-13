@@ -5,12 +5,15 @@ Component({
     _products: [],
     price: 0,
     total: 0,
+    skeletonsArray: [],
   },
 
   props: {
+    isLoading: false,
     shippingFee: 0,
     promotion: 0,
     products: [],
+    skeletons: 0,
     onChangeTotal: () => {},
   },
 
@@ -80,6 +83,14 @@ Component({
   },
 
   // Life cycle
+  didMount() {
+    const { skeletons } = this.props;
+
+    this.setData({
+      skeletonsArray: [...Array(skeletons).keys()],
+    });
+  },
+
   deriveDataFromProps(nextProps) {
     if (!this.isCreated && nextProps.products.length) {
       this.setData({

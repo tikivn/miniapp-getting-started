@@ -1,5 +1,6 @@
 Component({
   props: {
+    isLoading: false,
     buyer: {
       avatar: '',
       address: '',

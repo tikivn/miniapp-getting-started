@@ -6,6 +6,7 @@ import {
 
 Page({
   data: {
+    isLoading: true,
     cart: {
       buyer: {},
       seller: {},
@@ -37,6 +38,9 @@ Page({
 
   async loadData() {
     try {
+      this.setData({
+        isLoading: true,
+      });
       const [cart, coupons] = await Promise.all([
         getCartAPI(),
         getCouponsAPI(),
@@ -44,8 +48,13 @@ Page({
       this.setData({
         cart,
         coupons,
+        isLoading: false,
       });
-    } catch (error) {}
+    } catch {
+      this.setData({
+        isLoading: false,
+      });
+    }
   },
 
   showCouponBottomSheet() {
@@ -69,7 +78,7 @@ Page({
       this.setData({
         selectedCoupon,
       });
-    } catch (error) {}
+    } catch {}
   },
 
   onRemoveCoupon() {
