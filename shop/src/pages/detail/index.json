@@ -1,10 +1,10 @@
 {
   "usingComponents": {
-    "header-product": "/components/header-product/index",
-    "shipping-info": "/components/shipping-info/index",
-    "detail-info": "/components/detail-info/index",
+    "header-product": "components/header-product/index",
+    "shipping-info": "components/shipping-info/index",
+    "detail-info": "components/detail-info/index",
     "product-section": "components/product-section/index",
-    "bottom-sheet-option": "/components/bottom-sheet-option/index",
-    "card-select": "/components/card-select/index"
+    "bottom-sheet-option": "components/bottom-sheet-option/index",
+    "card-select": "components/card-select/index"
   }
 }

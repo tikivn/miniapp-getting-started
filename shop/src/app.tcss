@@ -33,6 +33,11 @@ view {
   border-radius: 8px;
 }
 
+.border-active {
+  border: 1px solid var(--brand);
+  border-radius: 8px;
+}
+
 .border-bottom-gray {
   border-bottom: 1px solid #ebebf0;
 }

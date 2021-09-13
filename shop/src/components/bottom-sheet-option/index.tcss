@@ -1,8 +1,3 @@
-.border-active {
-  border: 1px solid #1a94ff;
-  border-radius: 8px;
-}
-
 .card-size {
   width: calc(50% - 8px);
 }

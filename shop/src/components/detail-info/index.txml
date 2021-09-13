@@ -1,25 +1,17 @@
+<template name="row-info">
+  <view class="flex justify-between p-2x-small border-bottom-gray">
+    <view>{{title}}</view>
+    <view class="font-bold">{{description}}</view>
+  </view>
+</template>
+
 <view>
   <view class="mb-small font-bold text-medium">Detail info</view>
 
-  <view class="flex justify-between p-2x-small border-bottom-gray">
-    <view>Made in</view>
-    <view class="font-bold">{{detail.madeIn}}</view>
-  </view>
-
-  <view class="flex justify-between p-2x-small border-bottom-gray">
-    <view>Size</view>
-    <view class="font-bold">{{detail.size}}</view>
-  </view>
-
-  <view class="flex justify-between p-2x-small border-bottom-gray">
-    <view>Color</view>
-    <view class="font-bold">{{detail.color}}</view>
-  </view>
-
-  <view class="flex justify-between p-2x-small border-bottom-gray">
-    <view>Material</view>
-    <view class="font-bold">{{detail.material}}</view>
-  </view>
+  <template is="row-info" data="{{title: 'Made in', description: detail.madeIn}}"/>
+  <template is="row-info" data="{{title: 'Size', description: detail.size}}"/>
+  <template is="row-info" data="{{title: 'Color', description: detail.color}}"/>
+  <template is="row-info" data="{{title: 'Material', description: detail.material}}"/>
 
   <view class="mt-medium">
     {{detail.shortDescription}}

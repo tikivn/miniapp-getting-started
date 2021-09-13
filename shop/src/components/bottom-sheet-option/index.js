@@ -1,9 +1,5 @@
-import { moneyFormatter } from '../../utils/common';
-
 Component({
   data: {
-    formattedPrice: '',
-    formattedListPrice: '',
     selectedOption: {}
   },
 
@@ -45,11 +41,10 @@ Component({
 
       this.props.onClick(selectedOption);
     },
-    _onSelectOption(event){
-      const { item } = event.target.dataset;
-
+    _onSelectOption(id){
+      console.log('bbb',id);
       this.setData({
-        selectedOption: item
+        selectedOption: id
       })
     }
   },

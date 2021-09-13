@@ -1,3 +1,14 @@
+export const isHasValue = (value) =>
+  value !== null && typeof value !== 'undefined';
+
+export const isNotEmpty = (value) =>
+  isHasValue(value) && (value + '').trim().length > 0;
+
+export const moneyFormatter = (number, currency = ' ₫') => {
+  if (!isNotEmpty(number)) return '';
+  return parseInt(number).toLocaleString('vi-VN') + currency;
+};
+
 export const nFormatter = (n, digits = 0, withPlus = true) => {
   if (n < 1e3) return n + `${withPlus ? '+' : ''}`;
   if (n >= 1e3 && n < 1e6)
