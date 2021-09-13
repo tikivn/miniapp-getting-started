@@ -36,7 +36,7 @@ Page({
         categories: group(categories, 8),
         isLoading: false,
       });
-    } catch (error) {
+    } catch {
       this.setData({
         isLoading: false,
       });

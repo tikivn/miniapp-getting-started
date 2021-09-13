@@ -1,0 +1,90 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<view class="pt-medium px-medium">
+  <section title="Shipping details">
+    <shipping-details
+      isLoading="{{isLoading}}"
+      buyer="{{cart.buyer}}"
+      seller="{{cart.seller}}"
+    />
+  </section>
+  <section title="Order details">
+    <order-list
+      isLoading="{{isLoading}}"
+      products="{{cart.orderedProducts}}"
+      shippingFee="{{cart.shippingFee}}"
+      promotion="{{selectedCoupon.discount}}"
+      skeletons="{{2}}"
+      onChangeTotal="onChangeTotal"
+    />
+  </section>
+</view>
+<view class="cart-footer bg-white w-full">
+  <view class="divider"/>
+  <view
+    class="flex justify-between items-center px-medium"
+    onTap="showCouponBottomSheet"
+  >
+    <view class="flex items-center py-2x-small truncate">
+      <view>
+        <image class="square-24 mr-2x-small" src="/assets/icons/coupon.svg"/>
+      </view>
+      <text class="font-bold truncate">
+        {{selectedCoupon.name ? selectedCoupon.name : 'Apply coupon'}}
+      </text>
+    </view>
+    <view>
+      <view
+        tiki:if="{{selectedCoupon.name}}"
+        class="flex items-center"
+      >
+        <icon
+          tiki:if="{{selectedCoupon.isValid}}"
+          class="mr-small"
+          size="{{20}}"
+          type="success_glyph"
+          color="#00AD57"
+        />
+        <icon
+          tiki:else
+          class="mr-small"
+          size="{{20}}"
+          type="warning_glyph"
+          color="#FF424F"
+        />
+        <view
+          class="cart-remove-btn"
+          catchTap="onRemoveCoupon"
+        >
+          <icon
+            size="{{20}}"
+            type="close"
+            color="#808089"
+          />
+        </view>
+      </view>
+      <icon
+        tiki:else
+        type="arrow_right"
+        color="#808089"
+      />
+    </view>
+  </view>
+  <view class="divider"/>
+  <view class="py-2x-small px-medium">
+    <button
+      class="w-full"
+      shape="pill"
+      onTap="makePayment"
+    >
+      {{`Pay ${moneyFormatter(total)}`}}
+    </button>
+  </view>
+</view>
+
+<coupon-selector
+  isShow="{{isShowCouponBottomSheet}}"
+  coupons="{{coupons}}"
+  onSelect="onSelectCoupon"
+  onClose="hideCouponBottomSheet"
+/>

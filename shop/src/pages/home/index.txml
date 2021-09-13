@@ -1,6 +1,6 @@
 <import src="./section-title.txml"/>
 
-<view class="padding-inset-bottom">
+<view>
   <header
     isLoading="{{isLoading}}"
     shop="{{shop}}"
