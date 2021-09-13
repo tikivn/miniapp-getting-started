@@ -1,5 +1,5 @@
 {
-  "pages": ["pages/detail/index"],
+  "pages": ["pages/home/index"],
   "window": {
     "defaultTitle": "Tini shop"
   }
