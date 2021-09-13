@@ -1,8 +1,8 @@
 export const isHasValue = (value) =>
-  value !== null && typeof value !== 'undefined';
+  value !== null && typeof value !== "undefined";
 
 export const isNotEmpty = (value) =>
-  isHasValue(value) && (value + '').trim().length > 0;
+  isHasValue(value) && (value + "").trim().length > 0;
 
 export const moneyFormatter = (number, currency = ' ₫') => {
   if (!isNotEmpty(number)) return '';

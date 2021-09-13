@@ -1,0 +1,42 @@
+<template name="row-info">
+  <view class="flex justify-between p-2x-small border-bottom-gray">
+    <view>{{title}}</view>
+    <view class="font-bold">{{description}}</view>
+  </view>
+</template>
+
+<view>
+  <view class="mb-small font-bold text-medium">Detail info</view>
+
+  <template is="row-info" data="{{title: 'Made in', description: detail.madeIn}}"/>
+  <template is="row-info" data="{{title: 'Size', description: detail.size}}"/>
+  <template is="row-info" data="{{title: 'Color', description: detail.color}}"/>
+  <template is="row-info" data="{{title: 'Material', description: detail.material}}"/>
+
+  <view class="mt-medium">
+    {{detail.shortDescription}}
+  </view>
+
+  <view tiki:if="{{viewMore}}" class="mt-medium">
+    <image class="w-full" src="/assets/images/img-descript.png"/>
+    <view class="mt-medium">{{detail.shortDescription}}</view>
+    <view
+      onTap="_onSwitchView"
+      class="mt-large flex justify-center">
+      <view class="text-medium text-blue mr-2x-small">View Less</view>
+      <icon type="arrow_up" color="#1A94FF"/>
+    </view>
+  </view>
+
+  <view tiki:else class="mt-medium image-description">
+    <image class="w-full" src="/assets/images/img-descript.png"/>
+    <view class="overlay-img"></view>
+    <view
+      onTap="_onSwitchView"
+      class="view-more flex">
+      <view class="text-medium text-blue mr-2x-small">View More</view>
+      <icon type="arrow_down" color="#1A94FF"/>
+    </view>
+  </view>
+
+</view>

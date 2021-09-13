@@ -1,10 +1,11 @@
-import request from './request';
+import request from "./request";
 
-import shop from './mock/shop.json';
-import categories from './mock/categories.json';
-import products from './mock/products.json';
-import cart from './mock/cart.json';
-import coupons from './mock/coupons.json';
+import shop from "./mock/shop.json";
+import categories from "./mock/categories.json";
+import products from "./mock/products.json";
+import product from "./mock/product-detail.json";
+import cart from "./mock/cart.json";
+import coupons from "./mock/coupons.json";
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -20,6 +21,10 @@ export const getFeaturedProductsAPI = () => {
 
 export const getNewProductsAPI = () => {
   return request(products);
+};
+
+export const getDetailProduct = () => {
+  return request(product);
 };
 
 export const getCouponsAPI = () => {

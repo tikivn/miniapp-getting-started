@@ -1,0 +1,48 @@
+<view>
+  <view>
+    <image class="block w-full" mode="widthFix" src="/assets/images/ex-detail.png"/>
+  </view>
+  <view tiki:if="{{product.id}}" class="p-medium bg-white mb-2x-small">
+    <header-product product="{{product}}" />
+    <view
+      onTap="onSelectColor"
+      class="mb-medium border-option">
+      <card-select
+        title="Color"
+        description="{{colorSelected.color}}"
+        img="{{colorSelected.image}}" />
+    </view>
+
+    <view
+      onTap="onSelectSize"
+      class="border-option">
+      <card-select
+        title="Size"
+        description="{{sizeSelected.size}}"/>
+    </view>
+  </view>
+  <view class="p-medium bg-white mb-2x-small">
+    <shipping-info />
+  </view>
+   <view class="p-medium bg-white mb-2x-small">
+    <detail-info detail="{{product.detail}}" />
+  </view>
+
+  <view class="p-medium bg-white">
+    <view class="mb-small font-bold text-medium">More like this</view>
+    <product-section
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{newProducts}}"
+    />
+  </view>
+
+  <view tiki:if="{{product.id}}">
+    <bottom-sheet-option
+      type="{{type}}"
+      onClose="onCloseOption"
+      onClick="onDoneOption"
+      isShowOption="{{isShowOption}}"
+      product="{{product}}" />
+  </view>
+</view>
