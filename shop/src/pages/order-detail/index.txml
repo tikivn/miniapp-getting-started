@@ -1,0 +1,15 @@
+<view class="p-medium">
+  <general-info order="{{order}}"/>
+
+  <view class="mt-medium">
+    <order-tracking order="{{order}}"/>
+  </view>
+
+  <view class="mt-medium">
+    <product-info products="{{order.products}}"/>
+  </view>
+
+  <view class="mt-medium">
+    <payment-info payment="{{order.payment}}"/>
+  </view>
+</view>

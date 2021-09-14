@@ -20,3 +20,25 @@ export const nFormatter = (n, digits = 0, withPlus = true) => {
   if (n >= 1e12)
     return +(n / 1e12).toFixed(digits) + 'T' + `${withPlus ? '+' : ''}`;
 };
+
+export const statusFormatter = (status) => {
+  let statusFormat = "";
+  switch (status) {
+    case "delivered":
+      statusFormat = "Delivered";
+      break;
+    case "shipping":
+      statusFormat = "Shipping";
+      break;
+    case "processing":
+      statusFormat = "Processing";
+      break;
+    case "waiting":
+      statusFormat = "Waiting for payment";
+      break;
+    case "canceled":
+      statusFormat = "Canceled";
+      break;
+  }
+  return statusFormat;
+};

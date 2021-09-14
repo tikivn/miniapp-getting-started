@@ -1,7 +1,6 @@
 {
-  "component": true,
   "usingComponents": {
-    "card-select": "components/card-select/index",
+    "steps": "@tiki.vn/tini-ui/es/steps/index",
     "row-info": "components/row-info/index"
   }
 }

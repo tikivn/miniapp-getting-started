@@ -18,6 +18,11 @@ view {
   padding-bottom: var(--safe-area-inset-bottom);
 }
 
+.size-16 {
+  width: 16px;
+  height: 16px;
+}
+
 .size-40 {
   width: 40px;
   height: 40px;
