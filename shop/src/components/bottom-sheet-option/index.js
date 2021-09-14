@@ -10,7 +10,7 @@ Component({
     product: {
       id: '',
       name: '',
-      image: '',
+      images: [],
       price: '',
       listPrice: '',
       discountRate: 0,

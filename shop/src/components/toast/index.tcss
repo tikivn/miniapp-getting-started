@@ -1,0 +1,27 @@
+.toast {
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  position: fixed;
+  bottom: -70px;
+  left: 50%;
+  z-index: 5;
+  background-color: #00ab56;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: ease 0.3s;
+}
+
+.toast-show {
+  transform: translate(-50%, calc(0px - 136px - var(--safe-area-inset-bottom)));
+}
+
+.toast-hide {
+  transform: translate(-50%, 0);
+}
+
+.toast .divider {
+  height: 24px;
+  width: 1px;
+  background-color: #ebebf0;
+  opacity: 0.5;
+}

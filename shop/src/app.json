@@ -2,14 +2,14 @@
   "window": {
     "defaultTitle": "Tini shop"
   },
-  "pages": ["pages/home/index", "pages/cart/index"],
+  "pages": ["pages/detail/index", "pages/cart/index"],
   "tabBar": {
     "borderTopActiveColor": "#1A94FF",
     "borderTopColor": "#EBEBF0",
     "items": [
       {
         "name": "Home",
-        "pagePath": "pages/home/index",
+        "pagePath": "pages/detail/index",
         "icon": "/assets/icons/tab-home.png",
         "activeIcon": "assets/icons/tab-home-active.png"
       },

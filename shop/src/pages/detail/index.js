@@ -15,7 +15,36 @@ Page({
     sizeSelected: {
       id: '',
       size: ''
-    }
+    },
+    toast: {
+      isShow: false,
+      content: '',
+      showAt: '',
+    },
+  },
+
+  showToast(content) {
+    this.setData({
+      toast: {
+        isShow: true,
+        content,
+        showAt: Date.now(),
+      },
+    });
+  },
+
+  hideToast() {
+    this.setData({
+      toast: {
+        isShow: false,
+        content: '',
+        showAt: '',
+      },
+    });
+  },
+
+  onClickBuyNow() {
+    this.showToast(`Add to cart successfully`);
   },
 
   onSelectColor(){

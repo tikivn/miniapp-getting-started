@@ -1,7 +1,13 @@
 <view>
-  <view>
-    <image class="block w-full" mode="widthFix" src="/assets/images/ex-detail.png"/>
-  </view>
+  <carousel>
+    <carousel-item tiki:for="{{product.images}}">
+      <view class="relative">
+        <image class="block w-full" mode="widthFix" src="{{item}}"/>
+        <view class="total-images text-white">{{index + 1}}/{{product.images.length}}</view>
+      </view>
+    </carousel-item>
+  </carousel>
+  
   <view tiki:if="{{product.id}}" class="p-medium bg-white mb-2x-small">
     <header-product product="{{product}}" />
     <view
@@ -28,13 +34,26 @@
     <detail-info detail="{{product.detail}}" />
   </view>
 
-  <view class="p-medium bg-white">
+  <view class="p-medium bg-white mb-2x-small">
     <view class="mb-small font-bold text-medium">More like this</view>
     <product-section
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
       products="{{newProducts}}"
     />
+  </view>
+
+  <view tiki:if="{{!isShowOption}}" class="footer flex w-full bg-white px-medium py-2x-small">
+    <view>
+      <image class="size-40" src="/assets/icons/ic-buy.png"/>
+    </view>
+    <button
+      class="w-full ml-2x-small"
+      shape="pill"
+      onTap="onClickBuyNow"
+    >
+      Buy now
+    </button>
   </view>
 
   <view tiki:if="{{product.id}}">
@@ -45,4 +64,10 @@
       isShowOption="{{isShowOption}}"
       product="{{product}}" />
   </view>
+
+  <toast 
+    isShow="{{toast.isShow}}" 
+    content="{{toast.content}}" 
+    showAt="{{toast.showAt}}" 
+    onCancel="hideToast" />
 </view>
