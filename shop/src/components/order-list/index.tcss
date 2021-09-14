@@ -1,0 +1,8 @@
+.order-list-info-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.order-list-promotion-text {
+  color: #00ad57;
+}

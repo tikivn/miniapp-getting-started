@@ -1,0 +1,12 @@
+.cart-footer {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+}
+
+.cart-remove-btn {
+  height: fit-content;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.08);
+}

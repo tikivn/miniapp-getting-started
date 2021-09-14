@@ -7,6 +7,8 @@ import product from "./mock/product-detail.json";
 import user from "./mock/user.json";
 import numOrders from "./mock/numOrders.json";
 import orders from "./mock/orders.json";
+import cart from "./mock/cart.json";
+import coupons from "./mock/coupons.json";
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -38,4 +40,21 @@ export const getNumOrders = () => {
 
 export const getOrders = () => {
   return request(orders);
+};
+
+export const getCouponsAPI = () => {
+  return request(coupons);
+};
+
+export const getCouponFromCodeAPI = (code) => {
+  const isValid = Math.random() <= 0.7;
+  return request({
+    name: `${code} - Random coupon`,
+    discount: isValid ? +((Math.random() * 100).toFixed(0) * 1000) : 0,
+    isValid,
+  });
+};
+
+export const getCartAPI = () => {
+  return request(cart);
 };

@@ -65,6 +65,10 @@
   width: 20%;
 }
 
+.skeleton-40-width {
+  width: 40%;
+}
+
 .skeleton-50-width {
   width: 50%;
 }

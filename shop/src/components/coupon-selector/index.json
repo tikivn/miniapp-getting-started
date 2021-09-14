@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index"
+  }
+}
