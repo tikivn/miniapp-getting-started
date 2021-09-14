@@ -1,0 +1,7 @@
+.pt-0 {
+  padding-top: 0;
+}
+
+.home-category-list {
+  transform: translateX(20px);
+}

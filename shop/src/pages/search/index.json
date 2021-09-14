@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Search",
+  "usingComponents": {
+    "textfield": "@tiki.vn/tini-ui/es/textfield",
+    "category-section": "components/category-section/index"
+  }
+}

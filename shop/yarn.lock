@@ -14,7 +14,7 @@
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.1.tgz#6333d4b85e2a153443fadf25fd0127dc8c4d0ee4"
   integrity sha512-V0JVBhsYmQ7Ue/NZ770Do6SxnJ2uvchAu13Y2pGkSXgfNflLhAY7r/I8QOyfOxvFhlaMLLH4i1KF6amk+vw9NA==
 
-"@tiki.vn/tini-ui@^0.1.2-rc.21":
+"@tiki.vn/tini-ui@0.1.2-rc.24":
   version "0.1.2-rc.24"
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.2-rc.24.tgz#e91693b9826d08bcd0ee9b038472845bff7a749f"
   integrity sha512-fZeT58ujcsgD1zydL1jjr4KpcvBLdulXHDc6PQG45J8RRrNsWC1e6XXQaesP6X1c7HJFsV1TTD8FFkNUWFZgMw==

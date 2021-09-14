@@ -1,0 +1,43 @@
+<view class="bg-white h-full">
+  <textfield
+    class="p-medium pt-0"
+    placeholder="Search products" 
+    iconLeft="search" 
+    shape="pill" 
+  />
+  <view class="flex flex-col">
+    <view class="p-medium pb-small font-bold text-medium">Recent search</view>
+    <template is="search-key-word" data="{{keyword: 'Search keyword 1'}}" />
+    <template is="search-key-word" data="{{keyword: 'Search keyword 2'}}" />
+    <template is="search-key-word" data="{{keyword: 'Search keyword 3', hideBorder: true}}" />
+  </view>
+  <view class="bg-gray10" style="height: 8px" />
+  <view class="flex flex-col">
+    <view class="p-medium pb-small font-bold text-medium">Category</view>
+    <carousel> 
+      <carousel-item
+        tiki:for="{{isLoading ? [1] : categories}}"
+        tiki:key="id"
+      >
+        <category-section
+          isLoading="{{isLoading}}"
+          className="home-category-list"
+          skeletons="{{4}}"
+          type="category-grid"
+          categories="{{item}}"
+        />
+      </carousel-item>  
+    </carousel>
+  </view>
+
+  
+</view>
+
+<template name="search-key-word">
+  <view class="px-medium flex flex-col">
+    <view class="flex flex-row items-center {{hideBorder ? '' : 'border-0 border-bottom border-solid border-gray20'}}" style="height: 40px;">
+      <view class="flex flex-grow">{{keyword}}</view>
+      <icon type="close" color="var(--gray60)" size="20" />
+    </view>
+  </view>
+</template>
