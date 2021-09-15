@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "status": "delivered",
+    "detail": "",
+    "date": "19:27, 21/05/2021"
+  },
+  {
+    "id": "2",
+    "status": "shipping",
+    "detail": "Giaohangnhanh is shipping",
+    "date": "19:27, 21/05/2021"
+  },
+  {
+    "id": "3",
+    "status": "shipping",
+    "detail": "Out of storage",
+    "date": "19:27, 21/05/2021"
+  },
+  {
+    "id": "4",
+    "status": "processing",
+    "detail": "Packaging",
+    "date": "19:27, 21/05/2021"
+  },
+  {
+    "id": "5",
+    "status": "processing",
+    "detail": "",
+    "date": "19:27, 21/05/2021"
+  },
+  {
+    "id": "6",
+    "status": "processing",
+    "detail": "Order received",
+    "date": "19:27, 21/05/2021"
+  },
+  {
+    "id": "7",
+    "status": "processing",
+    "detail": "Wait for seller’s confirmation",
+    "date": "19:27, 21/05/2021"
+  }
+]

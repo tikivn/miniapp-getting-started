@@ -2,6 +2,12 @@ Component({
   props: {
     src: '',
     text: '',
-    value: ''
-  }
-})
+    value: '',
+    onTap: () => {},
+  },
+  methods: {
+    _onTap() {
+      this.props.onTap();
+    },
+  },
+});

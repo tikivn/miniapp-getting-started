@@ -7,6 +7,12 @@ Component({
     },
   },
 
+  methods: {
+    onMoveOrderManagement() {
+      my.navigateTo({ url: 'pages/order-management/index' });
+    },
+  },
+
   // Life cycle
   didMount() {},
 });

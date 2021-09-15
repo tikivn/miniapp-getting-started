@@ -11,6 +11,6 @@
     tiki:for="{{products}}"
     tiki:key="id"
   >
-    <product product="{{item}}"/>
+    <product product="{{item}}" onTapProduct="_onTapProduct"/>
   </block>
 </view>

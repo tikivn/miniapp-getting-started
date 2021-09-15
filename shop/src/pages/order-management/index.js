@@ -8,17 +8,21 @@ Page({
       { title: 'All' },
       { title: 'Wait for payment' },
       { title: 'Processing' },
-      { title: 'Shipping' }
+      { title: 'Shipping' },
     ],
-    orders: []
+    orders: [],
   },
   onTabClick({ index, tabsName }) {
     this.loadData();
     this.setData({
-      [tabsName]: index
+      [tabsName]: index,
     });
   },
-  
+
+  onMoveOrderDetail() {
+    my.navigateTo({ url: 'pages/order-detail/index' });
+  },
+
   async loadData() {
     this.setData({
       isLoading: true,

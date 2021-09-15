@@ -2,21 +2,24 @@
   <view class="flex justify-between py-4x-small">
     <view class="text-medium font-bold">My orders</view>
     <view class="flex items-center">
-      <view class="text-blue mr-2x-small">View More</view>
+      <view class="text-blue mr-2x-small" onTap="onMoveOrderManagement">View More</view>
       <icon type="arrow_right" color="#1A94FF"/>
     </view>
   </view>
 
   <view class="px-medium pt-medium flex justify-around">
-    <order-icon 
+    <order-icon
+      onTap="onMoveOrderManagement" 
       value="{{numOrders.waiting}}"
       src="/assets/icons/ic-waiting-payment.svg" 
       text="Wait for payment"/>
-    <order-icon 
+    <order-icon
+      onTap="onMoveOrderManagement" 
       value="{{numOrders.processing}}"
       src="/assets/icons/ic-processing.svg" 
       text="Processing"/>
     <order-icon
+      onTap="onMoveOrderManagement"
       value="{{numOrders.shipping}}"
       src="/assets/icons/ic-shipping.svg" 
       text="Shipping"/>

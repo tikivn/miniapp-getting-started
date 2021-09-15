@@ -21,7 +21,7 @@ Page({
       this.setData({
         user,
         numOrders,
-        isLoading: false
+        isLoading: false,
       });
     } catch (error) {
       this.setData({

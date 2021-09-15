@@ -1,0 +1,9 @@
+{
+  "user": {
+    "name": "User name",
+    "avt": "/assets/images/logo.png",
+    "joinDate": "20/04/2020"
+  },
+  "point": 420,
+  "barcode": "42069-69420-42069"
+}

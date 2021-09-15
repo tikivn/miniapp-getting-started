@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "steps": "@tiki.vn/tini-ui/es/steps/index",
+    "shipping-details": "components/shipping-details/index"
+  }
+}

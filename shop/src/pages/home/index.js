@@ -15,6 +15,10 @@ Page({
     newProducts: [],
   },
 
+  onTapProduct() {
+      my.navigateTo({ url: 'pages/detail/index' });
+  },
+
   async loadData() {
     this.setData({
       isLoading: true,

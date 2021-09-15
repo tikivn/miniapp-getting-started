@@ -1,4 +1,4 @@
-<view class="flex flex-col items-center status-order">
+<view onTap="_onTap" class="flex flex-col items-center status-order">
   <view class="relative p-small mb-4x-small">
     <image 
       class="block size-32" 

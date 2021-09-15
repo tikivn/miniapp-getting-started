@@ -46,6 +46,10 @@ Page({
   },
 
   onClickBuyNow() {
+    this.showToast(`Add to cart successfully`);
+  },
+
+  onClickBuyNow() {
     app.addProduct(this.data.product);
     this.showToast(`Add to cart successfully`);
   },
