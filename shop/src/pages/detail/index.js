@@ -115,6 +115,10 @@ Page({
     }
   },
 
+  goToCart() {
+    my.navigateTo({ url: 'pages/cart/index' });
+  },
+
   // Life cycle
   onReady() {
     this.loadData();

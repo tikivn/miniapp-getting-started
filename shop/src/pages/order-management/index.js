@@ -18,6 +18,12 @@ Page({
       [tabsName]: index,
     });
   },
+  onChangeTab({ index, tabsName }) {
+    this.loadData();
+    this.setData({
+      [tabsName]: index,
+    });
+  },
 
   onMoveOrderDetail() {
     my.navigateTo({ url: 'pages/order-detail/index' });
