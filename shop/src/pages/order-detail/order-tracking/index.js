@@ -18,6 +18,12 @@ Component({
     }
   },
 
+  methods: {
+    onMoveTrackingDetail() {
+      my.navigateTo({ url: 'pages/tracking-detail/index' });
+    }
+  },
+
   deriveDataFromProps(nextProps) {
     if (nextProps.order.id) {
       const { tracking } = nextProps.order;

@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "Order detail",
   "usingComponents": {
     "general-info": "pages/order-detail/general-info/index",
     "order-tracking": "pages/order-detail/order-tracking/index",

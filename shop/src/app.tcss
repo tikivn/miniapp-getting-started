@@ -1,6 +1,15 @@
 @import "@tiki.vn/tini-style/es/index.tcss";
 @import "./styles/skeleton.tcss";
 
+:root {
+  --green20: #D7FAE0;
+  --green80: #007D3A;
+  --yellow20: #FFF5C7;
+  --yellow80: #CC8100;
+  --red20: #FFDBDE;
+  --red80: #BF1D28;
+}
+
 image,
 icon {
   display: block;
@@ -11,7 +20,7 @@ view {
 }
 
 .page {
-  background-color: #f5f5fa;
+  background-color: var(--gray10);
 }
 
 .padding-inset-bottom {
@@ -21,6 +30,11 @@ view {
 .size-16 {
   width: 16px;
   height: 16px;
+}
+
+.size-32 {
+  width: 32px;
+  height: 32px;
 }
 
 .size-40 {
@@ -33,9 +47,25 @@ view {
   height: 120px;
 }
 
+.w-50 {
+  width: 50%;
+}
+
+.radius-16px {
+  border-radius: 16px;
+}
+
+.bg-app {
+  background: var(--gray10);
+}
+
 .border-option {
-  border: 1px solid #ebebf0;
+  border: 1px solid var(--gray20);
   border-radius: 8px;
+}
+
+.border-right-gray {
+  border-right: 1px solid var(--gray20);
 }
 
 .border-active {
@@ -44,7 +74,7 @@ view {
 }
 
 .border-bottom-gray {
-  border-bottom: 1px solid #ebebf0;
+  border-bottom: 1px solid var(--gray20);
 }
 
 .text-medium-2x-small {

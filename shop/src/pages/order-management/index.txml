@@ -1,0 +1,21 @@
+<view>
+  <tabs tabs="{{orderTabs}}"
+    tabsName="activeTab"
+    activeTab="{{activeTab}}"
+    onTabClick="onTabClick"
+    swipeable="{{true}}">
+    <block tiki:for="{{orderTabs}}">
+      <tab-content tabId="{{index}}">
+        <view class="bg-app p-medium">
+          <view
+            onTap="onMoveOrderDetail" 
+            tiki:for="{{orders}}"
+            tiki:key="id"
+            class="mb-medium">
+              <card-order order="{{item}}"/>
+          </view>
+        </view>
+      </tab-content>
+    </block>
+  </tabs>
+</view>

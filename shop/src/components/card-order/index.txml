@@ -1,0 +1,24 @@
+<import-sjs from="../../utils/common.sjs" name="{statusFormatter, moneyFormatter}"></import-sjs>
+
+<view class="">
+  <view class="bg-white radius-8px p-medium">
+    <text class="status-{{order.status}} px-small py-4x-small radius-16px">{{statusFormatter(order.status)}}</text>
+    
+    <view class="mt-small px-medium">
+      <view class="flex items-center py-2x-small border-bottom-gray">
+        <image class="block size-40" src="{{order.product.image}}"/>
+        <view class="ml-2x-small">
+          <view class="font-bold">{{order.product.name}}</view>
+          <view class="text-small text-gray60">
+            {{order.product.total}} products  |  {{moneyFormatter(order.product.price)}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex justify-between px-medium py-small">
+      <view>Payment method</view>
+      <view class="font-bold">{{order.method}}</view>
+    </view>
+  </view>
+</view>

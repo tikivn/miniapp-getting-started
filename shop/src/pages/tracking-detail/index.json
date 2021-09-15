@@ -1,4 +1,5 @@
 {
+  "defaultTitle": "Tracking detail",
   "usingComponents": {
     "steps": "@tiki.vn/tini-ui/es/steps/index",
     "row-info": "components/row-info/index"

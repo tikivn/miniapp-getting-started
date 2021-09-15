@@ -40,6 +40,7 @@
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
       products="{{featuredProducts}}"
+      onTapProduct="onTapProduct"
     />
   </view>
 
@@ -52,6 +53,7 @@
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
       products="{{newProducts}}"
+      onTapProduct="onTapProduct"
     />
   </view>
 </view>

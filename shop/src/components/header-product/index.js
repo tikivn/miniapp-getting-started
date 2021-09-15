@@ -1,9 +1,5 @@
-import { moneyFormatter } from '../../utils/common';
-
 Component({
   data: {
-    formattedPrice: '',
-    formattedListPrice: '',
     isShowOption: true
   },
 
@@ -23,12 +19,5 @@ Component({
 
   // Life cycle
   didMount() {
-    const { price, listPrice } = this.props.product;
-
-    this.setData({
-      formattedPrice: moneyFormatter(price, ' ₫'),
-      formattedListPrice:
-        price < listPrice ? moneyFormatter(listPrice, ' ₫') : '',
-    });
   },
 });

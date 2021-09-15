@@ -3,7 +3,7 @@
 <view>
   <view class="flex justify-between">
     <view class="text-medium font-bold">Order tracking</view>
-    <view class="flex">
+    <view onTap="onMoveTrackingDetail" class="flex">
       <view class="text-blue mr-2x-small">View detail</view>
       <icon type="arrow_right" color="#1A94FF"/>
     </view>
