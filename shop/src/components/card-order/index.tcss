@@ -1,25 +1,24 @@
 .status-delievered {
-  background: #D7FAE0;
-  color: #007D3A;
+  background: var(--green20);
+  color: var(--green80);
 }
 
 .status-shipping {
-  background: #DBEEFF;
-  color: #0D5BB5;
+  background: var(--blue20);
+  color: var(--blue80);
 }
 
 .status-processing {
-  background: #FFF5C7;
-  color: #CC8100;
+  background: var(--yellow20);
+  color: var(--yellow80);
 }
 
 .status-waiting {
-  background: #FFDBDE;
-  color: #BF1D28;
+  background: var(--red20);
+  color: var(--red80);
 }
 
 .status-canceled {
-  background: #F5F5FA;
-  color: #A6A6B0;
+  background: var(--gray10);
+  color: var(--gray50);
 }
-

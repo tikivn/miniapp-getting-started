@@ -42,16 +42,16 @@ view {
 }
 
 .bg-app {
-  background: #f5f5fa;
+  background: var(--gray10);
 }
 
 .border-option {
-  border: 1px solid #ebebf0;
+  border: 1px solid var(--gray20);
   border-radius: 8px;
 }
 
 .border-right-gray {
-  border-right: 1px solid #ebebf0;
+  border-right: 1px solid var(--gray20);
 }
 
 .border-active {
@@ -60,7 +60,7 @@ view {
 }
 
 .border-bottom-gray {
-  border-bottom: 1px solid #ebebf0;
+  border-bottom: 1px solid var(--gray20);
 }
 
 .text-medium-2x-small {
