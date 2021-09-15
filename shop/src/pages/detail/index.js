@@ -1,12 +1,14 @@
 import { getDetailProduct, getNewProductsAPI } from '../../services/index';
 
+const app = getApp();
+
 Page({
   data: {
     isShowOption: false,
     isLoading: true,
     product: {},
     newProducts: [],
-    type: "color",
+    type: 'color',
     colorSelected: {
       id: '',
       color: '',
@@ -14,7 +16,7 @@ Page({
     },
     sizeSelected: {
       id: '',
-      size: ''
+      size: '',
     },
     toast: {
       isShow: false,
@@ -44,42 +46,43 @@ Page({
   },
 
   onClickBuyNow() {
+    app.addProduct(this.data.product);
     this.showToast(`Add to cart successfully`);
   },
 
-  onSelectColor(){
+  onSelectColor() {
     this.setData({
-      type: "color",
+      type: 'color',
       isShowOption: true,
-    })
+    });
   },
 
-  onSelectSize(){
+  onSelectSize() {
     this.setData({
-      type: "size",
+      type: 'size',
       isShowOption: true,
-    })
+    });
   },
 
-  onCloseOption(){
+  onCloseOption() {
     this.setData({
       isShowOption: false,
-    })
+    });
   },
 
-  onDoneOption(option){
+  onDoneOption(option) {
     const { type } = this.data;
 
-    if (type === 'color'){
+    if (type === 'color') {
       this.setData({
         colorSelected: option,
-        isShowOption: false
-      })
+        isShowOption: false,
+      });
     } else {
-       this.setData({
+      this.setData({
         sizeSelected: option,
-        isShowOption: false
-      })
+        isShowOption: false,
+      });
     }
   },
 
@@ -99,7 +102,7 @@ Page({
         newProducts,
         isLoading: false,
         colorSelected: product.colors[0],
-        sizeSelected: product.sizes[0]
+        sizeSelected: product.sizes[0],
       });
     } catch (error) {
       this.setData({

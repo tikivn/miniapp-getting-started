@@ -26,7 +26,7 @@
 <template name='completed'>
   <view class="flex flex-col justify-between items-center py-2x-small">
     <block
-      tiki:for="{{_products}}"
+      tiki:for="{{products}}"
       tiki:key="id"
     >
       <order-item
@@ -57,12 +57,12 @@
         </text>
       </view>
       <view
-        tiki:if="{{price > 0 && promotion}}"
+        tiki:if="{{price > 0 && coupon.discount}}"
         class="flex justify-between items-center mb-medium"
       >
         <text>Promotion</text>
         <text class="order-list-promotion-text font-bold">
-          {{`-${moneyFormatter(promotion)}`}}
+          {{`-${moneyFormatter(coupon.discount)}`}}
         </text>
       </view>
       <view class="flex justify-between items-center">
@@ -77,7 +77,7 @@
 
 <template
   is="{{isLoading ? 'loading' : 'completed'}}"
-  data="{{_products, price, total, shippingFee, promotion, skeletonsArray}}"
+  data="{{products, price, total, shippingFee, coupon, skeletonsArray}}"
 />
 
 <modal
@@ -86,6 +86,6 @@
   descriptions="{{modal.descriptions}}"
   confirmButton="{{modal.confirmButton}}"
   cancelButton="{{modal.cancelButton}}"
-  onConfirm="removeOrder"
+  onConfirm="_onRemoveProduct"
   onCancel="hideModal"
 />

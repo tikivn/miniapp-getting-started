@@ -12,10 +12,13 @@
     <order-list
       isLoading="{{isLoading}}"
       products="{{cart.orderedProducts}}"
+      price="{{cart.price}}"
       shippingFee="{{cart.shippingFee}}"
-      promotion="{{selectedCoupon.discount}}"
+      total="{{cart.total}}"
+      coupon="{{cart.coupon}}"
       skeletons="{{2}}"
-      onChangeTotal="onChangeTotal"
+      onRemoveProduct="onRemoveProduct"
+      onChangeQuantityProduct="onChangeQuantityProduct"
     />
   </section>
 </view>
@@ -30,16 +33,16 @@
         <image class="square-24 mr-2x-small" src="/assets/icons/coupon.svg"/>
       </view>
       <text class="font-bold truncate">
-        {{selectedCoupon.name ? selectedCoupon.name : 'Apply coupon'}}
+        {{cart.coupon.name ? cart.coupon.name : 'Apply coupon'}}
       </text>
     </view>
     <view>
       <view
-        tiki:if="{{selectedCoupon.name}}"
+        tiki:if="{{cart.coupon.name}}"
         class="flex items-center"
       >
         <icon
-          tiki:if="{{selectedCoupon.isValid}}"
+          tiki:if="{{cart.coupon.isValid}}"
           class="mr-small"
           size="{{20}}"
           type="success_glyph"
@@ -77,7 +80,7 @@
       shape="pill"
       onTap="makePayment"
     >
-      {{`Pay ${moneyFormatter(total)}`}}
+      {{`Pay ${moneyFormatter(cart.total)}`}}
     </button>
   </view>
 </view>

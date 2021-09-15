@@ -1,10 +1,11 @@
-import {
-  getCouponsAPI,
-  getCartAPI,
-  getCouponFromCodeAPI,
-} from '../../services/index';
+import { getCouponsAPI, getCouponFromCodeAPI } from '../../services/index';
+import { EMITTERS } from '../../utils/constants';
+
+const app = getApp();
 
 Page({
+  disposableCollection: [],
+
   data: {
     isLoading: true,
     cart: {
@@ -12,14 +13,15 @@ Page({
       seller: {},
       orderedProducts: [],
       shippingFee: 0,
+      price: 0,
+      total: 0,
+      coupon: {
+        name: '',
+        discount: 0,
+        isValid: false,
+      },
     },
     coupons: [],
-    selectedCoupon: {
-      name: '',
-      discount: 0,
-      isValid: false,
-    },
-    total: 0,
     modal: {
       isShow: false,
       headers: [],
@@ -30,23 +32,14 @@ Page({
     isShowCouponBottomSheet: false,
   },
 
-  onChangeTotal(total) {
-    this.setData({
-      total,
-    });
-  },
-
   async loadData() {
     try {
       this.setData({
         isLoading: true,
       });
-      const [cart, coupons] = await Promise.all([
-        getCartAPI(),
-        getCouponsAPI(),
-      ]);
+      const coupons = await getCouponsAPI();
       this.setData({
-        cart,
+        cart: app.cart,
         coupons,
         isLoading: false,
       });
@@ -71,27 +64,37 @@ Page({
 
   async onSelectCoupon(code) {
     this.hideCouponBottomSheet();
-
-    try {
-      const selectedCoupon = await getCouponFromCodeAPI(code);
-
-      this.setData({
-        selectedCoupon,
-      });
-    } catch {}
+    app.selectCoupon(code);
   },
 
   onRemoveCoupon() {
-    this.setData({
-      selectedCoupon: {
-        name: '',
-        isValid: false,
-      },
-    });
+    app.removeCoupon(code);
+  },
+
+  onRemoveProduct(product) {
+    app.removeProduct(product);
+  },
+
+  onChangeQuantityProduct(product, quantity) {
+    app.changeQuantityProduct(product, quantity);
   },
 
   // Life cycle
+  async onLoad() {
+    this.disposableCollection.push(
+      app.cartEvent.on(EMITTERS.CART_UPDATE, (cart) =>
+        this.setData({
+          cart,
+        })
+      )
+    );
+  },
+
   onShow() {
     this.loadData();
+  },
+
+  onUnload() {
+    this.disposableCollection.forEach((dispose) => dispose());
   },
 });
