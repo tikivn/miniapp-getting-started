@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Order detail",
+  "usingComponents": {
+    "general-info": "pages/order-detail/general-info/index",
+    "order-tracking": "pages/order-detail/order-tracking/index",
+    "product-info": "pages/order-detail/product-info/index",
+    "payment-info": "pages/order-detail/payment-info/index"
+  }
+}

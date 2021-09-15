@@ -1,4 +1,4 @@
-.status-delievered {
+.status-delivered {
   background: var(--green20);
   color: var(--green80);
 }

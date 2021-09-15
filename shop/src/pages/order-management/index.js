@@ -18,6 +18,10 @@ Page({
       [tabsName]: index
     });
   },
+
+  onMoveOrderDetail() {
+      my.navigateTo({ url: 'pages/order-detail/index' });
+  },
   
   async loadData() {
     this.setData({

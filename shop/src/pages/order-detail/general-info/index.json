@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "section": "pages/cart/section/index",
+    "row-info": "components/row-info/index"
+  }
+}

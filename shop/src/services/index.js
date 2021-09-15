@@ -9,6 +9,9 @@ import numOrders from "./mock/numOrders.json";
 import orders from "./mock/orders.json";
 import cart from "./mock/cart.json";
 import coupons from "./mock/coupons.json";
+import order from "./mock/order-detail.json";
+import tracking from "./mock/tracking-detail.json";
+import point from "./mock/my-point.json";
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -57,4 +60,16 @@ export const getCouponFromCodeAPI = (code) => {
 
 export const getCartAPI = () => {
   return request(cart);
+};
+
+export const getOrderDetail = () => {
+  return request(order);
+};
+
+export const getTrackingDetail = () => {
+  return request(tracking);
+};
+
+export const getMyPoint = () => {
+  return request(point);
 };

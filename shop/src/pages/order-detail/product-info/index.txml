@@ -1,0 +1,18 @@
+<import-sjs from="../../../utils/common.sjs" name="{statusFormatter, moneyFormatter}"></import-sjs>
+
+<view>
+  <section title="Product info">
+    <view tiki:for="{{products}}">
+      <view class="flex items-center">
+        <image class="block size-40" src="{{item.thumbnail}}"/>
+        <view class="ml-2x-small">
+          <view class="font-bold">{{item.name}}</view>
+          <view class="text-small text-gray60">
+            {{moneyFormatter(item.price)}} x {{item.quantity}}
+          </view>
+        </view>
+      </view>
+      <view tiki:if="{{index !== (products.length - 1)}}" class="divider my-2x-small"></view>
+    </view>
+  </section>
+</view>

@@ -24,8 +24,8 @@ export const nFormatter = (n, digits = 0, withPlus = true) => {
 export const statusFormatter = (status) => {
   let statusFormat = "";
   switch (status) {
-    case "delievered":
-      statusFormat = "Delievered";
+    case "delivered":
+      statusFormat = "Delivered";
       break;
     case "shipping":
       statusFormat = "Shipping";

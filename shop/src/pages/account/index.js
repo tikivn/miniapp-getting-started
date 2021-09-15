@@ -6,7 +6,7 @@ Page({
     user: {},
     numOrders: {},
   },
-
+  
   async loadData() {
     this.setData({
       isLoading: true,

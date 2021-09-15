@@ -1,13 +1,13 @@
 <view class="bg-white p-medium radius-8px">
   <view class="flex">
-    <view class="flex w-50 py-2x-small border-right-gray">
+    <view onTap="onMoveMyCoupon" class="flex w-50 py-2x-small border-right-gray">
       <image class="block size-40" src="/assets/icons/ic-coupon.svg"/>
       <view class="ml-2x-small">
         <view class="mb-4x-small">Coupon</view>
         <view class="text-medium font-bold">{{user.coupons}}</view>
       </view>
     </view>
-    <view class="flex w-50 py-2x-small pl-medium">
+    <view onTap="onMoveMyPoint" class="flex w-50 py-2x-small pl-medium">
       <image class="block size-40" src="/assets/icons/ic-point.svg"/>
       <view class="ml-2x-small">
         <view class="mb-4x-small">Point</view>

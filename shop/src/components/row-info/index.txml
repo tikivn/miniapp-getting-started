@@ -1,0 +1,9 @@
+<view>
+  <view>
+    <view class="flex justify-between">
+      <view>{{title}}</view>
+      <view class="font-bold">{{description}}</view>
+    </view>
+    <view class="{{isBorder ? 'divider my-2x-small' : ''}}"></view>
+  </view>
+</view>

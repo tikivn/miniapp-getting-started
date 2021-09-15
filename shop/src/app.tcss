@@ -1,6 +1,15 @@
 @import "@tiki.vn/tini-style/es/index.tcss";
 @import "./styles/skeleton.tcss";
 
+:root {
+  --green20: #D7FAE0;
+  --green80: #007D3A;
+  --yellow20: #FFF5C7;
+  --yellow80: #CC8100;
+  --red20: #FFDBDE;
+  --red80: #BF1D28;
+}
+
 image,
 icon {
   display: block;
@@ -11,11 +20,16 @@ view {
 }
 
 .page {
-  background-color: #f5f5fa;
+  background-color: var(--gray10);
 }
 
 .padding-inset-bottom {
   padding-bottom: var(--safe-area-inset-bottom);
+}
+
+.size-16 {
+  width: 16px;
+  height: 16px;
 }
 
 .size-32 {
