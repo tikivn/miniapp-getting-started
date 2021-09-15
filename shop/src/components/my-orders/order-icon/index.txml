@@ -1,0 +1,13 @@
+<view class="flex flex-col items-center status-order">
+  <view class="relative p-small mb-4x-small">
+    <image 
+      class="block size-32" 
+      src="{{src}}"/>
+    <view 
+      tiki:if="{{value}}"
+      class="badge-orders bg-red text-center radius-8px text-white text-x-small">
+        {{value}}
+    </view>
+  </view>
+  <view class="text-center">{{text}}</view>
+</view>

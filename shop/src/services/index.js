@@ -4,6 +4,9 @@ import shop from "./mock/shop.json";
 import categories from "./mock/categories.json";
 import products from "./mock/products.json";
 import product from "./mock/product-detail.json";
+import user from "./mock/user.json";
+import numOrders from "./mock/numOrders.json";
+import orders from "./mock/orders.json";
 import cart from "./mock/cart.json";
 import coupons from "./mock/coupons.json";
 
@@ -25,6 +28,18 @@ export const getNewProductsAPI = () => {
 
 export const getDetailProduct = () => {
   return request(product);
+};
+
+export const getUserInfo = () => {
+  return request(user);
+};
+
+export const getNumOrders = () => {
+  return request(numOrders);
+};
+
+export const getOrders = () => {
+  return request(orders);
 };
 
 export const getCouponsAPI = () => {

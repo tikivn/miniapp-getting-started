@@ -1,8 +1,9 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
 <view>
   <view class="text-medium">{{product.name}}</view>
   <view class="flex items-center">
     <view class="mr-2x-small text-medium-2x-small font-bold">
-      {{formattedPrice}}
+      {{moneyFormatter(product.price)}}
     </view>
     <view
       tiki:if="{{product.discountRate}}"
@@ -11,6 +12,6 @@
     </view>
   </view>
   <view class="text-gray60 line-through mb-medium">
-    {{formattedListPrice}}
+    {{moneyFormatter(product.listPrice)}}
   </view>
 </view>

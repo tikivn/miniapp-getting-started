@@ -1,1 +1,14 @@
+.footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+}
 
+.total-images {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  padding: 6px 12px;
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.4)
+}

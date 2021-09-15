@@ -1,7 +1,12 @@
 {
   "id": "1",
   "name": "Product title",
-  "image": "/assets/images/ex-detail.png",
+  "images": [
+    "/assets/images/product-detail.png",
+    "/assets/images/product-detail.png",
+    "/assets/images/product-detail.png",
+    "/assets/images/product-detail.png"
+  ],
   "price": 9999999,
   "listPrice": 11111110,
   "discountRate": 10,

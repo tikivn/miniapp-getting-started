@@ -40,7 +40,7 @@
     <view class="flex p-medium">
       <image
         class="size-120 radius-8px mb-2x-small radius-8px"
-        src="{{product.image}}"
+        src="{{product.images[0]}}"
       />
       <view class="ml-medium">
         <text

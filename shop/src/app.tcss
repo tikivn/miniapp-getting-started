@@ -18,6 +18,11 @@ view {
   padding-bottom: var(--safe-area-inset-bottom);
 }
 
+.size-32 {
+  width: 32px;
+  height: 32px;
+}
+
 .size-40 {
   width: 40px;
   height: 40px;
@@ -28,9 +33,25 @@ view {
   height: 120px;
 }
 
+.w-50 {
+  width: 50%;
+}
+
+.radius-16px {
+  border-radius: 16px;
+}
+
+.bg-app {
+  background: var(--gray10);
+}
+
 .border-option {
-  border: 1px solid #ebebf0;
+  border: 1px solid var(--gray20);
   border-radius: 8px;
+}
+
+.border-right-gray {
+  border-right: 1px solid var(--gray20);
 }
 
 .border-active {
@@ -39,7 +60,7 @@ view {
 }
 
 .border-bottom-gray {
-  border-bottom: 1px solid #ebebf0;
+  border-bottom: 1px solid var(--gray20);
 }
 
 .text-medium-2x-small {

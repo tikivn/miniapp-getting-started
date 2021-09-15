@@ -10,7 +10,7 @@ Component({
     product: {
       id: '',
       name: '',
-      image: '',
+      images: [],
       price: '',
       listPrice: '',
       discountRate: 0,
@@ -42,7 +42,6 @@ Component({
       this.props.onClick(selectedOption);
     },
     _onSelectOption(id){
-      console.log('bbb',id);
       this.setData({
         selectedOption: id
       })
@@ -51,12 +50,5 @@ Component({
 
   // Life cycle
   didMount() {
-    const { price, listPrice } = this.props.product;
-
-    this.setData({
-      formattedPrice: moneyFormatter(price, ' ₫'),
-      formattedListPrice:
-        price < listPrice ? moneyFormatter(listPrice, ' ₫') : '',
-    });
   },
 });

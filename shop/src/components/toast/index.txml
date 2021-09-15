@@ -1,0 +1,23 @@
+<view class="{{`toast flex justify-between items-center p-small ${_isShow ? 'toast-show' : 'toast-hide'}`}}">
+  <view class="flex items-center">
+    <icon
+      class="check-icon block mr-small"
+      type="success_glyph" 
+      color="#FFFFFF"
+    />
+    <text class="text-white">
+      {{content}}
+    </text>
+  </view>
+  <view 
+    class="right-section flex justify-between items-center"
+    onTap="_onCancel"
+  >
+    <view class="divider"/>
+    <icon
+      class="block ml-2x-small"
+      type="close" 
+      color="#FFFFFF"
+    />
+  </view>
+</view>

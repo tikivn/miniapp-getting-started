@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "order-icon": "components/my-orders/order-icon/index"
+  }
+}
