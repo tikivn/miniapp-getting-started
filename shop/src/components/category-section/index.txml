@@ -1,28 +1,21 @@
 <view class="{{className}}">
-  <template name="category-grid">
-    <view class="category-grid-layout">
-      <block tiki:if="{{isLoading}}">
-        <category
-          isLoading
-          tiki:for="{{skeletonsArray}}"
-          tiki:key="*this"
-        />
-      </block>
-      <block
-        tiki:else
-        tiki:for="{{categories}}"
-        tiki:key="id"
-      >
-        <category
-          category="{{item}}"
-          onTapCategory="_onTapCategory"
-        />
-      </block>
-    </view>
-  </template>
-  
-  <template
-    is="{{type}}"
-    data="{{categories, isLoading, skeletonsArray, _onTapCategory}}"
-  />
+  <view class="category-grid-layout">
+    <block tiki:if="{{isLoading}}">
+      <category
+        isLoading
+        tiki:for="{{skeletonsArray}}"
+        tiki:key="*this"
+      />
+    </block>
+    <block
+      tiki:else
+      tiki:for="{{categories}}"
+      tiki:key="id"
+    >
+      <category
+        category="{{item}}"
+        onTapCategory="_onTapCategory"
+      />
+    </block>
+  </view>
 </view>

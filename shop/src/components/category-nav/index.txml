@@ -1,0 +1,20 @@
+<view class="category-nav h-full flex flex-col">
+  <block tiki:if="{{isLoading}}">
+    <category
+      className="category-nav-item"
+      isLoading
+      tiki:for="{{skeletonsArray}}"
+      tiki:key="*this"
+    />
+  </block>
+  <block
+    tiki:for="{{categories}}"
+    tiki:key="id"
+  >
+    <category
+      className="category-nav-item {{activatedCategory.id === item.id ? 'category-nav-item-active' : ''}}"
+      category="{{item}}"
+      onTapCategory="_onTapCategory"
+    />
+  </block>
+</view>

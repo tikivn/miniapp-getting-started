@@ -7,7 +7,7 @@ Component({
     isLoading: false,
     skeletons: 0,
     className: '',
-    type: '',
+    activatedCategory: {},
     categories: [],
     onTapCategory: () => {},
   },

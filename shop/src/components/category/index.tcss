@@ -1,15 +1,11 @@
 .category-grid {
-  --grid-item-width: calc(100vw / 3.8);
-  --grid-item-image-with: calc(var(--grid-item-width) - 12vw);
-
-  width: var(--grid-item-width);
-  padding: 0 8px;
+  width: var(--grid-item-width, 58px);
 }
 
 .category-grid-logo,
 .skeleton-category-grid-logo {
-  width: var(--grid-item-image-with);
-  height: var(--grid-item-image-with);
+  width: var(--grid-item-image-with, 48px);
+  height: var(--grid-item-image-with, 48px);
   border-radius: 40%;
 }
 

@@ -1,0 +1,10 @@
+.sub-category-section {
+  background-color: var(--white);
+  border: 1px solid var(--gray20);
+}
+
+.sub-category-section-item .category-grid {
+  --grid-item-width: calc((100vw - 132px) / 3);
+  --grid-item-image-with: calc(var(--grid-item-width) - 28px);
+  padding: 8px;
+}

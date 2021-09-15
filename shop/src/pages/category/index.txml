@@ -1,0 +1,12 @@
+<view class="flex">
+  <category-nav
+    isLoading="{{isLoading}}"
+    skeletons="{{8}}"
+    categories="{{categories}}"
+  />
+  <sub-category-section
+    isLoading="{{isLoading}}"
+    skeletons="{{6}}"
+    categories="{{categories}}"
+  />
+</view>

@@ -7,7 +7,6 @@ Component({
     isLoading: false,
     skeletons: 0,
     className: '',
-    type: '',
     categories: [],
     onTapCategory: () => {},
   },
