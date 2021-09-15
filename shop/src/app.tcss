@@ -10,6 +10,15 @@
   --red80: #bf1d28;
 }
 
+:root {
+  --green20: #D7FAE0;
+  --green80: #007D3A;
+  --yellow20: #FFF5C7;
+  --yellow80: #CC8100;
+  --red20: #FFDBDE;
+  --red80: #BF1D28;
+}
+
 image,
 icon {
   display: block;
