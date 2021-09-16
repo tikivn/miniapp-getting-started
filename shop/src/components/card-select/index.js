@@ -1,6 +1,7 @@
 Component({
   props: {
     isShowArrow: true,
+    isLoading: false,
     option: {},
     className: '',
     title: '',
@@ -9,8 +10,8 @@ Component({
     onTap: () => {},
   },
   methods: {
-     _onTap() {
+    _onTap() {
       this.props.onTap(this.props.option);
-    }
+    },
   },
-})
+});

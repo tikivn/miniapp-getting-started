@@ -9,19 +9,11 @@
 
   <view class="px-medium pt-medium flex justify-around">
     <order-icon
+      tiki:for="{{orderIcons}}"
+      isLoading="{{isLoading}}"
       onTap="onMoveOrderManagement" 
-      value="{{numOrders.waiting}}"
-      src="/assets/icons/ic-waiting-payment.svg" 
-      text="Wait for payment"/>
-    <order-icon
-      onTap="onMoveOrderManagement" 
-      value="{{numOrders.processing}}"
-      src="/assets/icons/ic-processing.svg" 
-      text="Processing"/>
-    <order-icon
-      onTap="onMoveOrderManagement"
-      value="{{numOrders.shipping}}"
-      src="/assets/icons/ic-shipping.svg" 
-      text="Shipping"/>
+      value="{{numOrders[item.key]}}"
+      src="{{item.src}}" 
+      text="{{item.value}}"/>
   </view>
 </view>

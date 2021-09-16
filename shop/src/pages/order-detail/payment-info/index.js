@@ -1,5 +1,6 @@
 Component({
   props: {
-    payment: {}
-  }
-})
+    isLoading: true,
+    payment: {},
+  },
+});

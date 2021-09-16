@@ -1,27 +1,27 @@
 Component({
   data: {
-    isLoading: false,
     orderInfo: {},
     orderSteps: [
       {
         status: '',
-        description: ''
-      }
+        description: '',
+      },
     ],
   },
   props: {
+    isLoading: false,
     order: {
       id: '',
       tracking: {},
       buyer: {},
       seller: {},
-    }
+    },
   },
 
   methods: {
     onMoveTrackingDetail() {
       my.navigateTo({ url: 'pages/tracking-detail/index' });
-    }
+    },
   },
 
   deriveDataFromProps(nextProps) {
@@ -31,13 +31,13 @@ Component({
         {
           id: tracking.id,
           status: tracking.status,
-          description: tracking.date
-        }
+          description: tracking.date,
+        },
       ];
 
       this.setData({
-        orderSteps: steps
-      })
+        orderSteps: steps,
+      });
     }
   },
-})
+});

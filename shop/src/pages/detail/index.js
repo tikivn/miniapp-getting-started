@@ -23,6 +23,10 @@ Page({
     },
   },
 
+  onTapProduct() {
+      my.navigateTo({ url: 'pages/detail/index' });
+  },
+
   showToast(content) {
     this.setData({
       toast: {

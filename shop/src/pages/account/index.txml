@@ -1,5 +1,14 @@
 <view>
-  <view class="flex flex-col items-center mt-large pt-medium">
+  <view tiki:if="{{isLoading}}" class="flex flex-col items-center mt-large pt-medium">
+    <view 
+      class="skeleton avatar skeleton-button-shape-circle">
+    </view>
+    <view 
+      class="mt-2x-small skeleton skeleton-font-medium skeleton-25-width">
+    </view>
+  </view>
+
+  <view tiki:else class="flex flex-col items-center mt-large pt-medium">
     <image 
       class="block avatar" 
       mode="widthFix" 
@@ -8,11 +17,11 @@
   </view>
 
   <view class="px-medium mt-medium">
-    <coupon-n-point user="{{user}}"/>
+    <coupon-n-point user="{{user}}" isLoading="{{isLoading}}"/>
   </view>
   
   <view class="mt-medium px-medium">
-    <my-orders numOrders="{{numOrders}}"/>
+    <my-orders numOrders="{{numOrders}}" isLoading="{{isLoading}}"/>
   </view>
 
   <view class="mt-medium px-medium">

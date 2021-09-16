@@ -12,3 +12,7 @@
   border-radius: 16px;
   background: rgba(0, 0, 0, 0.4)
 }
+
+.prod-skeleton-img {
+  height: 375px;
+}

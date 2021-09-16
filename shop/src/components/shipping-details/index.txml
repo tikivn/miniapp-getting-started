@@ -37,18 +37,20 @@
         </view>
       </view>
     </view>
-    <icon
-      tiki:if="{{showButton}}"
-      type="arrow_right"
-      color="#808089"
-    />
+    <view onTap="_onOpenAddress">
+      <icon
+        tiki:if="{{showButton}}"
+        type="arrow_right"
+        color="#808089"
+      />
+    </view>
   </view>
 </template>
 
 <view>
   <template
     is="{{isLoading ? 'loading' : 'completed'}}"
-    data="{{title:'Shipping address', avatar: buyer.avatar, label: buyer.address, description: `${buyer.name} • ${buyer.phone}`, showButton: true}}"
+    data="{{title:'Shipping address', avatar: buyer.avatar, label: buyer.address, description: `${buyer.name} • ${buyer.phone}`, showButton: true, _onOpenAddress}}"
   />
   <view class="divider"/>
   <template
