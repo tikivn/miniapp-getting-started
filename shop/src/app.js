@@ -48,7 +48,7 @@ App({
   calculatePrices() {
     const { shippingFee, coupon, orderedProducts } = this.cart;
     const price = orderedProducts.reduce((acc, curr) => {
-      return acc + +curr.price * +curr.quantity;
+      return acc + curr.price * curr.quantity;
     }, 0);
     const total = price > 0 ? price + shippingFee - coupon.discount : 0;
     this.cart = {
@@ -85,6 +85,22 @@ App({
       name: '',
       discount: 0,
       isValid: false,
+    };
+
+    this.calculatePrices();
+  },
+
+  resetCart() {
+    this.cart = {
+      ...this.cart,
+      orderedProducts: [],
+      price: 0,
+      total: 0,
+      coupon: {
+        name: '',
+        discount: 0,
+        isValid: false,
+      },
     };
 
     this.calculatePrices();

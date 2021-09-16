@@ -36,16 +36,18 @@
       tiki:if="{{coupons.length}}"
       class="mt-large"
     >
-      <block
+      <view
         tiki:for="{{coupons}}"
         tiki:key="id"
+        onTap="_onSelect"
+        data-item="{{item}}"
       >
         <image
           class="w-full mt-medium"
           src="/assets/images/coupon.png"
           mode="widthFix"
         />
-      </block>
+      </view>
     </view>
   </view>
 </template>

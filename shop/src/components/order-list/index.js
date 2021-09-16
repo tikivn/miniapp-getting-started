@@ -36,8 +36,8 @@ Component({
           isShow: true,
           headers: ['Confirmation'],
           descriptions: ['Do you want to remove this product from your cart?'],
-          confirmButton: 'Yes',
-          cancelButton: 'No',
+          leftButton: 'Yes',
+          rightButton: 'No',
         },
       });
     },

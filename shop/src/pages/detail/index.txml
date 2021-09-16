@@ -44,13 +44,13 @@
   </view>
 
   <view tiki:if="{{!isShowOption}}" class="footer flex w-full bg-white px-medium py-2x-small">
-    <view onTap="goToCart">
+    <view onTap="onClickBuyNow">
       <image class="size-40" src="/assets/icons/ic-buy.png"/>
     </view>
     <button
       class="w-full ml-2x-small"
       shape="pill"
-      onTap="onClickBuyNow"
+      onTap="goToCart"
     >
       Buy now
     </button>

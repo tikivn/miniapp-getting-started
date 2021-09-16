@@ -1,4 +1,4 @@
-import { getCouponsAPI, getCouponFromCodeAPI } from '../../services/index';
+import { getCouponsAPI } from '../../services/index';
 import { EMITTERS } from '../../utils/constants';
 
 const app = getApp();
@@ -23,11 +23,12 @@ Page({
     },
     coupons: [],
     modal: {
+      key: '',
       isShow: false,
       headers: [],
       descriptions: [],
-      confirmButton: '',
-      cancelButton: '',
+      leftButton: '',
+      rightButton: '',
     },
     isShowCouponBottomSheet: false,
   },
@@ -51,9 +52,10 @@ Page({
   },
 
   showCouponBottomSheet() {
-    this.setData({
-      isShowCouponBottomSheet: true,
-    });
+    if (this.data.cart.total > 0)
+      this.setData({
+        isShowCouponBottomSheet: true,
+      });
   },
 
   hideCouponBottomSheet() {
@@ -77,6 +79,84 @@ Page({
 
   onChangeQuantityProduct(product, quantity) {
     app.changeQuantityProduct(product, quantity);
+  },
+
+  hideModal() {
+    this.setData({
+      modal: {
+        isShow: false,
+      },
+    });
+  },
+
+  makePayment() {
+    this.setData({
+      modal: {
+        key: 'payment',
+        isShow: true,
+        headers: ['Payment'],
+        descriptions: [
+          'This is the mock request payment.',
+          'Please select the result you want to return.',
+        ],
+        leftButton: 'Fail',
+        rightButton: 'Success',
+      },
+    });
+  },
+
+  makePaymentFail() {
+    this.setData({
+      modal: {
+        key: 'payment_failed',
+        isShow: true,
+        headers: ['Payment Failed'],
+        descriptions: ['Your payment was rejected.', 'Please try again.'],
+        leftButton: '',
+        rightButton: 'Done',
+      },
+    });
+  },
+
+  makePaymentSuccess() {
+    app.resetCart();
+    this.setData({
+      modal: {
+        key: 'payment_success',
+        isShow: true,
+        headers: ['Payment Successful'],
+        descriptions: ['Please check your order management'],
+        leftButton: 'Shopping',
+        rightButton: 'Tracking',
+      },
+    });
+  },
+
+  onClickModalLeftButton() {
+    switch (this.data.modal.key) {
+      case 'payment':
+        this.makePaymentFail();
+        break;
+      case 'payment_success':
+        this.hideModal();
+        my.navigateTo({ url: 'pages/home/index' });
+        break;
+    }
+  },
+
+  onClickModalRightButton() {
+    switch (this.data.modal.key) {
+      case 'payment':
+        this.makePaymentSuccess();
+        break;
+      case 'payment_failed':
+        this.hideModal();
+        break;
+      case 'payment_success':
+        this.hideModal();
+        my.navigateTo({ url: 'pages/order-management/index' });
+        break;
+    }
   },
 
   // Life cycle

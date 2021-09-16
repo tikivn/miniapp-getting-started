@@ -84,8 +84,9 @@
   isShow="{{modal.isShow}}"
   headers="{{modal.headers}}"
   descriptions="{{modal.descriptions}}"
-  confirmButton="{{modal.confirmButton}}"
-  cancelButton="{{modal.cancelButton}}"
-  onConfirm="_onRemoveProduct"
-  onCancel="hideModal"
+  leftButton="{{modal.leftButton}}"
+  rightButton="{{modal.rightButton}}"
+  onClickLeftButton="_onRemoveProduct"
+  onClickRightButton="hideModal"
+  onHide="hideModal"
 />
