@@ -1,24 +1,30 @@
+.page{
+  background: #F5F5FA
+}
 .container {
   box-sizing: border-box;
-}
-.panel {
-  background-color: #fff;
-  border-radius: 4px;
-  padding: 8px;
-}
+  background: white;
+} 
 .title {
   font-size: 16px;
 }
-.product-center {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.product-item {
+.panel--page{
+  height: 88px;
   background: #ccc;
   border-radius: 4px;
-  margin-top: 4px;
-  width: 300px;
-  height: 40px;
+  border: 1px solid #EBEBF0;
+  background: #F5F5FA;
+  text-align: center;
+ line-height: 88px;
+}
+.panel--type {
+  display: block;
+  font-size: 14px;
+  color: #27272A;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.panel--pagination{
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
