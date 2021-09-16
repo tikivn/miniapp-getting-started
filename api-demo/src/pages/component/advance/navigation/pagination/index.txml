@@ -9,7 +9,7 @@
     <view class="panel">
       <text class="panel--type">Full page</text>
       <view class="panel--page">
-        <view style="height: 100px;">{{fullPage.items[fullPage.currentPage - 1]}}</view>
+        <view>{{fullPage.items[fullPage.currentPage - 1]}}</view>
       </view>
       <view class="panel--pagination">
         <pagination currentPage="{{fullPage.currentPage}}" max="{{fullPage.items.length}}" type="page"
@@ -21,7 +21,7 @@
       <text class="panel--type">Number only</text>
 
       <view class="panel--page">
-        <view style="height: 100px;">{{numberOnly.items[numberOnly.currentPage - 1]}}</view>
+        <view>{{numberOnly.items[numberOnly.currentPage - 1]}}</view>
       </view>
       <view class="panel--pagination">
         <pagination currentPage="{{numberOnly.currentPage}}" max="{{numberOnly.items.length}}" type="number"

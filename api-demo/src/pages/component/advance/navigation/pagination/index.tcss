@@ -1,26 +1,27 @@
 .page{
-  background: #F5F5FA
+  background: var(--gray10);
 }
 .container {
   box-sizing: border-box;
-  background: white;
+  background: var(--white);;
 } 
 .title {
   font-size: 16px;
 }
-.panel--page{
+.panel--page{ 
   height: 88px;
-  background: #ccc;
   border-radius: 4px;
-  border: 1px solid #EBEBF0;
-  background: #F5F5FA;
-  text-align: center;
- line-height: 88px;
+  border: 1px solid var(--gray20);
+  background: var(--gray10);
+  text-align: center;  
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
 }
 .panel--type {
   display: block;
   font-size: 14px;
-  color: #27272A;
+  color: var(--gray100);
   padding-top: 8px;
   padding-bottom: 8px;
 }
