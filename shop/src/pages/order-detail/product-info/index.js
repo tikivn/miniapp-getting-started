@@ -1,5 +1,6 @@
 Component({
   props: {
-    products: []
-  }
-})
+    isLoading: true,
+    products: [],
+  },
+});

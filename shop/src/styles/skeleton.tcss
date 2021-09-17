@@ -29,6 +29,10 @@
   height: 32px;
 }
 
+.skeleton-paragraph {
+  height: 72px;
+}
+
 .skeleton-button-shape-rounded {
   border-radius: 4px;
 }
@@ -65,6 +69,10 @@
   width: 20%;
 }
 
+.skeleton-25-width {
+  width: 25%;
+}
+
 .skeleton-40-width {
   width: 40%;
 }
@@ -75,6 +83,10 @@
 
 .skeleton-70-width {
   width: 70%;
+}
+
+.skeleton-75-width {
+  width: 75%;
 }
 
 .skeleton-100-width {

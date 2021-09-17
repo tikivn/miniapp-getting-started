@@ -1,14 +1,14 @@
-import { getOrders } from '../../services/index';
+import { getOrders } from "../../services/index";
 
 Page({
   data: {
     isLoading: false,
     activeTab: 0,
     orderTabs: [
-      { title: 'All' },
-      { title: 'Wait for payment' },
-      { title: 'Processing' },
-      { title: 'Shipping' },
+      { title: "All" },
+      { title: "Wait for payment" },
+      { title: "Processing" },
+      { title: "Shipping" },
     ],
     orders: [],
   },
@@ -26,7 +26,7 @@ Page({
   },
 
   onMoveOrderDetail() {
-    my.navigateTo({ url: 'pages/order-detail/index' });
+    my.navigateTo({ url: "pages/order-detail/index" });
   },
 
   async loadData() {

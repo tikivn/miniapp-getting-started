@@ -1,15 +1,15 @@
 <view class="p-medium">
-  <general-info order="{{order}}"/>
+  <general-info order="{{order}}" isLoading="{{isLoading}}" />
 
   <view class="mt-medium">
-    <order-tracking order="{{order}}"/>
+    <order-tracking order="{{order}}" isLoading="{{isLoading}}" />
   </view>
 
   <view class="mt-medium">
-    <product-info products="{{order.products}}"/>
+    <product-info products="{{order.products}}" isLoading="{{isLoading}}" />
   </view>
 
   <view class="mt-medium">
-    <payment-info payment="{{order.payment}}"/>
+    <payment-info payment="{{order.payment}}" isLoading="{{isLoading}}" />
   </view>
 </view>

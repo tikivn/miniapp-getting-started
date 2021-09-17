@@ -4,6 +4,7 @@ Component({
   },
 
   props: {
+    isLoading: true,
     product: {
       id: '',
       name: '',

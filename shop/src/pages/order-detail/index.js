@@ -3,7 +3,7 @@ import { getOrderDetail } from '../../services/index';
 Page({
   data: {
     isLoading: true,
-    order: {}
+    order: {},
   },
 
   async loadData() {
@@ -16,7 +16,7 @@ Page({
 
       this.setData({
         order,
-        isLoading: false
+        isLoading: false,
       });
     } catch (error) {
       this.setData({

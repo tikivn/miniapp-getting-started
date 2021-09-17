@@ -1,12 +1,12 @@
 Component({
   data: {
-    selectedOption: {}
+    selectedOption: {},
   },
 
   props: {
     className: '',
     isShowOption: false,
-    type: "size",
+    type: 'size',
     product: {
       id: '',
       name: '',
@@ -18,22 +18,22 @@ Component({
         {
           id: 0,
           color: 'Light Blue',
-          image: ''
-        }
+          image: '',
+        },
       ],
       sizes: [
         {
           id: 0,
           size: 'S',
-        }
-      ]
+        },
+      ],
     },
     onClose: () => {},
     onClick: () => {},
   },
 
   methods: {
-     _onClose() {
+    _onClose() {
       this.props.onClose();
     },
     _onClick() {
@@ -41,14 +41,13 @@ Component({
 
       this.props.onClick(selectedOption);
     },
-    _onSelectOption(id){
+    _onSelectOption(id) {
       this.setData({
-        selectedOption: id
-      })
-    }
+        selectedOption: id,
+      });
+    },
   },
 
   // Life cycle
-  didMount() {
-  },
+  didMount() {},
 });

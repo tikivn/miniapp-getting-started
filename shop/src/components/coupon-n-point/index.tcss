@@ -3,3 +3,7 @@
   width: 1px;
   background: var(--gray20);
 }
+
+.ske-coupon-point {
+  height: 96px;
+}

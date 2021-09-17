@@ -1,28 +1,14 @@
 <import-sjs from="../../../utils/common.sjs" name="{statusFormatter}"></import-sjs>
 
-<template name="row-info">
-  <view>
-    <view class="{{`flex justify-between`}}">
-      <view>{{title}}</view>
-      <view class="font-bold">{{description}}</view>
-    </view>
-    <view class="{{isBorder ? 'divider my-2x-small' : ''}}"></view>
-  </view>
-</template>
-
 <view>
   <section title="General info">
     <view>
       <row-info 
-        title="Order id"
-        description="{{order.id}}"/>
-      <row-info 
-        title="Order date"
-        description="{{order.date}}"/>
-      <row-info 
-        title="Status"
-        description="{{statusFormatter(order.status)}}"
-        isBorder="{{false}}"/>
+        isLoading="{{isLoading}}"
+        tiki:for="{{rows}}"
+        title="{{item.value}}"
+        description="{{statusFormatter(order[item.key])}}"
+        isBorder="{{index !== rows.length - 1}}"/>
     </view>
   </section>
 </view>

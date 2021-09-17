@@ -1,6 +1,27 @@
 Component({
+  data: {
+    rows: [
+      {
+        key: 'madeIn',
+        value: 'Made In',
+      },
+      {
+        key: 'size',
+        value: 'Size',
+      },
+      {
+        key: 'color',
+        value: 'Color',
+      },
+      {
+        key: 'material',
+        value: 'Material',
+      },
+    ],
+  },
   props: {
     viewMore: false,
+    isLoading: true,
     detail: {
       madeIn: '',
       size: '',
@@ -12,10 +33,10 @@ Component({
     },
   },
   methods: {
-    _onSwitchView(){
+    _onSwitchView() {
       this.setData({
-        viewMore: !this.data.viewMore
-      })
-    }
-  }
-})
+        viewMore: !this.data.viewMore,
+      });
+    },
+  },
+});

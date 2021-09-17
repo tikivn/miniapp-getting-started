@@ -1,5 +1,6 @@
 Component({
   props: {
+    isLoading: true,
     src: '',
     text: '',
     value: '',

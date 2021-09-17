@@ -1,5 +1,6 @@
 <view>
-  <carousel>
+  <view tiki:if="{{isLoading}}" class="prod-skeleton-img skeleton w-full"></view>
+  <carousel tiki:else>
     <carousel-item tiki:for="{{product.images}}">
       <view class="relative">
         <image class="block w-full" mode="widthFix" src="{{item}}"/>
@@ -9,11 +10,12 @@
   </carousel>
   
   <view tiki:if="{{product.id}}" class="p-medium bg-white mb-2x-small">
-    <header-product product="{{product}}" />
+    <header-product product="{{product}}" isLoading="{{isLoading}}"/>
     <view
       onTap="onSelectColor"
       class="mb-medium border-option">
       <card-select
+        isLoading="{{isLoading}}"
         title="Color"
         description="{{colorSelected.color}}"
         img="{{colorSelected.image}}" />
@@ -23,15 +25,18 @@
       onTap="onSelectSize"
       class="border-option">
       <card-select
+        isLoading="{{isLoading}}"
         title="Size"
         description="{{sizeSelected.size}}"/>
     </view>
   </view>
   <view class="p-medium bg-white mb-2x-small">
-    <shipping-info />
+    <shipping-info isLoading="{{isLoading}}" />
   </view>
    <view class="p-medium bg-white mb-2x-small">
-    <detail-info detail="{{product.detail}}" />
+    <detail-info 
+      detail="{{product.detail}}"
+      isLoading="{{isLoading}}" />
   </view>
 
   <view class="p-medium bg-white mb-2x-small">
@@ -40,6 +45,7 @@
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
       products="{{newProducts}}"
+      onTapProduct="onTapProduct"
     />
   </view>
 

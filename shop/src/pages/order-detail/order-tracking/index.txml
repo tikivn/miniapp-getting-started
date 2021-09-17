@@ -9,7 +9,16 @@
     </view>
   </view>
 
-  <view class="bg-white mt-2x-small py-2x-small radius-8px">
+  <view tiki:if="{{isLoading}}" class="bg-white mt-2x-small py-2x-small radius-8px">
+    <view class="px-medium">
+      <view class="py-2x-small skeleton skeleton-font-regular skeleton-50-width"></view>
+    </view>
+    <view class="px-medium py-2x-small">
+      <view class="skeleton w-full skeleton-button-large"></view>
+    </view>
+  </view>
+
+  <view tiki:else class="bg-white mt-2x-small py-2x-small radius-8px">
     <view class="px-medium">
       <view class="py-2x-small border-bottom-gray">Giaohangnhanh</view>
     </view>

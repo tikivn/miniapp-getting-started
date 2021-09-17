@@ -7,20 +7,19 @@ Component({
       product: {
         name: '',
         total: 0,
-        price: 0
+        price: 0,
       },
-      method: ''
+      method: '',
     },
-    onTapProduct: () => {},
+    onTap: () => {},
   },
 
   methods: {
-    _onTapProduct() {
-      this.props.onTapProduct(this.props.product);
+    _onTap() {
+      this.props.onTap();
     },
   },
 
   // Life cycle
-  didMount() {
-  },
+  didMount() {},
 });
