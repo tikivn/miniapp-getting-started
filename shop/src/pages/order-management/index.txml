@@ -3,6 +3,7 @@
     tabsName="activeTab"
     activeTab="{{activeTab}}"
     onTabClick="onTabClick"
+    onChange="onChangeTab"
     swipeable="{{true}}">
     <block tiki:for="{{orderTabs}}">
       <tab-content tabId="{{index}}">

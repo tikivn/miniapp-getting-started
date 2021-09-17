@@ -11,7 +11,7 @@ Component({
       my.navigateTo({ url: 'pages/my-coupon/index' });
     },
     onMoveMyPoint() {
-        my.navigateTo({ url: 'pages/my-point/index' });
+      my.navigateTo({ url: 'pages/my-point/index' });
     },
   },
 

@@ -7,6 +7,7 @@
     "/assets/images/product-detail.png",
     "/assets/images/product-detail.png"
   ],
+  "thumbnail": "/assets/images/product-detail.png",
   "price": 9999999,
   "listPrice": 11111110,
   "discountRate": 10,
@@ -14,12 +15,12 @@
     "madeIn": "Vietnam",
     "size": "Small",
     "color": "Light Blue",
-    "material" :"Spandex",
+    "material": "Spandex",
     "image": "",
     "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing augue nisl, gravida a, sapien leo. Morbi vulputate fermentum porta nunc. Viverra laoreet convallis massa elementum vel. Eget tincidunt massa sodales non massa euismod.",
     "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing augue nisl, gravida a, sapien leo. Morbi vulputate fermentum porta nunc. Viverra laoreet convallis massa elementum vel. Eget tincidunt massa sodales non massa euismod."
   },
-  "colors" : [
+  "colors": [
     {
       "id": 1,
       "image": "/assets/images/circle.png",
@@ -41,7 +42,7 @@
       "color": "Brown"
     }
   ],
-  "sizes" : [
+  "sizes": [
     {
       "id": 1,
       "size": "S"

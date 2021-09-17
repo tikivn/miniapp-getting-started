@@ -3,18 +3,22 @@ Component({
     isShow: false,
     headers: [],
     descriptions: [],
-    confirmButton: 'OK',
-    cancelButton: '',
-    onConfirm: () => {},
-    onCancel: () => {},
+    leftButton: 'OK',
+    rightButton: '',
+    onClickLeftButton: () => {},
+    onClickRightButton: () => {},
+    onHide: () => {},
   },
 
   methods: {
-    _onConfirm() {
-      this.props.onConfirm();
+    _onClickLeftButton() {
+      this.props.onClickLeftButton();
     },
-    _onCancel() {
-      this.props.onCancel();
+    _onClickRightButton() {
+      this.props.onClickRightButton();
+    },
+    _onHide() {
+      this.props.onHide();
     },
   },
 });

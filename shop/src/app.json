@@ -3,7 +3,7 @@
     "defaultTitle": "Tini shop"
   },
   "pages": [
-    "pages/home/index", 
+    "pages/home/index",
     "pages/cart/index",
     "pages/account/index",
     "pages/detail/index",
