@@ -1,5 +1,14 @@
-@import "@tiki.vn/tini-style/es/index.tcss";
-@import "./styles/skeleton.tcss";
+@import '@tiki.vn/tini-style/es/index.tcss';
+@import './styles/skeleton.tcss';
+
+:root {
+  --green20: #d7fae0;
+  --green80: #007d3a;
+  --yellow20: #fff5c7;
+  --yellow80: #cc8100;
+  --red20: #ffdbde;
+  --red80: #bf1d28;
+}
 
 :root {
   --green20: #D7FAE0;

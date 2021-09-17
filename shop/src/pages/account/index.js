@@ -6,7 +6,6 @@ Page({
     user: {},
     numOrders: {},
   },
-  
   async loadData() {
     this.setData({
       isLoading: true,
@@ -21,7 +20,7 @@ Page({
       this.setData({
         user,
         numOrders,
-        isLoading: false
+        isLoading: false,
       });
     } catch (error) {
       this.setData({

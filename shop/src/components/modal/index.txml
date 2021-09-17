@@ -2,7 +2,7 @@
   show="{{isShow}}"
   mask="{{true}}"
   zIndex="{{10}}"
-  onModalClose="_onCancel"
+  onModalClose="_onHide"
 >
   <view slot="header">
     <view
@@ -23,20 +23,21 @@
   <view slot="footer">
     <view class="modal-buttons flex w-full px-medium mt-2x-small">
       <button
+        tiki:if="{{leftButton}}"
         class="w-full"
         size="large"
-        onTap="_onConfirm"
+        onTap="_onClickLeftButton"
         type="outline"
       >
-        {{confirmButton}}
+        {{leftButton}}
       </button>
       <button
-        tiki:if="{{cancelButton}}"
+        tiki:if="{{rightButton}}"
         class="w-full"
         size="large"
-        onTap="_onCancel"
+        onTap="_onClickRightButton"
       >
-        {{cancelButton}}
+        {{rightButton}}
       </button>
     </view>
   </view>

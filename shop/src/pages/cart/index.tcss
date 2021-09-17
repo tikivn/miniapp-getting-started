@@ -1,5 +1,10 @@
+.cart {
+  min-height: 100vh;
+  padding-bottom: 96px;
+}
+
 .cart-footer {
-  position: sticky;
+  position: fixed;
   left: 0;
   bottom: 0;
 }

@@ -10,21 +10,6 @@
     "name": "Tiki Now",
     "description": "Same day 2h - 3h"
   },
-  "orderedProducts": [
-    {
-      "id": "1",
-      "thumbnail": "/assets/images/product.png",
-      "name": "Sample product 1",
-      "price": 100000,
-      "quantity": 1
-    },
-    {
-      "id": "2",
-      "thumbnail": "/assets/images/product.png",
-      "name": "Sample product 2",
-      "price": 50000,
-      "quantity": 1
-    }
-  ],
+  "orderedProducts": [],
   "shippingFee": 20000
 }

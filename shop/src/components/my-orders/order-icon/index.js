@@ -3,11 +3,11 @@ Component({
     src: '',
     text: '',
     value: '',
-    onTap: () => {}
+    onTap: () => {},
   },
   methods: {
-    _onTap(){
+    _onTap() {
       this.props.onTap();
-    }
-  }
-})
+    },
+  },
+});

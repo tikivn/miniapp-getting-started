@@ -15,8 +15,10 @@ Component({
       this.props.onClose();
     },
 
-    _onSelect() {
-      this.props.onSelect(this.data.value);
+    _onSelect(event) {
+      const { item } = event.target.dataset;
+      const code = (item && item.code) || this.data.value;
+      this.props.onSelect(code);
     },
 
     onInput(event) {
