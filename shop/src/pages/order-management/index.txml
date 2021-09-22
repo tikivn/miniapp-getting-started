@@ -4,6 +4,7 @@
     activeTab="{{activeTab}}"
     onTabClick="onTabClick"
     onChange="onChangeTab"
+    stickyBar="{{true}}"
     swipeable="{{true}}">
     <block tiki:for="{{orderTabs}}">
       <tab-content tabId="{{index}}">

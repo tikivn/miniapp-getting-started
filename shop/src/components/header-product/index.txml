@@ -10,14 +10,14 @@
 
 <template name="completed">
   <view>
-    <view class="text-medium">{{product.name}}</view>
+    <view class="text-medium mb-2x-small">{{product.name}}</view>
     <view class="flex items-center">
       <view class="mr-2x-small text-medium-2x-small font-bold">
         {{moneyFormatter(product.price)}}
       </view>
       <view
         tiki:if="{{product.discountRate}}"
-        class="bg-red height-fit-content radius-8px py-5x-small px-4x-small text-white text-x-small">
+        class="bg-red height-fit-content radius-8px py-5x-small px-4x-small text-white font-bold text-x-small">
         {{`-${product.discountRate}%`}}
       </view>
     </view>

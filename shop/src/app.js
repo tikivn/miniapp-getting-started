@@ -28,7 +28,7 @@ App({
 
   addProduct(product) {
     const position = this.cart.orderedProducts.findIndex(
-      (item) => item.id === product.id
+      (item) => item.id === product.id,
     );
     if (position !== -1) this.cart.orderedProducts[position].quantity += 1;
     else this.cart.orderedProducts.push({ ...product, quantity: 1 });
@@ -38,7 +38,7 @@ App({
 
   removeProduct(product) {
     const position = this.cart.orderedProducts.findIndex(
-      (item) => item.id === product.id
+      (item) => item.id === product.id,
     );
     if (position !== -1) this.cart.orderedProducts.splice(position, 1);
 
@@ -57,12 +57,17 @@ App({
       total,
     };
 
+    my.setTabBarBadge({
+      index: 1,
+      text: this.cart.orderedProducts.length,
+    });
+
     this.cartEvent.emit(EMITTERS.CART_UPDATE, this.cart);
   },
 
   changeQuantityProduct(product, quantity) {
     const position = this.cart.orderedProducts.findIndex(
-      (item) => item.id === product.id
+      (item) => item.id === product.id,
     );
     if (position !== -1) {
       this.cart.orderedProducts[position].quantity = quantity;

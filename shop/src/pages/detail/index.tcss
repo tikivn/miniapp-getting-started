@@ -4,13 +4,20 @@
   z-index: 3;
 }
 
+.select-option .tu-bottom-sheet-wrapper {
+  max-height: calc(
+    var(--tf-screen-height) - var(--tf-title-bar-height) -
+      var(--tf-status-bar-height)
+  ) !important;
+}
+
 .total-images {
   position: absolute;
   bottom: 12px;
   right: 12px;
   padding: 6px 12px;
   border-radius: 16px;
-  background: rgba(0, 0, 0, 0.4)
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .prod-skeleton-img {
