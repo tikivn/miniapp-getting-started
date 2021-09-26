@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Scan QR/Barcode" />
+  <view class="block-content">
+    <button class="button-full" onTap="onScan">Start Scan</button>
+  </view>
+</view>

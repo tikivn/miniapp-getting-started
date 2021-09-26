@@ -153,6 +153,12 @@ const tikiAPIList = [
   },
 ];
 
+const scanAPIList = [
+  {
+    name: 'Scan QR/Barcode',
+    path: 'pages/api/scan-qr/index',
+  },
+];
 const deviceAPIList = [
   {
     name: 'SDK Version',
@@ -242,6 +248,10 @@ const APIList = [
   {
     type: 'Tiki Service',
     list: tikiAPIList,
+  },
+  {
+    type: 'Scan',
+    list: scanAPIList,
   },
 ];
 
