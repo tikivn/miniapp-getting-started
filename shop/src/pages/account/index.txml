@@ -1,5 +1,5 @@
-<view>
-  <view tiki:if="{{isLoading}}" class="flex flex-col items-center mt-large pt-medium">
+<view class="my-account">
+  <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
     <view 
       class="skeleton avatar skeleton-button-shape-circle">
     </view>
@@ -8,7 +8,7 @@
     </view>
   </view>
 
-  <view tiki:else class="flex flex-col items-center mt-large pt-medium">
+  <view tiki:else class="flex flex-col items-center">
     <image 
       class="block avatar" 
       mode="widthFix" 
@@ -25,7 +25,7 @@
   </view>
 
   <view class="mt-medium px-medium">
-    <view class="bg-white px-medium py-2x-small">
+    <view class="bg-white px-medium py-2x-small radius-8px">
       <view class="flex justify-between items-center">
         <view class="flex">
           <image class="block size-40" src="/assets/icons/ic-support.svg" />

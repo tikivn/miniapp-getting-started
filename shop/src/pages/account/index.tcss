@@ -3,6 +3,10 @@
   height: 72px;
 }
 
+.my-account {
+  padding-top: calc(var(--safe-area-inset-top) + 16px);
+}
+
 .version {
   position: fixed;
   bottom: 8px;

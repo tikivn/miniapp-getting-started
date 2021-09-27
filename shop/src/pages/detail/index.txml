@@ -49,20 +49,22 @@
     />
   </view>
 
-  <view tiki:if="{{!isShowOption}}" class="footer flex w-full bg-white px-medium py-2x-small">
-    <view onTap="onClickBuyNow">
-      <image class="size-40" src="/assets/icons/ic-buy.png"/>
+  <view class="footer padding-inset-bottom bg-white">
+    <view tiki:if="{{!isShowOption}}" class="flex w-full px-medium py-2x-small">
+      <view onTap="onClickBuyNow">
+        <image class="size-40" src="/assets/icons/ic-buy.png"/>
+      </view>
+      <button
+        class="w-full ml-2x-small"
+        shape="pill"
+        onTap="goToCart"
+      >
+        Buy now
+      </button>
     </view>
-    <button
-      class="w-full ml-2x-small"
-      shape="pill"
-      onTap="goToCart"
-    >
-      Buy now
-    </button>
   </view>
 
-  <view tiki:if="{{product.id}}">
+  <view tiki:if="{{product.id}}" class="select-option">
     <bottom-sheet-option
       type="{{type}}"
       onClose="onCloseOption"

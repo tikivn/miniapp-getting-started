@@ -1,4 +1,4 @@
-<view class="bg-white px-medium py-medium">
+<view class="bg-white px-medium py-medium radius-8px">
   <view class="flex justify-between py-4x-small">
     <view class="text-medium font-bold">My orders</view>
     <view class="flex items-center">
