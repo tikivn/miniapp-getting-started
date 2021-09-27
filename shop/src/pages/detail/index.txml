@@ -50,12 +50,17 @@
   </view>
 
   <view class="footer padding-inset-bottom bg-white">
-    <view tiki:if="{{!isShowOption}}" class="flex w-full px-medium py-2x-small">
-      <view onTap="onClickBuyNow">
-        <image class="size-40" src="/assets/icons/ic-buy.png"/>
-      </view>
+    <view tiki:if="{{!isShowOption}}" class="footer-prod-detail flex w-full px-medium py-2x-small">
       <button
-        class="w-full ml-2x-small"
+        class="w-50"
+        shape="pill"
+        type="outline"
+        onTap="onClickBuyNow"
+      >
+        Add to cart
+      </button>
+      <button
+        class="w-50 ml-2x-small"
         shape="pill"
         onTap="goToCart"
       >

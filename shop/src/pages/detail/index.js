@@ -26,7 +26,7 @@ Page({
   },
 
   onTapProduct() {
-      my.navigateTo({ url: 'pages/detail/index' });
+    my.navigateTo({ url: 'pages/detail/index' });
   },
 
   showToast(content) {
@@ -47,10 +47,6 @@ Page({
         showAt: '',
       },
     });
-  },
-
-  onClickBuyNow() {
-    this.showToast(`Add to cart successfully`);
   },
 
   onClickBuyNow() {
@@ -120,11 +116,34 @@ Page({
   },
 
   goToCart() {
+    app.addProduct(this.data.product);
     my.navigateTo({ url: 'pages/cart/index' });
+  },
+
+  loadBadgeCart() {
+    const { orderedProducts } = app.cart;
+    my.addIconsToNavigationBar({
+      icons: [
+        {
+          image: '/assets/icons/ic-cart.svg',
+          width: orderedProducts.length ? 48 : 24,
+          height: 24,
+          badge: `${orderedProducts.length}`,
+        },
+      ],
+      padding: 8,
+      success: (res) => {
+        console.log(res);
+      },
+      fail: (res) => {
+        console.log(res);
+      },
+    });
   },
 
   // Life cycle
   onReady() {
     this.loadData();
+    this.loadBadgeCart();
   },
 });
