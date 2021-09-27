@@ -51,6 +51,7 @@ Page({
 
   onClickBuyNow() {
     app.addProduct(this.data.product);
+    this.loadBadgeCart();
     this.showToast(`Add to cart successfully`);
   },
 
@@ -139,6 +140,10 @@ Page({
         console.log(res);
       },
     });
+  },
+
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
   },
 
   // Life cycle
