@@ -1,8 +1,6 @@
 App({
   onLaunch() {},
-  onShow() {
-    my.navigateTo({ url: 'pages/component/advance/data-visualization/list/index' });
-  },
+  onShow() {},
   onError(e) {
     console.log(e);
   },
