@@ -1,7 +1,7 @@
 App({
-    onLaunch() {},
-    onShow() {},
-    onError(e) {
-      console.log(e);
-    }
+  onLaunch() {},
+  onShow() {},
+  onError(e) {
+    console.log(e);
+  },
 });
