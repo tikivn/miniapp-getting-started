@@ -39,6 +39,8 @@
     "pages/api/make-phone-call/index",
     "pages/api/add-to-cart/index",
     "pages/api/scan-qr/index",
+    "pages/api/open-native-store/index",
+    "pages/api/clipboard/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",

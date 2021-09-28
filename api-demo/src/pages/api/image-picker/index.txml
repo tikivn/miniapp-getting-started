@@ -3,8 +3,8 @@
   <view class="block-content">
     <button class="button-full" onTap="onChooseImage">Choose Image</button>
   </view>
-  <block tiki:for="{{imgs}}">
-    <image class="image-cover" src="{{item}}" />
-  </block>
+
+    <image class="image-cover" src="https://resources/Users/lap01267/Download/images.png" />
+
 
 </view>

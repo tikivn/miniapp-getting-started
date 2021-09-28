@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Open the Google Play/Apple Store" />
+  <view class="block-content">
+    <button class="button-full" onTap="onOpenNativeStore">Open Store</button>
+  </view>
+</view>

@@ -1,30 +1,18 @@
 <view class="page-container">
-  <view class="banner" >
+  <view class="banner">
     <image class="component-logo" src="/images/app_logo.png" />
     <view class="search">
       <search />
     </view>
   </view>
-  <tabs 
-    tabs="{{tabs}}" 
-    tabsName="activeTab" 
-    stickyBar="{{true}}"
-    onTabClick="onTabClick"
-    onChange="onTabChange"
-    activeTab="{{activeTab}}" 
-    tabBarBackgroundColor="#1A94FF"
-    tabBarActiveTextColor="#FFF"
-    tabBarUnderlineColor="#FFF"
-    tabBarInactiveTextColor="#FFF"
-  >
+  <tabs tabs="{{tabs}}" tabsName="activeTab" stickyBar="{{true}}" onTabClick="onTabClick" onChange="onTabChange"
+    activeTab="{{activeTab}}" tabBarBackgroundColor="#1A94FF" tabBarActiveTextColor="#FFF" tabBarUnderlineColor="#FFF"
+    tabBarInactiveTextColor="#FFF">
     <tab-content key="0" tabId="{{0}}" activeTab="{{activeTab}}">
       <view class="content">
         <block tiki:for="{{basicComponents}}" tiki:key="component-0-{{index}}">
           <block tiki:if="{{item.components.length > 0}}">
-            <list
-              key="list-{{index}}"
-              header="{{item.name}}" 
-              items="{{item.components}}" />
+            <list key="list-{{index}}" header="{{item.name}}" items="{{item.components}}" />
           </block>
         </block>
       </view>
@@ -33,10 +21,7 @@
       <view class="content">
         <block tiki:for="{{advancedComponents}}" tiki:key="component-1-{{index}}">
           <block tiki:if="{{item.components.length > 0}}">
-            <list
-              key="list-{{index}}"
-              header="{{item.name}}" 
-              items="{{item.components}}" />
+            <list key="list-{{index}}" header="{{item.name}}" items="{{item.components}}" />
           </block>
         </block>
       </view>

@@ -1,0 +1,11 @@
+<view>
+  <block-header title="Usage" description="Get/Set clipboard" />
+  <view class="block-content">
+    Input text
+  </view>
+  <input class="form-value" placeholder="" name="text" onInput="textChange"></input>
+  <view class="block-content">
+    <button class="button-full" onTap="onSetClipboard">Set Clipboard</button>
+    <button class="button-full" onTap="onGetClipboard">Get Clipboard</button>
+  </view>
+</view>

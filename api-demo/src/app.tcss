@@ -58,3 +58,8 @@
   object-fit: contain;
   width: 100%;
 }
+
+.form-value {
+  margin-left: 16px;
+  margin-top: 8px;
+}

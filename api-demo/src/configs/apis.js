@@ -137,6 +137,10 @@ const updateClientAPIList = [
     name: 'Check Latest Version',
     path: 'pages/api/update-client/index',
   },
+  {
+    name: 'Open Native Store',
+    path: 'pages/api/open-native-store/index',
+  },
 ];
 
 const phoneAPIList = [
@@ -157,6 +161,12 @@ const scanAPIList = [
   {
     name: 'Scan QR/Barcode',
     path: 'pages/api/scan-qr/index',
+  },
+];
+const clipboardAPIList = [
+  {
+    name: 'Get/Set Clipboard',
+    path: 'pages/api/clipboard/index',
   },
 ];
 const deviceAPIList = [
@@ -238,7 +248,7 @@ const APIList = [
     list: locationAPIList,
   },
   {
-    type: 'Update Client',
+    type: 'Store',
     list: updateClientAPIList,
   },
   {
@@ -252,6 +262,10 @@ const APIList = [
   {
     type: 'Scan',
     list: scanAPIList,
+  },
+  {
+    type: 'Clipboard',
+    list: clipboardAPIList,
   },
 ];
 
