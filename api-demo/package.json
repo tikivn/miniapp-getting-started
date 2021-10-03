@@ -6,7 +6,7 @@
     "buildNumber": 1
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "0.1.2-rc.24"
+    "@tiki.vn/tini-ui": "0.2.1-rc.2"
   },
   "devDependencies": {
     "prettier": "^2.3.2"
