@@ -4,6 +4,11 @@
   background-color: var(--white);
 }
 
+.home-banners {
+  background-color: var(--white);
+}
+
+.home-hot-deals,
 .home-category-carousel {
   margin-left: -16px;
   margin-right: -16px;

@@ -4,8 +4,7 @@
   <view tiki:if="{{isLoading}}">
     <view class="skeleton product-image-skeleton radius-8px mb-2x-small"/>
     <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
-    <view class="skeleton skeleton-font-medium skeleton-100-width mb-5x-small"/>
-    <view class="skeleton skeleton-font-small skeleton-70-width"/>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"/>
   </view>
   <view
     tiki:else
@@ -21,7 +20,7 @@
     >
       {{product.name}}
     </text>
-    <view class="flex items-center mb-5x-small">
+    <view class="flex items-center">
       <text
         class="font-bold mr-2x-small"
         number-of-lines="{{1}}"
@@ -30,16 +29,16 @@
       </text>
       <view
         tiki:if="{{product.discountRate}}"
-        class="text-white product-badge font-bold radius-8px px-4x-small py-5x-small"
+        class="text-white product-badge font-bold radius-8px px-4x-small"
       >
         {{`-${product.discountRate}%`}}
       </view>
     </view>
     <text 
-      class="product-old-price text-gray60"
+      class="product-old-price text-gray60 mt-5x-small"
       number-of-lines="{{1}}"
     >
-      {{product.price < product.listPrice ? moneyFormatter(product.listPrice) : ''}}
+      {{product.listPrice && product.price < product.listPrice ? moneyFormatter(product.listPrice) : ''}}
     </text>
   </view>
 </view>

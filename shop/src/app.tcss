@@ -1,5 +1,5 @@
-@import "@tiki.vn/tini-style/es/index.tcss";
-@import "./styles/skeleton.tcss";
+@import '@tiki.vn/tini-style/es/index.tcss';
+@import './styles/skeleton.tcss';
 
 :root {
   --green20: #d7fae0;
@@ -104,4 +104,8 @@ view {
   width: 1px;
   height: 100%;
   background-color: var(--gray20);
+}
+
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
 }

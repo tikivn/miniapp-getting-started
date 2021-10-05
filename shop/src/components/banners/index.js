@@ -1,7 +1,7 @@
 Component({
   props: {
+    banners: [],
+    isLoading: true,
     className: '',
-    isLoading: false,
-    shop: {},
   },
 });

@@ -1,7 +1,3 @@
-.product {
-  min-width: 50%;
-}
-
 .product-badge {
   font-size: 10px;
   background: #ff424e;
