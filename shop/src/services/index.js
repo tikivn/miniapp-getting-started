@@ -15,6 +15,7 @@ import tracking from './mock/tracking-detail.json';
 import point from './mock/my-point.json';
 import banners from './mock/banners.json';
 import hotDealProducts from './mock/hot-deal-products.json';
+import popularProducts from './mock/popular-products.json';
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -83,4 +84,8 @@ export const getBannersAPI = () => {
 
 export const getHotDealProductsAPI = () => {
   return request(hotDealProducts);
+};
+
+export const getPopularProductsAPI = () => {
+  return request(popularProducts);
 };

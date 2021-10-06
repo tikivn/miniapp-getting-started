@@ -1,89 +1,122 @@
 <import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
 
-<view class="cart">
-  <view class="pt-medium px-medium">
-    <section title="Shipping details">
-      <shipping-details
-        isLoading="{{isLoading}}"
-        buyer="{{cart.buyer}}"
-        seller="{{cart.seller}}"
+<view class="cart {{cart.orderedProducts.length ? 'cart-footer-padding' : ''}}">
+  <view
+    tiki:if="{{!isLoading && cart.orderedProducts.length === 0}}"
+    class="p-medium bg-white"
+  >
+    <view class="cart-empty flex flex-col items-center">
+      <image
+        class="mb-large"
+        src="/assets/images/empty.png"
+        mode="widthFix"
       />
-    </section>
-    <section title="Order details">
-      <order-list
+      <text class="text-medium font-bold mb-5x-small">Nothing in cart</text>
+      <text class="mb-medium">Explore our products</text>
+      <button
+        class="w-full"
+        shape="pill"
+      >
+        Continue
+      </button>
+    </view>
+    <section
+      fullWidth
+      className="bg-white"
+      title="Popular products"
+    >
+      <product-section
         isLoading="{{isLoading}}"
-        products="{{cart.orderedProducts}}"
-        price="{{cart.price}}"
-        shippingFee="{{cart.shippingFee}}"
-        total="{{cart.total}}"
-        coupon="{{cart.coupon}}"
-        skeletons="{{2}}"
-        onRemoveProduct="onRemoveProduct"
-        onChangeQuantityProduct="onChangeQuantityProduct"
+        skeletons="{{4}}"
+        products="{{popularProducts}}"
       />
     </section>
   </view>
-  <view class="cart-footer bg-white w-full">
-    <view class="divider"/>
-    <view
-      class="flex justify-between items-center px-medium"
-      onTap="showCouponBottomSheet"
-    >
-      <view class="flex items-center py-2x-small truncate">
-        <view>
-          <image class="square-24 mr-2x-small" src="/assets/icons/coupon.svg"/>
+  <view tiki:else>
+    <view class="pt-medium px-medium">
+      <section title="Shipping details">
+        <shipping-details
+          isLoading="{{isLoading}}"
+          buyer="{{cart.buyer}}"
+          seller="{{cart.seller}}"
+        />
+      </section>
+      <section title="Order details">
+        <order-list
+          isLoading="{{isLoading}}"
+          products="{{cart.orderedProducts}}"
+          price="{{cart.price}}"
+          shippingFee="{{cart.shippingFee}}"
+          total="{{cart.total}}"
+          coupon="{{cart.coupon}}"
+          skeletons="{{2}}"
+          onRemoveProduct="onRemoveProduct"
+          onChangeQuantityProduct="onChangeQuantityProduct"
+        />
+      </section>
+    </view>
+    <view class="cart-footer bg-white w-full">
+      <view class="divider"/>
+      <view
+        class="flex justify-between items-center px-medium"
+        onTap="showCouponBottomSheet"
+      >
+        <view class="flex items-center py-2x-small truncate">
+          <view>
+            <image class="square-24 mr-2x-small" src="/assets/icons/coupon.svg"/>
+          </view>
+          <text class="font-bold truncate">
+            {{cart.coupon.name ? cart.coupon.name : 'Apply coupon'}}
+          </text>
         </view>
-        <text class="font-bold truncate">
-          {{cart.coupon.name ? cart.coupon.name : 'Apply coupon'}}
-        </text>
-      </view>
-      <view>
-        <view
-          tiki:if="{{cart.coupon.name}}"
-          class="flex items-center"
-        >
-          <icon
-            tiki:if="{{cart.coupon.isValid}}"
-            class="mr-small"
-            size="{{20}}"
-            type="success_glyph"
-            color="#00AD57"
-          />
-          <icon
-            tiki:else
-            class="mr-small"
-            size="{{20}}"
-            type="warning_glyph"
-            color="#FF424F"
-          />
+        <view>
           <view
-            class="cart-remove-btn"
-            catchTap="onRemoveCoupon"
+            tiki:if="{{cart.coupon.name}}"
+            class="flex items-center"
           >
             <icon
+              tiki:if="{{cart.coupon.isValid}}"
+              class="mr-small"
               size="{{20}}"
-              type="close"
-              color="#808089"
+              type="success_glyph"
+              color="#00AD57"
             />
+            <icon
+              tiki:else
+              class="mr-small"
+              size="{{20}}"
+              type="warning_glyph"
+              color="#FF424F"
+            />
+            <view
+              class="cart-remove-btn"
+              catchTap="onRemoveCoupon"
+            >
+              <icon
+                size="{{20}}"
+                type="close"
+                color="#808089"
+              />
+            </view>
           </view>
+          <icon
+            tiki:else
+            type="arrow_right"
+            color="#808089"
+          />
         </view>
-        <icon
-          tiki:else
-          type="arrow_right"
-          color="#808089"
-        />
       </view>
-    </view>
-    <view class="divider"/>
-    <view class="py-2x-small px-medium">
-      <button
-        disabled="{{cart.total <=0}}"
-        class="w-full"
-        shape="pill"
-        onTap="makePayment"
-      >
-        {{`Pay ${moneyFormatter(cart.total)}`}}
-      </button>
+      <view class="divider"/>
+      <view class="py-2x-small px-medium">
+        <button
+          disabled="{{cart.total <=0}}"
+          class="w-full"
+          shape="pill"
+          onTap="makePayment"
+        >
+          {{`Pay ${moneyFormatter(cart.total)}`}}
+        </button>
+      </view>
     </view>
   </view>
 </view>
