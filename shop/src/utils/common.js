@@ -1,8 +1,8 @@
 export const isHasValue = (value) =>
-  value !== null && typeof value !== "undefined";
+  value !== null && typeof value !== 'undefined';
 
 export const isNotEmpty = (value) =>
-  isHasValue(value) && (value + "").trim().length > 0;
+  isHasValue(value) && (value + '').trim().length > 0;
 
 export const moneyFormatter = (number, currency = " ₫") => {
   if (!isNotEmpty(number)) return "";
@@ -17,11 +17,8 @@ export const delay = (milliseconds) =>
   });
 
 export const group = (arr, num) => {
-  const result = arr.reduce((acc, _, idx) => {
-    if (idx > 0 && idx % num === 0) acc.push(arr.slice(idx - num, idx));
+  return arr.reduce((acc, _, idx) => {
+    if (idx % num === 0) acc.push(arr.slice(idx, idx + num));
     return acc;
   }, []);
-
-  result.push(arr.slice(arr.length - (arr.length % num)));
-  return result;
 };

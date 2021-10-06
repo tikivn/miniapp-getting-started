@@ -5,6 +5,7 @@ Component({
 
   props: {
     isLoading: false,
+    title: '',
     skeletons: 0,
     className: '',
     categories: [],

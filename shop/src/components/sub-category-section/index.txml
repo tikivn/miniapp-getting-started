@@ -1,20 +1,34 @@
-<view class="sub-category-section radius-8px w-full flex flex-wrap justify-around">
-  <block tiki:if="{{isLoading}}">
-    <category
-      className="category-nav-item"
-      isLoading
-      tiki:for="{{skeletonsArray}}"
-      tiki:key="*this"
-    />
-  </block>
-  <block
-    tiki:for="{{categories}}"
-    tiki:key="id"
+<view class="sub-category-section-wrapper bg-white flex flex-col radius-8px w-full my-2x-small {{categories.length ? 'p-medium' : 'py-2x-small px-medium'}}">
+  <view
+    tiki:if="{{isLoading}}"
+    class="skeleton skeleton-font-medium skeleton-100-width"
+  />
+  <view
+    tiki:else
+    class="flex justify-between items-center"
   >
-    <category
-      className="sub-category-section-item"
-      category="{{item}}"
-      onTapCategory="_onTapCategory"
-    />
-  </block>
+    <text class="font-bold">{{title}}</text>
+    <icon type="arrow_right" color="#808089"/>
+  </view>
+  <view class="sub-category-section {{categories.length ? 'mt-small' : ''}}">
+    <block tiki:if="{{isLoading}}">
+      <category
+        isLoading
+        className="sub-category-section-item"
+        tiki:for="{{skeletonsArray}}"
+        tiki:key="*this"
+      />
+    </block>
+    <block
+      tiki:else
+      tiki:for="{{categories}}"
+      tiki:key="id"
+    >
+      <category
+        className="sub-category-section-item"
+        category="{{item}}"
+        onTapCategory="_onTapCategory"
+      />
+    </block>
+  </view>
 </view>

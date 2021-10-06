@@ -1,4 +1,4 @@
-<view class="category-nav h-full flex flex-col">
+<view class="category-nav h-full flex flex-col hide-scroll-bar">
   <block tiki:if="{{isLoading}}">
     <category
       className="category-nav-item"

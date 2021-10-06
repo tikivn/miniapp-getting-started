@@ -3,10 +3,21 @@
     isLoading="{{isLoading}}"
     skeletons="{{8}}"
     categories="{{categories}}"
+    activatedCategory="{{activatedCategory}}"
+    onTapCategory="activeCategory"
   />
-  <sub-category-section
-    isLoading="{{isLoading}}"
-    skeletons="{{6}}"
-    categories="{{categories}}"
-  />
+  <view class="category-subs-list px-medium py-2x-small flex-grow flex flex-col items-center bg-white hide-scroll-bar">
+    <sub-category-section title="{{activatedCategory.name}}"/>
+    <block
+      tiki:for="{{subCategories.length ? subCategories : [1, 2, 3]}}"
+      tiki:key="id"
+    >
+      <sub-category-section
+        title="{{item.name}}"
+        isLoading="{{isSubCategoriesLoading}}"
+        skeletons="{{6}}"
+        categories="{{item.subs}}"
+      />
+    </block>
+  </view>
 </view>
