@@ -57,7 +57,7 @@
       <button
         class="w-full ml-2x-small"
         shape="pill"
-        onTap="goToCart"
+        onTap="addAndGoToCart"
       >
         Buy now
       </button>

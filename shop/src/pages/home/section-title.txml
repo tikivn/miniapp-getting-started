@@ -3,8 +3,8 @@
     <view class="font-bold text-medium">
       {{title}}
     </view>
-    <view class="flex items-center">
-      <text class="text-brand">View more</text>
+    <view class="flex">
+      <text class="text-brand mr-2x-small">View more</text>
       <icon type="arrow_right" color="#1A94FF"/>
     </view>
   </view>

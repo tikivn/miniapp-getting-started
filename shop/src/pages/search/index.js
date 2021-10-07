@@ -68,7 +68,6 @@ Page({
     });
     try {
       const products = await searchProducts(input);
-      console.log({ products });
       this.setData({
         searchProducts: products,
         isLoading: false,
