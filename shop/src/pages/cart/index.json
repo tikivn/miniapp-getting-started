@@ -6,6 +6,7 @@
     "modal": "components/modal/index",
     "coupon-selector": "components/coupon-selector/index",
     "section": "pages/cart/section/index",
-    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "product-section": "components/product-section/index"
   }
 }

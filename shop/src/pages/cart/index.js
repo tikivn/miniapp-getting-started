@@ -1,4 +1,4 @@
-import { getCouponsAPI } from '../../services/index';
+import { getCouponsAPI, getPopularProductsAPI } from '../../services/index';
 import { EMITTERS } from '../../utils/constants';
 
 const app = getApp();
@@ -38,10 +38,14 @@ Page({
       this.setData({
         isLoading: true,
       });
-      const coupons = await getCouponsAPI();
+      const [coupons, popularProducts] = await Promise.all([
+        getCouponsAPI(),
+        getPopularProductsAPI(),
+      ]);
       this.setData({
-        cart: app.cart,
         coupons,
+        popularProducts,
+        cart: app.cart,
         isLoading: false,
       });
     } catch {

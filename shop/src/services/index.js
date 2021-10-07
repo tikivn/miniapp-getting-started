@@ -15,6 +15,7 @@ import point from './mock/my-point.json';
 import banners from './mock/banners.json';
 import hotDealProducts from './mock/hot-deal-products.json';
 import subCategories from './mock/sub-categories.json';
+import popularProducts from './mock/popular-products.json';
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -87,4 +88,8 @@ export const getHotDealProductsAPI = () => {
 
 export const getSubCategoriesAPI = (id) => {
   return request(subCategories[id]);
+};
+
+export const getPopularProductsAPI = () => {
+  return request(popularProducts);
 };
