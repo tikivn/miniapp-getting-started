@@ -5,21 +5,12 @@
     tiki:if="{{!isLoading && cart.orderedProducts.length === 0}}"
     class="p-medium bg-white"
   >
-    <view class="cart-empty flex flex-col items-center">
-      <image
-        class="mb-large"
-        src="/assets/images/empty.png"
-        mode="widthFix"
-      />
-      <text class="text-medium font-bold mb-5x-small">Nothing in cart</text>
-      <text class="mb-medium">Explore our products</text>
-      <button
-        class="w-full"
-        shape="pill"
-      >
-        Continue
-      </button>
-    </view>
+    <empty
+      class="cart-empty flex flex-col items-center mt-large"
+      title="Nothing in cart"
+      description="Explore our products"
+      buttonText="Continue"
+    />
     <section
       fullWidth
       className="bg-white"
