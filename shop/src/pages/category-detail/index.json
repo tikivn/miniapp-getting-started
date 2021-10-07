@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Category detail",
+  "usingComponents": {
+    "product-section": "components/product-section/index",
+    "filter": "components/filter/index",
+    "chip": "@tiki.vn/tini-ui/es/chip/index"
+  }
+}

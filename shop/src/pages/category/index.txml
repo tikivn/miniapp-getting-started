@@ -7,7 +7,10 @@
     onTapCategory="activeCategory"
   />
   <view class="category-subs-list px-medium py-2x-small flex-grow flex flex-col items-center bg-white hide-scroll-bar">
-    <sub-category-section title="{{activatedCategory.name}}"/>
+    <sub-category-section
+      title="{{activatedCategory.name}}"
+      onTapCategory="goToCategoryDetail"
+    />
     <block
       tiki:for="{{subCategories.length ? subCategories : [1, 2, 3]}}"
       tiki:key="id"
@@ -17,6 +20,7 @@
         isLoading="{{isSubCategoriesLoading}}"
         skeletons="{{6}}"
         categories="{{item.subs}}"
+        onTapCategory="goToCategoryDetail"
       />
     </block>
   </view>

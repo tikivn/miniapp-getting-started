@@ -60,6 +60,10 @@ Page({
     this.loadSubCategories();
   },
 
+  goToCategoryDetail() {
+    my.navigateTo({ url: 'pages/category-detail/index' });
+  },
+
   // Life cycle
   onReady() {
     this.loadData();

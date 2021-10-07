@@ -1,0 +1,27 @@
+<view>
+  <view class="flex justify-between bg-white py-small px-medium">
+    <chip
+      content="Filter"
+      prefixImage="/assets/icons/filter.svg"
+      onClick="showFilter"
+    />
+    <chip
+      content="Popular"
+      mode="secondary"
+      prefixImage="/assets/icons/sort.svg"
+    />
+  </view>
+  <view class="p-medium bg-white">
+    <product-section
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{newProducts}}"
+      onTapProduct="onTapProduct"
+    />
+  </view>
+
+  <filter
+    isShow="{{isShowFilter}}"
+    onClose="hideFilter"
+  />
+</view>

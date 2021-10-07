@@ -8,7 +8,12 @@
     class="flex justify-between items-center"
   >
     <text class="font-bold">{{title}}</text>
-    <icon type="arrow_right" color="#808089"/>
+    <view onTap="_onTapCategory">
+      <icon
+        type="arrow_right"
+        color="#808089"
+      />
+    </view>
   </view>
   <view class="sub-category-section {{categories.length ? 'mt-small' : ''}}">
     <block tiki:if="{{isLoading}}">

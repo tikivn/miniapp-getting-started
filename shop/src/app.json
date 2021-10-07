@@ -12,7 +12,8 @@
     "pages/tracking-detail/index",
     "pages/my-coupon/index",
     "pages/my-point/index",
-    "pages/category/index"
+    "pages/category/index",
+    "pages/category-detail/index"
   ],
   "tabBar": {
     "borderTopActiveColor": "#1A94FF",

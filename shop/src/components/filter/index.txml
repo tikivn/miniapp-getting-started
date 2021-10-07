@@ -1,0 +1,120 @@
+<view>
+  <block tiki:if="{{isShow}}">
+    <bottom-sheet
+      title="Filter"
+      onClose="_onClose"
+    >
+      <template
+        is="filter-content"
+        data="{{prices, sizes, types, colors}}"
+      />
+      <view slot="footer" class="filter-footer flex w-full px-medium py-2x-small">
+        <button
+          class="w-full mr-4x-small"
+          shape="pill"
+          type="outline"
+        >
+          Reset
+        </button>
+        <button
+          class="w-full ml-4x-small"
+          shape="pill"
+        >
+          Apply
+        </button>
+      </view>
+    </bottom-sheet>
+  </block>
+</view>
+
+<template name="filter-content">
+  <view class="filter-content-section p-medium">
+    <text class="font-bold">Price</text>
+    <view class="filter-chip-list flex flex-wrap">
+      <view
+        tiki:for="{{prices}}"
+        tiki:key="value"
+      >
+        <chip
+          className="filter-chip mr-2x-small mt-small"
+          content="{{item.label}}"
+        />
+      </view>
+    </view>
+    <view class="mt-small">
+      <text class="text-gray60">Or insert price range:</text>
+      <view class="flex mt-2x-small">
+        <view class="relative mr-2x-small">
+          <textfield
+            labelText="From"
+            className="filter-input w-full"
+            placeholder="Start price"
+          />
+          <view
+            class="filter-input-action absolute flex items-center h-full px-medium"
+            onTap="_onSelect"
+          >
+            <view class="vertical-divider mr-2x-small"/>
+            <text>₫</text>
+          </view>
+        </view>
+        <view class="relative mr-2x-small">
+          <textfield
+            labelText="To"
+            className="filter-input w-full"
+            placeholder="End price"
+          />
+          <view
+            class="filter-input-action absolute flex items-center h-full px-medium"
+            onTap="_onSelect"
+          >
+            <view class="vertical-divider mr-2x-small"/>
+            <text>₫</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="filter-content-section p-medium">
+    <text class="font-bold">Size</text>
+    <view class="filter-chip-list flex flex-wrap">
+      <view
+        tiki:for="{{sizes}}"
+        tiki:key="value"
+      >
+        <chip
+          className="filter-chip mr-2x-small mt-small"
+          content="{{item.label}}"
+        />
+      </view>
+    </view>
+  </view>
+  <view class="filter-content-section p-medium">
+    <text class="font-bold">Product type</text>
+    <view class="filter-chip-list flex flex-wrap">
+      <view
+        tiki:for="{{types}}"
+        tiki:key="value"
+      >
+        <chip
+          className="filter-chip mr-2x-small mt-small"
+          content="{{item.label}}"
+        />
+      </view>
+    </view>
+  </view>
+  <view class="filter-content-section p-medium">
+    <text class="font-bold">Color</text>
+    <view class="filter-chip-list flex flex-wrap">
+      <view
+        tiki:for="{{colors}}"
+        tiki:key="value"
+      >
+        <view
+          class="filter-chip-color mr-2x-small mt-small"
+          style="background-color: {{item.label}};"
+        />
+      </view>
+    </view>
+  </view>
+</template>
