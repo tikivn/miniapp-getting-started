@@ -1,0 +1,71 @@
+<view>
+  <view class="bg-white">
+    <view class="px-medium">
+      <search-bar
+        value="{{inputSearch}}"
+        placeholder="Search products"
+        focus
+        type="search"
+        maxLength="{{100}}"
+        onTapSearchIcon="handleOnConfirmSearch"
+        onTapCloseIcon="clearInputSearch"
+        onInput="handleInputSearch"
+      />
+    </view> 
+    <view 
+      tiki:if="{{!status}}"
+      class="py-medium">
+      <view class="px-medium text-medium font-bold mb-small">Recent search</view>
+      <view 
+        tiki:for="{{recentKeys}}"
+        class="px-medium flex justify-between py-2x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}">
+        <view 
+          data-key="{{item}}"
+          onTap="onClickKeySearch">
+            {{item}}
+        </view>
+        <view 
+          data-item="{{item}}" 
+          onTap="removeKeySearch">
+          <icon type="close" color="#808089"/>
+        </view>
+      </view>
+    </view>
+    <view 
+      class="py-medium mb-2x-small"
+      tiki:if="{{status}}">
+      <empty-result tiki:if="{{!searchProducts.length}}" text="Please try another search keywords"/>
+    </view>
+  </view>
+
+
+  <view 
+    tiki:if="{{!status}}"
+    class="mt-2x-small py-medium bg-white mb-2x-small">
+    <view class="px-medium pb-small text-medium font-bold">Popular category</view>
+    <carousel 
+      class="search-category">
+      <carousel-item 
+        tiki:for="{{isLoading ? [1] : categories}}"
+        tiki:key="id">
+        <category-section
+          isLoading="{{isLoading}}"
+          className="search-category-list"
+          skeletons="{{8}}"
+          type="category-grid"
+          categories="{{item}}"
+        />
+      </carousel-item>
+    </carousel>
+  </view>
+
+  <view class="p-medium bg-white mb-2x-small">
+    <view tiki:if="{{!status || !searchProducts.length}}" class="mb-small font-bold text-medium">{{!status ? 'Popular' : 'Similar'}} products</view>
+    <product-section
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{popularProducts}}"
+      onTapProduct="onTapProduct"
+    />
+  </view>
+</view>

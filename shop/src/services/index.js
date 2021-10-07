@@ -73,3 +73,8 @@ export const getTrackingDetail = () => {
 export const getMyPoint = () => {
   return request(point);
 };
+
+export const searchProducts = (input) => {
+  const productSearch = products.filter((p) => p.name.includes(input));
+  return request(productSearch);
+};

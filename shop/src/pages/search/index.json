@@ -1,0 +1,11 @@
+{
+  "defaultTitle": "Search",
+  "titleBarBottomColor": "transparent",
+  "usingComponents": {
+    "search-bar": "@tiki.vn/tini-ui/es/search-bar/index",
+    "chip": "@tiki.vn/tini-ui/es/chip/index",
+    "category-section": "components/category-section/index",
+    "product-section": "components/product-section/index",
+    "empty-result": "components/empty-result/index"
+  }
+}
