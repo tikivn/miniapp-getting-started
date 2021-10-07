@@ -1,10 +1,26 @@
 <import src="./section-title.txml"/>
 
 <view>
-  <header
+  <banners
+    class="home-banners"
     isLoading="{{isLoading}}"
-    shop="{{shop}}"
+    banners="{{banners}}"
   />
+
+  <view class="home-section">
+    <template
+      is="home-section-title"
+      data="{{title: 'Hot deals'}}"
+    />
+    <product-section
+      type="horizontal"
+      className="home-hot-deals"
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{hotDealProducts}}"
+      onTapProduct="onTapProduct"
+    />
+  </view>
 
   <view class="home-section home-category">
     <template

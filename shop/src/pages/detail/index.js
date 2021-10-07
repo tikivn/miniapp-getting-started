@@ -26,7 +26,7 @@ Page({
   },
 
   onTapProduct() {
-      my.navigateTo({ url: 'pages/detail/index' });
+    my.navigateTo({ url: 'pages/detail/index' });
   },
 
   showToast(content) {
@@ -47,10 +47,6 @@ Page({
         showAt: '',
       },
     });
-  },
-
-  onClickBuyNow() {
-    this.showToast(`Add to cart successfully`);
   },
 
   onClickBuyNow() {
@@ -119,7 +115,8 @@ Page({
     }
   },
 
-  goToCart() {
+  addAndGoToCart() {
+    app.addProduct(this.data.product);
     my.navigateTo({ url: 'pages/cart/index' });
   },
 

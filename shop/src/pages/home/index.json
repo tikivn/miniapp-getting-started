@@ -1,9 +1,10 @@
 {
   "pullRefresh": true,
   "defaultTitle": "Shop name",
+  "titleBarBottomColor": "#fff",
   "usingComponents": {
     "product-section": "components/product-section/index",
     "category-section": "components/category-section/index",
-    "header": "pages/home/header/index"
+    "banners": "components/banners/index"
   }
 }

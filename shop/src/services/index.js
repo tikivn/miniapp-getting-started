@@ -2,7 +2,8 @@ import request from './request';
 
 import shop from './mock/shop.json';
 import categories from './mock/categories.json';
-import products from './mock/products.json';
+import featuredProducts from './mock/featured-products.json';
+import newProducts from './mock/new-products.json';
 import product from './mock/product-detail.json';
 import user from './mock/user.json';
 import numOrders from './mock/numOrders.json';
@@ -12,6 +13,8 @@ import coupons from './mock/coupons.json';
 import order from './mock/order-detail.json';
 import tracking from './mock/tracking-detail.json';
 import point from './mock/my-point.json';
+import banners from './mock/banners.json';
+import hotDealProducts from './mock/hot-deal-products.json';
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -22,11 +25,11 @@ export const getCategoriesAPI = () => {
 };
 
 export const getFeaturedProductsAPI = () => {
-  return request(products);
+  return request(featuredProducts);
 };
 
 export const getNewProductsAPI = () => {
-  return request(products);
+  return request(newProducts);
 };
 
 export const getDetailProduct = () => {
@@ -72,4 +75,12 @@ export const getTrackingDetail = () => {
 
 export const getMyPoint = () => {
   return request(point);
+};
+
+export const getBannersAPI = () => {
+  return request(banners);
+};
+
+export const getHotDealProductsAPI = () => {
+  return request(hotDealProducts);
 };
