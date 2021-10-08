@@ -104,6 +104,13 @@ const mediaImageAPIList = [
   },
 ].filter(filterNotImplementedPages);
 
+const mediaVideoAPIList = [
+  {
+    name: 'Choose Video',
+    path: '/pages/api/choose-video/index',
+  },
+].filter(filterNotImplementedPages);
+
 const deeplinkAPIList = [
   {
     name: 'Open Screen',
@@ -234,6 +241,10 @@ const APIList = [
   {
     type: 'Media Image',
     list: mediaImageAPIList,
+  },
+  {
+    type: 'Media Video',
+    list: mediaVideoAPIList,
   },
   {
     type: 'Open Screen',

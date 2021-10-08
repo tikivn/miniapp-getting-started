@@ -5,4 +5,7 @@ Page({
   onStopPullToRefresh() {
     my.stopPullDownRefresh();
   },
+  onPullDownRefresh() {
+    my.alert({ title: `Updated at ${Date.now()}` });
+  },
 });

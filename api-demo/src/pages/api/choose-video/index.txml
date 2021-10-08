@@ -4,8 +4,6 @@
     <button class="button-full" onTap="onChooseImage">Choose Image</button>
   </view>
 
-  <block tiki:for="{{imgs}}">
-    <image class="image-cover" src="{{item}}" />
-  </block>
-
+  <video id="video" object-fit="cover" style="width: 100%; height: 100%;" onPlay="onPlay" onPause="onPause"
+    onEnd="onEnd" onTimeUpdate="onTimeUpdate" plays-inline src="{{videoUrl}}" />
 </view>
