@@ -1,4 +1,8 @@
 <view>
+  <filtered-button
+    selectedFilters="{{selectedFilters}}"
+    onClick="_onShow"
+  />
   <block tiki:if="{{isShow}}">
     <bottom-sheet
       title="Filter"
@@ -13,7 +17,7 @@
           class="w-full mr-4x-small"
           shape="pill"
           type="outline"
-          onTap="_onReset"
+          onTap="onReset"
         >
           Reset
         </button>

@@ -19,9 +19,9 @@ Component({
       type: null,
       color: null,
     },
+    onShow: () => {},
     onClose: () => {},
     onSelect: () => {},
-    onReset: () => {},
   },
 
   data: {
@@ -38,6 +38,10 @@ Component({
   },
 
   methods: {
+    _onShow() {
+      this.props.onShow();
+    },
+
     _onClose() {
       this.props.onClose();
     },
@@ -47,7 +51,7 @@ Component({
       this.props.onSelect(this.data._selectedFilters);
     },
 
-    _onReset() {
+    onReset() {
       this.setData({
         _selectedFilters: {
           priceOption: null,
@@ -60,7 +64,6 @@ Component({
           color: null,
         },
       });
-      this.props.onReset();
     },
 
     onSelectPrice(event) {

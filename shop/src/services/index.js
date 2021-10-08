@@ -19,6 +19,7 @@ import popularProducts from './mock/popular-products.json';
 import products from './mock/products.json';
 import otherProducts from './mock/other-products.json';
 import filters from './mock/filters.json';
+import sorts from './mock/sorts.json';
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -105,7 +106,11 @@ export const getFiltersAPI = () => {
   return request(filters);
 };
 
-export const filterSortProductsAPI = ({ filters, isSort }) => {
+export const getSortsAPI = () => {
+  return request(sorts);
+};
+
+export const filterSortProductsAPI = ({ filters, sort }) => {
   let result = [...products];
 
   if (filters.priceOption)
@@ -135,7 +140,20 @@ export const filterSortProductsAPI = ({ filters, isSort }) => {
         item.price <= filters.priceRange.end.value
     );
 
-  if (isSort) result = result.sort((a, b) => b.price - a.price);
+  if (sort)
+    switch (sort.value) {
+      case '1':
+        break;
+      case '2':
+        result.sort((a, b) => b.id - a.id);
+        break;
+      case '3':
+        result.sort((a, b) => a.price - b.price);
+        break;
+      case '4':
+        result.sort((a, b) => b.price - a.price);
+        break;
+    }
 
   return request(result);
 };

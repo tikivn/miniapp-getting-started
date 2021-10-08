@@ -5,8 +5,8 @@
     "product-section": "components/product-section/index",
     "filter": "components/filter/index",
     "filtered-list": "components/filtered-list/index",
-    "filtered-button": "components/filtered-button/index",
     "empty": "components/empty/index",
+    "sort": "components/sort/index",
     "chip": "@tiki.vn/tini-ui/es/chip/index"
   }
 }

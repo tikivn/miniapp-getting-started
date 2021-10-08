@@ -3,6 +3,7 @@ import {
   getFiltersAPI,
   getOtherProductsAPI,
   filterSortProductsAPI,
+  getSortsAPI,
 } from '../../services/index';
 
 Page({
@@ -11,6 +12,7 @@ Page({
     products: [],
     otherProducts: [],
     isShowFilter: false,
+    isShowSort: false,
     filters: {
       prices: [],
       sizes: [],
@@ -27,7 +29,7 @@ Page({
       type: null,
       color: null,
     },
-    isSort: false,
+    selectedSort: null,
   },
 
   onTapProduct() {
@@ -53,19 +55,23 @@ Page({
     this.filterSortProducts();
   },
 
-  onResetFilter() {
+  showSort() {
     this.setData({
-      selectedFilters: {
-        priceOption: null,
-        priceRange: {
-          start: null,
-          end: null,
-        },
-        size: null,
-        type: null,
-        color: null,
-      },
+      isShowSort: true,
     });
+  },
+
+  hideSort() {
+    this.setData({
+      isShowSort: false,
+    });
+  },
+
+  onSelectSort(selectedSort) {
+    this.setData({
+      selectedSort,
+    });
+    this.filterSortProducts();
   },
 
   removeFilter(item) {
@@ -75,30 +81,26 @@ Page({
     this.filterSortProducts();
   },
 
-  enabledDisabledSorting() {
-    this.setData({
-      isSort: !this.data.isSort,
-    });
-    this.filterSortProducts();
-  },
-
   async loadData() {
     this.setData({
       isLoading: true,
     });
 
     try {
-      const [products, otherProducts, filters] = await Promise.all([
+      const [products, otherProducts, filters, sorts] = await Promise.all([
         getProductsByCategoryIdAPI(),
         getOtherProductsAPI(),
         getFiltersAPI(),
+        getSortsAPI(),
       ]);
 
       this.setData({
         products,
         otherProducts,
-        isLoading: false,
         filters,
+        sorts,
+        selectedSort: sorts[0],
+        isLoading: false,
       });
     } catch {
       this.setData({
@@ -115,7 +117,7 @@ Page({
     try {
       const products = await filterSortProductsAPI({
         filters: this.data.selectedFilters,
-        isSort: this.data.isSort,
+        sort: this.data.selectedSort,
       });
 
       this.setData({
