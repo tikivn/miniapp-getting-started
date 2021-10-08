@@ -6,19 +6,21 @@
     >
       <template
         is="filter-content"
-        data="{{prices, sizes, types, colors}}"
+        data="{{filters, _selectedFilters}}"
       />
       <view slot="footer" class="filter-footer flex w-full px-medium py-2x-small">
         <button
           class="w-full mr-4x-small"
           shape="pill"
           type="outline"
+          onTap="_onReset"
         >
           Reset
         </button>
         <button
           class="w-full ml-4x-small"
           shape="pill"
+          onTap="_onSelect"
         >
           Apply
         </button>
@@ -32,12 +34,15 @@
     <text class="font-bold">Price</text>
     <view class="filter-chip-list flex flex-wrap">
       <view
-        tiki:for="{{prices}}"
+        tiki:for="{{filters.prices}}"
         tiki:key="value"
       >
         <chip
+          active="{{_selectedFilters.priceOption.value === item.value}}"
           className="filter-chip mr-2x-small mt-small"
           content="{{item.label}}"
+          data-item="{{item}}"
+          onClick="onSelectPrice"
         />
       </view>
     </view>
@@ -46,6 +51,8 @@
       <view class="flex mt-2x-small">
         <view class="relative mr-2x-small">
           <textfield
+            value="{{_selectedFilters.priceRange.start.display}}"
+            onInput="onInputStartPrice"
             labelText="From"
             className="filter-input w-full"
             placeholder="Start price"
@@ -60,6 +67,8 @@
         </view>
         <view class="relative mr-2x-small">
           <textfield
+            value="{{_selectedFilters.priceRange.end.display}}"
+            onInput="onInputEndPrice"
             labelText="To"
             className="filter-input w-full"
             placeholder="End price"
@@ -79,12 +88,15 @@
     <text class="font-bold">Size</text>
     <view class="filter-chip-list flex flex-wrap">
       <view
-        tiki:for="{{sizes}}"
+        tiki:for="{{filters.sizes}}"
         tiki:key="value"
       >
         <chip
+          active="{{_selectedFilters.size.value === item.value}}"
           className="filter-chip mr-2x-small mt-small"
           content="{{item.label}}"
+          data-item="{{item}}"
+          onClick="onSelectSize"
         />
       </view>
     </view>
@@ -93,12 +105,15 @@
     <text class="font-bold">Product type</text>
     <view class="filter-chip-list flex flex-wrap">
       <view
-        tiki:for="{{types}}"
+        tiki:for="{{filters.types}}"
         tiki:key="value"
       >
         <chip
+          active="{{_selectedFilters.type.value === item.value}}"
           className="filter-chip mr-2x-small mt-small"
           content="{{item.label}}"
+          data-item="{{item}}"
+          onClick="onSelectType"
         />
       </view>
     </view>
@@ -107,12 +122,14 @@
     <text class="font-bold">Color</text>
     <view class="filter-chip-list flex flex-wrap">
       <view
-        tiki:for="{{colors}}"
+        tiki:for="{{filters.colors}}"
         tiki:key="value"
       >
         <view
-          class="filter-chip-color mr-2x-small mt-small"
-          style="background-color: {{item.label}};"
+          class="filter-chip-color mr-2x-small mt-small {{_selectedFilters.color.value === item.value ? 'filter-chip-color-active' : ''}}"
+          style="background-color: {{item.code}};"
+          data-item="{{item}}"
+          onTap="onSelectColor"
         />
       </view>
     </view>

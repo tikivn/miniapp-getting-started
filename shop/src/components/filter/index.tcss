@@ -7,7 +7,9 @@
 }
 
 .filter-chip.tu-chip {
-  min-width: calc((100vw - 34px) / 7);
+  min-width: calc((100vw - 36px) / 7);
+  padding-left: 6px;
+  padding-right: 6px;
 }
 
 .filter-chip-color {
@@ -33,4 +35,8 @@
 
 .filter-footer {
   padding-bottom: calc(var(--safe-area-inset-bottom) + 8px);
+}
+
+.filter-chip-color-active {
+  border: 1px solid var(--brand);
 }

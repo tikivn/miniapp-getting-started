@@ -1,10 +1,30 @@
-import { getNewProductsAPI } from '../../services/index';
+import {
+  getProductsByCategoryIdAPI,
+  getFiltersAPI,
+} from '../../services/index';
 
 Page({
   data: {
     isLoading: true,
-    newProducts: [],
+    products: [],
     isShowFilter: false,
+    filters: {
+      prices: [],
+      sizes: [],
+      types: [],
+      colors: [],
+    },
+    selectedFilters: {
+      priceOption: null,
+      priceRange: {
+        start: null,
+        end: null,
+      },
+      size: null,
+      type: null,
+      color: null,
+    },
+    isSort: false,
   },
 
   onTapProduct() {
@@ -23,17 +43,54 @@ Page({
     });
   },
 
+  onSelectFilter(selectedFilters) {
+    this.setData({
+      selectedFilters,
+    });
+  },
+
+  onResetFilter() {
+    this.setData({
+      selectedFilters: {
+        priceOption: null,
+        priceRange: {
+          start: null,
+          end: null,
+        },
+        size: null,
+        type: null,
+        color: null,
+      },
+    });
+  },
+
+  removeFilter(item) {
+    const data = { ...this.data };
+    data.selectedFilters[item.key] = null;
+    this.setData(data);
+  },
+
+  enabledDisabledSorting() {
+    this.setData({
+      isSort: !this.data.isSort,
+    });
+  },
+
   async loadData() {
     this.setData({
       isLoading: true,
     });
 
     try {
-      const newProducts = await getNewProductsAPI();
+      const [products, filters] = await Promise.all([
+        getProductsByCategoryIdAPI(),
+        getFiltersAPI(),
+      ]);
 
       this.setData({
-        newProducts,
+        products,
         isLoading: false,
+        filters,
       });
     } catch {
       this.setData({

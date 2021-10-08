@@ -4,9 +4,9 @@ export const isHasValue = (value) =>
 export const isNotEmpty = (value) =>
   isHasValue(value) && (value + '').trim().length > 0;
 
-export const moneyFormatter = (number, currency = " ₫") => {
-  if (!isNotEmpty(number)) return "";
-  return parseInt(number).toLocaleString("vi-VN") + currency;
+export const moneyFormatter = (number, currency = ' ₫') => {
+  if (!isNotEmpty(number)) return '';
+  return parseInt(number).toLocaleString('vi-VN') + currency;
 };
 
 export const delay = (milliseconds) =>
@@ -21,4 +21,11 @@ export const group = (arr, num) => {
     if (idx % num === 0) acc.push(arr.slice(idx, idx + num));
     return acc;
   }, []);
+};
+
+export const parseNumberFromMoney = (money) => {
+  if (!isNotEmpty(money)) return '';
+  return +[...money.toString()]
+    .filter((char) => char <= '9' && char >= '0')
+    .join('');
 };

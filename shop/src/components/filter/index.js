@@ -1,90 +1,40 @@
+import { moneyFormatter, parseNumberFromMoney } from '../../utils/common';
+
 Component({
   props: {
     isShow: false,
+    filters: {
+      prices: [],
+      sizes: [],
+      types: [],
+      colors: [],
+    },
+    selectedFilters: {
+      priceOption: null,
+      priceRange: {
+        start: null,
+        end: null,
+      },
+      size: null,
+      type: null,
+      color: null,
+    },
     onClose: () => {},
     onSelect: () => {},
+    onReset: () => {},
   },
 
   data: {
-    prices: [
-      {
-        value: '1',
-        label: 'Below 100.000 ₫',
+    _selectedFilters: {
+      priceOption: null,
+      priceRange: {
+        start: null,
+        end: null,
       },
-      {
-        value: '2',
-        label: '100.000 ₫ - 200.000 ₫',
-      },
-      {
-        value: '3',
-        label: '200.000 ₫ - 750.000 ₫',
-      },
-      {
-        value: '4',
-        label: 'Above 750.000 ₫',
-      },
-    ],
-
-    sizes: [
-      {
-        value: 'xs',
-        label: 'XS',
-      },
-      {
-        value: 's',
-        label: 'S',
-      },
-      {
-        value: 'm',
-        label: 'M',
-      },
-      {
-        value: 'l',
-        label: 'L',
-      },
-      {
-        value: 'xl',
-        label: 'XL',
-      },
-      {
-        value: 'xxl',
-        label: 'XXL',
-      },
-    ],
-
-    types: [
-      {
-        value: 'new',
-        label: 'New arrival',
-      },
-      {
-        value: 'sale',
-        label: 'Sale',
-      },
-    ],
-
-    colors: [
-      {
-        value: 'white',
-        label: '#FFFFFF',
-      },
-      {
-        value: 'blue',
-        label: '#BFDFF6',
-      },
-      {
-        value: 'yellow',
-        label: '#FFF0DA',
-      },
-      {
-        value: 'brown',
-        label: '#B77052',
-      },
-      {
-        value: 'black',
-        label: '#53546B',
-      },
-    ],
+      size: null,
+      type: null,
+      color: null,
+    },
   },
 
   methods: {
@@ -92,6 +42,88 @@ Component({
       this.props.onClose();
     },
 
-    _onSelect(event) {},
+    _onSelect() {
+      this._onClose();
+      this.props.onSelect(this.data._selectedFilters);
+    },
+
+    _onReset() {
+      this.setData({
+        _selectedFilters: {
+          priceOption: null,
+          priceRange: {
+            start: null,
+            end: null,
+          },
+          size: null,
+          type: null,
+          color: null,
+        },
+      });
+      this.props.onReset();
+    },
+
+    onSelectPrice(event) {
+      const { item } = event.target.dataset;
+      const data = { ...this.data };
+      data._selectedFilters.priceRange.start = null;
+      data._selectedFilters.priceRange.end = null;
+      data._selectedFilters.priceOption = item;
+      this.setData(data);
+    },
+
+    onSelectSize(event) {
+      const { item } = event.target.dataset;
+      const data = { ...this.data };
+      data._selectedFilters.size = item;
+      this.setData(data);
+    },
+
+    onSelectType(event) {
+      const { item } = event.target.dataset;
+      const data = { ...this.data };
+      data._selectedFilters.type = item;
+      this.setData(data);
+    },
+
+    onSelectColor(event) {
+      const { item } = event.target.dataset;
+      const data = { ...this.data };
+      data._selectedFilters.color = item;
+      this.setData(data);
+    },
+
+    onInputStartPrice(event) {
+      const data = { ...this.data };
+      const number = parseNumberFromMoney(event.detail.value);
+      data._selectedFilters.priceOption = null;
+      if (!data._selectedFilters.priceRange)
+        data._selectedFilters.priceRange = {};
+      data._selectedFilters.priceRange.start = {
+        value: number,
+        display: moneyFormatter(number, ''),
+      };
+      this.setData(data);
+    },
+
+    onInputEndPrice(event) {
+      const data = { ...this.data };
+      const number = parseNumberFromMoney(event.detail.value);
+      data._selectedFilters.priceOption = null;
+      if (!data._selectedFilters.priceRange)
+        data._selectedFilters.priceRange = {};
+      data._selectedFilters.priceRange.end = {
+        value: number,
+        display: moneyFormatter(number, ''),
+      };
+      this.setData(data);
+    },
+  },
+
+  // Life cycle
+  deriveDataFromProps(nextProps) {
+    this.setData({
+      _selectedFilters: nextProps.selectedFilters,
+    });
   },
 });

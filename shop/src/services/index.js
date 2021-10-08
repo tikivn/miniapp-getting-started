@@ -16,6 +16,8 @@ import banners from './mock/banners.json';
 import hotDealProducts from './mock/hot-deal-products.json';
 import subCategories from './mock/sub-categories.json';
 import popularProducts from './mock/popular-products.json';
+import products from './mock/products.json';
+import filters from './mock/filters.json';
 
 export const getShopInfoAPI = () => {
   return request(shop);
@@ -92,4 +94,12 @@ export const getSubCategoriesAPI = (id) => {
 
 export const getPopularProductsAPI = () => {
   return request(popularProducts);
+};
+
+export const getProductsByCategoryIdAPI = (categoryId) => {
+  return request(products);
+};
+
+export const getFiltersAPI = () => {
+  return request(filters);
 };

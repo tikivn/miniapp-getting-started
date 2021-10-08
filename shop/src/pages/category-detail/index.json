@@ -3,6 +3,8 @@
   "usingComponents": {
     "product-section": "components/product-section/index",
     "filter": "components/filter/index",
+    "filtered-list": "components/filtered-list/index",
+    "filtered-button": "components/filtered-button/index",
     "chip": "@tiki.vn/tini-ui/es/chip/index"
   }
 }

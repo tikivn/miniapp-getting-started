@@ -5,7 +5,7 @@
 }
 
 .category-grid-layout .category-grid {
-  --grid-item-width: calc(100vw / 3.8);
+  --grid-item-width: calc(100vw / 4);
   --grid-item-image-with: calc(var(--grid-item-width) - 12vw);
   padding: 0 8px;
 }

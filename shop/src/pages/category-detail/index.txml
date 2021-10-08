@@ -1,21 +1,25 @@
 <view>
   <view class="flex justify-between bg-white py-small px-medium">
-    <chip
-      content="Filter"
-      prefixImage="/assets/icons/filter.svg"
+    <filtered-button
+      selectedFilters="{{selectedFilters}}"
       onClick="showFilter"
     />
     <chip
+      active="{{isSort}}"
       content="Popular"
-      mode="secondary"
-      prefixImage="/assets/icons/sort.svg"
+      prefixImage="{{isSort ? '/assets/icons/sort-active.svg' : '/assets/icons/sort.svg'}}"
+      onClick="enabledDisabledSorting"
     />
   </view>
+  <filtered-list
+    selectedFilters="{{selectedFilters}}"
+    onRemoveFilter="removeFilter"
+  />
   <view class="p-medium bg-white">
     <product-section
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
-      products="{{newProducts}}"
+      products="{{products}}"
       onTapProduct="onTapProduct"
     />
   </view>
@@ -23,5 +27,9 @@
   <filter
     isShow="{{isShowFilter}}"
     onClose="hideFilter"
+    filters="{{filters}}"
+    selectedFilters="{{selectedFilters}}"
+    onSelect="onSelectFilter"
+    onReset="onResetFilter"
   />
 </view>
