@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Loading",
+  "defaultTitle": "my.chooseImage",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }
