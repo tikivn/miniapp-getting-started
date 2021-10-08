@@ -22,8 +22,3 @@
 .cart-empty {
   margin-bottom: 56px;
 }
-
-.cart-empty image {
-  width: 180px;
-  height: 180px;
-}

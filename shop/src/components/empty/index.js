@@ -4,6 +4,8 @@ Component({
     description: '',
     buttonText: '',
     className: '',
+    showBottomDivider: false,
+
     onTapButton: () => {},
   },
 

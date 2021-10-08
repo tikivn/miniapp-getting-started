@@ -17,6 +17,7 @@ import hotDealProducts from './mock/hot-deal-products.json';
 import subCategories from './mock/sub-categories.json';
 import popularProducts from './mock/popular-products.json';
 import products from './mock/products.json';
+import otherProducts from './mock/other-products.json';
 import filters from './mock/filters.json';
 
 export const getShopInfoAPI = () => {
@@ -102,4 +103,43 @@ export const getProductsByCategoryIdAPI = (categoryId) => {
 
 export const getFiltersAPI = () => {
   return request(filters);
+};
+
+export const filterSortProductsAPI = ({ filters, isSort }) => {
+  let result = [...products];
+
+  if (filters.priceOption)
+    switch (filters.priceOption.value) {
+      case '1':
+        result = result.filter((item) => item.price < 100000);
+        break;
+      case '2':
+        result = result.filter(
+          (item) => item.price >= 100000 && item.price <= 200000
+        );
+        break;
+      case '3':
+        result = result.filter(
+          (item) => item.price >= 200000 && item.price <= 750000
+        );
+        break;
+      case '4':
+        result = result.filter((item) => item.price > 750000);
+        break;
+    }
+
+  if (filters.priceRange && filters.priceRange.start && filters.priceRange.end)
+    result = result.filter(
+      (item) =>
+        item.price >= filters.priceRange.start.value &&
+        item.price <= filters.priceRange.end.value
+    );
+
+  if (isSort) result = result.sort((a, b) => b.price - a.price);
+
+  return request(result);
+};
+
+export const getOtherProductsAPI = () => {
+  return request(otherProducts);
 };

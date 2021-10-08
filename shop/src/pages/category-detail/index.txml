@@ -11,18 +11,39 @@
       onClick="enabledDisabledSorting"
     />
   </view>
+
   <filtered-list
     selectedFilters="{{selectedFilters}}"
     onRemoveFilter="removeFilter"
   />
-  <view class="p-medium bg-white">
-    <product-section
-      isLoading="{{isLoading}}"
-      skeletons="{{4}}"
-      products="{{products}}"
-      onTapProduct="onTapProduct"
+
+  <block tiki:if="{{!isLoading && products.length === 0}}">
+    <empty
+      showBottomDivider
+      className="mt-medium"
+      title="No result!"
+      description="Please try another filter options"
     />
-  </view>
+    <view class="p-medium bg-white">
+      <view class="font-bold text-medium mb-small">Other products</view>
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{otherProducts}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+  </block>
+  <block tiki:else>
+    <view class="p-medium bg-white">
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{products}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+  </block>
 
   <filter
     isShow="{{isShowFilter}}"
