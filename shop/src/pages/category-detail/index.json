@@ -1,0 +1,12 @@
+{
+  "defaultTitle": "Category detail",
+  "backgroundColor": "#FFF",
+  "usingComponents": {
+    "product-section": "components/product-section/index",
+    "filter": "components/filter/index",
+    "filtered-list": "components/filtered-list/index",
+    "empty": "components/empty/index",
+    "sort": "components/sort/index",
+    "chip": "@tiki.vn/tini-ui/es/chip/index"
+  }
+}

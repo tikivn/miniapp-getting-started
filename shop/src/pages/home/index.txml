@@ -40,7 +40,6 @@
           isLoading="{{isLoading}}"
           className="home-category-list"
           skeletons="{{8}}"
-          type="category-grid"
           categories="{{item}}"
         />
       </carousel-item>  

@@ -48,15 +48,5 @@
     "id": "10",
     "image": "/assets/images/category.png",
     "name": "Category 10"
-  },
-  {
-    "id": "11",
-    "image": "/assets/images/category.png",
-    "name": "Category 11"
-  },
-  {
-    "id": "12",
-    "image": "/assets/images/category.png",
-    "name": "Category 12"
   }
 ]
