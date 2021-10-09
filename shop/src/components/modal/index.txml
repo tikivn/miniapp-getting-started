@@ -1,4 +1,5 @@
 <modal
+  class="modal"
   show="{{isShow}}"
   mask="{{true}}"
   zIndex="{{10}}"
@@ -23,6 +24,7 @@
   <view slot="footer">
     <view class="modal-buttons flex w-full px-medium mt-2x-small">
       <button
+        shape="pill"
         tiki:if="{{leftButton}}"
         class="w-full"
         size="large"
@@ -32,6 +34,7 @@
         {{leftButton}}
       </button>
       <button
+        shape="pill"
         tiki:if="{{rightButton}}"
         class="w-full"
         size="large"

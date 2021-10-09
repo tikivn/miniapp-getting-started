@@ -1,70 +1,92 @@
 <view>
   <view class="bg-white">
-    <view class="px-medium">
+    <view class="px-medium pb-2x-small">
       <search-bar
-        value="{{inputSearch}}"
-        placeholder="Search products"
-        focus
-        type="search"
-        maxLength="{{100}}"
-        onTapSearchIcon="handleOnConfirmSearch"
-        onTapCloseIcon="clearInputSearch"
-        onInput="handleInputSearch"
+        value="{{searchTerm}}"
+        onSearch="onSearch"
+        onInput="onInput"
       />
     </view> 
-    <view 
-      tiki:if="{{!status}}"
-      class="py-medium">
+    <view tiki:if="{{!searchTerm && recentKeys.length}}" class="py-medium my-2x-small">
       <view class="px-medium text-medium font-bold mb-small">Recent search</view>
       <view 
         tiki:for="{{recentKeys}}"
         class="px-medium flex justify-between py-2x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}">
-        <view 
-          data-key="{{item}}"
-          onTap="onClickKeySearch">
-            {{item}}
+        <view data-key="{{item}}" onTap="onClickKeySearch">
+          {{item}}
         </view>
-        <view 
-          data-item="{{item}}" 
-          onTap="removeKeySearch">
+        <view data-item="{{item}}" onTap="removeKeySearch">
           <icon type="close" color="#808089"/>
         </view>
       </view>
     </view>
-    <view 
-      class="py-medium mb-2x-small"
-      tiki:if="{{status}}">
-      <empty-result tiki:if="{{!searchProducts.length}}" text="Please try another search keywords"/>
+
+    <view tiki:if="{{searchTerm}}" class="py-medium mb-2x-small mt-4x-small">
+      <view class="px-medium mb-2x-small">
+        <view class="flex justify-between bg-white mb-small">
+          <filter
+            isShow="{{isShowFilter}}"
+            onShow="showFilter"
+            onClose="hideFilter"
+            filters="{{filters}}"
+            selectedFilters="{{selectedFilters}}"
+            onSelect="onSelectFilter"
+          />
+          <sort
+            isShow="{{isShowSort}}"
+            onClose="hideSort"
+            onShow="showSort"
+            sorts="{{sorts}}"
+            selectedSort="{{selectedSort}}"
+            onSelect="onSelectSort"
+          />
+        </view>
+
+        <filtered-list
+          selectedFilters="{{selectedFilters}}"
+          onRemoveFilter="removeFilter"
+        />
+
+        <empty
+          tiki:if="{{!products.length}}"
+          className="pt-large mt-4x-small"
+          title="No result!"
+          description="Please try another search keywords"
+        />
+        <product-section
+          tiki:else
+          className="pt-medium"
+          isLoading="{{isLoading}}"
+          skeletons="{{4}}"
+          products="{{products}}"
+          onTapProduct="onTapProduct"
+        />
+      </view>
     </view>
   </view>
 
 
   <view 
-    tiki:if="{{!status}}"
-    class="mt-2x-small py-medium bg-white mb-2x-small">
+    tiki:if="{{!searchTerm}}"
+    class="py-medium bg-white mb-2x-small">
     <view class="px-medium pb-small text-medium font-bold">Popular category</view>
-    <carousel 
-      class="search-category">
-      <carousel-item 
-        tiki:for="{{isLoading ? [1] : categories}}"
-        tiki:key="id">
-        <category-section
-          isLoading="{{isLoading}}"
-          className="search-category-list"
-          skeletons="{{8}}"
-          type="category-grid"
-          categories="{{item}}"
-        />
-      </carousel-item>
-    </carousel>
+    <category-section
+      isLoading="{{isLoading}}"
+      className="search-category-list"
+      skeletons="{{8}}"
+      type="category-grid"
+      categories="{{categories}}"
+    />
   </view>
 
-  <view class="p-medium bg-white mb-2x-small">
-    <view tiki:if="{{!status || !searchProducts.length}}" class="mb-small font-bold text-medium">{{!status ? 'Popular' : 'Similar'}} products</view>
+  <view 
+    tiki:if="{{!searchTerm || !products.length}}"
+    class="p-medium bg-white mb-2x-small">
+    <view class="mb-small font-bold text-medium">{{!searchTerm ? 'Popular' : 'Similar'}} products</view>
     <product-section
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
-      products="{{popularProducts}}"
+      products="{{otherProducts}}"
       onTapProduct="onTapProduct"
     />
   </view>

@@ -15,5 +15,9 @@
 }
 
 .home-category-list {
+  transition: ease-in-out 0.3s;
+}
+
+.home-category-carousel-active .home-category-list {
   transform: translateX(20px);
 }

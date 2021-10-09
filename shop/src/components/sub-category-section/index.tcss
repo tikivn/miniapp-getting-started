@@ -1,0 +1,20 @@
+.sub-category-section-wrapper {
+  border: 1px solid var(--gray20);
+  height: fit-content;
+}
+
+.sub-category-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sub-category-section-item .category-grid {
+  --grid-item-width: calc((100vw - 146px) / 3);
+  --grid-item-image-with: calc(var(--grid-item-width) - 28px);
+  padding: 8px;
+  margin: 0 auto;
+}
+
+.sub-category-section-item .category-grid-name {
+  font-size: 12px;
+}

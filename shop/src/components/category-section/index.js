@@ -7,14 +7,13 @@ Component({
     isLoading: false,
     skeletons: 0,
     className: '',
-    type: '',
     categories: [],
     onTapCategory: () => {},
   },
 
   methods: {
-    _onTapCategory(game) {
-      this.props.onTapCategory(game);
+    _onTapCategory(category) {
+      this.props.onTapCategory(category);
     },
   },
 

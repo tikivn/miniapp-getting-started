@@ -12,7 +12,9 @@
     "pages/tracking-detail/index",
     "pages/my-coupon/index",
     "pages/my-point/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/category/index",
+    "pages/category-detail/index"
   ],
   "tabBar": {
     "borderTopActiveColor": "#1A94FF",
@@ -23,6 +25,12 @@
         "pagePath": "pages/home/index",
         "icon": "/assets/icons/tab-home.png",
         "activeIcon": "assets/icons/tab-home-active.png"
+      },
+      {
+        "name": "Category",
+        "pagePath": "pages/category/index",
+        "icon": "/assets/icons/tab-category.png",
+        "activeIcon": "assets/icons/tab-category-active.png"
       },
       {
         "name": "Cart",

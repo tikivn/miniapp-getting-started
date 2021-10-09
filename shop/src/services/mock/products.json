@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1",
+    "name": "Wallet",
+    "image": "/assets/images/product.png",
+    "price": 100000
+  },
+  {
+    "id": "2",
+    "name": "Watch",
+    "image": "/assets/images/product.png",
+    "price": 150000
+  },
+  {
+    "id": "3",
+    "name": "Table",
+    "image": "/assets/images/product.png",
+    "price": 750000,
+    "discountRate": 10
+  },
+  {
+    "id": "4",
+    "name": "Iphone",
+    "image": "/assets/images/product.png",
+    "price": 120000,
+    "discountRate": 10
+  },
+  {
+    "id": "5",
+    "name": "Pants",
+    "image": "/assets/images/product.png",
+    "price": 500000
+  },
+  {
+    "id": "6",
+    "name": "Air conditioner",
+    "image": "/assets/images/product.png",
+    "price": 1000000
+  },
+  {
+    "id": "7",
+    "name": "Macbook",
+    "image": "/assets/images/product.png",
+    "price": 12000,
+    "discountRate": 10
+  },
+  {
+    "id": "8",
+    "name": "Air tag",
+    "image": "/assets/images/product.png",
+    "price": 5000000
+  }
+]

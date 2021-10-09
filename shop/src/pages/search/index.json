@@ -2,10 +2,14 @@
   "defaultTitle": "Search",
   "titleBarBottomColor": "transparent",
   "usingComponents": {
-    "search-bar": "@tiki.vn/tini-ui/es/search-bar/index",
-    "chip": "@tiki.vn/tini-ui/es/chip/index",
+    "search-bar": "components/search-bar/index",
     "category-section": "components/category-section/index",
     "product-section": "components/product-section/index",
-    "empty-result": "components/empty-result/index"
+    "empty": "components/empty/index",
+    "filter": "components/filter/index",
+    "filtered-list": "components/filtered-list/index",
+    "empty": "components/empty/index",
+    "sort": "components/sort/index",
+    "chip": "@tiki.vn/tini-ui/es/chip/index"
   }
 }

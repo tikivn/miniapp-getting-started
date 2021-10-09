@@ -1,6 +1,5 @@
 .cart {
   min-height: 100vh;
-  padding-bottom: 96px;
 }
 
 .cart-footer {
@@ -9,9 +8,17 @@
   bottom: 0;
 }
 
+.cart-footer-padding {
+  padding-bottom: 96px;
+}
+
 .cart-remove-btn {
   height: fit-content;
   padding: 4px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.08);
+}
+
+.cart-empty {
+  margin-bottom: 56px;
 }

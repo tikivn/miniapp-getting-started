@@ -1,42 +1,107 @@
 import {
   getCategoriesAPI,
   getNewProductsAPI,
-  searchProducts,
+  getProductsByCategoryIdAPI,
+  getFiltersAPI,
+  getOtherProductsAPI,
+  filterSortProductsAPI,
+  getSortsAPI,
 } from '../../services/index';
-import { group } from '../../utils/common';
 import { getStorage, setStorage } from '../../utils/storage';
 
 Page({
   data: {
     isLoading: false,
-    inputSearch: '',
-    status: '', // '' - searched - filtered
     categories: [],
-    popularProducts: [],
-    searchProducts: [],
+    otherProducts: [],
+    products: [],
+    searchTerm: '',
     recentKeys: [],
+
+    isShowFilter: false,
+    isShowSort: false,
+    filters: {
+      prices: [],
+      sizes: [],
+      types: [],
+      colors: [],
+    },
+    selectedFilters: {
+      priceOption: null,
+      priceRange: {
+        start: null,
+        end: null,
+      },
+      size: null,
+      type: null,
+      color: null,
+    },
+    selectedSort: null,
   },
 
-  handleInputSearch(e) {
+  showFilter() {
     this.setData({
-      inputSearch: e.detail.value,
+      isShowFilter: true,
     });
   },
 
-  clearInputSearch() {
+  hideFilter() {
     this.setData({
-      inputSearch: '',
+      isShowFilter: false,
     });
   },
 
-  async handleOnConfirmSearch(e) {
-    const { value } = e.detail;
-    if (value) {
+  onSelectFilter(selectedFilters) {
+    this.setData({
+      selectedFilters,
+    });
+    this.filterSortSearchProducts();
+  },
+
+  showSort() {
+    this.setData({
+      isShowSort: true,
+    });
+  },
+
+  hideSort() {
+    this.setData({
+      isShowSort: false,
+    });
+  },
+
+  onSelectSort(selectedSort) {
+    this.setData({
+      selectedSort,
+    });
+    this.filterSortSearchProducts();
+  },
+
+  removeFilter(item) {
+    const data = { ...this.data };
+    data.selectedFilters[item.key] = null;
+    this.setData(data);
+    this.filterSortSearchProducts();
+  },
+
+  async onInput(searchTerm) {
+    const recentSearch = await getStorage('recent-search');
+    const keys = searchTerm === '' ? { recentKeys: recentSearch } : {};
+    this.setData({
+      searchTerm,
+      ...keys,
+    });
+  },
+
+  async onSearch(searchTerm) {
+    if (searchTerm) {
       const keysSearch = await getStorage('recent-search');
-      const recentKeys = keysSearch ? keysSearch : [];
-      !recentKeys.includes(value) &&
-        setStorage('recent-search', [value, ...recentKeys]);
-      this.loadSearchProducts(value);
+      let recentKeys = keysSearch ? keysSearch : [];
+      if (recentKeys.includes(searchTerm)) {
+        recentKeys = recentKeys.filter((k) => k !== searchTerm);
+      }
+      setStorage('recent-search', [searchTerm, ...recentKeys]);
+      this.filterSortSearchProducts();
     }
   },
 
@@ -52,9 +117,8 @@ Page({
 
   onClickKeySearch(event) {
     const { key } = event.target.dataset;
-    this.loadSearchProducts(key);
     this.setData({
-      inputSearch: key,
+      searchTerm: key,
     });
   },
 
@@ -62,18 +126,21 @@ Page({
     my.navigateTo({ url: 'pages/detail/index' });
   },
 
-  async loadSearchProducts(input) {
+  async filterSortSearchProducts() {
     this.setData({
       isLoading: true,
     });
     try {
-      const products = await searchProducts(input);
-      this.setData({
-        searchProducts: products,
-        isLoading: false,
-        status: 'searched',
+      const products = await filterSortProductsAPI({
+        filters: this.data.selectedFilters,
+        sort: this.data.selectedSort,
+        search: this.data.searchTerm,
       });
-    } catch (error) {
+      this.setData({
+        products,
+        isLoading: false,
+      });
+    } catch {
       this.setData({
         isLoading: false,
       });
@@ -86,13 +153,24 @@ Page({
     });
 
     try {
-      const [categories, popularProducts] = await Promise.all([
-        getCategoriesAPI(),
-        getNewProductsAPI(),
-      ]);
+      const [categories, products, otherProducts, filters, sorts] =
+        await Promise.all([
+          getCategoriesAPI(),
+          getProductsByCategoryIdAPI(),
+          getOtherProductsAPI(),
+          getFiltersAPI(),
+          getSortsAPI(),
+        ]);
+      const recentKeys = await getStorage('recent-search');
+
       this.setData({
-        categories: group(categories, 4),
-        popularProducts,
+        categories,
+        products,
+        otherProducts,
+        filters,
+        sorts,
+        selectedSort: sorts[0],
+        recentKeys: recentKeys ? recentKeys : [],
         isLoading: false,
       });
     } catch (error) {
@@ -105,13 +183,5 @@ Page({
   // Life cycle
   onReady() {
     this.loadData();
-  },
-
-  async onShow() {
-    const recentKeys = await getStorage('recent-search');
-    this.setData({
-      status: '',
-      recentKeys: recentKeys ? recentKeys : [],
-    });
   },
 });
