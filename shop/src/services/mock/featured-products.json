@@ -16,7 +16,7 @@
     "name": "Product title",
     "image": "/assets/images/product.png",
     "price": 9999999,
-    "discountRate": 10
+    "discount_rate": 10
   },
   {
     "id": "4",

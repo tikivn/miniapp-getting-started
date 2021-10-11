@@ -16,13 +16,13 @@
         {{moneyFormatter(product.price)}}
       </view>
       <view
-        tiki:if="{{product.discountRate}}"
+        tiki:if="{{product.discount_rate}}"
         class="bg-red height-fit-content radius-8px py-5x-small px-4x-small text-white font-bold text-x-small">
-        {{`-${product.discountRate}%`}}
+        {{`-${product.discount_rate}%`}}
       </view>
     </view>
     <view class="text-gray60 line-through mb-medium">
-      {{moneyFormatter(product.listPrice)}}
+      {{moneyFormatter(product.list_price)}}
     </view>
   </view>
 </template>

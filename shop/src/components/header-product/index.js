@@ -1,6 +1,6 @@
 Component({
   data: {
-    isShowOption: true
+    isShowOption: true,
   },
 
   props: {
@@ -10,15 +10,13 @@ Component({
       name: '',
       image: '',
       price: 0,
-      listPrice: 0,
-      discountRate: 0,
+      list_price: 0,
+      discount_rate: 0,
     },
   },
 
-  methods: {
-  },
+  methods: {},
 
   // Life cycle
-  didMount() {
-  },
+  didMount() {},
 });
