@@ -8,9 +8,6 @@
     "/assets/images/product-detail.png"
   ],
   "thumbnail": "/assets/images/product-detail.png",
-  "price": 9999999,
-  "listPrice": 11111110,
-  "discountRate": 10,
   "detail": {
     "madeIn": "Vietnam",
     "size": "Small",

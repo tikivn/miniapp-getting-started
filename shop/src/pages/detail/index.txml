@@ -1,81 +1,91 @@
-<view>
-  <view tiki:if="{{isLoading}}" class="prod-skeleton-img skeleton w-full"></view>
-  <carousel tiki:else>
-    <carousel-item tiki:for="{{product.images}}">
-      <view class="relative">
-        <image class="block w-full" mode="widthFix" src="{{item}}"/>
-        <view class="total-images text-white">{{index + 1}}/{{product.images.length}}</view>
+<scroll-view
+  style="height: 100vh;"
+  scroll-y="{{true}}"
+  scroll-top="{{scrollTop}}">
+  <view>
+    <view tiki:if="{{isLoading}}" class="prod-skeleton-img skeleton w-full"></view>
+    <carousel tiki:else>
+      <carousel-item tiki:for="{{product.images}}">
+        <view class="relative">
+          <image class="block w-full" mode="widthFix" src="{{item}}"/>
+          <view class="total-images text-white">{{index + 1}}/{{product.images.length}}</view>
+        </view>
+      </carousel-item>
+    </carousel>
+    
+    <view tiki:if="{{product.id}}" class="p-medium bg-white mb-2x-small">
+      <header-product product="{{product}}" isLoading="{{isLoading}}"/>
+      <view
+        onTap="onSelectColor"
+        class="mb-medium border-option">
+        <card-select
+          isLoading="{{isLoading}}"
+          title="Color"
+          description="{{colorSelected.color}}"
+          img="{{colorSelected.image}}" />
       </view>
-    </carousel-item>
-  </carousel>
-  
-  <view tiki:if="{{product.id}}" class="p-medium bg-white mb-2x-small">
-    <header-product product="{{product}}" isLoading="{{isLoading}}"/>
-    <view
-      onTap="onSelectColor"
-      class="mb-medium border-option">
-      <card-select
-        isLoading="{{isLoading}}"
-        title="Color"
-        description="{{colorSelected.color}}"
-        img="{{colorSelected.image}}" />
-    </view>
 
-    <view
-      onTap="onSelectSize"
-      class="border-option">
-      <card-select
-        isLoading="{{isLoading}}"
-        title="Size"
-        description="{{sizeSelected.size}}"/>
-    </view>
-  </view>
-  <view class="p-medium bg-white mb-2x-small">
-    <shipping-info isLoading="{{isLoading}}" />
-  </view>
-   <view class="p-medium bg-white mb-2x-small">
-    <detail-info 
-      detail="{{product.detail}}"
-      isLoading="{{isLoading}}" />
-  </view>
-
-  <view class="p-medium bg-white mb-2x-small">
-    <view class="mb-small font-bold text-medium">More like this</view>
-    <product-section
-      isLoading="{{isLoading}}"
-      skeletons="{{4}}"
-      products="{{newProducts}}"
-      onTapProduct="onTapProduct"
-    />
-  </view>
-
-  <view class="footer padding-inset-bottom bg-white">
-    <view tiki:if="{{!isShowOption}}" class="flex w-full px-medium py-2x-small">
-      <view onTap="onClickBuyNow">
-        <image class="size-40" src="/assets/icons/ic-buy.png"/>
+      <view
+        onTap="onSelectSize"
+        class="border-option">
+        <card-select
+          isLoading="{{isLoading}}"
+          title="Size"
+          description="{{sizeSelected.size}}"/>
       </view>
-      <button
-        class="w-full ml-2x-small"
-        shape="pill"
-        onTap="addAndGoToCart"
-      >
-        Buy now
-      </button>
     </view>
-  </view>
+    <view class="p-medium bg-white mb-2x-small">
+      <shipping-info isLoading="{{isLoading}}" />
+    </view>
+    <view class="p-medium bg-white mb-2x-small">
+      <detail-info 
+        detail="{{product.detail}}"
+        isLoading="{{isLoading}}" />
+    </view>
 
-  <view tiki:if="{{product.id}}" class="select-option">
-    <bottom-sheet-option
-      type="{{type}}"
-      onClose="onCloseOption"
-      onClick="onDoneOption"
-      isShowOption="{{isShowOption}}"
-      product="{{product}}" />
-  </view>
+    <view class="p-medium bg-white mb-2x-small">
+      <view class="mb-small font-bold text-medium">More like this</view>
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{newProducts}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
 
-  <toast 
-    isShow="{{toast.isShow}}" 
-    content="{{toast.content}}" 
-    showAt="{{toast.showAt}}" 
-    onCancel="hideToast" />
-</view>
+    <view class="footer padding-inset-bottom bg-white">
+      <view tiki:if="{{!isShowOption}}" class="flex w-full px-medium py-2x-small">
+        <button
+          class="w-50"
+          shape="pill"
+          type="outline"
+          onTap="onClickBuyNow"
+        >
+          Add to cart
+        </button>
+        <button
+          class="w-50 ml-2x-small"
+          shape="pill"
+          onTap="addAndGoToCart"
+        >
+          Buy now
+        </button>
+      </view>
+    </view>
+
+    <view tiki:if="{{product.id}}" class="select-option">
+      <bottom-sheet-option
+        type="{{type}}"
+        onClose="onCloseOption"
+        onClick="onDoneOption"
+        isShowOption="{{isShowOption}}"
+        product="{{product}}" />
+    </view>
+
+    <toast 
+      isShow="{{toast.isShow}}" 
+      content="{{toast.content}}" 
+      showAt="{{toast.showAt}}" 
+      onCancel="hideToast" />
+  </view>
+</scroll-view>

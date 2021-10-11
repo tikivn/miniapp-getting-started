@@ -1,27 +1,28 @@
 [
   {
     "id": "1",
-    "name": "Product title",
+    "name": "Wallet",
     "image": "/assets/images/product.png",
-    "price": 9999999
+    "price": 100000
   },
   {
     "id": "2",
-    "name": "Product title",
+    "name": "Watch",
     "image": "/assets/images/product.png",
-    "price": 9999999
+    "price": 150000
   },
   {
     "id": "3",
-    "name": "Product title",
+    "name": "Table",
     "image": "/assets/images/product.png",
-    "price": 9999999,
+    "price": 750000,
     "discountRate": 10
   },
   {
     "id": "4",
-    "name": "Product title",
+    "name": "Iphone",
     "image": "/assets/images/product.png",
-    "price": 9999999
+    "price": 120000,
+    "discountRate": 10
   }
 ]
