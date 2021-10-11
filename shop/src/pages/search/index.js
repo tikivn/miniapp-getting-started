@@ -8,6 +8,7 @@ import {
   getSortsAPI,
 } from '../../services/index';
 import { getStorage, setStorage } from '../../utils/storage';
+import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
 
 Page({
   data: {
@@ -86,7 +87,11 @@ Page({
 
   async onInput(searchTerm) {
     const recentSearch = await getStorage('recent-search');
-    const keys = searchTerm === '' ? { recentKeys: recentSearch } : {};
+    const keys =
+      searchTerm === ''
+        ? { recentKeys: recentSearch, isLoading: false }
+        : { isLoading: true };
+
     this.setData({
       searchTerm,
       ...keys,
@@ -122,8 +127,8 @@ Page({
     });
   },
 
-  onTapProduct() {
-    my.navigateTo({ url: 'pages/detail/index' });
+  onTapProduct(product) {
+    navigateToPDP(product.id);
   },
 
   async filterSortSearchProducts() {
@@ -180,7 +185,15 @@ Page({
     }
   },
 
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
+  },
+
   // Life cycle
+  onShow() {
+    loadBadgeCart();
+  },
+
   onReady() {
     this.loadData();
   },

@@ -33,12 +33,6 @@
         "activeIcon": "assets/icons/tab-category-active.png"
       },
       {
-        "name": "Cart",
-        "pagePath": "pages/cart/index",
-        "icon": "/assets/icons/tab-cart.png",
-        "activeIcon": "assets/icons/tab-cart-active.png"
-      },
-      {
         "name": "Search",
         "pagePath": "pages/search/index",
         "icon": "/assets/icons/tab-search.png",

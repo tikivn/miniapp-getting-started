@@ -1,11 +1,15 @@
 import { getDetailProduct, getNewProductsAPI } from '../../services/index';
+import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import queryString from 'query-string';
 
 const app = getApp();
 
 Page({
   data: {
+    scrollTop: undefined,
     isShowOption: false,
     isLoading: true,
+    product_id: '',
     product: {},
     newProducts: [],
     type: 'color',
@@ -25,8 +29,24 @@ Page({
     },
   },
 
-  onTapProduct() {
-    my.navigateTo({ url: 'pages/detail/index' });
+  scrollToTop() {
+    this.setData({
+      scrollTop: 0,
+    });
+  },
+
+  onActionTapProduct(product_id) {
+    this.setData({
+      product_id,
+    });
+    this.scrollToTop();
+    this.loadData();
+  },
+
+  onTapProduct(product) {
+    navigateToPDP(product.id, (productId) => {
+      this.onActionTapProduct(productId);
+    });
   },
 
   showToast(content) {
@@ -51,6 +71,7 @@ Page({
 
   onClickBuyNow() {
     app.addProduct(this.data.product);
+    loadBadgeCart();
     this.showToast(`Add to cart successfully`);
   },
 
@@ -90,6 +111,10 @@ Page({
     }
   },
 
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
+  },
+
   async loadData() {
     this.setData({
       isLoading: true,
@@ -97,7 +122,7 @@ Page({
 
     try {
       const [product, newProducts] = await Promise.all([
-        getDetailProduct(),
+        getDetailProduct(this.data.product_id),
         getNewProductsAPI(),
       ]);
 
@@ -117,11 +142,28 @@ Page({
 
   addAndGoToCart() {
     app.addProduct(this.data.product);
+    loadBadgeCart();
     my.navigateTo({ url: 'pages/cart/index' });
   },
 
   // Life cycle
+  onLoad(query) {
+    const { product_id } = queryString.parse(query);
+    this.setData({
+      product_id,
+    });
+  },
   onReady() {
     this.loadData();
+  },
+
+  onShow() {
+    loadBadgeCart();
+  },
+
+  onHide() {
+    this.setData({
+      scrollTop: undefined,
+    });
   },
 });
