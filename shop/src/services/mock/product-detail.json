@@ -8,9 +8,6 @@
     "/assets/images/product-detail.png"
   ],
   "thumbnail": "/assets/images/product-detail.png",
-  "price": 9999999,
-  "listPrice": 11111110,
-  "discountRate": 10,
   "detail": {
     "madeIn": "Vietnam",
     "size": "Small",
@@ -23,22 +20,22 @@
   "colors": [
     {
       "id": 1,
-      "image": "/assets/images/circle.png",
+      "image": "/assets/images/circle-blue.png",
       "color": "Light Blue"
     },
     {
       "id": 2,
-      "image": "/assets/images/circle.png",
+      "image": "/assets/images/circle-white.png",
       "color": "White"
     },
     {
       "id": 3,
-      "image": "/assets/images/circle.png",
-      "color": "Orange"
+      "image": "/assets/images/circle-gray.png",
+      "color": "Gray Blue"
     },
     {
       "id": 4,
-      "image": "/assets/images/circle.png",
+      "image": "/assets/images/circle-brown.png",
       "color": "Brown"
     }
   ],

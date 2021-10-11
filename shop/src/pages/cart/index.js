@@ -1,5 +1,6 @@
 import { getCouponsAPI, getPopularProductsAPI } from '../../services/index';
 import { EMITTERS } from '../../utils/constants';
+import { navigateToPDP } from '../../utils/navigate';
 
 const app = getApp();
 
@@ -8,6 +9,7 @@ Page({
 
   data: {
     isLoading: true,
+    scrollTop: undefined,
     cart: {
       buyer: {},
       seller: {},
@@ -31,6 +33,20 @@ Page({
       rightButton: '',
     },
     isShowCouponBottomSheet: false,
+  },
+
+  scrollToTop() {
+    this.setData({
+      scrollTop: 0,
+    });
+  },
+
+  onTapProduct(product) {
+    navigateToPDP(product.id);
+  },
+
+  onTapContinue() {
+    my.navigateTo({ url: 'pages/home/index' });
   },
 
   async loadData() {
@@ -79,6 +95,7 @@ Page({
 
   onRemoveProduct(product) {
     app.removeProduct(product);
+    this.scrollToTop();
   },
 
   onChangeQuantityProduct(product, quantity) {
@@ -169,8 +186,8 @@ Page({
       app.cartEvent.on(EMITTERS.CART_UPDATE, (cart) =>
         this.setData({
           cart,
-        })
-      )
+        }),
+      ),
     );
   },
 
@@ -180,5 +197,10 @@ Page({
 
   onUnload() {
     this.disposableCollection.forEach((dispose) => dispose());
+  },
+  onHide() {
+    this.setData({
+      scrollTop: undefined,
+    });
   },
 });

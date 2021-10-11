@@ -38,17 +38,16 @@
 <template name="bottom-sheet-option">
   <view class="border-bottom-gray">
     <view class="flex p-medium">
-      <image
-        class="size-120 radius-8px mb-2x-small radius-8px"
-        src="{{product.images[0]}}"
-      />
+      <view>
+        <image
+          class="size-120 block radius-8px mb-2x-small radius-8px"
+          src="{{product.images[0]}}"
+        />
+      </view>
       <view class="ml-medium">
-        <text
-        class="mb-4x-small"
-        number-of-lines="{{1}}"
-        >
+        <view class="mb-4x-small">
           {{product.name}}
-        </text>
+        </view>
         <view class="flex items-center mb-5x-small">
           <text
             class="font-bold mr-2x-small"
@@ -81,6 +80,7 @@
       onClick="_onClick"
       title="Select option"
       buttonTitle="Done"
+      buttonShape="pill"
       distanceFromTop="{{100}}">
       <template
         is="bottom-sheet-option"

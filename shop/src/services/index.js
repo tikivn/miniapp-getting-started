@@ -37,8 +37,19 @@ export const getNewProductsAPI = () => {
   return request(newProducts);
 };
 
-export const getDetailProduct = () => {
-  return request(product);
+export const getDetailProduct = (productId) => {
+  const pdb = products.find((p) => p.id === productId);
+  const discount = pdb.discountRate
+    ? {
+        listPrice: pdb.price / ((100 - pdb.discountRate) / 100.0),
+      }
+    : {};
+  const result = {
+    ...product,
+    ...pdb,
+    ...discount,
+  };
+  return request(result);
 };
 
 export const getUserInfo = () => {

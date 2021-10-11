@@ -43,16 +43,18 @@
         </view>
 
         <filtered-list
+          className="filter-list-search"
           selectedFilters="{{selectedFilters}}"
           onRemoveFilter="removeFilter"
         />
 
         <empty
-          tiki:if="{{!products.length}}"
+          tiki:if="{{!products.length && !isLoading}}"
           className="pt-large mt-4x-small"
           title="No result!"
           description="Please try another search keywords"
         />
+
         <product-section
           tiki:else
           className="pt-medium"
