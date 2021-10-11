@@ -7,6 +7,7 @@ import {
   getHotDealProductsAPI,
 } from '../../services/index';
 import { group } from '../../utils/common';
+import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
 
 Page({
   data: {
@@ -19,8 +20,12 @@ Page({
     hotDealProducts: [],
   },
 
-  onTapProduct() {
-    my.navigateTo({ url: 'pages/detail/index' });
+  onTapProduct(product) {
+    navigateToPDP(product.id);
+  },
+
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
   },
 
   async loadData() {
@@ -64,6 +69,10 @@ Page({
   // Life cycle
   onReady() {
     this.loadData();
+  },
+
+  onShow() {
+    loadBadgeCart();
   },
 
   async onPullDownRefresh() {

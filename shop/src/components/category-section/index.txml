@@ -1,5 +1,5 @@
 <view class="{{className}}">
-  <view class="category-grid-layout">
+  <view class="category-grid-layout hide-scroll-bar">
     <block tiki:if="{{isLoading}}">
       <category
         isLoading

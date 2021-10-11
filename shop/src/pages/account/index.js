@@ -1,4 +1,5 @@
 import { getUserInfo, getNumOrders } from '../../services/index';
+import { loadBadgeCart } from '../../utils/navigate';
 
 Page({
   data: {
@@ -6,6 +7,11 @@ Page({
     user: {},
     numOrders: {},
   },
+
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
+  },
+
   async loadData() {
     this.setData({
       isLoading: true,
@@ -30,6 +36,10 @@ Page({
   },
 
   // Life cycle
+  onShow() {
+    loadBadgeCart();
+  },
+
   onReady() {
     this.loadData();
   },

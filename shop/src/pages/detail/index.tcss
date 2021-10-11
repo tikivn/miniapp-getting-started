@@ -4,6 +4,10 @@
   z-index: 3;
 }
 
+.footer-prod-detail button {
+  font-size: var(--font-size-medium);
+}
+
 .select-option .tu-bottom-sheet-wrapper {
   max-height: calc(
     var(--tf-screen-height) - var(--tf-title-bar-height) -

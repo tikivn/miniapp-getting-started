@@ -1,4 +1,4 @@
-<view>
+<view className="{{className}}">
   <view
     tiki:if="{{formattedSelectedFilters.length}}"
     class="category-detail-selected flex bg-gray10 py-small px-medium hide-scroll-bar">

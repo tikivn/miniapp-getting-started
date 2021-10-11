@@ -1,5 +1,6 @@
 Component({
   props: {
+    className: '',
     selectedFilters: {
       priceOption: null,
       priceRange: {
@@ -26,7 +27,7 @@ Component({
 
     formatFilteredItems() {
       const formattedSelectedFilters = Object.entries(
-        this.props.selectedFilters
+        this.props.selectedFilters,
       ).reduce((acc, [key, value]) => {
         if (!key || !value) return acc;
 
