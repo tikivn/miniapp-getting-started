@@ -8,6 +8,7 @@ import {
   getSortsAPI,
 } from '../../services/index';
 import { getStorage, setStorage } from '../../utils/storage';
+import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
 
 Page({
   data: {
@@ -122,8 +123,8 @@ Page({
     });
   },
 
-  onTapProduct() {
-    my.navigateTo({ url: 'pages/detail/index' });
+  onTapProduct(product) {
+    navigateToPDP(product.id);
   },
 
   async filterSortSearchProducts() {
@@ -180,7 +181,15 @@ Page({
     }
   },
 
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
+  },
+
   // Life cycle
+  onShow() {
+    loadBadgeCart();
+  },
+
   onReady() {
     this.loadData();
   },

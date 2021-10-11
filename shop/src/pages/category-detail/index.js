@@ -5,6 +5,7 @@ import {
   filterSortProductsAPI,
   getSortsAPI,
 } from '../../services/index';
+import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
 
 Page({
   data: {
@@ -32,8 +33,8 @@ Page({
     selectedSort: null,
   },
 
-  onTapProduct() {
-    my.navigateTo({ url: 'pages/detail/index' });
+  onTapProduct(product) {
+    navigateToPDP(product.id);
   },
 
   showFilter() {
@@ -131,7 +132,15 @@ Page({
     }
   },
 
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
+  },
+
   // Life cycle
+  onShow() {
+    loadBadgeCart();
+  },
+
   onReady() {
     this.loadData();
   },

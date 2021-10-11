@@ -1,27 +1,27 @@
 [
   {
-    "id": "1",
-    "name": "Product title",
+    "id": "5",
+    "name": "Pants",
     "image": "/assets/images/product.png",
-    "price": 9999999
+    "price": 500000
   },
   {
-    "id": "2",
-    "name": "Product title",
+    "id": "6",
+    "name": "Air conditioner",
     "image": "/assets/images/product.png",
-    "price": 9999999
+    "price": 1000000
   },
   {
-    "id": "3",
-    "name": "Product title",
+    "id": "7",
+    "name": "Macbook",
     "image": "/assets/images/product.png",
-    "price": 9999999,
+    "price": 12000,
     "discountRate": 10
   },
   {
-    "id": "4",
-    "name": "Product title",
+    "id": "8",
+    "name": "Air tag",
     "image": "/assets/images/product.png",
-    "price": 9999999
+    "price": 5000000
   }
 ]
