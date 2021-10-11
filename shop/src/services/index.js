@@ -18,6 +18,7 @@ import subCategories from './mock/sub-categories.json';
 import popularProducts from './mock/popular-products.json';
 import products from './mock/products.json';
 import otherProducts from './mock/other-products.json';
+import relativeProducts from './mock/relative-products.json';
 import filters from './mock/filters.json';
 import sorts from './mock/sorts.json';
 
@@ -160,4 +161,8 @@ export const filterSortProductsAPI = ({ filters, sort }) => {
 
 export const getOtherProductsAPI = () => {
   return request(otherProducts);
+};
+
+export const getRelativeProductsAPI = () => {
+  return request(relativeProducts);
 };

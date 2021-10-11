@@ -107,5 +107,68 @@
     "image": "https://salt.tikicdn.com/cache/280x280/ts/product/ed/ef/e4/70f310f17bee90ca906263b4bb7bd804.jpg",
     "price": 9288200,
     "discount_rate": 36
+  },
+  {
+    "id": 1559411,
+    "sku": "6951651845776",
+    "name": "Phiếu Quà Tặng Tiki 50.000đ",
+    "image": "https://salt.tikicdn.com/cache/280x280/ts/product/8a/3a/2e/9692aea8f1b91f970c85b05bfb8b1966.jpg",
+    "price": 50000
+  },
+  {
+    "id": 97594364,
+    "sku": "9485440855465",
+    "name": "Luật Tâm Thức - Giải Mã Ma Trận Vũ Trụ",
+    "image": "https://salt.tikicdn.com/cache/280x280/ts/product/c9/34/25/9fe3938caefb224fed32a708cd3cdeb1.jpg",
+    "price": 204800,
+    "discount_rate": 36
+  },
+  {
+    "id": 74021317,
+    "sku": "5977911599303",
+    "name": "Cây Cam Ngọt Của Tôi",
+    "image": "https://salt.tikicdn.com/cache/280x280/ts/product/5e/18/24/2a6154ba08df6ce6161c13f4303fa19e.jpg",
+    "price": 80000,
+    "discount_rate": 26
+  },
+  {
+    "id": 114769680,
+    "sku": "5878844157667",
+    "name": "Điện Thoại Oppo A54 (6GB/128GB) - Hàng Chính Hãng",
+    "image": "https://salt.tikicdn.com/cache/280x280/ts/product/c1/59/2b/d4e0cdfc8feb7611c663c34347203f96.jpg",
+    "price": 4250000,
+    "discount_rate": 23
+  },
+  {
+    "id": 70601085,
+    "sku": "2257082843539",
+    "name": "Hộp Đựng Gia Vị Lock&Lock Modular HTE571S6 6 Chiếc (3 Chiếc 180ml Và 3 Chiếc 250ml) + Giá Gỗ",
+    "image": "https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/42/bc/d9/1112e60a891625de848528ba26300417.jpg",
+    "price": 387000,
+    "discount_rate": 49
+  },
+  {
+    "id": 66621525,
+    "sku": "8401876255983",
+    "name": "Bình Giữ Nhiệt Lock&Lock Two-Tone Clip Tumbler LHC4151 540ml",
+    "image": "https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/86/a5/62/d22295fc282647d192b9ec4c5be678ea.jpg",
+    "price": 234000,
+    "discount_rate": 49
+  },
+  {
+    "id": 65001815,
+    "sku": "1360136095158",
+    "name": "Nồi Dưỡng Sinh Gốm Sứ Minh Long Vesta 0.4 L + Nắp",
+    "image": "https://salt.tikicdn.com/cache/280x280/ts/product/a5/54/62/7769c8a9e9e7b9c2c21616bcafd6721c.jpg",
+    "price": 150000,
+    "discount_rate": 6
+  },
+  {
+    "id": 56941523,
+    "sku": "9433901554951",
+    "name": "Ly nhựa 2 lớp LocknLock kèm ống hút HAP507 750ml",
+    "image": "https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/1a/dd/56/8a593799a1592108610be7ea8b07a2ff.jpg",
+    "price": 99000,
+    "discount_rate": 50
   }
 ]

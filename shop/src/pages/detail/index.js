@@ -1,4 +1,4 @@
-import { getDetailProduct, getNewProductsAPI } from '../../services/index';
+import { getDetailProduct, getRelativeProductsAPI } from '../../services/index';
 
 const app = getApp();
 
@@ -7,7 +7,7 @@ Page({
     isShowOption: false,
     isLoading: true,
     product: {},
-    newProducts: [],
+    relativeProducts: [],
     type: 'color',
     colorSelected: {
       id: '',
@@ -96,14 +96,14 @@ Page({
     });
 
     try {
-      const [product, newProducts] = await Promise.all([
+      const [product, relativeProducts] = await Promise.all([
         getDetailProduct(),
-        getNewProductsAPI(),
+        getRelativeProductsAPI(),
       ]);
 
       this.setData({
         product,
-        newProducts,
+        relativeProducts,
         isLoading: false,
         colorSelected: product.colors[0],
         sizeSelected: product.sizes[0],

@@ -44,7 +44,7 @@
     <product-section
       isLoading="{{isLoading}}"
       skeletons="{{4}}"
-      products="{{newProducts}}"
+      products="{{relativeProducts}}"
       onTapProduct="onTapProduct"
     />
   </view>
