@@ -127,6 +127,7 @@ Page({
   },
 
   makePaymentFail() {
+    this.scrollToTop();
     this.setData({
       modal: {
         key: 'payment_failed',
@@ -141,6 +142,7 @@ Page({
 
   makePaymentSuccess() {
     app.resetCart();
+    this.scrollToTop();
     this.setData({
       modal: {
         key: 'payment_success',
@@ -186,8 +188,8 @@ Page({
       app.cartEvent.on(EMITTERS.CART_UPDATE, (cart) =>
         this.setData({
           cart,
-        }),
-      ),
+        })
+      )
     );
   },
 

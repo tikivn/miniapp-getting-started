@@ -25,7 +25,7 @@
 
 <template name="completed">
   <view class="w-full flex justify-between py-2x-small {{className}}">
-    <view class="flex">
+    <view class="flex mr-medium">
       <view class="mr-2x-small">
         <image
           class="order-item-thumbnail radius-8px"

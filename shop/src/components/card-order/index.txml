@@ -22,7 +22,7 @@
 
     <view class="mt-small px-medium">
       <view class="flex items-center py-2x-small border-bottom-gray">
-        <image class="block size-40" src="{{order.product.image}}" />
+        <image class="block size-40" src="{{order.product.thumbnail}}" />
         <view class="ml-2x-small">
           <view class="font-bold">{{order.product.name}}</view>
           <view class="text-small text-gray60">

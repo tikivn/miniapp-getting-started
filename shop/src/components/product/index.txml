@@ -12,7 +12,7 @@
   >
     <image
       class="radius-8px mb-2x-small radius-8px"
-      src="{{product.image}}"
+      src="{{product.thumbnail}}"
     />
     <text
       class="mb-4x-small"
@@ -34,11 +34,5 @@
         {{`-${product.discount_rate}%`}}
       </view>
     </view>
-    <text 
-      class="product-old-price text-gray60 mt-5x-small"
-      number-of-lines="{{1}}"
-    >
-      {{product.list_price && product.price < product.list_price ? moneyFormatter(product.list_price) : ''}}
-    </text>
   </view>
 </view>

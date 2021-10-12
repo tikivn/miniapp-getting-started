@@ -1,16 +1,4 @@
 {
-  "id": "1",
-  "name": "Product title",
-  "images": [
-    "/assets/images/product-detail.png",
-    "/assets/images/product-detail.png",
-    "/assets/images/product-detail.png",
-    "/assets/images/product-detail.png"
-  ],
-  "thumbnail": "/assets/images/product-detail.png",
-  "price": 9999999,
-  "list_price": 11111110,
-  "discount_rate": 10,
   "detail": {
     "madeIn": "Vietnam",
     "size": "Small",

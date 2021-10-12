@@ -17,7 +17,7 @@ Page({
       });
 
       const subCategories = await getSubCategoriesAPI(
-        this.data.activatedCategory.id,
+        this.data.activatedCategory.id
       );
 
       this.setData({
@@ -65,8 +65,16 @@ Page({
     my.navigateTo({ url: 'pages/cart/index' });
   },
 
-  goToCategoryDetail() {
-    my.navigateTo({ url: 'pages/category-detail/index' });
+  onTapCategoryTitle(categoryName) {
+    my.navigateTo({
+      url: `pages/category-detail/index?category_name=${categoryName}`,
+    });
+  },
+
+  goToCategoryDetail(category) {
+    my.navigateTo({
+      url: `pages/category-detail/index?category_name=${category.name}`,
+    });
   },
 
   // Life cycle

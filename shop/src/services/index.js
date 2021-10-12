@@ -39,16 +39,10 @@ export const getNewProductsAPI = () => {
 };
 
 export const getDetailProduct = (productId) => {
-  const pdb = products.find((p) => p.id === productId);
-  const discount = pdb.discountRate
-    ? {
-        listPrice: pdb.price / ((100 - pdb.discountRate) / 100.0),
-      }
-    : {};
+  const pdb = products.find((p) => p.id == productId);
   const result = {
     ...product,
     ...pdb,
-    ...discount,
   };
   return request(result);
 };
@@ -132,12 +126,12 @@ export const filterSortProductsAPI = ({ filters, sort, search = '' }) => {
         break;
       case '2':
         result = result.filter(
-          (item) => item.price >= 100000 && item.price <= 200000,
+          (item) => item.price >= 100000 && item.price <= 200000
         );
         break;
       case '3':
         result = result.filter(
-          (item) => item.price >= 200000 && item.price <= 750000,
+          (item) => item.price >= 200000 && item.price <= 750000
         );
         break;
       case '4':
@@ -149,7 +143,7 @@ export const filterSortProductsAPI = ({ filters, sort, search = '' }) => {
     result = result.filter(
       (item) =>
         item.price >= filters.priceRange.start.value &&
-        item.price <= filters.priceRange.end.value,
+        item.price <= filters.priceRange.end.value
     );
 
   if (sort)

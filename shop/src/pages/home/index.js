@@ -66,6 +66,16 @@ Page({
     }
   },
 
+  goToCategory() {
+    my.navigateTo({ url: 'pages/category/index' });
+  },
+
+  goToCategoryDetail(category) {
+    my.navigateTo({
+      url: `pages/category-detail/index?category_name=${category.name}`,
+    });
+  },
+
   // Life cycle
   onReady() {
     this.loadData();

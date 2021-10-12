@@ -8,9 +8,8 @@
   />
 
   <view class="home-section">
-    <template
-      is="home-section-title"
-      data="{{title: 'Hot deals'}}"
+    <section-title
+      title="Hot deals"
     />
     <product-section
       type="horizontal"
@@ -23,9 +22,9 @@
   </view>
 
   <view class="home-section home-category">
-    <template
-      is="home-section-title"
-      data="{{title: 'Category'}}"
+    <section-title
+      title="Category"
+      onTapActionButton="goToCategory"
     />
     <carousel
       indicator-dots
@@ -41,15 +40,15 @@
           className="home-category-list"
           skeletons="{{8}}"
           categories="{{item}}"
+          onTapCategory="goToCategoryDetail"
         />
       </carousel-item>  
     </carousel>
   </view>
 
   <view class="home-section">
-    <template
-      is="home-section-title"
-      data="{{title: 'Featured'}}"
+    <section-title
+      title="Featured"
     />
     <product-section
       isLoading="{{isLoading}}"
@@ -60,9 +59,8 @@
   </view>
 
   <view class="home-section">
-    <template
-      is="home-section-title"
-      data="{{title: 'New'}}"
+    <section-title
+      title="New"
     />
     <product-section
       isLoading="{{isLoading}}"

@@ -1,5 +1,4 @@
 {
-  "defaultTitle": "Category detail",
   "backgroundColor": "#FFF",
   "usingComponents": {
     "product-section": "components/product-section/index",

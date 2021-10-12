@@ -6,6 +6,7 @@ import {
   getSortsAPI,
 } from '../../services/index';
 import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import queryString from 'query-string';
 
 Page({
   data: {
@@ -137,6 +138,13 @@ Page({
   },
 
   // Life cycle
+  onLoad(query) {
+    const { category_name = 'Category' } = queryString.parse(query);
+    my.setNavigationBar({
+      title: `${category_name} detail`,
+    });
+  },
+
   onShow() {
     loadBadgeCart();
   },

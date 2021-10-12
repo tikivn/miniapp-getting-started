@@ -1,6 +1,5 @@
 import {
   getCategoriesAPI,
-  getNewProductsAPI,
   getProductsByCategoryIdAPI,
   getFiltersAPI,
   getOtherProductsAPI,
