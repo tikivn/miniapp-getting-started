@@ -44,7 +44,7 @@
     <view class="p-medium bg-white">
       <product-section
         isLoading="{{isLoading}}"
-        skeletons="{{4}}"
+        skeletons="{{8}}"
         products="{{products}}"
         onTapProduct="onTapProduct"
       />

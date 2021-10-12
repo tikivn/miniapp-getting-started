@@ -52,7 +52,7 @@
           />
         </section>
       </view>
-      <view class="cart-footer bg-white w-full">
+      <view class="cart-footer bg-white w-full padding-inset-bottom">
         <view class="divider"/>
         <view
           class="flex justify-between items-center px-medium"

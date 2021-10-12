@@ -78,6 +78,7 @@
       skeletons="{{8}}"
       type="category-grid"
       categories="{{categories}}"
+      onTapCategory="goToCategoryDetail"
     />
   </view>
 

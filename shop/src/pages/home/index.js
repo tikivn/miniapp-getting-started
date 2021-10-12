@@ -79,7 +79,7 @@ Page({
   },
 
   onDone() {
-    setStorage('recent-search', false);
+    setStorage('first-open', false);
     my.showTabBar({
       animation: true,
     });

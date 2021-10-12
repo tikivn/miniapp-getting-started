@@ -4,7 +4,7 @@
     content="{{selectedSort.label ? selectedSort.label : 'Sort'}}"
     prefixImage="/assets/icons/sort-active.svg"
     onClick="_onShow"
-    onLeftClick="_onClick"
+    onLeftClick="_onShow"
   />
   <block tiki:if="{{isShow}}">
     <bottom-sheet
@@ -21,7 +21,7 @@
 </view>
 
 <template name="sort-content">
-  <view class="px-medium">
+  <view class="padding-inset-bottom px-medium">
     <view
       tiki:for="{{sorts}}"
       tiki:key="value"

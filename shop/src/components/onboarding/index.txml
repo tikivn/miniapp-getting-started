@@ -1,6 +1,7 @@
 <view style="height: 100vh;" class="{{className}} bg-white">
   <carousel
     indicator-dots
+    duration="{{800}}"
     current="{{current}}"
     onChange="_onChange"
     class="onboarding"
@@ -22,7 +23,7 @@
   </carousel>
   <view 
     tiki:if="{{current !== tips.length - 1}}"
-    class="footer-onboard w-full flex justify-between p-medium">
+    class="footer-onboard w-full flex justify-between px-medium pt-medium">
     <view 
       onTap="_onSkip"
       class="text-medium px-small py-2x-small">Skip</view>
@@ -30,7 +31,7 @@
       onTap="_onNext"
       class="text-medium px-small py-2x-small text-blue">Next</view>
   </view>
-  <view tiki:else class="footer-onboard w-full px-medium py-2x-small">
+  <view tiki:else class="footer-onboard w-full px-medium pt-2x-small">
     <button
       class="w-full"
       shape="pill"

@@ -188,6 +188,12 @@ Page({
     my.navigateTo({ url: 'pages/cart/index' });
   },
 
+  goToCategoryDetail(category) {
+    my.navigateTo({
+      url: `pages/category-detail/index?category_name=${category.name}`,
+    });
+  },
+
   // Life cycle
   onShow() {
     loadBadgeCart();
