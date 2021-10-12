@@ -80,6 +80,7 @@
       onClick="_onClick"
       title="Select option"
       buttonTitle="Done"
+      buttonShape="pill"
       distanceFromTop="{{100}}">
       <template
         is="bottom-sheet-option"

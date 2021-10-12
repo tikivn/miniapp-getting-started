@@ -16,7 +16,7 @@ export const loadBadgeCart = () => {
   my.addIconsToNavigationBar({
     icons: [
       {
-        image: '/assets/icons/ic-cart.svg',
+        image: '/assets/images/ic-cart.png',
         width: orderedProducts.length ? 48 : 24,
         height: 24,
         badge: `${orderedProducts.length}`,
