@@ -1,7 +1,7 @@
 <view class="sort {{className}}">
   <chip
     active
-    content="{{selectedSort.label}}"
+    content="{{selectedSort.label ? selectedSort.label : 'Sort'}}"
     prefixImage="/assets/icons/sort-active.svg"
     onClick="_onShow"
     onLeftClick="_onClick"

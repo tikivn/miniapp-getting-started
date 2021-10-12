@@ -2,10 +2,6 @@
   <onboarding onDone="onDone" />
 </view>
 
-<view tiki:if="{{isFirstOpen}}">
-  <onboarding onDone="onDone" />
-</view>
-
 <view tiki:else>
   <banners
     class="home-banners"
