@@ -21,23 +21,25 @@
       </view>
     </carousel-item> 
   </carousel>
-  <view 
-    tiki:if="{{current !== tips.length - 1}}"
-    class="footer-onboard w-full flex justify-between px-medium pt-medium">
+  <view class="footer-onboard padding-inset-bottom pb-medium w-full">
     <view 
-      onTap="_onSkip"
-      class="text-medium px-small py-2x-small">Skip</view>
-    <view 
-      onTap="_onNext"
-      class="text-medium px-small py-2x-small text-blue">Next</view>
-  </view>
-  <view tiki:else class="footer-onboard w-full px-medium pt-2x-small">
-    <button
-      class="w-full"
-      shape="pill"
-      onTap="_onDone"
-    >
-      Done
-    </button>
+      tiki:if="{{current !== tips.length - 1}}"
+      class="w-full flex justify-between p-medium">
+      <view 
+        onTap="_onSkip"
+        class="text-medium px-small py-2x-small">Skip</view>
+      <view 
+        onTap="_onNext"
+        class="text-medium px-small py-2x-small text-blue">Next</view>
+    </view>
+    <view tiki:else class="w-full px-medium py-2x-small">
+      <button
+        class="w-full"
+        shape="pill"
+        onTap="_onDone"
+      >
+        Done
+      </button>
+    </view>
   </view>
 </view>

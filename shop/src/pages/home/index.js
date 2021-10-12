@@ -78,8 +78,8 @@ Page({
     });
   },
 
-  onDone() {
-    setStorage('first-open', false);
+  async onDone() {
+    await setStorage('first-open', false);
     my.showTabBar({
       animation: true,
     });
@@ -104,14 +104,20 @@ Page({
     } else {
       this.loadData();
     }
+    this.setData({
+      isFirstOpen,
+    });
   },
 
   async onShow() {
     const value = await getStorage('first-open');
     const isFirstOpen = value === undefined ? true : value;
     if (!isFirstOpen) {
-      this.loadBadgeCart();
+      loadBadgeCart();
     }
+    this.setData({
+      isFirstOpen,
+    });
   },
 
   async onPullDownRefresh() {

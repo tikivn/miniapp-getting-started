@@ -90,7 +90,7 @@ Page({
   },
 
   onRemoveCoupon() {
-    app.removeCoupon(code);
+    app.removeCoupon();
   },
 
   onRemoveProduct(product) {
