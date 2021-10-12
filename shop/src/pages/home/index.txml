@@ -2,6 +2,10 @@
   <onboarding onDone="onDone" />
 </view>
 
+<view tiki:if="{{isFirstOpen}}">
+  <onboarding onDone="onDone" />
+</view>
+
 <view tiki:else>
   <banners
     class="home-banners"
@@ -30,6 +34,8 @@
     />
     <carousel
       indicator-dots
+      duration="{{400}}"
+      interval="{{5000}}"
       class="home-category-carousel"
       active-class="home-category-carousel-active"
     > 

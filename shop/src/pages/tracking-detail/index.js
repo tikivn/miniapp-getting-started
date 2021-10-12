@@ -16,7 +16,7 @@ Page({
 
       this.setData({
         trackingSteps,
-        isLoading: false
+        isLoading: false,
       });
     } catch (error) {
       this.setData({

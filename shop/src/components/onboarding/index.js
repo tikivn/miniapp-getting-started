@@ -13,7 +13,7 @@ Component({
       {
         title: 'Title',
         description: 'Description',
-        image: '/assets/images/onboard.png',
+        image: '/assets/images/onboard-2.png',
       },
       {
         title: 'Title',
@@ -23,7 +23,7 @@ Component({
       {
         title: 'Title',
         description: 'Description',
-        image: '/assets/images/onboard.png',
+        image: '/assets/images/onboard-2.png',
       },
     ],
     onDone: () => {},

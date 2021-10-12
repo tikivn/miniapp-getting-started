@@ -3,6 +3,8 @@
     autoplay
     indicator-dots
     circular
+    duration="{{400}}"
+    interval="{{5000}}"
     class="banners"
   > 
     <block tiki:if="{{isLoading}}">

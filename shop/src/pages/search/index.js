@@ -86,7 +86,11 @@ Page({
 
   async onInput(searchTerm) {
     const recentSearch = await getStorage('recent-search');
-    const keys = searchTerm === '' ? { recentKeys: recentSearch } : {};
+    const keys =
+      searchTerm === ''
+        ? { recentKeys: recentSearch, isLoading: false }
+        : { isLoading: true };
+
     this.setData({
       searchTerm,
       ...keys,
