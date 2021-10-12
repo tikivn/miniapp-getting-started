@@ -8,10 +8,12 @@ import {
 } from '../../services/index';
 import { group } from '../../utils/common';
 import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import { getStorage, setStorage } from '../../utils/storage';
 
 Page({
   data: {
     isLoading: true,
+    isFirstOpen: true,
     shop: {},
     categories: [],
     featuredProducts: [],
@@ -76,13 +78,40 @@ Page({
     });
   },
 
-  // Life cycle
-  onReady() {
+  onDone() {
+    setStorage('recent-search', false);
+    my.showTabBar({
+      animation: true,
+    });
+    my.setNavigationBar({
+      title: 'Shop Name',
+    });
+    loadBadgeCart();
+    this.setData({
+      isFirstOpen: false,
+    });
     this.loadData();
   },
 
-  onShow() {
-    loadBadgeCart();
+  // Life cycle
+  async onReady() {
+    const value = await getStorage('first-open');
+    const isFirstOpen = value === undefined ? true : value;
+    if (isFirstOpen) {
+      my.hideTabBar({
+        animation: true,
+      });
+    } else {
+      this.loadData();
+    }
+  },
+
+  async onShow() {
+    const value = await getStorage('first-open');
+    const isFirstOpen = value === undefined ? true : value;
+    if (!isFirstOpen) {
+      this.loadBadgeCart();
+    }
   },
 
   async onPullDownRefresh() {

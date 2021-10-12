@@ -43,6 +43,7 @@
         </view>
 
         <filtered-list
+          className="filter-list-search"
           selectedFilters="{{selectedFilters}}"
           onRemoveFilter="removeFilter"
         />

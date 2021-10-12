@@ -1,9 +1,8 @@
 export const navigateToPDP = (productId, onAction) => {
   const pages = getCurrentPages();
-  const app = getApp();
   if (
     pages.length >= 2 &&
-    pages[pages.length - 2].route === 'pages/detail/index'
+    pages[pages.length - 1].route === 'pages/detail/index'
   ) {
     onAction && onAction(productId);
   } else {

@@ -188,8 +188,8 @@ Page({
       app.cartEvent.on(EMITTERS.CART_UPDATE, (cart) =>
         this.setData({
           cart,
-        })
-      )
+        }),
+      ),
     );
   },
 

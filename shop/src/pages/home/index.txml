@@ -1,6 +1,8 @@
-<import src="./section-title.txml"/>
+<view tiki:if="{{isFirstOpen}}">
+  <onboarding onDone="onDone" />
+</view>
 
-<view>
+<view tiki:else>
   <banners
     class="home-banners"
     isLoading="{{isLoading}}"

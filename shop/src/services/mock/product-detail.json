@@ -11,22 +11,22 @@
   "colors": [
     {
       "id": 1,
-      "image": "/assets/images/circle.png",
+      "image": "/assets/images/circle-blue.png",
       "color": "Light Blue"
     },
     {
       "id": 2,
-      "image": "/assets/images/circle.png",
+      "image": "/assets/images/circle-white.png",
       "color": "White"
     },
     {
       "id": 3,
-      "image": "/assets/images/circle.png",
-      "color": "Orange"
+      "image": "/assets/images/circle-gray.png",
+      "color": "Gray Blue"
     },
     {
       "id": 4,
-      "image": "/assets/images/circle.png",
+      "image": "/assets/images/circle-brown.png",
       "color": "Brown"
     }
   ],
