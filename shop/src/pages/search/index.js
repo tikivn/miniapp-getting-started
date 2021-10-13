@@ -7,7 +7,11 @@ import {
   getSortsAPI,
 } from '../../services/index';
 import { getStorage, setStorage } from '../../utils/storage';
-import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import {
+  navigateToPDP,
+  loadBadgeCart,
+  navigateWithParams,
+} from '../../utils/navigate';
 
 Page({
   data: {
@@ -189,8 +193,9 @@ Page({
   },
 
   goToCategoryDetail(category) {
-    my.navigateTo({
-      url: `pages/category-detail/index?category_name=${category.name}`,
+    navigateWithParams({
+      page: 'category-detail',
+      params: { category_name: category.name },
     });
   },
 

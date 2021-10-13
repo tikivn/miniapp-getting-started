@@ -1,5 +1,5 @@
 import { getCategoriesAPI, getSubCategoriesAPI } from '../../services/index';
-import { loadBadgeCart } from '../../utils/navigate';
+import { loadBadgeCart, navigateWithParams } from '../../utils/navigate';
 
 Page({
   data: {
@@ -65,15 +65,14 @@ Page({
     my.navigateTo({ url: 'pages/cart/index' });
   },
 
-  onTapCategoryTitle(categoryName) {
-    my.navigateTo({
-      url: `pages/category-detail/index?category_name=${categoryName}`,
-    });
+  onTapCategoryTitle(category_name) {
+    navigateWithParams({ page: 'category-detail', params: { category_name } });
   },
 
   goToCategoryDetail(category) {
-    my.navigateTo({
-      url: `pages/category-detail/index?category_name=${category.name}`,
+    navigateWithParams({
+      page: 'category-detail',
+      params: { category_name: category.name },
     });
   },
 

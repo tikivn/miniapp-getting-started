@@ -7,7 +7,11 @@ import {
   getHotDealProductsAPI,
 } from '../../services/index';
 import { group } from '../../utils/common';
-import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import {
+  navigateToPDP,
+  loadBadgeCart,
+  navigateWithParams,
+} from '../../utils/navigate';
 import { getStorage, setStorage } from '../../utils/storage';
 
 Page({
@@ -73,8 +77,9 @@ Page({
   },
 
   goToCategoryDetail(category) {
-    my.navigateTo({
-      url: `pages/category-detail/index?category_name=${category.name}`,
+    navigateWithParams({
+      page: 'category-detail',
+      params: { category_name: category.name },
     });
   },
 
