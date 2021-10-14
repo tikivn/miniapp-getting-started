@@ -11,11 +11,14 @@
       <view class="px-medium text-medium font-bold mb-small">Recent search</view>
       <view 
         tiki:for="{{recentKeys}}"
-        class="px-medium flex justify-between py-2x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}">
-        <view data-key="{{item}}" onTap="onClickKeySearch">
+        class="px-medium flex justify-between py-2x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}"
+        data-key="{{item}}"
+        onTap="onClickKeySearch"
+      >
+        <view>
           {{item}}
         </view>
-        <view data-item="{{item}}" onTap="removeKeySearch">
+        <view data-item="{{item}}" catchTap="removeKeySearch">
           <icon type="close" color="#808089"/>
         </view>
       </view>

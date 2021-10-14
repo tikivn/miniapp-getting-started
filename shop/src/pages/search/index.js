@@ -127,6 +127,7 @@ Page({
     const { key } = event.target.dataset;
     this.setData({
       searchTerm: key,
+      isLoading: true,
     });
   },
 

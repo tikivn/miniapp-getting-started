@@ -83,14 +83,18 @@ Page({
     });
   },
 
+  setTitle() {
+    my.setNavigationBar({
+      title: 'Shop Name',
+    });
+  },
+
   async onDone() {
     await setStorage('first-open', false);
     my.showTabBar({
       animation: true,
     });
-    my.setNavigationBar({
-      title: 'Shop Name',
-    });
+    this.setTitle();
     loadBadgeCart();
     this.setData({
       isFirstOpen: false,
@@ -108,6 +112,7 @@ Page({
       });
     } else {
       this.loadData();
+      this.setTitle();
     }
     this.setData({
       isFirstOpen,
@@ -119,6 +124,7 @@ Page({
     const isFirstOpen = value === undefined ? true : value;
     if (!isFirstOpen) {
       loadBadgeCart();
+      this.setTitle();
     }
     this.setData({
       isFirstOpen,
