@@ -6,5 +6,6 @@
   position: fixed;
   background: var(--white);
   bottom: 0;
-  padding-bottom: var(--safe-area-inset-bottom);
+  left: 0;
+  padding-bottom: calc(16px + var(--safe-area-inset-bottom));
 }

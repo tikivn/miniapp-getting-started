@@ -3,7 +3,7 @@
   "version": "0.1.3",
   "tiki": {
     "appIdentifier": "vn.tiki.tinishop",
-    "buildNumber": 1
+    "buildNumber": 3
   },
   "dependencies": {
     "@tiki.vn/tini-ui": "0.2.1-rc.3",

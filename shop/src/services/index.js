@@ -144,9 +144,9 @@ export const filterSortProductsAPI = async ({ filters, sort, search = '' }) => {
         result.sort((a, b) => b.price - a.price);
         break;
     }
-  let finalResults = result;
-  if (search) finalResults = result.filter((p) => p.name.includes(search));
-  return finalResults;
+
+  if (search) result = result.filter((p) => p.name.includes(search));
+  return result;
 };
 
 export const getOtherProductsAPI = () => {
