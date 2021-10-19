@@ -57,11 +57,6 @@ App({
       total,
     };
 
-    my.setTabBarBadge({
-      index: 1,
-      text: this.cart.orderedProducts.length,
-    });
-
     this.cartEvent.emit(EMITTERS.CART_UPDATE, this.cart);
   },
 

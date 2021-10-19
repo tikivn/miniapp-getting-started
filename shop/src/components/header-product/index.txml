@@ -22,7 +22,7 @@
       </view>
     </view>
     <view class="text-gray60 line-through mb-medium">
-      {{moneyFormatter(product.listPrice)}}
+      {{product.discountRate ? moneyFormatter(product.listPrice) : ''}}
     </view>
   </view>
 </template>

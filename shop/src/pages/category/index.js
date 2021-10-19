@@ -1,4 +1,5 @@
 import { getCategoriesAPI, getSubCategoriesAPI } from '../../services/index';
+import { loadBadgeCart } from '../../utils/navigate';
 
 Page({
   data: {
@@ -16,7 +17,7 @@ Page({
       });
 
       const subCategories = await getSubCategoriesAPI(
-        this.data.activatedCategory.id
+        this.data.activatedCategory.id,
       );
 
       this.setData({
@@ -60,11 +61,19 @@ Page({
     this.loadSubCategories();
   },
 
+  onCustomIconEvent(e) {
+    my.navigateTo({ url: 'pages/cart/index' });
+  },
+
   goToCategoryDetail() {
     my.navigateTo({ url: 'pages/category-detail/index' });
   },
 
   // Life cycle
+  onShow() {
+    loadBadgeCart();
+  },
+
   onReady() {
     this.loadData();
   },

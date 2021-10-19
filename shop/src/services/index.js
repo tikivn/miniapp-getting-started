@@ -37,8 +37,19 @@ export const getNewProductsAPI = () => {
   return request(newProducts);
 };
 
-export const getDetailProduct = () => {
-  return request(product);
+export const getDetailProduct = (productId) => {
+  const pdb = products.find((p) => p.id === productId);
+  const discount = pdb.discountRate
+    ? {
+        listPrice: pdb.price / ((100 - pdb.discountRate) / 100.0),
+      }
+    : {};
+  const result = {
+    ...product,
+    ...pdb,
+    ...discount,
+  };
+  return request(result);
 };
 
 export const getUserInfo = () => {
@@ -110,7 +121,7 @@ export const getSortsAPI = () => {
   return request(sorts);
 };
 
-export const filterSortProductsAPI = ({ filters, sort }) => {
+export const filterSortProductsAPI = ({ filters, sort, search = '' }) => {
   let result = [...products];
 
   if (filters.priceOption)
@@ -120,12 +131,12 @@ export const filterSortProductsAPI = ({ filters, sort }) => {
         break;
       case '2':
         result = result.filter(
-          (item) => item.price >= 100000 && item.price <= 200000
+          (item) => item.price >= 100000 && item.price <= 200000,
         );
         break;
       case '3':
         result = result.filter(
-          (item) => item.price >= 200000 && item.price <= 750000
+          (item) => item.price >= 200000 && item.price <= 750000,
         );
         break;
       case '4':
@@ -137,7 +148,7 @@ export const filterSortProductsAPI = ({ filters, sort }) => {
     result = result.filter(
       (item) =>
         item.price >= filters.priceRange.start.value &&
-        item.price <= filters.priceRange.end.value
+        item.price <= filters.priceRange.end.value,
     );
 
   if (sort)
@@ -154,8 +165,9 @@ export const filterSortProductsAPI = ({ filters, sort }) => {
         result.sort((a, b) => b.price - a.price);
         break;
     }
-
-  return request(result);
+  let finalResults = result;
+  if (search) finalResults = result.filter((p) => p.name.includes(search));
+  return request(finalResults);
 };
 
 export const getOtherProductsAPI = () => {

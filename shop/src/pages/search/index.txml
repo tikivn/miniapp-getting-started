@@ -1,0 +1,95 @@
+<view>
+  <view class="bg-white">
+    <view class="px-medium pb-2x-small">
+      <search-bar
+        value="{{searchTerm}}"
+        onSearch="onSearch"
+        onInput="onInput"
+      />
+    </view> 
+    <view tiki:if="{{!searchTerm && recentKeys.length}}" class="py-medium my-2x-small">
+      <view class="px-medium text-medium font-bold mb-small">Recent search</view>
+      <view 
+        tiki:for="{{recentKeys}}"
+        class="px-medium flex justify-between py-2x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}">
+        <view data-key="{{item}}" onTap="onClickKeySearch">
+          {{item}}
+        </view>
+        <view data-item="{{item}}" onTap="removeKeySearch">
+          <icon type="close" color="#808089"/>
+        </view>
+      </view>
+    </view>
+
+    <view tiki:if="{{searchTerm}}" class="py-medium mb-2x-small mt-4x-small">
+      <view class="px-medium mb-2x-small">
+        <view class="flex justify-between bg-white mb-small">
+          <filter
+            isShow="{{isShowFilter}}"
+            onShow="showFilter"
+            onClose="hideFilter"
+            filters="{{filters}}"
+            selectedFilters="{{selectedFilters}}"
+            onSelect="onSelectFilter"
+          />
+          <sort
+            isShow="{{isShowSort}}"
+            onClose="hideSort"
+            onShow="showSort"
+            sorts="{{sorts}}"
+            selectedSort="{{selectedSort}}"
+            onSelect="onSelectSort"
+          />
+        </view>
+
+        <filtered-list
+          className="filter-list-search"
+          selectedFilters="{{selectedFilters}}"
+          onRemoveFilter="removeFilter"
+        />
+
+        <empty
+          tiki:if="{{!products.length && !isLoading}}"
+          className="pt-large mt-4x-small"
+          title="No result!"
+          description="Please try another search keywords"
+        />
+
+        <product-section
+          tiki:else
+          className="pt-medium"
+          isLoading="{{isLoading}}"
+          skeletons="{{4}}"
+          products="{{products}}"
+          onTapProduct="onTapProduct"
+        />
+      </view>
+    </view>
+  </view>
+
+
+  <view 
+    tiki:if="{{!searchTerm}}"
+    class="py-medium bg-white mb-2x-small">
+    <view class="px-medium pb-small text-medium font-bold">Popular category</view>
+    <category-section
+      isLoading="{{isLoading}}"
+      className="search-category-list"
+      skeletons="{{8}}"
+      type="category-grid"
+      categories="{{categories}}"
+    />
+  </view>
+
+  <view 
+    tiki:if="{{!searchTerm || !products.length}}"
+    class="p-medium bg-white mb-2x-small">
+    <view class="mb-small font-bold text-medium">{{!searchTerm ? 'Popular' : 'Similar'}} products</view>
+    <product-section
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{otherProducts}}"
+      onTapProduct="onTapProduct"
+    />
+  </view>
+</view>

@@ -1,0 +1,11 @@
+.tips-item {
+  height: 85vh;
+}
+
+.footer-onboard {
+  position: fixed;
+  background: var(--white);
+  bottom: 0;
+  left: 0;
+  padding-bottom: calc(16px + var(--safe-area-inset-bottom));
+}
