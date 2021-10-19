@@ -35,18 +35,10 @@ export const loadBadgeCart = () => {
 };
 
 export const navigateWithParams = ({ page, params = null }) => {
-  let formattedParams = null;
-  if (params) {
-    formattedParams = Object.entries(params).reduce((acc, [key, value]) => {
-      acc[key] = encodeURIComponent(value);
-      return acc;
-    }, {});
-  }
-
   my.navigateTo({
     url: `${queryString.stringifyUrl({
       url: `pages/${page}/index`,
-      query: formattedParams,
+      query: params,
     })}`,
   });
 };

@@ -90,7 +90,6 @@ Page({
   },
 
   async onDone() {
-    await setStorage('first-open', false);
     my.showTabBar({
       animation: true,
     });
@@ -100,6 +99,7 @@ Page({
       isFirstOpen: false,
     });
     this.loadData();
+    await setStorage('first-open', false);
   },
 
   // Life cycle
