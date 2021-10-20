@@ -32,6 +32,7 @@
     "pages/api/compress-image/index",
     "pages/api/save-image/index",
     "pages/api/get-image-info/index",
+    "pages/api/preview-image/index",
     "pages/api/is-user-logged/index",
     "pages/api/get-location/index",
     "pages/api/update-client/index",

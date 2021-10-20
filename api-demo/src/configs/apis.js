@@ -102,6 +102,10 @@ const mediaImageAPIList = [
     name: 'Get Image Info',
     path: '/pages/api/get-image-info/index',
   },
+  {
+    name: 'Preview Image',
+    path: '/pages/api/preview-image/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const mediaVideoAPIList = [

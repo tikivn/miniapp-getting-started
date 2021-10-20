@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "my.previewImage",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
