@@ -1,5 +1,5 @@
 import { getCategoriesAPI, getSubCategoriesAPI } from '../../services/index';
-import { loadBadgeCart } from '../../utils/navigate';
+import { loadBadgeCart, navigateWithParams } from '../../utils/navigate';
 
 Page({
   data: {
@@ -17,7 +17,7 @@ Page({
       });
 
       const subCategories = await getSubCategoriesAPI(
-        this.data.activatedCategory.id,
+        this.data.activatedCategory.id
       );
 
       this.setData({
@@ -65,8 +65,15 @@ Page({
     my.navigateTo({ url: 'pages/cart/index' });
   },
 
-  goToCategoryDetail() {
-    my.navigateTo({ url: 'pages/category-detail/index' });
+  onTapCategoryTitle(category_name) {
+    navigateWithParams({ page: 'category-detail', params: { category_name } });
+  },
+
+  goToCategoryDetail(category) {
+    navigateWithParams({
+      page: 'category-detail',
+      params: { category_name: category.name },
+    });
   },
 
   // Life cycle

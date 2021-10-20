@@ -1,4 +1,4 @@
-import { getDetailProduct, getNewProductsAPI } from '../../services/index';
+import { getDetailProduct, getRelativeProductsAPI } from '../../services/index';
 import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
 import queryString from 'query-string';
 
@@ -11,7 +11,7 @@ Page({
     isLoading: true,
     product_id: '',
     product: {},
-    newProducts: [],
+    relativeProducts: [],
     type: 'color',
     colorSelected: {
       id: '',
@@ -121,14 +121,14 @@ Page({
     });
 
     try {
-      const [product, newProducts] = await Promise.all([
+      const [product, relativeProducts] = await Promise.all([
         getDetailProduct(this.data.product_id),
-        getNewProductsAPI(),
+        getRelativeProductsAPI(),
       ]);
 
       this.setData({
         product,
-        newProducts,
+        relativeProducts,
         isLoading: false,
         colorSelected: product.colors[0],
         sizeSelected: product.sizes[0],

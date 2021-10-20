@@ -7,7 +7,11 @@ import {
   getHotDealProductsAPI,
 } from '../../services/index';
 import { group } from '../../utils/common';
-import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import {
+  navigateToPDP,
+  loadBadgeCart,
+  navigateWithParams,
+} from '../../utils/navigate';
 import { getStorage, setStorage } from '../../utils/storage';
 
 Page({
@@ -68,19 +72,34 @@ Page({
     }
   },
 
-  onDone() {
-    setStorage('recent-search', false);
-    my.showTabBar({
-      animation: true,
+  goToCategory() {
+    my.navigateTo({ url: 'pages/category/index' });
+  },
+
+  goToCategoryDetail(category) {
+    navigateWithParams({
+      page: 'category-detail',
+      params: { category_name: category.name },
     });
+  },
+
+  setTitle() {
     my.setNavigationBar({
       title: 'Shop Name',
     });
+  },
+
+  async onDone() {
+    my.showTabBar({
+      animation: true,
+    });
+    this.setTitle();
     loadBadgeCart();
     this.setData({
       isFirstOpen: false,
     });
     this.loadData();
+    await setStorage('first-open', false);
   },
 
   // Life cycle
@@ -93,15 +112,23 @@ Page({
       });
     } else {
       this.loadData();
+      this.setTitle();
     }
+    this.setData({
+      isFirstOpen,
+    });
   },
 
   async onShow() {
     const value = await getStorage('first-open');
     const isFirstOpen = value === undefined ? true : value;
     if (!isFirstOpen) {
-      this.loadBadgeCart();
+      loadBadgeCart();
+      this.setTitle();
     }
+    this.setData({
+      isFirstOpen,
+    });
   },
 
   async onPullDownRefresh() {

@@ -9,7 +9,7 @@
 }
 
 .cart-footer-padding {
-  padding-bottom: 96px;
+  padding-bottom: calc(96px + var(--safe-area-inset-bottom));
 }
 
 .cart-remove-btn {

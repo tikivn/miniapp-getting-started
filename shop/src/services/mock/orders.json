@@ -2,7 +2,7 @@
   {
     "status": "delivered",
     "product": {
-      "image": "/assets/images/product.png",
+      "thumbnail": "/assets/images/product.png",
       "name": "Product name",
       "total": 2,
       "price": 20014998
@@ -12,7 +12,7 @@
   {
     "status": "shipping",
     "product": {
-      "image": "/assets/images/product.png",
+      "thumbnail": "/assets/images/product.png",
       "name": "Product name",
       "total": 2,
       "price": 20014998
@@ -22,7 +22,7 @@
   {
     "status": "processing",
     "product": {
-      "image": "/assets/images/product.png",
+      "thumbnail": "/assets/images/product.png",
       "name": "Product name",
       "total": 2,
       "price": 20014998
@@ -32,7 +32,7 @@
   {
     "status": "waiting",
     "product": {
-      "image": "/assets/images/product.png",
+      "thumbnail": "/assets/images/product.png",
       "name": "Product name",
       "total": 2,
       "price": 20014998
@@ -42,7 +42,7 @@
   {
     "status": "canceled",
     "product": {
-      "image": "/assets/images/product.png",
+      "thumbnail": "/assets/images/product.png",
       "name": "Product name",
       "total": 2,
       "price": 20014998

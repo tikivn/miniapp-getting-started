@@ -1,76 +1,53 @@
-import request from './request';
-import shop from './mock/shop.json';
-import categories from './mock/categories.json';
-import featuredProducts from './mock/featured-products.json';
-import newProducts from './mock/new-products.json';
-import product from './mock/product-detail.json';
-import user from './mock/user.json';
-import numOrders from './mock/numOrders.json';
-import orders from './mock/orders.json';
-import cart from './mock/cart.json';
-import coupons from './mock/coupons.json';
-import order from './mock/order-detail.json';
-import tracking from './mock/tracking-detail.json';
-import point from './mock/my-point.json';
-import banners from './mock/banners.json';
-import hotDealProducts from './mock/hot-deal-products.json';
-import subCategories from './mock/sub-categories.json';
-import popularProducts from './mock/popular-products.json';
-import products from './mock/products.json';
-import otherProducts from './mock/other-products.json';
-import filters from './mock/filters.json';
-import sorts from './mock/sorts.json';
+import request, { fakeRequest } from './request';
 
 export const getShopInfoAPI = () => {
-  return request(shop);
+  return request({ path: '/shop' });
 };
 
 export const getCategoriesAPI = () => {
-  return request(categories);
+  return request({ path: '/categories' });
 };
 
 export const getFeaturedProductsAPI = () => {
-  return request(featuredProducts);
+  return request({ path: '/featured-products' });
 };
 
 export const getNewProductsAPI = () => {
-  return request(newProducts);
+  return request({ path: '/new-products' });
 };
 
-export const getDetailProduct = (productId) => {
-  const pdb = products.find((p) => p.id === productId);
-  const discount = pdb.discountRate
-    ? {
-        listPrice: pdb.price / ((100 - pdb.discountRate) / 100.0),
-      }
-    : {};
+export const getDetailProduct = async (productId) => {
+  const [products, productDetail] = await Promise.all([
+    request({ path: '/products' }),
+    request({ path: '/product-detail' }),
+  ]);
+  const pdb = products.find((p) => p.id == productId);
   const result = {
-    ...product,
+    ...productDetail,
     ...pdb,
-    ...discount,
   };
-  return request(result);
+  return result;
 };
 
 export const getUserInfo = () => {
-  return request(user);
+  return request({ path: '/user' });
 };
 
 export const getNumOrders = () => {
-  return request(numOrders);
+  return request({ path: '/num-orders' });
 };
 
 export const getOrders = () => {
-  return request(orders);
+  return request({ path: '/orders' });
 };
 
 export const getCouponsAPI = () => {
-  return request(coupons);
+  return request({ path: '/coupons' });
 };
 
 export const getCouponFromCodeAPI = (code) => {
   const isValid = Math.random() <= 0.7;
-  return request({
+  return fakeRequest({
     name: `${code} - Random value`,
     discount: isValid ? +((Math.random() * 100).toFixed(0) * 1000) : 0,
     isValid,
@@ -78,50 +55,52 @@ export const getCouponFromCodeAPI = (code) => {
 };
 
 export const getCartAPI = () => {
-  return request(cart);
+  return request({ path: '/cart' });
 };
 
 export const getOrderDetail = () => {
-  return request(order);
+  return request({ path: '/order-detail' });
 };
 
 export const getTrackingDetail = () => {
-  return request(tracking);
+  return request({ path: '/tracking-detail' });
 };
 
 export const getMyPoint = () => {
-  return request(point);
+  return request({ path: '/my-point' });
 };
 
 export const getBannersAPI = () => {
-  return request(banners);
+  return request({ path: '/banners' });
 };
 
 export const getHotDealProductsAPI = () => {
-  return request(hotDealProducts);
+  return request({ path: '/hot-deal-products' });
 };
 
-export const getSubCategoriesAPI = (id) => {
-  return request(subCategories[id]);
+export const getSubCategoriesAPI = async (id) => {
+  const subCategories = await request({ path: '/sub-categories' });
+  return subCategories[id];
 };
 
 export const getPopularProductsAPI = () => {
-  return request(popularProducts);
+  return request({ path: '/popular-products' });
 };
 
-export const getProductsByCategoryIdAPI = (categoryId) => {
-  return request(products);
+export const getProductsByCategoryIdAPI = () => {
+  return request({ path: '/products' });
 };
 
 export const getFiltersAPI = () => {
-  return request(filters);
+  return request({ path: '/filters' });
 };
 
 export const getSortsAPI = () => {
-  return request(sorts);
+  return request({ path: '/sorts' });
 };
 
-export const filterSortProductsAPI = ({ filters, sort, search = '' }) => {
+export const filterSortProductsAPI = async ({ filters, sort, search = '' }) => {
+  const products = await request({ path: '/products' });
   let result = [...products];
 
   if (filters.priceOption)
@@ -131,12 +110,12 @@ export const filterSortProductsAPI = ({ filters, sort, search = '' }) => {
         break;
       case '2':
         result = result.filter(
-          (item) => item.price >= 100000 && item.price <= 200000,
+          (item) => item.price >= 100000 && item.price <= 200000
         );
         break;
       case '3':
         result = result.filter(
-          (item) => item.price >= 200000 && item.price <= 750000,
+          (item) => item.price >= 200000 && item.price <= 750000
         );
         break;
       case '4':
@@ -148,7 +127,7 @@ export const filterSortProductsAPI = ({ filters, sort, search = '' }) => {
     result = result.filter(
       (item) =>
         item.price >= filters.priceRange.start.value &&
-        item.price <= filters.priceRange.end.value,
+        item.price <= filters.priceRange.end.value
     );
 
   if (sort)
@@ -165,11 +144,15 @@ export const filterSortProductsAPI = ({ filters, sort, search = '' }) => {
         result.sort((a, b) => b.price - a.price);
         break;
     }
-  let finalResults = result;
-  if (search) finalResults = result.filter((p) => p.name.includes(search));
-  return request(finalResults);
+
+  if (search) result = result.filter((p) => p.name.includes(search));
+  return result;
 };
 
 export const getOtherProductsAPI = () => {
-  return request(otherProducts);
+  return request({ path: '/other-products' });
+};
+
+export const getRelativeProductsAPI = () => {
+  return request({ path: '/relative-products' });
 };

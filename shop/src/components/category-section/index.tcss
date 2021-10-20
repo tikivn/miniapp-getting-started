@@ -6,6 +6,6 @@
 
 .category-grid-layout .category-grid {
   --grid-item-width: calc(100vw / 4);
-  --grid-item-image-with: calc(var(--grid-item-width) - 12vw);
+  --grid-item-image-with: calc(var(--grid-item-width) - 9vw);
   padding: 0 8px;
 }

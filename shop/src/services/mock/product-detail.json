@@ -1,13 +1,4 @@
 {
-  "id": "1",
-  "name": "Product title",
-  "images": [
-    "/assets/images/product-detail.png",
-    "/assets/images/product-detail.png",
-    "/assets/images/product-detail.png",
-    "/assets/images/product-detail.png"
-  ],
-  "thumbnail": "/assets/images/product-detail.png",
   "detail": {
     "madeIn": "Vietnam",
     "size": "Small",

@@ -3,8 +3,8 @@
   "date": "16:24, 21/05/2021",
   "status": "delivered",
   "price": 9999999,
-  "listPrice": 11111110,
-  "discountRate": 10,
+  "list_price": 11111110,
+  "discount_rate": 10,
   "tracking": {
     "id": 1,
     "delivery": "Giaohangnhanh",

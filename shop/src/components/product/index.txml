@@ -12,7 +12,7 @@
   >
     <image
       class="radius-8px mb-2x-small radius-8px"
-      src="{{product.image}}"
+      src="{{product.thumbnail}}"
     />
     <text
       class="mb-4x-small"
@@ -28,17 +28,11 @@
         {{moneyFormatter(product.price)}}
       </text>
       <view
-        tiki:if="{{product.discountRate}}"
+        tiki:if="{{product.discount_rate}}"
         class="text-white product-badge font-bold radius-8px px-4x-small"
       >
-        {{`-${product.discountRate}%`}}
+        {{`-${product.discount_rate}%`}}
       </view>
     </view>
-    <text 
-      class="product-old-price text-gray60 mt-5x-small"
-      number-of-lines="{{1}}"
-    >
-      {{product.listPrice && product.price < product.listPrice ? moneyFormatter(product.listPrice) : ''}}
-    </text>
   </view>
 </view>

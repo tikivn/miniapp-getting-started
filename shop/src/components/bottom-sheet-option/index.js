@@ -12,8 +12,8 @@ Component({
       name: '',
       images: [],
       price: '',
-      listPrice: '',
-      discountRate: 0,
+      list_price: '',
+      discount_rate: 0,
       colors: [
         {
           id: 0,

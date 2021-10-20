@@ -9,6 +9,7 @@ App({
     buyer: {},
     seller: {},
     orderedProducts: [],
+    productId: '',
     shippingFee: 0,
     price: 0,
     total: 0,
@@ -24,6 +25,10 @@ App({
       const cart = await getCartAPI();
       this.cart = { ...this.cart, ...cart };
     } catch {}
+  },
+
+  setProductId(productId) {
+    this.productId = productId;
   },
 
   addProduct(product) {

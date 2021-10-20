@@ -56,10 +56,10 @@
             {{moneyFormatter(product.price)}}
           </text>
           <view
-            tiki:if="{{product.discountRate}}"
+            tiki:if="{{product.discount_rate}}"
             class="text-white product-badge font-bold radius-8px px-4x-small py-5x-small"
           >
-            {{`-${product.discountRate}%`}}
+            {{`-${product.discount_rate}%`}}
           </view>
         </view>
       </view>

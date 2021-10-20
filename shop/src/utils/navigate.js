@@ -1,3 +1,5 @@
+import queryString from 'query-string';
+
 export const navigateToPDP = (productId, onAction) => {
   const pages = getCurrentPages();
   if (
@@ -29,5 +31,14 @@ export const loadBadgeCart = () => {
     fail: (res) => {
       console.log(res);
     },
+  });
+};
+
+export const navigateWithParams = ({ page, params = null }) => {
+  my.navigateTo({
+    url: `${queryString.stringifyUrl({
+      url: `pages/${page}/index`,
+      query: params,
+    })}`,
   });
 };

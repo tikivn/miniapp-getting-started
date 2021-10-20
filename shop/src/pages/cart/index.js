@@ -90,7 +90,7 @@ Page({
   },
 
   onRemoveCoupon() {
-    app.removeCoupon(code);
+    app.removeCoupon();
   },
 
   onRemoveProduct(product) {
@@ -127,6 +127,7 @@ Page({
   },
 
   makePaymentFail() {
+    this.scrollToTop();
     this.setData({
       modal: {
         key: 'payment_failed',
@@ -141,6 +142,7 @@ Page({
 
   makePaymentSuccess() {
     app.resetCart();
+    this.scrollToTop();
     this.setData({
       modal: {
         key: 'payment_success',

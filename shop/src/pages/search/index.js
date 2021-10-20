@@ -1,6 +1,5 @@
 import {
   getCategoriesAPI,
-  getNewProductsAPI,
   getProductsByCategoryIdAPI,
   getFiltersAPI,
   getOtherProductsAPI,
@@ -8,7 +7,11 @@ import {
   getSortsAPI,
 } from '../../services/index';
 import { getStorage, setStorage } from '../../utils/storage';
-import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import {
+  navigateToPDP,
+  loadBadgeCart,
+  navigateWithParams,
+} from '../../utils/navigate';
 
 Page({
   data: {
@@ -124,6 +127,7 @@ Page({
     const { key } = event.target.dataset;
     this.setData({
       searchTerm: key,
+      isLoading: true,
     });
   },
 
@@ -187,6 +191,13 @@ Page({
 
   onCustomIconEvent(e) {
     my.navigateTo({ url: 'pages/cart/index' });
+  },
+
+  goToCategoryDetail(category) {
+    navigateWithParams({
+      page: 'category-detail',
+      params: { category_name: category.name },
+    });
   },
 
   // Life cycle

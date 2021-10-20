@@ -6,6 +6,7 @@
     "product-section": "components/product-section/index",
     "category-section": "components/category-section/index",
     "banners": "components/banners/index",
+    "section-title": "pages/home/section-title/index",
     "onboarding": "components/onboarding/index"
   }
 }

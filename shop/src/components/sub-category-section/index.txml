@@ -8,7 +8,7 @@
     class="flex justify-between items-center"
   >
     <text class="font-bold">{{title}}</text>
-    <view onTap="_onTapCategory">
+    <view onTap="_onTapCategoryTitle">
       <icon
         type="arrow_right"
         color="#808089"
