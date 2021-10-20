@@ -1,14 +1,18 @@
 import queryString from 'query-string';
 
-export const navigateToPDP = (productId, onAction) => {
+export const navigateToPDP = (productId) => {
+  my.navigateTo({ url: `pages/detail/index?product_id=${productId}` });
+};
+
+export const navigateToCart = () => {
   const pages = getCurrentPages();
   if (
     pages.length >= 2 &&
-    pages[pages.length - 1].route === 'pages/detail/index'
+    pages[pages.length - 2].route === 'pages/cart/index'
   ) {
-    onAction && onAction(productId);
+    my.navigateBack();
   } else {
-    my.navigateTo({ url: `pages/detail/index?product_id=${productId}` });
+    my.navigateTo({ url: `pages/cart/index` });
   }
 };
 

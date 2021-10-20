@@ -1,10 +1,10 @@
-<view style="height: 100vh;" class="{{className}} bg-white">
+<view style="height: 100vh;" class="{{className}} flex flex-col bg-white">
   <carousel
     indicator-dots
     duration="{{800}}"
     current="{{current}}"
     onChange="_onChange"
-    class="onboarding"
+    class="onboarding flex flex-col"
   > 
     <carousel-item
       tiki:for="{{tips}}"
@@ -21,7 +21,7 @@
       </view>
     </carousel-item> 
   </carousel>
-  <view class="footer-onboard padding-inset-bottom pb-medium w-full">
+  <view class="footer-onboard flex items-end w-full">
     <view 
       tiki:if="{{current !== tips.length - 1}}"
       class="w-full flex justify-between p-medium">

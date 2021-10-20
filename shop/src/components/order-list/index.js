@@ -17,9 +17,13 @@ Component({
     onChangeTotal: () => {},
     onRemoveProduct: () => {},
     onChangeQuantityProduct: () => {},
+    onTapProduct: () => {},
   },
 
   methods: {
+    _onTapProduct(product) {
+      this.props.onTapProduct(product);
+    },
     _onRemoveProduct() {
       this.props.onRemoveProduct(this.selectedProduct);
       this.hideModal();

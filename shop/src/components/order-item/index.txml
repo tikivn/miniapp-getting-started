@@ -26,18 +26,20 @@
 <template name="completed">
   <view class="w-full flex justify-between py-2x-small {{className}}">
     <view class="flex mr-medium">
-      <view class="mr-2x-small">
+      <view onTap="_onTapProduct" class="mr-2x-small">
         <image
           class="order-item-thumbnail radius-8px"
           src="{{product.thumbnail}}"
         />
       </view>
       <view>
-        <view class="mb-4x-small">
-          {{product.name}}
-        </view>
-        <view class="font-bold mb-small">
-          {{moneyFormatter(product.price)}}
+        <view onTap="_onTapProduct">
+          <view class="mb-4x-small">
+            {{product.name}}
+          </view>
+          <view class="font-bold mb-small">
+            {{moneyFormatter(product.price)}}
+          </view>
         </view>
         <stepper
           showNumber

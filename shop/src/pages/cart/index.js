@@ -9,7 +9,6 @@ Page({
 
   data: {
     isLoading: true,
-    scrollTop: undefined,
     cart: {
       buyer: {},
       seller: {},
@@ -33,12 +32,6 @@ Page({
       rightButton: '',
     },
     isShowCouponBottomSheet: false,
-  },
-
-  scrollToTop() {
-    this.setData({
-      scrollTop: 0,
-    });
   },
 
   onTapProduct(product) {
@@ -95,7 +88,6 @@ Page({
 
   onRemoveProduct(product) {
     app.removeProduct(product);
-    this.scrollToTop();
   },
 
   onChangeQuantityProduct(product, quantity) {
@@ -127,7 +119,6 @@ Page({
   },
 
   makePaymentFail() {
-    this.scrollToTop();
     this.setData({
       modal: {
         key: 'payment_failed',
@@ -142,7 +133,6 @@ Page({
 
   makePaymentSuccess() {
     app.resetCart();
-    this.scrollToTop();
     this.setData({
       modal: {
         key: 'payment_success',
@@ -199,10 +189,5 @@ Page({
 
   onUnload() {
     this.disposableCollection.forEach((dispose) => dispose());
-  },
-  onHide() {
-    this.setData({
-      scrollTop: undefined,
-    });
   },
 });
