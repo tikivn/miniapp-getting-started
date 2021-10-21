@@ -4,12 +4,15 @@
 }
 
 .my-account {
+  height: 100vh;
   padding-top: calc(var(--safe-area-inset-top) + 16px);
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
 }
 
 .version {
-  position: fixed;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 1;
+  justify-content: flex-end;
+  padding-bottom: 8px;
 }

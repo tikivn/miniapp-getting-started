@@ -7,6 +7,8 @@ Component({
     className: '',
     isShowOption: false,
     type: 'size',
+    sizeSelected: {},
+    colorSelected: {},
     product: {
       id: '',
       name: '',
@@ -49,5 +51,11 @@ Component({
   },
 
   // Life cycle
-  didMount() {},
+  didMount() {
+    const { type, sizeSelected, colorSelected } = this.props;
+
+    this.setData({
+      selectedOption: type === 'size' ? sizeSelected : colorSelected,
+    });
+  },
 });

@@ -10,6 +10,24 @@
   --red80: #bf1d28;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 24px;
+  height: 24px;
+  border: solid 4px var(--gray20);
+  border-left-color: var(--brand);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
 image,
 icon {
   display: block;
@@ -113,4 +131,8 @@ view {
 
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
+}
+
+.text-underline {
+  text-decoration: underline;
 }

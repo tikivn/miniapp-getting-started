@@ -1,11 +1,15 @@
-.tips-item {
-  height: 85vh;
+.onboarding {
+  height: 80%;
+}
+.onboarding .t-carousel-indicator {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0;
 }
 
 .footer-onboard {
-  position: fixed;
+  flex: 1;
   background: var(--white);
-  bottom: 0;
-  left: 0;
-  padding-bottom: calc(16px + var(--safe-area-inset-bottom));
+  padding-bottom: 32px;
 }

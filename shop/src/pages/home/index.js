@@ -16,8 +16,9 @@ import { getStorage, setStorage } from '../../utils/storage';
 
 Page({
   data: {
+    initHome: false,
     isLoading: true,
-    isFirstOpen: true,
+    isFirstOpen: false,
     shop: {},
     categories: [],
     featuredProducts: [],
@@ -115,6 +116,7 @@ Page({
       this.setTitle();
     }
     this.setData({
+      initHome: true,
       isFirstOpen,
     });
   },
@@ -127,6 +129,7 @@ Page({
       this.setTitle();
     }
     this.setData({
+      initHome: true,
       isFirstOpen,
     });
   },

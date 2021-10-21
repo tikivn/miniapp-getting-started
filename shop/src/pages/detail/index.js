@@ -1,12 +1,15 @@
 import { getDetailProduct, getRelativeProductsAPI } from '../../services/index';
-import { navigateToPDP, loadBadgeCart } from '../../utils/navigate';
+import {
+  navigateToPDP,
+  navigateToCart,
+  loadBadgeCart,
+} from '../../utils/navigate';
 import queryString from 'query-string';
 
 const app = getApp();
 
 Page({
   data: {
-    scrollTop: undefined,
     isShowOption: false,
     isLoading: true,
     product_id: '',
@@ -29,24 +32,8 @@ Page({
     },
   },
 
-  scrollToTop() {
-    this.setData({
-      scrollTop: 0,
-    });
-  },
-
-  onActionTapProduct(product_id) {
-    this.setData({
-      product_id,
-    });
-    this.scrollToTop();
-    this.loadData();
-  },
-
   onTapProduct(product) {
-    navigateToPDP(product.id, (productId) => {
-      this.onActionTapProduct(productId);
-    });
+    navigateToPDP(product.id);
   },
 
   showToast(content) {
@@ -112,7 +99,7 @@ Page({
   },
 
   onCustomIconEvent(e) {
-    my.navigateTo({ url: 'pages/cart/index' });
+    navigateToCart();
   },
 
   async loadData() {
@@ -159,11 +146,5 @@ Page({
 
   onShow() {
     loadBadgeCart();
-  },
-
-  onHide() {
-    this.setData({
-      scrollTop: undefined,
-    });
   },
 });
