@@ -11,6 +11,7 @@
     <order-icon
       tiki:for="{{orderIcons}}"
       isLoading="{{isLoading}}"
+      tab="{{index}}"
       onTap="onMoveOrderManagement" 
       value="{{numOrders[item.key]}}"
       src="{{item.src}}" 
