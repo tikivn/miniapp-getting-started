@@ -74,7 +74,9 @@ Page({
   },
 
   goToCategory() {
-    my.navigateTo({ url: 'pages/category/index' });
+    my.switchTab({
+      url: 'pages/category/index',
+    });
   },
 
   goToCategoryDetail(category) {
