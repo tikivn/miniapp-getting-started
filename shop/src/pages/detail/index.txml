@@ -49,7 +49,7 @@
     />
   </view>
 
-  <view class="footer padding-inset-bottom bg-white">
+  <view tiki:if="{{!isLoading}}" class="footer padding-inset-bottom bg-white">
     <view tiki:if="{{!isShowOption}}" class="flex w-full px-medium py-2x-small">
       <button
         class="w-50"

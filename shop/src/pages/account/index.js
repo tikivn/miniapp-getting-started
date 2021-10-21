@@ -37,7 +37,7 @@ Page({
 
   // Life cycle
   onShow() {
-    loadBadgeCart();
+    loadBadgeCart('/assets/images/ic-cart-account.png');
   },
 
   onReady() {

@@ -26,8 +26,8 @@ Component({
   },
 
   methods: {
-    onMoveOrderManagement() {
-      my.navigateTo({ url: 'pages/order-management/index' });
+    onMoveOrderManagement(tab) {
+      my.navigateTo({ url: `pages/order-management/index?tab=${tab}` });
     },
   },
 

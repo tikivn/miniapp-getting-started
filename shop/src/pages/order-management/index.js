@@ -1,14 +1,15 @@
-import { getOrders } from "../../services/index";
+import { getOrders } from '../../services/index';
+import queryString from 'query-string';
 
 Page({
   data: {
     isLoading: false,
-    activeTab: 0,
+    activeTab: 1,
     orderTabs: [
-      { title: "All" },
-      { title: "Wait for payment" },
-      { title: "Processing" },
-      { title: "Shipping" },
+      { title: 'All' },
+      { title: 'Wait for payment' },
+      { title: 'Processing' },
+      { title: 'Shipping' },
     ],
     orders: [],
   },
@@ -26,7 +27,7 @@ Page({
   },
 
   onMoveOrderDetail() {
-    my.navigateTo({ url: "pages/order-detail/index" });
+    my.navigateTo({ url: 'pages/order-detail/index' });
   },
 
   async loadData() {
@@ -48,6 +49,12 @@ Page({
     }
   },
 
+  onLoad(query) {
+    const { tab } = queryString.parse(query);
+    this.setData({
+      activeTab: parseInt(tab) + 1,
+    });
+  },
   // Life cycle
   onReady() {
     this.loadData();
