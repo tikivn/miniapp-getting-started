@@ -51,8 +51,8 @@ Component({
   },
 
   // Life cycle
-  didMount() {
-    const { type, sizeSelected, colorSelected } = this.props;
+  deriveDataFromProps(nextProps) {
+    const { type, sizeSelected, colorSelected } = nextProps;
 
     this.setData({
       selectedOption: type === 'size' ? sizeSelected : colorSelected,

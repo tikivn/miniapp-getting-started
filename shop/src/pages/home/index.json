@@ -1,7 +1,7 @@
 {
-  "pullRefresh": true,
   "defaultTitle": "",
   "titleBarBottomColor": "#fff",
+  "allowsBounceVertical": "NO",
   "usingComponents": {
     "product-section": "components/product-section/index",
     "category-section": "components/category-section/index",
