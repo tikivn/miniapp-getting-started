@@ -6,9 +6,10 @@
   <view
     tiki:else
     class="flex justify-between items-center"
+    onTap="_onTapCategoryTitle"
   >
     <text class="font-bold">{{title}}</text>
-    <view onTap="_onTapCategoryTitle">
+    <view>
       <icon
         type="arrow_right"
         color="#808089"

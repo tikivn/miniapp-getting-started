@@ -1,6 +1,5 @@
 .category-nav {
-  min-height: 100vh;
-  max-height: 100vh;
+  height: 100vh;
   overflow-y: auto;
   background-color: var(--gray10);
 }
