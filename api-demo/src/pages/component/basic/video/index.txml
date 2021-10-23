@@ -8,13 +8,16 @@
       onPlay="onPlay"
       onPause="onPause"
       onEnd="onEnd"
+      onError="onError"
       onTimeUpdate="onTimeUpdate"
       plays-inline
-      src="https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_640_3MG.mp4"
+      src="https://tiniapp-media.tikicdn.com/media/thiendang.mp4"
     />
   </view>
   <view class="block-content" style="display: flex; flex-direction: column">
+    <view class="operation-item">{{time}}</view>
     <view class="operation-item">{{title}}</view>
+    <button type="solid" onTap="mute">mute</button>
     <button type="solid" onTap="play">play</button>
     <button type="solid" onTap="pause">pause</button>
     <button type="solid" onTap="seek">seek</button>

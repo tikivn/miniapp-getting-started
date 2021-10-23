@@ -1,6 +1,7 @@
 Page({
   data: {
-    title: 'initial'
+    title: 'initial',
+    time: 0,
   },
   onShow() {
     this.videoContext = my.createVideoContext('video');
@@ -14,8 +15,14 @@ Page({
   onEnded(){
     this.setData({title: 'onEnded'});
   },
-  onTimeUpdate() {
-    this.setData({title: 'onTimeUpdate'})
+  onError() {
+    this.setData({title: 'onError'});
+  },
+  onTimeUpdate(e) {
+    this.setData({time: e.detail.currentTime})
+  },
+  mute() {
+    this.videoContext.mute();
   },
   play() {
     this.videoContext.play();
