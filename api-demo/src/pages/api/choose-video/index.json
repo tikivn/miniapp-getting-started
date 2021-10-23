@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "my.chooseImage",
+  "defaultTitle": "my.chooseVideo",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }

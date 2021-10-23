@@ -1,12 +1,13 @@
 {
   "name": "api-demo",
-  "version": "0.49.1",
+  "version": "0.50.2",
   "tiki": {
     "appIdentifier": "tiki-miniapp-demo",
     "buildNumber": 1
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "0.2.1-rc.2"
+    "@tiki.vn/tini-ui": "0.1.2-rc.24",
+    "query-string": "^7.0.1"
   },
   "devDependencies": {
     "prettier": "^2.3.2"

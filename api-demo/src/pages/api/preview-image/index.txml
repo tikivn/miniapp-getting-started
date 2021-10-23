@@ -1,0 +1,16 @@
+<view>
+  <block-header title="Usage" description="Preview Image" />
+  <view class="block-content">
+    <label class="flex items-center mb-small">
+      <checkbox onChange="onChangeSavePhoto" />
+      <text class="block ml-small">enablesavephoto</text>
+    </label>
+    <label class="flex items-center">
+      <checkbox onChange="onChangeDownload" />
+      <text class="block ml-small">enableShowPhotoDownload</text>
+    </label>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onPreview">Preview Image</button>
+  </view>
+</view>
