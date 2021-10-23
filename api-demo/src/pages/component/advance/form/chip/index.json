@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Chip",
+  "usingComponents": {
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "chip": "@tiki.vn/tini-ui/es/chip/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}

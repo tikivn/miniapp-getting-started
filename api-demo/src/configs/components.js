@@ -230,6 +230,10 @@ const advancedComponents = [
         name: 'Slider',
         path: '/pages/component/advance/form/slider/index',
       },
+      {
+        name: 'Chip',
+        path: '/pages/component/advance/form/chip/index',
+      },
     ],
   },
   {
