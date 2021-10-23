@@ -6,3 +6,15 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+.video-contain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px
+}
+
+.video {
+  width: 320px;
+  height: 225px;
+}

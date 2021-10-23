@@ -1,10 +1,11 @@
 <view>
   <block-header title="Usage" description="Allows play a video on app" />
   <view class="block-content">
+  <view class="video-contain">
     <video
       id="video"
+      class="video" 
       object-fit="cover"
-      style="width: 100%; height: 100%;"
       onPlay="onPlay"
       onPause="onPause"
       onEnd="onEnd"
@@ -14,6 +15,7 @@
       src="https://tiniapp-media.tikicdn.com/media/thiendang.mp4"
     />
   </view>
+</view>
   <view class="block-content" style="display: flex; flex-direction: column">
     <view class="operation-item">{{time}}</view>
     <view class="operation-item">{{title}}</view>
