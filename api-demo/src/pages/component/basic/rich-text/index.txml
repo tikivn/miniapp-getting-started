@@ -1,0 +1,12 @@
+<block-header title="Usage" description="Rich text"/>
+<view class="container">
+  <view class="block">
+    <view>Nodes:</view>
+    <text class="nodes">
+      {{nodesText}}
+    </text>
+
+    <view class="mt-small">Result:</view>
+    <rich-text nodes="{{nodes}}" />
+  </view>
+</view>

@@ -56,6 +56,10 @@ const basicComponents = [
         name: 'Progress',
         path: '/pages/component/basic/progress/index',
       },
+      {
+        name: 'Rich Text',
+        path: '/pages/component/basic/rich-text/index',
+      },
     ],
   },
   {
