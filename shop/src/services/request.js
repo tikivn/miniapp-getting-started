@@ -1,6 +1,6 @@
 import { delay } from '../utils/common';
 const BASE_URL =
-  'https://raw.githubusercontent.com/tikivn/miniapp-getting-started/feat/shop-api/shop/src/services/mock';
+  'https://raw.githubusercontent.com/tikivn/miniapp-getting-started/main/shop/src/services/mock';
 
 export const request = async ({ path, method = 'GET', headers = {}, data }) => {
   return new Promise((resolve, reject) => {
