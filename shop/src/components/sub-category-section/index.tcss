@@ -1,6 +1,6 @@
 .sub-category-section-wrapper {
   border: 1px solid var(--gray20);
-  height: fit-content;
+  min-height: fit-content;
 }
 
 .sub-category-section {
