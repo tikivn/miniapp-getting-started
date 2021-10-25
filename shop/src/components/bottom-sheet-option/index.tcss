@@ -1,0 +1,3 @@
+.card-size {
+  width: calc(50% - 8px);
+}

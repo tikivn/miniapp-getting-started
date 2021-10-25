@@ -1,0 +1,41 @@
+<import-sjs from="../../utils/common.sjs" name="{statusFormatter}"></import-sjs>
+
+<view class="bg-white">
+  <view class="pt-2x-small px-medium">
+    <row-info 
+      isLoading="{{isLoading}}"
+      title="Status"
+      description="Delivered"/>
+    <row-info 
+      isLoading="{{isLoading}}"
+      title="Shipper"
+      description="Tiki (from Ho Chi Minh city)"/>
+  </view>
+
+  <view class="bg-white mt-medium px-medium">
+    <view tiki:if="{{isLoading}}">
+      <view class="mb-medium skeleton skeleton-button-large w-full"></view>
+      <view class="skeleton skeleton-button-large w-full"></view>
+    </view>
+    <view tiki:else>
+      <steps
+        activeIndex="{{0}}"
+        direction="vertical"
+        items="{{trackingSteps}}">
+        <view
+          tiki:for="{{trackingSteps}}"
+          slot="title_{{index + 1}}"
+          class="mb-4x-small text-base font-bold">
+            {{statusFormatter(item.status)}}
+        </view>
+        <view
+          tiki:for="{{trackingSteps}}"
+          slot="desc_{{index + 1}}"
+          class="mb-2x-small text-base text-gray60">
+            <view>{{item.detail}}</view>
+            <view>{{item.date}}</view>
+        </view>
+      </steps>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+<view tiki:if="{{!initHome}}" class="home-init">
+  <view class="loading"></view>
+</view>
+<view tiki:else>
+  <view tiki:if="{{isFirstOpen}}">
+    <onboarding onDone="onDone" />
+  </view>
+
+  <view tiki:else>
+    <banners
+      class="home-banners"
+      isLoading="{{isLoading}}"
+      banners="{{banners}}"
+    />
+
+    <view class="home-section">
+      <section-title
+        title="Hot deals"
+      />
+      <product-section
+        type="horizontal"
+        className="home-hot-deals"
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{hotDealProducts}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+
+    <view class="home-section home-category">
+      <section-title
+        title="Category"
+        onTapActionButton="goToCategory"
+      />
+      <carousel
+        indicator-dots
+        duration="{{400}}"
+        interval="{{5000}}"
+        class="home-category-carousel"
+        active-class="home-category-carousel-active"
+      > 
+        <carousel-item
+          tiki:for="{{isLoading ? [1] : categories}}"
+          tiki:key="id"
+        >
+          <category-section
+            isLoading="{{isLoading}}"
+            className="home-category-list"
+            skeletons="{{8}}"
+            categories="{{item}}"
+            onTapCategory="goToCategoryDetail"
+          />
+        </carousel-item>  
+      </carousel>
+    </view>
+
+    <view class="home-section">
+      <section-title
+        title="Featured"
+      />
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{featuredProducts}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+
+    <view class="home-section">
+      <section-title
+        title="New"
+      />
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{newProducts}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view>
+  <view class="mb-small font-bold text-medium">Shipping info</view>
+  <view class="border-option" onTap="_onOpenAddress">
+    <card-select
+      isLoading="{{isLoading}}"
+      title="Ship to"
+      description="288 Erie Street South Unit D, Leamington, Ontario"/>
+  </view>
+</view>

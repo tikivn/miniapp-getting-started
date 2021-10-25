@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "header-product": "components/header-product/index",
+    "shipping-info": "components/shipping-info/index",
+    "detail-info": "components/detail-info/index",
+    "product-section": "components/product-section/index",
+    "bottom-sheet-option": "components/bottom-sheet-option/index",
+    "card-select": "components/card-select/index",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "toast": "components/toast/index"
+  }
+}

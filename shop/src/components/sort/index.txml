@@ -1,0 +1,36 @@
+<view class="sort {{className}}">
+  <chip
+    active
+    content="{{selectedSort.label ? selectedSort.label : 'Sort'}}"
+    prefixImage="/assets/icons/sort-active.svg"
+    onClick="_onShow"
+    onLeftClick="_onShow"
+  />
+  <block tiki:if="{{isShow}}">
+    <bottom-sheet
+      title="Sort"
+      onClose="_onClose"
+    >
+      <template
+        is="sort-content"
+        data="{{sorts, selectedSort}}"
+      />
+      <view slot="footer"/>
+    </bottom-sheet>
+  </block>
+</view>
+
+<template name="sort-content">
+  <view class="padding-inset-bottom px-medium">
+    <view
+      tiki:for="{{sorts}}"
+      tiki:key="value"
+      class="sort-item flex justify-between items-center py-x-small {{item.value === selectedSort.value ? 'sort-item-active' : ''}}"
+      data-item="{{item}}"
+      onTap="_onSelect"
+    >
+      <text>{{item.label}}</text>
+      <icon tiki:if="{{item.value === selectedSort.value}}" type="success_glyph" color="#00AB56" />
+    </view>
+  </view>
+</template>

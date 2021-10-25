@@ -1,0 +1,22 @@
+<view class="px-medium py-medium">
+  <view class="relative text-white">
+    <image
+      class="w-full mt-medium radius-8px"
+      src="/assets/images/my-point.png"
+      mode="widthFix"
+    />
+    <view class="user-info">
+      <view>{{myPoint.user.name}}</view>
+      <view class="font-bold text-large">{{myPoint.point}} points</view>
+    </view>
+    <view class="join-date">Join date: {{` ${myPoint.user.joinDate}`}}</view>
+  </view>
+
+  <view class="barcode">
+    <image 
+      class="block"
+      mode="widthFix"
+      src="/assets/images/barcode.png"/>
+    <view class="mt-2x-small text-center">{{myPoint.barcode}}</view>
+  </view>
+</view>

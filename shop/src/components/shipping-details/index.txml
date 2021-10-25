@@ -1,0 +1,60 @@
+<template name="loading">
+  <view class="flex justify-between items-center py-2x-small">
+    <view class="flex w-full">
+      <view class="mr-2x-small">
+        <view
+          class="square-24 skeleton"
+          src="{{avatar}}"
+        />
+      </view>
+      <view class="w-full">
+        <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
+        <view class="skeleton skeleton-font-medium mb-4x-small"/>
+        <view class="skeleton skeleton-font-regular skeleton-50-width mb-4x-small"/>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="completed">
+  <view class="flex justify-between items-center py-2x-small">
+    <view class="flex">
+      <view class="mr-2x-small">
+        <image
+          class="square-24 radius-8px"
+          src="{{avatar}}"
+        />
+      </view>
+      <view>
+        <view class="mb-4x-small">
+          {{title}}
+        </view>
+        <view class="font-bold mb-4x-small">
+          {{label}}
+        </view>
+        <view class="text-gray60 text-small">
+          {{description}}
+        </view>
+      </view>
+    </view>
+    <view onTap="_onOpenAddress">
+      <icon
+        tiki:if="{{showButton}}"
+        type="arrow_right"
+        color="#808089"
+      />
+    </view>
+  </view>
+</template>
+
+<view>
+  <template
+    is="{{isLoading ? 'loading' : 'completed'}}"
+    data="{{title:'Shipping address', avatar: buyer.avatar, label: buyer.address, description: `${buyer.name} • ${buyer.phone}`, showButton: true, _onOpenAddress}}"
+  />
+  <view class="divider"/>
+  <template
+    is="{{isLoading ? 'loading' : 'completed'}}"
+    data="{{title:'Shipping service', avatar: seller.avatar, label: seller.name, description: seller.description, showButton: false}}"
+  />
+</view>

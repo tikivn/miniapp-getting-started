@@ -1,0 +1,66 @@
+<import-sjs from="../../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<template name="loading">
+  <section title="Payment info">
+    <view class="flex items-center">
+      <view class="skeleton size-40" />
+      <view class="ml-2x-small skeleton-75-width">
+        <view class="mb-4x-small skeleton skeleton-50-width skeleton-font-regular" />
+        <view class="skeleton skeleton-50-width skeleton-font-regular" />
+      </view>
+    </view>
+  </section>
+
+  <view class="bg-white mt-medium p-medium radius-8px">
+    <view class="my-2x-small skeleton skeleton-font-regular w-full" />
+    <view class="my-2x-small skeleton skeleton-font-regular w-full" />
+    <view class="my-2x-small skeleton skeleton-font-regular w-full" />
+    <view class="my-2x-small skeleton skeleton-font-regular w-full" />
+  </view>
+</template>
+
+<template name="completed">
+  <section title="Payment info">
+    <view class="flex items-center">
+      <image class="block size-40" src="{{payment.thumbnail}}" />
+      <view class="ml-2x-small">
+        <view>Payment method</view>
+        <view class="font-bold mt-4x-small">
+          {{payment.method}}
+        </view>
+      </view>
+    </view>
+  </section>
+
+  <view class="bg-white mt-medium p-medium radius-8px">
+    <view class="py-2x-small flex justify-between">
+      <view>Price</view>
+      <view class="font-bold">{{moneyFormatter(payment.price)}}</view>
+    </view>
+
+    <view class="py-2x-small flex justify-between">
+      <view class="flex items-center">
+        <view class="mr-4x-small">Shipping fee</view>
+        <image class="block size-16" src="/assets/icons/info.svg" />
+      </view>
+      <view class="font-bold">{{moneyFormatter(payment.shippingFee)}}</view>
+    </view>
+
+    <view class="py-2x-small flex justify-between">
+      <view>Promotion</view>
+      <view class="font-bold text-green">-{{moneyFormatter(payment.promotion)}}</view>
+    </view>
+
+    <view class="py-2x-small flex items-center justify-between">
+      <view>
+        <view>Total</view>
+        <view class="text-small text-gray60">VAT included</view>
+      </view>
+      <view class="font-bold">{{moneyFormatter(payment.total)}}</view>
+    </view>
+  </view>
+</template>
+
+<view>
+  <template is="{{isLoading ? 'loading' : 'completed'}}" data="{{payment}}" />
+</view>

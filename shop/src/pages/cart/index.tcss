@@ -1,0 +1,24 @@
+.cart {
+  min-height: 100vh;
+}
+
+.cart-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+
+.cart-footer-padding {
+  padding-bottom: calc(96px + var(--safe-area-inset-bottom));
+}
+
+.cart-remove-btn {
+  height: fit-content;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.cart-empty {
+  margin-bottom: 56px;
+}

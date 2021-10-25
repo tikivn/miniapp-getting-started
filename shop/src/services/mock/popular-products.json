@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1559411,
+    "sku": "6951651845776",
+    "name": "Phiếu Quà Tặng Tiki 50.000đ",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/8a/3a/2e/9692aea8f1b91f970c85b05bfb8b1966.jpg",
+    "price": 50000
+  },
+  {
+    "id": 97594364,
+    "sku": "9485440855465",
+    "name": "Luật Tâm Thức - Giải Mã Ma Trận Vũ Trụ",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/c9/34/25/9fe3938caefb224fed32a708cd3cdeb1.jpg",
+    "price": 204800,
+    "discount_rate": 36
+  },
+  {
+    "id": 74021317,
+    "sku": "5977911599303",
+    "name": "Cây Cam Ngọt Của Tôi",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/5e/18/24/2a6154ba08df6ce6161c13f4303fa19e.jpg",
+    "price": 80000,
+    "discount_rate": 26
+  },
+  {
+    "id": 114769680,
+    "sku": "5878844157667",
+    "name": "Điện Thoại Oppo A54 (6GB/128GB) - Hàng Chính Hãng",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/c1/59/2b/d4e0cdfc8feb7611c663c34347203f96.jpg",
+    "price": 4250000,
+    "discount_rate": 23
+  }
+]

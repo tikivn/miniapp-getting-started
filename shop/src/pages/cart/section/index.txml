@@ -1,0 +1,11 @@
+<block>
+  <view class="mb-medium {{className}}">
+    <view class="text-medium font-bold mb-2x-small">
+      {{title}}
+    </view>
+    <view class="bg-white {{fullWidth ? 'pt-4x-small': 'p-medium radius-8px'}}">
+      <slot/>
+    </view>
+  </view>
+</block>
+

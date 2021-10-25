@@ -1,0 +1,27 @@
+.product-section-vertical {
+  animation: appear-opacity 0.3s ease-in-out;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 50%));
+  grid-column-gap: 16px;
+  grid-row-gap: 20px;
+}
+
+.product-section-vertical .product {
+  min-width: 50%;
+}
+
+.product-section-horizontal {
+  overflow-x: auto;
+}
+
+.product-section-horizontal .product {
+  margin-left: 16px;
+}
+
+.product-section-horizontal .product:last-child {
+  padding-right: 16px;
+}
+
+.product-section-horizontal .product > view {
+  width: calc(100vw / 2.9);
+}

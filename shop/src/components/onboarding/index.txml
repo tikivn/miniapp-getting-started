@@ -1,0 +1,45 @@
+<view style="height: 100vh;" class="{{className}} flex flex-col bg-white">
+  <carousel
+    indicator-dots
+    duration="{{800}}"
+    current="{{current}}"
+    onChange="_onChange"
+    class="onboarding flex flex-col"
+  > 
+    <carousel-item
+      tiki:for="{{tips}}"
+      tiki:key="id"
+    >
+      <view class="tips-item flex flex-col items-center">
+        <image
+          class="w-full"
+          src="{{item.image}}"
+          mode="widthFix"
+        />
+        <view class="mt-large font-bold text-medium-2x-small">{{item.title}}</view>
+        <view class="mt-2x-small">{{item.description}}</view>
+      </view>
+    </carousel-item> 
+  </carousel>
+  <view class="footer-onboard flex items-end w-full">
+    <view 
+      tiki:if="{{current !== tips.length - 1}}"
+      class="w-full flex justify-between p-medium">
+      <view 
+        onTap="_onSkip"
+        class="text-medium px-small py-2x-small">Skip</view>
+      <view 
+        onTap="_onNext"
+        class="text-medium px-small py-2x-small text-blue">Next</view>
+    </view>
+    <view tiki:else class="w-full px-medium py-2x-small">
+      <button
+        class="w-full"
+        shape="pill"
+        onTap="_onDone"
+      >
+        Done
+      </button>
+    </view>
+  </view>
+</view>

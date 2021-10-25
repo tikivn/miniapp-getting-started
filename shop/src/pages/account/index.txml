@@ -1,0 +1,49 @@
+<view class="my-account">
+  <view>
+    <view tiki:if="{{isLoading}}" class="flex flex-col items-center">
+      <view 
+        class="skeleton avatar skeleton-button-shape-circle">
+      </view>
+      <view 
+        class="mt-2x-small skeleton skeleton-font-medium skeleton-25-width">
+      </view>
+    </view>
+
+    <view tiki:else class="flex flex-col items-center">
+      <image 
+        class="block avatar" 
+        mode="widthFix" 
+        src="{{user.avt}}"/>
+      <view class="mt-2x-small text-medium-2x-small font-bold">{{user.name}}</view>
+    </view>
+
+    <view class="px-medium mt-medium">
+      <coupon-n-point user="{{user}}" isLoading="{{isLoading}}"/>
+    </view>
+    
+    <view class="mt-medium px-medium">
+      <my-orders numOrders="{{numOrders}}" isLoading="{{isLoading}}"/>
+    </view>
+
+    <view class="mt-medium px-medium">
+      <view class="bg-white px-medium py-2x-small radius-8px">
+        <view class="flex justify-between items-center">
+          <view class="flex">
+            <image class="block size-40" src="/assets/icons/ic-support.svg" />
+            <view class="ml-2x-small">
+              <view class="font-bold mb-4x-small">Support</view>
+              <view class="text-small text-gray60">Call or chat with us</view>
+            </view>
+          </view>
+          <icon type="arrow_right" color="#808089"/>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class="version mt-medium w-full flex flex-col items-center">
+    <view class="mb-medium text-small text-blue text-underline font-medium">Terms and Conditions</view>
+    <view class="text-x-small text-gray60">version: 1.0.0</view>
+  </view>
+  
+</view>

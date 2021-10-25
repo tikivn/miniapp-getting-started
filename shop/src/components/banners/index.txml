@@ -1,0 +1,39 @@
+<view class="{{className}}">
+  <carousel
+    tiki:if="{{isLoading}}"
+    autoplay
+    indicator-dots
+    circular
+    duration="{{400}}"
+    interval="{{5000}}"
+    class="banners"
+  > 
+    <carousel-item
+      tiki:for="{{[1, 2, 3]}}"
+      tiki:key="*this"
+    >
+      <view class="banners-skeleton skeleton"/>
+    </carousel-item>
+  </carousel>
+
+  <carousel
+    tiki:else
+    autoplay
+    indicator-dots
+    circular
+    duration="{{400}}"
+    interval="{{5000}}"
+    class="banners"
+  > 
+    <carousel-item
+      tiki:for="{{banners}}"
+      tiki:key="id"
+    >
+      <image
+        class="w-full h-full"
+        src="{{item.image}}"
+        mode="widthFix"
+      />
+    </carousel-item> 
+  </carousel>
+</view>

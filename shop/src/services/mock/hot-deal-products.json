@@ -1,0 +1,50 @@
+[
+  {
+    "id": 73320913,
+    "sku": "8414562088406",
+    "name": "Điện thoại Vivo Y12s - Hàng Chính Hãng",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/b3/95/fc/70f6724a71608f645d6435ebf5e0039b.jpg",
+    "price": 3569000,
+    "discount_rate": 17
+  },
+  {
+    "id": 99376042,
+    "sku": "2006178471561",
+    "name": "Điện Thoại Samsung Galaxy M12 (4GB/64GB) - Hàng Chính Hãng",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/38/0f/76/3377a65a5e426e395b9984e275886353.jpg",
+    "price": 3390000,
+    "discount_rate": 13
+  },
+  {
+    "id": 75323380,
+    "sku": "9924679757601",
+    "name": "Điện Thoại Samsung Galaxy A02s (4GB/64GB) - Hàng Chính Hãng",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/aa/ac/73/65f784b41da65e669f98ebd3ae26e541.jpg",
+    "price": 3150000,
+    "discount_rate": 25
+  },
+  {
+    "id": 22358908,
+    "sku": "5016278604586",
+    "name": "Điện Thoại Samsung Galaxy Note 10 Plus (256GB/12GB) - Hàng Chính Hãng",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/b3/34/78/8b49c6d6dd25cc5c19b5e764e17df8fb.png",
+    "price": 13200000,
+    "discount_rate": 51
+  },
+  {
+    "id": 114769680,
+    "sku": "9734250702909",
+    "name": "Điện Thoại Oppo A54 (6GB/128GB) - Hàng Chính Hãng",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/66/98/f5/378703a4c14419c8a11d6ea6e7008abe.jpg",
+    "price": 4350000,
+    "discount_rate": 0
+  },
+  {
+    "id": 123830435,
+    "sku": "5743069330576",
+    "name": "Điện Thoại iPhone 12 Pro Max 128GB - Hàng Chính Hãng",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/e0/7d/fc/56b2ba79f481a9ddc5b609869f307013.jpg",
+    "price": 28290000,
+    "discount_rate": 0
+  }
+]

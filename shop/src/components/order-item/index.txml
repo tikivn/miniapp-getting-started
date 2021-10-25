@@ -1,0 +1,71 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<template name="loading">
+  <view class="w-full flex justify-between py-2x-small {{className}}">
+    <view class="flex flex-grow">
+      <view class="order-item-thumbnail skeleton mr-2x-small"/>
+      <view class="w-full">
+        <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
+        <view class="skeleton skeleton-font-medium skeleton-50-width mb-small"/>
+        <view class="order-item-stepper-skeleton skeleton"/>
+      </view>
+    </view>
+    <view
+      class="order-item-close-btn"
+      onTap="_onClickRemoveOrder"
+    >
+      <icon
+        size="{{20}}"
+        type="close"
+        color="#808089"
+      />
+    </view>
+  </view>
+</template>
+
+<template name="completed">
+  <view class="w-full flex justify-between py-2x-small {{className}}">
+    <view class="flex mr-medium">
+      <view onTap="_onTapProduct" class="mr-2x-small">
+        <image
+          class="order-item-thumbnail radius-8px"
+          src="{{product.thumbnail}}"
+        />
+      </view>
+      <view>
+        <view onTap="_onTapProduct">
+          <view class="mb-4x-small">
+            {{product.name}}
+          </view>
+          <view class="font-bold mb-small">
+            {{moneyFormatter(product.price)}}
+          </view>
+        </view>
+        <stepper
+          showNumber
+          step="{{1}}"
+          min="{{1}}"
+          max="{{99}}"
+          value="{{product.quantity}}"
+          inputWidth="{{40}}"
+          onChange="_onChangeQuantityOrder"
+        />
+      </view>
+    </view>
+    <view
+      class="order-item-close-btn"
+      onTap="_onClickRemoveOrder"
+    >
+      <icon
+        size="{{20}}"
+        type="close"
+        color="#808089"
+      />
+    </view>
+  </view>
+</template>
+
+<template
+  is="{{isLoading ? 'loading' : 'completed'}}"
+  data="{{className, product}}"
+/>
