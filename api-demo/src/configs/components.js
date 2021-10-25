@@ -39,6 +39,10 @@ const basicComponents = [
         name: 'Scroll View',
         path: '/pages/component/basic/scroll-view/index',
       },
+      {
+        name: 'Web View',
+        path: '/pages/component/basic/webview/index',
+      },
     ],
   },
   {
