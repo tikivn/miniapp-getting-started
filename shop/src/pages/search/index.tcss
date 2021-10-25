@@ -1,0 +1,10 @@
+.search-category-list .category-grid-layout {
+  display: flex;
+  overflow-x: auto;
+  padding-left: 20px;
+}
+
+.filter-list-search {
+  margin-left: -16px;
+  margin-right: -16px;
+}

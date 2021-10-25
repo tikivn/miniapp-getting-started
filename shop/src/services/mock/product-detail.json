@@ -1,0 +1,51 @@
+{
+  "detail": {
+    "madeIn": "Vietnam",
+    "size": "Small",
+    "color": "Light Blue",
+    "material": "Spandex",
+    "image": "",
+    "shortDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing augue nisl, gravida a, sapien leo. Morbi vulputate fermentum porta nunc. Viverra laoreet convallis massa elementum vel. Eget tincidunt massa sodales non massa euismod.",
+    "longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Adipiscing augue nisl, gravida a, sapien leo. Morbi vulputate fermentum porta nunc. Viverra laoreet convallis massa elementum vel. Eget tincidunt massa sodales non massa euismod."
+  },
+  "colors": [
+    {
+      "id": 1,
+      "image": "/assets/images/circle-blue.png",
+      "color": "Light Blue"
+    },
+    {
+      "id": 2,
+      "image": "/assets/images/circle-white.png",
+      "color": "White"
+    },
+    {
+      "id": 3,
+      "image": "/assets/images/circle-gray.png",
+      "color": "Gray Blue"
+    },
+    {
+      "id": 4,
+      "image": "/assets/images/circle-brown.png",
+      "color": "Brown"
+    }
+  ],
+  "sizes": [
+    {
+      "id": 1,
+      "size": "S"
+    },
+    {
+      "id": 2,
+      "size": "M"
+    },
+    {
+      "id": 3,
+      "size": "L"
+    },
+    {
+      "id": 4,
+      "size": "XL"
+    }
+  ]
+}

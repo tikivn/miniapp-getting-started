@@ -1,0 +1,49 @@
+{
+  "id": "1",
+  "date": "16:24, 21/05/2021",
+  "status": "delivered",
+  "price": 9999999,
+  "list_price": 11111110,
+  "discount_rate": 10,
+  "tracking": {
+    "id": 1,
+    "delivery": "Giaohangnhanh",
+    "status": "delivered",
+    "date": "19:27, 21/05/2021"
+  },
+  "buyer": {
+    "avatar": "/assets/icons/location.svg",
+    "address": "288 Erie Street South Unit D, Leamington, Ontario",
+    "name": "Nick",
+    "phone": "0969696969"
+  },
+  "seller": {
+    "avatar": "/assets/images/tiki-now.png",
+    "name": "Tiki Now",
+    "description": "Same day 2h - 3h"
+  },
+  "products": [
+    {
+      "id": "1",
+      "thumbnail": "/assets/images/product.png",
+      "name": "Sample product 1",
+      "price": 100000,
+      "quantity": 1
+    },
+    {
+      "id": "2",
+      "thumbnail": "/assets/images/product.png",
+      "name": "Sample product 2",
+      "price": 50000,
+      "quantity": 1
+    }
+  ],
+  "payment": {
+    "method": "Momo",
+    "thumbnail": "/assets/icons/momo.svg",
+    "price": 19999998,
+    "shippingFee": 15000,
+    "promotion": 50000,
+    "total": 20014998
+  }
+}

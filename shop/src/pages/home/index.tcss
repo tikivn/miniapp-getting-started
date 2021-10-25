@@ -1,0 +1,31 @@
+.home-init {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--white);
+}
+
+.home-section {
+  padding: 16px;
+  margin-bottom: 8px;
+  background-color: var(--white);
+}
+
+.home-banners {
+  background-color: var(--white);
+}
+
+.home-hot-deals,
+.home-category-carousel {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.home-category-list {
+  transition: ease-in-out 0.3s;
+}
+
+.home-category-carousel-active .home-category-list {
+  transform: translateX(22px);
+}

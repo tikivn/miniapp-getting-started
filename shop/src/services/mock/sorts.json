@@ -1,0 +1,18 @@
+[
+  {
+    "label": "Popular",
+    "value": "1"
+  },
+  {
+    "label": "Top selling",
+    "value": "2"
+  },
+  {
+    "label": "Price: Low to High",
+    "value": "3"
+  },
+  {
+    "label": "Price: High to Low",
+    "value": "4"
+  }
+]

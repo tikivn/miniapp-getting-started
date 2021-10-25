@@ -1,0 +1,18 @@
+.category-grid {
+  width: var(--grid-item-width, 58px);
+}
+
+.category-grid-logo,
+.skeleton-category-grid-logo {
+  width: var(--grid-item-image-with, 48px);
+  height: var(--grid-item-image-with, 48px);
+  border-radius: 40%;
+}
+
+.skeleton-category-grid-names {
+  width: calc(100% - 10px);
+}
+
+.category-grid-name {
+  word-break: break-word;
+}

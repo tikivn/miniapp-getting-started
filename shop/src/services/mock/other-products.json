@@ -1,0 +1,38 @@
+[
+  {
+    "id": 6816541,
+    "sku": "3635961997464",
+    "name": "Cân tiểu ly điện tử 3000g - 0.1g. Cân tiểu li điện tử có độ chính xác cao",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/c3/d1/9d/bcc3168b2e2d19763e46677fd7c02a25.jpg",
+    "price": 148500,
+    "discount_rate": 63,
+    "list_price": 250000
+  },
+  {
+    "id": 20866541,
+    "sku": "3675675981182",
+    "name": "Tông Đơ Cắt Tóc Gia Đình JICHEN 0817 Dành Cho Gia Đình + Tặng kèm bộ kéo cắt tỉa tóc",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/d4/44/68/9c456b54b14f27cd6d9456952d303fd9.jpg",
+    "price": 263200,
+    "discount_rate": 14,
+    "list_price": 307618
+  },
+  {
+    "id": 55544966,
+    "sku": "3928275223559",
+    "name": "Bộ Kéo Cắt Tóc Gia Đình Thép Không Gỉ Lưỡi Sắc Bén Cao Cấp HAND MADE",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/3e/65/8b/dfa9d8551aa0a6a8283f0d3c7b8e2ced.jpg",
+    "price": 83660,
+    "discount_rate": 72,
+    "list_price": 300000
+  },
+  {
+    "id": 3218533,
+    "sku": "7133128922879",
+    "name": "Túi vệ sinh máy lạnh TD01, Áo vệ sinh máy lạnh tại nhà",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/55/01/ba/1ed9ff845326c4d943b1eb809433985a.jpg",
+    "price": 148500,
+    "discount_rate": 24,
+    "list_price": 195000
+  }
+]

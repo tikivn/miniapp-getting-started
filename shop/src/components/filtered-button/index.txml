@@ -1,0 +1,7 @@
+<chip
+  active="{{totalFilters}}"
+  content="Filter {{totalFilters ? `(${totalFilters})` : ''}}"
+  prefixImage="{{totalFilters ? '/assets/icons/filter-active.svg' : '/assets/icons/filter.svg'}}"
+  onClick="_onClick"
+  onLeftClick="_onClick"
+/>

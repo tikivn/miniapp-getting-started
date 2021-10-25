@@ -1,0 +1,9 @@
+<view className="{{className}}">
+  <search-bar
+    value="{{value}}"
+    placeholder="{{placeholder}}"
+    maxLength="{{100}}"
+    onTapCloseIcon="_clearSearchInput"
+    onInput="_onChangeSearchInput"
+  />
+</view>

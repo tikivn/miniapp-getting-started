@@ -1,0 +1,16 @@
+<view 
+  tiki:if="{{isLoading}}" 
+  class="radius-8px w-full card-select-ske skeleton">
+</view>
+<view tiki:else class="radius-8px {{className}}" onTap="_onTap">
+  <view class="px-medium py-2x-small flex items-center justify-between">
+    <view class="flex">
+      <image tiki:if="{{img}}" class="size-40 radius-pill" src="{{img}}"/>
+      <view class="ml-2x-small">
+        <view class="mb-4x-small">{{title}}</view>
+        <view class="font-bold">{{description}}</view>
+      </view>
+    </view>
+    <icon tiki:if="{{isShowArrow}}" type="arrow_right" color="#808089" />
+  </view>
+</view>

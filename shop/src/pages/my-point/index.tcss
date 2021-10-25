@@ -1,0 +1,18 @@
+.user-info {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+}
+
+.join-date {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+}
+
+.barcode {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%)
+}

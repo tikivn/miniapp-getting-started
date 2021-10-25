@@ -1,0 +1,43 @@
+<template name="loading">
+  <view class="flex">
+    <view class="flex w-50 py-2x-small border-right-gray">
+      <view class="skeleton size-40 skeleton-button-shape-circle" />
+      <view class="ml-2x-small skeleton-75-width">
+        <view class="mb-4x-small skeleton skeleton-50-width skeleton-font-regular"></view>
+        <view class="skeleton skeleton-25-width skeleton-font-regular"></view>
+      </view>
+    </view>
+    <view class="flex w-50 py-2x-small pl-medium">
+      <view class="skeleton size-40 skeleton-button-shape-circle" />
+      <view class="ml-2x-small skeleton-75-width">
+        <view class="mb-4x-small skeleton skeleton-50-width skeleton-font-regular"></view>
+        <view class="skeleton skeleton-25-width skeleton-font-regular"></view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="completed">
+  <view class="flex">
+    <view onTap="onMoveMyCoupon" class="flex w-50 py-2x-small border-right-gray">
+      <image class="block size-40" src="/assets/icons/ic-coupon.svg"/>
+      <view class="ml-2x-small">
+        <view class="mb-4x-small">Coupon</view>
+        <view class="text-medium font-bold">{{user.coupons}}</view>
+      </view>
+    </view>
+    <view onTap="onMoveMyPoint" class="flex w-50 py-2x-small pl-medium">
+      <image class="block size-40" src="/assets/icons/ic-point.svg"/>
+      <view class="ml-2x-small">
+        <view class="mb-4x-small">Point</view>
+        <view class="text-medium font-bold">{{user.points}}</view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<view class="bg-white p-medium radius-8px">
+  <template
+    is="{{isLoading ? 'loading' : 'completed'}}"
+    data="{{user}}" />
+</view>

@@ -1,0 +1,25 @@
+<view class="flex">
+  <category-nav
+    isLoading="{{isLoading}}"
+    skeletons="{{8}}"
+    categories="{{categories}}"
+    activatedCategory="{{activatedCategory}}"
+    onTapCategory="activeCategory"
+  />
+  <view class="category-subs-list px-medium py-2x-small flex-grow flex flex-col items-center bg-white hide-scroll-bar">
+    <sub-category-section
+      title="{{activatedCategory.name}}"
+      onTapCategoryTitle="onTapCategoryTitle"
+    />
+    <block tiki:for="{{subCategories.length ? subCategories : [1, 2, 3]}}">
+      <sub-category-section
+        title="{{item.name}}"
+        isLoading="{{isSubCategoriesLoading}}"
+        skeletons="{{6}}"
+        categories="{{item.subs}}"
+        onTapCategory="goToCategoryDetail"
+        onTapCategoryTitle="onTapCategoryTitle"
+      />
+    </block>
+  </view>
+</view>

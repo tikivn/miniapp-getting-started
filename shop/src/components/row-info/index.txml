@@ -1,0 +1,12 @@
+<view tiki:if="{{isLoading}}">
+  <view class="skeleton skeleton-font-regular w-full"></view>
+  <view class="{{isBorder ? 'divider my-2x-small' : ''}}"></view>
+</view>
+
+<view tiki:else>
+  <view class="flex justify-between">
+    <view>{{title}}</view>
+    <view class="font-bold">{{description}}</view>
+  </view>
+  <view class="{{isBorder ? 'divider my-2x-small' : ''}}"></view>
+</view>

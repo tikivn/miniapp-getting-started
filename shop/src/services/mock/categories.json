@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "image": "https://salt.tikicdn.com/ts/miniapp/35/88/8b/e32121cf5e8bc8e39258fd30b225d6e9.png",
+    "name": "Thịt, rau củ"
+  },
+  {
+    "id": "2",
+    "image": "https://salt.tikicdn.com/ts/miniapp/5d/c7/38/d94a4ecd62bee58bae23584051862ed3.png",
+    "name": "Bách Hóa"
+  },
+  {
+    "id": "3",
+    "image": "https://salt.tikicdn.com/ts/miniapp/4a/be/08/daa4e24e2f02534613e2e5da7c0a3766.png",
+    "name": "Thiết Bị Số"
+  },
+  {
+    "id": "4",
+    "image": "https://salt.tikicdn.com/ts/miniapp/0c/a1/93/3639bc26c105163f28538182fab793d7.png",
+    "name": "Nhà Cửa"
+  },
+  {
+    "id": "5",
+    "image": "https://salt.tikicdn.com/ts/miniapp/ce/d3/a4/96a0188c1d7bc388dd7723705640a890.png",
+    "name": "Điện Thoại"
+  },
+  {
+    "id": "6",
+    "image": "https://salt.tikicdn.com/ts/miniapp/85/e1/e9/1a14963c516df9b38a3f48d482b7b27b.png",
+    "name": "Mẹ & Bé"
+  },
+  {
+    "id": "7",
+    "image": "https://salt.tikicdn.com/ts/miniapp/12/31/07/fd22b595c1949dc19fa1b0d00a5dae8d.png",
+    "name": "Thời trang nữ"
+  },
+  {
+    "id": "8",
+    "image": "https://salt.tikicdn.com/ts/miniapp/63/22/4c/b657b2ab9b696bb466ecced524a5572c.png",
+    "name": "Gia Dụng"
+  },
+  {
+    "id": "9",
+    "image": "https://salt.tikicdn.com/ts/miniapp/35/88/8b/e32121cf5e8bc8e39258fd30b225d6e9.png",
+    "name": "Làm Đẹp"
+  },
+  {
+    "id": "10",
+    "image": "https://salt.tikicdn.com/ts/miniapp/5d/c7/38/d94a4ecd62bee58bae23584051862ed3.png",
+    "name": "Thời trang nam"
+  }
+]

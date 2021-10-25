@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
+    "card-select": "/components/card-select/index"
+  }
+}

@@ -1,0 +1,21 @@
+<view class="{{className}}">
+  <view class="category-grid-layout hide-scroll-bar">
+    <block tiki:if="{{isLoading}}">
+      <category
+        isLoading
+        tiki:for="{{skeletonsArray}}"
+        tiki:key="*this"
+      />
+    </block>
+    <block
+      tiki:else
+      tiki:for="{{categories}}"
+      tiki:key="id"
+    >
+      <category
+        category="{{item}}"
+        onTapCategory="_onTapCategory"
+      />
+    </block>
+  </view>
+</view>

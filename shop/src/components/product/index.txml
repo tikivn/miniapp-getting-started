@@ -1,0 +1,38 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<view class="product {{className}}">
+  <view tiki:if="{{isLoading}}">
+    <view class="skeleton product-image-skeleton radius-8px mb-2x-small"/>
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-4x-small"/>
+    <view class="skeleton skeleton-font-medium skeleton-100-width"/>
+  </view>
+  <view
+    tiki:else
+    catchTap="_onTapProduct"
+  >
+    <image
+      class="radius-8px mb-2x-small radius-8px"
+      src="{{product.thumbnail}}"
+    />
+    <text
+      class="mb-4x-small"
+      number-of-lines="{{1}}"
+    >
+      {{product.name}}
+    </text>
+    <view class="flex items-center">
+      <text
+        class="font-bold mr-2x-small"
+        number-of-lines="{{1}}"
+      >
+        {{moneyFormatter(product.price)}}
+      </text>
+      <view
+        tiki:if="{{product.discount_rate}}"
+        class="text-white product-badge font-bold radius-8px px-4x-small"
+      >
+        {{`-${product.discount_rate}%`}}
+      </view>
+    </view>
+  </view>
+</view>

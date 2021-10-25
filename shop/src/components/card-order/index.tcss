@@ -1,0 +1,24 @@
+.status-delivered {
+  background: var(--green20);
+  color: var(--green80);
+}
+
+.status-shipping {
+  background: var(--blue20);
+  color: var(--blue80);
+}
+
+.status-processing {
+  background: var(--yellow20);
+  color: var(--yellow80);
+}
+
+.status-waiting {
+  background: var(--red20);
+  color: var(--red80);
+}
+
+.status-canceled {
+  background: var(--gray10);
+  color: var(--gray50);
+}

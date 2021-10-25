@@ -1,0 +1,31 @@
+[
+  {
+    "id": 122427390,
+    "sku": "3224621153179",
+    "name": "1 Trái Sầu riêng Thái Dona Đăk Lăk - Hàng Loại 1 ( 3.5kg - 4kg / trái)",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/be/e7/4d/7ed3c82b5524743188b4de94731e1595.jpg",
+    "price": 300000
+  },
+  {
+    "id": 117029073,
+    "sku": "3327560302577",
+    "name": "Combo [7KG] 10 Loại Rau Củ Tươi Sạch Đủ Dùng 5 Ngày CB3 - Nông Sản Công Nghệ Internet Vạn Vật IOT",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/2c/40/95/6ca3699b51394eb31615d018aebe04fb.png",
+    "price": 225000
+  },
+  {
+    "id": 119212994,
+    "sku": "3180600315194",
+    "name": "Gạo ST25 Thơm Thượng Hạng Cao Cấp - Gạo Đặc Sản Sóc Trăng - 10kg",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/36/ec/f5/2fd2858289c3baa8f1da18e70a4b7273.jpg",
+    "price": 150000,
+    "discount_rate": 14
+  },
+  {
+    "id": 118499038,
+    "sku": "7553344470848",
+    "name": "Combo 10 Trái Dừa Xiêm Thượng Hạng Ngọt Nước - Đặc Sản Bến Tre - L",
+    "thumbnail": "https://salt.tikicdn.com/cache/280x280/ts/product/80/c0/80/1a2859d6826815b173a64e1bc44a10f6.jpg",
+    "price": 150000
+  }
+]
