@@ -54,6 +54,7 @@
     "pages/component/basic/button/index",
     "pages/component/basic/text/index",
     "pages/component/basic/progress/index",
+    "pages/component/basic/rich-text/index",
     "pages/component/basic/input/index",
     "pages/component/basic/textarea/index",
     "pages/component/basic/list/index",

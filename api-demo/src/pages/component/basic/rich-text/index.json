@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "rich-text",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
