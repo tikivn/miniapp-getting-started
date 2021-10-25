@@ -1,0 +1,44 @@
+body,
+button,
+input {
+  font-size: 32px;
+}
+.page {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 0.32rem;
+  font-size: 0.24rem;
+  font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+  -webkit-box-flex: 1;
+}
+.page-description {
+  margin-bottom: 0.32rem;
+}
+.t-button {
+  display: block;
+  box-sizing: border-box;
+  height: 47px;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+  padding: 0;
+  overflow: hidden;
+  color: #000;
+  font-size: 18px;
+  line-height: 47px;
+  white-space: nowrap;
+  text-align: center;
+  text-overflow: ellipsis;
+  word-break: break-word;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  outline: 0 none;
+  -webkit-appearance: none;
+}
+.t-button-primary {
+  color: #fff;
+  background-color: #108ee9;
+  border-color: #108ee9;
+  cursor: pointer;
+}
