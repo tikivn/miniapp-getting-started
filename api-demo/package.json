@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "@tiki.vn/mini-html-parser2": "^0.0.4",
-    "@tiki.vn/tini-ui": "0.1.2-rc.24",
+    "@tiki.vn/tini-ui": "0.2.1-rc.3",
     "query-string": "^7.0.1"
   },
   "devDependencies": {
