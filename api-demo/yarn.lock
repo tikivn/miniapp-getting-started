@@ -9,23 +9,54 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@tiki.vn/tini-style@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.2.0.tgz#13050a781964592c0f3c466e36f483e77847a884"
-  integrity sha512-432+zAujZDororwOkP3UY4KhQgdNHH1oeT6ChPHVPg2u/f5yeMqSLzn5k7A9PU154W5dSseBMQoxAjwm0hG9RQ==
+"@tiki.vn/mini-html-parser2@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/mini-html-parser2/-/mini-html-parser2-0.0.4.tgz#a8b4eecb8fbee2957e6582a94cb0947fd85469ac"
+  integrity sha512-sJ0JmEgfO8l2hL13hiQLE0CpeR07OTeCWOnQj/Q9LFs4pfOZNcU5MbvmuApdm9gn9n6Jh7rD7Z6aQG2Fayv12g==
+  dependencies:
+    domhandler "^2.4.2"
+    entities "^1.1.1"
+    events "^3.0.0"
 
-"@tiki.vn/tini-ui@0.2.1-rc.2":
-  version "0.2.1-rc.2"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.2.1-rc.2.tgz#93d2aaa68f42c9663a19a00fd48fc2f9502322cc"
-  integrity sha512-RXeTJfp9zySvgEm3w9GpTF2jNzw/y5LFifPZYUgwI8ENQirQhlUdVE7tHBaDsMfEvXvASreSA2I/+5GXPMVTaQ==
+"@tiki.vn/tini-style@0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.1.1.tgz#6333d4b85e2a153443fadf25fd0127dc8c4d0ee4"
+  integrity sha512-V0JVBhsYmQ7Ue/NZ770Do6SxnJ2uvchAu13Y2pGkSXgfNflLhAY7r/I8QOyfOxvFhlaMLLH4i1KF6amk+vw9NA==
+
+"@tiki.vn/tini-ui@0.1.2-rc.24":
+  version "0.1.2-rc.24"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.1.2-rc.24.tgz#e91693b9826d08bcd0ee9b038472845bff7a749f"
+  integrity sha512-fZeT58ujcsgD1zydL1jjr4KpcvBLdulXHDc6PQG45J8RRrNsWC1e6XXQaesP6X1c7HJFsV1TTD8FFkNUWFZgMw==
   dependencies:
     "@babel/runtime" "^7.15.3"
-    "@tiki.vn/tini-style" "0.2.0"
+    "@tiki.vn/tini-style" "0.1.1"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
   integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+
+domelementtype@1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
+  integrity sha512-BSKB+TSpMpFI/HOxCNr1O8aMOTZ8hT3pM3GQ0w/mWRmkhEDSFJkkyzz4XQsBV44BChwGkrDfMyjVD0eA2aFV3w==
+
+domhandler@^2.4.2:
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/domhandler/-/domhandler-2.4.2.tgz#8805097e933d65e85546f726d60f5eb88b44f803"
+  integrity sha512-JiK04h0Ht5u/80fdLMCEmV4zkNh2BcoMFBmZ/91WtYZ8qVXSKjiw7fXMgFPnHcSZgOo3XdinHvmnDUeMf5R4wA==
+  dependencies:
+    domelementtype "1"
+
+entities@^1.1.1:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
+  integrity sha512-f2LZMYl1Fzu7YSBKg+RoROelpOaNrcGmE9AZubeDfrCEia483oW4MI4VyFd5VNHIgQ/7qm1I0wUHK1eJnn2y2w==
+
+events@^3.0.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/events/-/events-3.3.0.tgz#31a95ad0a924e2d2c419a813aeb2c4e878ea7400"
+  integrity sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q==
 
 filter-obj@^1.1.0:
   version "1.1.0"
