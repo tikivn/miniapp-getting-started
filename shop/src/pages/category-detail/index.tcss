@@ -1,0 +1,3 @@
+.category-detail-empty {
+  border-bottom: solid 8px var(--gray10);
+}

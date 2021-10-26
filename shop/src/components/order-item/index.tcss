@@ -1,0 +1,16 @@
+.order-item-thumbnail {
+  width: 40px;
+  height: 40px;
+}
+
+.order-item-close-btn {
+  height: fit-content;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.order-item-stepper-skeleton {
+  height: 40px;
+  width: 128px;
+}

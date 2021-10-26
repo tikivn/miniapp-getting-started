@@ -1,0 +1,90 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<template name="color">
+  <view class="px-medium pt-medium">
+    <view
+      class="mb-medium"
+      tiki:for="{{product.colors}}"
+      tiki:key="{{item.id}}" >
+      <card-select
+        className="{{`${selectedOption.id === item.id ? 'border-active' : 'border-option'}`}}"
+        isShowArrow="{{false}}"
+        onTap="_onSelectOption"
+        option="{{item}}"
+        title="Color"
+        description="{{item.color}}"
+        img="{{item.image}}" />
+    </view>
+  </view>
+</template>
+
+<template name="size">
+  <view class="p-small flex flex-wrap">
+    <view
+      class="m-4x-small card-size"
+      tiki:for="{{product.sizes}}"
+      tiki:key="{{item.id}}" >
+      <card-select
+        className="{{`${selectedOption.id === item.id ? 'border-active' : 'border-option'}`}}"
+        isShowArrow="{{false}}"
+        option="{{item}}"
+        onTap="_onSelectOption"
+        title="Size"
+        description="{{item.size}}"/>
+    </view>
+  </view>
+</template>
+
+<template name="bottom-sheet-option">
+  <view class="border-bottom-gray">
+    <view class="flex p-medium">
+      <view>
+        <image
+          class="size-120 block radius-8px mb-2x-small radius-8px"
+          src="{{product.images[0]}}"
+        />
+      </view>
+      <view class="ml-medium">
+        <view class="mb-4x-small">
+          {{product.name}}
+        </view>
+        <view class="flex items-center mb-5x-small">
+          <text
+            class="font-bold mr-2x-small"
+            number-of-lines="{{1}}"
+          >
+            {{moneyFormatter(product.price)}}
+          </text>
+          <view
+            tiki:if="{{product.discount_rate}}"
+            class="text-white product-badge font-bold radius-8px px-4x-small py-5x-small"
+          >
+            {{`-${product.discount_rate}%`}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <template
+    is="{{type}}"
+    data="{{selectedOption, product}}"/>
+
+</template>
+
+<view>
+  <block tiki:if="{{isShowOption}}">
+    <bottom-sheet
+      maskClose="{{false}}"
+      onClose="_onClose"
+      onClick="_onClick"
+      title="Select option"
+      buttonTitle="Done"
+      buttonShape="pill"
+      distanceFromTop="{{100}}">
+      <template
+        is="bottom-sheet-option"
+        data="{{product, type, formattedPrice, selectedOption}}" />
+    </bottom-sheet>
+  </block>
+</view>

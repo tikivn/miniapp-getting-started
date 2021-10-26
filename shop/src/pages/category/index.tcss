@@ -1,0 +1,4 @@
+.category-subs-list {
+  height: 100vh;
+  overflow-y: auto;
+}

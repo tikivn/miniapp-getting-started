@@ -1,0 +1,47 @@
+<modal
+  class="modal"
+  show="{{isShow}}"
+  mask="{{true}}"
+  zIndex="{{10}}"
+  onModalClose="_onHide"
+>
+  <view slot="header">
+    <view
+      tiki:for="{{headers}}"
+      tiki:key="*this"
+      class="text-center text-large font-bold"
+    >
+      {{item}}
+    </view>
+  </view>
+  <view
+    tiki:for="{{descriptions}}"
+    tiki:key="*this"
+    class="text-center"
+  >
+    {{item}}
+    </view>
+  <view slot="footer">
+    <view class="modal-buttons flex w-full px-medium mt-2x-small">
+      <button
+        shape="pill"
+        tiki:if="{{leftButton}}"
+        class="w-full"
+        size="large"
+        onTap="_onClickLeftButton"
+        type="outline"
+      >
+        {{leftButton}}
+      </button>
+      <button
+        shape="pill"
+        tiki:if="{{rightButton}}"
+        class="w-full"
+        size="large"
+        onTap="_onClickRightButton"
+      >
+        {{rightButton}}
+      </button>
+    </view>
+  </view>
+</modal>

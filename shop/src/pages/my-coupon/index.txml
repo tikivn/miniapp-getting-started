@@ -1,0 +1,8 @@
+<view class="px-medium">
+  <image
+    tiki:for="{{coupons}}"
+    class="w-full mt-medium"
+    src="/assets/images/coupon.png"
+    mode="widthFix"
+  />
+</view>

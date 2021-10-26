@@ -1,0 +1,46 @@
+<import-sjs from="../../../utils/common.sjs" name="{statusFormatter}"></import-sjs>
+
+<view>
+  <view class="flex justify-between">
+    <view class="text-medium font-bold">Order tracking</view>
+    <view onTap="onMoveTrackingDetail" class="flex">
+      <view class="text-blue mr-2x-small">View detail</view>
+      <icon type="arrow_right" color="#1A94FF"/>
+    </view>
+  </view>
+
+  <view tiki:if="{{isLoading}}" class="bg-white mt-2x-small py-2x-small radius-8px">
+    <view class="px-medium">
+      <view class="py-2x-small skeleton skeleton-font-regular skeleton-50-width"></view>
+    </view>
+    <view class="px-medium py-2x-small">
+      <view class="skeleton w-full skeleton-button-large"></view>
+    </view>
+  </view>
+
+  <view tiki:else class="bg-white mt-2x-small py-2x-small radius-8px">
+    <view class="px-medium">
+      <view class="py-2x-small border-bottom-gray">Giaohangnhanh</view>
+    </view>
+
+    <view class="px-medium py-2x-small">
+      <steps
+        activeIndex="{{0}}"
+        direction="vertical"
+        items="{{orderSteps}}">
+        <view
+          slot="title_1"
+          class="text-base font-bold">
+            {{statusFormatter(orderSteps[0].status)}}
+        </view>
+      </steps>
+    </view>
+  </view>
+
+   <view class="mt-medium p-medium bg-white radius-8px">
+    <shipping-details
+      isLoading="{{isLoading}}"
+      buyer="{{order.buyer}}"
+      seller="{{order.seller}}"/>
+  </view>
+</view>

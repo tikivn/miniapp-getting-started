@@ -1,0 +1,35 @@
+<import-sjs from="../../utils/common.sjs" name="{moneyFormatter}"></import-sjs>
+
+<template name="loading">
+  <view>
+    <view class="mb-4x-small skeleton skeleton-font-regular skeleton-25-width"></view>
+    <view class="mb-4x-small skeleton skeleton-font-regular skeleton-50-width"></view>
+    <view class="mb-medium skeleton skeleton-font-regular skeleton-25-width"></view>
+  </view>
+</template>
+
+<template name="completed">
+  <view>
+    <view class="text-medium mb-2x-small">{{product.name}}</view>
+    <view class="flex items-center">
+      <view class="mr-2x-small text-medium-2x-small font-bold">
+        {{moneyFormatter(product.price)}}
+      </view>
+      <view
+        tiki:if="{{product.discount_rate}}"
+        class="bg-red height-fit-content radius-8px py-5x-small px-4x-small text-white font-bold text-x-small">
+        {{`-${product.discount_rate}%`}}
+      </view>
+    </view>
+    <view class="text-gray60 line-through mb-medium">
+      {{product.discount_rate ? moneyFormatter(product.list_price) : ''}}
+    </view>
+  </view>
+</template>
+
+<view>
+  <template 
+    is="{{isLoading ? 'loading' : 'completed'}}"
+    data="{{product, isLoading}}"/>
+</view>
+

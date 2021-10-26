@@ -1,0 +1,15 @@
+.onboarding {
+  height: 80%;
+}
+.onboarding .t-carousel-indicator {
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0;
+}
+
+.footer-onboard {
+  flex: 1;
+  background: var(--white);
+  padding-bottom: 32px;
+}

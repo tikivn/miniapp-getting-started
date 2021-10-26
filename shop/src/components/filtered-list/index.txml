@@ -1,0 +1,19 @@
+<view className="{{className}}">
+  <view
+    tiki:if="{{formattedSelectedFilters.length}}"
+    class="category-detail-selected flex bg-gray10 py-small px-medium hide-scroll-bar">
+    <view
+      tiki:for="{{formattedSelectedFilters}}"
+      tiki:key="key"
+      class="category-detail-selected-item {{index === formattedSelectedFilters.length - 1 ? 'pr-medium' : 'pr-2x-small'}}"
+    >
+      <chip
+        className="bg-white"
+        content="{{item.value}}"
+        suffixImage="/assets/icons/close.svg"
+        data-item="{{item}}"
+        onRightClick="_onRemoveFilter"
+      />
+    </view>
+  </view>
+</view>

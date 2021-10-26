@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Category",
+  "usingComponents": {
+    "category-nav": "components/category-nav/index",
+    "sub-category-section": "components/sub-category-section/index"
+  }
+}

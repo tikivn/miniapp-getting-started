@@ -1,0 +1,22 @@
+<template name="loading">
+  <view onTap="_onTap" class="flex flex-col items-center status-order">
+    <view class="relative p-small mb-4x-small">
+      <view class="skeleton size-32"></view>
+    </view>
+    <view class="skeleton skeleton-font-regular skeleton-50-width"></view>
+  </view>
+</template>
+
+<template name="completed">
+  <view onTap="_onTap" class="flex flex-col items-center status-order">
+    <view class="relative p-small mb-4x-small">
+      <image class="block size-32" src="{{src}}" />
+      <view tiki:if="{{value}}" class="badge-orders bg-red text-center font-bold radius-8px text-white text-x-small">
+        {{value}}
+      </view>
+    </view>
+    <view class="text-center">{{text}}</view>
+  </view>
+</template>
+
+<template is="{{isLoading ? 'loading' : 'completed'}}" data="{{src, value, text}}" />

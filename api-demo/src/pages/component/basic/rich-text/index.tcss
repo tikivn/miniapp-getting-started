@@ -14,3 +14,22 @@
 .nodes {
   white-space: pre-wrap;
 }
+
+/* Rich Text */
+.rt-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.rt-container .rt-image {
+  margin: 0 auto;
+}
+
+.even {
+  background-color: var(--gray20);
+}
+
+.col {
+  padding: 4px;
+  font-size: 12px;
+}

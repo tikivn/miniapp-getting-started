@@ -1,12 +1,19 @@
 <block-header title="Usage" description="Rich text"/>
 <view class="container">
   <view class="block">
-    <view>Nodes:</view>
-    <text class="nodes">
-      {{nodesText}}
-    </text>
-
-    <view class="mt-small">Result:</view>
     <rich-text nodes="{{nodes}}" />
+    
+    <button class="mt-small" size="small" onTap="onShowNode">View nodes</button>
+    <view class="nodes mt-small" tiki:if="{{showNodesText}}">
+      {{nodesText}}
+    </view>
+  </view>
+  <view class="block">
+    <rich-text nodes="{{htmlNodes}}" />
+
+    <button class="mt-small" size="small" onTap="onShowHtmlNode">View nodes</button>
+    <view class="nodes mt-small" tiki:if="{{showHtmlNodesText}}">
+      {{htmlNodesText}}
+    </view>
   </view>
 </view>

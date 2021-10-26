@@ -1,0 +1,44 @@
+<import-sjs from="../../utils/common.sjs" name="{statusFormatter, moneyFormatter}"></import-sjs>
+
+<template name="loading">
+  <view class="bg-white radius-8px p-medium">
+    <view class="skeleton skeleton-font-medium skeleton-25-width radius-16px"></view>
+    <view class="mt-small px-medium">
+      <view class="flex items-center py-2x-small border-bottom-gray">
+        <view class="size-40 skeleton"></view>
+        <view class="ml-2x-small skeleton-75-width">
+          <view class="mb-4x-small skeleton skeleton-font-regular skeleton-50-width"></view>
+          <view class="skeleton skeleton-font-regular skeleton-50-width"></view>
+        </view>
+      </view>
+    </view>
+    <view class="skeleton w-full skeleton-font-regular"></view>
+  </view>
+</template>
+
+<template name="completed">
+  <view class="bg-white radius-8px p-medium">
+    <text class="status-{{order.status}} px-small py-4x-small radius-16px">{{statusFormatter(order.status)}}</text>
+
+    <view class="mt-small px-medium">
+      <view class="flex items-center py-2x-small border-bottom-gray">
+        <image class="block size-40" src="{{order.product.thumbnail}}" />
+        <view class="ml-2x-small">
+          <view class="font-bold">{{order.product.name}}</view>
+          <view class="text-small text-gray60">
+            {{order.product.total}} products | {{moneyFormatter(order.product.price)}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="flex justify-between px-medium py-small">
+      <view>Payment method</view>
+      <view class="font-bold">{{order.method}}</view>
+    </view>
+  </view>
+</template>
+
+<view onTap="_onTap">
+  <template is="{{isLoading ? 'loading' : 'completed'}}" data="{{order}}" />
+</view>

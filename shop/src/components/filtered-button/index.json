@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "chip": "@tiki.vn/tini-ui/es/chip/index"
+  }
+}

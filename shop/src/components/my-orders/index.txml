@@ -1,0 +1,20 @@
+<view class="bg-white px-medium py-medium radius-8px">
+  <view class="flex justify-between py-4x-small">
+    <view class="text-medium font-bold">My orders</view>
+    <view class="flex items-center">
+      <view class="text-blue mr-2x-small" onTap="onMoveOrderManagement">View More</view>
+      <icon type="arrow_right" color="#1A94FF"/>
+    </view>
+  </view>
+
+  <view class="px-medium pt-medium flex justify-around">
+    <order-icon
+      tiki:for="{{orderIcons}}"
+      isLoading="{{isLoading}}"
+      tab="{{index}}"
+      onTap="onMoveOrderManagement" 
+      value="{{numOrders[item.key]}}"
+      src="{{item.src}}" 
+      text="{{item.value}}"/>
+  </view>
+</view>

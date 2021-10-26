@@ -1,0 +1,55 @@
+<view>
+  <view class="flex justify-between bg-white py-small px-medium">
+    <filter
+      isShow="{{isShowFilter}}"
+      onShow="showFilter"
+      onClose="hideFilter"
+      filters="{{filters}}"
+      selectedFilters="{{selectedFilters}}"
+      onSelect="onSelectFilter"
+    />
+    <sort
+      isShow="{{isShowSort}}"
+      onClose="hideSort"
+      onShow="showSort"
+      sorts="{{sorts}}"
+      selectedSort="{{selectedSort}}"
+      onSelect="onSelectSort"
+    />
+  </view>
+
+  <filtered-list
+    selectedFilters="{{selectedFilters}}"
+    onRemoveFilter="removeFilter"
+  />
+
+  <block tiki:if="{{!isLoading && products.length === 0}}">
+    <empty
+      showBottomDivider
+      className="mt-medium"
+      title="No result!"
+      description="Please try another filter options"
+    />
+    <view class="p-medium bg-white">
+      <view class="font-bold text-medium mb-small">Other products</view>
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{otherProducts}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+  </block>
+  <block tiki:else>
+    <view class="p-medium bg-white">
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{8}}"
+        products="{{products}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+  </block>
+
+  
+</view>

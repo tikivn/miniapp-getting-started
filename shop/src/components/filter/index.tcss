@@ -1,0 +1,42 @@
+.filter-content-section {
+  border-bottom: 8px solid var(--gray10);
+}
+
+.filter-chip-list {
+  margin-right: -8px;
+}
+
+.filter-chip.tu-chip {
+  min-width: calc((100vw - 36px) / 7);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.filter-chip-color {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.filter-input .t-input-wrap {
+  padding-right: 30px;
+}
+
+.filter-input-action {
+  top: calc(25px + (100% - 25px) / 2);
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.filter-input-action .vertical-divider {
+  height: calc((100% - 40px));
+}
+
+.filter-footer {
+  padding-bottom: calc(var(--safe-area-inset-bottom) + 8px);
+}
+
+.filter-chip-color-active {
+  border: 1px solid var(--brand);
+}

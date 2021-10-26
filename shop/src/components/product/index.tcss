@@ -1,0 +1,16 @@
+.product-badge {
+  font-size: 10px;
+  background: #ff424e;
+}
+
+.product-old-price {
+  font-size: 10px;
+  text-decoration-line: line-through;
+}
+
+.product image,
+.product-image-skeleton {
+  width: auto;
+  height: 0;
+  padding-bottom: 100%;
+}

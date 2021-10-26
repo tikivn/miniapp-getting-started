@@ -1,0 +1,14 @@
+<import-sjs from="../../../utils/common.sjs" name="{statusFormatter}"></import-sjs>
+
+<view>
+  <section title="General info">
+    <view>
+      <row-info 
+        isLoading="{{isLoading}}"
+        tiki:for="{{rows}}"
+        title="{{item.value}}"
+        description="{{statusFormatter(order[item.key])}}"
+        isBorder="{{index !== rows.length - 1}}"/>
+    </view>
+  </section>
+</view>
