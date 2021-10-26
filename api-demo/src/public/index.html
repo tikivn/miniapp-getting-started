@@ -167,6 +167,22 @@
         }
       });
     }
+    
+    function getAddress() {
+      my.getAddress({
+        success: function (res) {
+          alert(JSON.stringify(res));
+        }
+      })
+    }
+
+    function choosePhoneContact() {
+      my.choosePhoneContact({
+        success: function (res) {
+          alert(JSON.stringify(res));
+        }
+      }) 
+    }
 
     window.onmessage = (e) => {
       alert('onmessage');
@@ -178,6 +194,8 @@
     <div class="t-view page-description">Webview API</div>
     <div class="t-view page-section">
       <div class="t-view page-section-demo">
+        <a role="button" onclick="getAddress()" class="t-button t-button-primary">getAddress</a>
+        <a role="button" onclick="choosePhoneContact()" class="t-button t-button-primary">choosePhoneContact</a>
         <a role="button" onclick="myalert()" class="t-button t-button-primary">alert</a>
         <a role="button" onclick="setStorage()" class="t-button t-button-primary">setStorage</a>
         <a role="button" onclick="getStorage()" class="t-button t-button-primary">getStorage</a>
