@@ -1,7 +1,0 @@
-<view class="flex flex-col justify-center items-center bg-white">
-  <image class="empty-img block" mode="widthFix" src="/assets/images/empty-result.png" />
-  <view class="font-bold text-medium mt-large">
-    No result!
-  </view>
-  <view class="mt-4x-small">{{text}}</view>
-</view>
