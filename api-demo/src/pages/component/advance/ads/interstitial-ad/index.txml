@@ -3,5 +3,7 @@
   <view class="block-content" style="display: flex; flex-direction: column">
     <button type="solid" onTap="onShowAd">Show</button>
     <button type="solid" onTap="onHideAd">Hide</button>
+
   </view>
+
 </view>

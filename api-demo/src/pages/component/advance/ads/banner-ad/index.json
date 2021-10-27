@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "interstitial-ad",
+  "defaultTitle": "banner-ad",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }

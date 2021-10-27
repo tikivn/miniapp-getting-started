@@ -316,6 +316,10 @@ const advancedComponents = [
         name: 'Interstitial Ad',
         path: '/pages/component/advance/ads/interstitial-ad/index',
       },
+      {
+        name: 'Banner Ad',
+        path: '/pages/component/advance/ads/banner-ad/index',
+      },
     ],
   },
 ];

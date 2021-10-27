@@ -1,0 +1,5 @@
+<view class="view-container">
+  <block-header title="Usage" description="Create Banner Ad" />
+
+  <ad class="banner-ad" />
+</view>
