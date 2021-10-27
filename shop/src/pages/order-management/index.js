@@ -14,16 +14,18 @@ Page({
     orders: [],
   },
   onTabClick({ index, tabsName }) {
-    this.loadData();
     this.setData({
       [tabsName]: index,
     });
+    this.loadData();
   },
   onChangeTab({ index, tabsName }) {
-    this.loadData();
-    this.setData({
-      [tabsName]: index,
-    });
+    if (!this.data.isLoading) {
+      this.setData({
+        [tabsName]: index,
+      });
+      this.loadData();
+    }
   },
 
   onMoveOrderDetail() {
