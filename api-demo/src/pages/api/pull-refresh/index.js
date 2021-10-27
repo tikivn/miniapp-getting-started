@@ -1,4 +1,9 @@
 Page({
+  onLoad() {
+    my.setBackgroundColor({ backgroundColor: '#ff0000' });
+    my.setBackgroundTextStyle({ textStyle: 'light' });
+    my.setCanPullDown({ setCanPullDown: true });
+  },
   onStartPullToRefresh() {
     my.startPullDownRefresh();
   },

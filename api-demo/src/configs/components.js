@@ -309,6 +309,15 @@ const advancedComponents = [
       },
     ],
   },
+  {
+    name: 'Ads',
+    components: [
+      {
+        name: 'Interstitial Ad',
+        path: '/pages/component/advance/ads/interstitial-ad/index',
+      },
+    ],
+  },
 ];
 
 const flatten = (arr) => arr.reduce((rs, item) => rs.concat(item.components), []);

@@ -1,0 +1,7 @@
+<view class="view-container">
+  <block-header title="Usage" description="Create Interstitial Ad" />
+  <view class="block-content" style="display: flex; flex-direction: column">
+    <button type="solid" onTap="onShowAd">Show</button>
+    <button type="solid" onTap="onHideAd">Hide</button>
+  </view>
+</view>

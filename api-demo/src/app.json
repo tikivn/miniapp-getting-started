@@ -92,6 +92,7 @@
     "pages/component/advance/navigation/pagination/index",
     "pages/component/advance/data-visualization/list/index",
     "pages/component/advance/feedback/bottom-sheet/index",
+    "pages/component/advance/ads/interstitial-ad/index",
     "pages/component/advance/popup/index",
     "pages/component/advance/modal/index",
     "pages/component/template/cart-detail/index",

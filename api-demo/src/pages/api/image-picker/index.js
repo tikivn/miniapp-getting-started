@@ -6,9 +6,16 @@ Page({
     my.chooseImage({
       count: 5,
       success: (res) => {
-        console.log(res);
-        this.setData({
-          imgs: res.filePaths,
+        my.previewImage({
+          urls: res.filePaths,
+          enablesavephoto: true,
+          enableShowPhotoDownload: true,
+          success: (res) => {
+            console.log('success', res);
+          },
+          fail: (err) => {
+            console.log('fail', err);
+          },
         });
       },
       fail: (e) => {
