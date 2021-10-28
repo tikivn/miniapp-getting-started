@@ -1,0 +1,56 @@
+<template name="variant-format">
+  <block-variant header="Variant" title="1. Format" description="Position & Theme">
+    <view class="mt-48 bg-white" style="height: 55vh">
+      <tooltip class="mt-48" show theme="light" content="Text Light">
+        <view slot="operation"></view>
+      </tooltip>
+
+      <tooltip class="mt-48" show theme="light" onClose="onClose" showCloseIcon>
+        <view slot="content">
+          Text Light With Close
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+
+      <tooltip class="mt-48" show theme="light">
+        <view slot="content">
+          Top Light
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+
+      <tooltip position="bottom" show theme="light">
+        <view slot="content">
+          Bottom Light
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+
+      <tooltip class="mt-48" show position="bottom" theme="dark">
+        <view slot="content">
+          Text Dark
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+
+      <tooltip class="mt-48" show position="bottom" theme="dark" onClose="onClose" showCloseIcon>
+        <view slot="content">
+          Text Dark With Close
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+
+      <tooltip class="mt-48" show position="bottom" position="bottom" theme="dark">
+        <view slot="content">
+          Bottom Dark
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+    </view>
+  </block-variant>
+</template>
+
+<view class="page">
+  <block-header title="Usage" description="Tooltips are elements that display informative text as tips or tricks" />
+  <template is="variant-format" />
+</view>

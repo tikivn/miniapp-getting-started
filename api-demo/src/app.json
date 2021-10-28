@@ -85,6 +85,7 @@
     "pages/component/advance/form/date-picker/index",
     "pages/component/advance/form/slider/index",
     "pages/component/advance/form/chip/index",
+    "pages/component/advance/form/tooltip/index",
     "pages/component/advance/navigation/avatar/index",
     "pages/component/advance/navigation/badge/index",
     "pages/component/advance/navigation/sidebar/index",
