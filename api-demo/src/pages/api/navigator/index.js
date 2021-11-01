@@ -1,4 +1,10 @@
 Page({
+  switchTab() {
+    my.switchTab({
+      url: "pages/api/index"
+    })
+  },
+
   navigateTo() {
     my.navigateTo({
       url: "pages/api/navigator/navigator-lvl2/index",
