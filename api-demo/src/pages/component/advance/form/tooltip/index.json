@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Tooltip",
+  "usingComponents": {
+    "tooltip": "@tiki.vn/tini-ui/es/tooltip/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}
