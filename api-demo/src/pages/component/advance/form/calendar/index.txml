@@ -1,0 +1,42 @@
+<template name="variant-format">
+  <block-variant header="Variant" title="1. Header" description="Default, Title with fast navigation & Time only">
+    <view class="mt-medium">
+      <view class="font-bold pb-2x-small border-bottom ">1.1. Header - Default</view>
+      <view class="mt-2x-small">
+        <calendar mode="single" header="month" />
+      </view>
+    </view>
+    <view class="mt-medium">
+      <view class="font-bold pb-2x-small border-bottom ">1.2. Header - Fast forward & back forward</view>
+      <view class="mt-2x-small">
+        <calendar mode="range" header="year" />
+      </view>
+    </view>
+    <view class="mt-medium">
+      <view class="font-bold pb-2x-small border-bottom ">1.2. Header - Fast forward & back forward</view>
+      <view class="mt-2x-small">
+        <calendar mode="timeOnly" />
+      </view>
+    </view>
+  </block-variant>
+</template><template name="variant-state">
+  <block-variant title="2. Content" description="Default & With sub content.">
+    <view class="mt-medium">
+      <view class="font-bold pb-2x-small border-bottom ">2.1. Content - Default</view>
+      <view class="mt-2x-small">
+        <calendar mode="single" onSelect="onSelect" onChange="onChange" />
+      </view>
+    </view>
+    <view class="mt-medium">
+      <view class="font-bold pb-2x-small border-bottom ">2.2. Content - With sub content</view>
+      <view class="mt-2x-small">
+        <calendar tagData="{{tagData}}" mode="single" header="year" onSelect="onSelect" onChange="onChange" />
+      </view>
+    </view>
+  </block-variant>
+</template>
+<view class="page">
+  <block-header title="Usage" description="Calendar allow users to overview and select a start and end time." />
+  <template is="variant-format" data="{{tagData}}" />
+  <template is="variant-state" data="{{tagData}}" />
+</view>

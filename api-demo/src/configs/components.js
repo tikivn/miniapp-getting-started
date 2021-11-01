@@ -243,6 +243,10 @@ const advancedComponents = [
         path: '/pages/component/advance/form/chip/index',
       },
       {
+        name: 'Calendar',
+        path: '/pages/component/advance/form/calendar/index',
+      },
+      {
         name: 'Tooltip',
         path: '/pages/component/advance/form/tooltip/index',
       },
