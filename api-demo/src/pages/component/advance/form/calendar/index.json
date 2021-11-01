@@ -1,0 +1,9 @@
+{
+  "defaultTitle": "Calendar",
+  "usingComponents": {
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "calendar": "@tiki.vn/tini-ui/es/calendar/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}

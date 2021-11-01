@@ -242,6 +242,10 @@ const advancedComponents = [
         name: 'Chip',
         path: '/pages/component/advance/form/chip/index',
       },
+      {
+        name: 'Calendar',
+        path: '/pages/component/advance/form/calendar/index',
+      },
     ],
   },
   {
