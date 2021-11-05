@@ -95,6 +95,10 @@ const mediaImageAPIList = [
     path: '/pages/api/compress-image/index',
   },
   {
+    name: 'Crop Image',
+    path: '/pages/api/crop-image/index',
+  },
+  {
     name: 'Save Image',
     path: '/pages/api/save-image/index',
   },

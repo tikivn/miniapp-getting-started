@@ -1,0 +1,12 @@
+<view class="page-container">
+  <image-cropper id="cropper-1" class="cropper" src={{imagePath}} aspectRatio={{ratio}} onSave="onCropperFinish" />
+  <view class="cropper-footer">
+    <view class="cropper-footer-ratio">
+      <image class="ratio-icon" mode="center" src="/images/ratio_34.png" onTap="onChangeRatio" data-ratio="3:4"></image>
+      <image class="ratio-icon" mode="center" src="/images/ratio_11.png" onTap="onChangeRatio" data-ratio="1:1"></image>
+      <image class="ratio-icon" mode="center" src="/images/ratio_43.png" onTap="onChangeRatio" data-ratio="4:3"></image>
+    </view>
+    <tu-button class="save-button" shape="pill" type="solid" onTap="onChangePhoto">Album</tu-button>
+    <tu-button class="save-button" shape="pill" type="solid" onTap="onSave">Save</tu-button>
+  </view>
+</view>

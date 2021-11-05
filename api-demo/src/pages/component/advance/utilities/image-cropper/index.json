@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "image-cropper",
+  "usingComponents": {
+    "block-header": "components/block-header/index",
+    "tu-button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
+}
