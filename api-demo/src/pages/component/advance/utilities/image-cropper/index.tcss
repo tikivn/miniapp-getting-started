@@ -1,0 +1,45 @@
+page {
+  height: 100vh;
+  background-color: #27272A;
+}
+
+.page-container {
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+  flex-direction: column;
+  background-color: #27272A;
+}
+
+.cropper {
+  background-color: #000000;
+  width: 100%;
+  height:  calc(100vh - 56px - var(--safe-area-inset-bottom));
+}
+
+.cropper-footer {
+  margin: 0;
+  flex-direction: row;
+  display: flex;
+  height: 56px;
+  background-color: #27272A;
+  padding: 0 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cropper-footer-ratio {
+  flex-direction: row;
+  display: flex;
+}
+
+.ratio-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.save-button {
+  height: 40px;
+  width: 80px;
+}

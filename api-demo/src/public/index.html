@@ -184,6 +184,20 @@
       }) 
     }
 
+    function createInterstitialAd() {
+      alert('aa' + my.createInterstitialAd);
+      const ad = my.createInterstitialAd();
+     
+      ad.load();
+      ad.onLoad(() => {
+        alert('Ad is loaded')
+        ad.show();
+      })
+      ad.onClose(() => {
+        alert('Ad is closed')
+      })
+    }
+
     window.onmessage = (e) => {
       alert('onmessage');
       alert(JSON.stringify(e.data));
@@ -211,6 +225,7 @@
         <a role="button" onclick="postMessage()" class="t-button t-button-primary">postMessage</a>
         <a role="button" onclick="getUserInfo()" class="t-button t-button-primary">getUserInfo</a>
         <a role="button" onclick="getSystemInfo()" class="t-button t-button-primary">getSystemInfo</a>
+        <a role="button" onclick="createInterstitialAd()" class="t-button t-button-primary">createInterstitialAd</a>
       </div>
       <img id="previewImg" />
     </div>
