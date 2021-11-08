@@ -99,7 +99,8 @@
     "pages/component/advance/popup/index",
     "pages/component/advance/modal/index",
     "pages/component/template/cart-detail/index",
-    "pages/component/basic/webview/index"
+    "pages/component/basic/webview/index",
+    "pages/component/basic/game-view/index"
   ],
   "tabBar": {
     "items": [

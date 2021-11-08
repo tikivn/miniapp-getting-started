@@ -43,6 +43,10 @@ const basicComponents = [
         name: 'Web View',
         path: '/pages/component/basic/webview/index',
       },
+       {
+        name: 'Game View',
+        path: '/pages/component/basic/game-view/index',
+      },
     ],
   },
   {
