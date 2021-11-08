@@ -267,6 +267,10 @@ const advancedComponents = [
         name: 'Modal',
         path: '/pages/component/advance/modal/index',
       },
+      {
+        name: 'Epub Reader',
+        path: '/pages/component/advance/epub-reader/index',
+      },
     ],
   },
   {
