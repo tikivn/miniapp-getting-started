@@ -334,6 +334,15 @@ const advancedComponents = [
       },
     ],
   },
+  {
+    name: 'Utilities',
+    components: [
+      {
+        name: 'Image Cropper',
+        path: '/pages/component/advance/utilities/image-cropper/index',
+      },
+    ],
+  },
 ];
 
 const flatten = (arr) => arr.reduce((rs, item) => rs.concat(item.components), []);
