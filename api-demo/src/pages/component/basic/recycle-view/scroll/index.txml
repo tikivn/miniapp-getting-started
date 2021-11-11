@@ -1,0 +1,32 @@
+<view>
+  <button class="margin-4" size="small" onTap="scrollToTop">scroll to top</button>
+  <button class="margin-4" size="small" onTap="scrollTo1000">scroll to 1000</button>
+  <view class="center margin-4">
+    <text class="label">Align</text>
+    <radio-group class="center" onChange="changeAlign">
+      <label class="center margin-4" tiki:for="{{aligns}}">
+        <radio value="{{item}}" />
+        <text class="margin-4">{{item}}</text>
+      </label>
+    </radio-group>
+  </view>
+  <view class="center margin-4">
+    <text class="label">Behavior</text>
+    <radio-group class="center" onChange="changeBehavior">
+      <label class="center margin-4" tiki:for="{{behaviors}}">
+        <radio value="{{item}}" />
+        <text class="margin-4">{{item}}</text>
+      </label>
+    </radio-group>
+  </view>
+</view>
+
+<recycle-view 
+  class="recycle"
+  style="height: 400px"
+  id="recycle"
+  totalCount="{{items.length}}" >
+  <recycle-item class="item" tiki:for="{{items}}">
+    {{item}}
+  </recycle-item>
+</recycle-view>

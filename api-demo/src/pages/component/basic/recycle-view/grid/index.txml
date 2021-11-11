@@ -1,0 +1,10 @@
+<recycle-view 
+  isGrid 
+  onEndReached="onEndReached"
+  listClassName="list" 
+  itemClassName="item" 
+  totalCount="{{items.length}}" >
+  <recycle-item tiki:for="{{items}}">
+    {{item}}
+  </recycle-item>
+</recycle-view>

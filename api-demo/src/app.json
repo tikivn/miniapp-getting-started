@@ -73,6 +73,13 @@
     "pages/component/basic/slider/index",
     "pages/component/basic/map/index",
     "pages/component/basic/canvas/index",
+    "pages/component/basic/webview/index",
+    "pages/component/basic/game-view/index",
+    "pages/component/basic/recycle-view/index",
+    "pages/component/basic/recycle-view/grid/index",
+    "pages/component/basic/recycle-view/list/index",
+    "pages/component/basic/recycle-view/placeholder/index",
+    "pages/component/basic/recycle-view/scroll/index",
     "pages/component/advance/actions/button/index",
     "pages/component/advance/actions/button-bar/index",
     "pages/component/advance/form/input/index",
@@ -100,10 +107,8 @@
     "pages/component/advance/utilities/image-cropper/index",
     "pages/component/advance/popup/index",
     "pages/component/advance/modal/index",
-    "pages/component/template/cart-detail/index",
-    "pages/component/basic/webview/index",
-    "pages/component/basic/game-view/index",
-    "pages/component/advance/epub-reader/index"
+    "pages/component/advance/epub-reader/index",
+    "pages/component/template/cart-detail/index"
   ],
   "tabBar": {
     "items": [

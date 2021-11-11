@@ -1,0 +1,23 @@
+<recycle-view 
+  totalCount="{{items.length}}"  
+  hasFooter
+  overscan="{{500}}"
+  onRangeChanged="onRangeChanged"
+  onScroll="onScroll"
+  onScrolling="onScrolling"
+  onReady="onRecycleReady"
+  onEndReached="onEndReached">
+  <recycle-item class="item" tiki:for="{{items}}">
+    <view style="height: {{item.height}}px">
+      {{item.index}}
+    </view>
+  </recycle-item>
+
+  <recycle-footer>
+    <view 
+      style="height: 40px; background: blue; color: white; text-align: center"
+      tiki:if="{{loading}}">
+      ...Loading
+    </view>
+  </recycle-footer>
+</recycle-view>

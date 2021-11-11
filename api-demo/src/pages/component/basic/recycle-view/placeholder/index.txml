@@ -1,0 +1,11 @@
+<recycle-view hasPlaceholder totalCount="{{items.length}}" >
+  <recycle-item class="item" tiki:for="{{items}}">
+    {{item}}
+  </recycle-item>
+
+  <recycle-placeholder>
+    <view class="item">
+      Placeholder
+    </view>
+  </recycle-placeholder>
+</recycle-view>

@@ -1,0 +1,14 @@
+.item {
+  height: 80px;
+  border: solid 1px blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list {
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 16px;
+}
