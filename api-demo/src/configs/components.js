@@ -215,6 +215,10 @@ const advancedComponents = [
         path: '/pages/component/advance/form/text-field/index',
       },
       {
+        name: 'PIN',
+        path: '/pages/component/advance/form/pin/index',
+      },
+      {
         name: 'Dropdown',
         path: '/pages/component/advance/form/dropdown/index',
       },

@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "PIN",
+  "usingComponents": {
+    "pin": "@tiki.vn/tini-ui/es/pin/index",
+    "block-variant": "components/block-variant/index"
+  }
+}
