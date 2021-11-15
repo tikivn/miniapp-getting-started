@@ -1,0 +1,26 @@
+<view class="{{className}}">
+  <template name="rating-loading">
+    <view class="skeleton skeleton-font-small skeleton-50-width"/>
+  </template>
+
+  <template name="rating-completed">
+    <view class="flex items-center">
+      <view class="flex items-center mr-4x-small">
+        <image
+          tiki:for="{{rate}}"
+          class="rate-star"
+          src="/assets/icons/star.svg"
+          mode="widthFix"
+        />
+      </view>
+      <text class="text-x-small text-gray60">
+        {{`(${votes})`}}
+      </text>
+    </view>
+  </template>
+
+  <template
+    is="rating-{{isLoading ? 'loading' : 'completed'}}"
+    data="{{rate, votes}}"
+  />
+</view>

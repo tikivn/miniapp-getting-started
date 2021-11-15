@@ -1,0 +1,67 @@
+<auth>
+  <view>
+    <shop-info
+      className="home-shop-info fixed"
+      isLoading="{{isLoading}}"
+      shop="{{shop}}"
+      follow="{{follow}}"
+      onTapFollowButton="followAndUnfollow"
+    />
+
+    <banners
+      tiki:if="{{isLoading || banners.length}}"
+      className="home-banners mb-medium"
+      isLoading="{{isLoading}}"
+      banners="{{banners}}"
+      onTapBanner="onTapBanner"
+    />
+
+    <view class="section-divider"/>
+
+    <view class="p-medium">
+      <section-title
+        title="Danh mục"
+        action="Xem tất cả"
+        onTapActionButton="goToCategoryPage"
+      />
+      <category-carousel
+        class="{{isLoading || categories.length > 1 ? 'home-category-multiple' : ''}}"
+        isLoading="{{isLoading}}"
+        categories="{{categories}}"
+        onTapCategory="goToSubCategoryPage"
+      />
+    </view>
+
+    <view class="section-divider"/>
+
+    <view class="p-medium">
+      <section-title
+        title="Nổi bật"
+        value="{{null}}"
+        onTapActionButton="goToProductPage"
+      />
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{featuredProducts.data}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+
+    <view class="section-divider"/>
+
+    <view class="p-medium">
+      <section-title
+        title="Mới"
+        value="newest"
+        onTapActionButton="goToProductPage"
+      />
+      <product-section
+        isLoading="{{isLoading}}"
+        skeletons="{{4}}"
+        products="{{newProducts.data}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+  </view>
+</auth>

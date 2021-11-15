@@ -1,0 +1,15 @@
+.category-list {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category-list-layout {
+  display: grid;
+  grid-template-columns: auto;
+  grid-row-gap: 28px;
+}
+
+.category-list-section
+  .category-section-horizontal-layout
+  .category-horizontal {
+  background-color: var(--white);
+}

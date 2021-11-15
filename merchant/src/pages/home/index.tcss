@@ -1,0 +1,15 @@
+.home-shop-info {
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.home-banners {
+  /* margin-top: calc(var(--tf-status-bar-height) + 108px); */
+  margin-top: calc(var(--tf-status-bar-height) + 80px);
+}
+
+.home-category-multiple {
+  margin-left: -16px;
+  margin-right: -16px;
+}

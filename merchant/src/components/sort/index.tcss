@@ -1,0 +1,24 @@
+.sort-item {
+  border-bottom: solid 1px var(--gray10);
+}
+
+.sort-item:last-child {
+  border-bottom: none;
+}
+
+.sort-item-active {
+  background-color: rgba(26, 148, 255, 0.1);
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.sort-item-active text {
+  font-weight: 700;
+}
+
+.sort .tu-chip:active,
+.sort .tu-chip:hover {
+  background-color: white !important;
+}

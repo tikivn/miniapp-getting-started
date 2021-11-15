@@ -1,0 +1,38 @@
+<view class="{{className}}">
+  <template name="category-section-loading">
+    <view
+      class="hide-scroll-bar {{isMultiple || (!isMultiple && type !== 'horizontal') ? 'category-section-vertical-layout' : 'category-section-horizontal-layout'}}"
+      style="{{!isMultiple && type === 'vertical-3-categories' ? '--categories-in-line: 3;' : ''}}"
+    >
+      <category
+        isLoading
+        className="px-2x-small"
+        tiki:for="{{skeletons}}"
+        type="vertical"
+      />
+    </view>
+  </template>
+
+  <template name="category-section-completed">
+    <view
+      class="hide-scroll-bar {{isMultiple || (!isMultiple && type !== 'horizontal') ? 'category-section-vertical-layout' : 'category-section-horizontal-layout'}}"
+      style="{{!isMultiple && type === 'vertical-3-categories' ? '--categories-in-line: 3;' : ''}}"
+    >
+      <block
+        tiki:for="{{categories}}"
+        tiki:key="id"
+      >
+        <category
+          category="{{item}}"
+          type="{{isMultiple || (!isMultiple && type !== 'horizontal') ? 'vertical' : 'horizontal'}}"
+          onTapCategory="_onTapCategory"
+        />
+      </block>
+    </view>
+  </template>
+
+  <template
+    is="category-section-{{isLoading ? 'loading' : 'completed'}}"
+    data="{{categories, skeletons, type, isMultiple}}"
+  />
+</view>

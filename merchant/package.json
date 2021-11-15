@@ -1,0 +1,40 @@
+{
+  "name": "miniapp-tini-merchant",
+  "version": "1.1.7",
+  "tiki": {
+    "appIdentifier": "vn.tiki.tini.merchant",
+    "buildNumber": 11,
+    "metadata": {
+      "permissions": [
+        "isFollowingSeller",
+        "followSeller",
+        "unfollowSeller"
+      ]
+    }
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint:es": "eslint src --ext .js",
+    "lint:style": "stylelint src/**/*.tcss src/*.tcss",
+    "lint:es:fix": "yarn run lint:es --fix",
+    "lint:style:fix": "yarn run lint:style --fix",
+    "lint:prettier": "prettier --write"
+  },
+  "dependencies": {
+    "@tiki.vn/tini-ui": "0.2.1-rc.3",
+    "query-string": "^7.0.1"
+  },
+  "devDependencies": {
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.3.2",
+    "prettier-eslint": "^13.0.0",
+    "prettier-stylelint": "^0.4.2",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
+  }
+}

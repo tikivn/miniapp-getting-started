@@ -1,0 +1,27 @@
+<view 
+  class="{{`${className}`}}"
+  onTap="_onTap"
+>
+  <view class="search-bar">
+    <icon
+      class="search-icon"
+      type="search"
+      color="#808089"
+    />
+    <input
+      class="search-input"
+      placeholder="{{placeholder}}"
+      value="{{value}}"
+      focus="{{false}}"
+      onInput="onInput"
+      onConfirm="onConfirm"
+    />
+    <view
+      tiki:if="{{value}}"
+      class="close-icon"
+      catchTap="onClear"
+    >
+      <icon type="close" color="#808089" />
+    </view>
+  </view>
+</view>

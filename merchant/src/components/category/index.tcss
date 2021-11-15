@@ -1,0 +1,22 @@
+.category-logo,
+.skeleton-category-logo {
+  width: var(--category-image-width, 40px);
+  height: var(--category-image-width, 40px);
+  border-radius: 40%;
+}
+
+.skeleton-category-vertical-names {
+  width: calc(100% - 10px);
+}
+
+.category-vertical-name {
+  word-break: break-word;
+}
+
+.category-horizontal {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category-horizontal-skeleton {
+  height: 56px;
+}

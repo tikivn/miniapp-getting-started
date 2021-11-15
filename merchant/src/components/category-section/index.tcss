@@ -1,0 +1,17 @@
+.category-section-vertical-layout {
+  --category-image-width: 48px;
+
+  display: grid;
+  grid-template-columns: repeat(var(--categories-in-line, 4), 1fr);
+  grid-row-gap: 28px;
+}
+
+.category-section-horizontal-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 50%));
+  grid-column-gap: 8px;
+}
+
+.category-section-vertical-layout .category {
+  padding: 0 8px;
+}
