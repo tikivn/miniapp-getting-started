@@ -1,0 +1,79 @@
+<view>
+  <view class="search-bar px-medium pb-2x-small">
+    <search-bar 
+      onInput="onChangeSearchInput" 
+      onConfirm="onConfirm" 
+      onClear="clearSearchInput" 
+      value="{{searchTerm}}" 
+      placeholder="Tìm kiếm tại cửa hàng này" />
+  </view> 
+  <view class="bg-white">
+    <view tiki:if="{{status === LOADING_STATUS.INITIAL && recentKeys.length > 0}}" class="py-medium mt-2x-small">
+      <view class="flex mb-small px-medium py-4x-small items-center justify-between">
+        <view class="text-medium font-bold">Tìm kiếm gần đây</view>
+        <view onTap="removeAllKeySearch" class="text-blue">Xóa tất cả</view>
+      </view>
+      <view 
+        tiki:for="{{recentKeys}}"
+        class="px-medium flex justify-between py-2x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}"
+        data-key="{{item}}"
+        onTap="onClickKeySearch"
+      >
+        <view>
+          {{item}}
+        </view>
+        <view data-item="{{item}}" catchTap="removeKeySearch">
+          <icon type="close" color="#808089"/>
+        </view>
+      </view>
+    </view>
+    <view tiki:if="{{status === LOADING_STATUS.INITIAL && recentKeys.length > 0}}" class="section-divider"/>
+
+    <view tiki:if="{{status === LOADING_STATUS.LOADING}}" class="mt-large app-loading mx-auto" />
+
+    <view class="mb-2x-small">
+      <view class="px-medium mb-2x-small">
+        <view class="bg-white search-sort-button {{isScrollUp && isStickSortButton ? 'search-sort-button-stick' : ''}}">
+          <sort
+            tiki:if="{{status !== LOADING_STATUS.ERROR && status !== LOADING_STATUS.INITIAL && status !== LOADING_STATUS.LOADING }}"
+            className="w-full py-small"
+            sorts="{{sorts}}"
+            selectedSort="{{selectedSort}}"
+            onSelect="onSelectSort"
+          />
+        </view>
+        <empty
+          tiki:if="{{status === LOADING_STATUS.ERROR}}"
+          className="pt-large mt-4x-small"
+          title="No result!"
+          description="Please try another search keywords"
+        />
+        <product-section
+          tiki:if="{{status !== LOADING_STATUS.ERROR && status !== LOADING_STATUS.LOADING && status !== LOADING_STATUS.INITIAL}}"
+          className="py-2x-small"
+          products="{{products}}"
+          onTapProduct="addProductToHistory"
+        />
+      </view>
+    </view>
+  </view>
+  <view 
+    tiki:if="{{status === LOADING_STATUS.INITIAL || status === LOADING_STATUS.ERROR}}"
+    class="p-medium bg-white mb-2x-small">
+    <view class="mb-small font-bold text-medium">Sản phẩm phổ biến</view>
+    <product-section
+      isLoading="{{isLoading}}"
+      skeletons="{{4}}"
+      products="{{otherProducts}}"
+      onTapProduct="onTapProduct"
+    />
+  </view>
+
+  <product-section
+    tiki:if="{{status === LOADING_STATUS.LOAD_MORE}}"
+    class="mt-medium p-medium"
+    isLoading
+    skeletons="{{2}}"
+  />
+  
+</view>

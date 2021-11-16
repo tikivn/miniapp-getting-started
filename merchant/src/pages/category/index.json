@@ -1,0 +1,9 @@
+{
+  "pullRefresh": true,
+  "defaultTitle": " ",
+  "usingComponents": {
+    "product-section": "components/product-section/index",
+    "category-list": "components/category-list/index",
+    "sort": "components/sort/index"
+  }
+}

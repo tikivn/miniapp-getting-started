@@ -1,0 +1,68 @@
+<import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
+
+<view class="{{className}} bg-white w-full">
+  <template name="shop-info-completed">
+    <view class="shop-info-header navigation-bar pl-medium pb-small">
+      <view class="mr-2x-small">
+        <image
+          class="shop-info-logo mr-2x-small"
+          src="{{shop.logo || '/assets/images/shop-logo.png'}}"
+          mode="widthFix"
+        />
+      </view>
+      <view class="flex flex-col">
+        <text
+          class="font-bold text-medium"
+          number-of-lines="{{1}}"
+        >
+          {{shop.name}}
+        </text>
+        <text
+          tiki:if="{{follow.following.total_follower}}"
+          number-of-lines="{{1}}"
+        >
+          {{`${numberFormatter(follow.following.total_follower, "")} theo dõi`}}
+        </text>
+      </view>
+    </view>
+
+    <!-- <view class="flex items-center px-medium mt-small mb-medium">
+      <button
+        class="flex-grow mr-2x-small"
+        size="medium"
+        shape="pill"
+        type="{{follow.is_followed ? 'outline' : 'solid'}}"
+        onTap="_onTapFollowButton"
+      >
+        
+        {{follow.is_followed ? 'Đã theo' : 'Theo dõi'}}
+      </button>
+      <button
+        size="medium"
+        shape="circle"
+        type="outline"
+        iconName="chat"
+      />
+    </view> -->
+  </template>
+  
+  <template name="shop-info-loading">
+    <view class="shop-info-header navigation-bar pl-medium pb-small">
+      <view class="shop-info-logo-skeleton skeleton mr-2x-small"/>
+      <view class="flex flex-col flex-grow">
+        <view class="skeleton skeleton-font-medium skeleton-100-width mb-5x-small"/>
+        <view class="skeleton skeleton-font-medium skeleton-80-width "/>
+      </view>
+    </view>
+
+    <!-- <view class="flex items-center px-medium mt-small mb-medium">
+      <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-85-width flex-grow mr-2x-small"/>
+      <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-15-width"/>
+    </view> -->
+  </template>
+
+  <template
+    is="shop-info-{{isLoading ? 'loading' : 'completed'}}"
+    data="{{shop, follow}}"
+  />
+</view>

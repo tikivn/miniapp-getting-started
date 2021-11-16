@@ -1,0 +1,10 @@
+.shop-info-logo,
+.shop-info-logo-skeleton {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.shop-info-header {
+  padding-top: calc(var(--tf-status-bar-height) + 12px);
+}

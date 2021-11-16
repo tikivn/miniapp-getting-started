@@ -1,0 +1,31 @@
+  <view
+    tiki:if="{{isLoading || categories.length}}"
+    class="category-list px-2x-small bg-gray10 radius-8px {{categories[0].length <= 2 ? 'py-medium' : 'py-large'}} {{className}}"
+  >
+    <view class="flex flex-col items-center">
+      <view class="category-list-layout w-full">
+        <block tiki:for="{{isLoading ? 1 : categories}}">
+          <category-section
+            className="category-list-section w-full"
+            tiki:if="{{index === 0 || isViewMoreCategories}}"
+            isLoading="{{isLoading}}"
+            type="{{categories.length === 1 && item.length <= 2 ? 'horizontal' : 'vertical-3-categories'}}"
+            skeletons="{{6}}"
+            categories="{{item}}"
+            onTapCategory="_onTapCategory"
+          />
+        </block>
+      </view>
+      <view
+        tiki:if="{{categories.length > 1}}"
+        class="flex items-center mt-large"
+        onTap="{{isViewMoreCategories ? 'viewLessCategories' : 'viewMoreCategories'}}"
+      >
+        <text class="text-brand mr-2x-small">
+          {{isViewMoreCategories ? 'Thu gọn' : 'Xem thêm'}}
+        </text>
+        <icon type="{{isViewMoreCategories ? 'arrow_up' : 'arrow_down'}}" color="#1A94FF"/>
+      </view>
+    </view>
+  </view>
+  

@@ -1,0 +1,17 @@
+<view class="flex flex-col items-center {{className}}">
+  <image
+    class="empty-image mb-large"
+    src="/assets/images/empty.png"
+    mode="widthFix"
+  />
+  <text class="text-medium font-bold mb-5x-small">{{title}}</text>
+  <text>{{description}}</text>
+  <button
+    tiki:if="{{buttonText}}"
+    class="w-full mt-medium"
+    shape="pill"
+    onTap="_onTapButton"
+  >
+    {{buttonText}}
+  </button>
+</view>

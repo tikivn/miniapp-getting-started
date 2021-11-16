@@ -1,0 +1,30 @@
+.search-bar {
+  position: relative;
+}
+
+.search-icon {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.close-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.close-icon icon {
+  display: block;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  padding-left: 48px;
+}

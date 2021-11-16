@@ -1,0 +1,32 @@
+<view class="pt-2x-small px-medium pb-medium">
+  <category-list
+    className="w-full mb-medium mt-2x-small"
+    isLoading="{{isLoadingCategory}}"
+    categories="{{categories}}"
+    onTapCategory="goToSubCategoryPage"
+  />
+  <sort
+    className="category-sort-button w-full py-small bg-white {{isScrollUp && isStickSortButton ? 'category-sort-button-stick' : ''}}"
+    sorts="{{sorts}}"
+    selectedSort="{{selectedSort}}"
+    onSelect="onSelectSort"
+  />
+  <block tiki:if="{{isLoadingProduct}}">
+    <view class="mt-2x-small app-loading mx-auto" />
+  </block>
+  <block tiki:if="{{!isLoadingProduct}}">
+    <product-section
+      className="mt-2x-small"
+      isLoading="{{isLoadingProduct}}"
+      skeletons="{{8}}"
+      products="{{products.data}}"
+      onTapProduct="onTapProduct"
+    />
+  </block>
+  <product-section
+    isLoading
+    tiki:if="{{isLoadingMoreProduct}}"
+    className="category-loading-more-skeleton"
+    skeletons="{{6}}"
+  />
+</view>

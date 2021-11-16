@@ -1,0 +1,60 @@
+<view class="category {{className}}">
+  <template name="category-vertical">
+    <view
+      tiki:if="{{isLoading}}"
+      class="category-vertical flex flex-col items-center"
+    >
+      <view class="skeleton-category-logo skeleton mb-2x-small"/>
+      <view class="skeleton-category-vertical-names flex flex-col items-center mb-2x-small">
+        <view class="skeleton skeleton-font-regular skeleton-80-width mb-5x-small"/>
+        <view class="skeleton skeleton skeleton-font-regular skeleton-100-width"/>
+      </view>
+    </view>
+  
+    <view
+      tiki:else
+      class="category-vertical flex flex-col items-center"
+      onTap="_onTapCategory"
+    >
+      <image
+        class="category-logo mb-2x-small"
+        src="{{category.thumbnail_url}}"
+      />
+      <text
+        class="category-name text-center"
+        number-of-lines="{{2}}"
+      >
+        {{category.name}}
+      </text>
+    </view>
+  </template>
+
+  <template name="category-horizontal">
+    <view
+      tiki:if="{{isLoading}}"
+      class="category-horizontal-skeleton skeleton skeleton-100-width radius-8px"
+    />
+  
+    <view
+      tiki:else
+      class="category-horizontal flex items-center py-2x-small px-medium bg-gray10 radius-8px"
+      onTap="_onTapCategory"
+    >
+      <view class="mr-2x-small">
+        <image
+          class="category-logo"
+          src="{{category.thumbnail_url}}"
+        />
+      </view>
+      <text number-of-lines="{{2}}">
+        {{category.name}}
+      </text>
+    </view>
+  </template>
+  
+  <template
+    is="category-{{type}}"
+    data="{{className, isLoading, category}}"
+  />
+</view>
+

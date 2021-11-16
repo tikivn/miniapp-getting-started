@@ -1,0 +1,14 @@
+<view class="p-medium">
+  <product-section
+    isLoading="{{isLoadingProduct}}"
+    skeletons="{{8}}"
+    products="{{products.data}}"
+    onTapProduct="onTapProduct"
+  />
+  <product-section
+    isLoading
+    tiki:if="{{isLoadingMoreProduct}}"
+    className="product-loading-more-skeleton"
+    skeletons="{{6}}"
+  />
+</view>

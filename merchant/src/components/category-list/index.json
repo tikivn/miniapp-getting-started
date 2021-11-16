@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "category-section": "components/category-section/index"
+  }
+}

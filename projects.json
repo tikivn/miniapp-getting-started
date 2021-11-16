@@ -1,4 +1,4 @@
-[ 
+[
   {
     "name": "Blank",
     "categories": [],
@@ -19,5 +19,12 @@
     "owner": "Tiki",
     "image": "https://salt.tikicdn.com/ts/miniapp/82/10/58/52d0889a15ae5aa3682ba0ab2313da3f.png",
     "path": "shop"
+  },
+  {
+    "name": "Merchant",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/miniapp/82/10/58/52d0889a15ae5aa3682ba0ab2313da3f.png",
+    "path": "merchant"
   }
 ]

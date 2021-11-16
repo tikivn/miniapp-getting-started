@@ -1,0 +1,9 @@
+.category-sort-button-stick {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.category-loading-more-skeleton {
+  margin-top: 20px;
+}
