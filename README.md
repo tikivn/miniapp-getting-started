@@ -3,8 +3,9 @@
 The following is a list of the example MiniApp in the [MiniApp Document](https://miniapp.tiki.vn/docs/developer/getting-started)
 
 - [Blank](https://github.com/tikivn/miniapp-getting-started/tree/main/blank)
-- [Shopping](https://github.com/tikivn/miniapp-getting-started/tree/main/shopping)
+- [Shop](https://github.com/tikivn/miniapp-getting-started/tree/main/shop)
 - [API Demo](https://github.com/tikivn/miniapp-getting-started/tree/main/api-demo)
+- [Merchant](https://github.com/tikivn/miniapp-getting-started/tree/main/merchant)
 
 ## What is Tiki MiniApp ?
 
