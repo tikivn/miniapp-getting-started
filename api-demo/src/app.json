@@ -95,6 +95,7 @@
     "pages/component/advance/form/chip/index",
     "pages/component/advance/form/calendar/index",
     "pages/component/advance/form/tooltip/index",
+    "pages/component/advance/form/pin/index",
     "pages/component/advance/navigation/avatar/index",
     "pages/component/advance/navigation/badge/index",
     "pages/component/advance/navigation/sidebar/index",
