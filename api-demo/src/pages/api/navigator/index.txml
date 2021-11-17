@@ -1,7 +1,5 @@
 <view>
-  <block-header 
-      title="Usage" 
-      description="Navigate to new pages / new tabs / new Mini App" />
+  <block-header title="Usage" description="Navigate to new pages / new tabs / new Mini App" />
 
   <view class="block-content">
     <text class="title mb-8">Variant</text>
@@ -11,7 +9,8 @@
       </button>
       <button style="width: 100%;" onTap="navigateTo">
         my.navigateTo
-      </button>="width: 100%;" onTap="navigateTo">
+      </button>
+      <button style="width: 100%;" onTap="navigateTo">
         my.redirectTo
       </button>
       <button style="width: 100%;" onTap="navigateBack">

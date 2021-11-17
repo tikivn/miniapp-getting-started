@@ -217,6 +217,13 @@ const locationAPIList = [
   },
 ];
 
+const notificationAPIList = [
+  {
+    name: 'Check Notification Permission',
+    path: 'pages/api/check-notification/index',
+  },
+];
+
 const APIList = [
   {
     type: 'Open API',
@@ -285,6 +292,10 @@ const APIList = [
   {
     type: 'Clipboard',
     list: clipboardAPIList,
+  },
+  {
+    type: 'Notifications',
+    list: notificationAPIList,
   },
 ];
 

@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Check notification permission on device" />
+  <view class="block-content">
+    <button class="button-full" onTap="onCheckNotification">Check Notification Permission</button>
+  </view>
+</view>

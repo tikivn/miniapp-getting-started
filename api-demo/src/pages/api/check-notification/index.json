@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Check Notification Permission",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
