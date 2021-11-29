@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Get battery information" />
+  <view class="block-content">
+    <button onTap="getBattery">Get battery info</button>
+  </view>
+</view>
