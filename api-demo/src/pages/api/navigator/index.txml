@@ -25,6 +25,9 @@
       <button style="width: 100%;" onTap="relaunch">
         my.relaunch
       </button>
+      <button style="width: 100%;" onTap="exitMiniApp">
+        my.exitMiniApp
+      </button>
     </view>
   </view>
 

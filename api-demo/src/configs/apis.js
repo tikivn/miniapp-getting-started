@@ -117,6 +117,10 @@ const mediaVideoAPIList = [
     name: 'Choose Video',
     path: '/pages/api/choose-video/index',
   },
+  {
+    name: 'Trim Video',
+    path: '/pages/api/trim-video/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const deeplinkAPIList = [

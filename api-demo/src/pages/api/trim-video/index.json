@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "my.trimVideo",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

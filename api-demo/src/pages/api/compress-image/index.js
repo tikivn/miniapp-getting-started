@@ -1,15 +1,17 @@
 Page({
   data: {
     tempFilePath: undefined,
+    tempFilePaths: undefined,
     compressedFilePath: undefined,
   },
   onChooseImage() {
     my.chooseImage({
-      count: 1,
+      count: 2,
       success: (res) => {
         console.log(res);
         this.setData({
           tempFilePath: res.filePaths[0],
+          tempFilePaths: res.filePaths,
         });
       },
       fail: (e) => {
@@ -19,10 +21,10 @@ Page({
   },
   onSaveImage() {
     my.saveImage({
-      url: "https://kenh14cdn.com/zoom/220_289/203336854389633024/2021/6/15/photo1623744422488-16237444226352085440032.png",
+      url: 'https://kenh14cdn.com/zoom/220_289/203336854389633024/2021/6/15/photo1623744422488-16237444226352085440032.png',
       success: (res) => {
         console.log(res);
-        my.alert({ title: "Saved", content: `File path ${res.filePath}` });
+        my.alert({ title: 'Saved', content: `File path ${res.filePath}` });
         this.setData({
           savedFilePath: res.filePath,
         });
@@ -34,12 +36,12 @@ Page({
   },
   onCompressImage() {
     my.compressImage({
-      filePaths: [this.data.tempFilePath],
+      filePaths: this.data.tempFilePaths,
       compressLevel: 0,
       success: (res) => {
         console.log(res);
         my.alert({
-          title: "Compressed",
+          title: 'Compressed',
           content: `File path ${res.filePaths}`,
         });
         this.setData({
@@ -56,7 +58,7 @@ Page({
       filePath: this.data.tempFilePath,
       success: (res) => {
         console.log(res);
-        my.alert({ title: "File Info", content: JSON.stringify(res) });
+        my.alert({ title: 'File Info', content: JSON.stringify(res) });
       },
       fail: (e) => {
         console.log(e);
@@ -68,7 +70,7 @@ Page({
       filePath: this.data.compressedFilePath,
       success: (res) => {
         console.log(res);
-        my.alert({ title: "File Info", content: JSON.stringify(res) });
+        my.alert({ title: 'File Info', content: JSON.stringify(res) });
       },
       fail: (e) => {
         console.log(e);

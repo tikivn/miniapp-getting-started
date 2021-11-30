@@ -44,4 +44,13 @@ Page({
   relaunch() {
     my.reLaunch({ url: 'pages/api/confirm/index' });
   },
+
+  exitMiniApp() {
+    my.exitMiniApp({
+      success: () => {},
+      fail: (e) => {
+        console.log(e);
+      },
+    });
+  },
 });
