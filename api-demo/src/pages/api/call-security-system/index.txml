@@ -1,0 +1,32 @@
+<view>
+  <block-header 
+      title="Usage" 
+      description="Request Tiki Security System to authenticate users" />
+
+  <view class="block-content">
+    <text class="title mb-8">Call Security System</text>
+    <view class="component-item">
+      <text>Enter your challenge ID from error response api\n</text>
+      <text>Ex: error.response.data.challengeID</text>
+    </view>
+    <view>
+      <input
+        onInput="onInput"
+        placeholder="Enter your challenge ID"
+        style="width: 100%;"
+      />
+      <block tiki:if="{{data !== undefined}}">
+        <view style="padding-top: 8px;">
+          <text class="title mb-8">Response data\n</text>
+          <view class="component-item">
+            <text>{{data}}</text>
+          </view>
+        </view>
+      </block> 
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onGetRequest">
+        Submit
+      </button>
+    </view>
+  </view>
+
+</view>
