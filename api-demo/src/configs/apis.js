@@ -197,6 +197,10 @@ const deviceAPIList = [
     name: 'Contact',
     path: 'pages/api/contact/index',
   },
+  {
+    name: 'Battery',
+    path: 'pages/api/battery/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const networkAPIList = [
