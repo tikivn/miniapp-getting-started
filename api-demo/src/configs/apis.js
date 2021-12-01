@@ -216,6 +216,10 @@ const networkAPIList = [
     name: 'Upload File',
     path: '/pages/api/upload-file/index',
   },
+  {
+    name: 'Upload File To GCP',
+    path: '/pages/api/gcp-upload-file/index',
+  },
 ];
 
 const locationAPIList = [
