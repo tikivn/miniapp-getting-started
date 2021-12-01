@@ -4,6 +4,7 @@
     "pages/api/index",
     "pages/search/index",
     "pages/api/animation/index",
+    "pages/api/call-security-system/index",
     "pages/api/alert/index",
     "pages/api/confirm/index",
     "pages/api/loading/index",
