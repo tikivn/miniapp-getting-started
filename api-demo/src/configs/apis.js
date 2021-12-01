@@ -21,6 +21,10 @@ const openAPIList = [
     name: 'Request Payment',
     // path: 'pages/api/request-payment/index',
   },
+  {
+    name: 'Call Security System',
+    path: 'pages/api/call-security-system/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const interfaceAPIList = [
