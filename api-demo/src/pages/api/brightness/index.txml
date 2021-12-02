@@ -1,0 +1,15 @@
+<view class="page">
+  <block-header title="Usage" description="Get battery information" />
+  <view class="block-content">
+    <view>Adjust screen brightness</view>
+    <view class="page-section-demo">
+      <slider value="{{brightness*100}}" onChange="sliderChange" />
+    </view>
+  </view>
+  <view class="block-content">
+    <view></view>
+    <view class="page-section-demo">
+      <button type="primary" onTap="onGetBrightness">Get screen brightness</button>
+    </view>
+  </view>
+</view>
