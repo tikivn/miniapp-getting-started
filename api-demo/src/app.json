@@ -49,6 +49,7 @@
     "pages/api/trim-video/index",
     "pages/api/check-notification/index",
     "pages/api/battery/index",
+    "pages/api/brightness/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",

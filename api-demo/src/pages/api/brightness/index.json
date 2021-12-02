@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Brightness",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
