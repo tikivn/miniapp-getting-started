@@ -1,5 +1,11 @@
 <view class="page">
-  <block-header title="Usage" description="Get battery information" />
+  <block-header title="Usage" description="Get/set brightness and keep screen on" />
+  <view class="block-content">
+    <view>Keep screen on</view>
+    <view class="page-section-demo">
+      <switch checked="{{status}}" onChange="switchKeepScreenOn"/>
+    </view>
+  </view>
   <view class="block-content">
     <view>Adjust screen brightness</view>
     <view class="page-section-demo">

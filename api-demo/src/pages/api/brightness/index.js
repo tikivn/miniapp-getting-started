@@ -11,6 +11,16 @@ Page({
         }),
     });
   },
+  switchKeepScreenOn(e){
+    my.setKeepScreenOn({
+      keepScreenOn: e.detail.value,
+      success: () => {
+        this.setData({
+          status: e.detail.value,
+        })
+      }
+    })
+  },
   sliderChange(e) {
     const _value = e.detail.value / 100;
     my.setScreenBrightness({
