@@ -18,7 +18,10 @@ Page({
         this.setData({
           status: e.detail.value,
         })
-      }
+      },
+      fail: (res) => {
+        my.alert({ title: 'Fail', content: JSON.stringify(res) });
+      },
     })
   },
   sliderChange(e) {
