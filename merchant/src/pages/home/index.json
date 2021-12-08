@@ -6,7 +6,6 @@
     "banners": "components/banners/index",
     "section-title": "components/section-title/index",
     "product-section": "components/product-section/index",
-    "category-carousel": "components/category-carousel/index",
-    "auth": "components/auth/index"
+    "category-carousel": "components/category-carousel/index"
   }
 }

@@ -10,12 +10,9 @@ import {
   getCategoriesAPI,
   getProductsAPI,
   getBannersAPI,
-  getShopFollowersAPI,
 } from '../../services/index';
 import DisposableCollection from '../../utils/disposable';
-import { onAuthSuccess } from '../../utils/auth';
 import myx from '../../utils/myx';
-import { getAuth } from '../../utils/auth';
 
 const sellerId = getApp().sellerId;
 
@@ -24,6 +21,7 @@ Page({
 
   data: {
     isLoading: true,
+    isFollowButtonLoading: false,
     shop: {
       name: '',
       logo: '',
@@ -61,9 +59,7 @@ Page({
       const [shop, follow, categories, featuredProducts, newProducts, banners] =
         await Promise.all([
           getShopInfoAPI({ sellerId }),
-          // TODO: Replace when js api ready
-          // myx.isFollowingSeller({ sellerId }),
-          getShopFollowersAPI({ sellerId }),
+          myx.isFollowingSeller({ sellerId }),
           getCategoriesAPI({ sellerId }),
           getProductsAPI({ sellerId, cursor: 0, limit: 4 }),
           getProductsAPI({ sellerId, cursor: 0, limit: 4, sort: 'newest' }),
@@ -118,20 +114,24 @@ Page({
     const { is_followed } = this.data.follow;
 
     try {
-      await getAuth({
-        isLoginRequired: true,
-        fallbackAction: (error) => {
-          throw error;
-        },
+      this.setData({
+        isFollowButtonLoading: true,
       });
+
       let follow = null;
-      if (is_followed) follow = await myx.unfollowSeller({ sellerId });
-      else follow = await myx.followSeller({ sellerId });
+      if (is_followed)
+        follow = await myx.unfollowSeller({ sellerId, openLogin: true });
+      else follow = await myx.followSeller({ sellerId, openLogin: true });
 
       this.setData({
         follow,
+        isFollowButtonLoading: false,
       });
-    } catch {}
+    } catch {
+      this.setData({
+        isFollowButtonLoading: false,
+      });
+    }
   },
 
   onTapProduct(product) {
@@ -139,14 +139,6 @@ Page({
   },
 
   // Life cycle
-  onLoad() {
-    this.disposable.push([
-      onAuthSuccess((auth) => {
-        // TODO: Handle follow here
-      }),
-    ]);
-  },
-
   async onPullDownRefresh() {
     await this.loadData();
     my.stopPullDownRefresh();

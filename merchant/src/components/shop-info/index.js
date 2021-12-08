@@ -2,6 +2,7 @@ Component({
   props: {
     className: '',
     isLoading: false,
+    isFollowButtonLoading: false,
     shop: {
       name: '',
       logo: '',

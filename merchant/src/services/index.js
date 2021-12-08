@@ -1,32 +1,4 @@
-import request, { graphql } from './request';
-import { appId } from '../utils/constant';
-
-export const loginWithAuthCodeAPI = async ({ authCode = '' }) => {
-  const query = `
-    query login_with_auth_code($auth_code: String!, $app_id: String) {
-      login_with_auth_code(auth_code: $auth_code, app_id: $app_id) {
-        user {
-          id,
-          tiki_id,
-          name,
-          username,
-        }
-        access_token,
-        refresh_token,
-      }
-    }
-  `;
-
-  const res = await graphql({
-    query,
-    variables: {
-      auth_code: authCode,
-      app_id: appId,
-    },
-  });
-
-  return res.login_with_auth_code;
-};
+import request from './request';
 
 export const getShopInfoAPI = async ({ sellerId }) => {
   return request({
