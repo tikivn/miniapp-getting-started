@@ -7,6 +7,11 @@ Page({
           content: JSON.stringify(success),
         });
       },
+      fail: (error) => {
+        my.alert({
+          content: JSON.stringify(error),
+        });
+      },
     });
   },
   onShowDate() {
