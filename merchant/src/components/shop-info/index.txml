@@ -2,7 +2,7 @@
 
 <view class="{{className}} bg-white w-full">
   <template name="shop-info-completed">
-    <view class="shop-info-header navigation-bar pl-medium pb-small">
+    <view class="shop-info-header navigation-bar pl-medium">
       <view class="mr-2x-small">
         <image
           class="shop-info-logo mr-2x-small"
@@ -26,9 +26,10 @@
       </view>
     </view>
 
-    <!-- <view class="flex items-center px-medium mt-small mb-medium">
+    <view class="flex items-center px-medium mt-small mb-medium">
       <button
-        class="flex-grow mr-2x-small"
+        loading="{{isFollowButtonLoading}}"
+        class="flex-grow"
         size="medium"
         shape="pill"
         type="{{follow.is_followed ? 'outline' : 'solid'}}"
@@ -37,13 +38,13 @@
         
         {{follow.is_followed ? 'Đã theo' : 'Theo dõi'}}
       </button>
-      <button
+      <!-- <button
         size="medium"
         shape="circle"
         type="outline"
         iconName="chat"
-      />
-    </view> -->
+      /> -->
+    </view>
   </template>
   
   <template name="shop-info-loading">
@@ -55,14 +56,14 @@
       </view>
     </view>
 
-    <!-- <view class="flex items-center px-medium mt-small mb-medium">
-      <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-85-width flex-grow mr-2x-small"/>
-      <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-15-width"/>
-    </view> -->
+    <view class="flex items-center px-medium mb-medium">
+      <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-85-width flex-grow"/>
+      <!-- <view class="skeleton skeleton-button-medium skeleton-button-shape-pill skeleton-15-width"/> -->
+    </view>
   </template>
 
   <template
     is="shop-info-{{isLoading ? 'loading' : 'completed'}}"
-    data="{{shop, follow}}"
+    data="{{shop, follow, isFollowButtonLoading}}"
   />
 </view>

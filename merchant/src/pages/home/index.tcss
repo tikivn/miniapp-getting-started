@@ -5,8 +5,7 @@
 }
 
 .home-banners {
-  /* margin-top: calc(var(--tf-status-bar-height) + 108px); */
-  margin-top: calc(var(--tf-status-bar-height) + 80px);
+  margin-top: calc(var(--tf-status-bar-height) + 128px);
 }
 
 .home-category-multiple {

@@ -27,10 +27,6 @@ export const defaultSorts = [
   },
 ];
 
-export const EVENTS = {
-  AUTH_SUCCESS: 'AUTH_SUCCESS',
-};
-
 export const LOADING_STATUS = {
   INITIAL: 'INITIAL',
   LOADING: 'LOADING',
