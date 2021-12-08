@@ -1,8 +1,66 @@
 <view class="page">
   <block-header title="Usage" />
+
+  <block-variant header="Variants">
+    <view class="list-item">
+      <view class="subtitle mb-8">1. Format</view>
+      <view class="sub-content mb-8">Label & Input only.</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <dropdown placeholder="With label" labelText="Label" />
+      </view>
+      <view class="list-item-label">
+        <dropdown placeholder="Without label" />
+      </view>
+    </view>
+  </block-variant>
+
   <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">2. Shape</view>
+      <view class="sub-content mb-8">Rounded & Pill</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <dropdown placeholder="Empty" labelText="Rounded" shape="rounded" />
+      </view>
+      <view class="list-item-label">
+        <dropdown placeholder="Empty" labelText="Pill" shape="pill" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">3. State</view>
+      <view class="sub-content mb-8">Filled, Disabled, Error, Skeleton loading.</view>
+      <view class="line" />
+
       <view class="list-item-label">
         <dropdown value="{{item1}}" items="{{items1}}" labelText="Label" onSelect="onSelect1" />
       </view>
+      <view class="list-item-label">
+        <dropdown disabled labelText="Disabled" placeholder="Disabled" />
+      </view>
+      <view class="list-item-label">
+        <dropdown hasError errorMsg="Error message" placeholder="Error" labelText="Label" />
+      </view>
+      <view class="list-item-label">
+        <dropdown loading placeholder="Loading" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">4. Interaction</view>
+      <view class="sub-content mb-8">Bottom sheet</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <dropdown labelText="Bottom sheet" items="{{items1}}" placeholder="Empty" value="{{item2}}" onSelect="onSelect2" />
+      </view>
+    </view>
   </block-variant>
 </view>
