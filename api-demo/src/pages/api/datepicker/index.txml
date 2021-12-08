@@ -1,0 +1,11 @@
+<view>
+  <block-header title="Usage" description="Date Picker" />
+  <view class="block-content">
+    Date Picker
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onShowDate">dd-MM-yyyy</button>
+    <button class="button-full" onTap="onShowTime">HH:mm</button>
+    <button class="button-full" onTap="onShowDateTime">dd-MM-yyyy HH:mm</button>
+  </view>
+</view>

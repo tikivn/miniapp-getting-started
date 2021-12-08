@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Date Picker",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
