@@ -51,6 +51,7 @@
     "pages/api/battery/index",
     "pages/api/brightness/index",
     "pages/api/datepicker/index",
+    "pages/api/network-type/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",
