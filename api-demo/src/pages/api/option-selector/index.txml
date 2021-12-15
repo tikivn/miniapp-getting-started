@@ -1,0 +1,9 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="my.optionsSelect" />
+  <view class="block-content">
+    <button class="button-full" onTap="openOne">Single column selector</button>
+    <button class="button-full" onTap="openTwo">Double column selector</button>
+  </view>
+</view>

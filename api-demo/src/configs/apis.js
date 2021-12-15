@@ -68,6 +68,10 @@ const interfaceAPIList = [
     name: 'Canvas',
     path: 'pages/api/canvas/index',
   },
+  {
+    name: 'Option selector',
+    path: 'pages/api/option-selector/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const navigationBarAPIList = [
