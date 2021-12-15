@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Get device current network type" />
+  <view class="block-content">
+    <button class="button-full" onTap="onGetNetworkType">Get Network Type</button>
+  </view>
+</view>

@@ -72,6 +72,10 @@ const interfaceAPIList = [
     name: 'Option selector',
     path: 'pages/api/option-selector/index',
   },
+  {
+    name: 'Date Picker',
+    path: 'pages/api/datepicker/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const navigationBarAPIList = [
@@ -212,6 +216,10 @@ const deviceAPIList = [
   {
     name: 'Brightness',
     path: 'pages/api/brightness/index',
+  },
+  {
+    name: 'Network Type',
+    path: '/pages/api/network-type/index',
   },
 ].filter(filterNotImplementedPages);
 

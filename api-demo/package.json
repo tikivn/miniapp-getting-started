@@ -1,9 +1,9 @@
 {
   "name": "api-demo",
-  "version": "0.0.9",
+  "version": "0.1.3",
   "tiki": {
     "appIdentifier": "vn.tiki.miniapp.demo",
-    "buildNumber": 1,
+    "buildNumber": 4,
     "metadata": {
       "frameworkComponentUrl": "https://salt.tikicdn.com/ts/miniapp/da/33/7e/7136fad18cd0d6ea0b1e710938deb632.js"
     }
