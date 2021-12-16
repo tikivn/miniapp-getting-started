@@ -218,6 +218,10 @@ const deviceAPIList = [
     path: 'pages/api/brightness/index',
   },
   {
+    name: 'Open setting',
+    path: 'pages/api/open-setting/index',
+  },
+  {
     name: 'Network Type',
     path: '/pages/api/network-type/index',
   },
