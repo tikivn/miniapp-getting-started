@@ -225,6 +225,10 @@ const deviceAPIList = [
     name: 'Network Type',
     path: '/pages/api/network-type/index',
   },
+  {
+    name: 'Vibration',
+    path: '/pages/api/vibration/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const networkAPIList = [
