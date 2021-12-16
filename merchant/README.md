@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://salt.tikicdn.com/ts/miniapp/cf/d5/cd/36c7269026fec6bc85d62aa31ffe3fc2.png" alt="Logo" width="80" height="80">
+  <img src="https://user-images.githubusercontent.com/1713660/146032380-5e582835-22d6-4e2f-a777-2c0fc86be132.png" alt="Logo" />
 <h3 align="center">Merchant Template</h3>
   <p align="center">
     Template hỗ trợ store của Tiki có thể tạo được một ứng dụng shopping đơn giản bằng nền tảng Tini App

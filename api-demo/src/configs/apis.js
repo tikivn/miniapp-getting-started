@@ -25,6 +25,10 @@ const openAPIList = [
     name: 'Call Security System',
     path: 'pages/api/call-security-system/index',
   },
+  {
+    name: 'Get User Open Data',
+    path: 'pages/api/get-open-data/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const interfaceAPIList = [
@@ -216,6 +220,10 @@ const deviceAPIList = [
   {
     name: 'Open setting',
     path: 'pages/api/open-setting/index',
+  },
+  {
+    name: 'Network Type',
+    path: '/pages/api/network-type/index',
   },
 ].filter(filterNotImplementedPages);
 
