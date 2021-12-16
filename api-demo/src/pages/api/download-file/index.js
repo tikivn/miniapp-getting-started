@@ -12,10 +12,11 @@ Page({
     my.downloadFile({
       url: this.data.url,
       success: (res) => {
-        console.log(res);
-        this.setData({ image: res });
+        my.alert({ content: JSON.stringify(res) });
+        this.setData({ image: res.filePath });
       },
       fail: (e) => {
+        my.alert({ content: JSON.stringify(e) });
         console.log(e);
       },
     });

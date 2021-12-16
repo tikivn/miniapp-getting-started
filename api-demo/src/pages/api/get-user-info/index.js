@@ -32,8 +32,4 @@ Page({
       });
     }
   },
-
-  onCustomIconEvent(e) {
-    console.log(e);
-  },
 });

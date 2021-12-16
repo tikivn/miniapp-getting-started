@@ -13,9 +13,10 @@ Page({
           fileType: 'image/jpeg',
           fileName,
           filePath,
+          method: 'PUT',
           success: (res) => {
             console.log(res);
-            my.alert({ title: 'Upload success' });
+            my.alert({ title: 'Upload success', content: JSON.stringify(res) });
           },
           fail: function (res) {
             console.log(res);

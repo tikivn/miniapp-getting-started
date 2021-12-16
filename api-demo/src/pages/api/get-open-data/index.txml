@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Get User Open Data" />
+  <view class="block-content">
+    <button class="button-full" onTap="onGetUserData">Get User Open Data</button>
+  </view>
+</view>
