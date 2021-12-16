@@ -25,6 +25,10 @@ const openAPIList = [
     name: 'Call Security System',
     path: 'pages/api/call-security-system/index',
   },
+  {
+    name: 'Get User Open Data',
+    path: 'pages/api/get-open-data/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const interfaceAPIList = [
