@@ -213,6 +213,10 @@ const deviceAPIList = [
     name: 'Brightness',
     path: 'pages/api/brightness/index',
   },
+  {
+    name: 'Open setting',
+    path: 'pages/api/open-setting/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const networkAPIList = [

@@ -1,0 +1,8 @@
+<view class="page">
+  <block-header title="Usage" description="Open the settings interface. Returns the results of the user's permission settings. Only permissions requested from the user appear in the settings interface." />
+  <view class="block-content">
+    <view class="page-section-demo">
+      <button type="primary" onTap="openSetting">Setting</button>
+    </view>
+  </view>
+</view>
