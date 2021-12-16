@@ -54,6 +54,7 @@
     "pages/api/datepicker/index",
     "pages/api/open-setting/index",
     "pages/api/network-type/index",
+    "pages/api/multi-level-select/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",
