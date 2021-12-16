@@ -6,7 +6,7 @@ Page({
         optionsOne: [
           'Every Monday',
           'Every Tuesday',
-          'Wednesday',
+          'Every Wednesday',
           'Every Thursday',
           'Every Friday',
           'Every Saturday',
@@ -34,20 +34,15 @@ Page({
         optionsOne: [
           'Every Monday',
           'Every Tuesday',
-          'Wednesday',
+          'Every Wednesday',
           'Every Thursday',
           'Every Friday',
           'Every Saturday',
           'Every Sunday',
         ],
-        optionsTwo: [
-          'Every Week',
-          'Every Month',
-          'Every Quarter',
-          'Every Year', 
-        ],
+        optionsTwo: ['Every Week', 'Every Month', 'Every Quarter', 'Every Year'],
         selectedOneIndex: 2,
-        selectedTwoIndex: 2,
+        selectedTwoIndex: 1,
         positiveString: 'Xác nhận',
         negativeString: 'Hủy',
         success: (res) => {
