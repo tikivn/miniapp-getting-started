@@ -73,6 +73,10 @@ const interfaceAPIList = [
     path: 'pages/api/canvas/index',
   },
   {
+    name: 'Option selector',
+    path: 'pages/api/option-selector/index',
+  },
+  {
     name: 'Date Picker',
     path: 'pages/api/datepicker/index',
   },
