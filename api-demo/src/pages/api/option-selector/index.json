@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Option selector",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
