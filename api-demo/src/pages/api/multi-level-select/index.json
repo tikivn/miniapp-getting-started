@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Cascade selection",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

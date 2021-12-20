@@ -80,6 +80,10 @@ const interfaceAPIList = [
     name: 'Date Picker',
     path: 'pages/api/datepicker/index',
   },
+  {
+    name: 'Cascade selection',
+    path: 'pages/api/multi-level-select/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const navigationBarAPIList = [
