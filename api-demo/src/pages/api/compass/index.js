@@ -2,11 +2,9 @@ Page({
   offCompass() {
     if (my.canIUse('offCompassChange')) {
       my.offCompassChange({
-        success: (res) => {
-          my.alert({
-            title: JSON.stringify(res),
-          });
-        },
+        fail: (res) => {
+          console.log(res);
+        }
       });
     }
   },
@@ -16,11 +14,6 @@ Page({
         success: (res) => {
           my.alert({
             title: JSON.stringify(res),
-          });
-        },
-        fail: (res) => {
-          my.alert({
-            content: res,
           });
         },
       });
