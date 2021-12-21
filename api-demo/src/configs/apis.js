@@ -73,6 +73,10 @@ const interfaceAPIList = [
     path: 'pages/api/canvas/index',
   },
   {
+    name: 'Option selector',
+    path: 'pages/api/option-selector/index',
+  },
+  {
     name: 'Date Picker',
     path: 'pages/api/datepicker/index',
   },
@@ -228,6 +232,10 @@ const deviceAPIList = [
   {
     name: 'Network Type',
     path: '/pages/api/network-type/index',
+  },
+  {
+    name: 'Vibration',
+    path: '/pages/api/vibration/index',
   },
 ].filter(filterNotImplementedPages);
 

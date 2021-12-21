@@ -1,0 +1,11 @@
+<view>
+  <block-header title="Usage" description="Vibrate the device" />
+  <view class="block-content">
+    <text class="title mb-8">my.vibrate</text>
+    <button class="button-full" onTap="onVibrate">Vibrate (200ms)</button>
+    <text class="title mb-8">my.vibrateLong</text>
+    <button class="button-full" onTap="onVibrateLong">Vibrate Long (400ms)</button>
+    <text class="title mb-8">my.vibrateShort</text>
+    <button class="button-full" onTap="onVibrateShort">Vibrate Short (40ms)</button>
+  </view>
+</view>
