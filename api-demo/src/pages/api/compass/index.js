@@ -11,11 +11,9 @@ Page({
   onCompass() {
     if (my.canIUse('onCompassChange')) {
       my.onCompassChange({
-        success: (res) => {
-          my.alert({
-            title: JSON.stringify(res),
-          });
-        },
+        fail: (res) => {
+          console.log(res);
+        }
       });
     }
   },
