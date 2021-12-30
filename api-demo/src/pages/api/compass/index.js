@@ -1,20 +1,23 @@
 Page({
-  offCompass() {
-    if (my.canIUse('offCompassChange')) {
-      my.offCompassChange({
-        fail: (res) => {
-          console.log(res);
-        }
-      });
-    }
+  onReady() {
+    this.compassChangeCallback = (res) => {
+      console.log(res);
+    };
+    my.startCompass({
+      interval: 'ui',
+      success: () => {
+        my.onCompassChange(this.compassChangeCallback);
+      },
+      fail: (res) => {
+        my.alert({ title: 'Fail', content: res.errorMessage });
+      },
+    });
   },
-  onCompass() {
-    if (my.canIUse('onCompassChange')) {
-      my.onCompassChange({
-        fail: (res) => {
-          console.log(res);
-        }
-      });
-    }
+  onUnload() {
+    my.stopCompass({
+      success: () => {
+        my.offCompassChange(this.compassChangeCallback);
+      },
+    });
   },
 });

@@ -1,9 +1,5 @@
 <view>
 <block-header 
       title="Usage" 
-      description="on/off compass" />
-  <view class="block-content">
-    <button class="button-full" onTap="onCompass">On Compass</button>
-    <button class="button-full" onTap="offCompass">Off Compass</button>
-  </view>
+      description="startCompass, stopCompass, onCompassChange, offCompassChange" />
 </view>
