@@ -1,7 +1,7 @@
 <view>
 <block-header 
       title="Usage" 
-      description="startCompass, stopCompass, onCompassChange, offCompassChange" />
+      description="Monitor compass data" />
   <view class="block-content">
       Direction: {{direction}}
   </view>
