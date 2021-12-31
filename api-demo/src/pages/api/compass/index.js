@@ -1,7 +1,10 @@
 Page({
+  data: {
+    direction: 0,
+  },
   onReady() {
     this.compassChangeCallback = (res) => {
-      console.log(res);
+      this.setData({ direction: res.direction });
     };
     my.startCompass({
       interval: 'ui',
