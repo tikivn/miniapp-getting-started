@@ -1,0 +1,8 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="Monitor compass data" />
+  <view class="block-content">
+      Direction: {{direction}}
+  </view>
+</view>
