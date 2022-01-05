@@ -4,5 +4,6 @@
     <button class="button-full" onTap="onWatchShake">
       {{isWatchingShake?'Watching shake':'Watch shake'}}
     </button>
+    <text class="text-full">{{justShake?'Device is shaked':''}}</text>
   </view>
 </view>
