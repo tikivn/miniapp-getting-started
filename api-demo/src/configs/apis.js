@@ -241,6 +241,10 @@ const deviceAPIList = [
     name: 'Compass',
     path: '/pages/api/compass/index',
   },
+  {
+    name: 'Shake',
+    path: '/pages/api/shake/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const networkAPIList = [

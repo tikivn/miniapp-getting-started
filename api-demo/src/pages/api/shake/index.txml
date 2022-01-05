@@ -1,0 +1,8 @@
+<view>
+  <block-header title="Usage" description="Receive a single callback when device is shaked." />
+  <view class="block-content">
+    <button class="button-full" onTap="onWatchShake">
+      {{isWatchingShake?'Watching shake':'Watch shake'}}
+    </button>
+  </view>
+</view>
