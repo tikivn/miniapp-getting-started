@@ -87,7 +87,7 @@
       <view class="form-row">
         <view class="form-row-label">Organization</view>
         <view class="form-row-content">
-          <input id="organization" onInput="onInput" class="input" value="AntFin" />
+          <input id="organization" onInput="onInput" class="input" value="Tiki" />
         </view>
       </view>
       <view class="form-row">
@@ -97,7 +97,7 @@
         </view>
       </view>
       <view class="form-row">
-        <view class="form-row-label">Work fax umber</view>
+        <view class="form-row-label">Work fax number</view>
         <view class="form-row-content">
           <input id="workFaxNumber" onInput="onInput" class="input" value="11111111" />
         </view>
@@ -117,13 +117,13 @@
       <view class="form-row">
         <view class="form-row-label">Email</view>
         <view class="form-row-content">
-          <input id="email" onInput="onInput" class="input" value="liuhuo01@sina.com" />
+          <input id="email" onInput="onInput" class="input" value="liuhuo01@tiki.vn" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Url</view>
         <view class="form-row-content">
-          <input id="url" onInput="onInput" class="input" value="tiki.vn" />
+          <input id="url" onInput="onInput" class="input" value="www.tiki.vn'" />
         </view>
       </view>
       <view style="font-size:18px;margin-top:18px;margin-bottom:18px">
@@ -132,25 +132,25 @@
       <view class="form-row">
         <view class="form-row-label">Work country address</view>
         <view class="form-row-content">
-          <input id="workAddressCountry" onInput="onInput" class="input" value="China" />
+          <input id="workAddressCountry" onInput="onInput" class="input" value="Viet Name" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Work state address</view>
         <view class="form-row-content">
-          <input id="workAddressState" onInput="onInput" class="input" value="Zhejiang" />
+          <input id="workAddressState" onInput="onInput" class="input" value="Q.10" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Work city address</view>
         <view class="form-row-content">
-          <input id="workAddressCity" onInput="onInput" class="input" value="Hangzhou" />
+          <input id="workAddressCity" onInput="onInput" class="input" value="HCM" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Work street address</view>
         <view class="form-row-content">
-          <input id="workAddressStreet" onInput="onInput" class="input" value="Tianmushan Road" />
+          <input id="workAddressStreet" onInput="onInput" class="input" value="CMT8" />
         </view>
       </view>
       <view class="form-row">
@@ -177,31 +177,31 @@
       <view class="form-row">
         <view class="form-row-label">Home county address</view>
         <view class="form-row-content">
-          <input id="homeAddressCountry" onInput="onInput" class="input" value="Canada" />
+          <input id="homeAddressCountry" onInput="onInput" class="input" value="Viet Name" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Home state address</view>
         <view class="form-row-content">
-          <input id="homeAddressState" onInput="onInput" class="input" value="Ontario" />
+          <input id="homeAddressState" onInput="onInput" class="input" value="Binh Duong" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Home city address</view>
         <view class="form-row-content">
-          <input id="homeAddressCity" onInput="onInput" class="input" value="Toronto" />
+          <input id="homeAddressCity" onInput="onInput" class="input" value="Thuan An" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Home street address</view>
         <view class="form-row-content">
-          <input id="homeAddressStreet" onInput="onInput" class="input" value="No.234 Road" />
+          <input id="homeAddressStreet" onInput="onInput" class="input" value="Nguyen Huu Canh" />
         </view>
       </view>
       <view class="form-row">
         <view class="form-row-label">Postal code home</view>
         <view class="form-row-content">
-          <input id="homeAddressPostalCode" onInput="onInput" class="input" value="data.homeAddressPostalCode" />
+          <input id="homeAddressPostalCode" onInput="onInput" class="input" value="123456" />
         </view>
       </view>
       <button type="primary" onTap="addPhoneContact">Add Phone Contact</button>

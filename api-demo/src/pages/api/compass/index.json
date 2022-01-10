@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "Network Type",
+  "defaultTitle": "Compass",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }

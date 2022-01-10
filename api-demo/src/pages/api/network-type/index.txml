@@ -1,6 +1,19 @@
 <view>
-  <block-header title="Usage" description="Get device current network type" />
   <view class="block-content">
+    <text class="title text-full">my.getNetworkType</text>
+    <text class="description text-full">Get current device network type</text>
     <button class="button-full" onTap="onGetNetworkType">Get Network Type</button>
+  </view>
+
+  <view class="block-content">
+    <text class="title text-full">my.onNetworkStatusChange</text>
+    <text class="description text-full">Start observing device network status</text>
+    <text class="title text-full">my.offNetworkStatusChange</text>
+    <text class="description text-full">Stop observing device network status</text>
+    <button class="button-full" onTap="toggleObservingNetworkStatus">
+      {{isObservingNetworkStatus?'Stop observing network status':'Start observing network status'}}
+    </button>
+    <text class="title text-full">Live network status</text>
+    <text class="description text-full">{{liveNetworkType}}</text>
   </view>
 </view>

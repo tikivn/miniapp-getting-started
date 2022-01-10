@@ -57,6 +57,7 @@
     "pages/api/network-type/index",
     "pages/api/multi-level-select/index",
     "pages/api/vibration/index",
+    "pages/api/compass/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",
