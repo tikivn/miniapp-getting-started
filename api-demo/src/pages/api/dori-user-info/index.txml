@@ -1,0 +1,8 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="setDoriUserInfo" />
+  <view class="block-content"> 
+   <button class="button-full" onTap="onSetDoriUser">Set Dori User Info</button>
+  </view>
+</view>

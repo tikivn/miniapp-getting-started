@@ -1,6 +1,6 @@
 {
   "name": "api-demo",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "tiki": {
     "appIdentifier": "vn.tiki.miniapp.demo",
     "buildNumber": 1,

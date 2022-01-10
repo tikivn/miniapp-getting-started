@@ -29,6 +29,10 @@ const openAPIList = [
     name: 'Get User Open Data',
     path: 'pages/api/get-open-data/index',
   },
+  {
+    name: 'Dori User Info',
+    path: 'pages/api/dori-user-info/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const interfaceAPIList = [

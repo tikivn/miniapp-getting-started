@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Dori User Info",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
