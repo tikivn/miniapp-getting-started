@@ -1,0 +1,22 @@
+{
+  "name": "redux-example",
+  "version": "0.1.0",
+  "tiki": {
+    "appIdentifier": "vn.tiki.example.redux",
+    "buildNumber": 1
+  },
+  "scripts": {
+    "postinstall": "rimraf node_modules/@tiki.vn/redux-miniprogram-bindings/example"
+  },
+  "dependencies": {
+    "@tiki.vn/redux-miniprogram-bindings": "^1.4.4",
+    "@tiki.vn/tini-ui": "^0.7.0",
+    "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2"
+  }
+}

@@ -1,0 +1,10 @@
+.add-button {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  margin: 0 auto;
+  margin-top: 8px;
+  border-radius: 40px;
+  padding-left: 16px;
+  padding-right: 16px;
+}

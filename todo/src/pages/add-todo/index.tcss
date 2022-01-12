@@ -1,0 +1,6 @@
+.page-add-todo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 16px;
+}

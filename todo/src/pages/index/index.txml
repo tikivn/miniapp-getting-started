@@ -1,0 +1,20 @@
+<view class="page-todos">
+  <view class="logo-group">
+    <image class="logo" src="https://salt.tikicdn.com/ts/miniapp/ef/4c/50/fcf46a69c58d8ae24c77e2ed1a8aa5ee.png" />
+    <text class="title">My Todo List</text>
+  </view>
+
+  <view class="todo-items">
+    <checkbox-group class="todo-items-group" onChange="onTodoChanged">
+      <label tiki:for="{{todo.todos}}" class="todo-item {{item.completed ? 'checked' : ''}}" tiki:key="*this">
+        <checkbox class="todo-item-checkbox" value="{{item.text}}" checked="{{item.completed}}" />
+        <text class="todo-item-text">{{item.text}}</text>
+      </label>
+    </checkbox-group>
+  </view>
+
+  <view class="todo-footer">
+    <remaining />
+    <add-button onTap="onAddTodo" />
+  </view>
+</view>
