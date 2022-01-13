@@ -15,6 +15,8 @@
     "pages/api/storage/index",
     "pages/api/request/index",
     "pages/api/get-user-info/index",
+    "pages/api/get-user-token/index",
+    "pages/api/get-refresh-token/index",
     "pages/api/get-auth-code/index",
     "pages/api/navigation-bar/set-navigation-bar/index",
     "pages/api/navigation-bar/get-title-color/index",
