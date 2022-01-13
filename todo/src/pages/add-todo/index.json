@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Add Todo",
+  "usingComponents": {
+    "add-button": "components/add-button/index"
+  }
+}

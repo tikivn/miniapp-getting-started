@@ -1,0 +1,5 @@
+<view class="page-add-todo">
+  <input placeholder="What needs to be done?" onInput="onChange" />
+
+  <add-button onTap="onAddTodo" />
+</view>
