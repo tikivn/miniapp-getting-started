@@ -1,0 +1,9 @@
+<view>
+  <block-header title="Usage" description="Get system info" />
+  <view class="block-content">
+    <button class="button-full" onTap="onTap">Get system info</button>
+    <text>
+      {{systemInfo}}
+    </text>
+  </view>
+</view>

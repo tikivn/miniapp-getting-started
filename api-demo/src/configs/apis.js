@@ -245,6 +245,14 @@ const deviceAPIList = [
     name: 'Shake',
     path: '/pages/api/shake/index',
   },
+  {
+    name: 'System Info',
+    path: '/pages/api/system-info/index',
+  },
+  {
+    name: 'SDK Version',
+    path: '/pages/api/sdk-version/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const networkAPIList = [
