@@ -1,0 +1,4 @@
+<button class="add-button" onTap="onTap" type="ghost">
+  <icon color="#fff" type="plus" />
+  <text>Add Todo</text>
+</button>

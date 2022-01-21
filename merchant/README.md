@@ -4,7 +4,7 @@
   <p align="center">
     Template hỗ trợ store của Tiki có thể tạo được một ứng dụng shopping đơn giản bằng nền tảng Tini App
     <br />
-    <a href="https://developers.tiki.vn/docs/developer/quick-example/shopping"><strong>Xem thêm tại »</strong></a>
+    <a href="https://github.com/tikivn/miniapp-getting-started/tree/main/merchant"><strong>Xem thêm tại »</strong></a>
     <br />
     <br />
   </p>
@@ -12,7 +12,7 @@
 
 <div align="center">
   <img src="https://salt.tikicdn.com/ts/miniapp/c3/8f/7c/73520800f96ac05c7a1d649b5e89c986.png" alt="Screen Shot" width="360">
-<h3 align="center">Merchant Template</h3>
+  <h3 align="center">Merchant Template</h3>
 </div>
 
 <br/>

@@ -1,0 +1,9 @@
+{
+  "backgroundColor": "#38383D",
+  "pullRefresh": "NO",
+  "usingComponents": {
+    "add-button": "components/add-button/index",
+    "remaining": "components/remaining/index"
+  }
+
+}

@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "my.refreshUserToken",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

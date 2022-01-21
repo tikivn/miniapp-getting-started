@@ -13,6 +13,14 @@ const openAPIList = [
     path: 'pages/api/get-user-info/index',
   },
   {
+    name: 'Get User Token',
+    path: 'pages/api/get-user-token/index',
+  },
+  {
+    name: 'Get Refresh Token',
+    path: 'pages/api/get-refresh-token/index',
+  },
+  {
     name: 'Get Auth Code',
     path: 'pages/api/get-auth-code/index',
   },
@@ -251,6 +259,14 @@ const deviceAPIList = [
   {
     name: 'Shake',
     path: '/pages/api/shake/index',
+  },
+  {
+    name: 'System Info',
+    path: '/pages/api/system-info/index',
+  },
+  {
+    name: 'SDK Version',
+    path: '/pages/api/sdk-version/index',
   },
 ].filter(filterNotImplementedPages);
 

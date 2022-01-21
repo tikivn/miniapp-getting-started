@@ -1,0 +1,8 @@
+{
+  "pages": ["pages/index/index", "pages/add-todo/index"],
+  "window": {
+    "defaultTitle": "Todo App",
+    "titleBarColor": "#38383D"
+  }
+
+}

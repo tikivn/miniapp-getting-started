@@ -7,7 +7,7 @@
     <text class="title mb-8">Get Auth Code</text>
     <view class="component-item">
       <block tiki:if="{{data !== undefined}}">
-        <text>{{data}}</text>
+        <text style="word-break: break-word;">{{data}}</text>
       </block> 
       <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onGetRequest">
         Get Auth Code
