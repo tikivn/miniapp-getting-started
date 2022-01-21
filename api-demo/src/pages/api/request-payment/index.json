@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Request payment",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
