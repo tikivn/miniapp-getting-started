@@ -1,0 +1,7 @@
+<view>
+  <view class="block-content">
+    <text class="title text-full">my.getAppSecret</text>
+    <text class="description text-full">Get app secret, which can be set from admin tool</text>
+    <button class="button-full" onTap="onGetAppSecret">Get App Secret</button>
+  </view>
+</view>
