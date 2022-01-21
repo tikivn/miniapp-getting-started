@@ -1,5 +1,12 @@
 import { filterNotImplementedPages } from '../libs/utils';
 
+const basicAPIList = [
+  {
+    name: 'Get App Secret',
+    path: 'pages/api/get-app-secret/index',
+  },
+].filter(filterNotImplementedPages);
+
 const openAPIList = [
   {
     name: 'Get User Info',
@@ -281,6 +288,10 @@ const notificationAPIList = [
 ];
 
 const APIList = [
+  {
+    type: 'Basic API',
+    list: basicAPIList,
+  },
   {
     type: 'Open API',
     list: openAPIList,
