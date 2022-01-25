@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Open App Setting",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

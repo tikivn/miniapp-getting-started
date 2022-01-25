@@ -245,6 +245,10 @@ const deviceAPIList = [
     path: 'pages/api/open-setting/index',
   },
   {
+    name: 'Open App Setting',
+    path: 'pages/api/open-app-setting/index',
+  },
+  {
     name: 'Network Type',
     path: '/pages/api/network-type/index',
   },
