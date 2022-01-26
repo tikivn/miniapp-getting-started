@@ -1,4 +1,8 @@
-import { moneyFormatter, parseNumberFromMoney } from '../../utils/common';
+import {
+  isObjectEqual,
+  moneyFormatter,
+  parseNumberFromMoney,
+} from '../../utils/common';
 
 Component({
   props: {
@@ -125,6 +129,8 @@ Component({
 
   // Life cycle
   deriveDataFromProps(nextProps) {
+    if (isObjectEqual(this.props, nextProps)) return;
+
     this.setData({
       _selectedFilters: nextProps.selectedFilters,
     });

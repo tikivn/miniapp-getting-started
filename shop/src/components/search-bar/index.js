@@ -9,6 +9,8 @@ Component({
   },
 
   methods: {
+    isTyping: null,
+
     _onChangeSearchInput(event) {
       const { value } = event.detail;
       this.props.onInput(value);

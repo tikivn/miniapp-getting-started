@@ -1,3 +1,5 @@
+import { isObjectEqual } from '../../utils/common';
+
 Component({
   data: {
     selectedOption: {},
@@ -52,6 +54,8 @@ Component({
 
   // Life cycle
   deriveDataFromProps(nextProps) {
+    if (isObjectEqual(this.props, nextProps)) return;
+
     const { type, sizeSelected, colorSelected } = nextProps;
 
     this.setData({

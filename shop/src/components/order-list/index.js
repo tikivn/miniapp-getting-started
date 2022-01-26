@@ -21,6 +21,9 @@ Component({
   },
 
   methods: {
+    isCreated: false,
+    selectedProduct: {},
+
     _onTapProduct(product) {
       this.props.onTapProduct(product);
     },
