@@ -1,3 +1,5 @@
+import { isObjectEqual } from '../../utils/common';
+
 Component({
   timer: null,
 
@@ -15,6 +17,8 @@ Component({
   },
 
   methods: {
+    timer: null,
+
     _onConfirm() {
       this.props.onConfirm();
     },
@@ -25,6 +29,8 @@ Component({
   },
 
   deriveDataFromProps(nextProps) {
+    if (isObjectEqual(this.props, nextProps)) return;
+
     const { isShow } = nextProps;
 
     this.setData({

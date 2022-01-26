@@ -1,3 +1,5 @@
+import { isObjectEqual } from '../../../utils/common';
+
 Component({
   data: {
     orderInfo: {},
@@ -25,6 +27,8 @@ Component({
   },
 
   deriveDataFromProps(nextProps) {
+    if (isObjectEqual(this.props, nextProps)) return;
+
     if (nextProps.order.id) {
       const { tracking } = nextProps.order;
       const steps = [

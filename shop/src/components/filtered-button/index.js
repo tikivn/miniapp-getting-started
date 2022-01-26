@@ -1,3 +1,5 @@
+import { isObjectEqual } from '../../utils/common';
+
 Component({
   props: {
     props: {
@@ -25,8 +27,8 @@ Component({
       this.props.onClick();
     },
 
-    countTotalFilters() {
-      const totalFilters = Object.entries(this.props.selectedFilters).reduce(
+    countTotalFilters(selectedFilters) {
+      const totalFilters = Object.entries(selectedFilters).reduce(
         (acc, [key, value]) => {
           if (
             !key ||
@@ -47,7 +49,9 @@ Component({
   },
 
   // Life cycle
-  deriveDataFromProps() {
-    this.countTotalFilters();
+  deriveDataFromProps(nextProps) {
+    if (isObjectEqual(this.props, nextProps)) return;
+
+    this.countTotalFilters(nextProps.selectedFilters);
   },
 });

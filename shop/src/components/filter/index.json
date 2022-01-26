@@ -1,4 +1,5 @@
 {
+  "componentLifeCycleV2": "YES",
   "component": true,
   "usingComponents": {
     "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
