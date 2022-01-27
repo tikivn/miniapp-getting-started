@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tiki.vn/redux-miniprogram-bindings": "^1.4.4",
-    "@tiki.vn/tini-ui": "^0.7.0",
+    "@tiki.vn/tini-ui": "^0.10.0",
     "redux": "^4.1.2",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1"

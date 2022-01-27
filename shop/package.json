@@ -6,7 +6,7 @@
     "buildNumber": 1
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "0.9.1-rc.0",
+    "@tiki.vn/tini-ui": "0.10.0",
     "query-string": "^7.0.1"
   }
 }
