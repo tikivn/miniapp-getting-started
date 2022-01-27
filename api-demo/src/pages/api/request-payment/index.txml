@@ -1,0 +1,14 @@
+<view>
+  <block-header 
+      title="Usage" 
+      description="Request payment for an order at Tiki" />
+
+  <view class="block-content">
+    <view class="component-item">
+    <input class="form-value" placeholder="Order ID" name="orderId" onInput="orderIdChange"></input>
+      <button class="button-full" onTap="doPayment">
+        Make Payment
+      </button>
+    </view>
+  </view>
+</view>

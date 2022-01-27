@@ -34,7 +34,7 @@ const openAPIList = [
   },
   {
     name: 'Request Payment',
-    // path: 'pages/api/request-payment/index',
+    path: 'pages/api/request-payment/index',
   },
   {
     name: 'Call Security System',
