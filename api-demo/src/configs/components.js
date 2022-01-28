@@ -134,6 +134,10 @@ const basicComponents = [
         name: 'Video',
         path: '/pages/component/basic/video/index',
       },
+      {
+        name: 'Player',
+        path: '/pages/component/basic/player/index',
+      },
     ],
   },
   {

@@ -89,6 +89,7 @@
     "pages/component/basic/movable-view/index",
     "pages/component/basic/audio/index",
     "pages/component/basic/video/index",
+    "pages/component/basic/player/index",
     "pages/component/basic/picker/index",
     "pages/component/basic/picker-view/index",
     "pages/component/basic/slider/index",
