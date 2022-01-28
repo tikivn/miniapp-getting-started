@@ -4,6 +4,7 @@
     <view class="video-contain">
       <player 
         url="https://www.youtube.com/watch?v=-HiYWgBB30g"
+        controls
         onPlayerReady="onPlayerReady"
         onStart="onStart"
         onProgress="onProgress"
