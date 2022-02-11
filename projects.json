@@ -28,6 +28,13 @@
     "path": "merchant"
   },
   {
+    "name": "Brand",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/miniapp/98/f8/c0/2a36796f9b471fabcfcc7b651b3fffc8.png",
+    "path": "brand"
+  },
+  {
     "name": "Todo Redux",
     "categories": [],
     "owner": "Tiki",

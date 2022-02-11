@@ -1,0 +1,33 @@
+  <view
+    tiki:if="{{isLoading || categories.length}}"
+    class="category-list bg-white {{className}}"
+  >
+    <view class="flex flex-col items-center">
+      <view class="category-list-layout w-full">
+        <block tiki:for="{{isLoading ? 1 : categories}}">
+          <category-section
+            className="category-list-section w-full mb-x-small"
+            tiki:if="{{index === 0 || isViewMoreCategories}}"
+            isLoading="{{isLoading}}"
+            skeletons="{{4}}"
+            categories="{{item}}"
+            onTapCategory="_onTapCategory"
+          />
+        </block>
+      </view>
+      <view
+        tiki:if="{{categories.length > 1}}"
+        class="flex items-center mt-4x-small"
+        onTap="{{isViewMoreCategories ? 'viewLessCategories' : 'viewMoreCategories'}}"
+      >
+        <text class="text-brand mr-2x-small">
+          {{isViewMoreCategories ? 'Thu gọn' : 'Xem thêm'}}
+        </text>
+        <icon
+          type="{{isViewMoreCategories ? 'arrow_up' : 'arrow_down'}}" color="#1A94FF"
+          size="{{22}}"
+        />
+      </view>
+    </view>
+  </view>
+  

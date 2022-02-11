@@ -1,16 +1,9 @@
 {
-  "name": "miniapp-tini-merchant",
-  "version": "1.1.7",
+  "name": "miniapp-tini-brand",
+  "version": "1.0.3",
   "tiki": {
-    "appIdentifier": "vn.tiki.tini.merchant",
-    "buildNumber": 11,
-    "metadata": {
-      "permissions": [
-        "isFollowingSeller",
-        "followSeller",
-        "unfollowSeller"
-      ]
-    }
+    "appIdentifier": "vn.tiki.tini.brand",
+    "buildNumber": 1
   },
   "scripts": {
     "lint:es": "eslint src --ext .js",
@@ -20,7 +13,8 @@
     "lint:prettier": "prettier --write"
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "^0.10.0",
+    "@tiki.vn/tini-ui": "0.9.1-rc.0",
+    "lodash": "^4.17.21",
     "query-string": "^7.0.1"
   },
   "devDependencies": {

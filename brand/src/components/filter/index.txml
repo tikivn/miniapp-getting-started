@@ -1,0 +1,184 @@
+<view class="filter">
+  <filtered-button
+    selectedFilters="{{selectedFilters}}"
+    onClick="showBottomSheet"
+  />
+  <block tiki:if="{{isShow}}">
+    <bottom-sheet
+      title="Lọc"
+      onClose="hideBottomSheet"
+    >
+      <template
+        is="filter-content"
+        data="{{filters, _selectedFilters, error, hideCategorySection, disabled}}"
+      />
+      <view slot="footer" class="filter-footer flex w-full px-medium py-2x-small">
+        <button
+          class="w-full mr-4x-small"
+          shape="pill"
+          type="outline"
+          onTap="onReset"
+        >
+          Xóa bộ lọc
+        </button>
+        <button
+          class="w-full ml-4x-small"
+          shape="pill"
+          onTap="_onSelect"
+        >
+          Áp dụng
+        </button>
+      </view>
+    </bottom-sheet>
+  </block>
+</view>
+
+<template name="filter-content">
+  <view class="filter-content-section p-medium">
+    <view class="font-bold mb-small">Dịch vụ giao hàng</view>
+    <block tiki:for="{{filters.service}}" tiki:key="query_name">
+      <label class="flex items-center">
+        <checkbox
+          checked
+          disabled="{{disabled}}"
+          class="mr-x-small"
+          tiki:if="{{_selectedFilters.service[index].checked}}"
+          data-item="{{item}}"
+          onChange="onCheckboxChange"
+        />
+        <checkbox
+          tiki:else
+          disabled="{{disabled}}"
+          class="mr-x-small"
+          data-item="{{item}}"
+          onChange="onCheckboxChange"
+        />
+        <view class="flex items-center">
+          <image
+            tiki:if="{{item.thumbnail_url}}"
+            src="{{item.thumbnail_url}}"
+            class="filter-transport-image mr-2x-small"
+          />
+          <view class="flex flex-col">
+            <text
+              class="font-bold"
+              number-of-lines="{{1}}"
+            >
+              {{item.display_value}}
+            </text>
+            <text
+              tiki:if="{{item.description}}"
+              class="text-small"
+              number-of-lines="{{1}}"
+            >
+              {{item.description}}
+            </text>
+          </view>
+        </view>
+      </label>
+      <view
+        tiki:if="{{index !== filters.service.length - 1}}"
+        class="filter-divider"
+      />
+    </block>
+  </view>
+  <view class="filter-content-section p-medium">
+    <text class="font-bold">Nơi bán</text>
+    <view class="filter-chip-list flex flex-wrap">
+      <view
+        tiki:for="{{filters.stock_location}}"
+        tiki:key="query_value"
+      >
+        <chip
+          active="{{_selectedFilters.stock_location.query_value === item.query_value}}"
+          className="filter-chip mr-2x-small mt-small"
+          content="{{item.display_value}}"
+          data-item="{{item}}"
+          data-query_name="stock_location"
+          onClick="onSelectSingleSection"
+        />
+      </view>
+    </view>
+  </view>
+  <view
+    tiki:if="{{!hideCategorySection}}"
+    class="filter-content-section p-medium"
+  >
+    <text class="font-bold">Danh mục</text>
+    <view class="filter-chip-list flex flex-wrap">
+      <view
+        tiki:for="{{filters.category}}"
+        tiki:key="query_value"
+      >
+        <chip
+          active="{{_selectedFilters.category.query_value === item.query_value}}"
+          className="filter-chip mr-2x-small mt-small"
+          content="{{item.display_value}}"
+          data-item="{{item}}"
+          data-query_name="category"
+          onClick="onSelectSingleSection"
+        />
+      </view>
+    </view>
+  </view>
+  <view class="filter-content-section p-medium">
+    <text class="font-bold">Giá</text>
+    <view class="filter-chip-list flex flex-wrap">
+      <view
+        tiki:for="{{filters.price}}"
+        tiki:key="query_value"
+      >
+        <chip
+          active="{{_selectedFilters.price.query_value === item.query_value}}"
+          className="filter-chip mr-2x-small mt-small"
+          content="{{item.display_value}}"
+          data-item="{{item}}"
+          data-query_name="price"
+          onClick="onSelectSingleSection"
+        />
+      </view>
+    </view>
+    <view class="mt-small">
+      <text class="text-gray60">Hoặc nhập giá ở ô dưới đây</text>
+      <view class="flex mt-2x-small">
+        <view class="relative mr-2x-small">
+          <textfield
+            type="number"
+            value="{{_selectedFilters.priceRange.start.display}}"
+            data-position="start"
+            onInput="onInputPrice"
+            labelText="Từ"
+            className="filter-input w-full {{error ? 'filter-error' : ''}}"
+            placeholder="Nhập giá"
+          />
+          <view
+            class="filter-input-action absolute flex items-center h-full px-medium"
+            onTap="_onSelect"
+          >
+            <view class="filter-vertical-divider mr-2x-small"/>
+            <text>₫</text>
+          </view>
+        </view>
+        <view class="relative mr-2x-small">
+          <textfield
+            type="number"
+            value="{{_selectedFilters.priceRange.end.display}}"
+            data-position="end"
+            onInput="onInputPrice"
+            labelText="Đến"
+            className="filter-input w-full {{error ? 'filter-error' : ''}}"
+            placeholder="Nhập giá"
+          />
+          <view
+            class="filter-input-action absolute flex items-center h-full px-medium"
+            onTap="_onSelect"
+          >
+            <view class="filter-vertical-divider mr-2x-small"/>
+            <text>₫</text>
+          </view>
+        </view>
+      </view>
+      <view class="mt-2x-small text-red">{{error}}</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "search-bar": "@tiki.vn/tini-ui/es/search-bar/index"
+  }
+}

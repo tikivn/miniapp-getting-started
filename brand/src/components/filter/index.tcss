@@ -1,0 +1,75 @@
+.filter-content-section {
+  border-bottom: 8px solid var(--gray10);
+}
+
+.filter-chip-list {
+  margin-right: -8px;
+}
+
+.filter-chip.tu-chip {
+  min-width: calc((100vw - 36px) / 7);
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+.filter-input .t-input-wrap {
+  padding-right: 30px;
+}
+
+.filter-input-action {
+  top: calc(25px + (100% - 25px) / 2);
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.filter-footer {
+  /* padding-bottom: calc(var(--safe-area-inset-bottom) + 8px); */
+  padding-bottom: 24px;
+  border-top: 1px solid #ebebf0;
+}
+
+.filter-transport-image {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+}
+
+.filter-divider {
+  height: 1px;
+  background-color: var(--gray20);
+  margin: 8px 0;
+}
+
+.filter-vertical-divider {
+  height: calc((100% - 40px));
+  width: 1px;
+  background-color: var(--gray20);
+}
+
+.filter .tu-chip:active,
+.filter .tu-chip:hover {
+  background-color: white !important;
+}
+
+.filter-error .t-input {
+  border-color: var(--red);
+}
+
+.filter .t-button-outline:hover,
+.filter .t-button-outline:active {
+  background-color: var(--white);
+  border-color: var(--brand);
+  opacity: 0.8;
+}
+
+.filter .t-button-solid:hover,
+.filter .t-button-solid:active {
+  background-color: var(--brand);
+  opacity: 0.8;
+}
+
+.filter .tu-bottom-sheet-wrapper {
+  max-height: unset !important;
+  height: calc(100vh - 24px);
+}

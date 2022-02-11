@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "Tìm kiếm",
+  "titleBarBottomColor": "#fff",
+  "usingComponents": {
+    "product-section": "components/product-section/index",
+    "sort": "components/sort/index",
+    "filter": "components/filter/index",
+    "category-list": "components/category-list/index",
+    "filtered-list": "components/filtered-list/index",
+    "empty": "components/empty/index",
+    "search-bar": "components/search-bar/index"
+  }
+}

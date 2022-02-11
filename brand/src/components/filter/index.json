@@ -1,0 +1,11 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index",
+    "chip": "@tiki.vn/tini-ui/es/chip/index",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "filtered-button": "components/filtered-button/index"
+  }
+}

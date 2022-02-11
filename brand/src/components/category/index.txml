@@ -1,0 +1,37 @@
+<view class="category {{className}}">
+  <template name="category-horizontal">
+    <view
+      tiki:if="{{isLoading}}"
+      class="category-horizontal-skeleton skeleton radius-8px"
+    />
+    <view
+      tiki:else
+      class="category-horizontal flex items-center py-2x-small px-medium bg-gray10 radius-8px"
+      onTap="_onTapCategory"
+    >
+      <view class="flex justify-between items-center w-full">
+        <view>
+          <view
+            tiki:if="{{category.thumbnail_url}}"
+            class="mr-2x-small"
+          >
+            <image
+              class="category-logo"
+              src="{{category.thumbnail_url}}"
+            />
+          </view>
+          <text number-of-lines="{{1}}" class="font-bold">
+            {{category.display_value}}
+          </text>
+        </view>
+        <icon type="arrow_right" color="#808089"/>
+      </view>
+    </view>
+  </template>
+  
+  <template
+    is="category-{{type}}"
+    data="{{className, isLoading, category}}"
+  />
+</view>
+

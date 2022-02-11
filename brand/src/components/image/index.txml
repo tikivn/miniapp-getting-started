@@ -1,0 +1,9 @@
+<image 
+  src="{{cacheWidth ? src.replace('tikicdn.com', 'tikicdn.com/cache/w' + cacheWidth) : src}}" 
+  onTap="onTap"
+  mode="{{mode}}"
+  lazy-load="{{lazyLoad}}"
+  default-source="{{lazyLoad ? '/assets/images/small.png' : ''}}" 
+  class="{{className}}" 
+  style="{{style}}"
+/>
