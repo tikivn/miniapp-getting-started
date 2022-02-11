@@ -1,0 +1,33 @@
+.product-loading-more-skeleton {
+  margin-top: 20px;
+}
+
+.product-section-divider,
+.product-filtered-list {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.sticky-top-buttons {
+  padding: 0 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.sticky-top-buttons .search-action-buttons {
+  padding: 12px 0;
+}
+
+.sticky-group {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white);
+  margin-left: -16px;
+  margin-right: -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+}

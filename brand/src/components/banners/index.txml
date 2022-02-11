@@ -1,0 +1,46 @@
+<view class="{{className}}">
+  <template name="banners-loading">
+    <carousel
+      autoplay
+      indicator-dots
+      duration="{{400}}"
+      interval="{{5000}}"
+      class="banners"
+    > 
+      <carousel-item
+        tiki:for="{{[1, 2, 3]}}"
+        tiki:key="*this"
+      >
+        <view class="banners-skeleton skeleton"/>
+      </carousel-item>
+    </carousel>
+  </template>
+
+  <template name="banners-completed">
+    <carousel
+      autoplay
+      indicator-dots
+      duration="{{400}}"
+      interval="{{5000}}"
+      class="banners"
+    > 
+      <carousel-item
+        tiki:for="{{banners}}"
+        tiki:key="id"
+      >
+        <image
+          class="w-full h-full radius-8px"
+          src="{{item.image_url}}"
+          mode="widthFix"
+          data-item="{{item}}"
+          onTap="_onTapBanner"
+        />
+      </carousel-item> 
+    </carousel>
+  </template>
+
+  <template
+    is="banners-{{isLoading ? 'loading' : 'completed'}}"
+    data="{{banners}}"
+  />
+</view>

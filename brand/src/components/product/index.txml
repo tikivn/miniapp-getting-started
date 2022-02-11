@@ -1,0 +1,45 @@
+<import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
+
+<view class="product {{className}}">
+  <template name="product-loading">
+    <view>
+      <view class="skeleton product-thumbnail-skeleton radius-8px mb-2x-small"/>
+      <view class="skeleton skeleton-font-medium skeleton-100-width mb-4x-small"/>
+      <view class="skeleton skeleton-font-medium skeleton-70-width"/>
+    </view>
+  </template>
+
+  <template name="product-completed">
+    <view catchTap="_onTapProduct">
+      <image
+        class="product-thumbnail radius-8px mb-2x-small radius-8px"
+        src="{{product.thumbnail_url}}"
+      />
+      <text
+        class="mb-4x-small"
+        number-of-lines="{{2}}"
+      >
+        {{product.name}}
+      </text>
+      <view class="flex items-center">
+        <text
+          class="font-bold mr-2x-small"
+          number-of-lines="{{1}}"
+        >
+          {{numberFormatter(product.price, ' ₫')}}
+        </text>
+        <view
+          tiki:if="{{product.discount_rate}}"
+          class="text-white product-badge font-bold text-x-small radius-8px px-4x-small"
+        >
+          {{`-${product.discount_rate}%`}}
+        </view>
+      </view>
+    </view>
+  </template>
+
+  <template
+    is="product-{{isLoading ? 'loading' : 'completed'}}"
+    data="{{product}}"
+  />
+</view>

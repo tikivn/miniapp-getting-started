@@ -1,0 +1,9 @@
+.empty-image {
+  width: 180px;
+  height: 180px;
+}
+
+.empty-bottom-divider {
+  height: 8px;
+  background-color: var(--gray10);
+}

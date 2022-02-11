@@ -1,0 +1,3 @@
+.tu-chip-left .tu-chip-left-image {
+  border-radius: 0;
+}

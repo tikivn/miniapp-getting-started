@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "chip": "@tiki.vn/tini-ui/es/chip/index",
+    "bottom-sheet": "@tiki.vn/tini-ui/es/bottom-sheet/index"
+  }
+}

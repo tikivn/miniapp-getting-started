@@ -1,0 +1,37 @@
+.navigation-bar {
+  z-index: 2;
+  transition: ease-in-out 0.1s;
+}
+
+.home-header {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: calc(100vw * 120 / 360);
+  background-size: cover;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+}
+
+.banners-skeleton {
+  height: calc(100vw * 56 / 168);
+}
+
+.best-seller-products {
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.best-seller-section {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  margin-top: -16px;
+}
+
+.white-navigation-bar {
+  background: var(--white);
+  border-bottom: 1px solid #ebebf0;
+}

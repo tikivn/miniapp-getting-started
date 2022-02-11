@@ -1,0 +1,16 @@
+.category-detail-selected {
+  overflow-x: auto;
+}
+
+.category-detail-selected-item {
+  min-width: fit-content;
+}
+
+.category-detail-selected-item .tu-chip {
+  padding-right: 3px;
+}
+
+.filtered-list .tu-chip:active,
+.filtered-list .tu-chip:hover {
+  background-color: white !important;
+}

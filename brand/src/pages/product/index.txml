@@ -1,0 +1,72 @@
+<view class="px-medium pb-medium">
+  <view>
+    <view
+      tiki:if="{{showCategory}}"
+      class="pt-medium"
+    >
+      <view class="font-bold text-medium mb-small">Danh mục</view>
+      <category-list
+        isLoading="{{isLoadingCategories}}"
+        class="w-full mb-medium"
+        categories="{{categories}}"
+        onTapCategory="goToCategoryDetail"
+      />
+      <view class="section-divider product-section-divider"/>
+    </view>
+    <view
+      tiki:if="{{showActions}}"
+      class="product-action-buttons {{isScrollUp && isStickButtons ? 'sticky-top-buttons' : ''}}"
+    >
+      <view class="flex justify-between bg-white py-small">
+        <filter
+          filters="{{filters}}"
+          selectedFilters="{{selectedFilters}}"
+          onSelect="onSelectFilter"
+          hideCategorySection="{{!!selectedCategory}}"
+        />
+        <sort
+          className="category-sort-button bg-white {{isScrollUp && isStickSortButton ? 'category-sort-button-stick' : ''}}"
+          sorts="{{sorts}}"
+          selectedSort="{{selectedSort}}"
+          onSelect="onSelectSort"
+        />
+      </view>
+      <filtered-list
+        className="product-filtered-list"
+        selectedFilters="{{selectedFilters}}"
+        onRemoveFilter="removeFilter"
+      />
+    </view>
+  </view>
+  <view tiki:if="{{!products.data.length && !isLoadingProduct}}">
+    <empty
+      className="pt-large mt-4x-small mb-medium"
+      title="Không tìm thấy sản phẩm nào"
+      description="Thử lại với bộ lọc khác"
+    />
+    <view class="section-divider product-section-divider"/>
+    <view class="py-medium">
+      <view class="font-bold text-medium mb-small">Phổ biến</view>
+      <product-section
+        products="{{popularProducts.data}}"
+        onTapProduct="onTapProduct"
+      />
+    </view>
+  </view>
+  <view tiki:else>
+    <view tiki:if="{{isLoadingProduct}}" class="app-loading mx-auto my-medium"/>
+    <product-section
+      tiki:else
+      className="mt-medium"
+      skeletons="{{8}}"
+      products="{{products.data}}"
+      onTapProduct="onTapProduct"
+    />
+  </view>
+  <product-section
+    isLoading
+    tiki:if="{{isLoadingMoreProduct}}"
+    className="product-loading-more-skeleton"
+    skeletons="{{6}}"
+  />
+</view>

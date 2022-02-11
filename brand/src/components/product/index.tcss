@@ -1,0 +1,10 @@
+.product-badge {
+  background: #ff424e;
+}
+
+.product-thumbnail,
+.product-thumbnail-skeleton {
+  width: auto;
+  height: 0;
+  padding-bottom: 100%;
+}
