@@ -1,0 +1,15 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="my.pageScrollTo" />
+  <view class="block-content"> 
+    <view>
+      <input style="width:100%" type="text" placeholder="key" name="key" value="{{scrollTop}}" onInput="scrollTopChange"></input>
+    </view>
+    <view>
+      <button class="button-full" onTap="scrollTo">Scroll</button>
+    </view>
+    <view style="height:1000px"></view>
+    <view id="miniapp_demo">Mini App</view>
+  </view>
+</view>
