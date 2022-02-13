@@ -23,7 +23,7 @@ Page({
       const data = await getUserInfo();
       this.setData({
         isLoading: false,
-        data: JSON.stringify(data),
+        data: JSON.stringify(data, null, 4),
       });
     } catch (err) {
       this.setData({

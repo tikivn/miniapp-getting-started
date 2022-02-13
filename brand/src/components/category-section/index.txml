@@ -1,0 +1,29 @@
+<view class="{{className}}">
+  <template name="category-section-loading">
+    <view class="hide-scroll-bar category-section">
+      <category
+        isLoading
+        tiki:for="{{skeletons}}"
+      />
+    </view>
+  </template>
+
+  <template name="category-section-completed">
+    <view class="hide-scroll-bar category-section">
+      <block
+        tiki:for="{{categories}}"
+        tiki:key="id"
+      >
+        <category
+          category="{{item}}"
+          onTapCategory="_onTapCategory"
+        />
+      </block>
+    </view>
+  </template>
+
+  <template
+    is="category-section-{{isLoading ? 'loading' : 'completed'}}"
+    data="{{categories, skeletons, type}}"
+  />
+</view>

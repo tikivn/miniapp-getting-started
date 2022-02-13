@@ -1,0 +1,8 @@
+<view class="page">
+  <block-header title="Usage" description="Open the system settings of the host app." />
+  <view class="block-content">
+    <view class="page-section-demo">
+      <button type="primary" onTap="openAppSetting">Open app setting</button>
+    </view>
+  </view>
+</view>

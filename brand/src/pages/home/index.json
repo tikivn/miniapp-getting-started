@@ -1,0 +1,10 @@
+{
+  "pullRefresh": true,
+  "transparentTitle": "always",
+  "usingComponents": {
+    "banners": "components/banners/index",
+    "section-title": "components/section-title/index",
+    "product-section": "components/product-section/index",
+    "category-list": "components/category-list/index"
+  }
+}

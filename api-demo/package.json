@@ -1,6 +1,6 @@
 {
   "name": "api-demo",
-  "version": "0.1.5",
+  "version": "0.5.8",
   "tiki": {
     "appIdentifier": "vn.tiki.miniapp.demo",
     "buildNumber": 1,
@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tiki.vn/mini-html-parser2": "^0.0.4",
-    "@tiki.vn/tini-ui": "0.4.1-rc.0",
+    "@tiki.vn/tini-ui": "^0.10.1-rc.0",
     "query-string": "^7.0.1"
   },
   "devDependencies": {

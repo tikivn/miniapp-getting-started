@@ -1,5 +1,12 @@
 import { filterNotImplementedPages } from '../libs/utils';
 
+const basicAPIList = [
+  {
+    name: 'Get App Secret',
+    path: 'pages/api/get-app-secret/index',
+  },
+].filter(filterNotImplementedPages);
+
 const openAPIList = [
   {
     name: 'Get User Info',
@@ -242,6 +249,10 @@ const deviceAPIList = [
     path: 'pages/api/open-setting/index',
   },
   {
+    name: 'Open App Setting',
+    path: 'pages/api/open-app-setting/index',
+  },
+  {
     name: 'Network Type',
     path: '/pages/api/network-type/index',
   },
@@ -256,6 +267,14 @@ const deviceAPIList = [
   {
     name: 'Shake',
     path: '/pages/api/shake/index',
+  },
+  {
+    name: 'System Info',
+    path: '/pages/api/system-info/index',
+  },
+  {
+    name: 'SDK Version',
+    path: '/pages/api/sdk-version/index',
   },
 ].filter(filterNotImplementedPages);
 
@@ -293,6 +312,10 @@ const notificationAPIList = [
 ];
 
 const APIList = [
+  {
+    type: 'Basic API',
+    list: basicAPIList,
+  },
   {
     type: 'Open API',
     list: openAPIList,

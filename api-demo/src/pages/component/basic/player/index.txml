@@ -1,0 +1,19 @@
+<view>
+  <block-header title="Usage" description="Allows play a local video or youtube on app" />
+  <view class="block-content">
+    <view class="video-contain">
+      <player 
+        url="https://www.youtube.com/watch?v=-HiYWgBB30g"
+        controls
+        onPlayerReady="onPlayerReady"
+        onStart="onStart"
+        onProgress="onProgress"
+        onDuration="onDuration"
+        onPause="onPause"
+        onSeek="onSeek"
+        onEnded="onEnded"
+        onError="onError"
+      />
+    </view>
+  </view>
+</view>

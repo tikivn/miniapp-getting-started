@@ -1,0 +1,19 @@
+.banners .t-carousel-container .t-carousel-slides {
+  margin-left: -8px;
+}
+
+.banners .t-carousel-container .t-carousel-slides .t-carousel-item {
+  min-width: calc(100% - 40px);
+  max-width: calc(100% - 40px);
+  padding-left: 8px;
+}
+
+.banners .t-carousel-indicator {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+.banners-skeleton {
+  width: 100%;
+  height: calc(100vw * 109 / 328);
+}
