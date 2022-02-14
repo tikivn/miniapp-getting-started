@@ -99,6 +99,10 @@ const interfaceAPIList = [
     name: 'Cascade selection',
     path: 'pages/api/multi-level-select/index',
   },
+  {
+    name: 'Page Scroll To',
+    path: 'pages/api/page-scroll-to/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const navigationBarAPIList = [
