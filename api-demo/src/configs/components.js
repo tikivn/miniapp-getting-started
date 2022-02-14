@@ -1,25 +1,25 @@
 const basicComponents = [
-  {
-    name: 'Theme',
-    components: [
-      {
-        name: 'Typography',
-        path: '',
-      },
-      {
-        name: 'Iconography',
-        path: '',
-      },
-      {
-        name: 'Border radius',
-        path: '',
-      },
-      {
-        name: 'Evelation',
-        path: '',
-      },
-    ],
-  },
+  // {
+  //   name: 'Theme',
+  //   components: [
+  //     {
+  //       name: 'Typography',
+  //       path: '',
+  //     },
+  //     {
+  //       name: 'Iconography',
+  //       path: '',
+  //     },
+  //     {
+  //       name: 'Border radius',
+  //       path: '',
+  //     },
+  //     {
+  //       name: 'Evelation',
+  //       path: '',
+  //     },
+  //   ],
+  // },
   {
     name: 'View container',
     components: [
