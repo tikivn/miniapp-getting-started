@@ -6,6 +6,10 @@
   </view>
 
   <view class="block-content">
+    <button onTap="getAllContacts">Get All Contacts</button>
+  </view>
+
+  <view class="block-content">
   <view class="page-section">
     <view class="page-section-title">my.addPhoneContact</view>
     <view class="page-section-demo">

@@ -73,4 +73,16 @@ Page({
       my.addPhoneContact(this.data);
     }
   },
+
+  getAllContacts(){
+    my.getAllContacts({
+      scope:["phone"],
+      success: (success) => {
+        this.alert(JSON.stringify(success));
+      },
+      fail: (fail) => {
+        this.alert(JSON.stringify(fail));
+      },
+    });
+  }
 });
