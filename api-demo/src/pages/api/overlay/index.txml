@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Show the overlay" />
+  <view class="block-content">
+    <button class="button-full" onTap="onLoading">Show overlay</button>
+  </view>
+</view>
