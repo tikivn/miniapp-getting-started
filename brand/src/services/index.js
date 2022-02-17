@@ -12,6 +12,7 @@ export const getProductsAPI = async ({
     baseUrl: 'https://tiki.vn/api/v2',
     path: '/products',
     params: {
+      aggregations: 2,
       page,
       limit,
       sort,
