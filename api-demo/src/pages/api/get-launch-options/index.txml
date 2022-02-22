@@ -1,0 +1,6 @@
+<view>
+  <block-header title="Usage" description="Get the launch options" />
+  <view class="block-content">
+    <button class="button-full" onTap="onGetLaunchOptions">Get Launch Options</button>
+  </view>
+</view>

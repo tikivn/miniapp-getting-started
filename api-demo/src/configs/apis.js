@@ -5,6 +5,10 @@ const basicAPIList = [
     name: 'Get App Secret',
     path: 'pages/api/get-app-secret/index',
   },
+  {
+    name: 'Get Launch Options',
+    path: 'pages/api/get-launch-options/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const openAPIList = [

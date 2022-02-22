@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Get Launch Options",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
