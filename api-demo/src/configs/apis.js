@@ -315,6 +315,13 @@ const notificationAPIList = [
   },
 ];
 
+const fontAPIList = [
+  {
+    name: 'Load Font Face',
+    path: 'pages/api/load-font-face/index',
+  },
+];
+
 const APIList = [
   {
     type: 'Basic API',
@@ -391,6 +398,10 @@ const APIList = [
   {
     type: 'Notifications',
     list: notificationAPIList,
+  },
+  {
+    type: 'Font',
+    list: fontAPIList,
   },
 ];
 

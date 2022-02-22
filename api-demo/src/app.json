@@ -67,6 +67,7 @@
     "pages/api/system-info/index",
     "pages/api/sdk-version/index",
     "pages/api/get-launch-options/index",
+    "pages/api/load-font-face/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",
