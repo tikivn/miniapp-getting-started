@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Load Font Face",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

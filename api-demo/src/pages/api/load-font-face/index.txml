@@ -1,0 +1,7 @@
+<view>
+  <block-header title="Usage" description="Load font face" />
+  <view class="block-content">
+    <button class="button-full" onTap="onLoadFontFace">Get Font Face</button>
+    <text class="test-font">Text after loaded font</text>
+  </view>
+</view>

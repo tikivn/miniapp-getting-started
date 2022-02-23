@@ -9,6 +9,10 @@ const basicAPIList = [
     name: 'Get App Id',
     path: 'pages/api/get-app-id/index',
   },
+  {
+    name: 'Get Launch Options',
+    path: 'pages/api/get-launch-options/index',
+  }
 ].filter(filterNotImplementedPages);
 
 const openAPIList = [
@@ -315,6 +319,13 @@ const notificationAPIList = [
   },
 ];
 
+const fontAPIList = [
+  {
+    name: 'Load Font Face',
+    path: 'pages/api/load-font-face/index',
+  },
+];
+
 const APIList = [
   {
     type: 'Basic API',
@@ -391,6 +402,10 @@ const APIList = [
   {
     type: 'Notifications',
     list: notificationAPIList,
+  },
+  {
+    type: 'Font',
+    list: fontAPIList,
   },
 ];
 

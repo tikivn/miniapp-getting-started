@@ -5,7 +5,7 @@ Page({
         my.showAlert({ content: JSON.stringify(res) });
       },
       fail: (res) => {
-        my.showAlert({ content: JSON.stringify(res) });
+        my.showAlert({ title: JSON.stringify(res) });
       },
     });
   },
