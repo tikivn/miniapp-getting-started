@@ -64,6 +64,7 @@
     "pages/api/shake/index",
     "pages/api/page-scroll-to/index",
     "pages/api/get-app-secret/index",
+    "pages/api/get-app-id/index",
     "pages/api/system-info/index",
     "pages/api/sdk-version/index",
     "pages/component/basic/foundation/typography/index",
