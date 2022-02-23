@@ -1,12 +1,10 @@
 <view class="{{className}}">
   <carousel
+    class="banners"
     tiki:if="{{isLoading}}"
     autoplay
     indicator-dots
     circular
-    duration="{{400}}"
-    interval="{{5000}}"
-    class="banners"
   > 
     <carousel-item
       tiki:for="{{[1, 2, 3]}}"
@@ -21,8 +19,6 @@
     autoplay
     indicator-dots
     circular
-    duration="{{400}}"
-    interval="{{5000}}"
     class="banners"
   > 
     <carousel-item

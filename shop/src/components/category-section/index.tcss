@@ -1,11 +1,11 @@
 .category-grid-layout {
+  --category-image-width: calc(100vw / 4 - 9vw);
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(var(--categories-in-line, 4), 1fr);
   grid-row-gap: 28px;
 }
 
-.category-grid-layout .category-grid {
-  --grid-item-width: calc(100vw / 4);
-  --grid-item-image-with: calc(var(--grid-item-width) - 9vw);
+.category-grid-layout .category {
   padding: 0 8px;
 }

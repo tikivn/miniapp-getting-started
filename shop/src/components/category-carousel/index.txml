@@ -1,0 +1,19 @@
+<view
+  tiki:if="{{isLoading || categories.length}}"
+  class="{{className}}"
+>
+  <carousel
+    indicator-dots="{{categories.length > 1}}"
+    onChange="onCategoryChange"
+  > 
+    <carousel-item tiki:for="{{isLoading ? 1 : categories}}">
+      <category-section
+        className="category-carousel {{index === activatedCategory ? 'category-carousel-active' : index < activatedCategory ? 'category-carousel-prev' : 'category-carousel-next'}} {{index === categories.length - 1 ? 'category-carousel-last' : ''}}"
+        isLoading="{{isLoading}}"
+        skeletons="{{8}}"
+        categories="{{item}}"
+        onTapCategory="_onTapCategory"
+      />
+    </carousel-item>  
+  </carousel>
+</view>
