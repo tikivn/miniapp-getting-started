@@ -4,4 +4,213 @@
   <view class="block-content">
     <button onTap="choosePhoneContact">Choose phone contact</button>
   </view>
+
+  <view class="block-content">
+    <button onTap="getAllContacts">Get All Contacts</button>
+  </view>
+
+  <view class="block-content">
+  <view class="page-section">
+    <view class="page-section-title">my.addPhoneContact</view>
+    <view class="page-section-demo">
+      <view style="font-size:18px;margin-top:18px;margin-bottom:18px">
+        <text style="font-size:18px;margin-top:18px;margin-bottom:18px">Basic info</text>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">nickName</view>
+        <view class="form-row-content">
+          <input id="nickName" onInput="onInput" class="input" value="tiniapp" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Last name</view>
+        <view class="form-row-content">
+          <input id="lastName" onInput="onInput" class="input" value="Last" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Middle name</view>
+        <view class="form-row-content">
+          <input id="middleName" onInput="onInput" class="input" value="Middle" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">First name</view>
+        <view class="form-row-content">
+          <input id="firstName" onInput="onInput" class="input" value="First" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Remark</view>
+        <view class="form-row-content">
+          <input id="remark" onInput="onInput" class="input" value="this is remark" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Mobile phone number</view>
+        <view class="form-row-content">
+          <input id="mobilePhoneNumber" onInput="onInput" class="input" value="13800000000" />
+        </view>
+      </view>
+      <view style="font-size:18px;margin-top:18px;margin-bottom:18px">
+        <text style="font-size:18px;margin-top:18px;margin-bottom:18px">Address</text>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Country address</view>
+        <view class="form-row-content">
+          <input id="addressCountry" onInput="onInput" class="input" value="US" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">State address</view>
+        <view class="form-row-content">
+          <input id="addressState" onInput="onInput" class="input" value="California" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">City address</view>
+        <view class="form-row-content">
+          <input id="addressCity" onInput="onInput" class="input" value="San Francisco" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Street address</view>
+        <view class="form-row-content">
+          <input id="addressStreet" onInput="onInput" class="input" value="Mountain View" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Postal Code address</view>
+        <view class="form-row-content">
+          <input id="addressPostalCode" onInput="onInput" class="input" value="94016" />
+        </view>
+      </view>
+      <view style="font-size:18px;margin-top:18px;margin-bottom:18px">
+        <text style="font-size:18px;margin-top:18px;margin-bottom:18px">Job</text>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Organization</view>
+        <view class="form-row-content">
+          <input id="organization" onInput="onInput" class="input" value="Tiki" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Title</view>
+        <view class="form-row-content">
+          <input id="title" onInput="onInput" class="input" value="Developer" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Work fax number</view>
+        <view class="form-row-content">
+          <input id="workFaxNumber" onInput="onInput" class="input" value="11111111" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Work phone number</view>
+        <view class="form-row-content">
+          <input id="workPhoneNumber" onInput="onInput" class="input" value="11111112" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Host number</view>
+        <view class="form-row-content">
+          <input id="hostNumber" onInput="onInput" class="input" value="11111113" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Email</view>
+        <view class="form-row-content">
+          <input id="email" onInput="onInput" class="input" value="liuhuo01@tiki.vn" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Url</view>
+        <view class="form-row-content">
+          <input id="url" onInput="onInput" class="input" value="www.tiki.vn'" />
+        </view>
+      </view>
+      <view style="font-size:18px;margin-top:18px;margin-bottom:18px">
+        <text style="font-size:18px;margin-top:18px;margin-bottom:18px">Work address</text>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Work country address</view>
+        <view class="form-row-content">
+          <input id="workAddressCountry" onInput="onInput" class="input" value="Viet Name" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Work state address</view>
+        <view class="form-row-content">
+          <input id="workAddressState" onInput="onInput" class="input" value="Q.10" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Work city address</view>
+        <view class="form-row-content">
+          <input id="workAddressCity" onInput="onInput" class="input" value="HCM" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Work street address</view>
+        <view class="form-row-content">
+          <input id="workAddressStreet" onInput="onInput" class="input" value="CMT8" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Postal Code office</view>
+        <view class="form-row-content">
+          <input id="workAddressPostalCode" onInput="onInput" class="input" value="361005" />
+        </view>
+      </view>
+      <view style="font-size:18px;margin-top:18px;margin-bottom:18px">
+        <text style="font-size:18px;margin-top:18px;margin-bottom:18px">Home</text>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Home fax number</view>
+        <view class="form-row-content">
+          <input id="homeFaxNumber" onInput="onInput" class="input" value="11111114" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Home phone number</view>
+        <view class="form-row-content">
+          <input id="homePhoneNumber" onInput="onInput" class="input" value="11111115" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Home county address</view>
+        <view class="form-row-content">
+          <input id="homeAddressCountry" onInput="onInput" class="input" value="Viet Name" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Home state address</view>
+        <view class="form-row-content">
+          <input id="homeAddressState" onInput="onInput" class="input" value="Binh Duong" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Home city address</view>
+        <view class="form-row-content">
+          <input id="homeAddressCity" onInput="onInput" class="input" value="Thuan An" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Home street address</view>
+        <view class="form-row-content">
+          <input id="homeAddressStreet" onInput="onInput" class="input" value="Nguyen Huu Canh" />
+        </view>
+      </view>
+      <view class="form-row">
+        <view class="form-row-label">Postal code home</view>
+        <view class="form-row-content">
+          <input id="homeAddressPostalCode" onInput="onInput" class="input" value="123456" />
+        </view>
+      </view>
+      <button type="primary" onTap="addPhoneContact">Add Phone Contact</button>
+    </view>
+  </view>
+  </view>
+
 </view>
