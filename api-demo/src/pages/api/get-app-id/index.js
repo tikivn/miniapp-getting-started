@@ -1,6 +1,6 @@
 Page({
-  onGetAppId() {
-    const res = my.getAppId();
+  onGetAppIdSync() {
+    const res = my.getAppIdSync();
     my.alert({ title: 'App ID', content: res });
   },
 });

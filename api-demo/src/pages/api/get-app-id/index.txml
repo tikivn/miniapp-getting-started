@@ -1,7 +1,7 @@
 <view>
   <view class="block-content">
-    <text class="title text-full">my.getAppId</text>
+    <text class="title text-full">my.getAppIdSync</text>
     <text class="description text-full">Get App ID, which can be set from admin tool</text>
-    <button class="button-full" onTap="onGetAppId">Get App Id</button>
+    <button class="button-full" onTap="onGetAppIdSync">Get App Id</button>
   </view>
 </view>
