@@ -4,7 +4,7 @@
       <block tiki:if="{{isLoading}}">
         <product
           isLoading
-          tiki:for="{{skeletonsArray}}"
+          tiki:for="{{skeletons}}"
           tiki:key="*this"
         />
       </block>
@@ -23,7 +23,7 @@
       <block tiki:if="{{isLoading}}">
         <product
           isLoading
-          tiki:for="{{skeletonsArray}}"
+          tiki:for="{{skeletons}}"
           tiki:key="*this"
         />
       </block>
@@ -39,6 +39,6 @@
 
   <template
     is="{{type}}"
-    data="{{isLoading, skeletonsArray, products}}"
+    data="{{isLoading, skeletons, products}}"
   />
 </view>

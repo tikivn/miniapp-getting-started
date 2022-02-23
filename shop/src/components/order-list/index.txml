@@ -3,7 +3,7 @@
 <template name='loading'>
   <view class="flex flex-col justify-between items-center py-2x-small">
     <block
-      tiki:for="{{skeletonsArray}}"
+      tiki:for="{{skeletons}}"
       tiki:key="*this"
     >
       <order-item
@@ -78,7 +78,7 @@
 
 <template
   is="{{isLoading ? 'loading' : 'completed'}}"
-  data="{{products, price, total, shippingFee, coupon, skeletonsArray}}"
+  data="{{products, price, total, shippingFee, coupon}}"
 />
 
 <modal

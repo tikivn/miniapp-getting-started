@@ -1,8 +1,4 @@
 Component({
-  data: {
-    skeletonsArray: [],
-  },
-
   props: {
     isLoading: false,
     type: 'vertical',
@@ -16,14 +12,5 @@ Component({
     _onTapProduct(product) {
       this.props.onTapProduct(product);
     },
-  },
-
-  // Life cycle
-  didMount() {
-    const { skeletons } = this.props;
-
-    this.setData({
-      skeletonsArray: [...Array(skeletons).keys()],
-    });
   },
 });

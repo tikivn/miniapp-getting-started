@@ -3,7 +3,7 @@
     <category
       className="category-nav-item"
       isLoading
-      tiki:for="{{skeletonsArray}}"
+      tiki:for="{{skeletons}}"
       tiki:key="*this"
     />
   </block>

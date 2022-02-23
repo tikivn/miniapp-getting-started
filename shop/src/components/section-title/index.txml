@@ -1,7 +1,7 @@
 <view class="flex justify-between items-center mt-4x-small mb-medium">
-  <view class="font-bold text-medium">
+  <text class="font-bold text-medium">
     {{title}}
-  </view>
+  </text>
   <view
     class="flex items-center"
     onTap="_onTapActionButton"
