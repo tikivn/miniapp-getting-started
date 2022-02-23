@@ -24,6 +24,7 @@
     "pages/api/navigation-bar/hide-back-home/index",
     "pages/api/navigator/index",
     "pages/api/navigator/navigator-lvl2/index",
+    "pages/api/navigator/navigator-lvl3/index",
     "pages/api/keyboard/index",
     "pages/api/image-picker/index",
     "pages/api/open-screen/index",
@@ -156,6 +157,7 @@
     "defaultTitle": "Tiki MiniApp Demo",
     "titleBarColor": "#1A94FF",
     "titleColor": "#fff",
-    "transparentTitle": "none"
+    "transparentTitle": "none",
+    "disableHardwareBack": "YES"
   }
 }

@@ -1,0 +1,10 @@
+<view>
+  <block-header title="Usage" description="Navigate Lvl 2" />
+
+  <view class="block-content">
+    <view class="component-item">
+      <text style="font-size:18px;margin-top:18px;margin-bottom:18px">disable hardware back</text>
+    </view>
+  </view>
+
+</view>

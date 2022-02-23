@@ -28,6 +28,9 @@
       <button style="width: 100%;" onTap="exitMiniApp">
         my.exitMiniApp
       </button>
+      <button style="width: 100%;" onTap="disableHardwareBack">
+        disableHardwareBack
+      </button>
     </view>
   </view>
 

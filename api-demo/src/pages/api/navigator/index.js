@@ -53,4 +53,10 @@ Page({
       },
     });
   },
+
+  disableHardwareBack(){
+    my.redirectTo({
+      url: 'pages/api/navigator/navigator-lvl3/index',
+    });
+  }
 });
