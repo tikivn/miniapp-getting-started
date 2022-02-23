@@ -1,7 +1,7 @@
 <view>
 <block-header 
       title="Usage" 
-      description="my.pageScrollTo nè" />
+      description="my.pageScrollTo" />
   <view class="block-content"> 
     <view>
       <input style="width:100%" type="text" placeholder="key" name="key" value="{{scrollTop}}" onInput="scrollTopChange"></input>
