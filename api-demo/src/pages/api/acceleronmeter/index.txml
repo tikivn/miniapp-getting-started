@@ -2,4 +2,7 @@
 <block-header 
       title="Usage" 
       description="Monitor acceleronmeter data" />
+<view class="block-content">
+      Data: {{`x: ${data.x}, y: ${data.y}, z: ${data.z}`}}
+</view>
 </view>
