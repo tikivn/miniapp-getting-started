@@ -79,7 +79,6 @@
       isLoading="{{isLoading}}"
       className="search-category-list"
       skeletons="{{8}}"
-      type="category-grid"
       categories="{{categories}}"
       onTapCategory="goToCategoryDetail"
     />

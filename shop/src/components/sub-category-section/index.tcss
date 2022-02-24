@@ -8,13 +8,13 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
-.sub-category-section-item .category-grid {
+.sub-category-section-item .category {
   --grid-item-width: calc((100vw - 146px) / 3);
   --grid-item-image-with: calc(var(--grid-item-width) - 28px);
   padding: 8px;
   margin: 0 auto;
 }
 
-.sub-category-section-item .category-grid-name {
+.sub-category-section-item .category-name {
   font-size: 12px;
 }

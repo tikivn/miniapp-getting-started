@@ -1,9 +1,8 @@
 Component({
   props: {
-    isLoading: false,
-    skeletons: 0,
     className: '',
-    activatedCategory: {},
+    isLoading: false,
+    activatedCategory: 0,
     categories: [],
     onTapCategory: () => {},
   },
@@ -11,6 +10,12 @@ Component({
   methods: {
     _onTapCategory(category) {
       this.props.onTapCategory(category);
+    },
+
+    onCategoryChange(event) {
+      this.setData({
+        activatedCategory: event.detail.current,
+      });
     },
   },
 });

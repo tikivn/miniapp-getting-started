@@ -1,8 +1,4 @@
 Component({
-  data: {
-    skeletonsArray: [],
-  },
-
   props: {
     isLoading: false,
     title: '',
@@ -21,13 +17,5 @@ Component({
     _onTapCategoryTitle() {
       this.props.onTapCategoryTitle(this.props.title);
     },
-  },
-
-  didMount() {
-    const { skeletons } = this.props;
-
-    this.setData({
-      skeletonsArray: [...Array(skeletons).keys()],
-    });
   },
 });

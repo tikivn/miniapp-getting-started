@@ -32,26 +32,12 @@
         title="Category"
         onTapActionButton="goToCategory"
       />
-      <carousel
-        indicator-dots
-        duration="{{400}}"
-        interval="{{5000}}"
-        class="home-category-carousel"
-        active-class="home-category-carousel-active"
-      > 
-        <carousel-item
-          tiki:for="{{isLoading ? [1] : categories}}"
-          tiki:key="id"
-        >
-          <category-section
-            isLoading="{{isLoading}}"
-            className="home-category-list"
-            skeletons="{{8}}"
-            categories="{{item}}"
-            onTapCategory="goToCategoryDetail"
-          />
-        </carousel-item>  
-      </carousel>
+      <category-carousel
+        class="{{isLoading || categories.length > 1 ? 'home-category-multiple' : ''}}"
+        isLoading="{{isLoading}}"
+        categories="{{categories}}"
+        onTapCategory="goToCategoryDetail"
+      />
     </view>
 
     <view class="home-section">

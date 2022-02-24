@@ -21,7 +21,7 @@
       <category
         isLoading
         className="sub-category-section-item"
-        tiki:for="{{skeletonsArray}}"
+        tiki:for="{{skeletons}}"
         tiki:key="*this"
       />
     </block>

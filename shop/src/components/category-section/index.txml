@@ -3,7 +3,7 @@
     <block tiki:if="{{isLoading}}">
       <category
         isLoading
-        tiki:for="{{skeletonsArray}}"
+        tiki:for="{{skeletons}}"
         tiki:key="*this"
       />
     </block>

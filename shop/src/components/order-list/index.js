@@ -2,10 +2,6 @@ Component({
   isCreated: false,
   selectedProduct: {},
 
-  data: {
-    skeletonsArray: [],
-  },
-
   props: {
     isLoading: false,
     shippingFee: 0,
@@ -56,14 +52,5 @@ Component({
         },
       });
     },
-  },
-
-  // Life cycle
-  didMount() {
-    const { skeletons } = this.props;
-
-    this.setData({
-      skeletonsArray: [...Array(skeletons).keys()],
-    });
   },
 });

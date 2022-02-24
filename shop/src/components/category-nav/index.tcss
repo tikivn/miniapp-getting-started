@@ -4,23 +4,23 @@
   background-color: var(--gray10);
 }
 
-.category-nav-item .category-grid {
+.category-nav-item .category {
   --grid-item-width: 80px;
   --grid-item-image-with: 24px;
 
   padding: 8px;
 }
 
-.category-nav-item .category-grid-logo {
+.category-nav-item .category-logo {
   margin-bottom: 4px;
 }
 
-.category-nav-item .category-grid-name {
+.category-nav-item .category-name {
   font-size: 10px;
   color: var(--gray60);
 }
 
-.category-nav-item .skeleton-category-grid-names > view {
+.category-nav-item .skeleton-category-names > view {
   height: 15px;
 }
 
@@ -28,7 +28,7 @@
   background-color: var(--white);
 }
 
-.category-nav-item-active .category-grid-name {
+.category-nav-item-active .category-name {
   font-size: 10px;
   font-weight: bold;
   color: var(--gray200);

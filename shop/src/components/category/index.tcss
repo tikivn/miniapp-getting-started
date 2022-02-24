@@ -1,18 +1,13 @@
-.category-grid {
+.category {
   width: var(--grid-item-width, 58px);
 }
 
-.category-grid-logo,
-.skeleton-category-grid-logo {
+.category-logo,
+.skeleton-category-logo {
   width: var(--grid-item-image-with, 48px);
   height: var(--grid-item-image-with, 48px);
   border-radius: 40%;
 }
-
-.skeleton-category-grid-names {
-  width: calc(100% - 10px);
-}
-
-.category-grid-name {
+.category-name {
   word-break: break-word;
 }

@@ -4,9 +4,9 @@
   "allowsBounceVertical": "NO",
   "usingComponents": {
     "product-section": "components/product-section/index",
-    "category-section": "components/category-section/index",
+    "category-carousel": "components/category-carousel/index",
     "banners": "components/banners/index",
-    "section-title": "pages/home/section-title/index",
+    "section-title": "components/section-title/index",
     "onboarding": "components/onboarding/index"
   }
 }
