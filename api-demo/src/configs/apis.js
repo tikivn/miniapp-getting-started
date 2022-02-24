@@ -6,9 +6,13 @@ const basicAPIList = [
     path: 'pages/api/get-app-secret/index',
   },
   {
+    name: 'Get App Id',
+    path: 'pages/api/get-app-id/index',
+  },
+  {
     name: 'Get Launch Options',
     path: 'pages/api/get-launch-options/index',
-  },
+  }
 ].filter(filterNotImplementedPages);
 
 const openAPIList = [
@@ -279,6 +283,10 @@ const deviceAPIList = [
   {
     name: 'SDK Version',
     path: '/pages/api/sdk-version/index',
+  },
+  {
+    name: 'Acceleronmeter',
+    path: '/pages/api/acceleronmeter/index',
   },
 ].filter(filterNotImplementedPages);
 
