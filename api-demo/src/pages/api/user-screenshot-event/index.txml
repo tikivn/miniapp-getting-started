@@ -1,0 +1,12 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="User Screenshot Event API " />
+  <view class="block-content"> 
+    <view> Current status: {{ condition ? "Monitoring has been enabled" : 'Monitoring has been canceled' }} </view>
+  </view>
+  <view class="block-content">
+    <button class="button-full" onTap="onTapOffUserCaptureScreen">Cancel listening for screen events</button>
+    <button class="button-full" onTap="onTapOnUserCaptureScreen">Enable listening for screen events</button>   
+  </view>
+</view>
