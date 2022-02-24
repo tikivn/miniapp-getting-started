@@ -284,6 +284,10 @@ const deviceAPIList = [
     name: 'SDK Version',
     path: '/pages/api/sdk-version/index',
   },
+  {
+    name: 'Acceleronmeter',
+    path: '/pages/api/acceleronmeter/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const networkAPIList = [
