@@ -11,7 +11,7 @@ Page({
     my.onUserCaptureScreen(this.callback);
   },
   onTapOnUserCaptureScreen() {
-    my.onUserCaptureScreen();
+    my.onUserCaptureScreen(this.callback);
     this.setData({condition: true});
   },
   onTapOffUserCaptureScreen() {
