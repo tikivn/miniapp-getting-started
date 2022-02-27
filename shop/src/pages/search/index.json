@@ -8,6 +8,7 @@
     "empty": "components/empty/index",
     "filter": "components/filter/index",
     "filtered-list": "components/filtered-list/index",
-    "sort": "components/sort/index"
+    "sort": "components/sort/index",
+    "recent-search": "components/recent-search/index"
   }
 }

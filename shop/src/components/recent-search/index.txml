@@ -1,0 +1,17 @@
+<view 
+  class="{{className}} flex justify-between items-center py-x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}"
+  tiki:for="{{recentKeys}}"
+  data-item="{{item}}"
+  onTap="_onClickItem"
+>
+  <view>
+    {{item}}
+  </view>
+  <view 
+    class="flex items-center"
+    data-item="{{item}}" 
+    catchTap="_onRemoveItem" 
+  >
+    <icon type="close" color="#808089"/>
+  </view>
+</view>

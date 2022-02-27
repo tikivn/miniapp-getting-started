@@ -19,7 +19,7 @@
   </template>
 
   <template name="horizontal">
-    <view class="product-section-horizontal flex hide-scroll-bar">
+    <view class="product-section-horizontal hide-scroll-bar">
       <block tiki:if="{{isLoading}}">
         <product
           isLoading

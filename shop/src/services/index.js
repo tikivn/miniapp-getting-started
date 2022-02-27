@@ -145,7 +145,7 @@ export const filterSortProductsAPI = async ({ filters, sort, search = '' }) => {
         break;
     }
 
-  if (search) result = result.filter((p) => p.name.includes(search));
+  if (search) result = result.filter((p) => p.name.toLowerCase().includes(search.toLowerCase()));
   return result;
 };
 
