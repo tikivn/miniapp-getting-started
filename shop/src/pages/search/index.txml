@@ -5,23 +5,17 @@
         value="{{searchTerm}}"
         onSearch="onSearch"
         onInput="onInput"
+        onConfirm="onConfirm"
       />
     </view> 
     <view tiki:if="{{!searchTerm && recentKeys.length}}" class="py-medium my-2x-small">
       <view class="px-medium text-medium font-bold mb-small">Recent search</view>
-      <view 
-        tiki:for="{{recentKeys}}"
-        class="px-medium flex justify-between py-2x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}"
-        data-key="{{item}}"
-        onTap="onClickKeySearch"
-      >
-        <view>
-          {{item}}
-        </view>
-        <view data-item="{{item}}" catchTap="removeKeySearch">
-          <icon type="close" color="#808089"/>
-        </view>
-      </view>
+      <recent-search
+        className="px-medium"
+        recentKeys="{{recentKeys}}"
+        onClickItem="applySearchKey"
+        onRemoveItem="removeSearchKey"
+      />
     </view>
 
     <view tiki:if="{{searchTerm}}" class="py-medium mb-2x-small mt-4x-small">

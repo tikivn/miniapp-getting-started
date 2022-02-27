@@ -14,6 +14,8 @@ import {
 } from '../../utils/navigate';
 
 Page({
+  maxSearch: 5,
+
   data: {
     isLoading: false,
     categories: [],
@@ -103,35 +105,50 @@ Page({
 
   async onSearch(searchTerm) {
     if (searchTerm) {
-      const keysSearch = await getStorage('recent-search');
-      let recentKeys = keysSearch ? keysSearch : [];
-      if (recentKeys.includes(searchTerm)) {
-        recentKeys = recentKeys.filter((k) => k !== searchTerm);
-      }
-      setStorage('recent-search', [searchTerm, ...recentKeys]);
       this.filterSortSearchProducts();
     }
   },
 
-  async removeKeySearch(event) {
-    const { item } = event.target.dataset;
+  onConfirm(searchTerm) {
+    this.onSearch(searchTerm);
+    this.addNewRecentKey(searchTerm);
+  },
+
+  async addNewRecentKey(searchTerm) {
+    if (!searchTerm || searchTerm.length === 0) return;
+
+    const keysSearch = await getStorage('recent-search');
+    let recentKeys = keysSearch ? keysSearch.slice(0, this.maxSearch) : [];
+    if (recentKeys.includes(searchTerm)) {
+      recentKeys = recentKeys.filter((k) => k !== searchTerm);
+    }
+    const newKeys = [searchTerm, ...recentKeys.slice(0, this.maxSearch - 1)];
+    setStorage('recent-search', newKeys);
+    this.setData({
+      recentKeys: newKeys,
+    });
+  },
+
+  async removeSearchKey(key) {
     const recentKeys = await getStorage('recent-search');
-    const removedKeys = recentKeys.filter((k) => k !== item);
+    const removedKeys = recentKeys.filter((k) => k !== key);
     setStorage('recent-search', removedKeys);
     this.setData({
       recentKeys: removedKeys,
     });
   },
 
-  onClickKeySearch(event) {
-    const { key } = event.target.dataset;
+  applySearchKey(key) {
     this.setData({
       searchTerm: key,
       isLoading: true,
     });
+
+    this.addNewRecentKey(key);
   },
 
   onTapProduct(product) {
+    this.addNewRecentKey(this.data.searchTerm);
     navigateToPDP(product.id);
   },
 

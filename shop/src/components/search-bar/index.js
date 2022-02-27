@@ -6,6 +6,7 @@ Component({
     value: '',
     onInput: () => {},
     onSearch: () => {},
+    onConfirm: () => {},
   },
 
   methods: {
@@ -22,6 +23,10 @@ Component({
 
     _onSearch() {
       this.props.onSearch(this.props.value);
+    },
+
+    _onConfirm(event) {
+      this.props.onConfirm(event.detail.value);
     },
   },
 
