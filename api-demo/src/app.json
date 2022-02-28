@@ -157,7 +157,6 @@
     "defaultTitle": "Tiki MiniApp Demo",
     "titleBarColor": "#1A94FF",
     "titleColor": "#fff",
-    "transparentTitle": "none",
-    "disableHardwareBack": "YES"
+    "transparentTitle": "none"
   }
 }
