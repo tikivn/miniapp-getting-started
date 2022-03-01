@@ -1,9 +1,16 @@
+const FirstPage = 'pages/component/index';
+
 App({
-  onLaunch(q) {
-    //my.alert({ content: JSON.stringify(q) });
-  },
+  currentPage: FirstPage,
+  onLaunch() {},
   onShow() {},
   onError(e) {
     console.log(e);
+  },
+  onShareAppMessage() {
+    const path = this.currentPage === FirstPage ? '' : `?page=${this.currentPage}`;
+    return {
+      path,
+    };
   },
 });
