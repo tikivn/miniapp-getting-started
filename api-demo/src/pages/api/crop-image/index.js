@@ -25,16 +25,8 @@ Page({
       width: 400,
       height: 400,
       success: (res) => {
-        my.previewImage({
-          urls: [res.path],
-          enablesavephoto: false,
-          enableShowPhotoDownload: false,
-          success: (res) => {
-            console.log('success', res);
-          },
-          fail: (err) => {
-            console.log('fail', err);
-          },
+        this.setData({
+          tempFilePath: res.path,
         });
       },
       fail: (e) => {
