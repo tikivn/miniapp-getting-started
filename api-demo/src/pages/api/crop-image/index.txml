@@ -1,5 +1,5 @@
 <view>
-  <block-header title="Usage" description="Compress image" />
+  <block-header title="Usage" description="Crop image" />
   <view class="block-content">
     <image class="image-cover" src="{{tempFilePath}}" />
     <button class="button-full" onTap="onChooseImage">Choose Image</button>
