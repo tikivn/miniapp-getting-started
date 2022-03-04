@@ -31,6 +31,7 @@ Page({
         isLoading: false,
         err,
       }); 
+      my.alert({ title: 'Fail', content: JSON.stringify(err) });
     }
   },
 });
