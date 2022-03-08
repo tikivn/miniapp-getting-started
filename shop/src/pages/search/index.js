@@ -179,15 +179,15 @@ Page({
     });
 
     try {
-      const [categories, products, otherProducts, filters, sorts] =
+      const [categories, products, otherProducts, filters, sorts, recentKeys] =
         await Promise.all([
           getCategoriesAPI(),
           getProductsByCategoryIdAPI(),
           getOtherProductsAPI(),
           getFiltersAPI(),
           getSortsAPI(),
+          getStorage('recent-search'),
         ]);
-      const recentKeys = await getStorage('recent-search');
 
       this.setData({
         categories,

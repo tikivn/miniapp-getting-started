@@ -1,9 +1,10 @@
-<div align="center">
+<!-- <div align="center">
+  <img width="200" src="https://salt.tikicdn.com/ts/miniapp/8f/b5/0e/9f86f79f537964ecdde56000092dd0de.png" alt="QR" /> -->
 <h3 align="center">Brand Template</h3>
   <p align="center">
     Ứng dụng giúp hỗ trợ các Seller mở brand trên Tini App
     <br />
-    <a href="https://github.com/tikivn/miniapp-tini-brand"><strong>Xem thêm tại »</strong></a>
+    <a href="https://github.com/tikivn/miniapp-getting-started/tree/main/brand"><strong>Xem thêm tại »</strong></a>
     <br />
     <br />
   </p>
@@ -48,3 +49,4 @@ Trước hết, vui lòng tải về [Tini Studio](https://developers.tiki.vn/do
    brandLogo: <your_brand_name>;
    brandCover: <your_brand_name>;
    ```
+4. Mở simulator và xem thành quả.
