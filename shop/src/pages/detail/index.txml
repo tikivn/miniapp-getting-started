@@ -55,7 +55,7 @@
         class="w-50"
         shape="pill"
         type="outline"
-        onTap="onClickBuyNow"
+        onTap="addToCart"
       >
         Add to cart
       </button>

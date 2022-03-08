@@ -19,6 +19,9 @@ export const navigateToCart = () => {
 export const loadBadgeCart = (ic = '') => {
   const app = getApp();
   const { orderedProducts } = app.cart;
+  const total = orderedProducts.length
+    ? orderedProducts.reduce((acc, curr) => acc + curr.quantity, 0)
+    : undefined;
   const image = ic ? ic : '/assets/images/ic-cart.png';
   const size = ic ? 32 : 24;
   my.addIconsToNavigationBar({
@@ -27,16 +30,10 @@ export const loadBadgeCart = (ic = '') => {
         image: image,
         width: orderedProducts.length ? 48 : size,
         height: size,
-        badge: `${orderedProducts.length}`,
+        badge: '' + total,
       },
     ],
     padding: 8,
-    success: (res) => {
-      console.log(res);
-    },
-    fail: (res) => {
-      console.log(res);
-    },
   });
 };
 

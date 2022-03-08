@@ -1,6 +1,6 @@
 {
   "name": "miniapp-tini-shop",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "tiki": {
     "appIdentifier": "vn.tiki.tinishop",
     "buildNumber": 1
