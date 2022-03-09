@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "User Screenshot Event API",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
