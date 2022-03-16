@@ -23,16 +23,15 @@ Page({
 
   navigateToMiniApp() {
     my.navigateToMiniApp({
-      appId: 'xyz.tala.test.miniappone',
-      path: 'pages/api/navigator/index',
-      appMeta: {
-        cdnBaseUrl:
-          'https://dev-tikiscp.tbox.vn/miniapps/xyz.tala.test.miniappone/1.1.0/2/151feea1818111eb86082e3a2f899608/',
-        frameworkVersion: '1.34.0',
-        frameworkCdnBaseDomain: 'https://dev-tikiscp.tbox.vn/miniapps/framework_files',
-      },
+      appId: 'com.tini.appstore',
       extraData: {
         from: 'MiniApp Demo',
+      },
+      success: (e) => {
+        my.alert({ content: JSON.stringify(e) });
+      },
+      fail: (e) => {
+        my.alert({ content: JSON.stringify(e) });
       },
     });
   },
@@ -54,9 +53,9 @@ Page({
     });
   },
 
-  disableHardwareBack(){
+  disableHardwareBack() {
     my.redirectTo({
       url: 'pages/api/navigator/navigator-lvl3/index',
     });
-  }
+  },
 });

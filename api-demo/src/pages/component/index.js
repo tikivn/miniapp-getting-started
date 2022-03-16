@@ -14,6 +14,17 @@ Page({
       my.navigateTo({ url: query.page });
     }
   },
+  // onShow() {
+  //   my.reLaunch({
+  //     url: 'pages/api/index',
+  //     success: (res) => {
+  //       my.alert({ content: 'Font is load successful' });
+  //     },
+  //     fail: (res) => {
+  //       my.alert({ title: JSON.stringify(res) });
+  //     },
+  //   });
+  // },
   onTabClick({ index, tabsName }) {
     this.setData({
       [tabsName]: index,
