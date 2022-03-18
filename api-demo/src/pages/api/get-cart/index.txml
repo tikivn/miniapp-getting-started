@@ -1,0 +1,9 @@
+<view>
+  <block-header title="Usage" description="Get Cart" />
+  <view class="block-content">
+   {{cart}}
+    <button style="width: 100%;" onTap="onGetCart">
+      Get Cart
+    </button>
+  </view>
+</view>

@@ -44,6 +44,7 @@
     "pages/api/canvas/index",
     "pages/api/make-phone-call/index",
     "pages/api/add-to-cart/index",
+    "pages/api/get-cart/index",
     "pages/api/scan-qr/index",
     "pages/api/open-native-store/index",
     "pages/api/clipboard/index",

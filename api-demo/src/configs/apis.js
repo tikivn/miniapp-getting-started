@@ -218,8 +218,12 @@ const phoneAPIList = [
 
 const tikiAPIList = [
   {
-    name: 'API Service',
+    name: 'Add To Cart',
     path: 'pages/api/add-to-cart/index',
+  },
+  {
+    name: 'Get Cart',
+    path: 'pages/api/get-cart/index',
   },
 ];
 
