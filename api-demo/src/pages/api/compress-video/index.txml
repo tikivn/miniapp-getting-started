@@ -1,0 +1,38 @@
+
+<view>
+  <block-header title="Usage" description="Compress video" />
+  <view class="block-content">
+    <video id="video" object-fit="cover" style="width: 100%; height: 100%;" onPlay="onPlay" onPause="onPause"
+      onEnd="onEnd" onTimeUpdate="onTimeUpdate" plays-inline src="{{tempFilePath}}" />
+    <button class="button-full" onTap="onChooseVideo">Choose Video</button>
+  </view>
+  <view class="block-content">
+    <block-variant title="compressLevel">
+      <view class="first-item" />
+        <radio-group onChange="onChangeCompressLevel">
+          <list-item>
+            <label class="label-line">
+              <radio class="label-line-radio" value="low" />
+              <view class="label-line-content">low</view>
+            </label>
+          </list-item>
+          <list-item>
+            <label class="label-line">
+              <radio class="label-line-radio"  checked value="medium" />
+              <view class="label-line-content">medium</view>
+            </label>
+          </list-item>
+          <list-item>
+            <label class="label-line">
+              <radio class="label-line-radio" value="high" />
+              <view class="label-line-content">high</view>
+            </label>
+          </list-item>
+        </radio-group>
+    </block-variant>
+
+    <button class="button-full" disabled="{{tempFilePath === undefined}}" onTap="onCompressVideo">Compress Video</button>
+    <video id="video" object-fit="cover" style="width: 100%; height: 100%;" onPlay="onPlay" onPause="onPause"
+      onEnd="onEnd" onTimeUpdate="onTimeUpdate" plays-inline src="{{compressVideoUrl}}" />
+  </view>
+</view>

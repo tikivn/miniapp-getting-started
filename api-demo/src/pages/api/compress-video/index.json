@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "my.chooseVideo",
+  "usingComponents": {
+    "block-header": "components/block-header/index",
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "block-variant": "components/block-variant/index"
+  }
+}

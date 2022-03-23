@@ -48,6 +48,7 @@
     "pages/api/open-native-store/index",
     "pages/api/clipboard/index",
     "pages/api/choose-video/index",
+    "pages/api/compress-video/index",
     "pages/api/crop-image/index",
     "pages/api/trim-video/index",
     "pages/api/check-notification/index",
