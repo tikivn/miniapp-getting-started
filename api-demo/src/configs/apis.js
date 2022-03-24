@@ -168,6 +168,10 @@ const mediaVideoAPIList = [
     name: 'Trim Video',
     path: '/pages/api/trim-video/index',
   },
+  {
+    name: 'Compress Video',
+    path: '/pages/api/compress-video/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const deeplinkAPIList = [

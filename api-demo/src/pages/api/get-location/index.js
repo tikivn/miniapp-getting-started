@@ -10,6 +10,7 @@ Page({
       },
       fail: (e) => {
         console.log(e);
+        my.alert({ title: 'Fail', content: JSON.stringify(e) });
       },
     });
   },
