@@ -222,8 +222,12 @@ const phoneAPIList = [
 
 const tikiAPIList = [
   {
-    name: 'API Service',
+    name: 'Add To Cart',
     path: 'pages/api/add-to-cart/index',
+  },
+  {
+    name: 'Get Cart',
+    path: 'pages/api/get-cart/index',
   },
 ];
 
@@ -291,6 +295,10 @@ const deviceAPIList = [
   {
     name: 'Acceleronmeter',
     path: '/pages/api/acceleronmeter/index',
+  },
+  {
+    name: 'User screenshot event',
+    path: '/pages/api/user-screenshot-event/index',
   },
 ].filter(filterNotImplementedPages);
 

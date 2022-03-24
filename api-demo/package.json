@@ -3,7 +3,7 @@
   "version": "0.1.7",
   "tiki": {
     "appIdentifier": "vn.tiki.miniapp.demo",
-    "buildNumber": 32,
+    "buildNumber": 33,
     "metadata": {
       "frameworkComponentUrl": "https://salt.tikicdn.com/ts/miniapp/da/33/7e/7136fad18cd0d6ea0b1e710938deb632.js"
     }

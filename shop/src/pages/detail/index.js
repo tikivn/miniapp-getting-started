@@ -56,7 +56,7 @@ Page({
     });
   },
 
-  onClickBuyNow() {
+  addToCart() {
     app.addProduct(this.data.product);
     loadBadgeCart();
     this.showToast(`Add to cart successfully`);
