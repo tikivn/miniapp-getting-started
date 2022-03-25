@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "my.checkNativePermissions",
+  "usingComponents": {
+    "block-header": "components/block-header/index",
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index"
+  }
+}

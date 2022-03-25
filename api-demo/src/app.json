@@ -53,6 +53,7 @@
     "pages/api/crop-image/index",
     "pages/api/trim-video/index",
     "pages/api/check-notification/index",
+    "pages/api/check-native-permissions/index",
     "pages/api/get-open-data/index",
     "pages/api/battery/index",
     "pages/api/brightness/index",

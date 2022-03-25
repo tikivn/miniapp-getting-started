@@ -333,6 +333,10 @@ const notificationAPIList = [
     name: 'Check Notification Permission',
     path: 'pages/api/check-notification/index',
   },
+  {
+    name: 'Check Native Permission',
+    path: 'pages/api/check-native-permissions/index',
+  },
 ];
 
 const fontAPIList = [
