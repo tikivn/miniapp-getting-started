@@ -1,13 +1,15 @@
 <view>
   <block-header title="Usage" description="Check native permission on device" />
   <view class="block-content">
-    <checkbox-group onChange="onChange" tiki:for="{{permissions}}" :key="index">
-        <list-item>
+    <checkbox-group onChange="onChange">
+      <block tiki:for="{{permissions}}" tiki:for-item="item">
+        <list-item :key="index">
           <label class="label-line">
-            <checkbox class="label-line-checkbox" checked="{{item.value}}" value="{{index}}" />
-            <view class="label-line-content">{{item.key}}</view>
+            <checkbox class="label-line-checkbox" value="{{item}}" />
+            <view class="label-line-content">{{item}}</view>
           </label>
         </list-item>
+      </block>
     </checkbox-group>
     <button class="button-full" onTap="onCheckPermissions">Check Permission</button>
   </view>
