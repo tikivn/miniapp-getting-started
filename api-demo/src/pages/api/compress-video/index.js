@@ -42,4 +42,16 @@ Page({
       },
     });
   },
+  onGetFileInfo(){
+    my.getFileInfo({
+      filePath: this.data.compressVideoUrl,
+      success: (res) => {
+        my.alert({ content: JSON.stringify(res) });
+      },
+      fail: (e) => {
+        my.alert({ content: JSON.stringify(e) });
+        console.log(e);
+      },
+    });
+  }
 });
