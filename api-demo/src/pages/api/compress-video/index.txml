@@ -35,4 +35,8 @@
     <video id="video" object-fit="cover" style="width: 100%; height: 100%;" onPlay="onPlay" onPause="onPause"
       onEnd="onEnd" onTimeUpdate="onTimeUpdate" plays-inline src="{{compressVideoUrl}}" />
   </view>
+
+  <view class="block-content">
+    <button class="button-full" disabled="{{compressVideoUrl === undefined}}" onTap="onGetFileInfo">Get size video</button>
+  </view>
 </view>
