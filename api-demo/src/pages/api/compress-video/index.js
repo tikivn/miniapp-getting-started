@@ -5,8 +5,9 @@ Page({
     compressLevel: 'medium',
   },
   onChangeCompressLevel(v){
+    console.log("aaaaaaa", this.data.compressLevel);
     this.setData({
-      compressLevel: v,
+      compressLevel: v.detail.value,
     });
   },
   onChooseVideo() {
