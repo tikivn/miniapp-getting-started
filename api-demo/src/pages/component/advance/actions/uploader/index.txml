@@ -1,0 +1,24 @@
+<view class="px-medium pb-medium">
+  <view class="mt-medium mb-2x-small">Component:</view>
+  <uploader/>
+
+  <view class="mt-medium mb-2x-small">Custom icon:</view>
+  <uploader icon="plus"/>
+
+  <view class="mt-medium mb-2x-small">Custom size:</view>
+  <uploader style="width: 80px; height: 80px;" iconSize="40"/>
+
+  <view class="mt-medium mb-2x-small">Custom content:</view>
+  <uploader>
+    <view class="flex items-center px-2x-small">
+      <icon type="info" class="mr-2x-small"/>
+      <text>Select image</text>
+    </view>
+  </uploader>
+
+  <view class="mt-medium mb-2x-small">Disabled:</view>
+  <uploader disabled/>
+
+  <view class="mt-medium mb-2x-small">Event:</view>
+    <uploader onChange="onChange"/>
+</view>
