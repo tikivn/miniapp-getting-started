@@ -1,7 +1,7 @@
 <view class="page">
   <block-header title="Usage" description="Uploader is used to choose and preview file (Currently only images are supported)" />
   <block-variant
-    header="Variants"
+    header="Demo"
     title="1. Basic component"
     description="Default size, icon placeholder"
   >
