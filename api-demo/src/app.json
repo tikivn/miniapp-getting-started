@@ -117,6 +117,7 @@
     "pages/component/advance/actions/uploader/index",
     "pages/component/advance/form/text-field/index",
     "pages/component/advance/form/dropdown/index",
+    "pages/component/advance/form/search-bar/index",
     "pages/component/advance/form/stepper/index",
     "pages/component/advance/form/radio-button/index",
     "pages/component/advance/form/checkbox/index",
