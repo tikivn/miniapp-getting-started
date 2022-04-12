@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Text field",
+  "usingComponents": {
+    "search-bar": "@tiki.vn/tini-ui/es/search-bar/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}

@@ -227,6 +227,10 @@ const advancedComponents = [
         path: '/pages/component/advance/form/dropdown/index',
       },
       {
+        name: 'Search bar',
+        path: '/pages/component/advance/form/search-bar/index',
+      },
+      {
         name: 'Stepper',
         path: '/pages/component/advance/form/stepper/index',
       },
