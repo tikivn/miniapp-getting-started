@@ -1,6 +1,9 @@
 {
+  "defaultTitle": "Uploader",
   "backgroundColor": "#fff",
   "usingComponents": {
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index",
     "uploader": "@tiki.vn/tini-ui/es/uploader/index"
   }
 }
