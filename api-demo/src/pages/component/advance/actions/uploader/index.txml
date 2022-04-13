@@ -55,7 +55,7 @@
     </view>
   </block-variant>
   <block-variant
-    title="6. Events"
+    title="7. Events"
     description="Callback when user change or remove file"
   >
     <view class="mt-2x-small">

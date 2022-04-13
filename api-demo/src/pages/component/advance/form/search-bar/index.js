@@ -1,6 +1,6 @@
 Page({
   data: {
-    filled: 'Filled',
+    value: 'value',
   },
   onInput(event) {
     console.log('onInput', event);
@@ -14,10 +14,10 @@ Page({
   onBlur(event) {
     console.log('onBlur', event);
   },
-  onChangeFilled(event) {
-    this.setData({ filled: event.detail.value });
+  handleChangeInput(event) {
+    this.setData({ value: event.detail.value });
   },
   handleClearInput() {
-    this.setData({ filled: '' });
+    this.setData({ value: '' });
   },
 });

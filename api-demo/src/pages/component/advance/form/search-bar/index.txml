@@ -14,7 +14,6 @@
           onInput="onInput" 
           onFocus="onFocus" 
           onBlur="onBlur" 
-          onConfirm="onConfirm" 
           labelText="Label" />
       </view>
       <view class="list-item-label">
@@ -45,7 +44,7 @@
       <view class="line" />
 
       <view class="list-item-label">
-        <search-bar value="{{filled}}" labelText="Label" onInput="onChangeFilled" onTapCloseIcon="handleClearInput"/>
+        <search-bar value="{{value}}" labelText="Label" onInput="handleChangeInput" onTapCloseIcon="handleClearInput"/>
       </view>
       <view class="list-item-label">
         <search-bar disabled labelText="Disabled" placeholder="Disabled" />
