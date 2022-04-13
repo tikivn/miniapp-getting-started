@@ -1,36 +1,43 @@
 .button-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .button-wrapper button {
-    color: green;
+  color: green;
 }
 .body-wrapper {
-    padding: 16px;
-    justify-content: center;
-    align-items: center;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
 }
 .footer-wrapper {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .footer-container {
-    width: 100%;
+  width: 100%;
 }
 .footer-custom-button--horizontal {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .footer-custom-button--vertical {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-content {
+  background: #e7e2ff;
+  color: #7e65ff;
+  font-weight: bold;
+  padding: 16px;
 }
