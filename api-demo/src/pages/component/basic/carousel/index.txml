@@ -1,15 +1,15 @@
 <view>
   <block-header title="Usage" description="Carousel are used to display gallery of images." />
 
-  <carousel>
-    <carousel-item>
-      <view class="carousel-item" style="background: red"></view>
-    </carousel-item>
-    <carousel-item>
-      <view class="carousel-item" style="background: blue"></view>
-    </carousel-item>
-    <carousel-item>
-      <view class="carousel-item" style="background: green"></view>
-    </carousel-item>
-  </carousel>
+  <carousel indicator-dots arrows>
+<carousel-item>
+<image class="w-full" mode="aspectFill" src="https://picsum.photos/714/327?random=1"/>
+</carousel-item>
+<carousel-item>
+  <image class="w-full" mode="aspectFill" src="https://picsum.photos/714/327?random=2"/>
+</carousel-item>
+<carousel-item>
+  <image class="w-full" mode="aspectFill" src="https://picsum.photos/714/327?random=3"/>
+</carousel-item>
+</carousel>
 </view>

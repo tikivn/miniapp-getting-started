@@ -1,7 +1,7 @@
 {
-  "defaultTitle": "Modal",
+  "defaultTitle": "Search bar",
   "usingComponents": {
-    "modal": "@tiki.vn/tini-ui/es/modal/index",
+    "search-bar": "@tiki.vn/tini-ui/es/search-bar/index",
     "block-header": "components/block-header/index",
     "block-variant": "components/block-variant/index"
   }

@@ -1,0 +1,57 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Search bar are used to allow users to provide text input for searching" />
+
+  <block-variant header="Variants">
+    <view class="list-item">
+      <view class="subtitle mb-8">1. Format</view>
+      <view class="sub-content mb-8">On/off label</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <search-bar 
+          placeholder="With label"
+          onInput="onInput" 
+          onFocus="onFocus" 
+          onBlur="onBlur" 
+          labelText="Label" />
+      </view>
+      <view class="list-item-label">
+        <search-bar placeholder="Without label" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">2. Shape</view>
+      <view class="sub-content mb-8">Rounded & Pill</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <search-bar placeholder="Click to type here" labelText="Rounded" shape="rounded" />
+      </view>
+      <view class="list-item-label">
+        <search-bar placeholder="Click to type here" labelText="Pill" shape="pill" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">3. State</view>
+      <view class="sub-content mb-8">Filled, Disabled, Skeleton loading.</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <search-bar value="{{value}}" labelText="Label" onInput="handleChangeInput" onTapCloseIcon="handleClearInput"/>
+      </view>
+      <view class="list-item-label">
+        <search-bar disabled labelText="Disabled" placeholder="Disabled" />
+      </view>
+      <view class="list-item-label">
+        <search-bar loading placeholder="Loading" />
+      </view>
+    </view>
+  </block-variant>
+</view>

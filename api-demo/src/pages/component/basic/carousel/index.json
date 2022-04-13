@@ -1,5 +1,5 @@
 {
-  "defaultTitle": "carousel",
+  "defaultTitle": "Carousel",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }

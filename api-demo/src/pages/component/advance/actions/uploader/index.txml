@@ -1,0 +1,66 @@
+<view class="page">
+  <block-header title="Usage" description="Uploader is used to choose and preview file (Currently only images are supported)" />
+  <block-variant
+    header="Demo"
+    title="1. Basic component"
+    description="Default size, icon placeholder"
+  >
+    <view class="mt-2x-small">
+      <uploader/>
+    </view>
+  </block-variant>
+  <block-variant
+    title="2. Icon"
+    description="Change inner icon"
+  >
+    <view class="mt-2x-small">
+      <uploader icon="plus"/>
+    </view>
+  </block-variant>
+  <block-variant
+    title="3. Sizes"
+    description="Change component's and icon's width height"
+  >
+    <view class="mt-2x-small">
+      <uploader style="width: 80px; height: 80px;" iconSize="40"/>
+    </view>
+  </block-variant>
+  <block-variant
+    title="4. Content"
+    description="Change inner content with slot"
+  >
+    <view class="mt-2x-small">
+      <uploader>
+        <view class="flex items-center px-2x-small">
+          <icon type="info" class="mr-2x-small"/>
+          <text>Select image</text>
+        </view>
+      </uploader>
+    </view>
+  </block-variant>
+  <block-variant
+    title="5. Disabled"
+    description="Prevent user's action"
+  >
+    <view class="mt-2x-small">
+      <uploader disabled/>
+    </view>
+  </block-variant>
+  <block-variant
+    title="6. Preview"
+    description="Click to show preview"
+  >
+    <view class="mt-2x-small">
+      <uploader value="https://i.picsum.photos/id/77/500/500.jpg?hmac=tSoa4RHbrWHe6CfA-uOJZpiHj-3e9OoYJ91vBlFaMD8"/>
+    </view>
+  </block-variant>
+  <block-variant
+    title="7. Events"
+    description="Callback when user change or remove file"
+  >
+    <view class="mt-2x-small">
+      <uploader onChange="onChange"/>
+    </view>
+  </block-variant>
+</view>
+

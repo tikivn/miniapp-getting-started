@@ -205,6 +205,10 @@ const advancedComponents = [
         name: 'Button Bar',
         path: '/pages/component/advance/actions/button-bar/index',
       },
+      {
+        name: 'Uploader',
+        path: '/pages/component/advance/actions/uploader/index',
+      },
     ],
   },
   {
@@ -221,6 +225,10 @@ const advancedComponents = [
       {
         name: 'Dropdown',
         path: '/pages/component/advance/form/dropdown/index',
+      },
+      {
+        name: 'Search bar',
+        path: '/pages/component/advance/form/search-bar/index',
       },
       {
         name: 'Stepper',
