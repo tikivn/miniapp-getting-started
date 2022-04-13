@@ -2,6 +2,7 @@
   "defaultTitle": "Modal",
   "usingComponents": {
     "modal": "@tiki.vn/tini-ui/es/modal/index",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
     "block-header": "components/block-header/index",
     "block-variant": "components/block-variant/index"
   }
