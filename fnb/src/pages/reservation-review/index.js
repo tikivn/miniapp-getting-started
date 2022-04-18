@@ -1,11 +1,11 @@
-import { $page } from '@tiki.vn/redux-miniprogram-bindings';
+import { $page } from "@tiki.vn/redux-miniprogram-bindings";
 
-import { debounce, redirectTo } from '../../helper';
-import { constants as c } from '../../constants';
-import { getBuyerInfo } from '../../store/actions/buyer';
-import { bookingTable } from '../../store/actions/reservation';
+import { debounce, redirectTo } from "../../helper";
+import { constants as c } from "../../constants";
+import { getBuyerInfo } from "../../store/actions/buyer";
+import { bookingTable } from "../../store/actions/reservation";
 
-import { validate } from './helper';
+import { validate } from "./helper";
 
 $page({
   mapState: [
@@ -18,7 +18,7 @@ $page({
   mapDispatch: { getBuyerInfo, bookingTable },
 })({
   data: {
-    paddingStatus: '',
+    paddingStatus: "",
     childrenNumber: 0,
     timer: 300,
     isHide: false,
@@ -26,21 +26,21 @@ $page({
     smsReminder: false,
     isShowModal: false,
     contact: {
-      name: '',
-      phone: '',
-      email: '',
+      name: "",
+      phone: "",
+      email: "",
     },
-    note: '',
-    area: 'Any',
-    areaList: ['Any', 'Inside', 'Outside'],
+    note: "",
+    area: "Any",
+    areaList: ["Any", "Inside", "Outside"],
     errMsg: {
-      name: '',
-      phone: '',
-      email: '',
+      name: "",
+      phone: "",
+      email: "",
     },
   },
   async onLoad(query) {
-    my.setNavigationBar({ title: 'Review information' });
+    my.setNavigationBar({ title: "Review information" });
     this.onNameInput = debounce(this.onNameInput, 300);
     this.onPhoneInput = debounce(this.onPhoneInput, 300);
     this.onEmailInput = debounce(this.onEmailInput, 300);
@@ -68,12 +68,12 @@ $page({
   },
   onShowPadding() {
     this.setData({
-      paddingStatus: 'active',
+      paddingStatus: "active",
     });
   },
   onHidePadding() {
     this.setData({
-      paddingStatus: '',
+      paddingStatus: "",
     });
   },
   onAreaSelect(e) {
@@ -88,7 +88,6 @@ $page({
     });
   },
   onContactInput(e) {
-    console.log(e);
     const { type } = e.target.dataset;
     const { value } = e.detail;
     this.setData({
@@ -122,26 +121,26 @@ $page({
         detail: note,
         seats: [
           {
-            title: 'Elderly people',
+            title: "Elderly people",
             value: elderlyPeopleNumber,
           },
           {
-            title: 'Children',
+            title: "Children",
             value: childrenNumber,
           },
         ],
         sittingArea: area,
       };
-      const id = 'id_' + new Date().getTime();
+      const id = "id_" + new Date().getTime();
       this.bookingTable({
         _id: id,
         notes,
         ...info,
         contact,
         smsReminder,
-        status: 'reserved',
+        status: "reserved",
       });
-      redirectTo('reservation-detail', { id });
+      redirectTo("reservation-detail", { id });
     }
   },
   onToggleSMSRemider() {

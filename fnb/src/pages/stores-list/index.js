@@ -1,9 +1,9 @@
-import { $page } from '@tiki.vn/redux-miniprogram-bindings';
+import { $page } from "@tiki.vn/redux-miniprogram-bindings";
 
-import { getAllStore, changeDefaultStore } from '../../store/actions/store';
-import { navigateTo } from '../../helper';
+import { getAllStore, changeDefaultStore } from "../../store/actions/store";
+import { navigateTo } from "../../helper";
 
-import { search } from './helper';
+import { search } from "./helper";
 
 $page({
   mapState: [
@@ -14,23 +14,22 @@ $page({
   mapDispatch: { getAllStore, changeDefaultStore },
 })({
   data: {
-    status: 'LOADING',
+    status: "LOADING",
   },
   async onLoad(query) {
-    my.setNavigationBar({ title: 'Stores' });
-    if (this.data.stores.status === 'LOADING') {
+    my.setNavigationBar({ title: "Stores" });
+    if (this.data.stores.status === "LOADING") {
       await this.getAllStore();
     }
     this.setData({
-      status: 'SUCCESS',
+      status: "SUCCESS",
       searchResult: this.data.stores.data,
     });
   },
   onStoreSelect(e) {
-    console.log(e);
     const id = e.target.dataset.id;
     this.changeDefaultStore(id);
-    navigateTo('store-detail', { id });
+    navigateTo("store-detail", { id });
   },
   onSearchInput(e) {
     const { value } = e.detail;
@@ -41,7 +40,7 @@ $page({
   },
   onClearInput(e) {
     this.setData({
-      searchValue: '',
+      searchValue: "",
     });
     this.setData({
       searchResult: this.data.list.data,

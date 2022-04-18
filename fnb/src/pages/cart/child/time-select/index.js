@@ -1,20 +1,20 @@
-import { getAvailableDate, getAvailableTime } from '../../helper';
+import { getAvailableDate, getAvailableTime } from "../../helper";
 
 Component({
   props: {
-    base: '', // base order time
+    base: "", // base order time
     isShow: false,
     onTimeSelect() {},
     onCLose() {},
   },
   data: {
-    baseTime: '', // clone first base time from props
+    baseTime: "", // clone first base time from props
     time: [],
     date: [],
     selectedDateIndex: 0,
     selectedTimeIndex: 0,
-    selectedDate: 'Today',
-    selectedTime: '',
+    selectedDate: "Today",
+    selectedTime: "",
   },
   onInit() {
     const date = getAvailableDate();
@@ -23,15 +23,13 @@ Component({
       time,
       date,
       baseTime: this.props.base,
-      selectedTime: this.props.base.hour + ':' + this.props.base.min,
+      selectedTime: this.props.base.hour + ":" + this.props.base.min,
     });
   },
   deriveDataFromProps({ isShow: isShowNext }) {
     const { isShow: isShowCurrent } = this.props;
     if (isShowNext && !isShowCurrent) {
-      console.log(123);
       const time = getAvailableTime(new Date().getTime(), this.props.base);
-      console.log(time);
       this.setData({
         time,
         selectedDateIndex: 0,
@@ -55,7 +53,7 @@ Component({
       const { time, date, selectedTimeIndex, selectedDateIndex } = this.data;
       this.props.onTimeSelect(
         time[selectedTimeIndex],
-        date[selectedDateIndex].content,
+        date[selectedDateIndex].content
       );
     },
     onClose() {

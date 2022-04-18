@@ -1,14 +1,14 @@
 /* eslint-disable no-undef */
-import { $page } from '@tiki.vn/redux-miniprogram-bindings';
+import { $page } from "@tiki.vn/redux-miniprogram-bindings";
 
-import { getData } from '../../services';
-import { constants as c } from '../../constants';
-import { navigateTo, queryToObj, redirectTo } from '../../helper';
-import { getAllStore } from '../../store/actions/store';
-import { getBuyerInfo } from '../../store/actions/buyer';
-import { getAllCategories } from '../../store/actions/category';
+import { getData } from "../../services";
+import { constants as c } from "../../constants";
+import { navigateTo, queryToObj, redirectTo } from "../../helper";
+import { getAllStore } from "../../store/actions/store";
+import { getBuyerInfo } from "../../store/actions/buyer";
+import { getAllCategories } from "../../store/actions/category";
 
-import { calPosList } from './helper';
+import { calPosList } from "./helper";
 
 $page({
   mapState: [
@@ -25,16 +25,16 @@ $page({
     topHeight: 0,
     currentPos: 0,
     pList: null,
-    currentTag: '',
-    orderMethod: '',
+    currentTag: "",
+    orderMethod: "",
     status: c.LOADING,
-    holderStatus: 'none',
+    holderStatus: "none",
   },
   async onLoad(query) {
-    let title = 'Store pickup';
+    let title = "Store pickup";
     const orderMethod = queryToObj(query).method;
 
-    if (orderMethod === c.DELIVERY) title = 'Delivery';
+    if (orderMethod === c.DELIVERY) title = "Delivery";
     my.setNavigationBar({ title });
 
     if (orderMethod === c.DELIVERY && this.data.buyer.status === c.LOADING) {
@@ -43,7 +43,7 @@ $page({
     if (!this.data.store) {
       await this.getAllStore();
     }
-    const categories = await getData('categories');
+    const categories = await getData("categories");
     this.setData({
       categories,
       status: c.SUCCESS,
@@ -52,7 +52,7 @@ $page({
     my.addIconsToNavigationBar({
       icons: [
         {
-          image: '/assets/search_icon.png',
+          image: "/assets/search_icon.png",
           width: 24,
           height: 24,
         },
@@ -69,10 +69,8 @@ $page({
   onShow() {
     const pages = getCurrentPages();
     const pagePath = pages[pages.length - 1].route;
-    console.log(pagePath);
-    if (pagePath && pagePath !== 'pages/delivery/index') {
-      console.log(this.data.orderMethod);
-      redirectTo('delivery', { method: this.data.orderMethod });
+    if (pagePath && pagePath !== "pages/delivery/index") {
+      redirectTo("delivery", { method: this.data.orderMethod });
     }
   },
   async onTagClick(e) {
@@ -96,29 +94,27 @@ $page({
     });
     // new pos = pos of tag section in page - header height - (pos of category tag - header height)
     //         = pos of tag section in page - pos of category tag
-    console.log(id, this.data.pList[id] - top);
 
     this.setData({
       ...this.data,
       currentPos: this.data.pList[id] - top,
-      holderStatus: 'active',
-      currentTag: id.replace('_', ''),
+      holderStatus: "active",
+      currentTag: id.replace("_", ""),
     });
     setTimeout(() => {
-      this.setData({ ...this.data, holderStatus: 'none' });
+      this.setData({ ...this.data, holderStatus: "none" });
     }, 500);
   },
   async backToTop() {
-    console.log(this.data.categories[0]);
     await this.onTagClick({
       target: { id: `_${this.data.categories[0]._id}` },
     });
   },
   onProductClick(p) {
     const { _id: id, name } = p;
-    navigateTo('product-detail', { method: this.data.orderMethod, id, name });
+    navigateTo("product-detail", { method: this.data.orderMethod, id, name });
   },
   onCustomIconEvent(e) {
-    navigateTo('product-search', { method: this.data.orderMethod });
+    navigateTo("product-search", { method: this.data.orderMethod });
   },
 });

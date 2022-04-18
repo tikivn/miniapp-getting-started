@@ -1,15 +1,15 @@
-import { $page } from '@tiki.vn/redux-miniprogram-bindings';
+import { $page } from "@tiki.vn/redux-miniprogram-bindings";
 
-import { navigateTo, redirectTo, debounce, delay } from '../../helper';
-import { getAllStore } from '../../store/actions/store';
-import { getBuyerInfo } from '../../store/actions/buyer';
+import { navigateTo, redirectTo, debounce, delay } from "../../helper";
+import { getAllStore } from "../../store/actions/store";
+import { getBuyerInfo } from "../../store/actions/buyer";
 import {
   resetCart,
   resetCoupon,
   applyCoupon,
   changeItemNumber,
   changePickupTime,
-} from '../../store/actions/cart';
+} from "../../store/actions/cart";
 
 $page({
   mapState: [
@@ -30,42 +30,42 @@ $page({
   },
 })({
   data: {
-    currentItem: '',
-    status: 'LOADING',
-    currentModal: '', // remove_confirm, paymet_result, route_select
+    currentItem: "",
+    status: "LOADING",
+    currentModal: "", // remove_confirm, paymet_result, route_select
     isShowTimeSelect: false,
     isShowCouponInput: false,
   },
   async onLoad(query) {
-    my.setNavigationBar({ title: 'Cart' });
+    my.setNavigationBar({ title: "Cart" });
 
     await this.getBuyerInfo();
     await this.getAllStore();
 
     this.onChangeItemNumberInput = debounce(this.onChangeItemNumberInput, 100);
     this.setData({
-      status: 'SUCCESS',
+      status: "SUCCESS",
     });
   },
   onBuyerAddressSelect() {
-    navigateTo('address');
+    navigateTo("address");
   },
   onStoreAddressSelect() {
-    navigateTo('store-select');
+    navigateTo("store-select");
   },
   onShowPaymentResultSelect() {
     this.setData({
-      currentModal: 'paymet_result',
+      currentModal: "paymet_result",
     });
   },
   onPaymentSuccessSelect() {
     this.setData({
-      currentModal: 'route_select',
+      currentModal: "route_select",
     });
   },
   onCloseModal() {
     this.setData({
-      currentModal: '',
+      currentModal: "",
     });
   },
   onShoppingRouteSelect() {
@@ -73,7 +73,7 @@ $page({
   },
   onOrderListRouteSelect() {
     this.resetCart(this.data.orderMethod);
-    redirectTo('orders-list');
+    redirectTo("orders-list");
   },
   onShowCouponInput() {
     this.setData({
@@ -93,7 +93,7 @@ $page({
     if (value + current === 0) {
       this.setData({
         showModal: true,
-        currentModal: 'remove_confirm',
+        currentModal: "remove_confirm",
         currentItem: id,
       });
       return;
@@ -110,7 +110,7 @@ $page({
     this.changeItemNumber(this.data.orderMethod, this.data.currentItem, 0);
     this.setData({
       showModal: false,
-      currentModal: '',
+      currentModal: "",
     });
     if (this.data.cart.products.length === 1) {
       await delay(200);
@@ -120,12 +120,11 @@ $page({
   onCancelDelete() {
     this.setData({
       showModal: false,
-      currentModal: '',
+      currentModal: "",
     });
   },
   onChangeTimePickup(time, date) {
-    console.log('time change', time, date);
-    const [hour, min] = time.split(':');
+    const [hour, min] = time.split(":");
     this.changePickupTime({ hour, min }, date);
     this.setData({ isShowTimeSelect: false });
   },

@@ -1,8 +1,8 @@
-import { splitStoreArray } from './helper';
+import { splitStoreArray } from "./helper";
 
 Component({
   props: {
-    status: 'LOADING',
+    status: "LOADING",
     stores: [],
     onSelect() {},
   },
@@ -12,7 +12,6 @@ Component({
   },
   methods: {
     onSelect(e) {
-      console.log(this.props);
       this.props.onSelect(e);
     },
   },

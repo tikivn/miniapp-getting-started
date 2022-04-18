@@ -1,17 +1,17 @@
-import { formatWLength } from '../../../helper';
+import { formatWLength } from "../../../helper";
 
-const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const options = {
-  year: 'numeric',
-  month: '2-digit',
-  day: '2-digit',
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
 };
 
 export function dateFormat(d) {
   d = new Date(d);
   return {
-    content: d.toLocaleDateString('vi-VI', options),
+    content: d.toLocaleDateString("vi-VI", options),
     value: d.getTime(),
   };
 }
@@ -33,7 +33,7 @@ export function getToday() {
   const d = new Date();
   d.setHours(0, 0, 0, 0);
   return {
-    content: d.toLocaleDateString('vi-VI', options),
+    content: d.toLocaleDateString("vi-VI", options),
     value: d.getTime(),
   };
 }
@@ -41,7 +41,7 @@ export function getToday() {
 export const isTomorrow = (d) => {
   const tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
-  return tomorrow.toLocaleDateString('vi-VI', options) === d;
+  return tomorrow.toLocaleDateString("vi-VI", options) === d;
 };
 
 export const getTomorrow = () => {
@@ -56,7 +56,7 @@ export const getNthDateFromToday = (n) => {
   const d = new Date();
   d.setDate(d.getDate() + n);
   return {
-    content: d.toLocaleDateString('vi-VI', options),
+    content: d.toLocaleDateString("vi-VI", options),
     value: d.getTime(),
   };
 };
@@ -71,20 +71,20 @@ export function getTimeList(start, end) {
 }
 
 export const getDayName = (d) => {
-  let dateParts = d.split('/');
+  let dateParts = d.split("/");
   let day = new Date(+dateParts[2], dateParts[1] - 1, dateParts[0]).getDay();
   const weekdayName = weekdays[day];
   return weekdayName;
 };
 
 export const formatDateTime = (d, t) => {
-  let content = '';
+  let content = "";
   let todayStr = getToday().content;
 
   if (d === todayStr) {
-    content = 'Today';
+    content = "Today";
   } else if (isTomorrow(d)) {
-    content = 'Tomorrow';
+    content = "Tomorrow";
   } else {
     content = getDayName(d);
   }
@@ -99,9 +99,9 @@ export const formatDateTime = (d, t) => {
 
 // 24 > h >= 7
 export function getNearestAvailableTime(d) {
-  let rs = '00:00';
+  let rs = "00:00";
   let base = d ? new Date(d) : new Date();
-  if (!isToday(base)) return '07:00';
+  if (!isToday(base)) return "07:00";
   base = new Date();
   let hour = base.getHours();
   let minute = base.getMinutes();
@@ -109,15 +109,13 @@ export function getNearestAvailableTime(d) {
     hour = 6;
     minute = 30;
   }
-  console.log(hour, minute);
   if (minute < 30) rs = `${formatWLength(hour, 2)}:30`;
   else rs = `${formatWLength(hour + 1, 2)}:00`;
-  console.log(rs);
   return rs;
 }
 
 export function isAvailableTime(t) {
-  if (t > '23:30' || t < '07:00') return false;
+  if (t > "23:30" || t < "07:00") return false;
   return t >= getNearestAvailableTime();
 }
 

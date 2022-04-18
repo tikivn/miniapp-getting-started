@@ -1,4 +1,4 @@
-import { getDateList } from './helper';
+import { getDateList } from "./helper";
 
 Component({
   data: {
@@ -23,8 +23,6 @@ Component({
   methods: {
     onDateSelect(e) {
       const { date } = e.target.dataset;
-      console.log(this.props.selected);
-      console.log(date);
       this.props.onDateSelect(date);
       this.setData({
         isShowDateSelect: false,
