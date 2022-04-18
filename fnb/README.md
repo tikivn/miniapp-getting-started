@@ -29,7 +29,7 @@
 - Đặt bàn
 - Quản lý đặt bàn
 - Thanh toán (mock)
-- Danh sách đơn hàng
+- Quản lý đơn hàng
 - Thông tin tài khoản
 
 <br/>
