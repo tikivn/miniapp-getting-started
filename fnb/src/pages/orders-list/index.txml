@@ -1,0 +1,66 @@
+<template name="LOADING">
+  <view class="orders-page">
+    <view class="tabs flex bg-white">
+      <button class="text-gray60">
+        <view class="skeleton skeleton-font-medium" />
+      </button>
+      <button class="text-gray60">
+        <view class="skeleton skeleton-font-medium" />
+      </button>
+    </view>
+    <view class="orders-list px-medium pt-medium pb-4x-small">
+      <order-card tiki:for="{{[1, 2, 3]}}" />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="orders-page">
+    <view class="tabs flex bg-white">
+      <button
+        onTap="onStorePickupClick"
+        class="text-gray60 
+      {{currentTab === 'STORE_PICKUP'
+      ? ' active'
+      : ''
+      }}"
+      >
+        Store pickup
+      </button>
+      <button
+        onTap="onDeliveryClick"
+        class="text-gray60 
+      {{currentTab === 'DELIVERY'
+      ? ' active'
+      : ''
+      }}"
+      >
+        Delivery
+      </button>
+    </view>
+    <view>
+      <view
+        tiki:if="{{orders[currentTab].length}}"
+        class="orders-list px-medium pt-medium pb-4x-small"
+      >
+        <order-card
+          tiki:for="{{orders[currentTab]}}"
+          status="{{status}}"
+          order="{{item}}"
+        />
+      </view>
+      <no-item
+        tiki:if="{{!orders[currentTab].length}}"
+        onSelect="onMoveToProductList"
+        type="order"
+        top="{{45}}"
+        showButton="{{true}}"
+      />
+    </view>
+  </view>
+</template>
+
+<template
+  is="{{status}}"
+  data="{{orders, currentTab, status}}"
+/>

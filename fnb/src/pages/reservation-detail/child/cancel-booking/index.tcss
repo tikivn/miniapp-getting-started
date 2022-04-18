@@ -1,0 +1,8 @@
+.cancel-booking {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  padding-bottom: var(--safe-area-inset-bottom);
+}

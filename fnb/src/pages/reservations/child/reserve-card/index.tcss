@@ -1,0 +1,13 @@
+.badge-reserved {
+  background-color: #effff4;
+  color: #00ab56;
+}
+.badge-past {
+  background-color: #f0f8ff;
+  color: #1a94ff;
+}
+.badge-canceled {
+  background-color: #f5f5fa;
+  color: #808089;
+}
+

@@ -1,0 +1,19 @@
+<view>
+  <header type="{{headerType}}" />
+  <view class="px-medium">
+    <order-methods status="{{status}}" />
+  </view>
+  <view class="banners px-medium pt-2x-small">
+    <view class="banner"
+          tiki:for="{{banners}}">
+      <view class="mt-2x-small img-container skeleton radius-8px"
+            onTap="onSelect">
+        <image src="{{item.image}}" />
+      </view>
+    </view>
+  </view>
+  <view class="font-bold ml-medium text-medium mt-medium">Promotion campaign
+  </view>
+  <campaigns-list status="{{status}}"
+                  campaigns="{{campaigns}}" />
+</view>

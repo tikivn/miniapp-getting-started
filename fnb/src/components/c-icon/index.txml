@@ -1,0 +1,11 @@
+<icon
+  tiki:if="{{!isCustomIcon}}"
+  type="{{type}}"
+  color="{{colors[color]}}"
+  size="{{size}}"
+/>
+<image
+  tiki:if="{{isCustomIcon}}"
+  src="{{customIcon[type]}}"
+  style="width: {{size}}px; height:{{size}}px"
+/>

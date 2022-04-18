@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "timer": "components/timer",
+    "address-card": "components/address-card"
+  }
+}

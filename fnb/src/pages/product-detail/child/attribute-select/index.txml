@@ -1,0 +1,35 @@
+<template name="LOADING">
+  <view class="radius-8px bg-white p-medium border-box mt-small attr-select">
+    <view class="skeleton-font-small skeleton-75-width mb-regular skeleton" />
+    <block tiki:for="{{[1]}}">
+      <attribute-card image="{{item.image}}"
+                      name="{{item.name}}" />
+    </block>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="radius-8px bg-white p-medium border-box mt-small attr-select">
+    <view class="flex">
+      <view class="text-medium font-bold mb-medium text-gray100 mr-3x-small"
+            onTap="onClick">
+        {{name}}</view>
+      <view tiki:if="{{numberSelectionAllow > 1}}"
+            class="font-base font-regular mb-medium text-gray60">{{`(maximun
+        ${numberSelectionAllow})`}}</view>
+    </view>
+    <block tiki:for="{{values}}">
+      <view class="border-gray20 border-solid w-full border line"
+            tiki:if="{{index > 0}}"></view>
+      <attribute-card status="SUCCESS"
+                      key="{{item._id}}"
+                      value="{{...item}}"
+                      attributeId="{{_id}}"
+                      onSelectAttribute="onSelectAttribute"
+                      isMultipleChoice="{{numberSelectionAllow > 1}}" />
+    </block>
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{...attribute}}"></template>

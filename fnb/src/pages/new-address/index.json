@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "c-checkbox": "components/c-checkbox",
+    "address": "@tiki.vn/tini-ui/es/address/index",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
+}

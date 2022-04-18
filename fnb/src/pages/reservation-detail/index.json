@@ -1,0 +1,11 @@
+{
+  "defaultTitle": "Reservation detail",
+  "usingComponents": {
+    "reservation-info": "child/reservation-info",
+    "table-info": "child/table-info",
+    "contact-info": "child/contact-info",
+    "notes": "child/notes",
+    "cancel-booking": "child/cancel-booking",
+    "c-modal": "components/c-modal"
+  }
+}

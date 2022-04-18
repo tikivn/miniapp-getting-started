@@ -1,0 +1,12 @@
+<view>
+  <view class="pt-medium mb-small">
+    <text class="font-bold text-medium">Contact info</text>
+  </view>
+  <view class="flex flex-col bg-white p-medium radius-8px">
+    <text class="font-bold">{{contact.name}}</text>
+    <text class="text-gray50 text-small my-4x-small">{{contact.phone}} • {{contact.email}} </text>
+    <view tiki:if="{{smsReminder}}">
+      <text class="text-green text-small">SMS reminder set</text>
+    </view>
+  </view>
+</view>

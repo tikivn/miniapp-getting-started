@@ -1,0 +1,25 @@
+<view>
+  <block tiki:if="{{isShow}}">
+    <bottom-sheet
+      title="Apply coupon"
+      onClose="onClose"
+      buttonTitle="hiden"
+    >
+      <view class="p-medium relative coupon-input">
+        <textfield
+          focus="{{true}}"
+          placeholder="Enter your code"
+          onInput="onInput"
+        />
+        <view class="absolute coupon-apply-btn flex">
+          <view class="line border border-solid border-gray20 mr-medium" />
+          <view
+            onTap="onApplyCoupon"
+            class="text-brand"
+          >Apply</view>
+        </view>
+      </view>
+      <view slot="footer" />
+    </bottom-sheet>
+  </block>
+</view>

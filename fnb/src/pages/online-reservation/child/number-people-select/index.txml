@@ -1,0 +1,33 @@
+<view>
+  <block tiki:if="{{isShow}}">
+    <bottom-sheet title="Select a date"
+                  onClose="onClose">
+      <view class="px-medium">
+        <view tiki:for="{{options}}"
+              class="pt-x-small">
+          <view class="flex items-center mb-x-small {{item.available ? '' : ' disable'}}"
+                onTap="onSelect"
+                data-value="{{item}}">
+            <c-radio checked="{{current._id === item._id}}" />
+            <view class="ml-x-small">
+              {{item.label}}
+            </view>
+          </view>
+          <view tiki:if="{{index < options.length - 1}}"
+                class="line border border-solid border-gray20 w-full" />
+        </view>
+      </view>
+      <view slot="footer"
+            class="py-2x-small px-medium footer border-gray20">
+        <view class="android-padding-bottom">
+          <button onTap="onConfirm"
+                  class="w-full"
+                  type="ouline"
+                  shape="pill">
+            Confirm
+          </button>
+        </view>
+      </view>
+    </bottom-sheet>
+  </block>
+</view>

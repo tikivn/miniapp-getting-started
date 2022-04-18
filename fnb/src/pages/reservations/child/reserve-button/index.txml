@@ -1,0 +1,4 @@
+<view class="px-medium">
+  <button onTap="onReserve" class="w-full text-medium radius-pill">Reserve a
+    table</button>
+</view>

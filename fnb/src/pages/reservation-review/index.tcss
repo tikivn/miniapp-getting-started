@@ -1,0 +1,27 @@
+.reservation-review-page {
+  padding-bottom: 0;
+}
+.line {
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+.t-textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+.action {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+.area {
+  padding: 5.5px 10px;
+}
+.area.active {
+  color: #1a94ff;
+  border-color: #1a94ff;
+  font-weight: bold;
+  padding: 5px 10px;
+}

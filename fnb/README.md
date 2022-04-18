@@ -1,0 +1,1 @@
+# mininapp-fnb-template

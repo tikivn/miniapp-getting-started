@@ -1,0 +1,15 @@
+.store-search-page {
+  padding-top: 56px;
+}
+.store-search-page .search-box {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+.reset-btn {
+  right: 32px;
+  top: calc(50% - 6px);
+  transform: translateY(-50%);
+}

@@ -1,0 +1,58 @@
+<view class="form p-medium bg-white w-full border-box">
+  <view class="px-medium py-2x-small border border-solid border-gray20 radius-8px">
+    <address-card iconLeft="store"
+                  iconRight="next"
+                  title="{{store.name}}"
+                  onSelect="onStoreSelect"
+                  subTitle="{{store.address}}"
+                  status="SUCCESS" />
+  </view>
+  <view class="font-bold mb-4x-small mt-medium">
+    Adult
+  </view>
+  <view class="flex border-box time-container hide-scroll pl-medium">
+    <view tiki:for="{{peopleList}}"
+          class="border border-solid border-gray40 radius-16px mr-2x-small people-select {{selected.numberOfAdults === index + 1 ? 'active' : ''}}"
+          onTap="onNumberPeopleSelect"
+          data-number="{{index+1}}">
+      {{index < 9
+        ? '0'
+        : ''
+        }}{{index
+        +
+        1}}
+        </view>
+    </view>
+    <view class="font-bold mb-4x-small mt-medium">
+      Date
+    </view>
+    <view class="flex border-box time-container hide-scroll pl-medium">
+      <view tiki:for="{{dateList}}"
+            class="border border-solid border-gray40 radius-16px mr-2x-small time-select text-center {{selected.date.value === item.value ? 'active' : ''}}"
+            onTap="onDateSelect"
+            data-date="{{item.value}}">
+        {{item.content}}
+      </view>
+    </view>
+    <view class="font-bold mb-4x-small mt-medium">
+      Time
+    </view>
+    <view class="flex border-box time-container hide-scroll pl-medium">
+      <view tiki:for="{{timeList}}"
+            class="border border-solid border-gray40 radius-16px mr-2x-small time-select {{selected.time === item ? 'active' : ''}}"
+            onTap="onTimeSelect"
+            data-time="{{item}}">
+        {{item}}
+      </view>
+    </view>
+    <button class="w-full mt-medium"
+            shape="pill"
+            onTap="onReserve">
+      Reserve this table
+    </button>
+    <view class="text-center text-brand mt-small">
+      Call booking support
+    </view>
+    <view>
+    </view>
+  </view>

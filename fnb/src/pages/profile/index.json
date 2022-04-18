@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "header": "child/header",
+    "c-icon": "components/c-icon"
+  },
+  "transparentTitle": "always"
+}

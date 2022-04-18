@@ -1,0 +1,15 @@
+.mt-80 {
+  margin-top: 80px;
+}
+
+.border-t {
+  border-top: 1px solid #ebebf0;
+}
+
+.reserve-skeleton-img {
+  height: 240px;
+}
+.prevent-scroll {
+  height: 100vh;
+  overflow: hidden;
+}

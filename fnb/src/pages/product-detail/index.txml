@@ -1,0 +1,54 @@
+<import-sjs from="../../helper/index.sjs"
+            name="{priceFormat}"></import-sjs>
+
+<template name="LOADING">
+  <view class="px-medium border-box product-detail-page">
+    <view class="bg-white radius-8px border-box w-full">
+      <view class="img-container product-detail-img skeleton">
+      </view>
+      <view class="px-medium pt-small pb-medium">
+        <view class="skeleton-font-medium skeleton">
+        </view>
+        <view onTap=""
+              class="skeleton skeleton-font-small skeleton-70-width mt-x-small">
+        </view>
+        <view class="skeleton height-font-x-small mt-2x-small"></view>
+        <view class="skeleton height-font-x-small mt-2x-small"></view>
+        <view class="skeleton height-font-x-small mt-2x-small skeleton-75-width">
+        </view>
+      </view>
+    </view>
+    <attribute-select tiki:for="{{[1, 2, 3]}}"
+                      status="LOADING" />
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="px-medium border-box product-detail-page">
+    <product-main-info onToggleFavorite="onToggleFavorite"
+                       info="{{...product}}" />
+    <attributes-list attributes="{{product.attributes}}"
+                     onSelectAttribute="onSelectAttribute" />
+    <view class="my-small bg-white p-medium radius-8px border-box">
+      <textarea maxlength="100"
+                onBlur="onTextBlur"
+                onFocus="onTextFocus"
+                onInput="onNoteInput"
+                placeholder="Your note to barista" />
+    </view>
+  </view>
+  <sticky-bottom>
+    <view slot="bottom-action"
+          class="bg-white android-padding-bottom">
+      <add-to-cart total="{{total}}"
+                   number="{{number}}"
+                   onAddCart="onAddCart"
+                   onChangeNumber="onChangeNumber"
+                   paddingStatus="{{paddingStatus}}" />
+    </view>
+  </sticky-bottom>
+</template>
+
+<c-navbar bgColor="" />
+<template is="{{status}}"
+          data="{{product, number, total, cart, orderMethod, isHideOrderMessage, paddingStatus}}"></template>

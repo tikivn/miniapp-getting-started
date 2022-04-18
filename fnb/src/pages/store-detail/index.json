@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "order-methods": "child/order-methods",
+    "address-card": "components/address-card",
+    "c-navbar": "components/c-navbar",
+    "detail-carousel": "components/detail-carousel"
+  },
+  "transparentTitle": "always"
+}

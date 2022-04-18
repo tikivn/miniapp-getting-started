@@ -1,0 +1,14 @@
+.order-method {
+  width: calc(50% - 0.5px);
+  padding: 0;
+}
+.order-method .img-container {
+  width: 100%;
+  padding-top: 66.66%;
+}
+.order-method .title {
+  line-height: 24px;
+}
+.order-method .sub-title {
+  line-height: 18px;
+}

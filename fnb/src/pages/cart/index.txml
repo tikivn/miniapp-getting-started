@@ -1,0 +1,142 @@
+<import-sjs from="../../helper/index.sjs"
+            name="{priceFormat}" />
+
+<template name="LOADING">
+  <view class="cart-page px-medium pt-medium">
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-2x-small" />
+    <view class="p-medium radius-8px bg-white">
+      <address-card />
+      <view class="line border border-solid border-gray20 my-2x-small" />
+      <address-card />
+    </view>
+    <view class="skeleton skeleton-font-medium skeleton-50-width mt-medium mb-2x-small" />
+    <view class="p-medium radius-8px bg-white mb-medium">
+      <product-card tiki:for="{{[1]}}" />
+      <view class="flex justify-between mt-medium">
+        <view class="skeleton skeleton-font-small skeleton-25-width" />
+        <view class="skeleton skeleton-font-small skeleton-70-width" />
+      </view>
+      <view class="flex justify-between mt-medium">
+        <view class="skeleton skeleton-font-small skeleton-25-width" />
+        <view class="skeleton skeleton-font-small skeleton-70-width" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="cart-page px-medium pt-medium">
+    <view class="text-medium font-bold mb-2x-small"
+          onTap="">
+      {{cart.orderMethod === 'DELIVERY' ? 'Shipping details' :'Pickup details'}}
+    </view>
+    <view class="p-medium radius-8px bg-white">
+      <address-card status="SUCCESS"
+                    title="{{cart.orderMethod === 'DELIVERY' ? 'From store' : 'Pick up location'}}"
+                    address="{{store.address}}" />
+      <view class="line border border-solid border-gray20 my-2x-small" />
+      <address-card tiki:if="{{cart.orderMethod === 'DELIVERY'}}"
+                    title="To"
+                    status="SUCCESS"
+                    iconRight="next"
+                    iconLeft="location"
+                    address="{{buyer.addressText}}"
+                    onSelect="onBuyerAddressSelect"
+                    subTitle="{{`${buyer.name} • ${buyer.phone}`}}" />
+      <address-card tiki:if="{{cart.orderMethod !== 'DELIVERY'}}"
+                    status="SUCCESS"
+                    iconRight="next"
+                    iconLeft="clock"
+                    title="Pickup time"
+                    onSelect="onShowTimeSelect"
+                    address="{{`${cart.time.hour}:${cart.time.min}, ${cart.date}`}}" />
+    </view>
+    <view class="text-medium font-bold mt-medium mb-2x-small">
+      Order details
+    </view>
+    <view class="p-medium radius-8px bg-white mb-medium">
+      <product-card tiki:for="{{cart.products}}"
+                    tiki:key="{{item._id}}"
+                    status="SUCCESS"
+                    id="{{item._id}}"
+                    product="{{item}}"
+                    onChangeItemNumber="onChangeItemNumber"
+                    onChangeItemNumberInput="onChangeItemNumberInput" />
+      <view class="flex justify-between">
+        <view class="">
+          Price
+        </view>
+        <view class="font-bold">
+          {{priceFormat(cart.total)}}
+        </view>
+      </view>
+      <view tiki:if="{{cart.orderMethod === 'DELIVERY'}}"
+            class="flex justify-between mt-medium">
+        <view class="flex items-center">
+          <view class="mr-4x-small">
+            Shipping fee
+          </view>
+          <icon type="warning"
+                size="14"
+                color="#808089" />
+        </view>
+        <view class="font-bold">
+          {{priceFormat(cart.shippingFee)}}
+        </view>
+      </view>
+      <view tiki:if="{{cart.coupon.value}}"
+            class="flex justify-between mt-medium">
+        <view class="mr-4x-small">
+          Promotion
+        </view>
+        <view class="font-bold text-green">
+          - {{priceFormat(cart.coupon.value)}}
+        </view>
+      </view>
+      <view class="flex justify-between mt-medium">
+        <view class="">
+          Total
+        </view>
+        <view class="font-bold">
+          {{priceFormat(cart.total + cart.shippingFee - cart.coupon.value)}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <cart-action cart="{{cart}}"
+               onResetCoupon="onResetCoupon"
+               onShowCouponInput="onShowCouponInput"
+               onPay="onShowPaymentResultSelect" />
+  <coupon-input isShow="{{isShowCouponInput}}"
+                onClose="onHideCouponInput"
+                onApplyCoupon="onApplyCoupon" />
+  <time-select tiki:if="{{cart.orderMethod !== 'DELIVERY'}}"
+               isShow="{{isShowTimeSelect}}"
+               onClose="onHideTimeSelect"
+               onTimeSelect="onChangeTimePickup"
+               base="{{hour: cart.time.hour, min: cart.time.min}}" />
+  <c-modal isShow="{{currentModal === 'remove_confirm'}}"
+           headerContent="Confirmation"
+           description="Do you want to remove this product from your cart?"
+           leftButton="Yes"
+           onLeftButtonClick="onConfirmDelete"
+           rightButton="No"
+           onRightButtonClick="onCancelDelete" />
+  <c-modal isShow="{{currentModal === 'paymet_result'}}"
+           headerContent="Payment result"
+           description="Select payment result."
+           leftButton="Fail"
+           onLeftButtonClick="onCloseModal"
+           rightButton="Success"
+           onRightButtonClick="onPaymentSuccessSelect" />
+  <c-modal isShow="{{currentModal === 'route_select'}}"
+           headerContent="Payment successful"
+           description="Please check your order in order management page"
+           leftButton="Shopping"
+           onLeftButtonClick="onShoppingRouteSelect"
+           rightButton="Tracking"
+           onRightButtonClick="onOrderListRouteSelect" />
+</template>
+
+<template is="{{status}}"
+          data="{{store, buyer: buyer.defaultAddress, cart, isShowCouponInput, isShowTimeSelect, showModal, currentModal}}" />

@@ -1,0 +1,7 @@
+.address-card .img-container {
+  width: 40px;
+  padding-top: 100%;
+}
+.address-card .content {
+  width: calc(100% - 48px);
+}

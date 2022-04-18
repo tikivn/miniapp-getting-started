@@ -1,0 +1,40 @@
+<view catchTap="onMaskClick">
+  <modal class="modal c-modal"
+         show="{{isShow}}"
+         mask="{{true}}"
+         zIndex="{{10}}"
+         onModalClose="onClose">
+    <view slot="header">
+      <view class="text-center text-large font-bold">
+        {{headerContent}}
+      </view>
+    </view>
+    <view class="text-center">
+      {{description}}
+    </view>
+    <view slot="footer">
+      <view class="modal-buttons flex w-full px-medium mt-2x-small border-box">
+        <view catchTap="onLeftButtonClick"
+              class="w-full mx-4x-small">
+          <button shape="pill"
+                  tiki:if="{{leftButton}}"
+                  class="w-full "
+                  size="large"
+                  type="outline">
+            {{leftButton}}
+          </button>
+        </view>
+
+        <view catchTap="onRightButtonClick"
+              class="w-full">
+          <button shape="pill"
+                  tiki:if="{{rightButton}}"
+                  class="w-full"
+                  size="large">
+            {{rightButton}}
+          </button>
+        </view>
+      </view>
+    </view>
+  </modal>
+</view>

@@ -1,0 +1,26 @@
+<view class="mb-small">
+  <view class="pt-medium mb-small">
+    <text class="font-bold text-medium">Notes</text>
+  </view>
+  <view class="bg-white radius-8px p-medium">
+    <view class="my-2x-small">
+      <view tiki:for="{{notes.seats}}">
+        <view tiki:if="{{item.value !== 0}}">
+          <view class="flex justify-between items-center">
+            <view>{{item.title}}</view>
+            <view class="font-bold">{{item.value}} people</view>
+          </view>
+          <view class="divider my-2x-small" />
+        </view>
+      </view>
+      <view class="flex justify-between items-center">
+        <view>Sitting area</view>
+        <view class="font-bold">{{notes.sittingArea}}</view>
+      </view>
+      <block tiki:if="{{notes.detail}}">
+        <view class="divider my-2x-small" />
+        <text>{{notes.detail}}</text>
+      </block>
+    </view>
+  </view>
+</view>

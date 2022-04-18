@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "variant-01": "child/variant-01",
+    "variant-02": "child/variant-02",
+    "variant-03": "child/variant-03",
+    "variant-04": "child/variant-04",
+    "sticky-bottom": "components/sticky-bottom"
+  },
+  "transparentTitle": "always"
+}

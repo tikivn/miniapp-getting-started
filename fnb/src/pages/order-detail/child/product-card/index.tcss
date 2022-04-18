@@ -1,0 +1,21 @@
+.product-card .img-container {
+  width: 40px;
+  padding-top: 100%;
+  overflow: hidden;
+}
+.product-card .info {
+  width: calc(100% - 48px);
+}
+.product-card .note {
+  width: 100%;
+  min-height: 62px;
+  box-sizing: border-box;
+}
+.product-card .t-input {
+  width: 40px;
+  margin: 0 4px;
+}
+.product-card .t-input-wrap {
+  width: 16px;
+  text-align: center;
+}

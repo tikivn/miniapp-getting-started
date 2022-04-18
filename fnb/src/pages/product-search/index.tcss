@@ -1,0 +1,19 @@
+.product-search-page {
+  min-height: calc(100vh - 104px);
+  padding-top: 104px;
+}
+.product-search-page .header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.product-search-page .products-list {
+  height: calc(100vh - 130px);
+}
+.reset-btn {
+  top: calc(50% + 4px);
+  right: 8px;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,6 @@
+<view class="cancel-booking bg-white border-t android-padding-bottom">
+  <view class="flex items-center justify-center py-small">
+    <button class="w-full mx-medium" onTap="onCancelBooking" size="large" type="outline" shape="pill">Cancel
+      booking</button>
+  </view>
+</view>

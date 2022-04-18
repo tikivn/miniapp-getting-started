@@ -1,0 +1,36 @@
+<modal
+  class="modal"
+  show="{{isShow}}"
+  mask="{{true}}"
+  zIndex="{{10}}"
+>
+  <view slot="header">
+    <view class="mb-medium header-bg">
+      <view class="img-container radius-tl-8px radius-tr-8px skeleton">
+        <image
+          src="/assets/reservation_time_out.png"
+          mode="aspectFill"
+        />
+      </view>
+    </view>
+    <view class="text-center text-large font-bold">
+      Oh no...
+    </view>
+  </view>
+  <view class="font-regular text-center">
+    The table you have selected is released after 5 minutes of reviewing.
+    Please kindly re-select the table.
+  </view>
+  <view slot="footer">
+    <view class="modal-buttons flex w-full px-medium mt-2x-small border-box">
+      <button
+        shape="pill"
+        class="w-full mx-4x-small"
+        size="large"
+        onTap="onClose"
+      >
+        Re-select table
+      </button>
+    </view>
+  </view>
+</modal>

@@ -1,0 +1,5 @@
+.point .img-container {
+  width: calc(750rpx - 32px);
+  padding-top: 50%;
+  border-radius: 8px;
+}

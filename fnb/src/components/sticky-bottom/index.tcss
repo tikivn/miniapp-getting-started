@@ -1,0 +1,49 @@
+.sticky-bottom {
+  position: sticky;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.order-msg {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.order-msg.active {
+  visibility: visible;
+  opacity: 1;
+}
+.order-msg .img-container {
+  width: 40px;
+  padding-top: 100%;
+}
+.circle image {
+  width: 19px;
+  height: 19px;
+  display: block;
+}
+.circle {
+  width: 36px;
+  height: 36px;
+}
+.order-msg .icon-next {
+  height: 14px;
+  width: 8px;
+  object-fit: contain;
+}
+.order-msg .content {
+  width: calc(100% - 60px);
+}
+.order-msg .content-wraper {
+  width: calc(100% - 10px);
+}
+.order-msg .text-ellipsis {
+  width: 100%;
+  height: 21px;
+  display: -webkit-box;
+  white-space: nowrap;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

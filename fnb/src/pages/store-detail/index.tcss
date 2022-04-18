@@ -1,0 +1,8 @@
+.store-detail-page .img-container.store-detail-img {
+  width: 100%;
+  padding-top: 100%;
+}
+.store-detail-page .line {
+  border-width: 0;
+  border-bottom-width: 1px;
+}

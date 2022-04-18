@@ -1,0 +1,66 @@
+<import-sjs from="../../../../helper/index.sjs"
+            name="{priceFormat}" />
+
+<template name="LOADING">
+  <view class="product-card flex">
+    <view class="mr-2x-small">
+      <view class="img-container circle skeleton" />
+    </view>
+    <view class="info">
+      <view class="skeleton-font-small skeleton skeleton-70-width" />
+      <view class="skeleton-font-x-small skeleton mt-x-small" />
+      <view class="skeleton-font-x-small skeleton skeleton-50-width mt-x-small" />
+      <view class="font-bold mb-x-small" />
+      <view class="note radius-4px skeleton border-box border border-solid border-gray20" />
+    </view>
+  </view>
+  <view class="line border border-solid border-gray20 my-2x-small">
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="product-card flex">
+    <view class="mr-2x-small">
+      <view class="img-container circle">
+        <image src="{{product.image}}" />
+      </view>
+    </view>
+    <view class="info">
+      <view class="font-bold">
+        {{product.name}}
+      </view>
+      <view tiki:for="{{product.selectedAttributes}}"
+            class="text-small text-gray60 my-4x-small">
+        {{item.name}}: {{item.values}}
+      </view>
+      <view class="font-bold mb-4x-small">
+        {{priceFormat(product.total * product.number)}}
+      </view>
+      <view tiki:if="{{product.note}}"
+            class="note radius-4px border-box border border-solid border-gray20 text-gray60 text-small p-3x-small">
+        {{product.note}}
+      </view>
+      <view class="bg-white py-2x-small flex items-center">
+        <view class="flex">
+          <button onTap="onDecrease"
+                  type="outline"
+                  iconName="minus"
+                  disabled="{{product.number < 1}}"
+                  shape="circle" />
+          <view class="border border-solid border-gray20 value-container">
+            {{product.number}}
+          </view>
+          <button onTap="onIncrease"
+                  type="outline"
+                  iconName="plus"
+                  shape="circle" />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="line border border-solid border-gray20 my-2x-small">
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{product}}" />

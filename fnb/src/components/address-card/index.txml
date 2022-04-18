@@ -1,0 +1,51 @@
+<template name="LOADING">
+  <view class="address-card flex justify-between border-box bg-white">
+    <view class="mr-x-small">
+      <view class="img-container skeleton" />
+    </view>
+    <view class="flex items-center content-wrapper">
+      <view class="content">
+        <view class="skeleton skeleton-font-regular skeleton-50-width" />
+        <view class="skeleton skeleton-font-small my-small" />
+        <view class="skeleton skeleton-font-small skeleton-70-width" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="address-card flex justify-between border-box bg-white"
+        data-id="{{id}}">
+    <view class="mr-x-small">
+      <view class="img-container">
+        <image src="{{iconsList[iconLeft]}}" />
+      </view>
+    </view>
+    <view class="flex justify-between items-center content-wrapper border-box">
+      <view onTap="onSelect"
+            data-id="{{id}}"
+            class="content {{iconRight ? '' : ' full'}}">
+        <view class=" font-{{weight}} text-gray100 truncate">
+          {{title}}
+        </view>
+        <view tiki:if="{{address}}"
+              class="font-bold pt-4x-small text-gray100 truncate">
+          {{address}}
+        </view>
+        <view tiki:if="true"
+              class="text-small font-regular text-gray60 pt-4x-small truncate">
+          {{subTitle}}
+        </view>
+      </view>
+      <view tiki:if="{{iconRight}}"
+            onTap="onIconRightSelect">
+        <image mode="aspectFit"
+               class="icon"
+               src="{{iconsList[iconRight]}}" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{iconsList, weight, iconLeft, iconRight, title, address, subTitle, onSelect, id}}" />

@@ -1,0 +1,51 @@
+.reservation-page {
+  padding-top: calc(100% * 0.875 - 16px);
+}
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.header image {
+  width: 100%;
+  height: calc(100vh - 338px + 16px);
+}
+.header .img-container {
+  width: 100%;
+  padding-top: 87.5%;
+}
+.form {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+.time-container {
+  margin-left: -16px;
+  width: 100vw;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-bottom: 1px;
+}
+.time-select {
+  padding: 5.5px 14px;
+}
+.time-select.active {
+  color: #1a94ff;
+  border-color: #1a94ff;
+  font-weight: bold;
+  padding: 5px 14px;
+}
+.gradient {
+  width: 100vw;
+  height: calc(var(--tf-title-bar-height) + var(--tf-status-bar-height));
+  background: linear-gradient(
+    180deg,
+    rgba(7, 65, 131, 0.4) 0%,
+    rgba(7, 65, 131, 0) 100%
+  );
+  z-index: 3;
+}

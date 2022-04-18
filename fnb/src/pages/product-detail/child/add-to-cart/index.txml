@@ -1,0 +1,15 @@
+<import-sjs from="../../../../helper/index.sjs"
+            name="{priceFormat}"></import-sjs>
+
+<view class="add-cart bg-white px-medium py-2x-small flex-col flex items-center">
+  <view class="flex justify-center">
+    <up-down-number value="{{number}}"
+                    onChange="onChangeNumber"
+                    min="{{1}}"
+                    max="{{99}}" />
+  </view>
+  <button class="mt-small w-full font-medium font-regular"
+          onTap="onAddCart"
+          shape="pill">Add to cart - {{priceFormat(total)}}</button>
+  <view class="android-padding {{paddingStatus}}"></view>
+</view>

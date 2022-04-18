@@ -1,0 +1,59 @@
+<view>
+  <view class="font-bold mt-medium mb-4x-small">
+    Notes (optional)
+  </view>
+  <view class="bg-white p-medium radius-8px">
+    <view class="flex items-center justify-between">
+      <view>
+        <view class="font-bold">
+          Elderly people
+        </view>
+        <view class="text-gray60 text-small">
+          60 years old & over
+        </view>
+      </view>
+      <up-down-number value="{{childrenNumber}}"
+                      min="{{0}}"
+                      max="{{99}}"
+                      onChange="_onChangeChildrenNumber" />
+    </view>
+    <view class="line my-medium border border-solid border-gray20" />
+    <view class="flex items-center justify-between">
+      <view>
+        <view class="font-bold">
+          Children
+        </view>
+        <view class="text-gray60 text-small">
+          03 years and under
+        </view>
+      </view>
+      <up-down-number value="{{elderlyPeopleNumber}}"
+                      min="{{0}}"
+                      max="{{99}}"
+                      onChange="_onChangeElderlyPeopleNumber" />
+    </view>
+    <view class="line my-medium border border-solid border-gray20" />
+    <view>
+      <view class="font-bold mb-4x-small">
+        Sitting area
+      </view>
+      <view class="flex">
+        <view tiki:for="{{areaList}}"
+              class="border border-solid border-gray20 radius-16px px-4x-small py-4x-small mr-2x-small area {{area === item ? 'active': ''}}"
+              onTap="_onAreaSelect"
+              data-value="{{item}}">
+          {{item}}
+        </view>
+      </view>
+    </view>
+    <view class="line my-medium border border-solid border-gray20" />
+    <view class="font-bold mb-2x-small">
+      Detail notes
+    </view>
+    <textarea onFocus="_onShowPadding"
+              onBlur="_onHidePadding"
+              maxlength="100"
+              onInput="_onNoteInput"
+              placeholder="e.g proposal, anniversaries, birthdays, allergies...etc" />
+  </view>
+</view>

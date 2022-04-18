@@ -1,0 +1,33 @@
+<import-sjs from="../../../../helper/index.sjs"
+            name="{priceFormat}" />
+
+<view class="cart-action px-medium pb-2x-small bg-white border-box">
+  <view class="flex justify-between items-center py-2x-small">
+    <view class="flex items-center w-full"
+          onTap="onShowCouponInput">
+      <image class="icon mr-2x-small"
+             mode="aspectFit"
+             src="/assets/coupon_icon.png" />
+      <view class="font-bold mr-4x-small">
+        {{cart.coupon.status === 'NONE' ? 'Apply coupon' : cart.coupon.code}}
+      </view>
+      <c-icon tiki:if="{{cart.coupon.status !== 'NONE'}}"
+              type="{{cart.coupon.value ? 'tick_fill' : 'warning_fill'}}"
+              color="gray60" />
+    </view>
+    <image tiki:if="{{cart.coupon.status === 'NONE'}}"
+           class="icon"
+           mode="aspectFit"
+           src="/assets/next_icon.png" />
+    <image tiki:if="{{cart.coupon.status !== 'NONE'}}"
+           class="icon"
+           mode="aspectFit"
+           onTap="onResetCoupon"
+           src="/assets/cross_icon.png" />
+  </view>
+  <button class="w-full font-medium font-regular radius-8px mt-2x-small"
+          shape="pill"
+          onTap="onPay">
+    Pay {{priceFormat(cart.total + cart.shippingFee - cart.coupon.value)}}
+  </button>
+</view>

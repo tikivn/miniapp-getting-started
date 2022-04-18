@@ -1,0 +1,11 @@
+.img-circle {
+  width: 180px;
+  height: 180px;
+}
+.action-btn {
+  padding-bottom: var(--safe-area-inset-bottom);
+}
+.prevent-scroll {
+  height: 100vh;
+  overflow: hidden;
+}

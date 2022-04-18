@@ -1,0 +1,13 @@
+.order-card .line {
+  width: 100%;
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+.order-card .products-list {
+  width: calc(100% - 100px);
+}
+.order-card .products-list .content {
+  flex-wrap: wrap;
+}
+.order-card .badge {
+}

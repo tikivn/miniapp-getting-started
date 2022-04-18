@@ -1,0 +1,26 @@
+.order-detail .header-bg .img-container {
+  width: 100vw;
+  padding-top: 66.66%;
+}
+.order-detail .order-info {
+  position: relative;
+  margin-top: -40px;
+  z-index: 2;
+}
+.order-detail .status {
+  text-transform: lowercase;
+}
+.order-detail .status::first-letter {
+  text-transform: capitalize;
+}
+.order-detail .line {
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+.payment .img-container {
+  width: 40px;
+  padding-top: 100%;
+}
+.status-note button {
+  height: 24px;
+}

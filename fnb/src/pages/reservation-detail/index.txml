@@ -1,0 +1,70 @@
+<view tiki:if="{{!isLoading}}"
+      class="{{isShowModal ? 'prevent-scroll' : ''}}">
+  <view class="reservation-detail flex flex-col justify-center">
+    <reservation-info reserve="{{reserve}}"
+                      onPhoneCall="onPhoneCall" />
+    <view class="{{reserve.status === 'reserved' ? 'mt-80' : ''}} px-medium mb-medium">
+      <table-info info="{{reserve}}" />
+      <contact-info status="{{reserve.status}}"
+                    contact="{{reserve.contact}}"
+                    smsReminder="{{reserve.smsReminder}}" />
+      <notes notes="{{reserve.notes}}" />
+    </view>
+  </view>
+
+  <block tiki:if="{{reserve.status === 'reserved'}}">
+    <cancel-booking onCancel="onCancel" />
+    <c-modal isShow="{{isShowModal}}"
+             headerContent="Confirmation"
+             description="Do you want to cancel this event?"
+             leftButton="Yes"
+             rightButton="No"
+             onMaskClick="onMaskClick"
+             onRightButtonClick="onCloseModal"
+             onLeftButtonClick="onConfirmCancel" />
+  </block>
+</view>
+
+
+<view tiki:else>
+  <view class="skeleton max-h-min reserve-skeleton-img" />
+  <view class="p-medium">
+    <view class="skeleton skeleton-font-large skeleton-25-width" />
+    <view class="flex flex-col items-center my-x-small">
+      <view class="bg-white radius-8px py-medium w-full">
+        <block tiki:for="{{3}}">
+          <view class="p-2x-small">
+            <view class="flex items-center">
+              <view class="skeleton icon ml-4x-small mr-x-small" />
+              <view class="skeleton skeleton-font-large w-50" />
+            </view>
+          </view>
+        </block>
+      </view>
+    </view>
+    <view class="my-medium">
+      <view class="skeleton skeleton-font-large skeleton-25-width" />
+      <view class="flex flex-col items-center my-x-small">
+        <view class="bg-white radius-8px w-full">
+          <view class="flex flex-col p-medium">
+            <view class="skeleton skeleton-font-large skeleton-25-width mb-small" />
+            <view class="skeleton skeleton-font-medium skeleton-70-width mb-small" />
+            <view class="skeleton skeleton-font-medium skeleton-40-width" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="my-medium">
+      <view class="skeleton skeleton-font-large skeleton-25-width" />
+      <view class="flex flex-col items-center my-x-small">
+        <view class="bg-white radius-8px  w-full">
+          <view class="p-medium">
+            <view class="skeleton skeleton-font-large w-full mb-small" />
+            <view class="skeleton skeleton-font-medium w-full mb-small" />
+            <view class="skeleton skeleton-font-medium w-full" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

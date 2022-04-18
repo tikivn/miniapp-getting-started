@@ -1,0 +1,42 @@
+<import-sjs from="../../helper/date.sjs"
+            name="{formatDateTime}"></import-sjs>
+
+<view class="reservation-review-page p-medium">
+  <booking-info info="{{info}}"
+                timer="{{timer}}"
+                isHide="{{isHide}}" />
+  <contact-info contact="{{contact}}"
+                errMsg="{{errMsg}}"
+                smsReminder="{{smsReminder}}"
+                onToggleSMSRemider="onToggleSMSRemider"
+                onInput="onContactInput"
+                onShowPadding="onShowPadding"
+                onHidePadding="onHidePadding" />
+  <note-info area="{{area}}"
+             areaList="{{areaList}}"
+             childrenNumber="{{childrenNumber}}"
+             elderlyPeopleNumber="{{elderlyPeopleNumber}}"
+             onShowPadding="onShowPadding"
+             onHidePadding="onHidePadding"
+             onAreaSelect="onAreaSelect"
+             onNoteInput="onNoteInput"
+             onNumberPeopleChange="onNumberPeopleChange" />
+</view>
+<view class="action py-2x-small px-medium mt-medium bg-white border-box android-padding {{paddingStatus}}">
+  <view class="android-padding-bottom">
+    <button class="w-full"
+            shape="pill"
+            onTap="onSubmit">
+      <view class="flex items-center justify-center w-full">
+        <view>
+          Book table (
+        </view>
+        <timer time="{{timer}}"
+               isHide="{{isHide}}"
+               onTimeOut="onTimeOut" />)
+      </view>
+    </button>
+  </view>
+</view>
+<time-out-modal isShow="{{isShowModal}}"
+                onClose="onNavBack" />

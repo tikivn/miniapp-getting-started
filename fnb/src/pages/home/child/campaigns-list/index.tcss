@@ -1,0 +1,7 @@
+.products-list {
+  flex-wrap: wrap;
+}
+.products-list .card-wraper {
+  width: 50%;
+  padding: 0 8px;
+}

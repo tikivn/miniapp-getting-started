@@ -1,0 +1,22 @@
+.c-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+.c-navbar > view {
+  display: flex;
+  align-items: center;
+  padding-top: calc(8px + var(--tf-status-bar-height));
+  padding-bottom: 8px;
+}
+.c-navbar-holder {
+  height: calc(40px + var(--tf-status-bar-height) + 8px);
+}
+.btn-container {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  padding: 4px;
+  border-radius: 50%;
+}

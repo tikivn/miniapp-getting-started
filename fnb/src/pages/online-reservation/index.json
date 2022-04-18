@@ -1,0 +1,11 @@
+{
+  "transparentTitle": "always",
+  "usingComponents": {
+    "compact-variant": "child/compact-variant",
+    "loose-variant": "child/loose-variant",
+    "address-card": "components/address-card",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "c-navbar": "components/c-navbar"
+  },
+  "transparentTitle": "always"
+}

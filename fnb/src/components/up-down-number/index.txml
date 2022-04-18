@@ -1,0 +1,21 @@
+<view class="flex up-down-number">
+  <button onTap="onDecrease"
+          type="outline"
+          iconName="minus"
+          disabled="{{value <= min}}"
+          shape="circle" />
+  <input tiki:if="{{isAllowInput}}"
+         value="{{value}}"
+         type="number"
+         onInput="onChange"
+         controlled="true" />
+  <view tiki:else
+        class="border border-solid border-gray20 value-container">
+    {{value}}
+  </view>
+  <button onTap="onIncrease"
+          type="outline"
+          iconName="plus"
+          disabled="{{value >= max}}"
+          shape="circle" />
+</view>

@@ -1,0 +1,29 @@
+.address-card .img-container {
+  width: 40px;
+  padding-top: 100%;
+}
+.address-card .content-wraper {
+  width: calc(100% - 48px);
+}
+.store-select .line {
+  height: 20px;
+  border-width: 0;
+  border-right-width: 1px;
+}
+.store-select .current-store {
+  height: 40px;
+}
+.store-select .content {
+  width: calc(100% - 78px);
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+.store-select .ellipsis {
+  height: 21px;
+  display: -webkit-box;
+  white-space: nowrap;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

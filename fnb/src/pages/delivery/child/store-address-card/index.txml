@@ -1,0 +1,23 @@
+<view class="address-card px-medium py-2x-small flex items-center justify-between bg-white"
+      onTap="onStoreSelect"
+      id="top">
+  <view>
+    <view class="img-container">
+      <image src="/assets/pickup_method.png" />
+    </view>
+  </view>
+  <view class="content flex items-center justify-between">
+    <view>
+      <view class="font-regular text-gray100">
+        Pickup at
+      </view>
+      <view class="font-bold pt-4x-small text-gray100 truncate">
+        {{address}}
+      </view>
+    </view>
+    <view>
+      <image class="icon-y"
+             src="/assets/next.png" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<import-sjs from="../../../../helper/date.sjs"
+            name="{addMinutes}"></import-sjs>
+<view class="relative">
+  <view>
+    <image mode="widthFix"
+           class="w-full"
+           src="{{imageList[reserve.status]}}" />
+  </view>
+  <view class=" {{reserve.status === 'reserved' ? 'info' : 'without-info'}} bg-white radius-8px">
+    <view class="p-medium">
+      <block tiki:if="{{reserve.status === 'reserved'}}">
+        <view class="flex justify-between items-center">
+          <view class="badge font-bold">{{reserve.status}}</view>
+          <button size="small"
+                  class="flex items-center radius-pill font-light text-small"
+                  onTap="onContactSupport">Contact support</button>
+        </view>
+        <view class="inner-info mt-medium radius-8px">
+          <view class="flex p-x-small ">
+            <view class="icon mt-5x-small">
+              <image class="size-20"
+                     src="/assets/info.png" />
+            </view>
+            <view class="pl-x-small text-small font-regular">Please arrive before {{addMinutes(reserve.time, 15)}} or
+              your
+              reservation will be canceled.</view>
+          </view>
+        </view>
+      </block>
+      <block tiki:else>
+        <view class="badge font-bold">{{reserve.status}}</view>
+      </block>
+    </view>
+  </view>
+</view>

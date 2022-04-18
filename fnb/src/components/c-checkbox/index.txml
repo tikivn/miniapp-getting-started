@@ -1,0 +1,8 @@
+<checkbox
+  tiki:if="{{checked}}"
+  checked="{{true}}"
+/>
+<checkbox
+  tiki:else="{{!checked}}"
+  disabled="{{true}}"
+/>

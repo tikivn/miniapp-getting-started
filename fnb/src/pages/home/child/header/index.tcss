@@ -1,0 +1,35 @@
+.c-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #f7f7f7;
+  width: 100vw;
+}
+.header {
+  height: var(--tf-title-bar-height);
+  padding-top: var(--tf-status-bar-height);
+  padding-bottom: 16px;
+}
+.header-scrolled {
+  background-color: #fff;
+  padding-top: calc(var(--tf-status-bar-height) + 12px);
+  padding-bottom: 14.5px;
+}
+.top {
+  height: var(--tf-title-bar-height);
+  padding-top: var(--tf-status-bar-height);
+  padding-bottom: 16px;
+}
+.top-scrolled {
+  background-color: #fff;
+  height: var(--tf-title-bar-height);
+  padding-top: var(--tf-status-bar-height);
+}
+.wrap {
+  position: relative;
+}
+.header .img-container {
+  width: 40px;
+  padding-top: 100%;
+}

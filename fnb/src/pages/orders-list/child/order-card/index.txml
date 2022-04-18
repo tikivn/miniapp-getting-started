@@ -1,0 +1,97 @@
+<import-sjs from="../../../../helper/index.sjs"
+            name="{priceFormat}" />
+<import-sjs from="../../../../helper/index.sjs"
+            name="{nameFormat}" />
+
+<template name="PRODUCT">
+  <view class="mr-4x-small">
+    {{name}}
+  </view>
+  <view tiki:for="{{selectedAttributes}}"
+        tiki:for-item="attr">
+    {{` ${attr.name}`}}: {{attr.values}}
+  </view>
+  <view>
+    (x{{number}})
+  </view>
+</template>
+
+<template name="LOADING">
+  <view class="order-card bg-white radius-8px p-medium mb-small"
+        onTap="onSelect">
+    <view class="flex justify-between items-center">
+      <view style="width: 92px; height: 29px"
+            class="skeleton" />
+      <view class="skeleton skeleton-font-small w-50" />
+    </view>
+    <view class="flex items-center mt-medium">
+      <view style="height: 24px; width: 24px"
+            class="skeleton" />
+      <view class="ml-2x-small skeleton skeleton-font-medium w-full" />
+    </view>
+    <view class="line border-gray20 border-solid my-2x-small" />
+    <view class="flex items-center">
+      <view style="height: 24px; width: 24px"
+            class="skeleton" />
+      <view class="ml-2x-small skeleton skeleton-font-medium w-full" />
+    </view>
+    <view class="flex justify-between mt-medium">
+      <view class="products-list">
+        <view class="skeleton skeleton-font-small w-75 mb-2x-small" />
+        <view class="skeleton skeleton-font-small w-75" />
+      </view>
+      <view class="skeleton skeleton-font-small w-50" />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="order-card bg-white radius-8px p-medium mb-small"
+        onTap="onSelect">
+    <view class="flex justify-between items-center">
+      <view
+            class="font-medium text-{{badges[order.orderMethod][order.status].color}} bg-{{badges[order.orderMethod][order.status].bg}} py-4x-small px-small radius-16px">
+        {{badges[order.orderMethod][order.status].content}}
+      </view>
+      <view class="text-small font-regular text-gray60">
+        {{order.date}}, {{order.time}}
+      </view>
+    </view>
+    <view class="flex items-center mt-medium">
+      <image style="height: 24px; width: 24px"
+             src="/assets/store_icon.png" />
+      <view class="ml-2x-small text-gray100">
+        {{order.store.address}}
+      </view>
+    </view>
+    <view class="line border-gray20 border-solid my-2x-small" />
+    <view class="flex items-center"
+          tiki:if="{{order.orderMethod === 'DELIVERY'}}">
+      <image style="height: 24px; width: 24px"
+             src="/assets/location_icon.png" />
+      <view class="ml-2x-small text-gray100">
+        {{order.buyer.address}}
+      </view>
+    </view>
+    <view class="flex items-center"
+          tiki:if="{{order.orderMethod === 'STORE_PICKUP'}}">
+      <image style="height: 24px; width: 24px"
+             src="/assets/clock_icon.png" />
+      <view class="ml-2x-small text-gray100">
+        {{order.pickupInfo.time.hour}}:{{order.pickupInfo.time.min}},
+        {{order.pickupInfo.date}}
+      </view>
+    </view>
+    <view class="flex justify-between mt-medium">
+      <view class="products-list">
+        {{nameFormat(order.products)}}
+      </view>
+      <view class="font-bold text-gray100">
+        {{priceFormat(order.total)}}
+      </view>
+    </view>
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{order, badges}}" />

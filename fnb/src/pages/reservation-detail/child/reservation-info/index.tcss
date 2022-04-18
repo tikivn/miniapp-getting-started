@@ -1,0 +1,16 @@
+.info {
+  width: calc(100% - 32px);
+  position: absolute;
+  bottom: -80px;
+  left: 15px;
+}
+.without-info {
+  width: calc(100% - 32px);
+  position: absolute;
+  bottom: 0px;
+  left: 15px;
+}
+
+.inner-info {
+  border: 1px solid #ebebf0;
+}

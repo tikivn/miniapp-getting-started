@@ -1,0 +1,39 @@
+<view class="{{isShowModal ? 'prevent-scroll' : ''}}">
+  <block tiki:if="{{!isLoading}}">
+    <view tiki:if="{{reservations.length !== 0}}">
+      <view class="pb-medium">
+        <view tiki:for="{{reservations}}"
+              tiki:key="unique">
+          <reserve-card reserve="{{item}}"
+                        onHideModal="onHideModal"
+                        onSelect="onMoveReserveDetail"
+                        onCancelBooking="onCancelBooking"
+                        onConfirmCancelBooking="onConfirlCancelBooking" />
+        </view>
+      </view>
+      <view class="action-btn sticky sticky-bottom-left bg-white border-t">
+        <view class="py-x-small">
+          <reserve-button />
+        </view>
+      </view>
+    </view>
+
+    <view tiki:else>
+      <view class="bg-white flex flex-col items-center p-medium">
+        <image class="img-circle"
+               src="/assets/rs_reserved_circle.png" />
+        <view class="font-bold text-medium">You don’t have any reservation
+          yet</view>
+        <text>Do you want to reserve a table?</text>
+      </view>
+      <reserve-button />
+    </view>
+  </block>
+
+  <block tiki:else>
+    <view tiki:for="{{3}}">
+      <reserve-card isLoading />
+    </view>
+  </block>
+
+</view>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "c-checkbox": "components/c-checkbox",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index"
+  }
+}

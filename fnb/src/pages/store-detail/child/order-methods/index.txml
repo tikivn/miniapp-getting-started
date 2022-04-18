@@ -1,0 +1,44 @@
+<template name="LOADING">
+  <view class="order-methods">
+    <view class="flex bg-white radius-8px w-full border-box items-center px-small py-medium">
+      <order-method status="LOADING" />
+      <view class="border border-gray20 border-solid line"></view>
+      <order-method status="LOADING" />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="order-methods">
+    <view class="flex bg-white radius-8px w-full border-box items-center px-small py-medium">
+      <order-method status="SUCCESS"
+                    code="STORE_PICKUP"
+                    title="Store pickup"
+                    subTitle="Best quality"
+                    image="/assets/deliver_2.png" />
+      <view class="border border-gray20 border-solid line"></view>
+      <order-method code="DELIVERY"
+                    status="SUCCESS"
+                    title="Delivery"
+                    subTitle="Always on time"
+                    image="/assets/deliver_1.png" />
+    </view>
+    <view onTap="onReservationSelect"
+          class="onl-reservation bg-white radius-8px w-full border-box pl-medium mt-small py-medium">
+      <view class="flex items-center justify-between">
+        <view class="w-50">
+          <view class="font-medium text-medium text-gray100">
+            Online reservation
+          </view>
+          <view class="font-regular text-small text-gray60">
+            Table booking
+          </view>
+        </view>
+        <order-method image="/assets/deliver_3.png"
+                      status="SUCCESS" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<template is="{{status}}"></template>

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "c-radio": "components/c-radio",
+    "c-checkbox": "components/c-checkbox"
+  }
+}

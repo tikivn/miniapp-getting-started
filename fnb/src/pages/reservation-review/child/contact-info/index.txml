@@ -1,0 +1,48 @@
+<view>
+  <view class="font-bold mt-medium mb-4x-small">
+    Contact info
+  </view>
+  <view class="bg-white p-medium radius-8px">
+    <view class="font-bold mb-4x-small">
+      Full name
+    </view>
+    <textfield value="{{contact.name}}"
+               onFocus="_onShowPadding"
+               onBlur="_onHidePadding"
+               hasError="{{errMsg.name}}"
+               errorMsg="{{errMsg.name}}"
+               data-type="name"
+               onInput="_onInput"
+               placeholder="E.g Nguyen Van A" />
+    <view class="font-bold mb-4x-small mt-medium">
+      Email
+    </view>
+    <textfield value="{{contact.email}}"
+               onFocus="_onShowPadding"
+               onBlur="_onHidePadding"
+               hasError="{{errMsg.email}}"
+               errorMsg="{{errMsg.email}}"
+               data-type="email"
+               onInput="_onInput"
+               placeholder="E.g a.nguyen@tiki.vn" />
+    <view class="font-bold mb-4x-small mt-medium">
+      Phone number
+    </view>
+    <textfield value="{{contact.phone}}"
+               onFocus="_onShowPadding"
+               onBlur="_onHidePadding"
+               hasError="{{errMsg.phone}}"
+               errorMsg="{{errMsg.phone}}"
+               type="number"
+               data-type="phone"
+               onInput="_onInput"
+               placeholder="10-digit phone number" />
+    <view class="flex items-center mt-small"
+          onTap="_onToggleSMSRemider">
+      <c-checkbox checked="{{smsReminder}}" />
+      <view class="ml-x-small">
+        SMS reminder
+      </view>
+    </view>
+  </view>
+</view>

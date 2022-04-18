@@ -1,0 +1,6 @@
+<attribute-select
+  status="SUCCESS"
+  attribute="{{item}}"
+  tiki:for="{{attributes}}"
+  onSelectAttribute="onSelectAttribute"
+/>

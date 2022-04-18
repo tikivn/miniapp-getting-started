@@ -1,0 +1,3 @@
+.date-btn {
+  width: calc(100% - 80px - 16px);
+}

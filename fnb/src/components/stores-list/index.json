@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "address-card": "components/address-card"
+  }
+}

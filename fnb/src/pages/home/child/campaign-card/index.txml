@@ -1,0 +1,32 @@
+<template name="LOADING">
+  <view class="card-wraper border-box mt-medium">
+    <view class="product-card border-box">
+      <view class="img-container skeleton">
+      </view>
+      <view class="title mt-2x-small skeleton skeleton-font-regular">
+      </view>
+      <view class="sub-title font-regular skeleton skeleton-font-regular skeleton-75-width mt-4x-small">
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="card-wraper border-box mt-medium"
+    onTap="handleSelect">
+    <view class="product-card border-box">
+      <view class="img-container">
+        <image src="{{image}}" />
+      </view>
+      <view class="title font-medium text-gray100 mt-2x-small">
+        {{title}}
+      </view>
+      <view class="sub-title text-gray60 font-regular text-x-small">
+        {{subTitle}}
+      </view>
+    </view>
+  </view>
+</template>
+
+<template is="{{status}}"
+  data="{{...campaign}}"></template>

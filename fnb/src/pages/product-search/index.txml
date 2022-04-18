@@ -1,0 +1,45 @@
+<template name="LOADING">
+  <view class="px-medium bg-white"
+        style="min-height: 100vh;">
+    <view class="py-2x-small mb-2x-small border-box">
+      <address-card />
+    </view>
+    <view class="skeleton h-input" />
+    <view class="skeleton skeleton-font-small my-small w-75" />
+    <product-card tiki:for="{{[1, 2, 3, 4, 5, 6, 7]}}"
+                  status="LOADING" />
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="product-search-page px-medium bg-white">
+    <view class="header bg-white border-box px-medium">
+      <view class="py-2x-small mb-2x-small border-box">
+        <address-card status="SUCCESS"
+                      iconLeft="store_gray"
+                      title="{{store.name}}, {{store.address}}" />
+      </view>
+      <search-bar value="{{searchValue}}"
+                  placeholder="What are you craving for?"
+                  onTapCloseIcon="onClearInput"
+                  onInput="onSearchInput"
+                  focus="{{true}}" />
+    </view>
+    <view tiki:if="{{result.length}}">
+      <view class="font-bold text-medium pb-small"
+            tiki:if="{{!searchValue}}">
+        Popular drinks and food
+      </view>
+      <product-card tiki:for="{{result}}"
+                    product="{{item}}"
+                    onSelect="onProductClick" />
+    </view>
+    <no-item tiki:if="{{!result.length}}"
+             top="{{120}}"
+             type="search"
+             showButton="" />
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{result: searchResult, store, base: list.data, searchValue}}" />

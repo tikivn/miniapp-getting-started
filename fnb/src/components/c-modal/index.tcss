@@ -1,0 +1,3 @@
+.c-modal .tu-modal-footer::before {
+  background-color: transparent !important;
+}

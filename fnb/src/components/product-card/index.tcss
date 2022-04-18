@@ -1,0 +1,4 @@
+.product-card .img-container {
+  width: 68px;
+  padding-top: 100%;
+}

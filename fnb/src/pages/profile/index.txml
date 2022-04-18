@@ -1,0 +1,51 @@
+<view class="profile-page px-medium">
+  <header type="{{headerType}}" />
+  <view class="point mt-medium">
+    <view class="img-container">
+      <image src="/assets/point.png" />
+    </view>
+  </view>
+  <view
+    class="p-medium bg-white radius-8px mt-small flex flex-col items-center">
+    <image
+      style="width: 240px; height: 55px"
+      src="/assets/barcode.png"
+    />
+    <view class="mt-2x-small">
+      42069-69420-42069
+    </view>
+  </view>
+  <view
+    class="bg-white radius-8px p-medium flex items-center justify-between mt-small"
+    onTap="onPhoneCall"
+  >
+    <view class="flex items-center">
+      <image
+        src="/assets/support.png"
+        style="height: 40px; width: 40px"
+        class="mr-2x-small"
+      />
+      <view>
+        <view>
+          Support
+        </view>
+        <view class="text-small text-gray60">
+          Call or chat with us
+        </view>
+      </view>
+    </view>
+    <c-icon
+      type="arrow_right"
+      color="gray40"
+      size="{{20}}"
+    />
+  </view>
+  <view class="footer text-center py-medium">
+    <view class="text-small text-brand">
+      Terms and Conditions
+    </view>
+    <view class="text-x-small mt-medium text-gray60">
+      version: 1.0.0
+    </view>
+  </view>
+</view>

@@ -1,0 +1,88 @@
+<template name="LOADING">
+  <view class="reservation-page">
+    <view class="header">
+      <view class="img-container skeleton" />
+    </view>
+    <view class="form p-medium bg-white w-full border-box">
+      <view class="px-medium py-2x-small border border-solid border-gray20 radius-8px">
+        <address-card />
+      </view>
+      <view class="flex mt-medium">
+        <view style="width: 80px;"
+              class="mr-medium">
+          <view class="skeleton skeleton-font-medium w-50 mb-4x-small" />
+          <view>
+            <view class="skeleton h-input" />
+          </view>
+        </view>
+        <view class="date-btn">
+          <view class="skeleton skeleton-font-medium w-50 mb-4x-small" />
+          <view>
+            <view class="skeleton h-input" />
+          </view>
+        </view>
+        <view></view>
+      </view>
+      <view class="mt-medium">
+        <view class="skeleton skeleton-font-medium w-50 mb-4x-small" />
+        <view class="flex time-container hide-scroll">
+          <view tiki:for="{{[1, 2, 3, 4]}}"
+                class="skeleton radius-16px mr-2x-small time-select"
+                style="width: 80px; height: 32px" />
+        </view>
+      </view>
+      <button class="w-full mt-medium skeleton"
+              shape="pill" />
+      <view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="reservation-page">
+    <view class="header relative">
+      <view class="gradient absolute" />
+      <image src="/assets/reservation.png"
+             mode="aspectFill" />
+    </view>
+    <view class="form p-medium bg-white w-full border-box">
+      <compact-variant tiki:if="{{variant !== 'LOOSE'}}"
+                       selected="{{selected}}"
+                       timeList="{{timeList}}"
+                       store="{{store}}"
+                       onReserve="onReserve"
+                       onTimeSelect="onTimeSelect"
+                       onDateSelect="onDateSelect"
+                       onStoreSelect="onStoreSelect"
+                       onNumberPeopleSelect="onNumberPeopleSelect" />
+      <loose-variant tiki:else
+                     selected="{{selected}}"
+                     timeList="{{timeList}}"
+                     store="{{store}}"
+                     onReserve="onReserve"
+                     onTimeSelect="onTimeSelect"
+                     onDateSelect="onDateSelect"
+                     onStoreSelect="onStoreSelect"
+                     onNumberPeopleSelect="onNumberPeopleSelect" />
+      <view class="android-padding-bottom ">
+        <button class="w-full mt-medium"
+                shape="pill"
+                onTap="onReserve">
+          Reserve this table
+        </button>
+        <view class="text-center text-brand mt-small"
+              onTap="onSupportSelect">
+          Call booking support
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+
+<c-navbar title="Find table"
+          titleColor="white"
+          bgColor="transparent"
+          btnColor="white" />
+<template is="{{status}}"
+          data="{{store, selected, timeList, variant}}" />
