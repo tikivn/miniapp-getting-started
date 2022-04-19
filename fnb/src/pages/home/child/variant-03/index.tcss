@@ -1,0 +1,5 @@
+.banner .img-container {
+  width: calc(750rpx - 32px);
+  padding-top: 33.333%;
+  border-radius: 8px;
+}

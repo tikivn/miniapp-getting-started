@@ -1,0 +1,31 @@
+.cart-page .product-card .img-container {
+  width: 40px;
+  padding-top: 100%;
+  overflow: hidden;
+}
+.cart-page .product-card .info {
+  width: calc(100% - 48px);
+}
+.cart-page .product-card .note {
+  width: 100%;
+  box-sizing: border-box;
+}
+.cart-page .product-card .t-input {
+  width: 40px;
+  padding: 0;
+  margin: 0 4px;
+}
+.cart-page .product-card .t-input-wrap {
+  width: 40px;
+  text-align: center;
+}
+
+.cart-page .product-card .value-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+}

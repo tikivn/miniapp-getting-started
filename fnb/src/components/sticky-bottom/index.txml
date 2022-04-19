@@ -1,0 +1,39 @@
+<import-sjs from="../../helper/index.sjs"
+            name="{priceFormat}"></import-sjs>
+<import-sjs from="./helper/index.sjs"
+            name="{createContent}"></import-sjs>
+
+<view class="sticky-bottom bg-{{cart.total ? 'white': ''}}">
+  <view class="cart-toast-wrapper px-medium py-2x-small bg-white"
+        tiki:if="{{cart.products.length}}">
+    <view onTap="onTap"
+          class="order-msg bg-gray100 px-large py-2x-small border-box radius-8px flex items-center justify-between {{cart.total ? ' active': ''}}">
+      <view class="flex items-center content-wraper">
+        <view class="circle flex items-center justify-center bg-gray80 mr-small">
+          <image src="/assets/cart.png" />
+        </view>
+        <view class="content">
+          <view class="text-white font-bold">
+            {{priceFormat(cart.total)}}
+          </view>
+          <view class="text-ellipsis">
+            <text class="text-gray60 text-small font-regular"
+                  tiki:for="{{cart.products}}">
+              {{createContent(item)}}{{index < cart.products.length
+                -
+                1
+                ?', ' : ''}}
+            </text>
+          </view>
+        </view>
+      </view>
+      <image
+        class="icon-next"
+        src="/assets/next.png"
+      />
+    </view>
+  </view>
+  <slot name="bottom-action">
+    <view class="android-padding-bottom"/>
+    </slot>
+</view>

@@ -1,0 +1,67 @@
+<template name="LOADING">
+  <view class="store-detail-page p-medium">
+    <view class="bg-white radius-8px border-box w-full">
+      <carousel>
+        <carousel-item tiki:for="{{[1, 2]}}">
+          <view class="skeleton img-container store-detail-img" />
+        </carousel-item>
+      </carousel>
+      <view class="py-small px-medium border-box">
+        <view class="skeleton skeleton-font-medium skeleton-70-width" />
+        <view class="skeleton skeleton-font-small mt-2x-small" />
+      </view>
+    </view>
+    <view class="mt-small">
+      <order-methods />
+    </view>
+    <view class="mt-small p-medium radius-8px bg-white">
+      <address-card />
+      <view class="line border border-solid border-gray20 my-2x-small" />
+      <address-card />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="store-detail-page px-medium pb-medium">
+    <view class="bg-white radius-8px border-box w-full">
+      <detail-carousel items="{{store.images}}" />
+      <view class="py-small px-medium border-box">
+        <view class="flex justify-between items-center border-box">
+          <view>
+            <view class="text-medium font-regular text-gray100">
+              {{store.name}}
+            </view>
+            <view class="text-gray100">
+              Open: {{store.open}} - {{store.close}}
+            </view>
+          </view>
+          <view class="like-btn"
+                onTap="onToggleFavorite">
+            <image class="icon"
+                   src="{{store.favorite ? '/assets/heart_icon.png' : '/assets/heart.png'}}" />
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="mt-small">
+      <order-methods status="SUCCESS" />
+    </view>
+    <view class="mt-small p-medium radius-8px bg-white">
+      <address-card status="SUCCESS"
+                    iconLeft="phone"
+                    title="Phone number"
+                    onSelect="onPhoneCall"
+                    address="{{store.phone}}" />
+      <view class="line border border-solid border-gray20 my-2x-small" />
+      <address-card status="SUCCESS"
+                    iconLeft="location_blue"
+                    title="Address"
+                    address="{{store.address}}" />
+    </view>
+  </view>
+</template>
+
+<c-navbar />
+<template is="{{status}}"
+          data="{{store: info.data}}" />

@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "c-icon": "components/c-icon",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
+}

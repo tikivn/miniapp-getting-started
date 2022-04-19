@@ -1,0 +1,36 @@
+<template name="LOADING">
+  <view class="order-method border-box">
+    <view class="px-medium">
+      <view class="img-container skeleton">
+      </view>
+    </view>
+    <view class="title mt-2x-small skeleton skeleton-font-medium"></view>
+    <view
+      class="sub-title skeleton skeleton-font-small skeleton-75-width mt-4x-small"
+    ></view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view
+    class="order-method border-box"
+    onTap="onSelect"
+  >
+    <view class="px-medium">
+      <view class="img-container">
+        <image src="{{image}}" />
+      </view>
+    </view>
+    <view
+      class="title text-medium font-medium text-center mt-2x-small text-gray100"
+    >{{title}}</view>
+    <view class="sub-title text-small font-regular text-center text-gray60">
+      {{subTitle}}</view>
+  </view>
+</template>
+
+<template
+  is="{{status}}"
+  data="{{image, title, subTitle}}"
+  onSelect="onSelect"
+/>

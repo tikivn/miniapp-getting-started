@@ -1,0 +1,6 @@
+<web-view
+  id="web-view1"
+  progress="{{true}}"
+  src="https://tiki.vn/"
+  onMessage="onMessage"
+/>

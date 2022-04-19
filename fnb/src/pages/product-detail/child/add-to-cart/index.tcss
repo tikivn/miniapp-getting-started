@@ -1,0 +1,14 @@
+.product-detail-page .add-cart {
+  padding-bottom: 8px;
+}
+.product-detail-page .t-input {
+  width: 40px;
+  margin: 0 4px;
+}
+.product-detail-page .t-input-wrap {
+  width: 16px;
+  text-align: center;
+}
+.android-padding.active {
+  padding-bottom: 32px;
+}

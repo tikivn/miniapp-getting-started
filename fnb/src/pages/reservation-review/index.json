@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "timer": "components/timer",
+    "time-out-modal": "child/time-out-modal",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "contact-info": "child/contact-info",
+    "booking-info": "child/booking-info",
+    "note-info": "child/note-info"
+  }
+}

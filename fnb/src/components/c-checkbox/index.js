@@ -1,0 +1,5 @@
+Component({
+  props: {
+    checked: false,
+  },
+});

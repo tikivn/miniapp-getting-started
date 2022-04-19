@@ -1,0 +1,19 @@
+<view class="store-search-page">
+  <view class="relative px-medium pb-medium bg-white search-box border-box">
+    <search-bar value="{{searchValue}}"
+                focus
+                placeholder="Search store"
+                onTapCloseIcon="onClearInput"
+                onInput="onSearchInput"
+                focus="{{true}}" />
+  </view>
+  <view tiki:if="{{searchResult.length}}">
+    <stores-list status="{{status}}"
+                 stores="{{searchResult}}"
+                 onSelect="onStoreSelect" />
+  </view>
+  <no-item tiki:if="{{!searchResult.length}}"
+           top="{{56}}"
+           type="search"
+           showButton="" />
+</view>

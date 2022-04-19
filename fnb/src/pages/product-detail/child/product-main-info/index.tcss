@@ -1,0 +1,14 @@
+.product-detail-img.img-container {
+  width: 100%;
+  padding-top: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+.product-detail-page .like-btn {
+  height: 20px;
+}
+.product-detail-page .like-btn image {
+  width: 20px;
+  height: 20px;
+}

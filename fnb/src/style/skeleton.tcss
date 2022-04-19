@@ -1,0 +1,99 @@
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0 50%;
+  }
+}
+
+.skeleton {
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    rgba(190, 190, 190, 0.2) 25%,
+    rgba(129, 129, 129, 0.24) 37%,
+    rgba(190, 190, 190, 0.2) 63%
+  );
+  background-size: 400% 100%;
+  -webkit-animation: skeleton-loading 1.4s ease infinite;
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+.skeleton-button-large {
+  height: 40px;
+}
+
+.skeleton-button-medium {
+  height: 32px;
+}
+
+.skeleton-paragraph {
+  height: 72px;
+}
+
+.skeleton-button-shape-rounded {
+  border-radius: 4px;
+}
+
+.skeleton-button-shape-pill {
+  border-radius: 20px;
+}
+
+.skeleton-button-shape-circle {
+  border-radius: 50%;
+}
+
+.skeleton-font-x-small {
+  height: 12px;
+}
+
+.skeleton-font-small {
+  height: 15px;
+}
+
+.skeleton-font-regular {
+  height: 18px;
+}
+
+.skeleton-font-medium {
+  height: 21px;
+}
+
+.skeleton-font-large {
+  height: 24px;
+}
+
+.skeleton-10-width {
+  width: 10%;
+}
+
+.skeleton-20-width {
+  width: 20%;
+}
+
+.skeleton-25-width {
+  width: 25%;
+}
+
+.skeleton-40-width {
+  width: 40%;
+}
+
+.skeleton-50-width {
+  width: 50%;
+}
+
+.skeleton-70-width,
+.width-70 {
+  width: 70%;
+}
+
+.skeleton-75-width {
+  width: 75%;
+}
+
+.skeleton-100-width {
+  width: 100%;
+}

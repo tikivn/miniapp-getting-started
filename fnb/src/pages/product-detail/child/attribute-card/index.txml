@@ -1,0 +1,59 @@
+<import-sjs
+  from="../../../../helper/index.sjs"
+  name="{priceFormat}"
+></import-sjs>
+
+<template name="LOADING">
+  <view class="flex items-center attr-card border-box py-2x-small">
+    <radio disabled="{{true}}" />
+    <view class="ml-x-small">
+      <view class="img-container skeleton">
+      </view>
+    </view>
+    <view class="width-70">
+      <view class="skeleton skeleton-font-small ml-2x-small">
+      </view>
+      <view
+        class="skeleton skeleton-font-small mt-4x-small ml-2x-small width-70"
+      >
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view
+    class="flex items-center attr-card border-box py-2x-small justify-between"
+    onTap="onSelect"
+  >
+    <view class="flex items-center">
+      <c-radio
+        tiki:if="{{!isMultipleChoice}}"
+        checked="{{checked}}"
+      />
+      <c-checkbox
+        tiki:if="{{isMultipleChoice}}"
+        checked="{{checked}}"
+      />
+      <view class="ml-x-small">
+        <view class="img-container">
+          <image src="{{image}}" />
+        </view>
+      </view>
+      <view class="font-base font-regular text-gray100 ml-2x-small">
+        {{name}}
+      </view>
+    </view>
+    <view class="font-base font-bold text-grey100">
+      {{`+ ${priceFormat(additionalFee)}`}}
+    </view>
+  </view>
+</template>
+
+<template
+  is="{{status}}"
+  data="{{
+    ...value, 
+    isMultipleChoice, 
+  }}"
+></template>

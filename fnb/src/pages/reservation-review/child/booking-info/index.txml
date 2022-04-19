@@ -1,0 +1,32 @@
+<import-sjs from="../../../../helper/date.sjs"
+            name="{formatDateTime}"></import-sjs>
+
+<view class="bg-white radius-8px"
+      style="overflow: hidden;">
+  <view class="bg-brand flex items-center justify-between text-white py-4x-small px-medium">
+    <view>
+      <view class="">
+        This table is reserved for you
+      </view>
+      <view class="text-small">
+        Time remaining
+      </view>
+    </view>
+    <view class="text-large font-bold">
+      <timer time="{{timer}}" />
+    </view>
+  </view>
+  <view class="p-medium">
+    <address-card status="SUCCESS"
+                  iconLeft="store_gray"
+                  title="{{info.store.name}}" />
+    <view class="line my-2x-small border border-solid border-gray20" />
+    <address-card status="SUCCESS"
+                  iconLeft="user_gray"
+                  title="Table for {{info.numberOfAdults}}" />
+    <view class="line my-2x-small border border-solid border-gray20" />
+    <address-card status="SUCCESS"
+                  iconLeft="clock_gray"
+                  title="{{formatDateTime(info.date)}}, {{info.time}}" />
+  </view>
+</view>

@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: #f7f7f7;
+  width: 100vw;
+}
+.header-scrolled {
+  background-color: #fff;
+  padding: 14.5px 16px;
+  padding-top: 38.5px;
+}
+.top {
+  height: 191px;
+}
+.top-scrolled {
+  height: 80px;
+}
+.wrap {
+  position: relative;
+}
+.header .avatar {
+  width: 72px;
+  margin-top: -36px;
+}
+.header .img-container {
+  width: 100%;
+}
+.header .avatar .img-container {
+  padding-top: 100%;
+}
+.header .bg-header .img-container {
+  padding-top: 33.333%;
+}

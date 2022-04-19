@@ -1,0 +1,240 @@
+export const products = [
+  {
+    _id: '625ffd94709066373c1ab011',
+    name: 'Capuccino',
+    price: 69000,
+    isNew: true,
+    available: true,
+    isFavorite: true,
+    type: ['Coffee', 'Tea'],
+    avatar: '/assets/product_3.png',
+    description:
+      'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
+    images: [
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+    ],
+    attributes: [
+      {
+        name: 'Size',
+        _id: '615ffd94709066373c2ab011',
+        numberSelectionAllow: 1,
+        default: ['615ffd94709066373c2ab02b'],
+        values: [
+          {
+            _id: '615ffd94709066373c2ab02b',
+            name: 'Small',
+            image: '/assets/attr_1.png',
+            additionalFee: 0,
+          },
+          {
+            _id: '615ffd94709066373c2ab02c',
+            name: 'Large',
+            image: '/assets/attr_3.png',
+            additionalFee: 10000,
+          },
+        ],
+      },
+      {
+        _id: '615ffd94709066373c2ab012',
+        name: 'Topping',
+        numberSelectionAllow: 2,
+        default: [],
+        values: [
+          {
+            _id: '615ffd94709066373c2ab02d',
+            name: 'Espresso (1 shot)',
+            image: '/assets/attr_2.png',
+            additionalFee: 10000,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    _id: '635ffd94709066373c1ab011',
+    name: 'Latte',
+    price: 59000,
+    avatar: '/assets/product_2.png',
+    isNew: false,
+    available: true,
+    isFavorite: true,
+    type: ['Coffee', 'Milk tea', 'Tea'],
+    description:
+      'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
+    images: [
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+    ],
+    attributes: [
+      {
+        name: 'Size',
+        _id: '615ffd94709066373c2ab011',
+        numberSelectionAllow: 1,
+        default: ['615ffd94709066373c2ab02b'],
+        values: [
+          {
+            _id: '615ffd94709066373c2ab02b',
+            name: 'Small',
+            image: '/assets/attr_1.png',
+            additionalFee: 0,
+          },
+          {
+            _id: '615ffd94709066373c2ab02c',
+            name: 'Large',
+            image: '/assets/attr_3.png',
+            additionalFee: 10000,
+          },
+        ],
+      },
+      {
+        _id: '615ffd94709066373c2ab012',
+        name: 'Topping',
+        numberSelectionAllow: 2,
+        default: [],
+        values: [
+          {
+            _id: '615ffd94709066373c2ab02d',
+            name: 'Espresso (1 shot)',
+            image: '/assets/attr_2.png',
+            additionalFee: 10000,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    _id: '645ffd94709066373c1ab011',
+    name: 'Pure black',
+    price: 59000,
+    avatar: '/assets/product_1.png',
+    isNew: false,
+    available: true,
+    isFavorite: true,
+    type: ['Coffee'],
+    description:
+      'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
+    images: [
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+    ],
+    attributes: [
+      {
+        name: 'Size',
+        _id: '615ffd94709066373c2ab011',
+        numberSelectionAllow: 1,
+        default: ['615ffd94709066373c2ab02b'],
+        values: [
+          {
+            _id: '615ffd94709066373c2ab02b',
+            name: 'Small',
+            image: '/assets/attr_1.png',
+            additionalFee: 0,
+          },
+          {
+            _id: '615ffd94709066373c2ab02c',
+            name: 'Large',
+            image: '/assets/attr_3.png',
+            additionalFee: 10000,
+          },
+        ],
+      },
+      {
+        _id: '615ffd94709066373c2ab012',
+        name: 'Topping',
+        numberSelectionAllow: 2,
+        default: [],
+        values: [
+          {
+            _id: '615ffd94709066373c2ab02d',
+            name: 'Espresso (1 shot)',
+            image: '/assets/attr_2.png',
+            additionalFee: 10000,
+          },
+        ],
+      },
+    ],
+  },
+  {
+    _id: '655ffd94709066373c1ab011',
+    name: 'Teavana® Mango',
+    price: 69000,
+    avatar: '/assets/product_4.png',
+    isNew: true,
+    available: true,
+    isFavorite: true,
+    type: ['Coffee'],
+    description:
+      'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
+    images: [
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+    ],
+    attributes: [],
+  },
+  {
+    _id: '675ffd94709066373c1ab011',
+    name: 'Hawaiian pizza',
+    price: 109000,
+    avatar: '/assets/product_5.png',
+    isNew: true,
+    available: false,
+    isFavorite: false,
+    type: ['Pizza', 'Snacks'],
+    description:
+      'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
+    images: [
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+    ],
+    attributes: [],
+  },
+  {
+    _id: '665ffd94709066373c1ab011',
+    name: 'Robusta 1Kg',
+    price: 59000,
+    avatar: '/assets/product_7.png',
+    isNew: true,
+    available: true,
+    isFavorite: false,
+    type: ['Bakery'],
+    description:
+      'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
+    images: [
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+    ],
+    attributes: [],
+  },
+  {
+    _id: '685ffd94709066373c1ab011',
+    name: 'Smoky burger',
+    price: 59000,
+    avatar: '/assets/product_6.png',
+    isNew: true,
+    available: true,
+    isFavorite: false,
+    type: ['Snacks', 'Burger'],
+    description:
+      'Dark, rich espresso lies in wait under a smoothed and stretched layer of thick milk foam. An alchemy of barista artistry and craft.',
+    images: [
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+      '/assets/detail_1.png',
+    ],
+    attributes: [],
+  },
+];

@@ -1,0 +1,8 @@
+<radio
+  tiki:if="{{checked}}"
+  checked="{{true}}"
+/>
+<radio
+  tiki:else="{{!checked}}"
+  disabled="{{true}}"
+/>

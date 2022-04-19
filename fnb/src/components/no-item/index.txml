@@ -1,0 +1,23 @@
+<view
+  class="bg-white no-item flex flex-col items-center px-medium py-medium border-box"
+  style="height: calc(100vh - {{top}}px);"
+>
+  <view>
+    <view class="img-container">
+      <image src="{{image[type]}}" />
+    </view>
+  </view>
+  <view class="text-medium font-bold text-gray100 mt-large mb-4x-small">
+    {{title[type]}}
+  </view>
+  <view class="font-regular mb-medium">
+    {{subTitle[type]}}
+  </view>
+  <button
+    tiki:if="{{showButton}}"
+    class="w-full bg-brand text-white font-regular"
+    onTap="onSelect"
+  >
+    {{btnContent[type]}}
+  </button>
+</view>

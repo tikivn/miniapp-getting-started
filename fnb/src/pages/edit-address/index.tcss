@@ -1,0 +1,9 @@
+.save-btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 32px);
+}
+.new-address-page .placeholder {
+  height: 88px;
+}

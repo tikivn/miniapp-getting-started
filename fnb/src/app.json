@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/home",
+    "pages/cart",
+    "pages/address",
+    "pages/profile",
+    "pages/delivery",
+    "pages/orders-list",
+    "pages/stores-list",
+    "pages/new-address",
+    "pages/store-detail",
+    "pages/order-detail",
+    "pages/edit-address",
+    "pages/store-search",
+    "pages/store-select",
+    "pages/web-view-page",
+    "pages/product-detail",
+    "pages/product-search",
+    "pages/reservations",
+    "pages/reservation-detail",
+    "pages/online-reservation",
+    "pages/reservation-review"
+  ],
+  "window": {
+    "titleBarBottomColor": "#fff"
+  },
+  "tabBar": {
+    "items": [
+      {
+        "name": "Home",
+        "icon": "assets/home.png",
+        "activeIcon": "assets/home_active.png",
+        "pagePath": "pages/home/index"
+      },
+      {
+        "name": "Store",
+        "icon": "assets/store.png",
+        "activeIcon": "assets/store_active.png",
+        "pagePath": "pages/stores-list/index"
+      },
+      {
+        "name": "Order",
+        "icon": "assets/order.png",
+        "activeIcon": "assets/order_active.png",
+        "pagePath": "pages/orders-list/index"
+      },
+      {
+        "name": "Profile",
+        "icon": "assets/account.png",
+        "activeIcon": "assets/account_active.png",
+        "pagePath": "pages/profile/index"
+      }
+    ]
+  }
+}

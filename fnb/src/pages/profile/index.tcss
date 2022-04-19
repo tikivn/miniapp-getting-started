@@ -1,0 +1,14 @@
+.point {
+  width: 100%;
+}
+.point .img-container {
+  width: 100%;
+  padding-top: 50%;
+}
+.footer {
+  /* position: fixed; */
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: #f7f7f7;
+}

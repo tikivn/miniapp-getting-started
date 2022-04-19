@@ -1,0 +1,11 @@
+.coupon-input {
+  padding-bottom: 48px;
+}
+.coupon-input .t-input-wrap {
+  padding-right: 70px;
+}
+.coupon-input .coupon-apply-btn {
+  top: calc(50% - 24px + 8px);
+  transform: translateY(-50%);
+  right: 32px;
+}

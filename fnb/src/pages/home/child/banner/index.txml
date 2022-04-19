@@ -1,0 +1,28 @@
+<template name="LOADING">
+  <carousel indicator-dots="{{true}}"
+            spacing="8">
+    <carousel-item tiki:for="{{banners}}">
+      <view class="img-container skeleton radius-8px">
+      </view>
+    </carousel-item>
+  </carousel>
+</template>
+
+<template name="SUCCESS">
+  <carousel indicator-dots="{{true}}"
+            circular="true"
+            spacing="8"
+            autoplay="{{true}}">
+    <carousel-item tiki:for="{{banners}}">
+      <view class="mt-2x-small img-container skeleton radius-8px"
+            onTap="onSelect">
+        <image src="{{item.image}}" />
+      </view>
+    </carousel-item>
+  </carousel>
+</template>
+
+<view class="banner">
+  <template is="{{status}}"
+            data="{{banners}}"></template>
+</view>

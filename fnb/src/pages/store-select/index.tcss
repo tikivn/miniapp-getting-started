@@ -1,0 +1,10 @@
+.store-select-page {
+  padding-top: 56px;
+}
+.store-select-page .search-box {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}

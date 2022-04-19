@@ -1,0 +1,64 @@
+<import-sjs from="../../../../helper/date.sjs"
+            name="{formatDateTime}"></import-sjs>
+<view tiki:if="{{!isLoading}}"
+      class="px-medium pt-medium">
+
+  <view class="bg-white radius-8px p-medium"
+        onTap="onSelect">
+    <view class="badge badge-{{reserve.status}} px-small py-4x-small max-w-min mb-medium radius-pill font-medium">
+      {{reserve.status}}
+    </view>
+    <view class="my-x-small">
+      <address-card weight="medium"
+                    status="SUCCESS"
+                    iconLeft="store_gray"
+                    title="{{reserve.store.name}}" />
+      <view class="divider my-2x-small" />
+      <address-card weight="medium"
+                    status="SUCCESS"
+                    iconLeft="user_gray"
+                    title="Table for {{reserve.numberOfAdults}}" />
+      <view class="divider my-2x-small" />
+      <address-card weight="medium"
+                    status="SUCCESS"
+                    iconLeft="clock_gray"
+                    title="{{formatDateTime(`${reserve.date}`, `${reserve.time}`)}}" />
+    </view>
+    <block tiki:if="{{reserve.status === 'reserved'}}">
+      <view class="flex justify-end">
+        <view catchTap="onCancel">
+          <tu-button size="medium"
+                     type="ghost">Cancel</tu-button>
+        </view>
+        <view catchTap="onPhoneCall">
+          <tu-button size="medium"
+                     type="outline"
+                     shape="pill">Contact support</tu-button>
+        </view>
+
+          <c-modal isShow="{{isShowModal}}"
+                   headerContent="Confirmation"
+                   description="Do you want to cancel this event?"
+                   leftButton="Yes"
+                   rightButton="No"
+                   onMaskClick="onMaskClick"
+                   onRightButtonClick="onCloseModal"
+                   onLeftButtonClick="onConfirmCancel" />
+      </view>
+    </block>
+  </view>
+</view>
+
+<view tiki:else
+      class="p-medium">
+  <block tiki:for="{{3}}">
+    <view class="bg-white mb-medium radius-8px ">
+      <view class="p-medium">
+        <view class="skeleton skeleton-font-large skeleton-20-width skeleton-button-shape-pill mb-medium" />
+        <view class="my-medium">
+          <address-card />
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

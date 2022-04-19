@@ -1,0 +1,46 @@
+.delivery-page {
+}
+.delivery-page .tag {
+  color: #808089;
+  width: 95px;
+}
+.delivery-page .tag.active {
+  background-color: white;
+  color: #1a94ff;
+}
+.delivery-page .products {
+  width: calc(100vw - 95px);
+}
+.delivery-page .products .img-container {
+  width: 68px;
+  padding-top: 100%;
+}
+.scroll {
+  height: calc(100vh - 73px);
+  background-color: white;
+}
+.scroll-store_pickup {
+  height: calc(100vh - 62px);
+}
+.scroll-delivery {
+  height: calc(100vh - 142px);
+}
+.scroll-delivery.with-cart {
+  height: calc(100vh - 142px - 74px);
+}
+.scroll-store_pickup.with-cart {
+  height: calc(100vh - 62px - 74px);
+}
+.holder-delivery {
+  height: 50vh;
+}
+.holder-store_pickup {
+  height: 50vh;
+}
+.holder-delivery.active,
+.holder-store_pickup.active {
+  height: 500vh;
+}
+.product-card {
+  height: 68px;
+}

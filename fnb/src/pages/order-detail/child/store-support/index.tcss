@@ -1,0 +1,13 @@
+.modal {
+  z-index: 100;
+}
+.modal .header-bg .img-container {
+  width: calc(100% + 32px);
+  padding-top: 33.333%;
+  margin: -16px -16px 0;
+  overflow: hidden;
+}
+.line {
+  border-width: 0;
+  border-top-width: 1px;
+}

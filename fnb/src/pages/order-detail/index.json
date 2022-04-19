@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "product-card": "pages/order-detail/child/product-card",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "address-card": "components/address-card",
+    "store-support": "child/store-support",
+    "c-icon": "components/c-icon"
+  }
+}

@@ -1,0 +1,7 @@
+.line {
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+.disable {
+  opacity: 0.5;
+}

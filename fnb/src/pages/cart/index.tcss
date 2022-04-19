@@ -1,0 +1,15 @@
+.cart-page {
+  padding-bottom: calc(96px + var(--safe-area-inset-bottom));
+}
+.cart-page .line {
+  border-width: 0;
+  border-bottom-width: 1px;
+}
+.cart-page .payment {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  margin-left: -16px;
+  width: 100%;
+  z-index: 2;
+}

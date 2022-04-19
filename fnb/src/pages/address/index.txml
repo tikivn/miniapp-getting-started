@@ -1,0 +1,52 @@
+<template name="LOADING">
+  <view class="address-page p-medium">
+    <view class="px-medium py-2x-small bg-white radius-8px">
+      <address-card />
+    </view>
+    <view class="skeleton skeleton-font-medium skeleton-70-width mt-medium mb-2x-small" />
+    <view tiki:for="{{[1, 2, 3, 4]}}"
+          class="mb-small px-medium py-2x-small bg-white radius-8px">
+      <address-card />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="address-page p-medium">
+    <view class="px-medium py-2x-small bg-white radius-8px">
+      <address-card iconLeft="map"
+                    iconRight="next"
+                    title="Address book"
+                    weight="medium"
+                    subTitle="Use your Tiki’s saved address"
+                    status="SUCCESS"
+                    onSelect="onOpenAddressBook" />
+    </view>
+    <view class="text-medium font-bold mt-medium mb-2x-small">
+      Saved places
+    </view>
+    <view tiki:for="{{addressList}}"
+          class="mb-small px-medium py-2x-small bg-white radius-8px">
+      <address-card id="{{item._id}}"
+                    iconRight="edit"
+                    status="SUCCESS"
+                    weight="medium"
+                    iconLeft="location_blue"
+                    onSelect="onSelectAddress"
+                    title="{{item.addressText}}"
+                    onIconRightSelect="onEditAddress"
+                    subTitle="{{`${item.name} • ${item.phone}`}}" />
+    </view>
+    <view onTap="onNewPlaceSelect"
+          class="px-medium py-2x-small bg-white radius-8px flex items-center border-box">
+      <image class="icon"
+             src="/assets/plus_icon.png" />
+      <view class="font-bold pl-2x-small">
+        New place
+      </view>
+    </view>
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{addressList: buyer.addressList}}" />

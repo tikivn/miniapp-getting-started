@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "address-card": "components/address-card",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
+}

@@ -1,0 +1,12 @@
+<view class="c-carousel">
+  <carousel onChange="onChange">
+    <carousel-item tiki:for="{{items}}">
+      <view class="img-container product-detail-img">
+        <image src="{{item}}" />
+      </view>
+    </carousel-item>
+  </carousel>
+  <view class="current-index">
+    {{current}}/{{items.length}}
+  </view>
+</view>

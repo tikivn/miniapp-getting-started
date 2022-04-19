@@ -1,0 +1,13 @@
+.order-methods {
+  box-sizing: border-box;
+  width: 100%;
+}
+.order-methods .line {
+  height: 48px;
+  margin: 0 12px;
+  border-width: 0 !important;
+  border-left-width: 1px !important;
+}
+.onl-reservation button {
+  font-size: 14px;
+}

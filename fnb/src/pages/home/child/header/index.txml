@@ -1,0 +1,29 @@
+<template name="DEFAULT">
+  <view class="c-header">
+    <view class="header flex items-center p-medium">
+      <view class="mr-small">
+        <view class="img-container">
+          <image src="/assets/logo.png" />
+        </view>
+      </view>
+      <view>
+        <view class="text-small font-regular text-gray80">Welcome to</view>
+        <view class="font-bold text-gray100">Sample Restaurant</view>
+      </view>
+    </view>
+  </view>
+  <view class="top">
+  </view>
+</template>
+
+<template name="SCROLLED">
+  <view class="c-header">
+    <view class="header-scrolled flex items-center px-medium">
+      <view class="font-bold text-large text-gray100">Sample Restaurant</view>
+    </view>
+  </view>
+  <view class="top-scrolled">
+  </view>
+</template>
+
+<template is="{{type}}" />

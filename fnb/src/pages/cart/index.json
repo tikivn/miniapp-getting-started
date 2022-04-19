@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "c-modal": "components/c-modal",
+    "cart-action": "child/cart-action",
+    "time-select": "child/time-select",
+    "product-card": "child/product-card",
+    "coupon-input": "child/coupon-input",
+    "address-card": "components/address-card",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
+}

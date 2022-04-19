@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "buyer-address-card": "child/buyer-address-card",
+    "store-address-card": "child/store-address-card",
+    "product-card": "components/product-card",
+    "c-icon": "components/c-icon",
+    "sticky-bottom": "components/sticky-bottom",
+    "backtop-button": "child/backtop-button"
+  }
+}

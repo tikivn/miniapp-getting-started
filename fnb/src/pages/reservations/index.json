@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "My reservations",
+  "usingComponents": {
+    "reserve-button": "child/reserve-button",
+    "reserve-card": "child/reserve-card"
+  }
+}
+

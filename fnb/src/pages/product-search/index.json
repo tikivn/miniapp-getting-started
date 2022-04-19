@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "c-icon": "components/c-icon",
+    "no-item": "components/no-item",
+    "product-card": "components/product-card",
+    "address-card": "components/address-card",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index",
+    "search-bar": "@tiki.vn/tini-ui/es/search-bar/index"
+  }
+}

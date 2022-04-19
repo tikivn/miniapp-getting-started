@@ -1,0 +1,36 @@
+<template name="LOADING">
+  <view class="store-select-page">
+    <stores-list />
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="store-select-page">
+    <view class="px-medium pb-medium bg-white search-box border-box">
+      <view
+        onTap="onInputFocus"
+        class="border border-solid border-gray40 border-box flex items-center p-2x-small radius-4px"
+        style="padding: 6px;"
+      >
+        <c-icon
+          type="search"
+          size="{{24}}"
+          color="gray60"
+        />
+        <view class="text-gray60 ml-2x-small">
+          Search store
+        </view>
+      </view>
+    </view>
+    <stores-list
+      status="{{status}}"
+      stores="{{stores.data}}"
+      onSelect="onStoreSelect"
+    />
+  </view>
+</template>
+
+<template
+  is="{{status}}"
+  data="{{status, stores}}"
+/>

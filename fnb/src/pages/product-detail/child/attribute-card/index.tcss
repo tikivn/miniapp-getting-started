@@ -1,0 +1,4 @@
+.attr-card .img-container {
+  width: 40px;
+  padding-top: 100%;
+}

@@ -1,0 +1,9 @@
+.time-select button {
+  height: 40px;
+}
+.time-select .footer {
+  border-width: 0;
+  border-top-width: 1px;
+  border-style: solid;
+  padding-bottom: calc(8px + var(--safe-area-inset-bottom));
+}

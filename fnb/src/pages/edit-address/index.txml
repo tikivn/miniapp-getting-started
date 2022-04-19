@@ -1,0 +1,79 @@
+<template name="LOADING">
+  <view class="p-medium">
+    <view class="p-medium bg-white radius-8px">
+      <view class="skeleton skeleton-font-small w-50" />
+      <view class="skeleton h-input mt-x-small" />
+      <view class="skeleton skeleton-font-small w-50 mt-x-small" />
+      <view class="skeleton h-input mt-x-small" />
+      <view class="skeleton skeleton-font-small w-50 mt-x-small" />
+      <view class="skeleton h-input mt-x-small" />
+      <view class="skeleton skeleton-font-small w-50 mt-x-small" />
+      <view class="skeleton h-input mt-x-small" />
+      <view class="skeleton skeleton-font-small w-50 mt-x-small" />
+      <view class="skeleton h-input mt-x-small" />
+      <view class="skeleton skeleton-font-small w-50 mt-x-small" />
+      <view class="skeleton h-input mt-x-small" />
+      <view class="skeleton skeleton-font-large mt-x-small" />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="new-address-page px-medium pt-medium border-box">
+    <view class="p-medium mb-medium bg-white radius-8px">
+      <address onChangeAddress="onAddressChange"
+               cityLabel="City"
+               wardLabel="Ward"
+               showName="{{true}}"
+               showPhone="{{true}}"
+               street="{{addressInfo.address.street}}"
+               city="{{addressInfo.address.city}}"
+               district="{{addressInfo.address.district}}"
+               ward="{{addressInfo.address.ward}}"
+               full_name="{{addressInfo.name}}"
+               phone_number="{{addressInfo.phone}}"
+               streetLabel="Address"
+               districtLabel="District"
+               nameLabel="Recipient’s name"
+               phoneLabel="Recipient’s phone"
+               cityPlaceholder="Select city"
+               wardPlaceholder="Select ward"
+               namePlaceholder="E.g Nguyen Van A"
+               districtPlaceholder="Select district"
+               phonePlaceholder="10-digit phone number"
+               streetPlaceholder="Lot number, street name"
+               cityErrorMsg="{{errMsg.city}}"
+               districtErrorMsg="{{errMsg.district}}"
+               wardErrorMsg="{{errMsg.ward}}"
+               streetErrorMsg="{{errMsg.street}}"
+               phoneErrorMsg="{{errMsg.phone}}"
+               nameErrorMsg="{{errMsg.name}}" />
+      <view class="flex items-center"
+            onTap="onToggleCheckBox">
+        <c-checkbox checked="{{willSaveToAddressBook}}" />
+        <view class="ml-x-small">Save to Tiki’s address book</view>
+      </view>
+    </view>
+    <view class="save-btn px-medium bg-white py-2x-small">
+      <view class="android-padding-bottom">
+        <button class=" w-full font-medium font-regular radius-8px"
+                onTap="onSave"
+                shape="pill">
+          Save
+        </button>
+      </view>
+    </view>
+    <view class="placeholder">
+    </view>
+  </view>
+  <c-modal isShow="{{isShowModal}}"
+           headerContent="Confirmation"
+           description="Do you want to remove this address?"
+           leftButton="Yes"
+           rightButton="No"
+           onRightButtonClick="onCloseModal"
+           onLeftButtonClick="onConfirmDelete" />
+</template>
+
+<template is="SUCCESS"
+          data="{{addressInfo, errMsg, isShowModal, willSaveToAddressBook}}" />

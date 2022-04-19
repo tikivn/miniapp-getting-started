@@ -1,0 +1,24 @@
+.address-card .img-container {
+  width: 24px;
+  padding-top: 100%;
+}
+.address-card .content-wrapper {
+  width: calc(100% - 34px);
+}
+.address-card .content {
+  width: calc(100% - 30px);
+}
+.address-card .content.full {
+  width: 100%;
+}
+.store-select .line {
+  height: 20px;
+  border-width: 0;
+  border-right-width: 1px;
+}
+.store-select .current-store {
+  height: 40px;
+}
+.store-select .content {
+  width: calc(100% - 60px);
+}

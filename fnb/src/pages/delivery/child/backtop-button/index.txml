@@ -1,0 +1,6 @@
+<view onTap="_backToTop"
+      class="back-top-btn size-40 flex justify-center items-center {{cart.total ? 'large-padding-bottom' : ''}}">
+  <c-icon type="arrow_up"
+          size="20"
+          color="gray60" />
+</view>

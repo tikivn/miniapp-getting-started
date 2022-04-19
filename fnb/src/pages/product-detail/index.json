@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "order-msg": "child/order-msg",
+    "c-navbar": "components/c-navbar",
+    "add-to-cart": "child/add-to-cart",
+    "up-down-number": "up-down-number",
+    "attributes-list": "child/attributes-list",
+    "attribute-select": "child/attribute-select",
+    "product-main-info": "child/product-main-info",
+    "sticky-bottom": "components/sticky-bottom"
+  },
+  "transparentTitle": "auto"
+}

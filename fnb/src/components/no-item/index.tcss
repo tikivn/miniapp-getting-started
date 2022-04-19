@@ -1,0 +1,9 @@
+.no-item button {
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 20px;
+}
+.no-item .img-container {
+  width: 180px;
+  padding-top: 100%;
+}

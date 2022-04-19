@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "modal": "@tiki.vn/tini-ui/es/modal/index"
+  }
+}

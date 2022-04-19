@@ -1,0 +1,26 @@
+<view class="date-select">
+  <block tiki:if="{{isShow}}">
+    <bottom-sheet title="Select a date"
+                  onClose="onClose">
+      <view>
+        <calendar showOnlyInMonth="{{true}}"
+                  disabledPastDays="{{true}}"
+                  onSelect="onDateSelect"
+                  locale="en"
+                  mode="single"
+                  header="month" />
+      </view>
+      <view slot="footer"
+            class="py-2x-small px-medium footer border-gray20">
+        <view class="android-padding-bottom">
+          <button onTap="onConfirm"
+                  class="w-full"
+                  type="ouline"
+                  shape="pill">
+            Confirm
+          </button>
+        </view>
+      </view>
+    </bottom-sheet>
+  </block>
+</view>

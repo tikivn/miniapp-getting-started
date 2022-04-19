@@ -1,0 +1,25 @@
+<view class="time-select">
+  <block tiki:if="{{isShow}}">
+    <bottom-sheet title="Pickup time"
+                  onClose="onClose">
+      <picker-view value="{{value}}"
+                   onChange="onTimeChange">
+        <picker-view-column>
+          <view tiki:for="{{date}}">{{item.content}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view tiki:for="{{time}}">{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+      <view slot="footer"
+            class="w-full px-medium py-2x-small border-box footer border-gray20 mt-small">
+        <button shape="pill"
+                onTap="onTimeSelect"
+                class="w-full"
+                size="medium">
+          Apply
+        </button>
+      </view>
+    </bottom-sheet>
+  </block>
+</view>

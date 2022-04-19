@@ -1,0 +1,186 @@
+<import-sjs from="../../helper/index.sjs"
+            name="{priceFormat}" />
+
+<template name="LOADING">
+  <view class="order-detail pb-medium">
+    <view class="header-bg">
+      <view class="img-container skeleton" />
+    </view>
+    <view class="order-info px-medium border-box">
+      <view class="p-medium bg-white radius-8px flex items-center justify-between">
+        <view class="skeleton skeleton-font-small skeleton-25-width" />
+        <view class="skeleton skeleton-font-large skeleton-50-width" />
+      </view>
+      <view class="mt-medium mb-2x-small skeleton skeleton-font-regular w-50" />
+      <view class="px-medium py-large bg-white radius-8px">
+        <view class="w-full flex justify-between">
+          <view class="skeleton skeleton-font-small w-25" />
+          <view class="skeleton skeleton-font-small w-50" />
+        </view>
+        <view class="line border-gray20 border-solid my-2x-small" />
+        <view class="w-full flex justify-between">
+          <view class="skeleton skeleton-font-small w-25" />
+          <view class="skeleton skeleton-font-small w-50" />
+        </view>
+      </view>
+      <view class="mt-medium mb-2x-small skeleton skeleton-font-regular w-50" />
+      <view class="px-medium py-large bg-white radius-8px">
+        <address-card />
+        <view class="line border-gray20 border-solid my-2x-small" />
+        <address-card />
+      </view>
+      <view class="mt-medium mb-2x-small skeleton skeleton-font-regular w-50" />
+      <view class="bg-white p-medium radius-8px">
+        <product-card showLine="{{index < 1}}"
+                      tiki:for="{{[1, 2]}}" />
+      </view>
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="order-detail pb-medium">
+    <view class="header-bg">
+      <view class="img-container">
+        <image src="{{bgList[order.orderMethod][order.status]}}" />
+      </view>
+    </view>
+    <view class="order-info px-medium border-box">
+      <view class="p-medium bg-white radius-8px ">
+        <view class="status-note flex items-center justify-between">
+          <view class="status font-bold">
+            {{statusTitle[order.status]}}
+          </view>
+          <button size="small"
+                  shape="pill"
+                  onTap="onShowModal">
+            Contact support
+          </button>
+        </view>
+        <view tiki:if="{{order.status === 'READY' || order.status === 'COMPLETED'}}"
+              class="order-note border border-solid border-gray20 radius-8px p-2x-small flex mt-medium">
+          <c-icon type="warning"
+                  size="20"
+                  color="gray60" />
+          <view class="ml-x-small">
+            Order will be automatically completed <text class="font-bold">
+              {{' '}}X hours {{' '}}</text> after your pick up
+            time. The store won’t be responsible for your order after that time.
+          </view>
+        </view>
+      </view>
+      <view class="mt-medium mb-2x-small font-bold">
+        General info
+      </view>
+      <view class="px-medium py-large bg-white radius-8px">
+        <view class="w-full flex justify-between">
+          <view>
+            <view>Order ID</view>
+            <view class="text-small text-gray60"
+                  tiki:if="{{order.orderMethod === 'STORE_PICKUP'}}">
+              For picking up at store
+            </view>
+          </view>
+          <view class="font-bold">{{order._id}}</view>
+        </view>
+        <view class="line border-gray20 border-solid my-2x-small" />
+        <view class="w-full flex justify-between">
+          <view>Order date</view>
+          <view class="font-bold">{{order.date}}, {{order.time}}</view>
+        </view>
+      </view>
+      <view class="mt-medium mb-2x-small font-bold">
+        Shipping detail
+      </view>
+      <view class="px-medium py-large bg-white radius-8px">
+        <address-card title="{{order.orderMethod === 'DELIVERY' ? 'From store' : 'Pick up location'}}"
+                      address="{{order.store.address}}"
+                      iconLeft="{{ order.orderMethod === 'DELIVERY' ?'store' : 'location_blue'}}"
+                      status="SUCCESS" />
+        <view class="line border-gray20 border-solid my-2x-small" />
+        <address-card tiki:if="{{order.orderMethod === 'DELIVERY'}}"
+                      title="To"
+                      address="{{order.buyer.address}}"
+                      subTitle="{{order.buyer.name}} • {{order.buyer.phone}}"
+                      status="{{status}}"
+                      iconLeft="location" />
+        <address-card tiki:if="{{order.orderMethod === 'STORE_PICKUP'}}"
+                      title="Pick up time"
+                      address="{{order.pickupInfo.time.hour}}:{{order.pickupInfo.time.min}}, {{order.pickupInfo.date}}"
+                      status="{{status}}"
+                      iconLeft="clock" />
+      </view>
+      <view class="mt-medium mb-2x-small font-bold">
+        Product info
+      </view>
+      <view class="bg-white p-medium radius-8px">
+        <product-card showLine="{{index < order.products.length -1}}"
+                      tiki:for="{{order.products}}"
+                      product="{{item}}"
+                      status="SUCCESS" />
+      </view>
+      <view class="mt-medium mb-2x-small font-bold">
+        Payment info
+      </view>
+      <view class="flex items-center payment bg-white p-medium radius-8px">
+        <view class="mr-2x-small">
+          <view class="img-container">
+            <image src="{{order.paymentMethod.image}}" />
+          </view>
+        </view>
+        <view>
+          <view>
+            Payment method
+          </view>
+          <view class="font-bold">
+            {{order.paymentMethod.name}}
+          </view>
+        </view>
+      </view>
+      <view class="bg-white radius-8px p-medium mt-2x-small">
+        <view class="flex justify-between">
+          <view>
+            Price
+          </view>
+          <view class="font-bold">
+            {{priceFormat(order.price)}}
+          </view>
+        </view>
+        <view class="flex justify-between mt-medium">
+          <view class="flex items-center">
+            <view class="mr-4x-small">Shipping fee</view>
+            <c-icon type="warning"
+                    size="{{14}}"
+                    color="gray60" />
+          </view>
+          <view class="font-bold">
+            {{priceFormat(order.shippingFee)}}
+          </view>
+        </view>
+        <view tiki:if="{{order.promotion}}"
+              class="flex justify-between mt-medium">
+          <view>
+            Promotion
+          </view>
+          <view class="font-bold text-green">
+            - {{priceFormat(order.promotion)}}
+          </view>
+        </view>
+        <view class="flex justify-between mt-medium">
+          <view>
+            Total
+          </view>
+          <view class="font-bold">
+            {{priceFormat(order.total)}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <store-support store="{{order.store}}"
+                 isShow="{{isShowModal}}"
+                 onClose="onHideModal" />
+</template>
+
+<template is="{{status}}"
+          data="{{bgList, order: info.data, status, statusTitle, isShowModal}}" />

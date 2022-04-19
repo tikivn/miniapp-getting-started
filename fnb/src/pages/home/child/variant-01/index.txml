@@ -1,0 +1,12 @@
+<view>
+  <header type="{{headerType}}" />
+  <banner status="{{status}}"
+          banners="{{banners}}" />
+  <view class="mt-large px-medium">
+    <order-methods status="{{status}}" />
+  </view>
+  <view class="font-bold ml-medium text-medium mt-large">Promotion campaign
+  </view>
+  <campaigns-list status="{{status}}"
+                  campaigns="{{campaigns}}" />
+</view>

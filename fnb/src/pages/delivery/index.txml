@@ -1,0 +1,102 @@
+<import-sjs from="../../helper/index.sjs"
+            name="{priceFormat}" />
+
+<template name="PRODUCTS_LOADING">
+  <view class="my-small mx-medium skeleton skeleton-font-small" />
+  <view tiki:for="{{[1, 2, 3, 4, 5]}}"
+        class="flex items-center px-medium pb-medium">
+    <view class="mr-medium">
+      <view class="img-container skeleton" />
+    </view>
+    <view class="w-full">
+      <view class="mb-4x-small skeleton skeleton-font-small skeleton-50-width" />
+      <view class="skeleton skeleton-font-regular" />
+    </view>
+  </view>
+</template>
+
+<template name="PRODUCTS">
+  <view class="py-small px-medium font-medium"
+        id="{{`${item._id}`}}">
+    {{name}}
+  </view>
+  <view class="px-medium"
+        tiki:for="{{products}}">
+    <product-card product="{{item}}"
+                  onSelect="onProductClick" />
+  </view>
+</template>
+
+<template name="LOADING">
+  <view class="delivery-page">
+    <view class="flex p-medium bg-white border-box">
+      <view>
+        <view style="width: 40px; height:40px"
+              class="img-container skeleton" />
+      </view>
+      <view class="w-full pl-medium">
+        <view class="skeleton skeleton-font-regular skeleton-50-width" />
+        <view class="skeleton skeleton-font-small mt-2x-small" />
+      </view>
+    </view>
+    <view class="flex">
+      <scroll-view class="categories"
+                   class="border-box">
+        <view class="border-box">
+          <view tiki:for="{{[1, 2, 3, 4, 5, 6]}}"
+                class="tag px-medium border-box">
+            <view class="skeleton skeleton-font-small mt-x-large" />
+          </view>
+        </view>
+      </scroll-view>
+      <scroll-view class="scroll"
+                   scroll-y="{{true}}">
+        <view class="products bg-white"
+              tiki:for="{{[1, 2]}}">
+          <template is="PRODUCTS_LOADING" />
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="delivery-page">
+    <buyer-address-card tiki:if="{{orderMethod === 'DELIVERY'}}"
+                        buyer="{{buyer.defaultAddress}}"
+                        store="{{store}}" />
+    <store-address-card tiki:if="{{orderMethod === 'STORE_PICKUP'}}"
+                        address="{{store.address}}" />
+    <view class="flex main-view">
+      <scroll-view class="categories scroll-{{orderMethod.toLowerCase()}} {{cart.total ? 'with-cart' : ''}}"
+                   scroll-y="{{true}}">
+        <view onTap="onTagClick"
+              name="{{item.name}}"
+              id="{{`_${item._id}`}}"
+              tiki:for="{{categories}}"
+              class="py-small px-medium tag border-box truncate
+          {{item._id === currentTag ? ' active' : ''}}
+          {{index === 0 && currentTag === '' ? ' active' : ''}}">{{item.name}}</view>
+      </scroll-view>
+      <scroll-view class="scroll-{{orderMethod.toLowerCase()}} {{cart.total ? 'with-cart' : ''}}"
+                   id="scroll_right"
+                   scroll-y="{{true}}"
+                   scroll-top="{{currentPos}}"
+                   scroll-with-animation="{{true}}">
+        <view class="products bg-white"
+              tiki:for="{{categories}}"
+              id="__{{item._id}}">
+          <template is="PRODUCTS"
+                    data="{{...item}}" />
+        </view>
+        <view class="{{holderStatus}} holder-{{orderMethod.toLowerCase()}} bg-white w-full " />
+      </scroll-view>
+    </view>
+  </view>
+  <backtop-button tiki:if="{{status === 'SUCCESS'}}"
+                  onBackToTop="backToTop" />
+  <sticky-bottom />
+</template>
+
+<template is="{{status}}"
+          data="{{status, cart, categories, currentPos, orderMethod, currentTag, buyer, store, holderStatus}}" />

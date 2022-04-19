@@ -1,0 +1,18 @@
+<view>
+  <header type="{{headerType}}" />
+  <view class="point px-medium">
+    <view class="point">
+      <view class="mt-2x-small img-container skeleton radius-8px"
+            onTap="onSelect">
+        <image src="/assets/point.png" />
+      </view>
+    </view>
+  </view>
+  <view class="mt-medium px-medium">
+    <order-methods status="{{status}}" />
+  </view>
+  <view class="font-bold ml-medium text-medium mt-large">Promotion campaign
+  </view>
+  <campaigns-list status="{{status}}"
+                  campaigns="{{campaigns}}" />
+</view>

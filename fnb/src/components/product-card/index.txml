@@ -1,0 +1,41 @@
+<import-sjs from="../../helper/index.sjs"
+            name="{priceFormat}" />
+
+<template name="LOADING">
+  <view class="flex items-center pb-medium product-card"
+        onTap="onSelect">
+    <view class="mr-medium">
+      <view class="img-container skeleton" />
+    </view>
+    <view class="w-full">
+      <view class="mb-x-small skeleton skeleton-font-medium w-50" />
+      <view class="skeleton skeleton-font-regular" />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="flex pb-medium product-card"
+        onTap="onSelect">
+    <view class="mr-medium">
+      <view class="img-container">
+        <image src="{{product.avatar}}" />
+      </view>
+    </view>
+    <view>
+      <view class="text-{{product.available ? 'gray100' : 'disabled'}} mb-4x-small">
+        {{product.name}}
+      </view>
+      <view class="text-{{product.available ? 'gray100' : 'disabled'}} font-bold">
+        {{priceFormat(product.price)}}
+      </view>
+      <view tiki:if="{{!product.available}}"
+            class="text-x-small mt-4x-small">
+        Not available at this store
+      </view>
+    </view>
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{product}}" />

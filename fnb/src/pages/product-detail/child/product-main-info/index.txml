@@ -1,0 +1,26 @@
+<import-sjs from="../../../../helper/index.sjs"
+            name="{priceFormat}"></import-sjs>
+
+<view class="bg-white radius-8px border-box w-full">
+  <detail-carousel items="{{info.images}}" />
+  <view class="px-medium pt-small pb-medium">
+    <view class="flex justify-between items-center">
+      <view>
+        <view class="text-medium font-regular text-gray100">
+          {{info.name}}
+        </view>
+        <view class="text-base font-bold text-gray100">
+          {{priceFormat(info.price)}}
+        </view>
+      </view>
+      <view class="like-btn"
+            onTap="onToggleFavorite">
+        <image class=""
+               src="{{info.isFavorite ? '/assets/heart_icon.png' : '/assets/heart.png'}}" />
+      </view>
+    </view>
+    <view class="text-small font-regular text-gray60 mt-2x-small">
+      {{info.description}}
+    </view>
+  </view>
+</view>

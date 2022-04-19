@@ -1,0 +1,9 @@
+.header-bg .img-container {
+  width: calc(100% + 32px);
+  margin: -16px -16px 0;
+  padding-top: 33.33%;
+  overflow: hidden;
+}
+.tu-modal-footer::before {
+  background-color: transparent !important;
+}

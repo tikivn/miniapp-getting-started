@@ -1,0 +1,52 @@
+<modal
+  class="modal"
+  show="{{isShow}}"
+  mask="{{true}}"
+  zIndex="{{10}}"
+>
+  <view slot="header">
+    <view class="mb-medium header-bg">
+      <view class="img-container radius-tl-8px radius-tr-8px skeleton">
+        <image
+          src="https://i.ibb.co/Ldv273n/store-info.png"
+          mode="aspectFill"
+        />
+      </view>
+    </view>
+    <view class="text-center text-large font-bold">
+      {{store.name}}
+    </view>
+    <view class="font-regular text-center my-medium">
+      Store contact informations
+    </view>
+  </view>
+  <view style="text-align: left;">
+    <address-card
+      status="SUCCESS"
+      iconLeft="phone"
+      title="Phone number"
+      onSelect="onPhoneCall"
+      address="{{store.phone}}"
+    />
+    <view class="line border border-gray20 border-solid my-2x-small" />
+    <address-card
+      status="SUCCESS"
+      iconLeft="location_blue"
+      title="Address"
+      address="{{store.address}}"
+    />
+  </view>
+  <view slot="footer">
+    <view class="modal-buttons flex w-full px-medium mt-2x-small border-box">
+      <button
+        shape="pill"
+        class="w-full mx-4x-small"
+        size="large"
+        onTap="onClose"
+        type="outline"
+      >
+        Close
+      </button>
+    </view>
+  </view>
+</modal>

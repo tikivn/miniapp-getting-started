@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "order-card": "child/order-card",
+    "no-item": "components/no-item"
+  }
+}

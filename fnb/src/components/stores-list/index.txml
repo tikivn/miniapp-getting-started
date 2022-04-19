@@ -1,0 +1,47 @@
+<template name="LOADING">
+  <view class="p-medium">
+    <view class="p-medium bg-white mb-small radius-8px">
+      <address-card />
+    </view>
+    <view class="skeleton skeleton-font-medium skeleton-70-width mb-small" />
+    <view tiki:for="{{[1, 2, 3, 4, 5, 6]}}"
+          class="p-medium bg-white mb-small radius-8px">
+      <address-card />
+    </view>
+  </view>
+</template>
+
+<template name="SUCCESS">
+  <view class="stores-list p-medium">
+    <view tiki:if="{{favorite.length > 0}}"
+          class="text-medium font-bold mb-2x-small">
+      Favorite stores
+    </view>
+    <view tiki:for="{{favorite}}"
+          class="p-medium bg-white mb-small radius-8px">
+      <address-card id="{{item._id}}"
+                    status="SUCCESS"
+                    onSelect="onSelect"
+                    iconLeft="{{item.favorite ? 'store_favorite' : ''}}"
+                    title="{{item.name}}"
+                    subTitle="{{item.address}}" />
+    </view>
+    <view tiki:if="{{favorite.length > 0 && other.length > 0}}"
+          class="text-medium font-bold mb-2x-small">
+      Other stores
+    </view>
+    <view tiki:for="{{other}}"
+          class="p-medium bg-white mb-small radius-8px">
+      <address-card id="{{item._id}}"
+                    status="SUCCESS"
+                    onSelect="onSelect"
+                    iconLeft="store_gray"
+                    title="{{item.name}}"
+                    subTitle="{{item.address}}"
+                    iconRight="{{item.favorite ? 'heart' : ''}}" />
+    </view>
+  </view>
+</template>
+
+<template is="{{status}}"
+          data="{{favorite, other}}" />

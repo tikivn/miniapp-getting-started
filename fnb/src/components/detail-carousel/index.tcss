@@ -1,0 +1,19 @@
+.c-carousel {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.c-carousel .current-index {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 16px;
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+}
+.c-carousel .img-container {
+  width: 100%;
+  padding-top: 100%;
+}

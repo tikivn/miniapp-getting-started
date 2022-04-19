@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents":{
+    "address-card": "components/address-card"
+  }
+}

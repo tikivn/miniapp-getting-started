@@ -1,0 +1,14 @@
+.product-card {
+  width: 100%;
+}
+.product-card .img-container {
+  width: 100%;
+  padding-top: 100%;
+}
+.product-card .title {
+  font-size: 14px;
+  line-height: 21px;
+}
+.product-card .sub-title {
+  line-height: 15px;
+}

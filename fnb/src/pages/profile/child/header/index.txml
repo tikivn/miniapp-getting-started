@@ -1,0 +1,29 @@
+<template name="DEFAULT">
+  <view class="header">
+    <view class="bg-header">
+      <view class="img-container">
+        <image src="/assets/profile_header.png" />
+      </view>
+    </view>
+    <view class="flex flex-col items-center">
+      <view class="avatar">
+        <view class="img-container">
+          <image src="/assets/avatar.png" />
+        </view>
+      </view>
+      <view class="font-bold text-large mt-2x-small">User name</view>
+    </view>
+  </view>
+  <view class="top">
+  </view>
+</template>
+
+<template name="SCROLLED">
+  <view class="header header-scrolled flex items-center p-medium">
+    <view class="font-bold text-large">User name</view>
+  </view>
+  <view class="top-scrolled">
+  </view>
+</template>
+
+<template is="{{type}}" />

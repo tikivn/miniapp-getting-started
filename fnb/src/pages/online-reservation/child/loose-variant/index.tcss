@@ -1,0 +1,11 @@
+.people-select {
+  padding: 5px 0;
+  min-width: 65px;
+  text-align: center;
+  vertical-align: middle;
+}
+.people-select.active {
+  color: #1a94ff;
+  border-color: #1a94ff;
+  font-weight: bold;
+}

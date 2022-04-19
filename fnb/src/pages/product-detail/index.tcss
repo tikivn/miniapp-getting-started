@@ -1,0 +1,4 @@
+.product-detail-page .t-textarea {
+  width: 100%;
+  box-sizing: border-box;
+}

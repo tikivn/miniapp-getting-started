@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "componentLifeCycleV2": "YES",
+  "usingComponents": {
+    "detail-carousel": "components/detail-carousel"
+  }
+}

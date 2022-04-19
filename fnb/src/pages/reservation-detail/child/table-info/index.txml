@@ -1,0 +1,12 @@
+<import-sjs from="../../../../helper/date.sjs" name="{formatDateTime}"></import-sjs>
+
+<view class="pt-medium mb-small">
+  <text class="font-bold text-medium">Table info</text>
+</view>
+<view class="flex flex-col bg-white radius-8px mt-x-small p-medium">
+  <address-card weight="medium" status="SUCCESS" iconLeft="store_gray" title="{{info.store.name}}" />
+  <view class="divider my-2x-small" />
+  <address-card weight="medium" status="SUCCESS" iconLeft="user_gray" title="Table for {{info.numberOfAdults}}" />
+  <view class="divider my-2x-small" />
+  <address-card weight="medium" status="SUCCESS" iconLeft="clock_gray" title="{{formatDateTime(info.date, info.time)}}" />
+</view>

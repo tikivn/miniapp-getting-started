@@ -1,0 +1,16 @@
+<view class="c-navbar px-medium border-box bg-{{bgColor}} flex items-center">
+  <view>
+    <view class="btn-container"
+          catchTap="_onSelect">
+      <c-icon type="arrow_left"
+              color="{{btnColor}}"
+              size="{{24}}" />
+    </view>
+  </view>
+  <view class="ml-medium text-{{titleColor}} font-bold text-large"
+        tiki:if="{{title}}">
+    {{title}}
+  </view>
+</view>
+<view tiki:if="{{isUseHolder}}"
+      class="c-navbar-holder" />

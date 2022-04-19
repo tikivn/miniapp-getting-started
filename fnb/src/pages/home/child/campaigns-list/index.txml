@@ -1,0 +1,7 @@
+<view class="products-list w-screen flex px-2x-small mb-small border-box">
+  <campaign-card
+    tiki:for="{{campaigns}}"
+    campaign="{{item}}"
+    status="{{status}}"
+  />
+</view>
