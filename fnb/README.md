@@ -4,7 +4,7 @@
   <p align="center">
     Template F&B hỗ trợ người dùng có thể setup F&B mini app một cách nhanh chóng và thuận tiện trên Tini app
     <br />
-    <a href="https://github.com/tikivn/tiniapp-fnb-template"><strong>Xem thêm tại »</strong></a>
+    <a href="https://github.com/tikivn/miniapp-getting-started/fnb"><strong>Xem thêm tại »</strong></a>
     <br />
     <br />
   </p>
