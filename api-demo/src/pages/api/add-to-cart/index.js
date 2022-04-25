@@ -25,18 +25,16 @@ Page({
   productIdChange(e) {
     this.setData({
       productId: e.detail.value,
+      quantity: 1,
     });
   },
   onAddToCart() {
     my.addToCart({
       products: {
-        productId: '123',
+        productId: this.data.productId,
         quantity: 1,
       },
       success: (res) => {
-        this.setData({
-          quantity: this.data.quantity + 1,
-        });
         my.addIconsToNavigationBar({
           icons: [
             {

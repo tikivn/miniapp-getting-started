@@ -2,8 +2,6 @@ const FirstPage = 'pages/component/index';
 
 App({
   currentPage: FirstPage,
-  onLaunch() {},
-  onShow() {},
   onError(e) {
     console.log(e);
   },

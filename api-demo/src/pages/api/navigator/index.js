@@ -44,6 +44,18 @@ Page({
     my.reLaunch({ url: 'pages/api/confirm/index' });
   },
 
+  reLaunchMiniApp() {
+    my.reLaunchMiniApp({
+      appId: 'com.tini.appstore',
+      extraData: {
+        from: 'Open from MiniApp Demo',
+      },
+      fail: (e) => {
+        my.alert({ content: JSON.stringify(e) });
+      },
+    });
+  },
+
   exitMiniApp() {
     my.exitMiniApp({
       success: () => {},

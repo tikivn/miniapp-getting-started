@@ -31,6 +31,9 @@
       <button style="width: 100%;" onTap="disableHardwareBack">
         disableHardwareBack
       </button>
+      <button style="width: 100%;" onTap="reLaunchMiniApp">
+        my.reLaunchMiniApp
+      </button>
     </view>
   </view>
 
