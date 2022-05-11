@@ -304,6 +304,10 @@ const advancedComponents = [
         name: 'Pagination',
         path: '/pages/component/advance/navigation/pagination/index',
       },
+      {
+        name: 'Navigator',
+        path: '/pages/component/basic/navigator/index',
+      },
     ],
   },
   {
