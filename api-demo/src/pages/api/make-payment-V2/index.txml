@@ -1,0 +1,13 @@
+<view>
+  <block-header title="Usage" description="make payment v2" />
+  <view class="block-content">
+    <input class="form-value" placeholder="Order Id" name="orderId" onInput="orderIdChange"></input>
+  </view>
+  <view class="block-content">
+    <view class="component-item">
+      <button style="width: 100%;" onTap="makePaymentV2">
+        Make payment V2
+      </button>
+    </view>
+  </view>
+</view>

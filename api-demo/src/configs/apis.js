@@ -229,6 +229,10 @@ const tikiAPIList = [
     name: 'Get Cart',
     path: 'pages/api/get-cart/index',
   },
+  {
+    name: 'Make Payment V2',
+    path: 'pages/api/make-payment-V2/index',
+  },
 ];
 
 const scanAPIList = [
