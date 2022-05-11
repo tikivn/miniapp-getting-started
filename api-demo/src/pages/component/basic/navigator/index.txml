@@ -1,0 +1,39 @@
+<view class="page">
+  <block-header title="Usage" description="Navigator is component which support navigating directly in txml. Does not support the onTap event." />
+
+  <block-variant header="Demo">
+    <view class="list-item">
+      <view class="line" />
+      <view class="list-item-label">
+        <navigator open-type="navigate" url="pages/component/advance/modal/index">
+          Navigate to modal page
+        </navigator>
+      </view>
+      <view class="list-item-label">
+        <navigator open-type="redirect" url="pages/component/advance/modal/index">
+          Redirect to modal page
+        </navigator>
+      </view>
+      <view class="list-item-label">
+        <navigator open-type="switchTab" url="pages/api/index">
+          Switch to js api tab
+        </navigator>
+      </view>
+      <view class="list-item-label">
+        <navigator open-type="navigateBack">
+          Navigate back
+        </navigator>
+      </view>
+      <view class="list-item-label">
+        <navigator open-type="reLaunch" url="pages/component/advance/modal/index">
+          Relaunch to modal page
+        </navigator>
+      </view>
+      <view class="list-item-label">
+        <navigator open-type="exit">
+          Exit app
+        </navigator>
+      </view>
+    </view>
+  </block-variant>
+</view>

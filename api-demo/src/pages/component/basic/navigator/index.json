@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Navigator",
+  "usingComponents": {
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}
