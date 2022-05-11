@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "my.makePaymentV2",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
