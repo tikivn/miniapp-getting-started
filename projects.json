@@ -35,6 +35,13 @@
     "path": "brand"
   },
   {
+    "name": "F&B",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/tiniapp/dc/40/fe/8dab7d3205dfd4a625d908435b7681f0.png",
+    "path": "fnb"
+  },
+  {
     "name": "Todo Redux",
     "categories": [],
     "owner": "Tiki",
