@@ -6,6 +6,7 @@ The following is a list of the example MiniApp in the [MiniApp Document](https:/
 - [Shop](https://github.com/tikivn/miniapp-getting-started/tree/main/shop)
 - [API Demo](https://github.com/tikivn/miniapp-getting-started/tree/main/api-demo)
 - [Merchant](https://github.com/tikivn/miniapp-getting-started/tree/main/merchant)
+- [F&B](https://github.com/tikivn/miniapp-getting-started/tree/main/fnb)
 - [Todo](https://github.com/tikivn/miniapp-getting-started/tree/main/todo)
 
 ## What is Tiki MiniApp ?
