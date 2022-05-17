@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Request Captcha w/ Challenge",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}
