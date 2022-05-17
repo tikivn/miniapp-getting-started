@@ -1,0 +1,9 @@
+<view>
+  <block-header title="Usage" description="my.requestCaptcha({mode: 'captchaId', captchaId: 'xxx-yyy-zzz'})" />
+  <view class="block-content" tiki:for={{captchaData}}>
+    <text onTap="viewParams" data-captcha-data="{{item}}">Tap Here to view Params</text>
+    <button style="width: 100%;" onTap="requestCaptcha" data-captcha-data="{{item}}">
+      {{item.text}}
+    </button>
+  </view>
+</view>

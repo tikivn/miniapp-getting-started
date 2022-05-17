@@ -350,6 +350,21 @@ const fontAPIList = [
   },
 ];
 
+const captchaAPIList = [
+  {
+    name: 'Request Captcha',
+    path: 'pages/api/request-captcha/index',
+  },
+  {
+    name: 'Request Captcha Intelligent',
+    path: 'pages/api/request-captcha-intelligent/index',
+  },
+  {
+    name: 'Request Captcha w/ Challenge',
+    path: 'pages/api/request-captcha-challenge/index',
+  },
+];
+
 const APIList = [
   {
     type: 'Basic API',
@@ -430,6 +445,10 @@ const APIList = [
   {
     type: 'Font',
     list: fontAPIList,
+  },
+  {
+    type: 'Captcha',
+    list: captchaAPIList,
   },
 ];
 
