@@ -1,0 +1,6 @@
+<view style="height: 100vh;" class="page bg-white">
+  <block-header title="Usage"
+    description="Alphabet bar is used to quick overview and navigates on the list was sorted by alphabet such as the contact list." />
+  <alphabet alphabet="{{alphabet}}" onClick="onAlphabetClick">
+  </alphabet>
+</view>

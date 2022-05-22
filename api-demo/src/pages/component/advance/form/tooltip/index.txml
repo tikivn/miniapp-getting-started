@@ -1,48 +1,15 @@
 <template name="variant-format">
-  <block-variant header="Variant" title="1. Format" description="Position & Theme">
-    <view class="mt-48 bg-white" style="height: 55vh">
-      <tooltip class="mt-48" show theme="light" content="Text Light">
-        <view slot="operation"></view>
-      </tooltip>
-
-      <tooltip class="mt-48" show theme="light" onClose="onClose" showCloseIcon>
+  <block-variant header="Variant" title="1. Theme" description="Default, Reverse">
+    <view style="margin-top: 28px;" class="pt-large px-large flex">
+      <tooltip position="top" show theme="default">
         <view slot="content">
-          Text Light With Close
+          Default
         </view>
         <view slot="operation"></view>
       </tooltip>
-
-      <tooltip class="mt-48" show theme="light">
+      <tooltip style="margin-left: 72px;" position="top" show theme="reverse">
         <view slot="content">
-          Top Light
-        </view>
-        <view slot="operation"></view>
-      </tooltip>
-
-      <tooltip position="bottom" show theme="light">
-        <view slot="content">
-          Bottom Light
-        </view>
-        <view slot="operation"></view>
-      </tooltip>
-
-      <tooltip class="mt-48" show position="bottom" theme="dark">
-        <view slot="content">
-          Text Dark
-        </view>
-        <view slot="operation"></view>
-      </tooltip>
-
-      <tooltip class="mt-48" show position="bottom" theme="dark" onClose="onClose" showCloseIcon>
-        <view slot="content">
-          Text Dark With Close
-        </view>
-        <view slot="operation"></view>
-      </tooltip>
-
-      <tooltip class="mt-48" show position="bottom" position="bottom" theme="dark">
-        <view slot="content">
-          Bottom Dark
+          Reverse
         </view>
         <view slot="operation"></view>
       </tooltip>
@@ -50,7 +17,118 @@
   </block-variant>
 </template>
 
+<template name="position">
+  <block-variant title="2. Position" description="Top, Bottom, Left, Right">
+    <view style="margin-top: 28px;" class="pt-large px-large flex">
+      <tooltip style="margin-left: 16px;" position="top" show theme="default">
+        <view slot="content">
+          Top - center
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 80px;" position="top-left" show theme="default">
+        <view slot="content">
+          Top - left
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 74px;" position="top-right" show theme="default">
+        <view slot="content">
+          Top - right
+        </view>
+        <view slot="operation" />
+      </tooltip>
+    </view>
+    <view class="px-large flex">
+      <tooltip style="margin-left: 24px;" position="bottom" show theme="default">
+        <view slot="content">
+          Bottom - center
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 100px;" position="bottom-left" show theme="default">
+        <view slot="content">
+          Bottom - left
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 96px;" position="bottom-right" show theme="default">
+        <view slot="content">
+          Bottom - right
+        </view>
+        <view slot="operation" />
+      </tooltip>
+    </view>
+
+    <view style="margin-top: 40px;" class="mt-large pt-large px-large flex">
+      <tooltip style="margin-left: 68px;" position="left" show theme="default">
+        <view slot="content">
+          Left - center
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 80px;" position="left-top" show theme="default">
+        <view slot="content">
+          Left - top
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 100px;" position="left-bottom" show theme="default">
+        <view slot="content">
+          Left - bottom
+        </view>
+        <view slot="operation" />
+      </tooltip>
+    </view>
+
+    <view class="mt-medium pt-large pb-medium px-large flex">
+      <tooltip style="margin-left: -36px;" position="right" show theme="default">
+        <view slot="content">
+          Right - center
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 100px;" position="right-top" show theme="default">
+        <view slot="content">
+          Right - top
+        </view>
+        <view slot="operation" />
+      </tooltip>
+      <tooltip style="margin-left: 84px;" position="right-bottom" show theme="default">
+        <view slot="content">
+          Right - bottom
+        </view>
+        <view slot="operation" />
+      </tooltip>
+    </view>
+  </block-variant>
+</template>
+
+<template name="action">
+  <block-variant title="3. Content" description="Text only, Text with action.">
+    <view style="margin-top: 28px;" class="pt-large px-large flex">
+      <tooltip style="margin-left: 8px;" position="top" show theme="reverse">
+        <view slot="content">
+          Text only
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+      <tooltip showCloseIcon style="margin-left: 108px;" position="top" show theme="reverse">
+        <view slot="content">
+          Text with action
+        </view>
+        <view slot="operation"></view>
+      </tooltip>
+    </view>
+  </block-variant>
+</template>
+
+
+
 <view class="page">
-  <block-header title="Usage" description="Tooltips are elements that display informative text as tips or tricks" />
+  <block-header title="Usage"
+    description="Tooltips are floating labels that briefly explain the function of a user interface element. They can be triggered when user taps." />
   <template is="variant-format" />
+  <template is="position" />
+  <template is="action" />
 </view>
