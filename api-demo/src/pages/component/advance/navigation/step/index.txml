@@ -1,0 +1,29 @@
+<template name="variant-format">
+  <view class="bg-white" style="flex: 1;">
+    <block-variant header="Variant" title="Type" description="Horizontal and Vertical.">
+      <steps
+        onTapStep="onTapStep"
+        className="p-medium"
+        activeIndex="{{activeIndex}}"
+        items="{{items}}"
+      >
+      </steps>
+      <steps
+        onTapStep="onTapStep"
+        className="mt-medium"
+        activeIndex="{{0}}"
+        items="{{items2}}"
+        direction="vertical"
+      >
+      </steps>
+    </block-variant>
+  </view>
+</template>
+
+
+
+<view style="height: 100vh;" class="page flex flex-col">
+  <block-header title="Usage"
+    description="Stepper is used to create wizard-like workflows by dividing content into logical steps." />
+  <template is="variant-format" data="{{items, items2, activeIndex, failIndex}}" />
+</view>

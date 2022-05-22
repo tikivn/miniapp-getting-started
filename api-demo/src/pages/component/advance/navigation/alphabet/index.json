@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "Alphabet",
+  "usingComponents": {
+    "alphabet": "@tiki.vn/tini-ui/es/list/alphabet/index",
+    "block-header": "components/block-header/index"
+  }
+}
