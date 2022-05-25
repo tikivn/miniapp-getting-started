@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noUnusedLocals": true,
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "target": "ES5",
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "rootDir": "./",
+    "baseUrl": "./src"
+  }
+}

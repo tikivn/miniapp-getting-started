@@ -1,0 +1,16 @@
+{
+  "name": "blank-ts-example",
+  "version": "0.0.1",
+  "tiki": {
+    "appIdentifier": "vn.tiki.blank.ts.example",
+    "buildNumber": 1
+  },
+  "dependencies": {
+    "@tiki.vn/tini-types": "^0.3.0",
+    "@types/lodash-es": "^4.17.6",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
