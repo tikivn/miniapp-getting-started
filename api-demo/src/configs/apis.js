@@ -350,6 +350,13 @@ const fontAPIList = [
   },
 ];
 
+const checkoutAPIList = [
+  {
+    name: 'Checkout',
+    path: 'pages/api/checkout/index',
+  },
+];
+
 const captchaAPIList = [
   {
     name: 'Request Captcha',
@@ -450,6 +457,10 @@ const APIList = [
     type: 'Captcha',
     list: captchaAPIList,
   },
+  {
+    type: 'Checkout',
+    list: checkoutAPIList
+  }
 ];
 
 const flattenApis = APIList.reduce((rs, item) => rs.concat(item.list), []);

@@ -1,0 +1,11 @@
+<view>
+  <view class="block-content">
+    <input class="input-full" placeholder="storeID" name="storeID" value={{storeID}} onInput="storeIDChange"></input>
+    <input class="input-full" placeholder="wardID" name="wardID" value={{wardID}} onInput="wardIDChange"></input>
+    <input class="input-full" placeholder="districtID" name="districtID" value={{districtID}} onInput="districtIDChange"></input>
+    <input class="input-full" placeholder="regionID" name="regionID" value={{regionID}} onInput="regionIDChange"></input>
+    <input class="input-full" placeholder="addressID" name="addressID" value={{addressID}} onInput="addressIDChange"></input>
+    <button class="button-full" onTap="onCheckOut">Checkout</button>
+     <button class="button-full" onTap="onCheckOutTikiNgon">Checkout Tiki Ngon</button>
+  </view>
+</view>

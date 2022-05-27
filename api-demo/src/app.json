@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/api/checkout/index",
     "pages/component/index",
     "pages/api/index",
     "pages/search/index",

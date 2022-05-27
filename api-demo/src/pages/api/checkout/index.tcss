@@ -1,0 +1,13 @@
+.component-item {
+  border-top-width: 1px;
+}
+
+button {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.input-full {
+  width: 100%;
+  margin-bottom: 8px;
+}
