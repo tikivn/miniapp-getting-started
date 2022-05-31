@@ -12,6 +12,7 @@
     "alwaysStrict": true,
     "strict": true,
     "rootDir": "./",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "types": ["@tiki.vn/tini-types"]
   }
 }

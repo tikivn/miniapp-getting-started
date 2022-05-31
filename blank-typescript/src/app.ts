@@ -1,5 +1,3 @@
-/// <reference path="../node_modules/@tiki.vn/tini-types/types/index.d.ts" />
-
 import { Greeter } from "./entity/greeter";
 
 App({
