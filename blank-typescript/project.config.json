@@ -1,4 +1,6 @@
 {
-    "experimentalTypescriptSupport": true,
-    "miniprogramRoot": "src"
+    "miniprogramRoot": "src",
+    "setting": {
+        "useCompilerPlugins": ["typescript"]
+    }
 }
