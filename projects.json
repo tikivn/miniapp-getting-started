@@ -7,6 +7,13 @@
     "path": "blank"
   },
   {
+    "name": "Blank (Typescript)",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/miniapp/2f/f3/f5/77fa1739863d0c6881071dcd8c2e0b8a.png",
+    "path": "blank-typescript"
+  },
+  {
     "name": "API Demo",
     "categories": [],
     "owner": "Tiki",
@@ -47,12 +54,5 @@
     "owner": "Tiki",
     "image": "https://salt.tikicdn.com/ts/miniapp/2f/d0/e2/dc1500301f2cb6b5490d68ebf5ba4f47.png",
     "path": "todo"
-  },
-  {
-    "name": "Blank (Typescript)",
-    "categories": [],
-    "owner": "Tiki",
-    "image": "https://salt.tikicdn.com/ts/miniapp/2f/f3/f5/77fa1739863d0c6881071dcd8c2e0b8a.png",
-    "path": "blank-typescript"
   }
 ]
