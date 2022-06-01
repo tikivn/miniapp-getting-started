@@ -8,6 +8,7 @@ The following is a list of the example MiniApp in the [MiniApp Document](https:/
 - [Merchant](https://github.com/tikivn/miniapp-getting-started/tree/main/merchant)
 - [F&B](https://github.com/tikivn/miniapp-getting-started/tree/main/fnb)
 - [Todo](https://github.com/tikivn/miniapp-getting-started/tree/main/todo)
+- [Blank (Typescript)](https://github.com/tikivn/miniapp-getting-started/tree/main/blank-typescript)
 
 ## What is Tiki MiniApp ?
 
