@@ -81,6 +81,7 @@
     "pages/api/request-captcha-intelligent/index",
     "pages/api/bio-metrics/local/index",
     "pages/api/bio-metrics/server/index",
+    "pages/api/checkout/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",

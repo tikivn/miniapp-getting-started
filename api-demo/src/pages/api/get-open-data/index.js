@@ -1,11 +1,12 @@
 Page({
   onGetUserData() {
-    my.getUserOpenId({
+    my.cart.clear({
+      seller_id: 1,
       success: (res) => {
-        my.showAlert({ content: JSON.stringify(res) });
+        my.alert({ content: JSON.stringify(res) });
       },
       fail: (res) => {
-        my.showAlert({ title: JSON.stringify(res) });
+        my.alert({ title: JSON.stringify(res) });
       },
     });
   },

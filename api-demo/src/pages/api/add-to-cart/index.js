@@ -29,11 +29,14 @@ Page({
   },
   onAddToCart() {
     my.addToCart({
-      products: {
-        productId: this.data.productId,
-        quantity: 1,
-      },
+      products: [
+        {
+          productId: this.data.productId,
+          quantity: 1,
+        },
+      ],
       success: (res) => {
+        my.alert({ title: 'Success', content: JSON.stringify(res) });
         my.addIconsToNavigationBar({
           icons: [
             {
@@ -53,6 +56,7 @@ Page({
         });
       },
       fail: (res) => {
+        my.alert({ title: 'Fail', content: JSON.stringify(res) });
         console.log(res);
       },
     });

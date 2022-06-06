@@ -12,7 +12,7 @@ const basicAPIList = [
   {
     name: 'Get Launch Options',
     path: 'pages/api/get-launch-options/index',
-  }
+  },
 ].filter(filterNotImplementedPages);
 
 const openAPIList = [
@@ -350,6 +350,13 @@ const fontAPIList = [
   },
 ];
 
+const paymentAPIList = [
+  {
+    name: 'Checkout',
+    path: 'pages/api/checkout/index',
+  },
+];
+
 const captchaAPIList = [
   {
     name: 'Request Captcha',
@@ -464,6 +471,10 @@ const APIList = [
   {
     type: 'Bio Metrics',
     list: bioMetricsAPIList,
+  },
+  {
+    type: 'Payment',
+    list: paymentAPIList,
   },
 ];
 

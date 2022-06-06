@@ -1,0 +1,22 @@
+<view>
+  <block-header title="Usage" description="Checkout" />
+  <view class="block-content">
+
+    <form onSubmit="onAddToCart" onReset="onReset">
+      <view class="block">
+        <input class="button-full" name="input" placeholder="Input product id" />
+        <button class="button-full" type="outline" form-type="submit">Add To Cart</button>
+      </view>
+    </form>
+
+    <input class="form-value" placeholder="storeID" name="storeID" onInput="storeIDChange"></input>
+    <input class="form-value" placeholder="wardID" name="wardID" onInput="wardIDChange"></input>
+    <input class="form-value" placeholder="districtID" name="districtID" onInput="districtIDChange"></input>
+    <input class="form-value" placeholder="regionID" name="regionID" onInput="regionIDChange"></input>
+    <input class="form-value" placeholder="addressID" name="addressID" onInput="addressIDChange"></input>
+
+    <button class="button-full" onTap="onCheckOut">Checkout</button>
+    <button class="button-full" onTap="onCheckOutTikiNgon">Checkout Tiki Ngon</button>
+  </view>
+
+</view>
