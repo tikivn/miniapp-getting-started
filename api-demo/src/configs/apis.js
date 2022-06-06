@@ -365,6 +365,17 @@ const captchaAPIList = [
   },
 ];
 
+const bioMetricsAPIList = [
+  {
+    name: 'Local authentication',
+    path: 'pages/api/bio-metrics/local/index',
+  },
+  {
+    name: 'Server side authentication',
+    path: 'pages/api/bio-metrics/server/index',
+  },
+];
+
 const APIList = [
   {
     type: 'Basic API',
@@ -449,6 +460,10 @@ const APIList = [
   {
     type: 'Captcha',
     list: captchaAPIList,
+  },
+  {
+    type: 'Bio Metrics',
+    list: bioMetricsAPIList,
   },
 ];
 
