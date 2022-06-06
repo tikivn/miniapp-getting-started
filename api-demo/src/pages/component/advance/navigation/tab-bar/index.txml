@@ -1,0 +1,7 @@
+<view>
+  <block-header title="Usage" description="Set color badge" />
+  <view class="block-content">
+    <input class="form-value" placeholder="style badge" name="styleBadge" onInput="styleBadgeChange"></input>
+    <button class="button-full" onTap="changeBadgeTab">Đồng ý</button>
+  </view>
+</view>

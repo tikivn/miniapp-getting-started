@@ -1,0 +1,5 @@
+<view class="view-container">
+  <block-header title="Usage" description="open link" />
+
+  <scroll-banners tiki:if="{{banners.length> 0 }}" banners="{{banners}}" />
+</view>

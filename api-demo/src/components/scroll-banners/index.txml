@@ -1,0 +1,19 @@
+ 
+<view class="scroll-banners">
+    <carousel circular autoplay indicator-dots duration="{{150}}" interval="{{7000}}"> 
+        <carousel-item tiki:for="{{banners}}" tiki:key="id">
+        <view 
+          onTap="onTap"
+          data-app="{{ item }}"
+          data-position="{{index + 1}}"
+          class="skeleton scroll-banners--item"
+            >
+            <image src="{{ item.mobile_url }}"  
+              class="scroll-banners--item-image"  
+              style="width: 100%; height: 100%;"
+              default-source="/assets/images/f6f7f8_3x3.jpeg"
+               />
+        </view>
+        </carousel-item>  
+    </carousel>
+</view>

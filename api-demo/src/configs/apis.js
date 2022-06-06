@@ -179,6 +179,10 @@ const deeplinkAPIList = [
     name: 'Open Screen',
     path: '/pages/api/open-screen/index',
   },
+  {
+    name: 'Open Deeplink',
+    path: 'pages/api/open-deeplink/index',
+  },
 ].filter(filterNotImplementedPages);
 
 const fileAPIList = [
