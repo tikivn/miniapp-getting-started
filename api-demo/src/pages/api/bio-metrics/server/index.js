@@ -3,6 +3,21 @@ Page({
     username: 'test@gmail.com',
     password: 'test',
   },
+  isSupported() {
+    my.bioMetrics.isSupported({
+      success: ({ isSupported, mode, error }) => {
+        my.alert({
+          title: 'Success',
+          content: isSupported
+            ? `Device already setup biometrics authentication. Mode: ${mode}`
+            : error,
+        });
+      },
+      fail: (res) => {
+        my.alert({ title: 'Fail', content: JSON.stringify(res) });
+      },
+    });
+  },
   createKey() {
     my.bioMetrics.createKey({
       success: ({ publicKey }) => {
@@ -25,8 +40,8 @@ Page({
   },
   keyExists() {
     my.bioMetrics.keyExists({
-      success: () => {
-        my.alert({ title: 'Success', content: `Key is deleted` });
+      success: (isExist) => {
+        my.alert({ title: 'Success', content: isExist ? 'Key is exist' : 'No key found' });
       },
       fail: (res) => {
         my.alert({ title: 'Fail', content: JSON.stringify(res) });

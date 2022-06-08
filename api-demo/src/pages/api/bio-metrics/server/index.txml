@@ -5,6 +5,7 @@
       <button type="primary" onTap="createKey">Create Key Pair</button>
       <button type="primary" onTap="keyExists">Check Key Exists</button>
       <button type="primary" onTap="deleteKey">Delete Key</button>
+      <button type="primary" onTap="isSupported">Is Supported</button>
     </view>
   </view>
   <view class="block-content">
