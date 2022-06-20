@@ -8,7 +8,8 @@ Page({
       icons: [
         {
           image: '/images/cart.png',
-          badge: '4'
+          width: 25,
+          height: 25,
         },
       ],
       padding: 10,

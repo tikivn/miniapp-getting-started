@@ -28,7 +28,6 @@
     "pages/api/keyboard/index",
     "pages/api/image-picker/index",
     "pages/api/open-screen/index",
-    "pages/api/open-deeplink/index",
     "pages/api/address/index",
     "pages/api/contact/index",
     "pages/api/download-file/index",

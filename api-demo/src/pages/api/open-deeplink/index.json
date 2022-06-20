@@ -1,7 +1,0 @@
-{
-  "defaultTitle": "openDeepLink",
-  "usingComponents": {
-    "block-header": "components/block-header/index",
-    "scroll-banners": "components/scroll-banners/index"
-  }
-}

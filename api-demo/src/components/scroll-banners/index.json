@@ -1,7 +1,0 @@
-{
-  "component": true,
-  "componentLifeCycleV2": "YES",
-  "usingComponents": {
-    "app-with-title": "components/app-with-title/index"
-  }
-}
