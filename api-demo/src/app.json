@@ -139,6 +139,7 @@
     "pages/component/advance/navigation/badge/index",
     "pages/component/advance/navigation/sidebar/index",
     "pages/component/advance/navigation/tabs/index",
+    "pages/component/advance/navigation/tab-bar/index",
     "pages/component/advance/navigation/step/index",
     "pages/component/advance/navigation/alphabet/index",
     "pages/component/advance/navigation/pagination/index",

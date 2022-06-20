@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "my.openScreen",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

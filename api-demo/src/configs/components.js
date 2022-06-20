@@ -301,6 +301,10 @@ const advancedComponents = [
         path: '/pages/component/advance/navigation/tabs/index',
       },
       {
+        name: 'Tab Bar',
+        path: '/pages/component/advance/navigation/tab-bar/index',
+      },
+      {
         name: 'Step',
         path: '/pages/component/advance/navigation/step/index',
       },
