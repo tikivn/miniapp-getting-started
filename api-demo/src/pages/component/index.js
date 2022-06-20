@@ -10,13 +10,6 @@ Page({
   },
   onLoad(params) {
     const query = parse(params || '');
-    my.setTabBarBadge({
-      index: 0,
-      text: 10,
-      style:{
-        backgroundColor:"red"
-      }
-    });
     if (query && query.page) {
       my.navigateTo({ url: query.page });
     }
