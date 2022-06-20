@@ -10,7 +10,7 @@
       <button style="width: 100%;" onTap="navigateTo">
         my.navigateTo
       </button>
-      <button style="width: 100%;" onTap="navigateTo">
+      <button style="width: 100%;" onTap="redirectTo">
         my.redirectTo
       </button>
       <button style="width: 100%;" onTap="navigateBack">

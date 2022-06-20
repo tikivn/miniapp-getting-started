@@ -1,0 +1,8 @@
+<view>
+  <block-header title="Usage" description="Use Biometrics to authenticate with device" />
+  <view class="block-content">
+    <view class="page-section-btns">
+      <button type="primary" onTap="localAuth">Local Authentication</button>
+    </view>
+  </view>
+</view>

@@ -7,6 +7,13 @@
     "path": "blank"
   },
   {
+    "name": "Blank (Typescript)",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/miniapp/2f/f3/f5/77fa1739863d0c6881071dcd8c2e0b8a.png",
+    "path": "blank-typescript"
+  },
+  {
     "name": "API Demo",
     "categories": [],
     "owner": "Tiki",
@@ -33,6 +40,13 @@
     "owner": "Tiki",
     "image": "https://salt.tikicdn.com/ts/miniapp/98/f8/c0/2a36796f9b471fabcfcc7b651b3fffc8.png",
     "path": "brand"
+  },
+  {
+    "name": "F&B",
+    "categories": [],
+    "owner": "Tiki",
+    "image": "https://salt.tikicdn.com/ts/tiniapp/dc/40/fe/8dab7d3205dfd4a625d908435b7681f0.png",
+    "path": "fnb"
   },
   {
     "name": "Todo Redux",

@@ -1,0 +1,84 @@
+.page-section {
+  background: #fff;
+  margin-bottom: 32px;
+}
+
+.page-section-title {
+  padding: 16px 16px;
+}
+
+.page-section-demo {
+  padding: 16px;
+}
+
+.page-section-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.page-section-btns {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.page-section-btns > button {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 10px;
+   margin-top:20px;
+}
+
+
+
+button {
+  margin-top:50px;
+}
+
+.bc_blue {
+  background-color: #49A9EE;
+}
+
+.bc_red {
+  background-color: #F04134;
+}
+
+.bc_yellow {
+  background-color: #FFBF00;
+}
+
+.bc_green {
+  background-color: #00A854;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  height: 88px;
+  align-items: center;
+}
+
+.form-row-label {
+  width: 180px;
+  font-size: 34px;
+  margin-right: 10px;
+  text-align: left;
+  color: #000;
+}
+
+.form-row-content {
+  flex: 1;
+  font-size: 34px;
+}
+
+.form-line {
+  height: 1px;
+  background-color: #ddd;
+  margin-left: 30px;
+}

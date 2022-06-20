@@ -12,7 +12,7 @@ const basicAPIList = [
   {
     name: 'Get Launch Options',
     path: 'pages/api/get-launch-options/index',
-  }
+  },
 ].filter(filterNotImplementedPages);
 
 const openAPIList = [
@@ -350,6 +350,39 @@ const fontAPIList = [
   },
 ];
 
+const paymentAPIList = [
+  {
+    name: 'Checkout',
+    path: 'pages/api/checkout/index',
+  },
+];
+
+const captchaAPIList = [
+  {
+    name: 'Request Captcha',
+    path: 'pages/api/request-captcha/index',
+  },
+  {
+    name: 'Request Captcha Intelligent',
+    path: 'pages/api/request-captcha-intelligent/index',
+  },
+  {
+    name: 'Request Captcha w/ Challenge',
+    path: 'pages/api/request-captcha-challenge/index',
+  },
+];
+
+const bioMetricsAPIList = [
+  {
+    name: 'Local authentication',
+    path: 'pages/api/bio-metrics/local/index',
+  },
+  {
+    name: 'Server side authentication',
+    path: 'pages/api/bio-metrics/server/index',
+  },
+];
+
 const APIList = [
   {
     type: 'Basic API',
@@ -430,6 +463,18 @@ const APIList = [
   {
     type: 'Font',
     list: fontAPIList,
+  },
+  {
+    type: 'Captcha',
+    list: captchaAPIList,
+  },
+  {
+    type: 'Bio Metrics',
+    list: bioMetricsAPIList,
+  },
+  {
+    type: 'Payment',
+    list: paymentAPIList,
   },
 ];
 

@@ -1,3 +1,0 @@
-<view style="align-items: flex-start">
-  <text class="price">${{price}}</text>
-</view>

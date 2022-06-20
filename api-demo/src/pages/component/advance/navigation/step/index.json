@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Step",
+  "usingComponents": {
+    "steps": "@tiki.vn/tini-ui/es/steps/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}

@@ -1,0 +1,6 @@
+{
+    "miniprogramRoot": "src",
+    "setting": {
+        "useCompilerPlugins": ["typescript"]
+    }
+}

@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "tabs": "@tiki.vn/tini-ui/es/tabs/index",
-    "product-item": "components/product-item/index"
-  }
-}

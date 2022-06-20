@@ -1,0 +1,3 @@
+<view>This is blank page</view>
+<view>this.data.value {{value}}</view>
+<component-test/>
