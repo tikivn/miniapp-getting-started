@@ -1,18 +1,31 @@
 Page({
   data: {
-    styleBadge: undefined,
+    textColor: undefined,
+    bgColor: undefined,
+    textBadge: '0'
   },
-  styleBadgeChange(e) {
+  textBadgeChange(e) {
     this.setData({
-      styleBadge: e.detail.value,
+      textBadge: e.detail.value,
+    });
+  },
+  textColorBadgeChange(e) {
+    this.setData({
+      textColor: e.detail.value,
+    });
+  },
+  bgBadgeChange(e) {
+    this.setData({
+      bgColor: e.detail.value,
     });
   },
   changeBadgeTab() {
     my.setTabBarBadge({
       index: 0,
-      text: 10,
+      text: !this.data.textBadge ? '0': this.data.textBadge,
       style:{
-        backgroundColor:"re"
+        textColor: !this.data.textColor ? undefined : this.data.textColor,
+        backgroundColor: !this.data.bgColor ? undefined: this.data.bgColor,
       }
     });
   },
