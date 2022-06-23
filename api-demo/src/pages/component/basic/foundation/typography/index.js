@@ -50,36 +50,8 @@ Page({
         name: "Line heights",
         tokens: [
           {
-            name: "font-height-x-small",
-            value: "12px",
-          },
-          {
-            name: "font-height-small",
-            value: "16px",
-          },
-          {
-            name: "font-height-base",
-            value: "20px",
-          },
-          {
-            name: "font-height-medium",
-            value: "24px",
-          },
-          {
-            name: "font-height-large",
-            value: "32px",
-          },
-          {
-            name: "font-height-x-large",
-            value: "40px",
-          },
-          {
-            name: "font-height-2x-large",
-            value: "56px",
-          },
-          {
-            name: "font-height-x-small",
-            value: "12px",
+            name: "font-height-default",
+            value: "1.5",
           },
         ],
       },

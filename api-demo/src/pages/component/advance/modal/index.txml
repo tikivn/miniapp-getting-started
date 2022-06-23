@@ -28,82 +28,23 @@
       }}"
     >Show Modal</button>
   </block-variant>
-  <block-variant
-    title="3. Custom Footer"
-    description="Render custom buttons at bottom"
-  >
-    <button
-      class="mt-2x-small"
-      onTap="onTap"
-      data-modal="{{
-          type:'footer',
-          showClose:true,
-      }}"
-    >Show Modal</button>
-  </block-variant>
     <modal
         show="{{modal.type==='basic'}}"
         showClose="{{modal.showClose}}"
-        advice="{{modal.advice||false}}"
-        buttons="{{modal.buttons}}"
+        buttons="{{[{type: 'outline', text: 'Cancel'}, {text: 'OK'}]
+        }}"
         onModalClose="resetModal"
         onMaskClick="onMaskClick"
         onButtonClick="onButtonClick">
-        <view slot="header" tiki:if="{{modal.header}}">
+        <view slot="header">
           <text>Title</text>
         </view>
-        <view slot="description" tiki:if="{{modal.description}}">
+        <view slot="description">
           <text>Description</text>
         </view>
         <view class="modal-content">
           Swap me!!!
-          <button
-            tiki:if="{{!modal.header}}"
-            class="w-full mt-2x-small"
-            data-modal="{{
-                header: true
-            }}"
-            onTap="onTap" 
-          >
-            Show header
-          </button>
-          <button
-            tiki:if="{{!modal.description}}"
-            class="w-full mt-2x-small"
-            data-modal="{{
-                description: true
-            }}"
-            onTap="onTap" 
-          >
-            Show description
-          </button>
-          <button
-            tiki:if="{{!modal.showClose}}"
-            class="w-full mt-2x-small" 
-            data-size="sm" onTap="onTap"
-            data-modal="{{
-            showClose: true,
-            advice:false
-            }}"
-          >
-            Show close icon
-          </button>
-          <button
-            tiki:if="{{!modal.buttons}}"
-            class="w-full mt-2x-small" 
-            data-size="sm" onTap="onTap"
-            data-modal="{{
-            buttons: [{type: 'outline', text: 'Cancel'}, {text: 'OK'}]
-            }}"
-          >
-            Show buttons
-          </button>
         </view>
-        <view slot="footer" tiki:if="{{modal.footer}}">
-            <view style="display:flex;align-items:center;justify-content:center">
-                <button data-size="lg" onTap="resetModal" type="tertiary">Close</button>
-            </view>
-            </view>
     </modal>
     <modal
         show="{{modal.type==='image'}}"
@@ -121,41 +62,8 @@
           <text>Description</text>
         </view>
         <view class="modal-content flex justify-around">
-          <button data-size="sm" onTap="changeImageSize">sm</button>
-          <button data-size="md" onTap="changeImageSize">md</button>
-          <button data-size="lg" onTap="changeImageSize">lg</button>
-        </view>
-    </modal>
-    <modal
-        show="{{modal.type==='footer'}}"
-        onModalClose="resetModal"
-        onMaskClick="onMaskClick"
-        buttons="{{[{text:'Close', type:'ghost'},{text:'Cancel',type:'outline'},{text:'Ok'}]}}"
-        buttonsLayout="{{modal.buttonsLayout}}"
-        onButtonClick="onButtonClick">
-        <view slot="header">
-          <text>Header</text>
-        </view>
-        <view slot="description">
-          <text>Description</text>
-        </view>
-        <view class="modal-content">
-          <button
-            class="w-full"
-            data-modal="{{buttonsLayout:'vertical'}}"
-            onTap="onTap"
-            type="tertiary"
-          >
-            Vertical layout
-          </button>
-          <button
-            class="w-full mt-2x-small"
-            data-modal="{{buttonsLayout:'horizontal'}}"
-            onTap="onTap"
-            type="tertiary"
-          >
-            Horizontal layout
-          </button>
+          <button class="w-full mr-4x" data-size="md" onTap="changeImageSize">md</button>
+          <button class="w-full ml-4x" data-size="lg" onTap="changeImageSize">lg</button>
         </view>
     </modal>
 </view>
