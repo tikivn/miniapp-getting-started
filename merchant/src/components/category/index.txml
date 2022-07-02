@@ -16,7 +16,8 @@
       class="category-vertical flex flex-col items-center"
       onTap="_onTapCategory"
     >
-      <image
+      <cached-image
+        cacheWidth="{{100}}"
         class="category-logo mb-2x-small"
         src="{{category.thumbnail_url}}"
       />
@@ -41,7 +42,7 @@
       onTap="_onTapCategory"
     >
       <view class="mr-2x-small">
-        <image
+        <cached-image
           class="category-logo"
           src="{{category.thumbnail_url}}"
         />

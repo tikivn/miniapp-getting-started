@@ -1,0 +1,31 @@
+<view>
+  <block tiki:if="{{isLoading}}">
+    <view
+      tiki:for="{{5}}"
+      class="mx-medium flex my-x-small"
+    >
+      <view class="recent-search-skeleton skeleton w-full"/>
+      <view class="recent-search-close-button-skeleton skeleton ml-2x-small"/>
+    </view>
+  </block>
+  <block tiki:else>
+    <view
+      class="{{className}} flex justify-between items-center py-x-small {{index !== recentKeys.length - 1 ? 'border-bottom-gray' : ''}}"
+      tiki:for="{{recentKeys}}"
+      data-item="{{item}}"
+      onTap="_onClickItem"
+    >
+      <view>
+        {{item}}
+      </view>
+      <view 
+        class="flex items-center"
+        data-item="{{item}}" 
+        catchTap="_onRemoveItem" 
+      >
+        <icon type="close" color="#808089"/>
+      </view>
+    </view>
+  </block>
+
+</view>

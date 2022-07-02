@@ -1,0 +1,34 @@
+<import-sjs from="./helpers.sjs" name="{getProperties}"></import-sjs>
+
+<view
+  class="toast flex items-center p-small {{isShow ? 'toast-show' : 'toast-hide'}}"
+  style="--toast-bottom: {{bottom}}px; --background-color: {{getProperties(type, 'background')}}"
+>
+  <view class="w-full flex justify-between">
+    <view class="flex items-stretch">
+      <icon
+        class="check-icon block mr-small"
+        type="{{getProperties(type, 'icon')}}"
+        color="#FFFFFF"
+      />
+      <text class="text-white pr-2x-small toast-content">
+        {{content}}
+      </text>
+    </view>
+    <view
+      tiki:if="{{actionText}}"
+      class="flex justify-between items-center"
+      onTap="_onTapActionText"
+    >
+      <text class="text-white p-2x-small toast-action-text">{{actionText}}</text>
+    </view>
+    <view
+      tiki:else
+      class="flex justify-between items-center"
+      onTap="_onCancel"
+    >
+      <view class="divider" />
+      <icon class="block ml-2x-small" type="close" color="#FFFFFF" />
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+.recent-search-skeleton,
+.recent-search-close-button-skeleton {
+  height: 35px;
+}
+
+.recent-search-close-button-skeleton {
+  width: 40px;
+}

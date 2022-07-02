@@ -4,3 +4,6 @@ export const group = (arr, num = 8) => {
     return acc;
   }, []);
 };
+
+export const isEqual = (obj1, obj2) =>
+  JSON.stringify(obj1) === JSON.stringify(obj2);

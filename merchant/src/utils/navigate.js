@@ -57,9 +57,3 @@ export const openDeeplink = async (link) => {
 
   return my.openDeeplink({ url: link });
 };
-
-export const goToProductDetail = ({ product, page }) => {
-  openDeeplink(
-    `tikivn://products/${product.id}?spid=${product.seller_product_id}&itm_source=tiniapp&itm_medium=CPC&itm_campaign=TNA_NPD_TKS_APP_APP_APP_UNK_TNA_UNK_UNK_LD01_CPC_UNK_UNK_Z.vn.tiki.tini.merchant_CN.pages/${page}/index`,
-  );
-};

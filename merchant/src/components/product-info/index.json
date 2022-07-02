@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "card-select": "components/card-select/index"
+  }
+}

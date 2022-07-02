@@ -4,10 +4,11 @@
   <template name="shop-info-completed">
     <view class="shop-info-header navigation-bar pl-medium">
       <view class="mr-2x-small">
-        <image
+        <cached-image
           class="shop-info-logo mr-2x-small"
           src="{{shop.logo || '/assets/images/shop-logo.png'}}"
           mode="widthFix"
+          cacheWidth="{{200}}"
         />
       </view>
       <view class="flex flex-col">

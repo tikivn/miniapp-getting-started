@@ -11,3 +11,8 @@
   z-index: 2;
   background: white;
 }
+
+.empty-divider {
+  margin-left: -16px;
+  margin-right: -16px;
+}

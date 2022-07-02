@@ -1,6 +1,6 @@
 {
   "name": "miniapp-tini-merchant",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "tiki": {
     "appIdentifier": "vn.tiki.tini.merchant",
     "buildNumber": 1,
@@ -13,7 +13,8 @@
     }
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "^0.10.0",
+    "@tiki.vn/mini-html-parser2": "^0.0.4",
+    "@tiki.vn/tini-ui": "0.10.1-rc.4",
     "query-string": "^7.0.1"
   }
 }

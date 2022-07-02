@@ -1,6 +1,6 @@
 <view>
   <shop-info
-    className="home-shop-info fixed"
+    className="home-shop-info fixed {{isPageScroll ? 'home-shop-info-border' : ''}}"
     isLoading="{{isLoading}}"
     isFollowButtonLoading="{{isFollowButtonLoading}}"
     shop="{{shop}}"

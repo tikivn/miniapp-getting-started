@@ -1,6 +1,7 @@
 {
   "component": true,
   "usingComponents": {
-    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+    "button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "cached-image": "components/cached-image/index"
   }
 }

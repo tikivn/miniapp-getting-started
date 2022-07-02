@@ -1,18 +1,19 @@
 <view class="{{className}}">
   <template name="banners-loading">
     <carousel
-      autoplay
       indicator-dots
       circular
-      duration="{{400}}"
-      interval="{{5000}}"
+      spacing="8"
       class="banners"
     > 
       <carousel-item
         tiki:for="{{[1, 2, 3]}}"
         tiki:key="*this"
       >
-        <view class="banners-skeleton skeleton"/>
+        <ratio-image
+          class="skeleton radius-8px"
+          ratio="3:1"
+        />
       </carousel-item>
     </carousel>
   </template>
@@ -24,16 +25,18 @@
       circular
       duration="{{400}}"
       interval="{{5000}}"
+      spacing="8"
       class="banners"
     > 
       <carousel-item
         tiki:for="{{banners}}"
         tiki:key="id"
       >
-        <image
-          class="w-full h-full radius-8px"
+        <ratio-image
+          imageClass="radius-8px"
           src="{{item.image_url}}"
-          mode="widthFix"
+          ratio="3:1"
+          cacheWidth="{{656}}"
           data-item="{{item}}"
           onTap="_onTapBanner"
         />

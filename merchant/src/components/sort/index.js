@@ -19,6 +19,7 @@ Component({
     },
 
     hideBottomSheet() {
+      my.hideOverlay();
       this.setData({
         isShow: false,
       });

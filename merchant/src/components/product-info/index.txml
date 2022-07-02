@@ -1,0 +1,50 @@
+<view class="{{className}}">
+  <template name="loading">
+    <view class="skeleton skeleton-font-medium mb-4x-small w-full"/>
+    <view class="skeleton skeleton-font-medium mb-4x-small w-full"/>
+    <view class="skeleton skeleton-font-medium mb-4x-small w-full"/>
+    <view class="my-medium skeleton w-full skeleton-paragraph"/>
+  </template>
+
+  <template name="completed">
+    <view tiki:if="{{formattedSpecifications.length}}">
+      <block
+        tiki:for="{{formattedSpecifications}}"
+        tiki:key="code"
+      >
+        <view class="flex justify-between">
+          <text class="mr-medium text-nowrap">{{item.name}}</text>
+          <view class="font-bold text-right">
+            <rich-text nodes="{{item.value}}" />
+          </view>
+        </view>
+        <view class="item-divider my-2x-small"/>
+      </block>
+    </view>
+
+    <view
+      tiki:if="{{formattedDescription.length}}"
+      class="product-info-html mb-medium {{isShowMore ? 'pb-large product-info-html-show-more' : ''}}"
+    >
+      <rich-text nodes="{{formattedDescription}}" />
+      <view class="overlay-img"/>
+      <view
+        class="view-more flex items-center"
+        onTap="handleSwitchViewMore"
+      >
+        <view class="text-medium text-blue mr-2x-small">
+          {{isShowMore ? 'Thu gọn' : 'Xem thêm'}}
+        </view>
+        <icon
+          type="{{isShowMore ? 'arrow_up' : 'arrow_down'}}"
+          color="#1A94FF"
+        />
+      </view>
+    </view>
+  </template>
+</view>
+
+<template
+  is="{{isLoading ? 'loading' : 'completed'}}"
+  data="{{formattedSpecifications, formattedDescription, isShowMore}}"
+/>

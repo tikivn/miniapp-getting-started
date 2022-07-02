@@ -5,6 +5,7 @@
     "search-bar": "components/search-bar/index",
     "product-section": "components/product-section/index",
     "empty": "components/empty/index",
-    "sort": "components/sort/index"
+    "sort": "components/sort/index",
+    "recent-search": "components/recent-search/index"
   }
 }

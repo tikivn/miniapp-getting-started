@@ -1,10 +1,5 @@
 import { group } from '../../utils/common';
-import {
-  navigate,
-  switchTab,
-  openDeeplink,
-  goToProductDetail,
-} from '../../utils/navigate';
+import { navigate, switchTab, openDeeplink } from '../../utils/navigate';
 import {
   getShopInfoAPI,
   getCategoriesAPI,
@@ -22,6 +17,7 @@ Page({
   data: {
     isLoading: true,
     isFollowButtonLoading: false,
+    isPageScroll: false,
     shop: {
       name: '',
       logo: '',
@@ -76,8 +72,10 @@ Page({
         isLoading: false,
       });
     } catch {
-      this.setData({
-        isLoading: false,
+      my.alert({
+        title: 'Lỗi',
+        content: 'Vui lòng kiểm tra kết nối và thử lại.',
+        success: () => my.exitMiniApp(),
       });
     }
   },
@@ -135,7 +133,13 @@ Page({
   },
 
   onTapProduct(product) {
-    goToProductDetail({ product, page: 'home' });
+    navigate({
+      page: 'product-detail',
+      params: {
+        product_id: product.id,
+        spid: product.seller_product_id,
+      },
+    });
   },
 
   // Life cycle
@@ -146,6 +150,21 @@ Page({
 
   onReady() {
     this.loadData();
+  },
+
+  onPageScroll(event) {
+    const { isPageScroll } = this.data;
+    const { scrollTop } = event;
+
+    if (!isPageScroll && scrollTop > 0)
+      this.setData({
+        isPageScroll: true,
+      });
+
+    if (isPageScroll && scrollTop <= 0)
+      this.setData({
+        isPageScroll: false,
+      });
   },
 
   onUnload() {

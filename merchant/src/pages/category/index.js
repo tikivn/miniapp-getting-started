@@ -1,5 +1,5 @@
 import { group } from '../../utils/common';
-import { navigate, parseQuery, goToProductDetail } from '../../utils/navigate';
+import { navigate, parseQuery } from '../../utils/navigate';
 import { getCategoriesAPI, getProductsAPI } from '../../services/index';
 import { defaultSorts } from '../../utils/constant';
 import { systemInfo } from '../../utils/system';
@@ -14,8 +14,8 @@ Page({
   hasMore: false,
 
   data: {
-    isLoadingCategory: false,
-    isLoadingProduct: false,
+    isLoadingCategory: true,
+    isLoadingProduct: true,
     isLoadingMoreProduct: false,
     isStickSortButton: false,
     isScrollUp: false,
@@ -146,7 +146,13 @@ Page({
   },
 
   onTapProduct(product) {
-    goToProductDetail({ product, page: 'category' });
+    navigate({
+      page: 'product-detail',
+      params: {
+        product_id: product.id,
+        spid: product.seller_product_id,
+      },
+    });
   },
 
   // Life cycle

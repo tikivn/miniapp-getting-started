@@ -1,4 +1,4 @@
-import { parseQuery, goToProductDetail } from '../../utils/navigate';
+import { parseQuery, navigate } from '../../utils/navigate';
 import { getProductsAPI } from '../../services/index';
 import { systemInfo } from '../../utils/system';
 
@@ -9,7 +9,7 @@ Page({
   hasMore: false,
 
   data: {
-    isLoadingProduct: false,
+    isLoadingProduct: true,
     isLoadingMoreProduct: false,
     products: {
       data: [],
@@ -77,7 +77,13 @@ Page({
   },
 
   onTapProduct(product) {
-    goToProductDetail({ product, page: 'product' });
+    navigate({
+      page: 'product-detail',
+      params: {
+        product_id: product.id,
+        spid: product.seller_product_id,
+      },
+    });
   },
 
   // Life cycle

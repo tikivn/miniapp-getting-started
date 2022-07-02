@@ -2,13 +2,18 @@
   top: 0;
   left: 0;
   z-index: 10;
+  border: 1px solid transparent;
 }
 
 .home-banners {
-  margin-top: calc(var(--tf-status-bar-height) + 128px);
+  margin-top: calc(var(--tf-status-bar-height) + 130px);
 }
 
 .home-category-multiple {
   margin-left: -16px;
   margin-right: -16px;
+}
+
+.home-shop-info-border {
+  border: 1px solid var(--gray20);
 }
