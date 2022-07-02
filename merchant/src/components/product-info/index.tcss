@@ -1,0 +1,32 @@
+.view-more {
+  position: absolute;
+  z-index: 2;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.product-info-html {
+  max-height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.product-info-html::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  z-index: 1;
+}
+
+.product-info-html-show-more {
+  max-height: unset;
+}
+
+.product-info-html-show-more::before {
+  content: none;
+}

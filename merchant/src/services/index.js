@@ -6,23 +6,6 @@ export const getShopInfoAPI = async ({ sellerId }) => {
   });
 };
 
-export const getShopFollowersAPI = async ({ sellerId }) => {
-  const res = await request({
-    baseUrl: 'https://api.tiki.vn/social/openapi',
-    path: '/interaction/following',
-    params: {
-      tiki_seller_id: sellerId,
-    },
-  });
-
-  return {
-    following: {
-      total_follower: res.data.following.total_follower,
-    },
-    is_followed: res.data.is_followed,
-  };
-};
-
 export const getCategoriesAPI = async ({ sellerId, parentId }) => {
   const res = await request({
     path: '/merchant/categories',
@@ -70,7 +53,7 @@ export const getProductsSearchAPI = async ({
     path: `merchant/products`,
     params: {
       aggregations: '1',
-      seller_id: sellerId,
+      seller: sellerId,
       q: keyword,
       sort,
       page,
@@ -97,4 +80,16 @@ export const getBannersAPI = async () => {
   });
 
   return res.data;
+};
+
+export const getProductDetails = async ({ id, spid }) => {
+  const res = await request({
+    baseUrl: 'https://tiki.vn/api/v2',
+    path: `/products/${id}`,
+    params: {
+      spid,
+    },
+  });
+
+  return res;
 };

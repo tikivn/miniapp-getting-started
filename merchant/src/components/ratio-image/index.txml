@@ -1,0 +1,19 @@
+<import-sjs
+  from="./helper.sjs"
+  name="{ratioToPercent}"
+/>
+
+<view
+  class="ratio-image-container {{className}}"
+  style="padding-top: {{ratioToPercent(ratio)}}%;"
+>
+  <cached-image
+    tiki:if="{{src}}" 
+    className="{{imageClass}}"
+    src="{{src}}" 
+    cacheWidth="{{cacheWidth}}"
+    mode="{{mode}}"
+    lazy-load="{{lazyLoad}}"
+    onTap="onTap"
+  />
+</view>

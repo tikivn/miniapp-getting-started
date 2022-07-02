@@ -6,18 +6,17 @@
     onClick="showBottomSheet"
     onLeftClick="showBottomSheet"
   />
-  <block tiki:if="{{isShow}}">
-    <bottom-sheet
-      title="Sắp xếp"
-      onClose="hideBottomSheet"
-    >
-      <template
-        is="sort-content"
-        data="{{sorts, selectedSort}}"
-      />
-      <view slot="footer"/>
-    </bottom-sheet>
-  </block>
+  <bottom-sheet
+    show="{{isShow}}"
+    title="Sắp xếp"
+    onClose="hideBottomSheet"
+  >
+    <template
+      is="sort-content"
+      data="{{sorts, selectedSort}}"
+    />
+    <view slot="footer"/>
+  </bottom-sheet>
 </view>
 
 <template name="sort-content">

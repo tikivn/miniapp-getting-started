@@ -1,0 +1,12 @@
+{
+  "titleBarBottomColor": "transparent",
+  "usingComponents": {
+    "product-images": "components/product-images/index",
+    "product-header": "components/product-header/index",
+    "product-info": "components/product-info/index",
+    "product-section": "components/product-section/index",
+    "product-option": "components/product-option/index",
+    "toast": "components/toast/index",
+    "button": "@tiki.vn/tini-ui/es/tu-button/index"
+  }
+}

@@ -12,9 +12,11 @@
 
   <template name="product-completed">
     <view catchTap="_onTapProduct">
-      <image
-        class="product-thumbnail radius-8px mb-2x-small radius-8px"
+      <cached-image
+        className="product-thumbnail radius-8px mb-2x-small radius-8px"
         src="{{product.thumbnail_url}}"
+        mode="widthFix"
+        cacheWidth="{{280}}"
       />
       <text
         class="mb-4x-small"

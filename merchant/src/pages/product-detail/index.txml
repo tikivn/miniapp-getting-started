@@ -1,0 +1,66 @@
+<view>
+  <product-images
+    isLoading="{{isLoading}}"
+    images="{{selectedProduct.images && selectedProduct.images.length ? selectedProduct.images : product.images}}"
+  />
+  <view class="py-medium product-detail-content">
+    <product-header
+      className="px-medium"
+      isLoading="{{isLoading}}"
+      product="{{...product, ...selectedProduct}}" 
+    />
+    <product-option
+      tiki:for="{{isLoading ? 2 : product.configurable_options}}"
+      tiki:key="code"
+      className="px-medium mt-medium"
+      isLoading="{{isLoading}}"
+      product="{{product}}"
+      selectedProduct="{{...product, ...selectedProduct}}"
+      option="{{item}}"
+      onConfirm="handleConfirmOption"
+    />
+    <view class="section-divider mt-medium"/>
+    <view className="px-medium mt-medium">
+      <view class="mb-20px font-bold text-medium">Thông tin chi tiết</view>
+      <product-info
+        isLoading="{{isLoading}}"
+        specifications="{{product.specifications}}"
+        description="{{product.description}}"
+      />
+    </view>
+    <view class="section-divider"/>
+    <block tiki:if="{{isLoading || relativeProducts.length}}">
+      <view class="p-medium bg-white">
+        <view class="mb-small font-bold text-medium">Sản phẩm tương tự</view>
+        <product-section
+          isLoading="{{isLoading}}"
+          skeletons="{{4}}"
+          products="{{relativeProducts}}"
+          onTapProduct="onTapProduct"
+        />
+      </view>
+      <view class="section-divider"/>
+    </block>
+  </view>
+  <view class="fixed product-detail-footer bg-white">
+    <view class="product-detail-footer-button px-medium py-2x-small">
+      <button
+        class="w-full"
+        shape="pill"
+        disabled="{{isLoading || product.categories.id === 11312}}"
+        onTap="handleAddToCart"
+      >
+        {{product.categories.id === 11312 ? 'Vui lòng thanh toán tại website' : 'Thêm vào giỏ hàng'}}
+      </button>
+    </view>
+  </view>
+
+  <toast
+    closeAfter={{1500}}
+    bottom="{{56}}"
+    type="{{toast.type}}"
+    isShow="{{toast.isShow}}"
+    content="{{toast.content}}"
+    onCancel="hideToast"
+  />
+</view>

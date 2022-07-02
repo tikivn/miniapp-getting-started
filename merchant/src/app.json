@@ -3,7 +3,8 @@
     "pages/home/index",
     "pages/category/index",
     "pages/product/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/product-detail/index"
   ],
   "window": {
     "defaultTitle": "",

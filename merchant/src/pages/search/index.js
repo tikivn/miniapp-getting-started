@@ -2,7 +2,7 @@ import { getStorage, setStorage } from '../../utils/storage';
 import { LOADING_STATUS } from '../../utils/constant';
 import { getProductsSearchAPI, getProductsAPI } from '../../services/index';
 import { systemInfo } from '../../utils/system';
-import { goToProductDetail } from '../../utils/navigate';
+import { navigate } from '../../utils/navigate';
 
 const sellerId = getApp().sellerId;
 
@@ -16,7 +16,7 @@ Page({
   data: {
     isStickSortButton: false,
     isScrollUp: false,
-    isLoading: false,
+    isLoading: true,
     otherProducts: [],
     products: [],
     next_page: null,
@@ -47,7 +47,7 @@ Page({
       },
     ],
     selectedSort: {
-      label: 'Phổ biến',
+      label: 'Phổ biến',
       value: 'default',
     },
   },
@@ -98,21 +98,32 @@ Page({
 
   addProductToHistory(product) {
     this.addSearchHistory(this.data.searchTerm);
-    goToProductDetail({ product, page: 'search' });
+    navigate({
+      page: 'product-detail',
+      params: {
+        product_id: product.id,
+        spid: product.seller_product_id,
+      },
+    });
   },
 
   onTapProduct(product) {
-    goToProductDetail({ product, page: 'search' });
+    navigate({
+      page: 'product-detail',
+      params: {
+        product_id: product.id,
+        spid: product.seller_product_id,
+      },
+    });
   },
 
   clearSearchInput() {
     this.onChangeSearchInput({ detail: { value: '' } });
   },
 
-  async removeKeySearch(event) {
-    const { item } = event.target.dataset;
+  async removeKeySearch(key) {
     const recentKeys = await getStorage(`recentSearch${sellerId}`);
-    const removedKeys = recentKeys.filter((k) => k !== item);
+    const removedKeys = recentKeys.filter((k) => k !== key);
     setStorage(`recentSearch${sellerId}`, removedKeys);
     this.setData({
       recentKeys: removedKeys,
@@ -126,11 +137,11 @@ Page({
     });
   },
 
-  onClickKeySearch(event) {
-    const { key } = event.target.dataset;
+  applySearchKey(key) {
     this.setData({
       searchTerm: key,
     });
+
     this.onSearch(true);
   },
 

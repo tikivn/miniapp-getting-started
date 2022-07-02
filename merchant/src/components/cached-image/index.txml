@@ -1,0 +1,15 @@
+<import-sjs
+  from="./helper.sjs"
+  name="{formatCachedUrl}">
+</import-sjs>
+
+
+<image 
+  class="cached-image {{className}}" 
+  src="{{cacheWidth ? formatCachedUrl({url: src, cacheWidth}) : src}}" 
+  style="{{style}}"
+  mode="{{mode}}"
+  lazy-load="{{lazyLoad}}"
+  default-source="{{lazyLoad ? '/assets/images/small.png' : ''}}" 
+  onTap="onTap"
+/>

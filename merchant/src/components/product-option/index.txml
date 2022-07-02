@@ -1,0 +1,131 @@
+<import-sjs from="../../utils/common.sjs" name="{numberFormatter}"></import-sjs>
+
+<template name="option-item">
+  <view
+    class="h-full radius-8px px-medium py-2x-small flex items-center justify-between option-image-border {{isActive ? 'option-item-active' : ''}}"
+  >
+    <view class="flex items-center">
+      <view>
+        <cached-image
+          tiki:if="{{isShowPreview}}"
+          mode="aspectFill"
+          class="size-40 radius-pill mr-2x-small product-option-border"
+          src="{{preview}}"
+          cacheWidth="{{100}}"
+        />
+      </view>
+      <view>
+        <text
+          class="mb-4x-small"
+          number-of-lines="{{1}}"
+        >
+          {{name}}
+        </text>
+        <text 
+          class="font-bold"
+          number-of-lines="{{1}}"
+        >
+          {{value}}
+        </text>
+      </view>
+    </view>
+    <icon
+      tiki:if="{{isShowIcon}}"
+      type="arrow_right"
+      color="#808089"
+    />
+  </view>
+</template>
+
+<view class="product-option {{className}}">
+  <template name="loading">
+    <view class="radius-8px w-full product-option-skeleton skeleton"/>
+  </template>
+
+  <template name="completed">
+    <view onTap="handleShowBottomSheet">
+      <template
+        is="option-item"
+        data="{{isShowPreview: option.show_preview_image, preview: selectedProduct.thumbnail_url, name: option.name, value: selectedProduct[option.code], isShowIcon: true}}"
+      />
+    </view>
+  </template>
+
+  <template
+    is="{{isLoading ? 'loading' : 'completed'}}"
+    data="{{option, selectedProduct}}"
+  />
+
+  <bottom-sheet
+    show="{{isShow}}"
+    zIndex="{{10}}"
+    title="Lựa chọn thuộc tính"
+    onClose="handleHideBottomSheet"
+  >
+    <view class="border-bottom-gray p-medium">
+      <view class="flex">
+        <view>
+          <cached-image
+            mode="widthFix"
+            class="size-120 block radius-8px radius-8px"
+            src="{{selectingProduct.thumbnail_url}}"
+            cacheWidth="{{120}}"
+          />
+        </view>
+        <view class="ml-medium">
+          <text
+            class="mb-4x-small"
+            number-of-lines="{{2}}"
+          >
+            {{product.name}}
+          </text>
+          <rating
+            tiki:if="{{product.rating_average}}"
+            className="mb-2x-small"
+            rate="{{product.rating_average}}"
+            votes="{{product.review_count}}"
+          />
+          <view class="flex items-center mb-5x-small">
+            <text
+              class="font-bold mr-2x-small"
+              number-of-lines="{{1}}"
+            >
+              {{numberFormatter(selectingProduct.price, ' ₫')}}
+            </text>
+            <view
+              tiki:if="{{product.discount_rate}}"
+              class="text-white product-badge font-bold text-x-small radius-8px px-4x-small"
+            >
+              {{`-${product.discount_rate}%`}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="p-medium {{formattedValues.length <= 3 ? 'option-group-list' : 'option-group-grid'}}">
+      <view
+        tiki:for="{{formattedValues}}"
+        tiki:key="{{label}}"
+        class="option-item"
+        data-item="{{item}}"
+        onTap="handleOnSelect"
+      >
+        <template
+          is="option-item"
+          data="{{isShowPreview: option.show_preview_image, preview: item.preview, name: option.name, value: item.label, isActive: item.label === selectingProduct[option.code]}}"
+        />
+      </view>
+    </view>
+    <view slot="footer">
+      <view class="product-option-footer bg-white px-medium py-2x-small">
+        <button
+          class="w-full"
+          shape="pill"
+          onTap="handleOnConfirm"
+        >
+          Xong
+        </button>
+      </view>
+    </view>
+  </bottom-sheet>
+</view>

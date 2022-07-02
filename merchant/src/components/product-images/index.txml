@@ -1,0 +1,27 @@
+<view class="relative">
+  <view
+    tiki:if="{{isLoading}}"
+    class="products-images-skeleton skeleton w-full"
+  />
+  <carousel
+    tiki:else
+    onChange="handleOnChange"
+  >
+    <carousel-item tiki:for="{{images}}">
+      <view class="relative">
+        <cached-image
+          className="w-full"
+          src="{{item.base_url ? item.base_url : item.medium_url}}"
+          mode="aspectFit"
+          cacheWidth="{{360}}"
+        />
+      </view>
+    </carousel-item>
+  </carousel>
+  <view
+    tiki:if="{{!isLoading}}"
+    class="products-images-index text-white"
+  >
+    {{current}}/{{images.length}}
+  </view>
+</view>

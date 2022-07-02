@@ -1,0 +1,15 @@
+.product-detail-content {
+  padding-bottom: calc(56px + var(--safe-area-inset-bottom));
+}
+
+.product-detail-footer {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  border-top: 1px solid #ebebf0;
+}
+
+.product-detail-footer-button {
+  padding-bottom: calc(8px + var(--safe-area-inset-bottom));
+}

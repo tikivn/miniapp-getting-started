@@ -1,6 +1,6 @@
 import { getSystemInfo } from './system';
 
-let ENV = null;
+let ENV = 'prod';
 
 export const getBaseUrl = async () => {
   if (!ENV) {
@@ -21,7 +21,7 @@ export const getGraphqlBaseUrl = async () => {
   }
 
   return {
-    dev: 'https://social-api.tala.xyz/api/graphql/query',
-    prod: 'https://social-api.tiki.vn/api/graphql/query',
+    dev: 'https://api.tala.xyz/tiniapp-open-api',
+    prod: 'https://api.tiki.vn/tiniapp-open-api',
   }[ENV];
 };
