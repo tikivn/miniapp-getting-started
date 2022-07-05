@@ -4,8 +4,6 @@
   <p align="center">
     Template hỗ trợ store của Tiki có thể tạo được một ứng dụng shopping đơn giản bằng nền tảng Tini App
     <br />
-    <a href="https://developers.tiki.vn/docs/developer/quick-example/shopping"><strong>Xem thêm tại »</strong></a>
-    <br />
     <br />
   </p>
 </div>
