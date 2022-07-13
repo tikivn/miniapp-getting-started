@@ -18,18 +18,18 @@
     entities "^1.1.1"
     events "^3.0.0"
 
-"@tiki.vn/tini-style@0.10.1-rc.4+caa799d":
-  version "0.10.1-rc.4"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.10.1-rc.4.tgz#e8ec4cb77198f84c4bdd53feaac5a956cd34aec8"
-  integrity sha512-7/5kSqAubdda020+oQz3EgGrqeS/Gwt8Kbhv1vun2OTX1FmxwTZZhg/qgKU0t6kDjI3ADsPf7oX+6JwpLZS6jg==
+"@tiki.vn/tini-style@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.12.0.tgz#feddf99282b7d695d61cbe89924b05d4fad51bba"
+  integrity sha512-4swSXhnEA18o82it0NPmBzJ00fO6wJCqZTZhxzNimDVWHYWtjbWVKia1ipsbAxYkmBkdAJZf/2kW8eQ75Rqzlg==
 
-"@tiki.vn/tini-ui@0.10.1-rc.4":
-  version "0.10.1-rc.4"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.10.1-rc.4.tgz#5903fe61a7e40e11e7c94ed0a270e4fabb0c5ded"
-  integrity sha512-G15Q9HW+pzB+UCuCqYDd+JW0v93x5DyZOXu/u75HkZ/aTMWw2fVei+5sXuh1EMprIn3t9yp3/g2Ag+vzDxRXxg==
+"@tiki.vn/tini-ui@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.12.0.tgz#634659a484dc1cb279777918591b6e41e1c41841"
+  integrity sha512-0eJfcqCtOs6Jg2YOmEylLKrI+d4DYChLPSzd2lCpMLpGCiPcnwDBxmq2PAhOp9GwtF1GkeDma9s4gf1qgz4QPw==
   dependencies:
     "@babel/runtime" "^7.15.3"
-    "@tiki.vn/tini-style" "0.10.1-rc.4+caa799d"
+    "@tiki.vn/tini-style" "0.12.0"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
