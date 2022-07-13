@@ -9,18 +9,18 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@tiki.vn/tini-style@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.10.0.tgz#a9492170a02f281b466123fb6db33ba50e98fbad"
-  integrity sha512-AfgLLiFuroW9FWspV1c4fN0EJXbibmKEgos6JZmIV4VouOsLjJfE+UuoX6hKrdA6932jx0LlT2RQ9Si9ISy5qw==
+"@tiki.vn/tini-style@0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.12.0.tgz#feddf99282b7d695d61cbe89924b05d4fad51bba"
+  integrity sha512-4swSXhnEA18o82it0NPmBzJ00fO6wJCqZTZhxzNimDVWHYWtjbWVKia1ipsbAxYkmBkdAJZf/2kW8eQ75Rqzlg==
 
-"@tiki.vn/tini-ui@0.10.0":
-  version "0.10.0"
-  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.10.0.tgz#60bf0fc0509bea1e2df6a6f90863146a5c7495e5"
-  integrity sha512-2F0XkNxHo+VecONz4ucd68OoG6HLcefZ6Yo2BocS1t3WrjVscrSUtJBTlI3jalMjdbsuriD2iVxseY2u754UZg==
+"@tiki.vn/tini-ui@^0.12.0":
+  version "0.12.0"
+  resolved "https://registry.yarnpkg.com/@tiki.vn/tini-ui/-/tini-ui-0.12.0.tgz#634659a484dc1cb279777918591b6e41e1c41841"
+  integrity sha512-0eJfcqCtOs6Jg2YOmEylLKrI+d4DYChLPSzd2lCpMLpGCiPcnwDBxmq2PAhOp9GwtF1GkeDma9s4gf1qgz4QPw==
   dependencies:
     "@babel/runtime" "^7.15.3"
-    "@tiki.vn/tini-style" "0.10.0"
+    "@tiki.vn/tini-style" "0.12.0"
 
 decode-uri-component@^0.2.0:
   version "0.2.0"
