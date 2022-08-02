@@ -1,4 +1,6 @@
 {
+  "defaultTitle": "",
+  "titleBarBottomColor": "#fff",
   "usingComponents": {
     "header-product": "components/header-product/index",
     "shipping-info": "components/shipping-info/index",
