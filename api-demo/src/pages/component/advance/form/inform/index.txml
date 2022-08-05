@@ -1,0 +1,32 @@
+5<template name="variant-format">
+  <block-variant header="Variant" title="1. Message type" description="Positive, Negative, Information.">
+    <view class="mt-medium">
+      <inform class="mt-medium" type="positive" message="Positive message" />
+      <inform class="mt-medium" type="negative" message="Negative message" />
+      <inform class="mt-medium" type="informative" message="Informative message" />
+    </view>
+  </block-variant>
+</template>
+
+<template name="variant-state">
+  <block-variant title="2. Content" description="Message only, Message with title.">
+    <inform class="mt-medium" type="informative" message="Informative message" />
+    <inform class="mt-medium" type="informative" title="Title" message="Informative message" />
+  </block-variant>
+</template>
+
+<template name="variant-action">
+  <block-variant title="3. Action" description="Icon only, Button only, Blank.">
+    <inform class="mt-medium" type="informative" message="Informative message" />
+    <inform class="mt-medium" type="informative" action="Action" message="Informative message" />
+    <inform class="mt-medium" type="informative" icon="close" iconColor="#808089" message="Informative message" />
+  </block-variant>
+</template>
+
+<view class="page">
+  <block-header title="Usage"
+    description="Inform promotes an important message. These are often used in form validation, providing a place to aggregate feedback related to multiple fields." />
+  <template is="variant-format" />
+  <template is="variant-state" />
+  <template is="variant-action" />
+</view>

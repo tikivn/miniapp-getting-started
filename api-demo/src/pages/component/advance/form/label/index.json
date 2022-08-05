@@ -1,0 +1,10 @@
+{
+  "defaultTitle": "Label",
+  "usingComponents": {
+    "list-item": "@tiki.vn/tini-ui/es/list/list-item/index",
+    "textfield": "@tiki.vn/tini-ui/es/textfield/index",
+    "tu-label": "@tiki.vn/tini-ui/es/tu-label/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}
