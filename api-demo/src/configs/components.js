@@ -342,6 +342,19 @@ const advancedComponents = [
         name: 'Bottom sheet',
         path: '/pages/component/advance/feedback/bottom-sheet/index',
       },
+      {
+        name: 'Toast bar',
+        path: '/pages/component/advance/feedback/toast-bar/index',
+      },
+    ],
+  },
+  {
+    name: 'Status',
+    components: [
+      {
+        name: 'Progress',
+        path: '/pages/component/advance/status/tu-progress/index',
+      },
     ],
   },
   {

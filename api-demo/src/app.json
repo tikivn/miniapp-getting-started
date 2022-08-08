@@ -153,7 +153,9 @@
     "pages/component/advance/popup/index",
     "pages/component/advance/modal/index",
     "pages/component/advance/epub-reader/index",
-    "pages/component/template/cart-detail/index"
+    "pages/component/template/cart-detail/index",
+    "pages/component/advance/status/tu-progress/index",
+    "pages/component/advance/feedback/toast-bar/index"
   ],
   "tabBar": {
     "items": [
