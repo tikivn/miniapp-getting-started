@@ -1,0 +1,96 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Search bar are used to allow users to provide text input for searching" />
+
+  <block-variant header="Variants">
+    <view class="list-item">
+      <view class="subtitle mb-8">1. Types</view>
+      <view class="line" />
+
+      <button class="mb-medium" onTap="onShowToast" data-configs="{{
+        type: 'neutral',
+        content: 'Neutral',
+        showCloseIcon: true,
+        actionText: ''
+      }}">Neutral</button>
+
+      <button class="mb-medium" onTap="onShowToast" data-configs="{{
+        type: 'informative',
+        content: 'Informative',
+        showCloseIcon: true,
+        actionText: ''
+      }}">Informative</button>
+
+      <button class="mb-medium" onTap="onShowToast" data-configs="{{
+        type: 'positive',
+        content: 'Positive',
+        showCloseIcon: true,
+        actionText: ''
+      }}">Positive</button>
+
+      <button onTap="onShowToast" data-configs="{{
+        type: 'negative',
+        content: 'Negative',
+        showCloseIcon: true,
+        actionText: ''
+      }}">Negative</button>
+    </view>
+  </block-variant>
+
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">2. Close icon</view>
+      <view class="line" />
+
+      <button class="mb-medium" onTap="onShowToast" data-configs="{{
+        type: 'informative',
+        content: 'Informative',
+        showCloseIcon: true,
+        actionText: ''
+      }}">With Close icon</button>
+
+      <button class="mb-medium" onTap="onShowToast" data-configs="{{
+        type: 'informative',
+        content: 'Informative',
+        showCloseIcon: false,
+        actionText: ''
+      }}">Without Close icon</button>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">3. Action</view>
+      <view class="line" />
+
+      <button class="mb-medium" onTap="onShowToast" data-configs="{{
+        type: 'informative',
+        content: 'Informative',
+        showCloseIcon: true,
+        actionText: 'Action'
+      }}">With Action & Close icon</button>
+
+      <button class="mb-medium" onTap="onShowToast" data-configs="{{
+        type: 'informative',
+        content: 'Informative',
+        showCloseIcon: false,
+        actionText: 'Action'
+      }}">Only Action</button>
+    </view>
+  </block-variant>
+
+  <toast-bar
+    onClose="onCloseToast"
+    placement="bottom"
+    top="{{0}}"
+    show="{{showToast}}"
+    duration="{{3000}}"
+    animation="{{true}}"
+    content="{{configs.content}}"
+    type="{{configs.type}}"
+    showCloseIcon="{{configs.showCloseIcon}}"
+    actionText="{{configs.actionText}}"
+    onTapAction="onTapAction"
+  />
+</view>
