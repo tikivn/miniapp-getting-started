@@ -9,16 +9,11 @@
       <view class="line" />
 
       <view class="list-item-label">
-        <textfield 
-          placeholder="With label"
-          onInput="onInput" 
-          onFocus="onFocus" 
-          onBlur="onBlur" 
-          onConfirm="onConfirm" 
+        <textfield placeholder="Placeholder" onInput="onInput" onFocus="onFocus" onBlur="onBlur" onConfirm="onConfirm"
           labelText="Label" />
       </view>
       <view class="list-item-label">
-        <textfield placeholder="Without label" />
+        <textfield placeholder="Placeholder" />
       </view>
     </view>
   </block-variant>
@@ -30,49 +25,70 @@
       <view class="line" />
 
       <view class="list-item-label">
-        <textfield placeholder="Click to type here" labelText="Rounded" shape="rounded" />
+        <textfield placeholder="Placeholder" labelText="Rounded" shape="rounded" />
       </view>
       <view class="list-item-label">
-        <textfield placeholder="Click to type here" labelText="Pill" shape="pill" />
+        <textfield placeholder="Placeholder" labelText="Pill" shape="pill" />
       </view>
     </view>
   </block-variant>
 
   <block-variant header="">
     <view class="list-item">
-      <view class="subtitle mb-8">3. State</view>
-      <view class="sub-content mb-8">Filled, Disabled, Error, Skeleton loading.</view>
+      <view class="subtitle mb-8">3. Content</view>
+      <view class="sub-content mb-8">Text only, Leading icon, Trailing icon.</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <textfield placeholder="Placeholder" />
+      </view>
+      <view class="list-item-label">
+        <textfield placeholder="Placeholder" leadingIcon="placeholder" />
+      </view>
+      <view class="list-item-label">
+        <textfield placeholder="Placeholder" trailingIcon="placeholder" />
+      </view>
+
+      <view class="list-item-label">
+        <textfield placeholder="Placeholder" leadingIcon="placeholder" trailingIcon="placeholder" />
+      </view>
+
+      <view class="list-item-label">
+        <textfield placeholder="Placeholder" prefix="text" prefixContent="Label" />
+      </view>
+
+      <view class="list-item-label">
+        <textfield placeholder="Placeholder" suffix="button" suffixContent="Button" />
+      </view>
+
+      <view class="list-item-label">
+        <textfield placeholder="Placeholder" prefix="text" prefixContent="Label" suffix="button"
+          suffixContent="Button" />
+      </view>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">4. States & Statuses</view>
+      <view class="sub-content mb-8">Empty, Hove, Focus, Typing, Filled, Disabled, Error, Skeleton loading.</view>
       <view class="line" />
 
       <view class="list-item-label">
         <textfield value="{{filled}}" labelText="Label" onInput="onChangeFilled" />
       </view>
       <view class="list-item-label">
-        <textfield disabled labelText="Disabled" placeholder="Disabled" />
+        <textfield disabled labelText="Label" placeholder="Placeholder" />
       </view>
       <view class="list-item-label">
-        <textfield hasError errorMsg="Error message" placeholder="Error" labelText="Label" />
+        <textfield hasError errorMsg="Error message" placeholder="Placeholder" labelText="Label" />
       </view>
-      <view class="list-item-label">
-        <textfield loading placeholder="Loading" />
-      </view>
-    </view>
-  </block-variant>
-
-  <block-variant header="">
-    <view class="list-item">
-      <view class="subtitle mb-8">4. Content</view>
-      <view class="sub-content mb-8">Text only, Leading icon, Trailing icon.</view>
-      <view class="line" />
 
       <view class="list-item-label">
-        <textfield placeholder="Text only" />
+        <textfield hasSuccess successMsg="Success message" placeholder="Placeholder" labelText="Label" />
       </view>
       <view class="list-item-label">
-        <textfield placeholder="Text with leading icon" iconLeft="placeholder" />
-      </view>
-      <view class="list-item-label">
-        <textfield placeholder="Text with trailing icon" iconRight="placeholder" />
+        <textfield loading placeholder="Placeholder" />
       </view>
     </view>
   </block-variant>

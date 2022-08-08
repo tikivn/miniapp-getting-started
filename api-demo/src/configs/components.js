@@ -215,6 +215,10 @@ const advancedComponents = [
     name: 'Forms',
     components: [
       {
+        name: 'Label',
+        path: '/pages/component/advance/form/label/index',
+      },
+      {
         name: 'Text field',
         path: '/pages/component/advance/form/text-field/index',
       },
@@ -253,6 +257,10 @@ const advancedComponents = [
       {
         name: 'Chip',
         path: '/pages/component/advance/form/chip/index',
+      },
+      {
+        name: 'Inform',
+        path: '/pages/component/advance/form/inform/index',
       },
       {
         name: 'Calendar',

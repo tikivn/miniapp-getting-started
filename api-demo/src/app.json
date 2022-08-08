@@ -132,6 +132,8 @@
     "pages/component/advance/form/switch/index",
     "pages/component/advance/form/slider/index",
     "pages/component/advance/form/chip/index",
+    "pages/component/advance/form/inform/index",
+    "pages/component/advance/form/label/index",
     "pages/component/advance/form/calendar/index",
     "pages/component/advance/form/tooltip/index",
     "pages/component/advance/form/pin/index",

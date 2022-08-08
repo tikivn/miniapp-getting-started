@@ -1,0 +1,84 @@
+<view class="page">
+  <block-header title="Usage" description="Usually used in input components." />
+
+  <block-variant header="Variants">
+    <view class="list-item">
+      <view class="subtitle mb-8">1. Content</view>
+      <view class="sub-content mb-8">With badge, with helper text, with icon</view>
+      <view class="line" />
+
+      <view class="list-item-label">
+        <view class="text-desc">With badge</view>
+        <tu-label showBadge text="Label" />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With helper text</view>
+        <tu-label helperText="Text" text="Label" />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With icon</view>
+        <tu-label icon="question" text="Label" />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">Full option</view>
+        <tu-label showBadge helperText="Text" icon="question" text="Label" />
+      </view>
+
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">2. Statuses</view>
+      <view class="sub-content mb-8">Disabled, loading</view>
+      <view class="line" />
+
+      <view class="font-bold my-medium">Disabled</view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With badge</view>
+        <tu-label showBadge text="Label" disabled />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With helper text</view>
+        <tu-label helperText="Text" text="Label" disabled />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With icon</view>
+        <tu-label icon="question" text="Label" disabled />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">Full option</view>
+        <tu-label showBadge helperText="Text" icon="question" text="Label" disabled />
+      </view>
+
+      <view class="font-bold my-medium">Loading</view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With badge</view>
+        <tu-label showBadge text="Label" loading />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With helper text</view>
+        <tu-label helperText="Text" text="Label" loading />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">With icon</view>
+        <tu-label icon="question" text="Label" loading />
+      </view>
+
+      <view class="list-item-label">
+        <view class="text-desc">Full option</view>
+        <tu-label showBadge helperText="Text" icon="question" text="Label" loading />
+      </view>
+    </view>
+  </block-variant>
+</view>
