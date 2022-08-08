@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Search bar",
+  "usingComponents": {
+    "tu-progress": "@tiki.vn/tini-ui/es/tu-progress/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}
