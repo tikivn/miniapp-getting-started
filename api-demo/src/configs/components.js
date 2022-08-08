@@ -215,7 +215,7 @@ const advancedComponents = [
     name: 'Forms',
     components: [
       {
-        name: 'label',
+        name: 'Label',
         path: '/pages/component/advance/form/label/index',
       },
       {
