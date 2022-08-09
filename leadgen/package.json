@@ -1,0 +1,23 @@
+{
+  "name": "miniapp-tini-leadgen",
+  "version": "0.1.0",
+  "tiki": {
+    "appIdentifier": "vn.tiki.tini.leadgen",
+    "buildNumber": 1,
+    "metadata": {
+      "permissions": [
+        "getAddress",
+        "openDeeplink"
+      ]
+    }
+  },
+  "dependencies": {
+    "@tiki.vn/tini-ui": "/Users/nvuhung/Tiki/tiny-ui/packages/tini-ui",
+    "@tiki.vn/tini-style": "/Users/nvuhung/Tiki/tiny-ui/packages/tini-style",
+    "@tiki.vn/tini-leadgen": "/Users/nvuhung/Tiki/tiny-ui/packages/tini-leadgen",
+    "query-string": "^7.1.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}

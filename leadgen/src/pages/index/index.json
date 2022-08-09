@@ -1,0 +1,8 @@
+{
+  "backgroundColor": "#F5F5F5",
+  "defaultTitle": "Tên dịch vụ",
+  "usingComponents": {
+    "tu-button": "@tiki.vn/tini-ui/es/tu-button/index",
+    "banners": "./banners/index"
+  }
+}

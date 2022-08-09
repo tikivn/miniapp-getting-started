@@ -1,0 +1,73 @@
+<banners banners="{{banners}}" />
+
+<view class="container">
+  <view class="about-faq">
+    <view class="about">
+      <image class="about-icon" src="/assets/images/about.png" />
+      <view>
+        <text class="about-title">Về chúng tôi</text>
+        <text class="about-description">Thông tin chi tiết</text>
+      </view>
+    </view>
+    <view class="about">
+      <image class="about-icon" src="/assets/images/faq.png" />
+      <view>
+        <text class="about-title">F.A.Q</text>
+        <text class="about-description">Câu hỏi thường gặp</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="content">
+    <text class="content-title">Các chứng chỉ quỹ</text>
+    <navigator class="content-list-item" url="pages/leadgen/index?id=urn:lead:form:1">
+      <view class="flex">
+        <image class="list-item-image" src="/assets/images/product.png" />
+        <view class="list-item-sub-content">
+          <text class="list-item-bold">BPTT</text>
+          <text class="list-item-description">Quỹ đầu tư dài hạn bền vững</text>
+        </view>
+      </view>
+      <view class="list-item-sub">
+        <view class="list-item-sub-content">
+          <text class=>Đơn giá</text>
+          <text class="list-item-bold mt-2">77.000.000 ₫</text>
+        </view>
+        <view class="list-item-sub-right">
+          <view class="list-item-sub-content">
+            <text>Tăng trưởng</text>
+            <text class="list-item-bold list-item-price">↑6.9%</text>
+          </view>
+          <tu-button class="list-item-sub-button">
+            <image src="/assets/images/arrow-right.png" class="list-item-sub-button-icon" />
+          </tu-button>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator class="content-list-item" url="pages/leadgen/index?id=urn:lead:form:2">
+      <view class="flex">
+        <image class="list-item-image" src="/assets/images/product.png" />
+        <view class="list-item-sub-content">
+          <text class="list-item-bold">BPTT</text>
+          <text class="list-item-description">Quỹ đầu tư dài hạn bền vững</text>
+        </view>
+      </view>
+      <view class="list-item-sub">
+        <view class="list-item-sub-content">
+          <text class=>Đơn giá</text>
+          <text class="list-item-bold mt-2">77.000.000 ₫</text>
+        </view>
+        <view class="list-item-sub-right">
+          <view class="list-item-sub-content">
+            <text>Tăng trưởng</text>
+            <text class="list-item-bold list-item-price">↑6.9%</text>
+          </view>
+          <tu-button class="list-item-sub-button">
+            <image src="/assets/images/arrow-right.png" class="list-item-sub-button-icon" />
+          </tu-button>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

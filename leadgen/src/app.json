@@ -1,0 +1,7 @@
+{
+  "pages": ["pages/index/index", "pages/leadgen/index", "pages/product-detail/index"],
+  "window": {
+    "defaultTitle": "",
+    "backgroundColor": "#fff"
+  }
+}

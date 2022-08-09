@@ -1,0 +1,6 @@
+{
+  "backgroundColor": "#F5F5F5",
+  "usingComponents": {
+    "leadgen": "@tiki.vn/tini-leadgen/es/leadgen/index"
+  }
+}
