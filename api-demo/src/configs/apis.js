@@ -383,6 +383,14 @@ const bioMetricsAPIList = [
   },
 ];
 
+
+const securityStorageAPIList = [
+  {
+    name: 'security Storage',
+    path: 'pages/api/security-storage/index',
+  },
+];
+
 const APIList = [
   {
     type: 'Basic API',
@@ -476,7 +484,13 @@ const APIList = [
     type: 'Payment',
     list: paymentAPIList,
   },
+  {
+    type: 'Security Storage',
+    list: securityStorageAPIList,
+  },
 ];
+
+
 
 const flattenApis = APIList.reduce((rs, item) => rs.concat(item.list), []);
 
