@@ -1,0 +1,21 @@
+<view class="page">
+  <block-header title="Usage" description="" />
+  <view class="block-content">
+    <input placeholder="text" name="text" onInput="textChange"></input>
+    
+    <view class="page-section-demo">
+      <button type="primary" onTap="setStorage">set storage</button>
+    </view>
+    <view class="page-section-demo">
+      <button type="primary" onTap="getStorage">get storage</button>
+    </view>
+  </view>
+  <view class="block-content">
+    <view class="page-section-demo">
+      <button type="primary" onTap="removeStorage">remove storage</button>
+    </view>
+    <view class="page-section-demo">
+      <button type="primary" onTap="getAllKeys">get all keys storage</button>
+    </view>
+  </view>
+</view>
