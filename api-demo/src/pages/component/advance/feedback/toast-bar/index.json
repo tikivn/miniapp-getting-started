@@ -1,0 +1,8 @@
+{
+  "defaultTitle": "Toast bar",
+  "usingComponents": {
+    "toast-bar": "@tiki.vn/tini-ui/es/toast-bar/index",
+    "block-header": "components/block-header/index",
+    "block-variant": "components/block-variant/index"
+  }
+}

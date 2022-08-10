@@ -1,0 +1,32 @@
+.list-item-label {
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.tu-label-icon {
+  display: flex;
+  align-items: center;
+}
+
+.tu-label-helper-loading {
+  width: 40px;
+}
+
+.text-desc {
+  color: #808089;
+  width: 80px;
+}
+
+.sub-content {
+  color: var(--text-content-secondary);
+  font-size: 12px;
+}
+
+.line {
+  margin-bottom: 8px;
+}
+
+.list-item {
+  display: block;
+}

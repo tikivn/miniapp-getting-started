@@ -133,6 +133,8 @@
     "pages/component/advance/form/switch/index",
     "pages/component/advance/form/slider/index",
     "pages/component/advance/form/chip/index",
+    "pages/component/advance/form/inform/index",
+    "pages/component/advance/form/label/index",
     "pages/component/advance/form/calendar/index",
     "pages/component/advance/form/tooltip/index",
     "pages/component/advance/form/pin/index",
@@ -152,7 +154,9 @@
     "pages/component/advance/popup/index",
     "pages/component/advance/modal/index",
     "pages/component/advance/epub-reader/index",
-    "pages/component/template/cart-detail/index"
+    "pages/component/template/cart-detail/index",
+    "pages/component/advance/status/tu-progress/index",
+    "pages/component/advance/feedback/toast-bar/index"
   ],
   "tabBar": {
     "items": [

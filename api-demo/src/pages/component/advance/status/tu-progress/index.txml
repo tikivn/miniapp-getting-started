@@ -1,0 +1,48 @@
+<view class="page">
+  <block-header title="Usage"
+    description="Search bar are used to allow users to provide text input for searching" />
+
+  <block-variant header="Variants">
+    <view class="list-item">
+      <view class="subtitle mb-8">1. Types</view>
+      <view class="line" />
+      <view class="sub-content mb-8">With vaue</view>
+      <tu-progress class="mb-medium" shape="rounded" percent="10" show-info/>
+
+      <view class="sub-content mb-8">With icon button</view>
+      <tu-progress class="mb-medium" shape="rounded" percent="20" icon="close_circle"/>
+
+      <view class="sub-content mb-8">Progress line only</view>
+      <tu-progress class="mb-medium" shape="rounded" percent="30"/>
+    </view>
+  </block-variant>
+
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">2. Statuses</view>
+      <view class="line" />
+
+      <view class="sub-content mb-8">In progress</view>
+      <tu-progress class="mb-medium" shape="rounded" percent="40" status="in-progress" icon="close_circle"/>
+
+      <view class="sub-content mb-8">Error</view>
+      <tu-progress class="mb-medium" shape="rounded" percent="50" status="error"/>
+
+      <view class="sub-content mb-8">Success</view>
+      <tu-progress class="mb-medium" shape="rounded" percent="60" status="success"/>
+    </view>
+  </block-variant>
+
+  <block-variant header="">
+    <view class="list-item">
+      <view class="subtitle mb-8">3. Shapes</view>
+      <view class="line" />
+      <view class="sub-content mb-8">Rounded</view>
+      <tu-progress class="mb-medium" shape="rounded" percent="70" show-info/>
+
+      <view class="sub-content mb-8">Sharp</view>
+      <tu-progress class="mb-medium" percent="80" show-info/>
+    </view>
+  </block-variant>
+</view>

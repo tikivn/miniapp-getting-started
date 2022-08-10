@@ -215,6 +215,10 @@ const advancedComponents = [
     name: 'Forms',
     components: [
       {
+        name: 'Label',
+        path: '/pages/component/advance/form/label/index',
+      },
+      {
         name: 'Text field',
         path: '/pages/component/advance/form/text-field/index',
       },
@@ -253,6 +257,10 @@ const advancedComponents = [
       {
         name: 'Chip',
         path: '/pages/component/advance/form/chip/index',
+      },
+      {
+        name: 'Inform',
+        path: '/pages/component/advance/form/inform/index',
       },
       {
         name: 'Calendar',
@@ -333,6 +341,19 @@ const advancedComponents = [
       {
         name: 'Bottom sheet',
         path: '/pages/component/advance/feedback/bottom-sheet/index',
+      },
+      {
+        name: 'Toast bar',
+        path: '/pages/component/advance/feedback/toast-bar/index',
+      },
+    ],
+  },
+  {
+    name: 'Status',
+    components: [
+      {
+        name: 'Progress',
+        path: '/pages/component/advance/status/tu-progress/index',
       },
     ],
   },
