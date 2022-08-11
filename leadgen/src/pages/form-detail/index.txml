@@ -1,0 +1,20 @@
+<import-sjs from="../../utils/sjs.sjs" name="{formatDate, getFieldValue}"></import-sjs>
+
+<template name="field">
+  <view class="field" tiki:if="{{field.value !== '' && field.value !== null}}">
+    <text>{{field.question}}</text>
+    <text class="field-value">{{getFieldValue(field)}}</text>
+  </view>
+</template>
+
+<view class="container">
+  <view class="form-date">
+    <text>Ngày tạo hồ sơ:</text>
+    <text class="form-date-value">{{formatDate(form.created_at)}}</text>
+  </view>
+
+  <template 
+    is="field"
+    tiki:for="{{form.form.fields}}"
+    data="{{ field: item }}"/>
+</view>

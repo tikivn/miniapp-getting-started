@@ -12,9 +12,9 @@
     }
   },
   "dependencies": {
-    "@tiki.vn/tini-ui": "/Users/nvuhung/Tiki/tiny-ui/packages/tini-ui",
-    "@tiki.vn/tini-style": "/Users/nvuhung/Tiki/tiny-ui/packages/tini-style",
-    "@tiki.vn/tini-leadgen": "/Users/nvuhung/Tiki/tiny-ui/packages/tini-leadgen",
+    "@tiki.vn/tini-ui": "/Users/lap02369//Tiki/tini-ui/packages/tini-ui",
+    "@tiki.vn/tini-style": "/Users/lap02369/Tiki/tini-ui/packages/tini-style",
+    "@tiki.vn/tini-leadgen": "/Users/lap02369/Tiki/tini-ui/packages/tini-leadgen",
     "query-string": "^7.1.1"
   },
   "devDependencies": {

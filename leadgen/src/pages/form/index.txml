@@ -1,0 +1,20 @@
+<import-sjs from="../../utils/sjs.sjs" name="{formatDate}"></import-sjs>
+
+<view class="container">
+  <navigator 
+    url="pages/form-detail/index?id={{item.id}}"
+    class="form" 
+    tiki:for="{{forms}}">
+    <view class="form-header">
+      <text class="form-title">{{item.form.title}}</text>
+      <view class="align-center form-link text-small">
+        <text>Xem chi tiết</text>
+        <icon class="form-icon" type="arrow_right" color="var(--brand)" />
+      </view>
+    </view>
+    <view class="text-small">
+      <text class="form-date">Ngày tạo hồ sơ:</text>
+      <text>{{formatDate(item.created_at)}}</text>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,47 @@
+.container {
+  padding: 16px;
+}
+
+.align-center {
+  display: flex;
+  align-items: center;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.form-icon {
+  height: 24px;
+  width: 24px;
+  margin-left: 8px;
+}
+
+.form {
+  background: var(--white); 
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.form-title {
+  font-weight: bold;
+}
+
+.form-link {
+  color: var(--brand);
+  font-size: 12px;
+  display: flex;
+}
+
+.text-small {
+  font-size: 12px;
+}
+
+.form-date {
+  color: var(--color-alias-secondary-on-theme);
+  margin-right: 4px;
+  display: inline-flex;
+}

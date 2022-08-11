@@ -1,1 +1,5 @@
-App({})
+App({
+  onLaunch() {
+    getApp().token = 'abc';
+  }
+})

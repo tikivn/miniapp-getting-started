@@ -9,7 +9,7 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
-"@tiki.vn/tini-leadgen@file:../../tiny-ui/packages/tini-leadgen":
+"@tiki.vn/tini-leadgen@file:../../tini-ui/packages/tini-leadgen":
   version "0.14.0"
   dependencies:
     "@babel/runtime" "^7.15.3"
@@ -21,7 +21,7 @@
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-style/-/tini-style-0.14.0.tgz#ae7bac1d81bdc87f56f314b64fe1f8b7f5386eff"
   integrity sha512-4/TkWdPNdZHS6/yUf9IpGdY/yXL4LhLtTGXRZxXWUX23jawdv1LFybkxmCiyAAwo14HDmUNGLVrr7ZZUwWX81A==
 
-"@tiki.vn/tini-style@file:../../tiny-ui/packages/tini-style":
+"@tiki.vn/tini-style@file:../../tini-ui/packages/tini-style":
   version "0.14.0"
 
 "@tiki.vn/tini-types@^0.3.0":
@@ -29,7 +29,7 @@
   resolved "https://registry.yarnpkg.com/@tiki.vn/tini-types/-/tini-types-0.3.0.tgz#77b0de33710a2b2a5e5a9869932be4008bac5d62"
   integrity sha512-10fA88VeM39M+TL7gztCZZnJ0c0RCgX1YN4sTMcGVa8t5YmpbpNVDxEwueZGHT3sZRLRqLzpym44ckpTpUIjUA==
 
-"@tiki.vn/tini-ui@file:../../tiny-ui/packages/tini-ui":
+"@tiki.vn/tini-ui@file:../../tini-ui/packages/tini-ui":
   version "0.14.0"
   dependencies:
     "@babel/runtime" "^7.15.3"
