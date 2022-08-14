@@ -9,14 +9,14 @@
       {
         "name": "Quản lý hồ sơ",
         "pagePath": "pages/form/index",
-        "icon": "images/form.png",
-        "activeIcon": "images/form_active.png"
+        "icon": "/assets/images/book.png",
+        "activeIcon": "/assets/images/book-active.png"
       },
       {
         "name": "Trang chủ",
         "pagePath": "pages/index/index",
-        "icon": "images/home.png",
-        "activeIcon": "images/home_active.png"
+        "icon": "/assets/images/home.png",
+        "activeIcon": "/assets/images/home-active.png"
       }
     ]
   }

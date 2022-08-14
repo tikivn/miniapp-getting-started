@@ -13,9 +13,8 @@ Page({
       size: 10,
       page: 1,
       success: (res) => {
-        console.log('res :>> ', res);
         this.setData({ forms: res.items });
-      }
+      },
     });
-  }
+  },
 });
