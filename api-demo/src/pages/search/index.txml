@@ -4,7 +4,7 @@
     placeholder="Tìm kiếm thành phần/API"
     onInput="onInput" 
     shape="pill" 
-    iconLeft="search" />
+    leadingIcon="search" />
   <view class="divider mb-small" />
 </view>
 

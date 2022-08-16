@@ -352,7 +352,7 @@ const advancedComponents = [
     name: 'Status',
     components: [
       {
-        name: 'Progress',
+        name: 'Advanced progress',
         path: '/pages/component/advance/status/tu-progress/index',
       },
     ],
