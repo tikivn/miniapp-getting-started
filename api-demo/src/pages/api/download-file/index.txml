@@ -2,7 +2,7 @@
   <block-header title="Usage" description="Download a file" />
   <view class="block-content">
     Input the url to download
-    <input class="form-value" placeholder="URL" name="url" onInput="urlChange"></input>
+    <input class="form-value" value="https://www.clickdimensions.com/links/TestPDFfile.pdf" placeholder="URL" name="url" onInput="urlChange"></input>
   </view>
   <view class="block-content">
     <button class="button-full" onTap="onDownloadFile">Download Image</button>

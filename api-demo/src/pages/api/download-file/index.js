@@ -10,7 +10,7 @@ Page({
   },
   onDownloadFile() {
     my.downloadFile({
-      url: this.data.url,
+      url: 'https://www.clickdimensions.com/links/TestPDFfile.pdf',
       success: (res) => {
         my.alert({ content: JSON.stringify(res) });
         this.setData({ image: res.filePath });
