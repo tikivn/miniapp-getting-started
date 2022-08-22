@@ -1,9 +1,9 @@
 {
   "name": "miniapp-tini-leadgen",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "tiki": {
-    "appIdentifier": "vn.tiki.tini.leadgen",
-    "buildNumber": 1,
+    "appIdentifier": "vn.tiki.template.leadgen",
+    "buildNumber": 2,
     "metadata": {
       "permissions": [
         "getAddress",

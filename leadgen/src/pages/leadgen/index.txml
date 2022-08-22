@@ -1,1 +1,1 @@
-<leadgen id="{{id}}" />
+<leadgen id="{{id}}" onSubmitSuccess="onSubmitSuccess" />

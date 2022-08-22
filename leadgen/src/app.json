@@ -1,5 +1,11 @@
 {
-  "pages": ["pages/index/index", "pages/leadgen/index", "pages/product-detail/index", "pages/form/index", "pages/form-detail/index"],
+  "pages": [
+    "pages/index/index",
+    "pages/leadgen/index",
+    "pages/product-detail/index",
+    "pages/form/index",
+    "pages/form-detail/index"
+  ],
   "window": {
     "defaultTitle": "",
     "backgroundColor": "#fff"
@@ -7,16 +13,16 @@
   "tabBar": {
     "items": [
       {
-        "name": "Quản lý hồ sơ",
-        "pagePath": "pages/form/index",
-        "icon": "/assets/images/book.png",
-        "activeIcon": "/assets/images/book-active.png"
-      },
-      {
         "name": "Trang chủ",
         "pagePath": "pages/index/index",
         "icon": "/assets/images/home.png",
         "activeIcon": "/assets/images/home-active.png"
+      },
+      {
+        "name": "Quản lý hồ sơ",
+        "pagePath": "pages/form/index",
+        "icon": "/assets/images/book.png",
+        "activeIcon": "/assets/images/book-active.png"
       }
     ]
   }
