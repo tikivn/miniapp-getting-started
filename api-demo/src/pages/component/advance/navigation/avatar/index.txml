@@ -1,8 +1,3 @@
-<template name="variant-style">
-  
-</template>
-
-
 <view>
   <block-header
       title="Usage"
