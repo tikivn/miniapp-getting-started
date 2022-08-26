@@ -1,0 +1,14 @@
+<view class="page">
+  <block-variant header="{{color}}">
+    <view class="p-small" style="background:var(--color-alias-theme-variant)">Value</view>
+
+    <block tiki:for="{{tokens[color]}}">
+      <list-item upperSubtitle="{{item.hex}} • {{item.rgb}}" lowerSubtitle="Opacity: {{item.opacity}}">
+        <view slot="prefix" class="token-color-value" style="background: var(--{{item.name}})"/>
+        <text>{{item.name}}</text>
+      </list-item>
+    </block>
+  </block-variant>
+  
+
+</view>

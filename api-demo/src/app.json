@@ -89,6 +89,7 @@
     "pages/component/basic/foundation/effects/index",
     "pages/component/basic/foundation/divider/index",
     "pages/component/basic/foundation/colors/index",
+    "pages/component/basic/foundation/colors/global-color/index",
     "pages/component/basic/foundation/space/index",
     "pages/component/basic/form/index",
     "pages/component/basic/button/index",

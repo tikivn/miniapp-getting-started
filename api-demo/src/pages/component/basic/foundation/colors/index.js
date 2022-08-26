@@ -1,128 +1,200 @@
 Page({
   data: {
-    blocks: [
+    global: {
+      tokens: [
+        "Grayscale",
+          "Blue",
+          "Green",
+          "Yellow",
+          "Orange",
+          "Red",
+          "Purple"
+      ]
+    },
+    alias: [
       {
-        name: "Global",
+        title: "Brand",
         tokens: [
-          "white",
-          "gray10",
-          "gray20",
-          "gray30",
-          "gray40",
-          "gray50",
-          "gray60",
-          "gray70",
-          "gray80",
-          "gray90",
-          "gray100",
-          "black",
-          "blue",
-          "green",
-          "yellow",
-          "orange",
-          "red",
-        ],
+          {
+            name: "color-alias-brand",
+            color: "color-global-blue60",
+            hex: "#1A94FF",
+            opacity: 1
+          },
+          {
+            name: "color-alias-on-brand",
+            color: "color-global-white",
+            hex: "#FFFFFF",
+            opacity: 1
+          }
+        ]
       },
       {
-        name: "Alias",
-        tokens: ["background", "text", "brand", "success", "error"],
-      },
-      {
-        name: "Component specific tokens",
+        title: "Positive",
         tokens: [
-          "text-button-solid-default",
-          "text-selection",
-          "text-badge",
-          "text-paging-active",
-          "text-toast",
-          "text-tooltip-night",
-          "icon-button-solid-default",
-          "icon-selection",
-          "icon-toast",
-          "icon-tooltip-night",
-          "border-badge",
-          "background-panel",
-          "background-input",
-          "background-switch-hover",
-          "background-switch-controller",
-          "background-toggle-default",
-          "background-tooltip-day",
-          "background-sheet",
-          "background-list",
-          "background-divider-thick",
-          "background-selection-default",
-          "background-panel-inactive",
-          "background-sheet-secondary",
-          "border-panel-inactive",
-          "background-divider-thin",
-          "background-toggle-disabled",
-          "border-input-default",
-          "border-selection-default",
-          "border-inform",
-          "background-switch-default",
-          "text-disabled",
-          "icon-disabled",
-          "border-disabled",
-          "border-input-hover",
-          "background-disabled",
-          "background-skeleton",
-          "background-input-disabled",
-          "text-input-placeholder",
-          "text-panel-inactive",
-          "text-content-tertiary",
-          "text-list-secondary",
-          "icon-input-default",
-          "icon-panel-inactive",
-          "icon-list",
-          "border-input-active",
-          "text-label-default",
-          "text-input-filled",
-          "text-navigation",
-          "text-content-secondary",
-          "text-list-primary",
-          "text-inform",
-          "text-tooltip-day",
-          "icon-navigation",
-          "icon-inform",
-          "icon-tooltip-day",
-          "background-toast",
-          "background-tooltip-night",
-          "border-navigation",
-          "border-app-icon",
-          "background-progress-inactive",
-          "background-navigation",
-          "background-paging-inactive",
-          "text-button-outlined-default",
-          "text-button-ghost-default",
-          "text-input-cursor",
-          "text-panel-active",
-          "text-content-primary",
-          "icon-button-outlined-default",
-          "icon-button-ghost-default",
-          "icon-panel-inactive",
-          "border-button-default",
-          "border-button-hover",
-          "border-button-active",
-          "border-selection-active",
-          "border-panel-active",
-          "background-button-default",
-          "background-button-hover",
-          "background-button-active",
-          "background-button-ghost-hover",
-          "background-button-ghost-active",
-          "background-selection-active",
-          "background-selection-overlay-hover",
-          "background-switch-active",
-          "background-switch-active-disabled",
-          "background-progress-active",
-          "background-toogle-overlay-hover",
-          "background-toogle-overlay-active",
-          "background-paging-active",
-          "background-paging-hover",
-          "background-list-hover",
-          "background-badge",
-        ],
+          {
+            name: "color-alias-positive",
+            color: "color-global-green60",
+            hex: "#00AB56",
+            opacity: 1
+          },
+          {
+            name: "color-alias-on-positive",
+            color: "color-global-white",
+            hex: "#FFFFFF",
+            opacity: 1
+          }
+        ]
       },
-    ],
+      {
+        title: "Negative",
+        tokens: [
+          {
+            name: "color-alias-negative",
+            color: "color-global-red60",
+            hex: "#FF424E",
+            opacity: 1
+          },
+          {
+            name: "color-alias-on-negative",
+            color: "color-global-white",
+            hex: "FFFFFF",
+            opacity: 1
+          }
+        ]
+      },
+      {
+        title: "Reverse theme",
+        tokens: [
+          {
+            name: "color-alias-reverse-theme",
+            color: "color-global-gray100",
+            hex: "#27272A",
+            opacity: 1
+          },
+          {
+            name: "color-alias-primary-on-reverse-theme",
+            color: "color-global-white",
+            hex: "#FFFFFF",
+            opacity: 1
+          },
+          {
+            name: "color-alias-secondary-on-reverse-theme",
+            color: "color-global-gray50",
+            hex: "#A6A6B0",
+            opacity: 1
+          }
+        ]
+      },
+      {
+        title: "Disabled",
+        tokens: [
+          {
+            name: "color-alias-disabled",
+            color: "color-global-black",
+            hex: "#000000",
+            opacity: 0.15
+          },
+          {
+            name: "color-alias-disabled-variant",
+            color: "color-global-black",
+            hex: "#000000",
+            opacity: 0.05
+          },
+          {
+            name: "color-alias-reverse-disabled",
+            color: "color-global-white",
+            hex: "#FFFFFF",
+            opacity: 0.15
+          },
+          {
+            name: "color-alias-reverse-disabled-variant",
+            color: "color-global-white",
+            hex: "#FFFFFF",
+            opacity: 0.05
+          }
+        ]
+      },
+      {
+        title: "Outline",
+        tokens: [
+          {
+            name: "color-alias-outline",
+            color: "color-global-gray30",
+            hex: "#DDDDE3",
+            opacity: 1
+          },
+          {
+            name: "color-alias-outline-variant",
+            color: "color-global-gray20",
+            hex: "#EBEBF0",
+            opacity: 1
+          },
+          {
+            name: "color-alias-outline-overlay",
+            color: "color-global-black",
+            hex: "#000000",
+            opacity: 0.05
+          }
+        ]
+      },
+      {
+        title: "Skeleton",
+        tokens: [
+          {
+            name: "color-alias-skeleton",
+            color: "color-global-black",
+            hex: "#000000",
+            opacity: 0.05
+          }
+        ]
+      },
+      {
+        title: "Hyperlink",
+        tokens: [
+          {
+            name: "color-alias-hyperlink",
+            color: "color-global-blue60",
+            hex: "#1A94FF",
+            opacity: 1
+          }
+        ]
+      },
+      {
+        title: "Theme",
+        tokens: [
+          {
+            name: "color-alias-theme",
+            color: "color-global-white",
+            hex: "#FFFFFF",
+            opacity: 1
+          }, 
+          {
+            name: "color-alias-theme-variant",
+            color: "color-global-gray10",
+            hex: "#F5F5FA",
+            opacity: 1
+          },
+          {
+            name: "color-alias-primary-on-theme",
+            color: "color-global-gray100",
+            hex: "#27272A",
+            opacity: 1
+          },
+          {
+            name: "color-alias-secondary-on-theme",
+            color: "color-global-gray60",
+            hex: "#808089",
+            opacity: 1
+          }
+        ]
+      }
+    ]
   },
+  changeTitle(e) {
+    const color = e.target.dataset.color;
+    my.navigateTo({
+      url: "pages/component/basic/foundation/colors/global-color/index?color=" + color
+    })
+  }
 });

@@ -1,14 +1,29 @@
 <view class="page">
-  <block-header title="Colors" description="We provides list of color tokens" />
-  <block tiki:for="{{blocks}}" tiki:for-item="block">
-    <block-variant header="{{block.name}}">
-      <view class="token-block-description">{{block.description}}</view>
-      <block tiki:for="{{block.tokens}}">
-        <list-item>
-          <view class="token-color-value" style="background-color: var(--{{item}})" />
-          <view slot="suffix" class="token-line-name">{{item}}</view>
+  <block-header title="Colors" description="We use colors as a tool to communicate information and functions. We use design tokens for our color system." />
+
+  <block-variant header="Global tokens" description="Global colors are pre-defined color palettes in our Tini design system.">
+    <block tiki:for="{{global.tokens}}">
+      <list-item className="item-token" arrow onClick="changeTitle" data-color="{{item}}">
+        <text>{{item}}</text>
+      </list-item>
+    </block>
+  </block-variant>
+
+  <block-variant header="Alias tokens" description="Dynamic colors with contexts (purposes, when and where to use).">
+    <block tiki:for="{{alias}}">
+      <view class="font-bold mb-small">{{item.title}}</view>
+
+      <view class="p-small" style="background:var(--color-alias-theme-variant)">Value</view>
+
+      <block tiki:for="{{item.tokens}}">
+        <list-item upperSubtitle="{{item.color}} • {{item.hex}}" lowerSubtitle="Opacity: {{item.opacity}}">
+          <view slot="prefix" class="token-color-value" style="background: var(--{{item.name}})"/>
+          <text>{{item.name}}</text>
         </list-item>
       </block>
-    </block-variant>
-  </block>
+
+
+    </block>
+
+  </block-variant>
 </view>
