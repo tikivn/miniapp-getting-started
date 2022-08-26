@@ -192,7 +192,7 @@ Page({
     ]
   },
   changeTitle(e) {
-    var color = e.target.dataset.color;
+    const color = e.target.dataset.color;
     my.navigateTo({
       url: "pages/component/basic/foundation/colors/global-color/index?color=" + color
     })

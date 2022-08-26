@@ -3,7 +3,7 @@
 
   <block-variant header="Global tokens" description="Global colors are pre-defined color palettes in our Tini design system.">
     <block tiki:for="{{global.tokens}}">
-      <list-item arrow padding onClick="changeTitle" data-color="{{item}}">
+      <list-item className="item-token" arrow onClick="changeTitle" data-color="{{item}}">
         <text>{{item}}</text>
       </list-item>
     </block>
@@ -11,19 +11,17 @@
 
   <block-variant header="Alias tokens" description="Dynamic colors with contexts (purposes, when and where to use).">
     <block tiki:for="{{alias}}">
+      <view class="font-bold mb-small">{{item.title}}</view>
 
-      <block-variant title="{{item.title}}">
+      <view class="p-small" style="background:var(--color-alias-theme-variant)">Value</view>
 
-        <view class="p-small" style="background:var(--color-alias-theme-variant)">Value</view>
+      <block tiki:for="{{item.tokens}}">
+        <list-item upperSubtitle="{{item.color}} • {{item.hex}}" lowerSubtitle="Opacity: {{item.opacity}}">
+          <view slot="prefix" class="token-color-value" style="background: var(--{{item.name}})"/>
+          <text>{{item.name}}</text>
+        </list-item>
+      </block>
 
-        <block tiki:for="{{item.tokens}}">
-          <list-item upperSubtitle="{{item.color}} • {{item.hex}}" lowerSubtitle="Opacity: {{item.opacity}}">
-            <view slot="prefix" class="token-color-value" style="background: var(--{{item.name}})"/>
-            <text>{{item.name}}</text>
-          </list-item>
-        </block>
-
-      </block-variant>
 
     </block>
 
