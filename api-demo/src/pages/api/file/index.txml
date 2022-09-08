@@ -12,6 +12,6 @@
     <button class="button-full" onTap="onGetSavedFileList">Get Saved File List</button>
     <button class="button-full" onTap="onRemoveSavedFile">Remove Save File</button>
     <input class="input-full" onInput="onChangeUrl" value={{urlFile}} placeholder="Input File Url to Open File"></input>
-    <button class="button-full" onTap="onOpenFile">Open File</button>
+    <button class="button-full" onTap="onOpenFile">Open Document</button>
   </view>
 </view>
