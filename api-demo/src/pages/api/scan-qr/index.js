@@ -6,7 +6,7 @@ Page({
         my.alert({ title: 'Found', content: JSON.stringify(res) });
       },
       fail: (e) => {
-        console.log(e);
+        my.alert({ title: 'Error', content: JSON.stringify(e) });
       },
     });
   },
