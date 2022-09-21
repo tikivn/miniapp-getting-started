@@ -383,11 +383,17 @@ const bioMetricsAPIList = [
   },
 ];
 
-
 const securityStorageAPIList = [
   {
     name: 'security Storage',
     path: 'pages/api/security-storage/index',
+  },
+];
+
+const secureChannelAPIList = [
+  {
+    name: 'secure channel',
+    path: 'pages/api/secure-channel/index',
   },
 ];
 
@@ -488,9 +494,11 @@ const APIList = [
     type: 'Security Storage',
     list: securityStorageAPIList,
   },
+  {
+    type: 'Secure Channel',
+    list: secureChannelAPIList,
+  },
 ];
-
-
 
 const flattenApis = APIList.reduce((rs, item) => rs.concat(item.list), []);
 

@@ -11,7 +11,8 @@
   "dependencies": {
     "@tiki.vn/mini-html-parser2": "^0.0.4",
     "@tiki.vn/tini-ui": "0.14.1-rc.12",
-    "query-string": "^7.0.1"
+    "query-string": "^7.0.1",
+    "tiki-miniapp-tnx": "^0.1.1"
   },
   "devDependencies": {
     "prettier": "^2.3.2"

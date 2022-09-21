@@ -1,0 +1,14 @@
+<view class="page">
+  <block-header title="Usage" description="go to another page, and then send data back to this page" />
+  <view class="block-content">
+    <view class="page-section-demo">
+      <button type="primary" onTap="onTap">create secure channel</button>
+    </view>
+  </view>
+  <view class="block-content">
+    <view class="page-section-demo">
+      <view>Message from channel</view>
+      <view>{{message}}</view>
+    </view>
+  </view>
+</view>

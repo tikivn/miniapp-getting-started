@@ -1,0 +1,9 @@
+<view class="page">
+  <block-header title="Plugin page" description="this page will send data back to channel" />
+  <view class="block-content">
+    <view class="page-section-demo">
+      <input class="w-full" placeholder="Text send back to previous page" name="text" onInput="textChange"></input>
+      <button type="primary" onTap="onTap">return data to channel</button>
+    </view>
+  </view>
+</view>

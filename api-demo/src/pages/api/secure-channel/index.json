@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "Secure Channel",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

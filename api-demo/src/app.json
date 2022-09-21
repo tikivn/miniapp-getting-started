@@ -83,6 +83,8 @@
     "pages/api/bio-metrics/server/index",
     "pages/api/checkout/index",
     "pages/api/security-storage/index",
+    "pages/api/secure-channel/index",
+    "pages/api/secure-channel/plugin/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",
