@@ -1,0 +1,23 @@
+<view>
+  <block-header title="Usage" description="Request are use to make request to any URL" />
+
+  <view class="block-content">
+    <view class="component-item">
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onConnect">
+        Connect
+      </button>
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onSendSocketMessage">
+        Send message
+      </button>
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onListener">
+        On Listener 
+      </button>
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="offListener">
+        Off Listener 
+      </button>
+      <button loading="{{get.isLoading}}" style="width: 100%;" onTap="onDisconnect">
+        Close
+      </button>
+    </view>
+  </view>
+</view>

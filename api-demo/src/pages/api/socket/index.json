@@ -1,0 +1,7 @@
+{
+  "defaultTitle": "request",
+  "usingComponents": {
+    "block-header": "components/block-header/index",
+    "loading-button": "./loading-button/index"
+  }
+}
