@@ -3,4 +3,4 @@ Page({
     const wvcontext = my.createWebViewContext('webview');
     wvcontext.postMessage(e);
   },
-})
+});
