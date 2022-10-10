@@ -397,6 +397,15 @@ const secureChannelAPIList = [
   },
 ];
 
+const setChatSellerProfileId = [
+  {
+    name: 'Set Chat Seller ProfileId',
+    path: 'pages/api/set-chat-seller-profile/index',
+  },
+];
+
+
+
 const APIList = [
   {
     type: 'Basic API',
@@ -497,6 +506,11 @@ const APIList = [
   {
     type: 'Secure Channel',
     list: secureChannelAPIList,
+  },
+
+  {
+    type: 'Set Chat Seller ProfileId',
+    list: setChatSellerProfileId,
   },
 ];
 

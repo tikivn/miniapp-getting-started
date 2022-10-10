@@ -1,0 +1,13 @@
+<view>
+<block-header 
+      title="Usage" 
+      description="my.setChatSellerProfileId" />
+  <view class="block-content"> 
+    <view>
+      <input style="width:100%" type="text" placeholder="seller id" name="key" value="{{sellerId}}" onInput="sellerIdChange"></input>
+    </view>
+    <view>
+      <button class="button-full" onTap="onTapChange">setChatSellerProfileId</button>
+    </view>
+  </view>
+</view>
