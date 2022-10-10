@@ -1,6 +1,11 @@
 Page({
+  onLoad(){
+    this.wvcontext = my.createWebViewContext('webview');
+    console.log('webview onInit,',this.wvcontext)
+
+  },
   onMessage(e) {
-    const wvcontext = my.createWebViewContext('webview');
-    wvcontext.postMessage(e);
+    console.log('webview receive message,',e)
+    this.wvcontext.postMessage('pong');
   },
 });

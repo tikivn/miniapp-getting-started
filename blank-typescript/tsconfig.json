@@ -17,5 +17,6 @@
     "rootDir": "./",
     "baseUrl": "./src",
     "types": ["@tiki.vn/tini-types"]
-  }
+  },
+  "exclude": ["./dist*"]
 }

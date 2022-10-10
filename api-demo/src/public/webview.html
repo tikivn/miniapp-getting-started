@@ -1,219 +1,237 @@
 <!DOCTYPE html>
-<html class="no-js" lang="" style="font-size: 64px;">
+<html class="no-js" lang="" style="font-size: 64px">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>WebView</title>
+    <meta name="description" content="web-view page" />
+    <meta name="keywords" content="web-webview" />
+    <link rel="stylesheet" href="./h5.css" />
+  </head>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>WebView</title>
-  <meta name="description" content="web-view page">
-  <meta name="keywords" content="web-webview">
-  <link rel="stylesheet" href="./h5.css">
-</head>
+  <body>
+    <script>
+      window.addEventListener('TiniAppJSBridgeReady', () => {
+        console.log('TiniAppJSBridgeReady', window.my);
+        my.enableUrlChangeDetect = true;
 
-<body>
-  <script>
-    window.addEventListener('TiniAppJSBridgeReady', () => {
-      my.enableUrlChangeDetect = true;
-      // alert(JSON.stringify(my.getStartupParams()));
-    });
+        alert('getStartupParams:'+JSON.stringify(my.getStartupParams()));
 
-    function navigateTo() {
-      my.navigateTo({
-        url: 'pages/component/basic/webview/index',
-        success: function () {
-        },
-        fail: function () {
-        }
-      })
-    }
-    function getUserInfo() {
-      my.getUserInfo({
-        success: function (userInfo) {
-          alert(JSON.stringify(userInfo));
-        }
-      })
-    }
+        document.querySelector('#navigateTo').onclick = function navigateTo() {
+        console.log('clicked:navigateTo');
+        my.navigateTo({
+            url: 'pages/component/basic/webview/index',
+            success: function () {},
+            fail: function () {},
+          });
+        };
+        document.querySelector('#getUserInfo').onclick = function getUserInfo() {
+        console.log('clicked:getUserInfo');
+        my.getUserInfo({
+            success: function (userInfo) {
+              alert(JSON.stringify(userInfo));
+            },
+          });
+        };
 
-    function navigateBack() {
-      my.navigateBack();
-    }
+        document.querySelector('#navigateBack').onclick = function navigateBack() {
+        console.log('clicked:navigateBack');
+        my.navigateBack();
+        };
 
-    function switchTab() {
-      my.switchTab({
-        url: 'pages/api/index',
-        success: function () {
-          alert('tab is switched');
-        }
+        document.querySelector('#switchTab').onclick = function switchTab() {
+        console.log('clicked:switchTab');
+        my.switchTab({
+            url: 'pages/api/index',
+            success: function () {
+              alert('tab is switched');
+            },
+          });
+        };
+
+        document.querySelector('#postMessage').onclick = function postMessage() {
+        console.log('clicked:postMessage');
+        my.postMessage({
+            name: 'from web-view',
+          });
+        };
+
+        document.querySelector('#getSystemInfo').onclick = function getSystemInfo() {
+        console.log('clicked:getSystemInfo');
+        my.getSystemInfo({
+            success: function (result) {
+              alert('getSystemInfo' + JSON.stringify(result));
+            },
+          });
+        };
+        document.querySelector('#myalert').onclick = function myalert() {
+        console.log('clicked:myalert');
+        my.alert({ content: 'hello world' });
+        };
+
+        document.querySelector('#showLoading').onclick = function showLoading() {
+        console.log('clicked:showLoading');
+        my.showLoading();
+          setTimeout(() => {
+            my.hideLoading();
+          }, 3000);
+        };
+
+        document.querySelector('#chooseImage').onclick = function chooseImage() {
+        console.log('clicked:chooseImage');
+        my.chooseImage({
+            success(res) {
+              const { data } = res;
+              const { filePaths } = data;
+              const [path] = filePaths;
+              const img = document.querySelector('#previewImg');
+              img.src = path;
+              console.log('<<<<<<<<<<<<,', res);
+            },
+          });
+        };
+
+        document.querySelector('#previewImage').onclick = function previewImage() {
+        console.log('clicked:previewImage');
+        my.previewImage({
+            urls: [
+              'https://www.w3schools.com/html/pic_trulli.jpg',
+              'https://www.w3schools.com/html/img_chania.jpg',
+              'https://www.w3schools.com/html/img_girl.jpg',
+            ],
+            enablesavephoto: false,
+            enableShowPhotoDownload: false,
+            success: (res) => {
+              console.log('success', res);
+            },
+            fail: (err) => {
+              console.log('fail', err);
+            },
+          });
+        };
+
+        document.querySelector('#getLocation').onclick = function getLocation() {
+        console.log('clicked:getLocation');
+        my.getLocation({
+            success(res) {
+              alert(JSON.stringify(res));
+            },
+          });
+        };
+
+        document.querySelector('#setStorage').onclick = function setStorage() {
+        console.log('clicked:setStorage');
+        my.setStorage({
+            key: 'test',
+            data: {
+              title: 'Run',
+              description: 'Run 5km daily',
+            },
+            success: function () {
+              alert('Saved successfully');
+            },
+          });
+        };
+
+        document.querySelector('#getStorage').onclick = function getStorage() {
+        console.log('clicked:getStorage');
+        my.getStorage({
+            key: 'test',
+            success: function (res) {
+              alert(JSON.stringify(res));
+            },
+            fail: function (res) {
+              alert(JSON.stringify(res));
+            },
+          });
+        };
+
+        document.querySelector('#removeStorage').onclick = function removeStorage() {
+        console.log('clicked:removeStorage');
+        my.removeStorage({
+            key: 'test',
+            success: function () {
+              alert('Remove dữ liệu thành công');
+            },
+            fail: function (res) {
+              alert(res.errorMessage);
+            },
+          });
+        };
+
+        document.querySelector('#clearStorage').onclick = function clearStorage() {
+        console.log('clicked:clearStorage');
+        my.clearStorage({
+            success: function () {
+              alert('Xoá dữ liệu thành công');
+            },
+            fail: function (res) {
+              alert(res.errorMessage);
+            },
+          });
+        };
+
+        document.querySelector('#getStorageInfo').onclick = function getStorageInfo() {
+        console.log('clicked:getStorageInfo');
+        my.getStorageInfo({
+            success: function (res) {
+              alert(JSON.stringify(res));
+            },
+          });
+        };
+
+        document.querySelector('#getAddress').onclick = function getAddress() {
+        console.log('clicked:getAddress');
+        my.getAddress({
+            success: function (res) {
+              alert(JSON.stringify(res));
+            },
+          });
+        };
+
+        document.querySelector('#choosePhoneContact').onclick = function choosePhoneContact() {
+        console.log('clicked:choosePhoneContact');
+        my.choosePhoneContact({
+            success: function (res) {
+              alert(JSON.stringify(res));
+            },
+          });
+        };
+
+        window.onmessage = (e) => {
+          alert('onmessage');
+          alert(JSON.stringify(e.data));
+        };
       });
-    }
-
-    function postMessage() {
-      my.postMessage({
-        name: "from web-view"
-      });
-    }
-
-    function getSystemInfo() {
-      my.getSystemInfo({
-        success: function (result) {
-          alert('getSystemInfo' + JSON.stringify(result));
-        }
-      });
-    }
-    function myalert() {
-      my.alert({ content: 'hello world' });
-    }
-
-    function showLoading() {
-      my.showLoading();
-      setTimeout(() => {
-        my.hideLoading();
-      }, 3000);
-    }
-
-    function chooseImage() {
-      my.chooseImage({
-        success(res) {
-          const { data } = res;
-          const { filePaths } = data;
-          const [path] = filePaths;
-          const img = document.querySelector('#previewImg');
-          img.src = path;
-          console.log('<<<<<<<<<<<<,', res);
-        }
-      });
-    }
-
-    function previewImage() {
-      my.previewImage({
-        urls: [
-          'https://www.w3schools.com/html/pic_trulli.jpg',
-          'https://www.w3schools.com/html/img_chania.jpg',
-          'https://www.w3schools.com/html/img_girl.jpg'
-        ],
-        enablesavephoto: false,
-        enableShowPhotoDownload: false,
-        success: (res) => {
-          console.log('success', res);
-        },
-        fail: (err) => {
-          console.log('fail', err);
-        }
-      });
-    }
-
-    function getLocation() {
-      my.getLocation({
-        success(res) {
-          alert(JSON.stringify(res));
-        }
-      });
-    }
-
-    function setStorage() {
-      my.setStorage({
-        key: 'test',
-        data: {
-          title: 'Run',
-          description: 'Run 5km daily'
-        },
-        success: function () {
-          alert('Saved successfully');
-        }
-      });
-    }
-
-    function getStorage() {
-      my.getStorage({
-        key: 'test',
-        success: function (res) {
-          alert(JSON.stringify(res));
-        },
-        fail: function (res) {
-          alert(JSON.stringify(res));
-        }
-      });
-    }
-
-    function removeStorage() {
-      my.removeStorage({
-        key: 'test',
-        success: function () {
-          alert('Remove dữ liệu thành công');
-        },
-        fail: function (res) {
-          alert(res.errorMessage);
-        }
-      });
-    }
-
-    function clearStorage() {
-      my.clearStorage({
-        success: function () {
-          alert('Xoá dữ liệu thành công');
-        },
-        fail: function (res) {
-          alert(res.errorMessage);
-        }
-      });
-    }
-
-    function getStorageInfo() {
-      my.getStorageInfo({
-        success: function (res) {
-          alert(JSON.stringify(res));
-        }
-      });
-    }
-    
-    function getAddress() {
-      my.getAddress({
-        success: function (res) {
-          alert(JSON.stringify(res));
-        }
-      })
-    }
-
-    function choosePhoneContact() {
-      my.choosePhoneContact({
-        success: function (res) {
-          alert(JSON.stringify(res));
-        }
-      }) 
-    }
-
-    window.onmessage = (e) => {
-      alert('onmessage');
-      alert(JSON.stringify(e.data));
-    }
-
-  </script>
-  <div class="t-view page">
-    <div class="t-view page-description">Webview API</div>
-    <div class="t-view page-section">
-      <div class="t-view page-section-demo">
-        <a role="button" onclick="getAddress()" class="t-button t-button-primary">getAddress</a>
-        <a role="button" onclick="choosePhoneContact()" class="t-button t-button-primary">choosePhoneContact</a>
-        <a role="button" onclick="myalert()" class="t-button t-button-primary">alert</a>
-        <a role="button" onclick="setStorage()" class="t-button t-button-primary">setStorage</a>
-        <a role="button" onclick="getStorage()" class="t-button t-button-primary">getStorage</a>
-        <a role="button" onclick="removeStorage()" class="t-button t-button-primary">removeStorage</a>
-        <a role="button" onclick="clearStorage()" class="t-button t-button-primary">clearStorage</a>
-        <a role="button" onclick="getStorageInfo()" class="t-button t-button-primary">getStorageInfo</a>
-        <a role="button" onclick="chooseImage()" class="t-button t-button-primary">chooseImage</a>
-        <a role="button" onclick="previewImage()" class="t-button t-button-primary">previewImage</a>
-        <a role="button" onclick="getLocation()" class="t-button t-button-primary">getLocation</a>
-        <a role="button" onclick="showLoading()" class="t-button t-button-primary">showLoading</a>
-        <a role="button" onclick="navigateTo()" class="t-button t-button-primary">navigateTo</a>
-        <a role="button" onclick="navigateBack()" class="t-button t-button-primary">navigateBack</a>
-        <a role="button" onclick="postMessage()" class="t-button t-button-primary">postMessage</a>
-        <a role="button" onclick="getUserInfo()" class="t-button t-button-primary">getUserInfo</a>
-        <a role="button" onclick="getSystemInfo()" class="t-button t-button-primary">getSystemInfo</a>
+    </script>
+    <div class="t-view page">
+      <div class="t-view page-description">Webview API</div>
+      <div class="t-view page-section">
+        <div class="t-view page-section-demo">
+          <a role="button" id="getAddress" class="t-button t-button-primary">getAddress</a>
+          <a role="button" id="choosePhoneContact" class="t-button t-button-primary"
+            >choosePhoneContact</a
+          >
+          <a role="button" id="myalert" class="t-button t-button-primary">alert</a>
+          <a role="button" id="setStorage" class="t-button t-button-primary">setStorage</a>
+          <a role="button" id="getStorage" class="t-button t-button-primary">getStorage</a>
+          <a role="button" id="removeStorage" class="t-button t-button-primary">removeStorage</a>
+          <a role="button" id="clearStorage" class="t-button t-button-primary">clearStorage</a>
+          <a role="button" id="getStorageInfo" class="t-button t-button-primary">getStorageInfo</a>
+          <a role="button" id="chooseImage" class="t-button t-button-primary">chooseImage</a>
+          <a role="button" id="previewImage" class="t-button t-button-primary">previewImage</a>
+          <a role="button" id="getLocation" class="t-button t-button-primary">getLocation</a>
+          <a role="button" id="showLoading" class="t-button t-button-primary">showLoading</a>
+          <a role="button" id="navigateTo" class="t-button t-button-primary">navigateTo</a>
+          <a role="button" id="navigateBack" class="t-button t-button-primary">navigateBack</a>
+          <a role="button" id="postMessage" class="t-button t-button-primary">postMessage</a>
+          <a role="button" id="getUserInfo" class="t-button t-button-primary">getUserInfo</a>
+          <a role="button" id="getSystemInfo" class="t-button t-button-primary">getSystemInfo</a>
+          <a role="button" id="switchTab" class="t-button t-button-primary">switchTab</a>
+        </div>
+        <img id="previewImg" />
       </div>
-      <img id="previewImg" />
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
