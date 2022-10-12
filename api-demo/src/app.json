@@ -85,6 +85,7 @@
     "pages/api/security-storage/index",
     "pages/api/secure-channel/index",
     "pages/api/secure-channel/plugin/index",
+    "pages/api/set-chat-seller-profile/index",
     "pages/component/basic/foundation/typography/index",
     "pages/component/basic/foundation/icons/index",
     "pages/component/basic/foundation/border-radius/index",
