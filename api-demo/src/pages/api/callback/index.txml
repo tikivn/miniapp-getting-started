@@ -1,0 +1,10 @@
+<view>
+  <block-header title="Usage" description="Navigate to new pages / new tabs / new Mini App" />
+
+  <view class="block-content">
+      <button style="width: 100%;" onTap="navigateToMiniApp">
+        my.navigateToMiniApp
+      </button>
+  </view>
+
+</view>

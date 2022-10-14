@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "navigator",
+  "usingComponents": {
+    "block-header": "components/block-header/index"
+  }
+}

@@ -1,0 +1,8 @@
+.component-item {
+  border-top-width: 1px;
+}
+
+button {
+  margin-top: 8px;
+  width: 100%;
+}

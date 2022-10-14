@@ -402,6 +402,10 @@ const setChatSellerProfileId = [
     name: 'Set Chat Seller ProfileId',
     path: 'pages/api/set-chat-seller-profile/index',
   },
+  {
+    name: 'Callback',
+    path: 'pages/api/callback/index',
+  }
 ];
 
 
