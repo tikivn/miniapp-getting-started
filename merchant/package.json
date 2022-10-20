@@ -1,6 +1,6 @@
 {
   "name": "miniapp-tini-merchant",
-  "version": "0.1.0",
+  "version": "1.1.1",
   "tiki": {
     "appIdentifier": "vn.tiki.tini.merchant",
     "buildNumber": 1,

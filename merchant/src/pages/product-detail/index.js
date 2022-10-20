@@ -145,8 +145,9 @@ Page({
   },
 
   onCustomIconEvent() {
-    my.openScreen({
-      screenCode: 'TK_CART',
-    });
+    my.openCartScreen();
+    // my.openScreen({
+    //   screenCode: 'TK_CART',
+    // });
   },
 });
