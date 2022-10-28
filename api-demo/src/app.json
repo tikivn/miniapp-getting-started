@@ -160,7 +160,8 @@
     "pages/component/advance/epub-reader/index",
     "pages/component/template/cart-detail/index",
     "pages/component/advance/status/tu-progress/index",
-    "pages/component/advance/feedback/toast-bar/index"
+    "pages/component/advance/feedback/toast-bar/index",
+    "pages/api/navigation-bar/hide-add-to-device/index"
   ],
   "tabBar": {
     "items": [
