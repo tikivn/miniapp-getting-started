@@ -20,3 +20,9 @@
   width: 600rpx;
   height: 600rpx;
 }
+
+.rect {
+  height: 10px;
+  width: var(--tf-padding-right);
+  background: #ff0000;
+}
