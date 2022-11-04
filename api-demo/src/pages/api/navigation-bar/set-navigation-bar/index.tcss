@@ -1,0 +1,32 @@
+.component-item {
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+}
+.text {
+    margin-left: 10px;
+}
+
+.block {
+  background-color: white;
+  margin: 8px 0;
+  padding: 16px;
+  border-radius: var(--border-radius-rounded-4px);
+}
+
+.radio-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.text {
+  margin-left: 12px;
+}

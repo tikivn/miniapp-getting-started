@@ -8,7 +8,24 @@
     <input class="form-value" placeholder="Background color" name="titleBarColor" onInput="titleBarColorChange"></input>
     <input class="form-value" placeholder="Border Bottom Color" name="borderBottomColor" onInput="borderBottomColorChange"></input>
     <input class="form-value" placeholder="Image" name="image" onInput="imageChange"></input>
+     
+  <view class="block">
+  <view>Chọn Theme</view>
+    <radio-group class="radio-group" onChange="onChangeTheme">
+      <view class="radio" tiki:for="{{items}}" key="radio-{{index}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}" />
+        <text class="text">{{item.value}}</text>
+      </view>
+    </radio-group>
+  </view> 
+    
   </view>
+   <view class="block-content">
+   <view class="component-item"> <checkbox onChange="onChangeSearch" />
+    <text class="text">Show search</text></view>
+    <view><input class="form-value" placeholder="Nhập text hiển thị" name="image" onInput="onChangeText"></input></view>
+    <view><input class="form-value" placeholder="Border Radius" name="image" onInput="onChangeRadius"></input></view>
+   </view>
   <view class="block-content">
     <button class="button-full" onTap="setNavigationBar">Set navigation bar</button>
     <button class="button-full" onTap="reset">Reset</button>
