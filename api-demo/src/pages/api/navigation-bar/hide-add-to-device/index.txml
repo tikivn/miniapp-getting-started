@@ -1,0 +1,10 @@
+<view>
+  <block-header 
+        title="Usage" 
+        description="my.hideAddToDevice({ hide: true/false });" />
+    <view class="block-content">
+      <button class="button-full" onTap="hideAddToDevice">Hide Save To Device</button>
+      <button class="button-full" onTap="showAddToDevice">Show Save To Device</button>
+    </view>
+  </view>
+  
