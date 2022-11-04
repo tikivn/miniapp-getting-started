@@ -131,8 +131,8 @@ const navigationBarAPIList = [
     path: '/pages/api/navigation-bar/hide-back-home/index',
   },
   {
-    name: 'Hide Add To Device',
-    path: '/pages/api/navigation-bar/hide-add-to-device/index',
+    name: 'Show Add To Device',
+    path: '/pages/api/navigation-bar/show-add-to-device/index',
   },
 ].filter(filterNotImplementedPages);
 

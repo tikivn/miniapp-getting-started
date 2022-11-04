@@ -1,5 +1,6 @@
 {
-  "defaultTitle": "Hide Save To Device",
+  "defaultTitle": "Show Save To Device",
+  "showAddToDeviceButton": "YES",
   "usingComponents": {
     "block-header": "components/block-header/index"
   }
