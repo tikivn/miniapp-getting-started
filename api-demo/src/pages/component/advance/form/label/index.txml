@@ -19,12 +19,12 @@
 
       <view class="list-item-label">
         <view class="text-desc">With icon</view>
-        <tu-label icon="question" text="Label" />
+        <tu-label icon="info" text="Label" />
       </view>
 
       <view class="list-item-label">
         <view class="text-desc">Full option</view>
-        <tu-label showBadge helperText="Text" icon="question" text="Label" />
+        <tu-label showBadge helperText="Text" icon="info" text="Label" />
       </view>
 
     </view>
@@ -50,12 +50,12 @@
 
       <view class="list-item-label">
         <view class="text-desc">With icon</view>
-        <tu-label icon="question" text="Label" disabled />
+        <tu-label icon="info" text="Label" disabled />
       </view>
 
       <view class="list-item-label">
         <view class="text-desc">Full option</view>
-        <tu-label showBadge helperText="Text" icon="question" text="Label" disabled />
+        <tu-label showBadge helperText="Text" icon="info" text="Label" disabled />
       </view>
 
       <view class="font-bold my-medium">Loading</view>
@@ -72,7 +72,7 @@
 
       <view class="list-item-label">
         <view class="text-desc">With icon</view>
-        <tu-label icon="question" text="Label" loading />
+        <tu-label icon="info" text="Label" loading />
       </view>
 
       <view class="list-item-label">
