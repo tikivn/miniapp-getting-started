@@ -1,6 +1,6 @@
 .container {
   padding: 0;
   border-top: 1px solid var(--color-divider-thin-background-default);
-  margin-bottom: 30px ;
-  padding-top: 8px;
+  margin-bottom: 36px ;
+  padding-top: 12px;
 }
