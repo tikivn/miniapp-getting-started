@@ -13,6 +13,11 @@
                 direction="column" />
     <button-bar checkboxText="Option"
                 buttons="{{
+                    [{buttonText: 'Button'}]
+                  }}" 
+                class="checkbox" />
+    <button-bar checkboxText="Option"
+                buttons="{{
                     [{buttonText: 'Button', type:'outline'}, {buttonText: 'Button'}]
                   }}" 
                 class="checkbox" />

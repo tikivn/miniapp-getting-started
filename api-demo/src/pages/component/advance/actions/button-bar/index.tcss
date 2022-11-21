@@ -1,9 +1,6 @@
 .container {
   padding: 0;
-  border-top: 1px solid var(--gray20);
-  margin-bottom: 20px ;
+  border-top: 1px solid var(--color-divider-thin-background-default);
+  margin-bottom: 30px ;
   padding-top: 8px;
-}
-.button-bar {
-  margin-top: 10px !important;
 }
