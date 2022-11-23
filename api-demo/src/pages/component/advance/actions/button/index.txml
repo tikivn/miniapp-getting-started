@@ -1,5 +1,21 @@
+<template name="variant">
+  <block-variant header="Variant" description="Brand button & Neutral button & Over background.">
+    <view class="bg-white p-2x-small radius-8px mb-2x-small">
+      <tu-button class="">Brand</tu-button>
+    </view>
+    <view class="bg-white p-2x-small radius-8px mb-2x-small">
+      <tu-button variant="neutral">Neutral</tu-button>
+    </view>
+    <view class="bg-blue60 p-2x-small radius-8px mb-2x-small">
+      <tu-button variant="brand-reverse">Brand reverse</tu-button>
+    </view>
+    <view class="bg-gray100 p-2x-small radius-8px">
+      <tu-button variant="neutral-reverse">Neutral reverse</tu-button>
+    </view>
+  </block-variant>
+</template>
 <template name="variant-style">
-  <block-variant header="Variant" title="1. Style" description="Solid, Outlined and Ghost.">
+  <block-variant header="" title="1. Style" description="Solid, Outlined and Ghost.">
     <view class="block-variant-content-line">
       <tu-button class="flex-grow" shape="rounded" type="solid" size="large">Solid</tu-button>
       <tu-button class="flex-grow" shape="rounded" type="outline" size="large">Outline</tu-button>
@@ -9,110 +25,99 @@
 </template>
 
 <template name="variant-content">
-  <block-variant title="2. Content" description="Text, Icon only.">
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" shape="rounded" type="solid" size="large">Text</tu-button>
-      <tu-button shape="rounded" type="solid" size="large" iconName="arrow_right" />
+  <block-variant title="2. Content" description="Text only, Leading icon, Trailing icon & Icon only.">
+    <view class="my-2x-small">
+      <tu-button shape="rounded" type="solid" size="large">Text only</tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" shape="rounded" type="outline" size="large">Text</tu-button>
-      <tu-button shape="rounded" type="outline" size="large" iconName="arrow_right" />
+    <view class="mb-2x-small">
+      <tu-button leadingIcon="arrow_left" shape="rounded" size="large">Leading icon</tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" shape="rounded" type="ghost" size="large">Text</tu-button>
-      <tu-button shape="rounded" type="ghost" size="large" iconName="arrow_right" />
+    <view class="mb-2x-small">
+      <tu-button trailingIcon="arrow_right" shape="rounded" size="large">Trailing</tu-button>
+    </view>
+    <view class="mb-2x-small">
+      <tu-button iconName="arrow_right" shape="rounded" size="large"></tu-button>
     </view>
   </block-variant>
 </template>
 
 <template name="variant-shape">
-  <block-variant title="3. Shape" description="Rounded, Pill, Circle and Borderless.">
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" shape="rounded" type="solid" size="large">Rounded</tu-button>
+  <block-variant title="3. Shape" description="Rounded, Pill">
+    <view class="my-2x-small flex" style="gap: 8px">
+      <tu-button shape="rounded" type="solid" size="large">Button</tu-button>
+      <tu-button shape="pill" type="solid" size="large">Button</tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" shape="pill" type="solid" size="large">Pill</tu-button>
+    <view class="mb-2x-small flex" style="gap: 8px">
+      <tu-button leadingIcon="arrow_left" shape="rounded" size="large">Button</tu-button>
+      <tu-button leadingIcon="arrow_left" shape="pill" size="large">Button</tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button shape="circle" type="solid" size="large" iconName="arrow_right" />
+    <view class="mb-2x-small flex" style="gap: 8px">
+      <tu-button trailingIcon="arrow_right" shape="rounded" size="large">Button</tu-button>
+      <tu-button trailingIcon="arrow_right" shape="pill" size="large">Button</tu-button>
+    </view>
+    <view class="mb-2x-small flex" style="gap: 8px">
+      <tu-button iconName="arrow_right" shape="rounded" size="large"></tu-button>
+      <tu-button iconName="arrow_right" shape="pill" size="large"></tu-button>
     </view>
   </block-variant>
 </template>
 
 <template name="variant-size">
   <block-variant title="4. Size" description="Small, Medium and Large.">
-    <view class="block-variant-content-line">
+    <view class="variant-size-display my-2x-small" style="align-items: start;">
       <tu-button class="flex-grow" shape="rounded" type="solid" size="small">Small</tu-button>
       <tu-button class="flex-grow" shape="rounded" type="solid" size="medium">Medium</tu-button>
       <tu-button class="flex-grow" shape="rounded" type="solid" size="large">Large</tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" shape="rounded" type="outline" size="small">Small</tu-button>
-      <tu-button class="flex-grow" shape="rounded" type="outline" size="medium">Medium</tu-button>
-      <tu-button class="flex-grow" shape="rounded" type="outline" size="large">Large</tu-button>
+    <view class="variant-size-display mb-2x-small" style="align-items: start;">
+      <tu-button leadingIcon="arrow_left" class="flex-grow" shape="rounded" type="solid" size="small">Small</tu-button>
+      <tu-button leadingIcon="arrow_left" class="flex-grow" shape="rounded" type="solid" size="medium">Medium</tu-button>
+      <tu-button leadingIcon="arrow_left" class="flex-grow" shape="rounded" type="solid" size="large">Large</tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" shape="rounded" type="ghost" size="small">Small</tu-button>
-      <tu-button class="flex-grow" shape="rounded" type="ghost" size="medium">Medium</tu-button>
-      <tu-button class="flex-grow" shape="rounded" type="ghost" size="large">Large</tu-button>
+    <view class="variant-size-display mb-2x-small" style="align-items: start;">
+      <tu-button trailingIcon="arrow_right" class="flex-grow" shape="rounded" type="solid" size="small">Small</tu-button>
+      <tu-button trailingIcon="arrow_right" class="flex-grow" shape="rounded" type="solid" size="medium">Medium</tu-button>
+      <tu-button trailingIcon="arrow_right" class="flex-grow" shape="rounded" type="solid" size="large">Large</tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="solid" size="small" iconName="arrow_right" />
-      </view>
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="solid" size="medium" iconName="arrow_right" />
-      </view>
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="solid" size="large" iconName="arrow_right" />
-      </view>
-    </view>
-    <view class="block-variant-content-line">
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="outline" size="small" iconName="arrow_right" />
-      </view>
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="outline" size="medium" iconName="arrow_right" />
-      </view>
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="outline" size="large" iconName="arrow_right" />
-      </view>
-    </view>
-    <view class="block-variant-content-line">
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="ghost" size="small" iconName="arrow_right" />
-      </view>
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="ghost" size="medium" iconName="arrow_right" />
-      </view>
-      <view class="flex-grow flex-line-center">
-        <tu-button shape="rounded" type="ghost" size="large" iconName="arrow_right" />
-      </view>
+    <view class="variant-size-display mb-2x-small" style="min-width: auto; align-items: start;">
+      <tu-button class="icon-fix-size" iconName="arrow_right" shape="rounded" type="solid" size="small"></tu-button>
+      <tu-button class="icon-fix-size" iconName="arrow_right" shape="rounded" type="solid" size="medium"></tu-button>
+      <tu-button class="icon-fix-size" iconName="arrow_right" shape="rounded" type="solid" size="large"></tu-button>
     </view>
   </block-variant>
 </template>
 
 <template name="variant-state">
-  <block-variant title="5. State" description="Default, Disable, Loading, Skeleton loading.">
-    <view class="block-variant-content-line">
+  <block-variant title="5. State" description="Default, Hover, Active, Disable, Loading, Skeleton loading.">
+    <view class="variant-state-display mt-2x-small">
       <tu-button class="flex-grow" shape="rounded" type="solid" size="large">Default</tu-button>
-      <tu-button class="flex-grow" shape="rounded" type="outline" size="large">Default</tu-button>
-      <tu-button class="flex-grow" shape="rounded" type="ghost" size="large">Default</tu-button>
+      <tu-button class="flex-grow" leadingIcon="arrow_left" shape="rounded" size="large">Default</tu-button>
+      <tu-button class="icon-fix-size" iconName="arrow_right" shape="rounded" type="solid" size="large"></tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" disabled shape="rounded" type="solid" size="large">Default</tu-button>
-      <tu-button class="flex-grow" disabled shape="rounded" type="outline" size="large">Default</tu-button>
-      <tu-button class="flex-grow" disabled shape="rounded" type="ghost" size="large">Default</tu-button>
+    <view class="variant-state-display">
+      <tu-button class="flex-grow hover" shape="rounded" type="solid" size="large">Hover</tu-button>
+      <tu-button class="flex-grow hover" leadingIcon="arrow_left" shape="rounded" size="large">Hover</tu-button>
+      <tu-button class="icon-fix-size hover" iconName="arrow_right" shape="rounded" type="solid" size="large"></tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" loading shape="rounded" type="solid" size="large">Load</tu-button>
-      <tu-button class="flex-grow" loading shape="rounded" type="outline" size="large">Load</tu-button>
-      <tu-button class="flex-grow" loading shape="rounded" type="ghost" size="large">Load</tu-button>
+    <view class="variant-state-display">
+      <tu-button class="flex-grow active" shape="rounded" type="solid" size="large">Active</tu-button>
+      <tu-button class="flex-grow active" leadingIcon="arrow_left" shape="rounded" size="large">Active</tu-button>
+      <tu-button class="icon-fix-size active" iconName="arrow_right" shape="rounded" type="solid" size="large"></tu-button>
     </view>
-    <view class="block-variant-content-line">
-      <tu-button class="flex-grow" skeleton shape="rounded" type="solid" size="large">Load</tu-button>
-      <tu-button class="flex-grow" skeleton shape="rounded" type="outline" size="large">Load</tu-button>
-      <tu-button class="flex-grow" skeleton shape="rounded" type="ghost" size="large">Load</tu-button>
+    <view class="variant-state-display">
+      <tu-button disabled class="flex-grow" shape="rounded" type="solid" size="large">Disable</tu-button>
+      <tu-button disabled class="flex-grow" leadingIcon="arrow_left" shape="rounded" size="large">Disable</tu-button>
+      <tu-button disabled class="icon-fix-size" iconName="arrow_right" shape="rounded" type="solid" size="large"></tu-button>
+    </view>
+    <view class="variant-state-display">
+      <tu-button loading class="flex-grow" shape="rounded" type="solid" size="large">Loading</tu-button>
+      <tu-button loading class="flex-grow" shape="rounded" size="large">Loading</tu-button>
+      <tu-button loading iconName="arrow_right" class="flex justify-center" shape="rounded" type="solid" size="large"></tu-button>
+    </view>
+    <view class="variant-state-display">
+      <tu-button skeleton class="flex-grow" shape="rounded" type="solid" size="large">Default</tu-button>
+      <tu-button skeleton class="flex-grow" leadingIcon="arrow_left" shape="rounded" size="large">Default</tu-button>
+      <tu-button skeleton class="icon-fix-size" iconName="arrow_right" shape="rounded" type="solid" size="large"></tu-button>
     </view>
   </block-variant>
 </template>
@@ -120,6 +125,7 @@
 <view class="page">
   <block-header title="Usage"
     description="In general, buttons should be used for all interface actions. When you need to provide a call-to-action for the user." />
+  <template is="variant" />
   <template is="variant-style" />
   <template is="variant-content" />
   <template is="variant-shape" />

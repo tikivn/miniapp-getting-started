@@ -16,3 +16,34 @@
 .block-variant-content-line > button:last-child {
   margin-right: 0px;
 }
+
+.variant-size-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0 10px;
+  justify-content: start;
+}
+
+.icon-fix-size {
+  max-width: fit-content;
+}
+
+.variant-state-display {
+  display: grid;
+  grid-template-columns: 4fr 4fr 1fr;
+  grid-template-rows: auto;
+  gap: 8px;
+  margin-bottom: 8px;
+  justify-content: start;
+}
+
+.hover {
+  background-color: var(--color-button-brand-solid-background-hover);
+  border: none;
+}
+
+.active {
+  background-color: var(--color-button-brand-solid-background-active);
+  border: none;
+}
