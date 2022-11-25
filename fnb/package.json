@@ -2,17 +2,9 @@
   "name": "tini-f-b",
   "version": "1.0.0",
   "tiki": {
-    "appIdentifier": "vn.tiki.tini.fnbtemplate",
-    "buildNumber": 1,
-    "metadata": {
-      "permissions": [
-        "choosePhoneContact",
-        "getAddress",
-        "saveAddress",
-        "getUserPhoneAndEmail",
-        "getAuthCode"
-      ]
-    }
+    "version": "1.0.0",
+    "appIdentifier": "vn.tiki.miniapp.fnbtemplate",
+    "buildNumber": 1
   },
   "dependencies": {
     "@tiki.vn/redux-miniprogram-bindings": "^1.4.4",

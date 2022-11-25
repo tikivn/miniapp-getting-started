@@ -1,6 +1,6 @@
 .c-header {
-  position: fixed;
-  top: 0;
+  /* position: fixed; */
+  /* top: 0; */
   left: 0;
   z-index: 2;
   background-color: #f7f7f7;
@@ -8,7 +8,7 @@
 }
 .header {
   height: var(--tf-title-bar-height);
-  padding-top: var(--tf-status-bar-height);
+  padding-top: 12px;
   padding-bottom: 16px;
 }
 .header-scrolled {

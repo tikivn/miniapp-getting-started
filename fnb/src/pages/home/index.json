@@ -6,5 +6,5 @@
     "variant-04": "child/variant-04",
     "sticky-bottom": "components/sticky-bottom"
   },
-  "transparentTitle": "always"
+  "titleBarColor": "#FFFFFF"
 }
