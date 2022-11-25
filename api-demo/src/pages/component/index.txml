@@ -1,6 +1,6 @@
 <view class="page-container">
   <view class="banner">
-    <image class="component-logo" src="/images/app_logo.png" />
+    <image class="component-logo" src="/images/Logo.png" />
     <view class="search">
       <search />
     </view>
