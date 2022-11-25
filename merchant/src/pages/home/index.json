@@ -1,6 +1,6 @@
 {
   "pullRefresh": true,
-  "transparentTitle": "always",
+  "titleBarColor": "#FFFFFF",
   "usingComponents": {
     "shop-info": "components/shop-info/index",
     "banners": "components/banners/index",

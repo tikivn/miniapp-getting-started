@@ -4,7 +4,3 @@
   height: 56px;
   border-radius: 50%;
 }
-
-.shop-info-header {
-  padding-top: calc(var(--tf-status-bar-height) + 12px);
-}

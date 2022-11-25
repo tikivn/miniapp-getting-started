@@ -1,12 +1,12 @@
-.home-shop-info {
+/* .home-shop-info {
   top: 0;
   left: 0;
   z-index: 10;
   border: 1px solid transparent;
-}
+} */
 
 .home-banners {
-  margin-top: calc(var(--tf-status-bar-height) + 130px);
+  /* margin-top: calc(var(--tf-status-bar-height) + 130px); */
 }
 
 .home-category-multiple {
@@ -16,4 +16,5 @@
 
 .home-shop-info-border {
   border: 1px solid var(--gray20);
+  display: none;
 }

@@ -156,15 +156,23 @@ Page({
     const { isPageScroll } = this.data;
     const { scrollTop } = event;
 
-    if (!isPageScroll && scrollTop > 0)
+    if (!isPageScroll && scrollTop > 0) {
       this.setData({
         isPageScroll: true,
       });
+      my.setNavigationBar({
+        title: 'Tiki Trading'
+      })
+    }
 
-    if (isPageScroll && scrollTop <= 0)
+    if (isPageScroll && scrollTop <= 0) {
       this.setData({
         isPageScroll: false,
       });
+      my.setNavigationBar({
+        title: ' '
+      })
+    }
   },
 
   onUnload() {

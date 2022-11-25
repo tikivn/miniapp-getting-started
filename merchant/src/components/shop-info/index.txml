@@ -5,6 +5,7 @@
     <view class="shop-info-header navigation-bar pl-medium">
       <view class="mr-2x-small">
         <cached-image
+          size="{{40}}"
           class="shop-info-logo mr-2x-small"
           src="{{shop.logo || '/assets/images/shop-logo.png'}}"
           mode="widthFix"
@@ -18,33 +19,55 @@
         >
           {{shop.name}}
         </text>
-        <text
-          tiki:if="{{follow.following.total_follower}}"
-          number-of-lines="{{1}}"
-        >
-          {{`${numberFormatter(follow.following.total_follower, "")} theo dõi`}}
-        </text>
+
       </view>
     </view>
 
-    <view class="flex items-center px-medium mt-small mb-medium">
-      <button
-        loading="{{isFollowButtonLoading}}"
-        class="flex-grow"
+    <view class="flex items-center px-medium mt-small mb-medium justify-between">
+      <view>
+        <text
+        class="font-bold text-medium"
+        tiki:if="{{follow.following.total_follower}}"
+        number-of-lines="{{1}}"
+      >
+        {{`${numberFormatter(follow.following.total_follower, "")}`}}
+      </text>
+      <text class="text-small text-gray60">Theo dõi</text>
+      </view>
+      <view>
+        <view class="flex items-center">
+          <text
+          class="font-bold text-medium mr-4x-small"
+          tiki:if="{{follow.following.total_follower}}"
+          number-of-lines="{{1}}" >
+          4.8
+          </text>
+          <image
+          class="rate-star"
+          src="/assets/icons/star.svg"
+          mode="widthFix"
+          />
+        </view>
+      <text class="text-small text-gray60">Đánh giá</text>
+      </view>
+      <view class="flex">
+        <button
         size="medium"
-        shape="pill"
+        type="outline"
+        shape="square"
+        iconName="chat"
+        className="mr-2x-small"
+        />
+        <button
+        loading="{{isFollowButtonLoading}}"
+        class=""
+        size="medium"
         type="{{follow.is_followed ? 'outline' : 'solid'}}"
         onTap="_onTapFollowButton"
-      >
-        
+        >
         {{follow.is_followed ? 'Đã theo' : 'Theo dõi'}}
       </button>
-      <!-- <button
-        size="medium"
-        shape="circle"
-        type="outline"
-        iconName="chat"
-      /> -->
+      </view>
     </view>
   </template>
   
