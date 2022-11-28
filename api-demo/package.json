@@ -3,14 +3,14 @@
   "version": "0.6.7",
   "tiki": {
     "appIdentifier": "vn.tiki.miniapp.demo",
-    "buildNumber": 2,
+    "buildNumber": 11,
     "metadata": {
       "frameworkComponentUrl": "https://salt.tikicdn.com/ts/miniapp/da/33/7e/7136fad18cd0d6ea0b1e710938deb632.js"
     }
   },
   "dependencies": {
     "@tiki.vn/mini-html-parser2": "^0.0.4",
-    "@tiki.vn/tini-ui": "0.16.1-rc.16",
+    "@tiki.vn/tini-ui": "0.16.1-rc.17",
     "query-string": "^7.0.1",
     "tiki-miniapp-tnx": "^0.1.1"
   },

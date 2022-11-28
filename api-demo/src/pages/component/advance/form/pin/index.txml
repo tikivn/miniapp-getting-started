@@ -5,8 +5,8 @@
     description="Label & Input only."
   >
     <view class="mt-2x-small">
-      <pin className="mb-medium" label="Label"/>
-      <pin/>
+      <pin id="1" className="mb-medium" label="Label"/>
+      <pin id="2" />
     </view>
   </block-variant>
   <block-variant
@@ -14,8 +14,8 @@
     description="Rounded, Circle."
   >
     <view class="mt-2x-small">
-      <pin className="mb-medium" label="Rounded"/>
-      <pin label="Circle" shape="circle"/>
+      <pin id="3" className="mb-medium" label="Rounded"/>
+      <pin id="4" label="Circle" shape="circle"/>
     </view>
   </block-variant>
   <block-variant
@@ -23,8 +23,8 @@
     description="4 blocks, 6 blocks."
   >
     <view class="mt-2x-small">
-      <pin className="mb-medium" label="4 blocks"/>
-      <pin label="6 blocks" length="{{6}}"/>
+      <pin id="5" className="mb-medium" label="4 blocks"/>
+      <pin id="6" label="6 blocks" length="{{6}}"/>
     </view>
   </block-variant>
   <block-variant
@@ -32,8 +32,8 @@
     description="Hidden input & Visible input"
   >
     <view class="mt-2x-small">
-      <pin secret className="mb-medium" label="Hidden input" value="0123"/>
-      <pin label="Visible input" value="0123"/>
+      <pin id="7" secret className="mb-medium" label="Hidden input" value="0123"/>
+      <pin id="8" label="Visible input" value="0123"/>
     </view>
   </block-variant>
   <block-variant
@@ -41,12 +41,12 @@
     description="Empty, Hove, Active, Typing, Filled, Disabled, Error, Skeleton loading."
   >
     <view class="mt-2x-small">
-      <pin className="mb-medium" label="Empty"/>
-      <pin focus className="mb-medium" label="Active"/>
-      <pin secret className="mb-medium" label="Typing" value="0"/>
-      <pin secret className="mb-medium" label="Filled" value="0123"/>
-      <pin disabled className="mb-medium" label="Disabled"/>
-      <pin hasError secret className="mb-medium" label="Error" errorMsg="Error message" value="0123"/>
+      <pin id="9" className="mb-medium" label="Empty"/>
+      <pin id="10" focus className="mb-medium" label="Active"/>
+      <pin id="11" secret className="mb-medium" label="Typing" value="0"/>
+      <pin id="12" secret className="mb-medium" label="Filled" value="0123"/>
+      <pin id="13" disabled className="mb-medium" label="Disabled"/>
+      <pin id="14" hasError secret className="mb-medium" label="Error" errorMsg="Error message" value="0123"/>
     </view>
   </block-variant>
 </view>
