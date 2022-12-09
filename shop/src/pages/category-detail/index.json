@@ -1,5 +1,6 @@
 {
   "backgroundColor": "#FFF",
+  "allowsBounceVertical": "NO",
   "usingComponents": {
     "product-section": "components/product-section/index",
     "filter": "components/filter/index",

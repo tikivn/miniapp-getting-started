@@ -8,7 +8,7 @@
   padding-top: calc(var(--safe-area-inset-top) + 16px);
   display: flex;
   flex-direction: column;
-  align-items: space-between;
+  align-items: space-between;
 }
 
 .version {

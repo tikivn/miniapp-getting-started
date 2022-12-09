@@ -1,6 +1,7 @@
 {
   "window": {
-    "defaultTitle": "Tini shop"
+    "defaultTitle": "Tini shop",
+    "backgroundColor": "#FFFFFF"
   },
   "pages": [
     "pages/home/index",

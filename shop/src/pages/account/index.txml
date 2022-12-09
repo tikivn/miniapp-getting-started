@@ -1,3 +1,6 @@
+<view>
+  <image src="https://salt.tikicdn.com/ts/tiniapp/05/22/55/d751150c0f432cf4229b42e6efa07a7f.png" />
+</view>
 <view class="my-account">
   <view>
     <view tiki:if="{{isLoading}}" class="flex flex-col items-center">

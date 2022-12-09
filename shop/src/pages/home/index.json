@@ -1,6 +1,7 @@
 {
   "defaultTitle": "",
   "titleBarBottomColor": "#fff",
+  "backgroundColor": "#EBEBF0",
   "allowsBounceVertical": "NO",
   "usingComponents": {
     "product-section": "components/product-section/index",
